@@ -89,9 +89,9 @@ def etf_prices():
             except ValueError:
                 tried.append({"url": base, "status": st, "body": scrub(body[:300])})
                 continue
-            header = j.get("response", {}).get("header", {})
+            header = j.get("response", {}).get("header", {}) if isinstance(j, dict) else {}
             if header.get("resultCode") != "00":
-                tried.append({"url": base, "status": st, "header": header})
+                tried.append({"url": base, "status": st, "header": header, "body": scrub(body[:400])})
                 continue
             working = base
             items = j["response"]["body"].get("items", {}) or {}
