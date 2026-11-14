@@ -170,12 +170,15 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .splash .sp-in{display:flex; flex-direction:column; align-items:center; gap:28px}
 .splash .wordmark{font-size:clamp(40px,13.5vw,58px); animation:splashIn .9s ease both}
 .splash .sp-hint{font-size:13px; letter-spacing:.2em; color:var(--muted); opacity:0; animation:hintIn .6s ease 1.6s forwards}
-.splash .sp-motto{font-size:clamp(16px,4.6vw,19px); margin-top:-6px; opacity:0; animation:hintIn .8s ease .8s forwards}
+.splash .sp-motto{font-size:clamp(16px,4.6vw,19px); margin:14px 0 10px; opacity:0; animation:hintIn .8s ease .8s forwards}
 @keyframes hintIn{to{opacity:1}}
 .splash.hide{opacity:0; pointer-events:none}
 @keyframes splashIn{from{opacity:0; letter-spacing:.4em} to{opacity:1}}
 @media (prefers-reduced-motion: reduce){ .splash .wordmark{animation:none} .splash .sp-hint, .splash .sp-motto{animation:none; opacity:1} }
 .wordmark-ko{font-size:13px; letter-spacing:.5em; padding-left:.5em; color:var(--muted)}
+.motto{text-align:center}
+.motto .cite{display:block; margin-top:.75em; font-family:var(--font); font-style:normal; font-size:.6em; letter-spacing:.14em; text-transform:uppercase; opacity:.8}
+.motto .cite i{font-style:normal}
 .motto.mmotto{width:fit-content; margin:56px auto 0}
 .splash.back .wordmark, .splash.back .sp-motto{animation:none; opacity:1}
 .splash.back .sp-hint{animation:hintIn .5s ease .3s forwards}
@@ -374,7 +377,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
 </style>
 </head>
 <body data-mode="light">
-<div class="splash" id="splash" role="button" tabindex="0" aria-label="GNOMON 노몬, 눌러서 시작"><div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.</div><div class="sp-hint">눌러서 시작</div></div></div>
+<div class="splash" id="splash" role="button" tabindex="0" aria-label="GNOMON 노몬, 눌러서 시작"><div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.<span class="cite">— Logan Roy, <i>Succession</i></span></div><div class="sp-hint">눌러서 시작</div></div></div>
 <div class="app">
   <div class="top">
     <div class="brand">
@@ -1344,7 +1347,7 @@ function viewMain(st){
         <div class="lfoot">${(()=>{ const n = nextUpcoming().filter(x=>x.r.ymd>=ymd(st.k))[0]; return n?`다음 <b>${IND[n.k].name}</b><div class="num muted">${n.r.label}</div>`:""; })()}</div>
       </button>
     </div>
-    <div class="motto mmotto">Money wins. Here’s to us.</div>
+    <div class="motto mmotto">Money wins. Here’s to us.<span class="cite">— Logan Roy, <i>Succession</i></span></div>
   </div>
   <footer class="sitefoot">
     <div class="sf-brand"><b>GNOMON</b> 노몬 <span>Since 2026</span></div>
@@ -2324,7 +2327,7 @@ function render(){
 }
 window.addEventListener("hashchange", ()=>{ showAll=false; render(); window.scrollTo(0,0); });
 
-const SPLASH_IN = `<div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.</div><div class="sp-hint">눌러서 시작</div></div>`;
+const SPLASH_IN = `<div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.<span class="cite">— Logan Roy, <i>Succession</i></span></div><div class="sp-hint">눌러서 시작</div></div>`;
 const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 const flyTo = (el, target) => { const a = el.getBoundingClientRect(), b = target.getBoundingClientRect();
   const dx = (b.left+b.width/2)-(a.left+a.width/2), dy = (b.top+b.height/2)-(a.top+a.height/2), k = b.width/a.width;
