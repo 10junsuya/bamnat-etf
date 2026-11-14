@@ -163,6 +163,9 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .landing.main{padding-top:6vh}
 .mlogo{display:flex; flex-direction:column; align-items:center; gap:6px; margin-bottom:8px; color:var(--ink)}
 .wordmark{font-size:46px; font-weight:800; letter-spacing:.22em; padding-left:.22em; line-height:1; font-family:"IBM Plex Sans KR", "Helvetica Neue", Arial, sans-serif}
+.sitefoot{margin:48px 0 12px; padding-top:18px; border-top:1px solid var(--line); text-align:center; font-size:12px; line-height:1.8; color:var(--muted)}
+.sitefoot .sf-brand{font-size:13px; color:var(--ink); margin-bottom:4px} .sitefoot .sf-brand b{letter-spacing:.18em; margin-right:4px} .sitefoot .sf-brand span{color:var(--muted); margin-left:6px}
+.sitefoot .sf-note{display:block; font-size:11px} .sitefoot .sf-copy{margin-top:6px}
 .wordmark-ko{font-size:13px; letter-spacing:.5em; padding-left:.5em; color:var(--muted)}
 .landing.main h2{font-size:26px}
 .lgrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:24px}
@@ -1316,7 +1319,13 @@ function viewMain(st){
         <div class="lfoot">${(()=>{ const n = nextUpcoming().filter(x=>x.r.ymd>=ymd(st.k))[0]; return n?`다음 <b>${IND[n.k].name}</b><div class="num muted">${n.r.label}</div>`:""; })()}</div>
       </button>
     </div>
-  </div>`;
+  </div>
+  <footer class="sitefoot">
+    <div class="sf-brand"><b>GNOMON</b> 노몬 <span>Since 2026</span></div>
+    <div>데이터 출처 · Finnhub · FRED(세인트루이스 연준) · 한국은행 ECOS · 공공데이터포털(금융위원회) · ECB 환율 <span class="sf-note">연결 진행 중이라 지금은 일부 샘플이에요</span></div>
+    <div>정보 제공용이며 투자 권유가 아니에요. 추정치와 해석은 실제와 다를 수 있어요.</div>
+    <div class="sf-copy">© 2026 GNOMON</div>
+  </footer>`;
 }
 /* ===================== A: 경제 지표 (모든 숫자·일정은 샘플) ===================== */
 const IND = {
