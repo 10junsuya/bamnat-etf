@@ -1318,7 +1318,7 @@ function howtoHtml(){
 function viewMain(st){
   const fav = ETFS.filter(e=>stars.includes(e.code)).slice(0,2).map(e=>{ const c=calc(e); return `<div class="num">${e.name.replace(/^(\S+) 미국/,"$1 ")} <b class="${cls(c.total)}">${pct(c.total)}</b></div>`; }).join("");
   return `<div class="landing main">
-    <div class="mlogo"><div class="wordmark" role="img" aria-label="GNOMON 노몬">GNOMON</div><div class="wordmark-ko">노몬</div><div class="motto">Money wins.</div></div>
+    <div class="mlogo"><div class="wordmark" role="img" aria-label="GNOMON 노몬">GNOMON</div><div class="wordmark-ko">노몬</div><div class="motto">Money wins. Here’s to us.</div></div>
     <div class="lgrid">
       <button class="lcard" type="button" data-go="home">
         <div class="lt">밤낮 <span style="color:var(--accent)">ETF</span></div>
