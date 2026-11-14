@@ -197,7 +197,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .cc{display:inline-block; vertical-align:2px; margin-left:6px; font-size:11px; font-weight:600; padding:0 6px; border-radius:6px; border:1px solid var(--line); color:var(--muted)}
 .chip.slow{background:transparent; border:1px dashed var(--line)}
 .trio.sm .v{font-size:17px}
-.trio.sm div{padding:8px}
+.trio.sm>div{padding:8px}
 .lprev{margin-top:12px; background:var(--accent-soft); border-radius:14px; padding:10px 12px}
 .lprev .lp-t{font-size:13px; font-weight:600; color:var(--accent)}
 .lprev .lp-c{display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; align-items:center}
@@ -230,10 +230,10 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .cper button.on{background:var(--ink); color:var(--bg); font-weight:600}
 .clegend{display:flex; flex-wrap:wrap; gap:4px 12px; font-size:12px; color:var(--muted); margin:2px 4px 4px} .clegend i{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:4px; vertical-align:-1px}
 svg.ichart{display:block; touch-action:pan-y; cursor:crosshair}
-details.more{margin-top:18px; border-top:1px solid var(--line)}
+details.more{display:block; width:auto; margin-top:18px; padding:0; border:0; border-top:1px solid var(--line); border-radius:0; background:none; cursor:auto; color:var(--ink)}
 details.more summary{cursor:pointer; list-style:none; padding:14px 2px; font-weight:700; color:var(--accent)}
 details.more summary::-webkit-details-marker{display:none}
-details.more summary::after{content:" ▾"} details.more[open] summary::after{content:" ▴"}
+details.more summary::after{content:" ▾"; color:var(--muted); font-weight:400} details.more[open] summary::after{content:" ▴"}
 details.more summary span{font-weight:400; color:var(--muted); font-size:14px}
 .tword{border:0; background:none; padding:0; font:inherit; color:inherit; cursor:help; text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:3px}
 .tword.on{color:var(--accent)}
@@ -274,8 +274,8 @@ details.more summary span{font-weight:400; color:var(--muted); font-size:14px}
 .irow .one{font-size:14px; color:var(--muted); margin-top:4px}
 .irow .meta{font-size:13px; margin-top:8px; display:flex; flex-wrap:wrap; gap:6px}
 .trio{display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
-.trio div{background:var(--surface-2); border-radius:12px; padding:10px; text-align:center}
-.trio .k{font-size:13px; color:var(--muted)} .trio .v{font-size:22px; font-weight:700}
+.trio>div{background:var(--surface-2); border-radius:12px; padding:10px 6px; text-align:center}
+.trio .k{font-size:13px; color:var(--muted)} .trio .hit{background:none; box-shadow:inset 0 0 0 1.5px var(--ink)} .trio .hit .k{color:var(--ink); font-weight:600} .trio .v.sub{color:var(--muted); font-weight:600} .trio .v{font-size:19px; font-weight:700; white-space:nowrap; letter-spacing:-.02em}
 .react{display:grid; grid-template-columns:1fr auto; gap:6px 12px; font-size:15px}
 .react div:nth-child(even){text-align:right; font-weight:600}
 /* 지표 게이지 */
@@ -1694,7 +1694,7 @@ function surpriseText(ind){
   const d = ind.last.a - ind.last.f;
   if(Math.abs(d) < 1e-9) return "예상과 같았어요";
   const unit = ind.unit==="%" ? "%p" : ind.unit;
-  return `예상보다 <b>${Math.abs(d).toFixed(ind.unit==="%"?2:1).replace(/\.?0+$/,"")}${unit} ${d>0?"높았어요":"낮았어요"}</b>`;
+  return `예상보다 <b class="${cls(d)}">${Math.abs(d).toFixed(ind.unit==="%"?2:1).replace(/\.?0+$/,"")}${unit} ${d>0?"높았어요":"낮았어요"}</b>`;
 }
 function nextUpcoming(){
   return Object.entries(IND).filter(([,v])=>v.next).map(([k,v])=>({k, v, r:releaseKst(v)})).sort((a,b)=>a.r.ymd.localeCompare(b.r.ymd));
@@ -1958,7 +1958,7 @@ function indSheet(k, from, prev){
     ${what}${zone}
     <details class="more"><summary>더 보기 <span>· 지난 결과, 해석, 시장 반응</span></summary>
       <div class="bsection"><h4>지난 발표 결과 <span class="tiny muted" style="font-weight:400">샘플</span></h4>
-        <div class="trio"><div><div class="k">실제</div><div class="v num">${fv(v.last.a)}</div></div><div><div class="k">예상</div><div class="v num">${fv(v.last.f)}</div></div><div><div class="k">이전</div><div class="v num">${fv(v.last.p)}</div></div></div>
+        <div class="trio"><div class="hit"><div class="k">실제</div><div class="v num ${cls(v.last.a-(v.last.f??v.last.p))}">${fv(v.last.a)}</div></div><div><div class="k">예상</div><div class="v num sub">${fv(v.last.f)}</div></div><div><div class="k">이전</div><div class="v num sub">${fv(v.last.p)}</div></div></div>
         <p style="margin-top:10px">${surpriseText(v)}.</p>${core}</div>
       <div class="bsection"><h4>보통 이렇게 해석돼요</h4><p>${v.read}</p><p class="small muted">${v.more}</p><p class="tiny muted">항상 그렇지는 않아요. 다른 지표나 그때 시장 분위기에 따라 반대로 움직이기도 해요.</p></div>
       ${IND_X[k]?`<div class="bsection"><h4>이렇게 이어져요</h4>${chainHtml(IND_X[k])}</div>`:""}
