@@ -167,10 +167,10 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .sitefoot .sf-brand{font-size:13px; color:var(--ink); margin-bottom:4px} .sitefoot .sf-brand b{letter-spacing:.18em; margin-right:4px} .sitefoot .sf-brand span{color:var(--muted); margin-left:6px}
 .sitefoot .sf-note{display:block; font-size:11px} .sitefoot .sf-copy{margin-top:6px}
 .splash{position:fixed; inset:0; z-index:100; display:grid; place-items:center; background:var(--bg); color:var(--ink); cursor:pointer; transition:opacity .5s ease}
-.splash .sp-in{display:flex; flex-direction:column; align-items:center; gap:28px}
+.splash .sp-in{display:flex; flex-direction:column; align-items:center; gap:36px}
 .splash .wordmark{font-size:clamp(40px,13.5vw,58px); animation:splashIn .9s ease both}
 .splash .sp-hint{font-size:13px; letter-spacing:.2em; color:var(--muted); opacity:0; animation:hintIn .6s ease 1.6s forwards}
-.splash .sp-motto{font-size:clamp(16px,4.6vw,19px); margin:36px 0 20px; opacity:0; animation:hintIn .8s ease .8s forwards}
+.splash .sp-motto{font-size:clamp(16px,4.6vw,19px); position:absolute; left:0; right:0; bottom:calc(64px + env(safe-area-inset-bottom)); width:max-content; margin:0 auto; opacity:0; animation:hintIn .8s ease .8s forwards}
 @keyframes hintIn{to{opacity:1}}
 .splash.hide{opacity:0; pointer-events:none}
 @keyframes splashIn{from{opacity:0; letter-spacing:.4em} to{opacity:1}}
