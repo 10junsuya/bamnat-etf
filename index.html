@@ -168,14 +168,22 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .sitefoot .sf-note{display:block; font-size:11px} .sitefoot .sf-copy{margin-top:6px}
 .splash{position:fixed; inset:0; z-index:100; display:grid; place-items:center; background:var(--bg); color:var(--ink); cursor:pointer; transition:opacity .5s ease}
 .splash .sp-in{display:flex; flex-direction:column; align-items:center; gap:28px}
-.splash .wordmark{font-size:40px; animation:splashIn .9s ease both}
+.splash .wordmark{font-size:clamp(40px,13.5vw,58px); animation:splashIn .9s ease both}
 .splash .sp-hint{font-size:13px; letter-spacing:.2em; color:var(--muted); opacity:0; animation:hintIn .6s ease 1.6s forwards}
-.splash .sp-motto{margin-top:-8px; opacity:0; animation:hintIn .8s ease .8s forwards}
+.splash .sp-motto{font-size:clamp(16px,4.6vw,19px); margin-top:-6px; opacity:0; animation:hintIn .8s ease .8s forwards}
 @keyframes hintIn{to{opacity:1}}
 .splash.hide{opacity:0; pointer-events:none}
 @keyframes splashIn{from{opacity:0; letter-spacing:.4em} to{opacity:1}}
 @media (prefers-reduced-motion: reduce){ .splash .wordmark{animation:none} .splash .sp-hint, .splash .sp-motto{animation:none; opacity:1} }
 .wordmark-ko{font-size:13px; letter-spacing:.5em; padding-left:.5em; color:var(--muted)}
+.mmotto{width:fit-content; margin:30px auto 0}
+.splash.fly{background:transparent; transition:background-color .6s ease; pointer-events:none}
+.splash.fly .wordmark, .splash.fly .sp-motto{animation:none; opacity:1; transition:transform .85s cubic-bezier(.2,.8,.2,1); transform-origin:center}
+.splash.fly .sp-hint{animation:none; opacity:0; transition:opacity .2s}
+.landing.main.intro .wordmark, .landing.main.intro .mmotto, .landing.main.pre .wordmark-ko, .landing.main.pre .lcard{opacity:0}
+.landing.main.cards-in .wordmark-ko, .landing.main.cards-in .lcard{animation:fadeUp .6s cubic-bezier(.2,.8,.2,1) both}
+.landing.main.cards-in .lcard:nth-child(2){animation-delay:.08s}
+@keyframes fadeUp{from{opacity:0; transform:translateY(14px)}}
 .motto{margin-top:14px; font-family:"New York", "Iowan Old Style", Georgia, "Times New Roman", serif; font-style:italic; font-size:16px; letter-spacing:.02em; color:var(--muted)}
 .landing.main h2{font-size:26px}
 .lgrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:24px}
@@ -1319,7 +1327,7 @@ function howtoHtml(){
 function viewMain(st){
   const fav = ETFS.filter(e=>stars.includes(e.code)).slice(0,2).map(e=>{ const c=calc(e); return `<div class="num">${e.name.replace(/^(\S+) 미국/,"$1 ")} <b class="${cls(c.total)}">${pct(c.total)}</b></div>`; }).join("");
   return `<div class="landing main">
-    <div class="mlogo"><div class="wordmark" role="img" aria-label="GNOMON 노몬">GNOMON</div><div class="wordmark-ko">노몬</div><div class="motto">Money wins. Here’s to us.</div></div>
+    <div class="mlogo"><div class="wordmark" role="img" aria-label="GNOMON 노몬">GNOMON</div><div class="wordmark-ko">노몬</div></div>
     <div class="lgrid">
       <button class="lcard" type="button" data-go="home">
         <div class="lt">밤낮 <span style="color:var(--accent)">ETF</span></div>
@@ -1332,6 +1340,7 @@ function viewMain(st){
         <div class="lfoot">${(()=>{ const n = nextUpcoming().filter(x=>x.r.ymd>=ymd(st.k))[0]; return n?`다음 <b>${IND[n.k].name}</b><div class="num muted">${n.r.label}</div>`:""; })()}</div>
       </button>
     </div>
+    <div class="motto mmotto">Money wins. Here’s to us.</div>
   </div>
   <footer class="sitefoot">
     <div class="sf-brand"><b>GNOMON</b> 노몬 <span>Since 2026</span></div>
@@ -2314,7 +2323,25 @@ window.addEventListener("hashchange", ()=>{ showAll=false; render(); window.scro
 (function(){
   const sp = document.getElementById("splash"); if(!sp) return;
   let done = false;
-  const hide = () => { if(done) return; done = true; sp.classList.add("hide"); setTimeout(()=>sp.remove(), 600); };
+  const fade = () => { sp.classList.add("hide"); setTimeout(()=>sp.remove(), 600); };
+  const hide = () => {
+    if(done) return; done = true;
+    const main = document.querySelector(".landing.main");
+    const tw = main && main.querySelector(".wordmark"), tm = main && main.querySelector(".mmotto");
+    const sw = sp.querySelector(".wordmark"), sm = sp.querySelector(".sp-motto");
+    if(!tw || !tm || !sw || !sm || matchMedia("(prefers-reduced-motion: reduce)").matches){ fade(); return; }
+    window.scrollTo(0,0);
+    main.classList.add("intro","pre");
+    const to = (el, target) => { const a = el.getBoundingClientRect(), b = target.getBoundingClientRect();
+      const dx = (b.left+b.width/2)-(a.left+a.width/2), dy = (b.top+b.height/2)-(a.top+a.height/2), k = b.width/a.width;
+      return `translate(${dx}px,${dy}px) scale(${k})`; };
+    sp.classList.add("fly");
+    const tW = to(sw, tw), tM = to(sm, tm);
+    requestAnimationFrame(()=>{ sw.style.transform = tW; sm.style.transform = tM; });
+    setTimeout(()=>{ main.classList.remove("pre"); main.classList.add("cards-in"); }, 450);
+    setTimeout(()=>{ main.classList.remove("intro"); sp.remove(); }, 900);
+    setTimeout(()=>{ main.classList.remove("cards-in"); }, 1600);
+  };
   sp.addEventListener("click", hide);
   sp.addEventListener("keydown", e=>{ if(e.key==="Enter" || e.key===" "){ e.preventDefault(); hide(); } });
   sp.focus();
