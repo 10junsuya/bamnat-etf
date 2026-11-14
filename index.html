@@ -224,6 +224,8 @@ details.more summary span{font-weight:400; color:var(--muted); font-size:14px}
 .tword.on{color:var(--accent)}
 .tipline{display:block; margin:6px 0; padding:8px 10px; border-radius:10px; background:var(--accent-soft); color:var(--ink); font-size:13px; font-weight:400; line-height:1.55}
 .tipline b{color:var(--accent); margin-right:4px}
+.fxnow{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:12px; padding:12px 14px; border:1px solid var(--line); border-radius:12px}
+.fxnow>div{display:flex; flex-direction:column; gap:2px} .fxnow b{font-size:22px}
 .howbtn{margin-top:6px; font-size:13px; padding:5px 12px}
 .howbox{margin:8px 0 0; padding:10px 14px 10px 30px; background:var(--surface-2); border-radius:12px; font-size:14px; line-height:1.6}
 .howbox li{margin:3px 0}
@@ -1978,7 +1980,7 @@ const tw = (word, key) => `<button type="button" class="tword" data-tipk="${key|
 const HOWTO = {
   avg:["증권사 앱 잔고에서 지금 보유 수량과 평단가를 확인해 넣어요.","더 살 수량과 가격을 넣어요. 현재가를 비워두면 더 살 가격을 현재가로 봐요.","새 평단가와 본전까지 필요한 상승률이 바로 나와요. 숫자를 바꿔가며 몇 주를 더 살지 비교해 보세요.","예시: 2만 원에 10주 가진 상태에서 1.7만 원에 10주 더 사면 평단이 18,500원이 돼요."],
   goal:["평단가와 현재가를 넣어요.","팔고 싶은 수익률을 % 숫자로 넣어요. 예: 15% 수익이면 15.","수량까지 넣으면 목표 달성 시 수익금과 세금(일반계좌 기준)도 보여줘요.","예시: 평단 2만 원, 현재가 1.85만 원, 목표 15%면 목표가는 2.3만 원이고 지금보다 24.3% 올라야 해요."],
-  fx:["비교하고 싶은 기간 동안 미국 지수가 몇 % 움직였는지 넣어요.","그 기간 시작과 끝의 원/달러 환율을 넣어요.","헤지 비용은 모르면 기본값 그대로 두세요.","환노출(비H)과 환헤지(H) 중 어느 쪽이 유리했는지, 둘이 같아지는 환율이 얼마인지 나와요.","예시: 미국 +10%, 환율 1,330원→1,400원이면 비H는 약 +15.8%, H는 약 +9%예요."],
+  fx:["비교하고 싶은 기간 동안 미국 지수가 몇 % 움직였는지 넣어요.","산 때 환율을 넣어요. 지금(끝) 환율 칸에는 현재 환율이 미리 들어가 있어요. 다른 시점과 비교하려면 바꿔도 돼요.","헤지 비용은 모르면 기본값 그대로 두세요.","환노출(비H)과 환헤지(H) 중 어느 쪽이 유리했는지, 둘이 같아지는 환율이 얼마인지 나와요.","예시: 미국 +10%, 환율 1,330원→1,400원이면 비H는 약 +15.8%, H는 약 +9%예요."],
   tax:["위 표에서 계좌마다 세금이 어떻게 다른지 먼저 보세요. 밑줄 친 말을 누르면 뜻이 나와요.","아래 칸에 한 해 동안 난 수익금을 만 원 단위로 넣어요. 예: 500만 원이면 500.","계좌별 예상 세금이 나오고, 가장 적은 곳이 표시돼요.","실제 세금은 다른 금융소득이나 손익 상황에 따라 달라질 수 있어요."]
 };
 const CALC = {
@@ -2040,8 +2042,10 @@ function toolBody(k){
       ${inp("avg",`${tw("평단가")} (원)`,"20000")}${inp("now",`${tw("현재가")} (원)`,"18500")}${inp("t",`${tw("목표 수익률")} (%)`,"15")}${inp("q","수량 (선택)","50")}</form>`;
   if(k==="fx") return `<div class="hcmp"><div><b>비H (${tw("환노출")})</b><span>달러 자산을 그대로 들고 있어요. 환율이 오르면(원화 약세) 수익이 더 커지고, 내리면 줄어요.</span><span class="tiny muted">이름에 (H)가 없는 상품 · 예: TIGER 미국S&P500</span></div>
       <div><b>H (${tw("환헤지")})</b><span>환율 영향을 거의 없애요. 대신 한미 금리 차이만큼 ${tw("헤지 비용")}이 들어요.</span><span class="tiny muted">이름 끝에 (H)가 붙은 상품</span></div></div>
+    <div class="fxnow"><div><span class="tiny muted">지금 원/달러 환율</span><b class="num">${FX.now.toLocaleString("ko-KR")}원</b><span class="tiny muted">어제보다 <span class="num ${cls(FX.now-FX.base)}">${FX.now-FX.base>0?"+":""}${(FX.now-FX.base).toFixed(1)}원</span> · 샘플 숫자</span></div>
+      <button type="button" class="btn ghost" data-fxfill>지금 환율로 넣기</button></div>
     <form class="form calc" data-calc="fx" onsubmit="return false" style="margin-top:12px">
-      ${inp("usd",`기간 동안 ${tw("미국 지수 수익률")} (%)`,"10")}${inp("s",`시작 ${tw("환율")} (원)`,"1330")}${inp("e","끝 환율 (원)","1400")}
+      ${inp("usd",`기간 동안 ${tw("미국 지수 수익률")} (%)`,"10")}${inp("s",`산 때 ${tw("환율")} (원)`,"1300")}${inp("e","지금(끝) 환율 (원)",String(FX.now))}
       ${inp("hc",`${tw("헤지 비용")} (연 %, 예시값)`,"1","","한미 금리 차이에 따라 달라져요")}${inp("m","기간 (개월)","12")}</form>`;
   return `<div class="ttable">
       <div class="th"><span>계좌</span><span>세금</span></div>
@@ -2277,13 +2281,14 @@ function render(){
 window.addEventListener("hashchange", ()=>{ showAll=false; render(); window.scrollTo(0,0); });
 
 document.addEventListener("click", ev=>{
-  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt]");
+  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill]");
   if(!el || el.closest("#sheet [data-close]")) return;
   if(el.dataset.share!==undefined){ openShare(el.dataset.share || null); return; }
   if(el.dataset.saveimg!==undefined){ saveShare(); return; }
   if(el.dataset.tipk){ ev.preventDefault(); const nx = el.nextElementSibling;
     if(nx && nx.classList.contains("tipline")){ nx.remove(); el.classList.remove("on"); return; }
     el.insertAdjacentHTML("afterend", `<span class="tipline"><b>${el.dataset.tipk}</b> ${TIP[el.dataset.tipk]||GLOSS[el.dataset.tipk]||""}</span>`); el.classList.add("on"); return; }
+  if(el.dataset.fxfill!==undefined){ const f = document.querySelector('[data-calc="fx"]'); const e = f && f.querySelector('[name="e"]'); if(e){ e.value = FX.now; const o = document.getElementById("calcOut"); if(o) o.innerHTML = CALC.fx(f); e.focus(); } return; }
   if(el.dataset.howt){ const b = document.getElementById("howBox"); if(b){ b.hidden = !b.hidden; el.textContent = b.hidden ? "사용법 보기" : "사용법 닫기"; el.setAttribute("aria-expanded", String(!b.hidden)); } return; }
   if(el.dataset.tool){ openTool(el.dataset.tool); return; }
   if(el.dataset.cp){ chartP[el.dataset.ck] = el.dataset.cp; const b = document.getElementById("chartBox"); if(b) b.innerHTML = chartHtml(el.dataset.ck); return; }
