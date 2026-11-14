@@ -166,6 +166,13 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .sitefoot{margin:48px 0 12px; padding-top:34px; border-top:1px solid var(--line); text-align:center; font-size:12px; line-height:1.8; color:var(--muted)}
 .sitefoot .sf-brand{font-size:13px; color:var(--ink); margin-bottom:4px} .sitefoot .sf-brand b{letter-spacing:.18em; margin-right:4px} .sitefoot .sf-brand span{color:var(--muted); margin-left:6px}
 .sitefoot .sf-note{display:block; font-size:11px} .sitefoot .sf-copy{margin-top:6px}
+.sf-check{margin-top:6px; padding:4px 10px; border:1px solid var(--line); border-radius:999px; background:none; color:var(--muted); font:inherit; font-size:11px; cursor:pointer}
+.chk-sum{margin-top:2px; padding:12px 14px; border-radius:12px; background:var(--surface-2); font-weight:700}
+.chk-sum.bad{color:var(--up)} .chk-sum.warn{color:var(--pt)} .chk-sum.good{color:var(--ink)}
+.chk-row{display:flex; gap:10px; align-items:flex-start; padding:9px 0; border-top:1px solid var(--line); font-size:14px; line-height:1.5}
+.chk-row:first-of-type{border-top:0}
+.chk-lv{flex:none; font-size:11px; font-weight:700; padding:2px 7px; border-radius:6px; margin-top:2px}
+.chk-lv.err{color:var(--up); box-shadow:inset 0 0 0 1px var(--up)} .chk-lv.warn{color:var(--pt); box-shadow:inset 0 0 0 1px var(--pt)}
 .splash{position:fixed; inset:0; z-index:100; display:grid; place-items:center; background:var(--bg); color:var(--ink); cursor:pointer; transition:opacity .5s ease}
 .splash .sp-in{display:flex; flex-direction:column; align-items:center; gap:36px}
 .splash .wordmark{font-size:clamp(40px,13.5vw,58px); animation:splashIn .9s ease both}
@@ -697,6 +704,13 @@ function untilUsOpen(p){
   }
   return null;
 }
+function isMarketNight(k, u){
+  if(usTradingDay(u.y,u.m,u.d)){
+    const m = u.h*60+u.mi, end = US_HALF.includes(ymd(u)) ? 780 : 960;
+    return (m >= 240 && m < end) || k.h < 5;
+  }
+  return k.h >= 19 || k.h < 7;
+}
 function fmtLeft(min){ const h=Math.floor(min/60), m=min%60; return h ? `${h}시간 ${m}분` : `${m}분`; }
 
 /* ===================== 계산 ===================== */
@@ -756,11 +770,13 @@ function renderTop(){
   let ut = "미국장 · "+us.label;
   if(us.key!=="regular"){ const l = untilUsOpen(u); if(l!==null) ut += ` · 개장까지 ${fmtLeft(l)}`; }
   up.textContent = ut; up.className = "pill"+(us.key==="regular"?" live":"");
-  // 테마
-  const autoDark = k.h>=18 || k.h<7;
+  // 테마: 미국 거래일엔 미국장 시간(프리마켓 시작~정규장 마감)이 밤, 쉬는 날엔 시계 기준(19~07시)
+  const autoDark = isMarketNight(k, u);
   const mode = themeMode==="auto" ? (autoDark?"dark":"light") : themeMode;
   document.body.dataset.mode = mode;
-  document.getElementById("modeBtn").textContent = themeMode==="auto" ? `자동 · ${autoDark?"밤":"낮"}` : (themeMode==="dark"?"밤 고정":"낮 고정");
+  const mb = document.getElementById("modeBtn");
+  mb.textContent = themeMode==="auto" ? `자동 · ${autoDark?"밤":"낮"}` : (themeMode==="dark"?"밤 고정":"낮 고정");
+  mb.title = "자동: 미국장이 열리는 날은 프리마켓 시작(한국 저녁 5~6시)부터 정규장 마감(새벽 5~6시)까지 밤이에요. 미국장이 쉬는 날은 저녁 7시~아침 7시가 밤이에요.";
   return {k,u,ks,us};
 }
 document.getElementById("modeBtn").addEventListener("click",()=>{
@@ -1353,6 +1369,7 @@ function viewMain(st){
     <div class="sf-brand"><b>GNOMON</b> 노몬 <span>Since 2026</span></div>
     <div>데이터 출처 · Finnhub · FRED(세인트루이스 연준) · 한국은행 ECOS · 공공데이터포털(금융위원회) · ECB 환율 <span class="sf-note">연결 진행 중이라 지금은 일부 샘플이에요</span></div>
     <div>정보 제공용이며 투자 권유가 아니에요. 추정치와 해석은 실제와 다를 수 있고, 판단과 책임은 이용자에게 있어요.</div>
+    <div>${(()=>{ const c = checkSummary(); return `<button type="button" class="sf-check" data-go="check">자동 점검 · ${c.e?`오류 ${c.e}건`:c.w?`주의 ${c.w}건`:"이상 없음"} ›</button>`; })()}</div>
     <div class="sf-copy">© 2026 GNOMON</div>
   </footer>`;
 }
@@ -1372,7 +1389,7 @@ const IND = {
     one:"농업을 뺀 일자리가 한 달 동안 몇 개 늘었는지예요. 실업률도 같이 나와요.",
     more:"이전 달 숫자가 함께 고쳐져서(수정치) 발표되는 경우가 많아요. 수정 폭도 같이 봐야 해요.",
     read:"예상보다 많으면 경기가 탄탄하다는 뜻이지만, 금리 인하 기대는 줄어드는 쪽으로 해석되기도 해요.",
-    last:{a:14.2, f:11.0, p:9.8}, hist:[17.1,12.5,8.9,9.8,11.4,14.2], react:[0.31,0.08,0.22,4.1], src:"https://www.bls.gov/ces/"},
+    last:{a:14.2, f:11.0, p:11.4}, hist:[17.1,12.5,8.9,9.8,11.4,14.2], react:[0.31,0.08,0.22,4.1], src:"https://www.bls.gov/ces/"},
   claims:{g:"us", name:"실업수당 청구", full:"신규 실업수당 청구건수", org:"미국 노동부", freq:"매주 목요일", next:["2026-11-19","08:30","ET"], unit:"만 건", sub:"한 주 동안 새로 신청한 건수",
     one:"한 주 동안 실업수당을 새로 신청한 사람 수예요. 매주 나와서 고용 흐름을 가장 빨리 보여줘요.",
     more:"한 주 숫자는 들쭉날쭉해서 4주 평균도 같이 봐요.",
@@ -2277,6 +2294,179 @@ function stockSheet(t, from){
     `);
 }
 
+
+/* ===================== 자동 점검 =====================
+   숫자나 화면을 바꾸지 않아요. 이상해 보이는 값을 찾아 목록으로 보여주기만 해요. */
+function runChecks(){
+  const out = [];
+  const add = (lv, area, msg) => out.push({lv, area, msg});
+  const fin = x => typeof x==="number" && isFinite(x);
+  const okDate = d => typeof d==="string" && /^\d{4}-\d{2}-\d{2}$/.test(d) && !isNaN(Date.parse(d+"T00:00:00Z"));
+  const today = ymd(parts(now(),"Asia/Seoul"));
+  const addDays = (d, n) => { const t = new Date(d+"T00:00:00Z"); t.setUTCDate(t.getUTCDate()+n); return t.toISOString().slice(0,10); };
+  const pctx = x => (x*100).toFixed(2)+"%";
+  let n = 0; const tick = () => n++;
+  const guard = (area, fn) => { try{ fn(); }catch(e){ add("err", area, "점검 중 오류가 났어요: "+e.message); } };
+
+  guard("ETF", ()=>{
+    const seen = new Set();
+    ETFS.forEach(e=>{
+      tick();
+      if(seen.has(e.code)) add("err","ETF",`${e.name}: 종목코드 ${e.code}가 두 번 들어 있어요.`); seen.add(e.code);
+      if(!(e.nav>0 && e.close>0)){ add("err","ETF",`${e.name}: NAV나 종가가 비어 있거나 0이에요.`); return; }
+      const gap = e.close/e.nav - 1;
+      if(Math.abs(gap) > 0.03) add("warn","ETF",`${e.name}: 종가와 NAV 차이가 ${pctx(gap)}예요. 보통 1% 안쪽이라 값이 맞는지 확인이 필요해요.`);
+      if(!fin(e.prem)) add("err","ETF",`${e.name}: 장중 괴리율이 숫자가 아니에요.`);
+      else if(Math.abs(e.prem) > 0.02) add("warn","ETF",`${e.name}: 장중 괴리율이 ${pctx(e.prem)}예요. LP가 있는 ETF는 보통 1% 안쪽이라 확인이 필요해요.`);
+      const missing = e.h.filter(([t])=>!STOCKS[t]).map(([t])=>t);
+      if(missing.length) add("err","ETF",`${e.name}: 구성종목 ${missing.join(", ")}의 시세가 없어요.`);
+      const noInfo = e.h.filter(([t])=>!CO[t]).map(([t])=>t);
+      if(noInfo.length) add("warn","ETF",`${e.name}: ${noInfo.join(", ")}의 회사 소개가 없어요.`);
+      const wsum = e.h.reduce((a,[,w])=>a+w,0) + (e.rest ? e.rest.w : 0) + (e.cash||0);
+      if(Math.abs(wsum-1) > 0.03) add("warn","ETF",`${e.name}: 비중을 모두 더하면 ${(wsum*100).toFixed(1)}%예요. 100%에 가까워야 해요.`);
+      if(e.rest && e.rest.n && e.rest.n < e.h.length) add("warn","ETF",`${e.name}: 전체 종목 수(${e.rest.n})가 표시한 종목 수(${e.h.length})보다 적어요.`);
+      const c = calc(e);
+      if(!fin(c.total) || !fin(c.est)) add("err","ETF",`${e.name}: 추정 계산 결과가 숫자가 아니에요.`);
+      else if(Math.abs(c.total) > 0.15) add("warn","ETF",`${e.name}: 하룻밤 추정 변화가 ${pctx(c.total)}예요. 너무 커서 입력값 확인이 필요해요.`);
+    });
+  });
+  guard("시세", ()=>{
+    Object.entries(STOCKS).forEach(([t,[name,price,r]])=>{
+      tick();
+      if(!(price>0)) add("err","시세",`${name}(${t}): 가격이 비어 있거나 0이에요.`);
+      if(!fin(r)) add("err","시세",`${name}(${t}): 등락률이 숫자가 아니에요.`);
+      else if(Math.abs(r) > 0.3) add("warn","시세",`${name}(${t}): 하루 등락률이 ${pctx(r)}예요. 실제로 크게 움직였는지 확인이 필요해요.`);
+    });
+    tick();
+    if(!(FX.now>0 && FX.base>0)) add("err","환율","원/달러 환율이 비어 있어요.");
+    else if(Math.abs(FX.now/FX.base-1) > 0.03) add("warn","환율",`원/달러 환율이 기준보다 ${pctx(FX.now/FX.base-1)} 움직였어요. 하루 변동으로는 커서 확인이 필요해요.`);
+    Object.entries(FUT).forEach(([k,v])=>{ tick(); if(!fin(v) || Math.abs(v) > 0.1) add("warn","선물",`${k==="nq"?"나스닥100":"S&P500"} 선물 변화 ${fin(v)?pctx(v):"값 없음"}가 이상해요.`); });
+    tick();
+    if(IND.usdkrw && Math.abs(IND.usdkrw.now - FX.now) > 0.05) add("warn","환율",`매크로 지표의 원/달러(${IND.usdkrw.now})와 ETF 계산에 쓰는 환율(${FX.now})이 달라요.`);
+  });
+  guard("매크로 지표", ()=>{
+    Object.entries(IND).forEach(([k,v])=>{
+      tick();
+      const nm = v.name || k;
+      if(!v.name || v.unit==null) add("err","매크로 지표",`${k}: 이름이나 단위가 비어 있어요.`);
+      const cur = curVal(v);
+      if(!fin(cur)){ add("err","매크로 지표",`${nm}: 현재 값이 숫자가 아니에요.`); return; }
+      if(v.unit==="%" && (cur < -50 || cur > 100)) add("warn","매크로 지표",`${nm}: ${cur}%는 범위를 벗어난 값 같아요.`);
+      if(v.g==="mkt"){
+        if(Array.isArray(v.spark) && v.spark.length){
+          const last = v.spark[v.spark.length-1];
+          if(Math.abs(last - v.now) > Math.max(0.011, Math.abs(v.now)*0.0005)) add("warn","매크로 지표",`${nm}: 작은 그래프의 마지막 값(${last})이 현재 값(${v.now})과 달라요.`);
+          if(fin(v.chg) && v.spark.length > 1){
+            const d = v.now - v.spark[v.spark.length-2], tol = Math.max(0.015, Math.abs(v.now)*0.0004);
+            if(Math.abs(d - v.chg) > tol) add("warn","매크로 지표",`${nm}: 전일 대비(${v.chg})가 그래프로 계산한 변화(${d.toFixed(2)})와 달라요.`);
+          }
+        }
+      } else {
+        if(!v.org) add("warn","매크로 지표",`${nm}: 발표 기관이 비어 있어요.`);
+        if(!/^https:\/\//.test(v.src||"")) add("warn","매크로 지표",`${nm}: 원문 링크가 없거나 https가 아니에요.`);
+        const L = v.last || {};
+        if(!fin(L.p)) add("warn","매크로 지표",`${nm}: 이전 값이 비어 있어요.`);
+        if(Array.isArray(v.hist) && v.hist.length >= 2){
+          const h = v.hist;
+          if(Math.abs(h[h.length-1] - L.a) > 1e-9) add("warn","매크로 지표",`${nm}: 최근 흐름의 마지막 값(${h[h.length-1]})이 실제 발표값(${L.a})과 달라요.`);
+          if(fin(L.p) && Math.abs(h[h.length-2] - L.p) > 1e-9) add("warn","매크로 지표",`${nm}: 최근 흐름의 직전 값(${h[h.length-2]})이 '이전' 값(${L.p})과 달라요.`);
+        }
+        if(Array.isArray(v.next) && v.next.length===3){
+          if(!okDate(v.next[0])) add("err","매크로 지표",`${nm}: 다음 발표일 형식이 잘못됐어요.`);
+          else {
+            const [h,mi] = v.next[1].split(":").map(Number);
+            if(v.next[2]==="ET"){
+              const off = isDstDate(v.next[0]) ? 4 : 5, [y,m,d] = v.next[0].split("-").map(Number);
+              const et = parts(new Date(Date.UTC(y,m-1,d,h+off,mi)), "America/New_York");
+              if(et.h!==h || et.mi!==mi) add("err","매크로 지표",`${nm}: 서머타임 계산이 어긋나 한국 시간 표시가 1시간 틀릴 수 있어요.`);
+            }
+            const r = releaseKst(v);
+            if(r.ymd < today) add("warn","매크로 지표",`${nm}: 다음 발표일(${r.label})이 이미 지났어요. 새 결과와 다음 일정으로 바꿔야 해요.`);
+            else if(r.ymd > addDays(today, 120)) add("warn","매크로 지표",`${nm}: 다음 발표일이 4달 넘게 남았어요. 일정이 맞는지 확인이 필요해요.`);
+          }
+        }
+      }
+      const x = IND_X[k];
+      if(x && x.zones){
+        const th = x.zones.map(z=>z[0]);
+        if(th.some((t,i)=>i>0 && !(t>th[i-1]))) add("err","매크로 지표",`${nm}: 구간 기준값이 작은 것부터 순서대로가 아니에요.`);
+        if(fin(x.min) && fin(x.max) && (cur < x.min || cur > x.max)) add("warn","매크로 지표",`${nm}: 현재 값 ${cur}이 구간 막대 범위(${x.min}~${x.max}) 밖이에요.`);
+      }
+      const t = TEN[k];
+      if(t){
+        if(!(t[0][0] > t[1][0])) add("err","매크로 지표",`${nm}: 10년 최고값이 최저값보다 작아요.`);
+        if(cur > t[0][0]) add("warn","매크로 지표",`${nm}: 현재 값 ${cur}이 10년 최고(${t[0][0]}, ${t[0][1]})보다 높아요. 기록이 바뀌었는지, 값이 틀렸는지 확인이 필요해요.`);
+        if(cur < t[1][0]) add("warn","매크로 지표",`${nm}: 현재 값 ${cur}이 10년 최저(${t[1][0]}, ${t[1][1]})보다 낮아요. 기록이 바뀌었는지, 값이 틀렸는지 확인이 필요해요.`);
+      }
+    });
+    tick();
+    if(IND.spread && IND.us10y && IND.us2y){
+      const calcd = IND.us10y.now - IND.us2y.now;
+      if(Math.abs(calcd - IND.spread.now) > 0.02) add("warn","매크로 지표",`장단기 금리차(${IND.spread.now})가 10년물−2년물로 계산한 값(${calcd.toFixed(2)})과 달라요.`);
+    }
+    tick();
+    if(IND.bok && BOK_REAL.length){ const last = BOK_REAL[BOK_REAL.length-1][1]; if(Math.abs(last - IND.bok.last.a) > 1e-9) add("warn","매크로 지표",`한국은행 기준금리 차트 마지막 값(${last}%)과 지금 값(${IND.bok.last.a}%)이 달라요.`); }
+    Object.entries(LINKS).forEach(([k,v])=>{ tick(); const all = [...(v.ev||[]),...(v.co||[]),...(v.ll||[])];
+      if(!IND[k]) add("err","연관성",`연관성 목록에 없는 지표(${k})가 있어요.`);
+      all.filter(l=>!IND[l.to]).forEach(l=>add("err","연관성",`${IND[k]?IND[k].name:k}: 연결된 지표 ${l.to}가 없어요.`)); });
+    Object.entries(IND_GROUPS).forEach(([g,v])=>{ tick(); v.keys.filter(k=>!IND[k]).forEach(k=>add("err","매크로 지표",`${v.title} 묶음에 없는 지표(${k})가 들어 있어요.`)); });
+  });
+  guard("일정", ()=>{
+    const held = new Set(ETFS.flatMap(e=>e.h.map(([t])=>t)));
+    EVENTS.forEach(ev=>{
+      tick();
+      if(!okDate(ev.d)){ add("err","일정",`${ev.title}: 날짜 형식이 잘못됐어요.`); return; }
+      if(ev.done && ev.d > today) add("err","일정",`${ev.title}: 아직 오지 않은 날(${ev.d})인데 '완료'로 표시돼 있어요.`);
+      if(!ev.done && ev.d < today) add("warn","일정",`${ev.title}: 지난 일정(${ev.d})인데 '완료' 표시가 없어요.`);
+      if(!held.has(ev.t)) add("warn","일정",`${ev.title}: ${ev.t}는 어떤 ETF에도 들어 있지 않아요.`);
+    });
+    Object.entries(DIST).forEach(([code,d])=>{
+      tick();
+      const e = ETFS.find(x=>x.code===code); const nm = e ? e.name : code;
+      if(!e) add("warn","분배금",`분배금 정보에 없는 ETF(${code})가 있어요.`);
+      d.hist.forEach(([dt,amt])=>{ if(!okDate(dt) || !(amt>=0)) add("err","분배금",`${nm}: 지난 분배금 기록(${dt})이 잘못됐어요.`); });
+      if(d.next){
+        if(!okDate(d.next.rec) || !okDate(d.next.pay)) add("err","분배금",`${nm}: 다음 분배 날짜 형식이 잘못됐어요.`);
+        else { if(d.next.rec < today) add("warn","분배금",`${nm}: 다음 기준일(${d.next.rec})이 이미 지났어요.`);
+               if(d.next.pay <= d.next.rec) add("err","분배금",`${nm}: 지급일이 기준일보다 빨라요.`); }
+      }
+    });
+  });
+  guard("휴장일", ()=>{
+    [["한국",KRX_HOL],["미국",US_HOL]].forEach(([nm,list])=>{
+      tick();
+      list.forEach((h,i)=>{
+        if(!okDate(h[0])) add("err","휴장일",`${nm} 휴장일 ${h[0]}: 날짜 형식이 잘못됐어요.`);
+        else { const wd = new Date(h[0]+"T00:00:00Z").getUTCDay(); if(wd===0||wd===6) add("warn","휴장일",`${nm} 휴장일 ${h[0]}(${h[1]})이 주말이에요. 원래 쉬는 날이라 목록에 필요 없어요.`); }
+        if(i>0 && !(h[0] > list[i-1][0])) add("err","휴장일",`${nm} 휴장일 목록이 날짜 순서가 아니거나 겹쳐요 (${h[0]}).`);
+      });
+      const last = list[list.length-1][0];
+      if(last < addDays(today, 60)) add("warn","휴장일",`${nm} 휴장일 목록이 ${last}까지만 있어요. 다음 해 일정을 넣어야 해요.`);
+    });
+  });
+  return {items: out, count: n, at: now()};
+}
+function checkSummary(){
+  const r = runChecks(); const e = r.items.filter(x=>x.lv==="err").length, w = r.items.filter(x=>x.lv==="warn").length;
+  return {r, e, w};
+}
+function viewCheck(){
+  const {r, e, w} = checkSummary();
+  const groups = {};
+  r.items.forEach(x=>{ (groups[x.area] = groups[x.area] || []).push(x); });
+  const k = parts(r.at, "Asia/Seoul");
+  const head = e ? `확인이 필요한 오류 ${e}건${w?` · 주의 ${w}건`:""}` : w ? `오류 없음 · 주의 ${w}건` : "모두 정상이에요";
+  return `<section class="card">
+    <h2 style="margin:0 0 4px">자동 점검</h2>
+    <p class="small muted" style="margin:0 0 14px">${k.m}/${k.d} ${pad(k.h)}:${pad(k.mi)} 기준 · 항목 ${r.count}개를 확인했어요</p>
+    <div class="chk-sum ${e?"bad":w?"warn":"good"}">${head}</div>
+    <p class="small" style="margin:14px 0 0">이 점검은 <b>숫자나 화면을 바꾸지 않아요.</b> 앱에 들어 있는 자료끼리 맞는지, 범위를 벗어난 값이 없는지, 지난 일정이 그대로 남아 있지 않은지 확인해서 목록으로만 보여줘요. 고치는 일은 사람이 확인한 뒤에 해요.</p>
+  </section>
+  ${Object.entries(groups).map(([a,list])=>`<section class="card"><h3 style="margin:0 0 8px">${a} <span class="small muted" style="font-weight:400">${list.length}건</span></h3>
+    ${list.map(x=>`<div class="chk-row"><span class="chk-lv ${x.lv}">${x.lv==="err"?"오류":"주의"}</span><span>${x.msg}</span></div>`).join("")}</section>`).join("")}
+  <p class="tiny muted" style="margin:8px 4px 0">지금은 샘플 숫자라 실제 시세와 맞지 않는 항목이 나올 수 있어요. 실제 데이터가 연결되면 같은 점검이 매번 새 데이터에 돌아가요.</p>`;
+}
+
 /* ===================== 라우팅 ===================== */
 function route(){ const h = (location.hash||"").replace("#",""); return h || "main"; }
 function go(name){ if(location.hash !== "#"+name) location.hash = name; else render(); }
@@ -2285,7 +2475,7 @@ function render(){
   const r = route();
   let html;
   const inA = r==="macro" || r.startsWith("macro-");
-  const inEtf = !(r==="main" || inA);
+  const inEtf = !(r==="main" || inA || r==="check");
   document.querySelector(".tabs").hidden = !inEtf;
   document.getElementById("backMain").hidden = (r==="main");
   document.getElementById("clocks").hidden = (r==="main");
@@ -2293,7 +2483,7 @@ function render(){
   document.getElementById("previewBox").hidden = (r==="main");
   document.getElementById("discLine").hidden = (r==="main");
   document.querySelector(".top").classList.toggle("bare", r==="main");
-  document.getElementById("brandTitle").innerHTML = r==="main" ? "" : (inA ? "매크로 <span>지표</span>" : "밤낮 <span>ETF</span>");
+  document.getElementById("brandTitle").innerHTML = r==="main" ? "" : r==="check" ? "자동 <span>점검</span>" : (inA ? "매크로 <span>지표</span>" : "밤낮 <span>ETF</span>");
   if(r==="main") html = viewMain(st);
   else if(r==="macro") html = viewMacro(st);
   else if(r.startsWith("macro-")) html = viewMacroGroup(r.slice(6), st);
@@ -2302,6 +2492,7 @@ function render(){
   else if(r==="portfolio") html = viewPortfolio();
   else if(r==="news") html = viewNews();
   else if(r==="guide") html = viewGuide();
+  else if(r==="check") html = viewCheck();
   else html = viewHome(st);
   document.getElementById("view").innerHTML = html;
   const tabKey = r.startsWith("etf-") ? "home" : r;
