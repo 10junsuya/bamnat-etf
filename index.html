@@ -12,12 +12,12 @@
   --accent:#1D1D1F; --accent-soft:#F2F2F4; --up:#E0352B; --down:#1F6FE5; --warn:#B25E00;
   --font:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
   --r:16px;
-  --z0:#F3E4B8; --z1:#EDD38D; --z2:#E2BF5E; --z3:#D3A52A; --z4:#BE8E0F; --zop:.75; --chart:#A67C00; --pt:#A67C00;
+  --z0:#F3E4B8; --z1:#EDD38D; --z2:#E2BF5E; --z3:#D3A52A; --z4:#BE8E0F; --zop:.75; --chart:#A67C00; --pt:var(--ink);
 }
 body[data-mode="dark"]{
-  --bg:#0B0B0C; --surface:#0B0B0C; --surface-2:#1C1C1E; --ink:#F5F5F7; --muted:#8E8E93; --line:#2C2C2E;
+  --bg:#0B0B0C; --surface:#0B0B0C; --surface-2:#1C1C1E; --ink:#F5F5F7; --muted:#A1A1A6; --line:#2C2C2E;
   --accent:#F5F5F7; --accent-soft:#1C1C1E; --up:#FF5A4F; --down:#4C9BFF; --warn:#FFA94D;
-  --z0:#3A3A40; --z1:#4B4B53; --z2:#5F5F69; --z3:#777781; --z4:#92929C; --zop:1; --chart:#F4D27A; --pt:#E9C35C; --zcur:#E9C35C;
+  --z0:#3A3A40; --z1:#4B4B53; --z2:#5F5F69; --z3:#777781; --z4:#92929C; --zop:1; --chart:#F4D27A; --pt:#D8BD80; --zcur:#E9C35C;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -249,7 +249,7 @@ details.more summary span{font-weight:400; color:var(--muted); font-size:14px}
 .form.calc input{font-size:16px; padding:10px 12px}
 .calc-out{margin-top:14px; background:var(--surface-2); border-radius:14px; padding:6px 14px}
 .orow{display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-top:1px solid var(--line); font-size:15px}
-.orow:first-child{border-top:0} .orow>span{color:var(--muted)} .orow b{text-align:right; font-weight:600}
+.orow:first-child{border-top:0} .orow>span{color:var(--ink)} .orow b{text-align:right; font-weight:600}
 .orow.strong b{font-size:18px; color:var(--pt)} .orow.strong>span{color:var(--ink); font-weight:600}
 .hcmp{display:grid; grid-template-columns:1fr 1fr; gap:8px} .hcmp>div{display:flex; flex-direction:column; gap:4px; background:var(--surface-2); border-radius:12px; padding:12px; font-size:14px}
 .ttable>div{display:grid; grid-template-columns:96px 1fr; gap:10px; padding:10px 0; border-top:1px solid var(--line); font-size:14px; line-height:1.55}
@@ -2043,7 +2043,7 @@ const CALC = {
     return outRow("환율 변화", `${s.toLocaleString("ko-KR")}원 → ${e.toLocaleString("ko-KR")}원 (${pctC(fx)})`) +
       outRow("비H (환노출) 원화 수익률", pctC(unh), true) +
       outRow("H (환헤지) 수익률 · 추정", pctC(hedge), true) +
-      outRow("이 경우", better, true) +
+      outRow("이 경우", better) +
       outRow("둘이 같아지는 환율 변화", `${pctS(be)} (약 ${Math.round(s*(1+be)).toLocaleString("ko-KR")}원)`) +
       `<p class="tiny muted" style="margin-top:8px">환율 효과 = 미국 수익률에 환율 변화가 곱해져요. H는 환율 영향을 거의 없애는 대신 헤지 비용이 들어요. 실제 H 상품의 결과는 운용 방식에 따라 조금 달라요.</p>`;
   },
@@ -2053,7 +2053,7 @@ const CALC = {
     const gen = g*0.154, isa1 = Math.max(0,g-2e6)*0.099, isa2 = Math.max(0,g-4e6)*0.099, us = Math.max(0,g-2.5e6)*0.22;
     const rows = [["일반계좌 (국내 상장 해외 ETF)", gen],["ISA 일반형 (3년 유지 시)", isa1],["ISA 서민형 (3년 유지 시)", isa2],["해외 직접 투자 (QQQ 등)", us]];
     const min = Math.min(...rows.map(r=>r[1]));
-    return rows.map(([k,v])=>outRow(k, `${won(v)}${v===min?" · 가장 적음":""}`, v===min)).join("") +
+    return rows.map(([k,v])=>outRow(v===min?`${k} · 가장 적음`:k, won(v), v===min)).join("") +
       outRow("연금저축·IRP", "지금은 0원 (받을 때 연금소득세 3.3~5.5%)") +
       (g > 2e7 ? `<p class="small" style="color:var(--warn);margin-top:8px">일반계좌에서 이자·배당을 합친 금융소득이 한 해 2,000만 원을 넘으면 종합과세 대상이 될 수 있어요.</p>` : "") +
       `<p class="tiny muted" style="margin-top:8px">수익 하나만 있을 때의 단순 계산이에요. ${tw("손익통산")}, 다른 금융소득, ${tw("과세표준기준가")}에 따라 실제 세금은 달라질 수 있어요.</p>`;
