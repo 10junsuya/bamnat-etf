@@ -12,12 +12,12 @@
   --accent:#1D1D1F; --accent-soft:#F2F2F4; --up:#E0352B; --down:#1F6FE5; --warn:#B25E00;
   --font:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
   --r:16px;
-  --z0:#F3E4B8; --z1:#EDD38D; --z2:#E2BF5E; --z3:#D3A52A; --z4:#BE8E0F; --zop:.75; --chart:#A67C00;
+  --z0:#F3E4B8; --z1:#EDD38D; --z2:#E2BF5E; --z3:#D3A52A; --z4:#BE8E0F; --zop:.75; --chart:#A67C00; --pt:#A67C00;
 }
 body[data-mode="dark"]{
   --bg:#0B0B0C; --surface:#0B0B0C; --surface-2:#1C1C1E; --ink:#F5F5F7; --muted:#8E8E93; --line:#2C2C2E;
   --accent:#F5F5F7; --accent-soft:#1C1C1E; --up:#FF5A4F; --down:#4C9BFF; --warn:#FFA94D;
-  --z0:#3A3A40; --z1:#4B4B53; --z2:#5F5F69; --z3:#777781; --z4:#92929C; --zop:1; --chart:#F4D27A; --zcur:#E9C35C;
+  --z0:#3A3A40; --z1:#4B4B53; --z2:#5F5F69; --z3:#777781; --z4:#92929C; --zop:1; --chart:#F4D27A; --pt:#E9C35C; --zcur:#E9C35C;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -28,7 +28,7 @@ body[data-mode="dark"]{color-scheme:dark} body[data-mode="light"]{color-scheme:l
 button,select,input{font:inherit; color:inherit}
 a{color:var(--accent)}
 .num{font-variant-numeric:tabular-nums}
-.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)} .pt{color:var(--pt); font-weight:700}
 .muted{color:var(--muted)} .small{font-size:14px} .tiny{font-size:13px}
 :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:6px}
 @media (prefers-reduced-motion: reduce){ *{transition:none!important} }
@@ -249,8 +249,8 @@ details.more summary span{font-weight:400; color:var(--muted); font-size:14px}
 .form.calc input{font-size:16px; padding:10px 12px}
 .calc-out{margin-top:14px; background:var(--surface-2); border-radius:14px; padding:6px 14px}
 .orow{display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-top:1px solid var(--line); font-size:15px}
-.orow:first-child{border-top:0} .orow span{color:var(--muted)} .orow b{text-align:right; font-weight:600}
-.orow.strong b{font-size:18px; color:var(--accent)} .orow.strong span{color:var(--ink); font-weight:600}
+.orow:first-child{border-top:0} .orow>span{color:var(--muted)} .orow b{text-align:right; font-weight:600}
+.orow.strong b{font-size:18px; color:var(--pt)} .orow.strong>span{color:var(--ink); font-weight:600}
 .hcmp{display:grid; grid-template-columns:1fr 1fr; gap:8px} .hcmp>div{display:flex; flex-direction:column; gap:4px; background:var(--surface-2); border-radius:12px; padding:12px; font-size:14px}
 .ttable>div{display:grid; grid-template-columns:96px 1fr; gap:10px; padding:10px 0; border-top:1px solid var(--line); font-size:14px; line-height:1.55}
 .ttable>div.th{border-top:0; color:var(--muted); font-size:12px; padding-top:0}
@@ -814,7 +814,7 @@ function priceStateCard(e, c, st){
   let body;
   if(k==="closed"){
     const diff = c.est/e.close - 1;
-    body = `<div class="state-line">오늘 종가 <span class="num">${won(e.close)}</span> → 지금 추정 가치 <span class="num">${won(c.est)}</span></div>
+    body = `<div class="state-line">오늘 종가 <span class="num">${won(e.close)}</span> → 지금 추정 가치 <b class="num ${cls(diff)}" style="white-space:nowrap">${won(c.est)}</b></div>
       <div class="small muted">추정 가치가 종가보다 <span class="num ${cls(diff)}">${Math.abs(diff*100).toFixed(2)}% ${diff>=0?"높아요":"낮아요"}</span>. 다음 정규장은 한국 시간 09:00에 열려요.</div>`;
   }else{
     const p = (c.market - c.est)/c.est;
@@ -992,7 +992,7 @@ function distCard(e, st){
       <div><div class="k">최근 1년 합계</div><div class="v num">${won(D.yearSum)}</div><div class="tiny muted num">종가 대비 연 ${(D.yieldPct*100).toFixed(2)}%</div></div>
     </div>
     ${D.next?`<div class="callout" style="margin-top:10px">
-      <div>다음 기준일 <b class="num">${D.next.rec.slice(0,4)}년 ${fmtD(D.next.rec)}</b> <span class="tiny muted">예시 · ${dayDiff(today, D.next.rec)}일 남음</span></div>
+      <div>다음 기준일 <b class="num">${D.next.rec.slice(0,4)}년 ${fmtD(D.next.rec)}</b> <span class="tiny muted">예시 · </span><span class="tiny pt">${dayDiff(today, D.next.rec)}일 남음</span></div>
       <div style="margin-top:4px">받으려면 <b class="num">${fmtD(D.lastBuy)}</b>까지 사야 해요 ${q("분배 기준일")}</div>
       <div class="tiny muted" style="margin-top:4px">지급 예정 ${fmtD(D.next.pay)} · 일반 계좌는 보통 15.4% 세금을 떼고 받아요</div>
     </div>`:""}
@@ -1745,7 +1745,7 @@ function viewMacro(st){
       <div class="f muted">${key==="mkt" ? `원/달러 <b class="num ${cls(IND.usdkrw.chg)}">${IND.usdkrw.now}</b> · VIX <b class="num">${IND.vix.now}</b>` : (first?`다음 ${first.v.name} · ${first.r.label}`:"")}</div></button>`; };
   return `${nx?`<section class="card" style="margin-top:14px"><div class="small muted">다음 발표 (예시 일정)</div>
       <div style="font-size:20px;font-weight:700;margin-top:2px">${IND[nx.k].name} · ${nx.r.label}</div>
-      <div class="small muted">한국 시간 · ${dayDiff(ymd(st.k), nx.r.ymd)}일 남았어요</div></section>`:""}
+      <div class="small muted">한국 시간 · <span class="pt num">${dayDiff(ymd(st.k), nx.r.ymd)}일 남았어요</span></div></section>`:""}
     <div class="agrid">
       ${Object.keys(IND_GROUPS).map(grpCard).join("")}
       <button class="acard wide hl" type="button" data-go="macro-map"><div class="c">우리 앱만의 기능</div><div class="t">연관성 지도</div><div class="s">지표들이 서로 어떻게 이어지는지, 무엇이 먼저 움직이는지 한눈에 봐요</div><div class="f muted">발표 반응 · 최근 동조화 · 선행·후행</div></button>
@@ -1954,7 +1954,7 @@ function indSheet(k, from, prev){
     <div class="bhead"><div class="tiny muted">${v.ref?`${v.ref} 기준 · `:""}${v.sub}</div><div class="big num">${fv(v.last.a)}</div>
       <div class="small muted num">${v.last.f!=null?`예상 ${fv(v.last.f)} · `:""}이전 ${fv(v.last.p)}</div><div style="margin-top:6px">${zoneChip(k)}</div></div>
     ${chart}${linkPreview(k)}
-    <div class="hnext sm"><div class="small">다음 발표 (예시 일정) · <b class="num">${r.label}</b> · ${dayDiff(ymd(st.k), r.ymd)}일 남음</div></div>
+    <div class="hnext sm"><div class="small">다음 발표 (예시 일정) · <b class="num">${r.label}</b> · <span class="pt num">${dayDiff(ymd(st.k), r.ymd)}일 남음</span></div></div>
     ${what}${zone}
     <details class="more"><summary>더 보기 <span>· 지난 결과, 해석, 시장 반응</span></summary>
       <div class="bsection"><h4>지난 발표 결과 <span class="tiny muted" style="font-weight:400">샘플</span></h4>
@@ -1972,6 +1972,7 @@ function indSheet(k, from, prev){
 
 /* ===================== 도구: 계산기 · 세금 안내 · H vs 비H ===================== */
 const pctS = (x, d=2) => `${x>0?"+":x<0?"−":""}${Math.abs(x*100).toFixed(d)}%`;
+const pctC = (x, d=2) => `<span class="${cls(x)}">${pctS(x,d)}</span>`;
 const numIn = (f, n) => { const el = f.querySelector(`[name="${n}"]`); const v = el ? parseFloat(String(el.value).replace(/,/g,"")) : NaN; return isFinite(v) ? v : NaN; };
 const inp = (n, label, val, ph, hint) => `<label>${label}<input name="${n}" type="number" inputmode="decimal" step="any" value="${val}" placeholder="${ph||""}">${hint?`<span class="tiny muted">${hint}</span>`:""}</label>`;
 const outRow = (k, v, strong) => `<div class="orow${strong?" strong":""}"><span>${k}</span><b class="num">${v}</b></div>`;
@@ -2016,17 +2017,17 @@ const CALC = {
     if(![q1,p1,q2,p2].every(x=>isFinite(x)&&x>0)) return `<p class="small muted">네 칸을 모두 채우면 결과가 나와요.</p>`;
     const avg = (q1*p1 + q2*p2) / (q1+q2), q = q1+q2;
     return outRow("새 평단가", won(avg), true) +
-      outRow("평단가 변화", `${won(p1)} → ${won(avg)} (${pctS(avg/p1-1)})`) +
+      outRow("평단가 변화", `${won(p1)} → ${won(avg)} (${pctC(avg/p1-1)})`) +
       outRow("총 보유 수량", `${q.toLocaleString("ko-KR")}주`) +
       outRow("총 투자금", won(q*avg)) +
-      outRow(`현재가(${won(now)}) 기준 수익률`, `${pctS(now/p1-1)} → ${pctS(now/avg-1)}`) +
+      outRow(`현재가(${won(now)}) 기준 수익률`, `${pctC(now/p1-1)} → ${pctC(now/avg-1)}`) +
       (now < avg ? outRow("본전까지 필요한 상승률", pctS(avg/now-1), true) : outRow("지금 상태", "평단가보다 높아요"));
   },
   goal(f){
     const avg = numIn(f,"avg"), now = numIn(f,"now"), t = numIn(f,"t")/100, q = numIn(f,"q");
     if(![avg,now].every(x=>isFinite(x)&&x>0) || !isFinite(t)) return `<p class="small muted">평단가, 현재가, 목표 수익률을 채우면 결과가 나와요.</p>`;
     const target = avg*(1+t), need = target/now - 1;
-    let out = outRow("목표가", won(target), true) + outRow("지금 수익률", pctS(now/avg-1)) +
+    let out = outRow("목표가", won(target), true) + outRow("지금 수익률", pctC(now/avg-1)) +
       outRow("목표까지 필요한 상승률", need > 0 ? pctS(need) : "이미 넘었어요", true);
     if(isFinite(q) && q > 0){ const gain = (target-avg)*q;
       out += outRow(`목표 달성 시 수익금 (${tw("세전")})`, won(gain)) +
@@ -2039,10 +2040,10 @@ const CALC = {
     const fx = e/s - 1, unh = (1+usd)*(1+fx) - 1, hedge = usd - (isFinite(hc)?hc:0)*((isFinite(m)&&m>0?m:12)/12);
     const better = Math.abs(unh-hedge) < 0.0005 ? "거의 같아요" : unh > hedge ? "비H(환노출)가 유리했어요" : "H(환헤지)가 유리했어요";
     const be = (1+hedge)/(1+usd) - 1;
-    return outRow("환율 변화", `${s.toLocaleString("ko-KR")}원 → ${e.toLocaleString("ko-KR")}원 (${pctS(fx)})`) +
-      outRow("비H (환노출) 원화 수익률", pctS(unh), true) +
-      outRow("H (환헤지) 수익률 · 추정", pctS(hedge), true) +
-      outRow("이 경우", better) +
+    return outRow("환율 변화", `${s.toLocaleString("ko-KR")}원 → ${e.toLocaleString("ko-KR")}원 (${pctC(fx)})`) +
+      outRow("비H (환노출) 원화 수익률", pctC(unh), true) +
+      outRow("H (환헤지) 수익률 · 추정", pctC(hedge), true) +
+      outRow("이 경우", better, true) +
       outRow("둘이 같아지는 환율 변화", `${pctS(be)} (약 ${Math.round(s*(1+be)).toLocaleString("ko-KR")}원)`) +
       `<p class="tiny muted" style="margin-top:8px">환율 효과 = 미국 수익률에 환율 변화가 곱해져요. H는 환율 영향을 거의 없애는 대신 헤지 비용이 들어요. 실제 H 상품의 결과는 운용 방식에 따라 조금 달라요.</p>`;
   },
@@ -2122,7 +2123,7 @@ function holiSheet(which){
     const nx = list[0];
     openSheet(`<h3 id="sheetTitle">한국장 휴장일</h3>
       <div class="small muted">정규장 09:00~15:30 · 주말을 빼고, 평일에 쉬는 날만 모았어요</div>
-      ${nx?`<div class="hnext"><div class="small">다음 휴장일</div><div class="d num">${fmtD(nx[0])} ${nx[1]}</div><div class="small num">${dayDiff(kToday,nx[0])===0?"오늘이에요":`${dayDiff(kToday,nx[0])}일 남았어요`}</div></div>`:""}
+      ${nx?`<div class="hnext"><div class="small">다음 휴장일</div><div class="d num">${fmtD(nx[0])} ${nx[1]}</div><div class="small num pt">${dayDiff(kToday,nx[0])===0?"오늘이에요":`${dayDiff(kToday,nx[0])}일 남았어요`}</div></div>`:""}
       ${holiList(list, kToday, (h,dd)=>`<div class="hrow"><span class="dd num">${fmtD(h[0])}</span><span class="why">${h[1]}${h[2]?`<small>${h[2]}</small>`:""}</span><span class="tiny muted num">D-${dd}</span></div>`)}
       <p class="tiny muted" style="margin-top:14px">2027년 목록은 정부가 발표한 2027년 공휴일을 기준으로 정리했어요. 한국거래소가 연말에 최종 공지하면 그에 맞춰 고칠게요. 선거일이나 임시공휴일이 생기면 추가돼요.</p>`, true);
     return;
@@ -2144,7 +2145,7 @@ function holiSheet(which){
       <div class="dst-lbl">${mdays.map((_,i)=>`<span>${i+1}</span>`).join("")}</div>`; };
   openSheet(`<h3 id="sheetTitle">미국장 휴장일 · 서머타임</h3>
     <div class="small muted">주말을 빼고, 평일에 쉬거나 일찍 끝나는 날만 모았어요</div>
-    ${nx?`<div class="hnext"><div class="small">다음 ${nx[2]==="early"?"조기 폐장일":"휴장일"} (현지 날짜)</div><div class="d num">${fmtD(nx[0])} ${nx[1]}</div><div class="small num">${dayDiff(uToday,nx[0])===0?"오늘이에요":`${dayDiff(uToday,nx[0])}일 남았어요`}</div></div>`:""}
+    ${nx?`<div class="hnext"><div class="small">다음 ${nx[2]==="early"?"조기 폐장일":"휴장일"} (현지 날짜)</div><div class="d num">${fmtD(nx[0])} ${nx[1]}</div><div class="small num pt">${dayDiff(uToday,nx[0])===0?"오늘이에요":`${dayDiff(uToday,nx[0])}일 남았어요`}</div></div>`:""}
     ${holiList(list, uToday, (h,dd)=>`<div class="hrow"><span class="dd num">${fmtD(h[0])}</span><span class="why">${h[1]}${h[2]==="early"?`<small>조기 폐장 · 현지 오후 1시 마감 (한국 시간 다음 날 새벽 3시)</small>`:""}${h[3]?`<small>${h[3]}</small>`:""}</span><span class="tiny muted num">${h[2]==="early"?'<span class="pill">일찍 마감</span>':`D-${dd}`}</span></div>`)}
 
     <div class="bsection"><h4>서머타임</h4>
