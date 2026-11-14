@@ -17,7 +17,7 @@
 body[data-mode="dark"]{
   --bg:#0B0B0C; --surface:#0B0B0C; --surface-2:#1C1C1E; --ink:#F5F5F7; --muted:#8E8E93; --line:#2C2C2E;
   --accent:#F5F5F7; --accent-soft:#1C1C1E; --up:#FF5A4F; --down:#4C9BFF; --warn:#FFA94D;
-  --z0:#3B321C; --z1:#56461D; --z2:#7C6421; --z3:#B08A25; --z4:#E2B33A; --zop:.85; --chart:#F0C75E;
+  --z0:#242427; --z1:#2E2E32; --z2:#3A3A3F; --z3:#48484E; --z4:#58585F; --zop:1; --chart:#F4D27A; --zcur:#E9C35C;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -281,6 +281,8 @@ details.more summary span{font-weight:400; color:var(--muted); font-size:14px}
 .zone{display:grid; grid-template-columns:12px 1fr; gap:10px; padding:9px 10px; border-radius:10px; margin-top:4px}
 .zone.on{background:var(--accent-soft)}
 .zone .sw{width:12px; height:12px; border-radius:3px; margin-top:6px}
+body[data-mode="dark"] .gauge .bar span.cur, body[data-mode="dark"] .zone .sw.cur{background:var(--zcur)!important}
+body[data-mode="dark"] .zc{background:transparent!important; border-color:var(--zcur)!important; color:var(--zcur)}
 .zone b{font-size:15px} .zone .zr{font-size:13px; color:var(--muted); margin-left:6px} .zone p{margin:2px 0 0; font-size:14px; color:var(--muted)}
 .zone.on p{color:var(--ink)}
 .chain{display:flex; flex-wrap:wrap; align-items:center; gap:6px}
@@ -1619,12 +1621,12 @@ function zoneGaugeHtml(v, x, val){
   const tickVals = edges.slice(1, -1);
   return `<div class="gauge">
       <span class="mk num" style="left:${pos.toFixed(1)}%">지금 ${fmtVal(v,val)}</span>
-      <div class="bar">${x.zones.map((z,i)=>`<span style="width:${(((edges[i+1]-edges[i])/span)*100).toFixed(2)}%;background:${ZONE_COLORS[i%ZONE_COLORS.length]};opacity:${i===cur?1:.6}"></span>`).join("")}</div>
+      <div class="bar">${x.zones.map((z,i)=>`<span style="width:${(((edges[i+1]-edges[i])/span)*100).toFixed(2)}%;background:${ZONE_COLORS[i%ZONE_COLORS.length]};opacity:${i===cur?1:.6}"${i===cur?' class="cur"':""}></span>`).join("")}</div>
       <div class="ticks num">${tickVals.map(t=>`<span style="left:${(((t-x.min)/span)*100).toFixed(1)}%">${t}</span>`).join("")}</div>
     </div>
     ${x.zones.map((z,i)=>{ const lo = i===0 ? null : x.zones[i-1][0], hi = z[0]===INF ? null : z[0];
       const u = v.unit; const range = lo===null ? `${hi}${u} 미만` : hi===null ? `${lo}${u} 이상` : `${lo}~${hi}${u}`;
-      return `<div class="zone${i===cur?" on":""}"><span class="sw" style="background:${ZONE_COLORS[i%ZONE_COLORS.length]}"></span><div><b>${z[1]}</b><span class="zr num">${range}</span>${i===cur?' <span class="chip mine">지금</span>':""}<p>${z[2]}</p></div></div>`; }).join("")}
+      return `<div class="zone${i===cur?" on":""}"><span class="sw${i===cur?" cur":""}" style="background:${ZONE_COLORS[i%ZONE_COLORS.length]}"></span><div><b>${z[1]}</b><span class="zr num">${range}</span>${i===cur?' <span class="chip mine">지금</span>':""}<p>${z[2]}</p></div></div>`; }).join("")}
     ${x.note?`<p class="tiny muted" style="margin-top:6px">${x.note}</p>`:""}`;
 }
 function chainHtml(x){ return `<div class="chain">${x.chain.map((c,i)=>`<span class="${i===x.chain.length-1?"me":""}">${c}</span>${i<x.chain.length-1?"<i>→</i>":""}`).join("")}</div>`; }
