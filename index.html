@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>노몬 · Gnomon</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Cpath d=%22M8 46 A24 24 0 0 1 56 46%22 fill=%22none%22 stroke=%22%2314191D%22 stroke-width=%223.4%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M5 46H59%22 stroke=%22%2314191D%22 stroke-width=%223.4%22 stroke-linecap=%22round%22/%3E%3Cg stroke=%22%2314191D%22 stroke-width=%222.4%22 stroke-linecap=%22round%22 opacity=%22.35%22%3E%3Cpath d=%22M46.5 42.1L51.8 40.7%22/%3E%3Cpath d=%22M42.6 35.4L46.5 31.5%22/%3E%3Cpath d=%22M35.9 31.5L37.3 26.2%22/%3E%3Cpath d=%22M28.1 31.5L26.7 26.2%22/%3E%3Cpath d=%22M21.4 35.4L17.5 31.5%22/%3E%3Cpath d=%22M17.5 42.1L12.2 40.7%22/%3E%3C/g%3E%3Cpath d=%22M32 46 L13.5 36.1%22 stroke=%22%230E7A6C%22 stroke-width=%223.4%22 stroke-linecap=%22round%22 opacity=%22.45%22/%3E%3Cpath d=%22M32 46 L32 15 L47 46 Z%22 fill=%22%230E7A6C%22/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2314191D%22/%3E%3Ctext x=%2232%22 y=%2245%22 text-anchor=%22middle%22 font-family=%22Helvetica, Arial, sans-serif%22 font-size=%2240%22 font-weight=%22800%22 fill=%22%23FFFFFF%22%3EG%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -162,10 +162,8 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .top.bare{border-bottom:0}
 .landing.main{padding-top:6vh}
 .mlogo{display:flex; flex-direction:column; align-items:center; gap:6px; margin-bottom:8px; color:var(--ink)}
-.mlogo .logo{width:76px; height:76px}
-.mname{font-size:34px; font-weight:800; letter-spacing:.02em; line-height:1.1}
-.mname-en{font-size:12px; letter-spacing:.42em; color:var(--muted); padding-left:.42em}
-.blogo{display:inline-flex; vertical-align:-4px; margin-right:6px; color:var(--ink)} .blogo .logo{width:22px; height:22px}
+.wordmark{font-size:46px; font-weight:800; letter-spacing:.22em; padding-left:.22em; line-height:1; font-family:"IBM Plex Sans KR", "Helvetica Neue", Arial, sans-serif}
+.wordmark-ko{font-size:13px; letter-spacing:.5em; padding-left:.5em; color:var(--muted)}
 .landing.main h2{font-size:26px}
 .lgrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:24px}
 .lcard{display:flex; flex-direction:column; gap:10px; text-align:left; cursor:pointer; min-height:300px;
@@ -1302,11 +1300,10 @@ function howtoHtml(){
     <button class="btn" type="button" data-close style="margin-top:20px;width:100%">알겠어요</button>`;
 }
 
-const LOGO_SVG = `<svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 46 A24 24 0 0 1 56 46" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><path d="M5 46H59" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".35"><path d="M46.5 42.1L51.8 40.7"/><path d="M42.6 35.4L46.5 31.5"/><path d="M35.9 31.5L37.3 26.2"/><path d="M28.1 31.5L26.7 26.2"/><path d="M21.4 35.4L17.5 31.5"/><path d="M17.5 42.1L12.2 40.7"/></g><path d="M32 46 L13.5 36.1" stroke="var(--accent)" stroke-width="3.4" stroke-linecap="round" opacity=".45"/><path d="M32 46 L32 15 L47 46 Z" fill="var(--accent)"/></svg>`;
 function viewMain(st){
   const fav = ETFS.filter(e=>stars.includes(e.code)).slice(0,2).map(e=>{ const c=calc(e); return `<div class="num">${e.name.replace(/^(\S+) 미국/,"$1 ")} <b class="${cls(c.total)}">${pct(c.total)}</b></div>`; }).join("");
   return `<div class="landing main">
-    <div class="mlogo">${LOGO_SVG}<div class="mname">노몬</div><div class="mname-en">GNOMON</div></div>
+    <div class="mlogo"><div class="wordmark" role="img" aria-label="GNOMON 노몬">GNOMON</div><div class="wordmark-ko">노몬</div></div>
     <div class="lgrid">
       <button class="lcard" type="button" data-go="home">
         <div class="lt">밤낮 <span style="color:var(--accent)">ETF</span></div>
@@ -2156,12 +2153,8 @@ async function drawShare(code){
   const bg = g.createLinearGradient(0,0,0,H); bg.addColorStop(0,"#0F1B26"); bg.addColorStop(1,"#0A1016"); g.fillStyle=bg; g.fillRect(0,0,W,H);
   const UP="#FF6B66", DN="#6AA6FF", MUT="#93A1AD", INK="#EAF0F3", ACC="#4FC2AE";
   const col = x => x>0.00001?UP:x<-0.00001?DN:MUT;
-  g.strokeStyle=INK; g.lineWidth=4.5; g.lineCap="round"; g.beginPath(); g.arc(104,122,28,Math.PI,0); g.stroke();
-  g.beginPath(); g.moveTo(70,122); g.lineTo(138,122); g.stroke();
-  g.strokeStyle=ACC; g.globalAlpha=.5; g.beginPath(); g.moveTo(104,122); g.lineTo(82,110); g.stroke(); g.globalAlpha=1;
-  g.fillStyle=ACC; g.beginPath(); g.moveTo(104,122); g.lineTo(104,86); g.lineTo(122,122); g.closePath(); g.fill();
-  g.fillStyle=INK; g.font=`800 40px ${F}`; g.fillText("노몬", 144, 122); const wN = g.measureText("노몬").width;
-  g.fillStyle=ACC; g.font=`600 30px ${F}`; g.fillText("밤낮 ETF", 144+wN+18, 120);
+  g.fillStyle=INK; g.font=`800 40px ${F}`; if("letterSpacing" in g) g.letterSpacing="8px"; g.fillText("GNOMON", 80, 122); const wN = g.measureText("GNOMON").width; if("letterSpacing" in g) g.letterSpacing="0px";
+  g.fillStyle=ACC; g.font=`600 30px ${F}`; g.fillText("밤낮 ETF", 80+wN+24, 120);
   g.fillStyle=MUT; g.font=`500 34px ${F}`; g.fillText(`${k.m}/${k.d}(${KDAY[k.wd]}) 아침 브리핑`, 80, 175);
   let y = 270;
   if(code){
@@ -2259,7 +2252,7 @@ function render(){
   document.getElementById("protoBanner").hidden = (r==="main");
   document.getElementById("previewBox").hidden = (r==="main");
   document.querySelector(".top").classList.toggle("bare", r==="main");
-  document.getElementById("brandTitle").innerHTML = r==="main" ? "" : `<span class="blogo" aria-label="노몬">${LOGO_SVG}</span>` + (inA ? "매크로 <span>지표</span>" : "밤낮 <span>ETF</span>");
+  document.getElementById("brandTitle").innerHTML = r==="main" ? "" : (inA ? "매크로 <span>지표</span>" : "밤낮 <span>ETF</span>");
   if(r==="main") html = viewMain(st);
   else if(r==="macro") html = viewMacro(st);
   else if(r.startsWith("macro-")) html = viewMacroGroup(r.slice(6), st);
