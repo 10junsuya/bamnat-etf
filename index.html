@@ -175,6 +175,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 @keyframes splashIn{from{opacity:0; letter-spacing:.4em} to{opacity:1}}
 @media (prefers-reduced-motion: reduce){ .splash .wordmark{animation:none} .splash .sp-hint{animation:none; opacity:1} }
 .wordmark-ko{font-size:13px; letter-spacing:.5em; padding-left:.5em; color:var(--muted)}
+.motto{margin-top:14px; font-family:"New York", "Iowan Old Style", Georgia, "Times New Roman", serif; font-style:italic; font-size:16px; letter-spacing:.02em; color:var(--muted)}
 .landing.main h2{font-size:26px}
 .lgrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:24px}
 .lcard{display:flex; flex-direction:column; gap:10px; text-align:left; cursor:pointer; min-height:300px;
@@ -1317,7 +1318,7 @@ function howtoHtml(){
 function viewMain(st){
   const fav = ETFS.filter(e=>stars.includes(e.code)).slice(0,2).map(e=>{ const c=calc(e); return `<div class="num">${e.name.replace(/^(\S+) 미국/,"$1 ")} <b class="${cls(c.total)}">${pct(c.total)}</b></div>`; }).join("");
   return `<div class="landing main">
-    <div class="mlogo"><div class="wordmark" role="img" aria-label="GNOMON 노몬">GNOMON</div><div class="wordmark-ko">노몬</div></div>
+    <div class="mlogo"><div class="wordmark" role="img" aria-label="GNOMON 노몬">GNOMON</div><div class="wordmark-ko">노몬</div><div class="motto">Money wins.</div></div>
     <div class="lgrid">
       <button class="lcard" type="button" data-go="home">
         <div class="lt">밤낮 <span style="color:var(--accent)">ETF</span></div>
