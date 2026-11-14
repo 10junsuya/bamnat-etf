@@ -5,25 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>노몬 · Gnomon</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2314191D%22/%3E%3Ctext x=%2232%22 y=%2245%22 text-anchor=%22middle%22 font-family=%22Helvetica, Arial, sans-serif%22 font-size=%2240%22 font-weight=%22800%22 fill=%22%23FFFFFF%22%3EG%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* 레이아웃: 휴대폰 폭 한 줄 카드 스택. 상단 고정 시계 → 탭 → 화면별 카드. 한국 시간에 따라 낮/밤 테마 전환 */
 :root{
-  --bg:#F5F6F2; --surface:#FFFFFF; --surface-2:#EDF0EA; --ink:#14191D; --muted:#5D666C; --line:#DCE1DA;
-  --accent:#0E7A6C; --accent-soft:#DDF0EC; --up:#D3302C; --down:#2260C4; --warn:#9A6400;
-  --font:"IBM Plex Sans KR", system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  --r:14px;
+  --bg:#FFFFFF; --surface:#FFFFFF; --surface-2:#F5F5F7; --ink:#1D1D1F; --muted:#6E6E73; --line:#E5E5EA;
+  --accent:#1D1D1F; --accent-soft:#F2F2F4; --up:#E0352B; --down:#1F6FE5; --warn:#B25E00;
+  --font:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  --r:16px;
 }
 body[data-mode="dark"]{
-  --bg:#0C1117; --surface:#141B24; --surface-2:#1B2430; --ink:#E8EDF1; --muted:#8F9CA8; --line:#24303C;
-  --accent:#4FC2AE; --accent-soft:#163631; --up:#FF5C57; --down:#5E9DFF; --warn:#E7B04A;
+  --bg:#0B0B0C; --surface:#0B0B0C; --surface-2:#1C1C1E; --ink:#F5F5F7; --muted:#8E8E93; --line:#2C2C2E;
+  --accent:#F5F5F7; --accent-soft:#1C1C1E; --up:#FF5A4F; --down:#4C9BFF; --warn:#FFA94D;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{margin:0}
-body{background:var(--bg); color:var(--ink); font-family:var(--font); font-size:16px; line-height:1.55;
+body{background:var(--bg); color:var(--ink); font-family:var(--font); font-size:16px; line-height:1.55; letter-spacing:-.01em;
   -webkit-font-smoothing:antialiased; transition:background .4s, color .4s}
 body[data-mode="dark"]{color-scheme:dark} body[data-mode="light"]{color-scheme:light}
 button,select,input{font:inherit; color:inherit}
@@ -42,8 +39,9 @@ a{color:var(--accent)}
 .brand h1{font-size:18px; margin:0; letter-spacing:-.01em}
 .brand h1 span{color:var(--accent)}
 .mode-btn{border:1px solid var(--line); background:var(--surface); border-radius:999px; padding:4px 12px; cursor:pointer; font-size:13px}
-.clocks{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px}
-.clock{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:8px 12px; text-align:left; cursor:pointer; display:block; width:100%}
+.clocks{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; margin-top:10px}
+.clock{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:8px 12px; text-align:left; cursor:pointer; display:block; width:100%; min-width:0; overflow:hidden}
+.clock .city,.clock .pill{max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:block; width:fit-content}
 .clock:hover{border-color:var(--accent)}
 .cmore{font-size:11px; color:var(--accent); margin-left:2px}
 .hnext{background:var(--accent-soft); border-radius:14px; padding:14px 16px; margin:12px 0 4px}
@@ -94,7 +92,7 @@ section.card{background:var(--surface); border:1px solid var(--line); border-rad
 .icon-btn{border:1px solid var(--line); background:var(--surface); border-radius:10px; height:36px; min-width:36px; cursor:pointer; padding:0 10px}
 .back .title{flex:1; min-width:0}
 .back .title b{display:block; line-height:1.3}
-.star[aria-pressed="true"]{color:#E2A50B}
+.star[aria-pressed="true"]{color:var(--ink)}
 .hero{text-align:center; padding:24px 16px 20px}
 .hero .lbl{font-size:13px; color:var(--muted)}
 .hero .big{font-size:52px; font-weight:700; line-height:1.1; margin:6px 0 6px; letter-spacing:-.02em}
@@ -112,7 +110,7 @@ section.card{background:var(--surface); border:1px solid var(--line); border-rad
 
 .seg{display:flex; background:var(--surface-2); border-radius:10px; padding:3px; gap:2px; margin-bottom:8px}
 .seg button{flex:1; border:0; background:none; border-radius:8px; padding:6px 4px; cursor:pointer; font-size:13px; color:var(--muted)}
-.seg button[aria-pressed="true"]{background:var(--surface); color:var(--ink); font-weight:600; box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.seg button[aria-pressed="true"]{background:var(--surface); color:var(--ink); font-weight:600; box-shadow:0 0 0 1px var(--line)}
 
 .row{display:grid; grid-template-columns:1fr auto; gap:2px 12px; padding:10px 2px; border-top:1px solid var(--line); width:100%; background:none; border-left:0; border-right:0; border-bottom:0; text-align:left; cursor:pointer}
 .row:first-of-type{border-top:0}
@@ -122,7 +120,7 @@ section.card{background:var(--surface); border:1px solid var(--line); border-rad
 .wbar{height:3px; border-radius:2px; background:var(--accent); opacity:.45; margin-top:4px}
 .more{display:block; width:100%; margin-top:8px; padding:10px; border:1px dashed var(--line); background:none; border-radius:10px; cursor:pointer; color:var(--muted)}
 
-.logo{width:34px; height:34px; border-radius:50%; display:inline-grid; place-items:center; font-size:11px; font-weight:700; color:#fff; letter-spacing:-.02em; flex:none}
+.logo{width:34px; height:34px; border-radius:50%; display:inline-grid; place-items:center; font-size:10px; font-weight:700; color:var(--ink); background:var(--surface-2); border:1px solid var(--line); letter-spacing:-.02em; flex:none}
 .logo.sm{width:28px; height:28px; font-size:9px}
 .evtype{font-size:11px; font-weight:600; padding:1px 6px; border-radius:6px; background:var(--surface-2); color:var(--muted); margin-right:4px}
 .with-logo{display:flex; align-items:center; gap:10px; min-width:0}
@@ -162,7 +160,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .top.bare{border-bottom:0}
 .landing.main{padding-top:6vh}
 .mlogo{display:flex; flex-direction:column; align-items:center; gap:6px; margin-bottom:8px; color:var(--ink)}
-.wordmark{font-size:46px; font-weight:800; letter-spacing:.22em; padding-left:.22em; line-height:1; font-family:"IBM Plex Sans KR", "Helvetica Neue", Arial, sans-serif}
+.wordmark{font-size:44px; font-weight:600; letter-spacing:.26em; padding-left:.26em; line-height:1; font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif}
 .sitefoot{margin:48px 0 12px; padding-top:34px; border-top:1px solid var(--line); text-align:center; font-size:12px; line-height:1.8; color:var(--muted)}
 .sitefoot .sf-brand{font-size:13px; color:var(--ink); margin-bottom:4px} .sitefoot .sf-brand b{letter-spacing:.18em; margin-right:4px} .sitefoot .sf-brand span{color:var(--muted); margin-left:6px}
 .sitefoot .sf-note{display:block; font-size:11px} .sitefoot .sf-copy{margin-top:6px}
@@ -206,7 +204,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .mpick{display:flex; gap:14px; overflow-x:auto; padding:2px 2px 8px; margin-top:4px; scrollbar-width:thin}
 .mpick-g{display:flex; align-items:center; gap:6px; flex:none} .mpick-g .tiny{margin-right:2px; white-space:nowrap}
 .mpick .chip{border:1px solid var(--line); background:var(--surface); cursor:pointer; font-size:13px; padding:4px 10px; white-space:nowrap; color:var(--ink)}
-.mpick .chip.on{background:var(--accent); color:#fff; border-color:var(--accent)}
+.mpick .chip.on{background:var(--ink); color:var(--bg); border-color:var(--ink)}
 .mgrp{margin-top:6px} .mg-t{font-size:13px; font-weight:600; color:var(--muted); margin:8px 2px 4px}
 .mnode{display:block; width:100%; text-align:left; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:12px 14px; margin-top:8px; font:inherit; color:inherit; cursor:pointer}
 .mnode:hover{border-color:var(--accent)} .mnode .lt{display:flex; justify-content:space-between; align-items:center; gap:8px}
@@ -219,7 +217,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .cbar{display:flex; justify-content:space-between; align-items:center; gap:8px; margin:0 2px 4px; min-height:28px}
 .cper{display:inline-flex; gap:2px; background:var(--surface); border-radius:9px; padding:2px; flex:none}
 .cper button{border:0; background:transparent; font:inherit; font-size:13px; padding:3px 10px; border-radius:7px; color:var(--muted); cursor:pointer}
-.cper button.on{background:var(--accent); color:#fff; font-weight:600}
+.cper button.on{background:var(--ink); color:var(--bg); font-weight:600}
 .clegend{display:flex; flex-wrap:wrap; gap:4px 12px; font-size:12px; color:var(--muted); margin:2px 4px 4px} .clegend i{display:inline-block; width:10px; height:10px; border-radius:3px; opacity:.6; margin-right:4px; vertical-align:-1px}
 svg.ichart{display:block; touch-action:pan-y; cursor:crosshair}
 details.more{margin-top:18px; border-top:1px solid var(--line)}
@@ -512,7 +510,7 @@ const CO = {
   RDW:{tag:"우주 인프라 부품", cat:"우주 인프라", one:"위성과 우주선에 들어가는 구조물·부품을 만드는 회사예요.", does:["펼치는 태양전지판·안테나","우주 공간 제조 기술","드론 등 방산 사업"], money:"정부·방산 계약 비중이 커요.", chain:"위성 만드는 회사들에 부품을 파는 쪽이에요.", rel:["RKLB","KRMN"], form:"10-K"},
   KRMN:{tag:"미사일·우주 부품", cat:"부품·방산", one:"미사일과 로켓에 들어가는 부품·시스템을 만드는 회사예요.", does:["미사일·방어 시스템 부품","로켓·우주선 구조물과 부품"], money:"방산 비중이 커요.", chain:"방산·우주 회사들에 부품을 파는 쪽이에요.", rel:["RDW"], form:"10-K"}
 };
-const CAT_COLORS = ["#0E7A6C","#C08A1E","#6C5CE7","#5B6B7A","#7A8F2E","#B05A86","#8A5A3C"];
+const CAT_COLORS = ["#3A3A3C","#636366","#8E8E93","#48484A","#AEAEB2","#545458","#7C7C80"];
 
 const SP = [["NVDA",.078],["AAPL",.066],["MSFT",.062],["AMZN",.040],["GOOGL",.045],["AVGO",.030],["META",.029],["TSLA",.021],["BRKB",.016],["JPM",.015],["LLY",.013],["V",.011]];
 const NDX = [["NVDA",.095],["MSFT",.085],["AAPL",.080],["GOOGL",.060],["AMZN",.055],["AVGO",.055],["META",.038],["TSLA",.032],["COST",.025],["AMD",.018]];
@@ -704,7 +702,7 @@ const sym = t => t==="BRKB" ? "BRK.B" : t;
 function logo(t, small){
   let h=0; for(const ch of t) h=(h*31+ch.charCodeAt(0))%360;
   const txt = sym(t).replace(".","").slice(0,4);
-  return `<span class="logo${small?" sm":""}" style="background:hsl(${h} 45% 42%)" aria-hidden="true">${txt}</span>`;
+  return `<span class="logo${small?" sm":""}" aria-hidden="true">${txt}</span>`;
 }
 const q = term => `<button class="qbtn" type="button" data-term="${term}" aria-label="${term} 설명">?</button>`;
 
@@ -1610,7 +1608,7 @@ function linkPreview(k){
 function linksSection(k){ return LINKS[k] ? `<div class="bsection" id="lnkSec"><h4>같이 보면 좋은 지표 <button class="lp-more" type="button" data-go="macro-map-${k}" style="float:right">지도로 보기 ›</button></h4><div id="lnk">${linksHtml(k)}</div></div>` : ""; }
 
 function zoneOf(x, v){ const i = x.zones.findIndex(z=> v < z[0]); return i<0 ? x.zones.length-1 : i; }
-const ZONE_COLORS = ["#7FB8AE","#4E9E90","#C9A55A","#C27B4E","#9E5A62"];
+const ZONE_COLORS = ["#D1D1D6","#AEAEB2","#8E8E93","#636366","#48484A"];
 function zoneGaugeHtml(v, x, val){
   const span = x.max - x.min;
   const edges = [x.min, ...x.zones.map(z=>Math.min(z[0], x.max))];
@@ -2158,9 +2156,9 @@ async function drawShare(code){
   try{ await document.fonts.ready; }catch(e){}
   const st = renderTop(); const k = st.k;
   const W=1080, H=1350; const cv = document.createElement("canvas"); cv.width=W; cv.height=H; const g = cv.getContext("2d");
-  const F = '"IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif';
-  const bg = g.createLinearGradient(0,0,0,H); bg.addColorStop(0,"#0F1B26"); bg.addColorStop(1,"#0A1016"); g.fillStyle=bg; g.fillRect(0,0,W,H);
-  const UP="#FF6B66", DN="#6AA6FF", MUT="#93A1AD", INK="#EAF0F3", ACC="#4FC2AE";
+  const F = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif';
+  const bg = g.createLinearGradient(0,0,0,H); bg.addColorStop(0,"#0B0B0C"); bg.addColorStop(1,"#0B0B0C"); g.fillStyle=bg; g.fillRect(0,0,W,H);
+  const UP="#FF5A4F", DN="#4C9BFF", MUT="#8E8E93", INK="#F5F5F7", ACC="#F5F5F7";
   const col = x => x>0.00001?UP:x<-0.00001?DN:MUT;
   g.fillStyle=INK; g.font=`800 40px ${F}`; if("letterSpacing" in g) g.letterSpacing="8px"; g.fillText("GNOMON", 80, 122); const wN = g.measureText("GNOMON").width; if("letterSpacing" in g) g.letterSpacing="0px";
   g.fillStyle=ACC; g.font=`600 30px ${F}`; g.fillText("밤낮 ETF", 80+wN+24, 120);
