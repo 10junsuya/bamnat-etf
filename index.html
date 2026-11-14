@@ -161,7 +161,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .landing h2{font-size:22px; margin:0 0 4px; text-wrap:balance}
 .top.bare{border-bottom:0}
 .landing.main{padding-top:6vh}
-.mlogo{display:flex; flex-direction:column; align-items:center; gap:6px; margin-bottom:8px; color:var(--ink)}
+.mlogo{display:flex; flex-direction:column; align-items:center; gap:6px; margin:0 auto 8px; padding:0; border:0; background:none; font:inherit; color:var(--ink); cursor:pointer; -webkit-tap-highlight-color:transparent}
 .wordmark{font-size:44px; font-weight:600; letter-spacing:.26em; padding-left:.26em; line-height:1; font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif}
 .sitefoot{margin:48px 0 12px; padding-top:34px; border-top:1px solid var(--line); text-align:center; font-size:12px; line-height:1.8; color:var(--muted)}
 .sitefoot .sf-brand{font-size:13px; color:var(--ink); margin-bottom:4px} .sitefoot .sf-brand b{letter-spacing:.18em; margin-right:4px} .sitefoot .sf-brand span{color:var(--muted); margin-left:6px}
@@ -177,9 +177,13 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 @media (prefers-reduced-motion: reduce){ .splash .wordmark{animation:none} .splash .sp-hint, .splash .sp-motto{animation:none; opacity:1} }
 .wordmark-ko{font-size:13px; letter-spacing:.5em; padding-left:.5em; color:var(--muted)}
 .mmotto{width:fit-content; margin:30px auto 0}
+.splash.back .wordmark, .splash.back .sp-motto{animation:none; opacity:1}
+.splash.back .sp-hint{animation:hintIn .5s ease .3s forwards}
+.landing.main.cards-out .wordmark-ko, .landing.main.cards-out .lcard{opacity:0; transition:opacity .3s ease}
 .splash.fly{background:transparent; transition:background-color .6s ease; pointer-events:none}
 .splash.fly .wordmark, .splash.fly .sp-motto{animation:none; opacity:1; transition:transform .85s cubic-bezier(.2,.8,.2,1); transform-origin:center}
 .splash.fly .sp-hint{animation:none; opacity:0; transition:opacity .2s}
+.splash.fly.solid{background:var(--bg)}
 .landing.main.intro .wordmark, .landing.main.intro .mmotto, .landing.main.pre .wordmark-ko, .landing.main.pre .lcard{opacity:0}
 .landing.main.cards-in .wordmark-ko, .landing.main.cards-in .lcard{animation:fadeUp .6s cubic-bezier(.2,.8,.2,1) both}
 .landing.main.cards-in .lcard:nth-child(2){animation-delay:.08s}
@@ -1327,7 +1331,7 @@ function howtoHtml(){
 function viewMain(st){
   const fav = ETFS.filter(e=>stars.includes(e.code)).slice(0,2).map(e=>{ const c=calc(e); return `<div class="num">${e.name.replace(/^(\S+) 미국/,"$1 ")} <b class="${cls(c.total)}">${pct(c.total)}</b></div>`; }).join("");
   return `<div class="landing main">
-    <div class="mlogo"><div class="wordmark" role="img" aria-label="GNOMON 노몬">GNOMON</div><div class="wordmark-ko">노몬</div></div>
+    <button type="button" class="mlogo" aria-label="GNOMON 노몬, 시작 화면 보기"><div class="wordmark">GNOMON</div><div class="wordmark-ko">노몬</div></button>
     <div class="lgrid">
       <button class="lcard" type="button" data-go="home">
         <div class="lt">밤낮 <span style="color:var(--accent)">ETF</span></div>
@@ -2320,8 +2324,12 @@ function render(){
 }
 window.addEventListener("hashchange", ()=>{ showAll=false; render(); window.scrollTo(0,0); });
 
-(function(){
-  const sp = document.getElementById("splash"); if(!sp) return;
+const SPLASH_IN = `<div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.</div><div class="sp-hint">눌러서 시작</div></div>`;
+const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+const flyTo = (el, target) => { const a = el.getBoundingClientRect(), b = target.getBoundingClientRect();
+  const dx = (b.left+b.width/2)-(a.left+a.width/2), dy = (b.top+b.height/2)-(a.top+a.height/2), k = b.width/a.width;
+  return `translate(${dx}px,${dy}px) scale(${k})`; };
+function bindSplash(sp){
   let done = false;
   const fade = () => { sp.classList.add("hide"); setTimeout(()=>sp.remove(), 600); };
   const hide = () => {
@@ -2329,14 +2337,12 @@ window.addEventListener("hashchange", ()=>{ showAll=false; render(); window.scro
     const main = document.querySelector(".landing.main");
     const tw = main && main.querySelector(".wordmark"), tm = main && main.querySelector(".mmotto");
     const sw = sp.querySelector(".wordmark"), sm = sp.querySelector(".sp-motto");
-    if(!tw || !tm || !sw || !sm || matchMedia("(prefers-reduced-motion: reduce)").matches){ fade(); return; }
+    if(!tw || !tm || !sw || !sm || reduceMotion()){ fade(); return; }
     window.scrollTo(0,0);
+    main.classList.remove("cards-out");
     main.classList.add("intro","pre");
-    const to = (el, target) => { const a = el.getBoundingClientRect(), b = target.getBoundingClientRect();
-      const dx = (b.left+b.width/2)-(a.left+a.width/2), dy = (b.top+b.height/2)-(a.top+a.height/2), k = b.width/a.width;
-      return `translate(${dx}px,${dy}px) scale(${k})`; };
     sp.classList.add("fly");
-    const tW = to(sw, tw), tM = to(sm, tm);
+    const tW = flyTo(sw, tw), tM = flyTo(sm, tm);
     requestAnimationFrame(()=>{ sw.style.transform = tW; sm.style.transform = tM; });
     setTimeout(()=>{ main.classList.remove("pre"); main.classList.add("cards-in"); }, 450);
     setTimeout(()=>{ main.classList.remove("intro"); sp.remove(); }, 900);
@@ -2345,7 +2351,30 @@ window.addEventListener("hashchange", ()=>{ showAll=false; render(); window.scro
   sp.addEventListener("click", hide);
   sp.addEventListener("keydown", e=>{ if(e.key==="Enter" || e.key===" "){ e.preventDefault(); hide(); } });
   sp.focus();
-})();
+}
+function reopenSplash(){
+  if(document.getElementById("splash")) return;
+  const main = document.querySelector(".landing.main");
+  const sp = document.createElement("div");
+  sp.className = "splash back"; sp.id = "splash"; sp.tabIndex = 0;
+  sp.setAttribute("role","button"); sp.setAttribute("aria-label","GNOMON 노몬, 눌러서 시작");
+  sp.innerHTML = SPLASH_IN;
+  if(!main || reduceMotion()){ document.body.appendChild(sp); bindSplash(sp); return; }
+  window.scrollTo(0,0);
+  sp.classList.add("fly");
+  document.body.appendChild(sp);
+  const sw = sp.querySelector(".wordmark"), sm = sp.querySelector(".sp-motto");
+  sw.style.transition = sm.style.transition = "none";
+  sw.style.transform = flyTo(sw, main.querySelector(".wordmark"));
+  sm.style.transform = flyTo(sm, main.querySelector(".mmotto"));
+  main.classList.add("intro","cards-out");
+  void sp.offsetWidth;
+  sw.style.transition = sm.style.transition = "";
+  requestAnimationFrame(()=>{ sw.style.transform = ""; sm.style.transform = ""; sp.classList.add("solid"); });
+  setTimeout(()=>{ sp.classList.remove("fly","solid"); main.classList.remove("intro","cards-out"); bindSplash(sp); }, 900);
+}
+(function(){ const sp = document.getElementById("splash"); if(sp) bindSplash(sp); })();
+document.addEventListener("click", ev=>{ if(ev.target.closest(".landing.main .mlogo")) reopenSplash(); });
 document.addEventListener("click", ev=>{
   const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill]");
   if(!el || el.closest("#sheet [data-close]")) return;
