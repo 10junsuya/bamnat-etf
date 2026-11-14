@@ -167,10 +167,13 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .sitefoot .sf-brand{font-size:13px; color:var(--ink); margin-bottom:4px} .sitefoot .sf-brand b{letter-spacing:.18em; margin-right:4px} .sitefoot .sf-brand span{color:var(--muted); margin-left:6px}
 .sitefoot .sf-note{display:block; font-size:11px} .sitefoot .sf-copy{margin-top:6px}
 .splash{position:fixed; inset:0; z-index:100; display:grid; place-items:center; background:var(--bg); color:var(--ink); cursor:pointer; transition:opacity .5s ease}
+.splash .sp-in{display:flex; flex-direction:column; align-items:center; gap:28px}
 .splash .wordmark{font-size:40px; animation:splashIn .9s ease both}
+.splash .sp-hint{font-size:13px; letter-spacing:.2em; color:var(--muted); opacity:0; animation:hintIn .6s ease 1.2s forwards}
+@keyframes hintIn{to{opacity:1}}
 .splash.hide{opacity:0; pointer-events:none}
 @keyframes splashIn{from{opacity:0; letter-spacing:.4em} to{opacity:1}}
-@media (prefers-reduced-motion: reduce){ .splash .wordmark{animation:none} }
+@media (prefers-reduced-motion: reduce){ .splash .wordmark{animation:none} .splash .sp-hint{animation:none; opacity:1} }
 .wordmark-ko{font-size:13px; letter-spacing:.5em; padding-left:.5em; color:var(--muted)}
 .landing.main h2{font-size:26px}
 .lgrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:24px}
@@ -357,7 +360,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
 </style>
 </head>
 <body data-mode="light">
-<div class="splash" id="splash" role="img" aria-label="GNOMON 노몬"><div class="wordmark">GNOMON</div></div>
+<div class="splash" id="splash" role="button" tabindex="0" aria-label="GNOMON 노몬, 눌러서 시작"><div class="sp-in"><div class="wordmark">GNOMON</div><div class="sp-hint">눌러서 시작</div></div></div>
 <div class="app">
   <div class="top">
     <div class="brand">
@@ -2309,8 +2312,9 @@ window.addEventListener("hashchange", ()=>{ showAll=false; render(); window.scro
   const sp = document.getElementById("splash"); if(!sp) return;
   let done = false;
   const hide = () => { if(done) return; done = true; sp.classList.add("hide"); setTimeout(()=>sp.remove(), 600); };
-  setTimeout(hide, 2000);
   sp.addEventListener("click", hide);
+  sp.addEventListener("keydown", e=>{ if(e.key==="Enter" || e.key===" "){ e.preventDefault(); hide(); } });
+  sp.focus();
 })();
 document.addEventListener("click", ev=>{
   const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill]");
