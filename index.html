@@ -17,7 +17,7 @@
 body[data-mode="dark"]{
   --bg:#0B0B0C; --surface:#0B0B0C; --surface-2:#1C1C1E; --ink:#F5F5F7; --muted:#8E8E93; --line:#2C2C2E;
   --accent:#F5F5F7; --accent-soft:#1C1C1E; --up:#FF5A4F; --down:#4C9BFF; --warn:#FFA94D;
-  --z0:#242427; --z1:#2E2E32; --z2:#3A3A3F; --z3:#48484E; --z4:#58585F; --zop:1; --chart:#F4D27A; --zcur:#E9C35C;
+  --z0:#2C2C30; --z1:#3D3D43; --z2:#525259; --z3:#6A6A73; --z4:#85858F; --zop:1; --chart:#F4D27A; --zcur:#E9C35C;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -1875,6 +1875,7 @@ function chartSvg(k, pts){
       const a = Math.max(zlo, lo), b = Math.min(zhi, hi); if(b <= a) return;
       const y1 = Y(b), y2 = Y(a);
       bands += `<rect x="${L}" y="${y1.toFixed(1)}" width="${iw}" height="${(y2-y1).toFixed(1)}" style="fill:${ZONE_COLORS[i%ZONE_COLORS.length]};opacity:var(--zop)"/>`;
+      if(zhi < hi) bands += `<line x1="${L}" x2="${W-Rr}" y1="${y1.toFixed(1)}" y2="${y1.toFixed(1)}" style="stroke:var(--bg);stroke-width:1.5"/>`;
       if(y2-y1 > 3) legend.push(i); }); }
   const refEl = ref ? `<line x1="${L}" x2="${W-Rr}" y1="${Y(ref[0]).toFixed(1)}" y2="${Y(ref[0]).toFixed(1)}" stroke="var(--muted)" stroke-dasharray="4 4" stroke-width="1"/>${ref[1]&&ref[1]!=="0"?`<text x="${L+4}" y="${(Y(ref[0])-4).toFixed(1)}" font-size="11" fill="var(--muted)">${ref[1]}</text>`:""}` : "";
   const d = pts.map((p,i)=>(i?"L":"M")+X(i).toFixed(1)+" "+Y(p.v).toFixed(1)).join(" ");
