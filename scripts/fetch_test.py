@@ -121,7 +121,7 @@ def etf_prices():
     return {"working_url": working, "tried": tried[:6], "etfs": rows}
 
 
-FRED_SERIES = {"CPIAUCSL": "미국 CPI 지수", "UNRATE": "미국 실업률", "FEDFUNDS": "연방기금금리", "DGS10": "미국 10년물", "DGS2": "미국 2년물", "T10Y2Y": "장단기 금리차", "M2SL": "M2 통화량"}
+FRED_SERIES = {"CPIAUCSL": "미국 CPI 지수", "CPILFESL": "미국 근원 CPI 지수", "UNRATE": "미국 실업률", "FEDFUNDS": "연방기금금리", "DGS10": "미국 10년물", "DGS2": "미국 2년물", "T10Y2Y": "장단기 금리차", "M2SL": "M2 통화량"}
 
 
 def fred():
@@ -131,12 +131,16 @@ def fred():
     for sid, name in FRED_SERIES.items():
         try:
             st, body = get("https://api.stlouisfed.org/fred/series/observations?" + urllib.parse.urlencode(
-                {"series_id": sid, "api_key": FRED_KEY, "file_type": "json", "sort_order": "desc", "limit": 3}))
+                {"series_id": sid, "api_key": FRED_KEY, "file_type": "json", "sort_order": "desc", "limit": 14}))
             if st != 200:
                 out[sid] = {"name": name, "status": st, "body": scrub(body[:200])}
                 continue
             obs = [o for o in json.loads(body).get("observations", []) if o.get("value") not in (".", None)]
-            out[sid] = {"name": name, "latest": obs[:2]}
+            item = {"name": name, "latest": [{"date": o["date"], "value": o["value"]} for o in obs[:2]]}
+            if sid in ("CPIAUCSL", "CPILFESL", "M2SL") and len(obs) >= 13:
+                item["yoy_pct"] = round((float(obs[0]["value"]) / float(obs[12]["value"]) - 1) * 100, 2)
+                item["yoy_prev_pct"] = round((float(obs[1]["value"]) / float(obs[13]["value"]) - 1) * 100, 2) if len(obs) >= 14 else None
+            out[sid] = item
         except Exception as e:  # noqa: BLE001
             out[sid] = {"name": name, "error": scrub(f"{type(e).__name__}: {e}")[:200]}
     return out
