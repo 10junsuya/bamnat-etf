@@ -14,6 +14,8 @@ import urllib.request
 
 FINNHUB_KEY = os.environ.get("FINNHUB_API_KEY", "").strip()
 DATA_KEY = os.environ.get("DATA_GO_KR_API_KEY", "").strip()
+FRED_KEY = os.environ.get("FRED_API_KEY", "").strip()
+ECOS_KEY = os.environ.get("ECOS_API_KEY", "").strip()
 
 US_TICKERS = ["NVDA", "AAPL", "MSFT", "AVGO", "QQQ", "SPY", "SOXX"]
 KR_ETFS = {
@@ -35,7 +37,7 @@ KST = dt.timezone(dt.timedelta(hours=9))
 
 def scrub(text):
     """혹시라도 키가 섞이면 지워요."""
-    for k in (FINNHUB_KEY, DATA_KEY, urllib.parse.quote(DATA_KEY, safe="")):
+    for k in (FINNHUB_KEY, DATA_KEY, urllib.parse.quote(DATA_KEY, safe=""), FRED_KEY, ECOS_KEY):
         if k:
             text = text.replace(k, "***")
     return text
@@ -119,6 +121,52 @@ def etf_prices():
     return {"working_url": working, "tried": tried[:6], "etfs": rows}
 
 
+FRED_SERIES = {"CPIAUCSL": "미국 CPI 지수", "UNRATE": "미국 실업률", "FEDFUNDS": "연방기금금리", "DGS10": "미국 10년물", "DGS2": "미국 2년물", "T10Y2Y": "장단기 금리차", "M2SL": "M2 통화량"}
+
+
+def fred():
+    if not FRED_KEY:
+        return {"error": "FRED_API_KEY 없음"}
+    out = {}
+    for sid, name in FRED_SERIES.items():
+        try:
+            st, body = get("https://api.stlouisfed.org/fred/series/observations?" + urllib.parse.urlencode(
+                {"series_id": sid, "api_key": FRED_KEY, "file_type": "json", "sort_order": "desc", "limit": 3}))
+            if st != 200:
+                out[sid] = {"name": name, "status": st, "body": scrub(body[:200])}
+                continue
+            obs = [o for o in json.loads(body).get("observations", []) if o.get("value") not in (".", None)]
+            out[sid] = {"name": name, "latest": obs[:2]}
+        except Exception as e:  # noqa: BLE001
+            out[sid] = {"name": name, "error": scrub(f"{type(e).__name__}: {e}")[:200]}
+    return out
+
+
+ECOS_SERIES = {"bok_rate": ("722Y001", "M", "0101000", "한국은행 기준금리"),
+               "kr_cpi": ("901Y009", "M", "0", "소비자물가지수(총지수)")}
+
+
+def ecos():
+    if not ECOS_KEY:
+        return {"error": "ECOS_API_KEY 없음"}
+    out = {}
+    now = dt.datetime.now(KST)
+    start = (now - dt.timedelta(days=200)).strftime("%Y%m")
+    for k, (code, cyc, item, name) in ECOS_SERIES.items():
+        try:
+            url = f"https://ecos.bok.or.kr/api/StatisticSearch/{ECOS_KEY}/json/kr/1/20/{code}/{cyc}/{start}/{now.strftime('%Y%m')}/{item}"
+            st, body = get(url)
+            j = json.loads(body)
+            rows = j.get("StatisticSearch", {}).get("row")
+            if not rows:
+                out[k] = {"name": name, "status": st, "body": scrub(body[:300])}
+                continue
+            out[k] = {"name": name, "latest": [{"time": r.get("TIME"), "value": r.get("DATA_VALUE")} for r in rows[-3:]]}
+        except Exception as e:  # noqa: BLE001
+            out[k] = {"name": name, "error": scrub(f"{type(e).__name__}: {e}")[:200]}
+    return out
+
+
 def fx():
     out = {}
     for url in ("https://api.frankfurter.dev/v1/latest?base=USD&symbols=KRW",
@@ -141,6 +189,8 @@ def main():
         "finnhub_us_quotes": finnhub(),
         "krx_etf_prices": etf_prices(),
         "fx_usdkrw_ecb": fx(),
+        "fred_us_macro": fred(),
+        "ecos_kr_macro": ecos(),
     }
     os.makedirs("data", exist_ok=True)
     text = scrub(json.dumps(result, ensure_ascii=False, indent=2))
