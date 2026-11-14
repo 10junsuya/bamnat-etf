@@ -169,11 +169,12 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .splash{position:fixed; inset:0; z-index:100; display:grid; place-items:center; background:var(--bg); color:var(--ink); cursor:pointer; transition:opacity .5s ease}
 .splash .sp-in{display:flex; flex-direction:column; align-items:center; gap:28px}
 .splash .wordmark{font-size:40px; animation:splashIn .9s ease both}
-.splash .sp-hint{font-size:13px; letter-spacing:.2em; color:var(--muted); opacity:0; animation:hintIn .6s ease 1.2s forwards}
+.splash .sp-hint{font-size:13px; letter-spacing:.2em; color:var(--muted); opacity:0; animation:hintIn .6s ease 1.6s forwards}
+.splash .sp-motto{margin-top:-8px; opacity:0; animation:hintIn .8s ease .8s forwards}
 @keyframes hintIn{to{opacity:1}}
 .splash.hide{opacity:0; pointer-events:none}
 @keyframes splashIn{from{opacity:0; letter-spacing:.4em} to{opacity:1}}
-@media (prefers-reduced-motion: reduce){ .splash .wordmark{animation:none} .splash .sp-hint{animation:none; opacity:1} }
+@media (prefers-reduced-motion: reduce){ .splash .wordmark{animation:none} .splash .sp-hint, .splash .sp-motto{animation:none; opacity:1} }
 .wordmark-ko{font-size:13px; letter-spacing:.5em; padding-left:.5em; color:var(--muted)}
 .motto{margin-top:14px; font-family:"New York", "Iowan Old Style", Georgia, "Times New Roman", serif; font-style:italic; font-size:16px; letter-spacing:.02em; color:var(--muted)}
 .landing.main h2{font-size:26px}
@@ -361,7 +362,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
 </style>
 </head>
 <body data-mode="light">
-<div class="splash" id="splash" role="button" tabindex="0" aria-label="GNOMON 노몬, 눌러서 시작"><div class="sp-in"><div class="wordmark">GNOMON</div><div class="sp-hint">눌러서 시작</div></div></div>
+<div class="splash" id="splash" role="button" tabindex="0" aria-label="GNOMON 노몬, 눌러서 시작"><div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.</div><div class="sp-hint">눌러서 시작</div></div></div>
 <div class="app">
   <div class="top">
     <div class="brand">
