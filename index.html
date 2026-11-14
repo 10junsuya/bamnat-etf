@@ -375,7 +375,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
   <main id="view"></main>
 
   <footer>
-    <div>투자 권유가 아닙니다. 추정치는 실제와 다를 수 있습니다. 판단과 책임은 이용자에게 있습니다.</div>
+    <div id="discLine">정보 제공용이며 투자 권유가 아니에요. 추정치와 해석은 실제와 다를 수 있고, 판단과 책임은 이용자에게 있어요.</div>
     <div class="preview" id="previewBox">
       <label for="simSel">프로토타입 시간 미리보기</label>
       <select id="simSel">
@@ -1323,7 +1323,7 @@ function viewMain(st){
   <footer class="sitefoot">
     <div class="sf-brand"><b>GNOMON</b> 노몬 <span>Since 2026</span></div>
     <div>데이터 출처 · Finnhub · FRED(세인트루이스 연준) · 한국은행 ECOS · 공공데이터포털(금융위원회) · ECB 환율 <span class="sf-note">연결 진행 중이라 지금은 일부 샘플이에요</span></div>
-    <div>정보 제공용이며 투자 권유가 아니에요. 추정치와 해석은 실제와 다를 수 있어요.</div>
+    <div>정보 제공용이며 투자 권유가 아니에요. 추정치와 해석은 실제와 다를 수 있고, 판단과 책임은 이용자에게 있어요.</div>
     <div class="sf-copy">© 2026 GNOMON</div>
   </footer>`;
 }
@@ -2260,6 +2260,7 @@ function render(){
   document.getElementById("clocks").hidden = (r==="main");
   document.getElementById("protoBanner").hidden = (r==="main");
   document.getElementById("previewBox").hidden = (r==="main");
+  document.getElementById("discLine").hidden = (r==="main");
   document.querySelector(".top").classList.toggle("bare", r==="main");
   document.getElementById("brandTitle").innerHTML = r==="main" ? "" : (inA ? "매크로 <span>지표</span>" : "밤낮 <span>ETF</span>");
   if(r==="main") html = viewMain(st);
