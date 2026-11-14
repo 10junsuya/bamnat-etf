@@ -166,6 +166,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .sitefoot{margin:48px 0 12px; padding-top:34px; border-top:1px solid var(--line); text-align:center; font-size:12px; line-height:1.8; color:var(--muted)}
 .sitefoot .sf-brand{font-size:13px; color:var(--ink); margin-bottom:4px} .sitefoot .sf-brand b{letter-spacing:.18em; margin-right:4px} .sitefoot .sf-brand span{color:var(--muted); margin-left:6px}
 .sitefoot .sf-note{display:block; font-size:11px} .sitefoot .sf-copy{margin-top:6px}
+.pend{display:inline-block; font-size:.62em; font-weight:600; letter-spacing:0; color:var(--muted); padding:.15em .55em; border:1px solid var(--line); border-radius:999px; vertical-align:middle; white-space:nowrap}
 .sf-check{margin-top:6px; padding:4px 10px; border:1px solid var(--line); border-radius:999px; background:none; color:var(--muted); font:inherit; font-size:11px; cursor:pointer}
 .chk-sum{margin-top:2px; padding:12px 14px; border-radius:12px; background:var(--surface-2); font-weight:700}
 .chk-sum.bad{color:var(--up)} .chk-sum.warn{color:var(--pt)} .chk-sum.good{color:var(--ink)}
@@ -715,7 +716,8 @@ function fmtLeft(min){ const h=Math.floor(min/60), m=min%60; return h ? `${h}시
 
 /* ===================== 계산 ===================== */
 function calc(e){
-  const rows = e.h.map(([t,w])=>{ const s=STOCKS[t]; return {t, name:s[0], price:s[1], r:s[2], w, c:w*s[2]}; });
+  const rows = e.h.map(([t,w])=>{ const s = STOCKS[t] || [t, NaN, NaN]; const bad = FLAG.stock.has(t);
+    const r = bad ? NaN : s[2]; return {t, name:s[0], price: bad ? NaN : s[1], r, w, c:w*r}; });
   let usd = rows.reduce((a,x)=>a+x.c,0);
   let restC = 0;
   if(e.rest){ restC = e.rest.w * FUT[e.rest.fut]; usd += restC; }
@@ -725,6 +727,7 @@ function calc(e){
   const est = e.nav*(1+total);
   const coverage = rows.reduce((a,x)=>a+x.w,0) + (e.cash||0);
   const market = est*(1+e.prem);
+  if(FLAG.etf.has(e.code)) return {rows, usd:NaN, restC, fxC:NaN, total:NaN, est:NaN, coverage, market:NaN, fxR};
   return {rows, usd, restC, fxC, total, est, coverage, market, fxR};
 }
 function errHist(seed){
@@ -734,13 +737,17 @@ function errHist(seed){
 }
 
 /* ===================== 포맷 ===================== */
-const won = n => Math.round(n).toLocaleString("ko-KR")+"원";
+/* 자동 점검에서 오류로 잡힌 숫자는 틀린 값을 보여주지 않고 '확인 중'으로 표시해요 (자료 자체는 바꾸지 않아요) */
+const PEND = `<span class="pend">확인 중</span>`;
+const okn = x => typeof x==="number" && isFinite(x);
+let FLAG = {etf:new Set(), stock:new Set(), ind:new Set()};
+const won = n => okn(n) ? Math.round(n).toLocaleString("ko-KR")+"원" : PEND;
 const cls = x => x>0.00001 ? "up" : x<-0.00001 ? "down" : "flat";
 const arrow = x => x>0.00001 ? "▲" : x<-0.00001 ? "▼" : "";
-const pct = (x,d=2) => `${arrow(x)}${Math.abs(x*100).toFixed(d)}%`;
-const spct = (x,d=2) => `${x>0?"+":x<0?"−":""}${Math.abs(x*100).toFixed(d)}%`;
-const pctp = (x,d=2) => `${x>0?"+":x<0?"−":""}${Math.abs(x*100).toFixed(d)}%p`;
-const usd = n => "$"+n.toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2});
+const pct = (x,d=2) => okn(x) ? `${arrow(x)}${Math.abs(x*100).toFixed(d)}%` : PEND;
+const spct = (x,d=2) => okn(x) ? `${x>0?"+":x<0?"−":""}${Math.abs(x*100).toFixed(d)}%` : PEND;
+const pctp = (x,d=2) => okn(x) ? `${x>0?"+":x<0?"−":""}${Math.abs(x*100).toFixed(d)}%p` : PEND;
+const usd = n => !okn(n) ? PEND : "$"+n.toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2});
 /* 로고 자리: 실제 버전에서는 데이터 제공처의 회사 로고 이미지로 바뀜. 지금은 티커 글자 배지 */
 const sym = t => t==="BRKB" ? "BRK.B" : t;
 function logo(t, small){
@@ -848,10 +855,10 @@ function priceStateCard(e, c, st){
   if(k==="closed"){
     const diff = c.est/e.close - 1;
     body = `<div class="state-line">오늘 종가 <span class="num">${won(e.close)}</span> → 지금 추정 가치 <b class="num ${cls(diff)}" style="white-space:nowrap">${won(c.est)}</b></div>
-      <div class="small muted">추정 가치가 종가보다 <span class="num ${cls(diff)}">${Math.abs(diff*100).toFixed(2)}% ${diff>=0?"높아요":"낮아요"}</span>. 다음 정규장은 한국 시간 09:00에 열려요.</div>`;
+      <div class="small muted">추정 가치가 종가보다 <span class="num ${cls(diff)}">${okn(diff) ? `${Math.abs(diff*100).toFixed(2)}% ${diff>=0?"높아요":"낮아요"}` : PEND}</span>. 다음 정규장은 한국 시간 09:00에 열려요.</div>`;
   }else{
     const p = (c.market - c.est)/c.est;
-    body = `<div class="state-line">시장가가 추정 가치보다 <span class="num ${cls(p)}">${Math.abs(p*100).toFixed(2)}% ${p>=0?"높게":"낮게"}</span> 거래 중</div>
+    body = `<div class="state-line">시장가가 추정 가치보다 <span class="num ${cls(p)}">${okn(p) ? `${Math.abs(p*100).toFixed(2)}% ${p>=0?"높게":"낮게"}` : PEND}</span> 거래 중</div>
       <div class="kv" style="margin-top:10px">
         <div><div class="k">현재가</div><div class="v num">${won(c.market)}</div></div>
         <div><div class="k">추정 가치</div><div class="v num">${won(c.est)}</div></div>
@@ -1369,7 +1376,6 @@ function viewMain(st){
     <div class="sf-brand"><b>GNOMON</b> 노몬 <span>Since 2026</span></div>
     <div>데이터 출처 · Finnhub · FRED(세인트루이스 연준) · 한국은행 ECOS · 공공데이터포털(금융위원회) · ECB 환율 <span class="sf-note">연결 진행 중이라 지금은 일부 샘플이에요</span></div>
     <div>정보 제공용이며 투자 권유가 아니에요. 추정치와 해석은 실제와 다를 수 있고, 판단과 책임은 이용자에게 있어요.</div>
-    <div>${(()=>{ const c = checkSummary(); return `<button type="button" class="sf-check" data-go="check">자동 점검 · ${c.e?`오류 ${c.e}건`:c.w?`주의 ${c.w}건`:"이상 없음"} ›</button>`; })()}</div>
     <div class="sf-copy">© 2026 GNOMON</div>
   </footer>`;
 }
@@ -1658,6 +1664,7 @@ function linksSection(k){ return LINKS[k] ? `<div class="bsection" id="lnkSec"><
 function zoneOf(x, v){ const i = x.zones.findIndex(z=> v < z[0]); return i<0 ? x.zones.length-1 : i; }
 const ZONE_COLORS = ["var(--z0)","var(--z1)","var(--z2)","var(--z3)","var(--z4)"];
 function zoneGaugeHtml(v, x, val){
+  if(!okn(val)) return "";
   const span = x.max - x.min;
   const edges = [x.min, ...x.zones.map(z=>Math.min(z[0], x.max))];
   const cur = zoneOf(x, val);
@@ -1686,7 +1693,7 @@ function sensHtml(x){
 function oneLine(v, x, val, prev){
   const z = x.zones[zoneOf(x,val)];
   const diff = prev!=null ? val - prev : null;
-  const dtxt = diff==null ? "" : Math.abs(diff)<1e-9 ? " 지난번과 같아요." : ` 지난번보다 ${Math.abs(diff).toFixed(v.dec!=null?v.dec:1).replace(/\.?0+$/,"")}${v.unit==="%"?"%p":v.unit} ${diff>0?"올랐어요":"내려왔어요"}.`;
+  const dtxt = (diff==null || !okn(diff)) ? "" : Math.abs(diff)<1e-9 ? " 지난번과 같아요." : ` 지난번보다 ${Math.abs(diff).toFixed(v.dec!=null?v.dec:1).replace(/\.?0+$/,"")}${v.unit==="%"?"%p":v.unit} ${diff>0?"올랐어요":"내려왔어요"}.`;
   return `지금 <b class="num">${fmtVal(v,val)}</b> · <b>‘${z[1]}’</b> 구간이에요.${dtxt}`;
 }
 
@@ -1712,7 +1719,7 @@ function releaseKst(ind){
   const tlabel = k.h===0 ? `0:${pad(k.mi)} (자정)` : `${ampm} ${h12}:${pad(k.mi)}`;
   return {ymd:ymd(k), label:`${k.m}/${k.d}(${KDAY[k.wd]}) ${tlabel}`};
 }
-function fmtVal(ind, v){ return ind.unit==="원" ? v.toLocaleString("ko-KR",{maximumFractionDigits:1})+"원" : `${v.toFixed(ind.dec!=null?ind.dec:(ind.unit==="%"?1:1))}${ind.unit}`; }
+function fmtVal(ind, v){ if(!okn(v)) return PEND; return ind.unit==="원" ? v.toLocaleString("ko-KR",{maximumFractionDigits:1})+"원" : `${v.toFixed(ind.dec!=null?ind.dec:(ind.unit==="%"?1:1))}${ind.unit}`; }
 function sparkSvg(arr, h=56){
   const W=300, mn=Math.min(...arr), mx=Math.max(...arr), rg=(mx-mn)||1;
   const pts = arr.map((v,i)=>[i*(W/(arr.length-1)), h-6-(v-mn)/rg*(h-12)]);
@@ -1790,7 +1797,7 @@ function viewMacro(st){
 }
 
 function curVal(v){ return v.g==="mkt" ? v.now : v.last.a; }
-function zoneChip(k){ const x = IND_X[k]; if(!x) return ""; const i = zoneOf(x, curVal(IND[k])); return `<span class="zc" style="--zc:${ZONE_COLORS[i%ZONE_COLORS.length]}">${x.zones[i][1]}</span>`; }
+function zoneChip(k){ const x = IND_X[k]; if(!x || !okn(curVal(IND[k]))) return ""; const i = zoneOf(x, curVal(IND[k])); return `<span class="zc" style="--zc:${ZONE_COLORS[i%ZONE_COLORS.length]}">${x.zones[i][1]}</span>`; }
 function chgTxt(v){ return `${v.chg>0?"+":""}${v.chg}${v.unit==="%"?"%p":v.unit}`; }
 function indRow(k, st){
   const v = IND[k];
@@ -2299,7 +2306,7 @@ function stockSheet(t, from){
    숫자나 화면을 바꾸지 않아요. 이상해 보이는 값을 찾아 목록으로 보여주기만 해요. */
 function runChecks(){
   const out = [];
-  const add = (lv, area, msg) => out.push({lv, area, msg});
+  const add = (lv, area, msg, key) => out.push({lv, area, msg, key});
   const fin = x => typeof x==="number" && isFinite(x);
   const okDate = d => typeof d==="string" && /^\d{4}-\d{2}-\d{2}$/.test(d) && !isNaN(Date.parse(d+"T00:00:00Z"));
   const today = ymd(parts(now(),"Asia/Seoul"));
@@ -2313,32 +2320,32 @@ function runChecks(){
     ETFS.forEach(e=>{
       tick();
       if(seen.has(e.code)) add("err","ETF",`${e.name}: 종목코드 ${e.code}가 두 번 들어 있어요.`); seen.add(e.code);
-      if(!(e.nav>0 && e.close>0)){ add("err","ETF",`${e.name}: NAV나 종가가 비어 있거나 0이에요.`); return; }
+      if(!(e.nav>0 && e.close>0)){ add("err","ETF",`${e.name}: NAV나 종가가 비어 있거나 0이에요.`, "etf:"+e.code); return; }
       const gap = e.close/e.nav - 1;
       if(Math.abs(gap) > 0.03) add("warn","ETF",`${e.name}: 종가와 NAV 차이가 ${pctx(gap)}예요. 보통 1% 안쪽이라 값이 맞는지 확인이 필요해요.`);
       if(!fin(e.prem)) add("err","ETF",`${e.name}: 장중 괴리율이 숫자가 아니에요.`);
       else if(Math.abs(e.prem) > 0.02) add("warn","ETF",`${e.name}: 장중 괴리율이 ${pctx(e.prem)}예요. LP가 있는 ETF는 보통 1% 안쪽이라 확인이 필요해요.`);
       const missing = e.h.filter(([t])=>!STOCKS[t]).map(([t])=>t);
-      if(missing.length) add("err","ETF",`${e.name}: 구성종목 ${missing.join(", ")}의 시세가 없어요.`);
+      if(missing.length) add("err","ETF",`${e.name}: 구성종목 ${missing.join(", ")}의 시세가 없어요.`, "etf:"+e.code);
       const noInfo = e.h.filter(([t])=>!CO[t]).map(([t])=>t);
       if(noInfo.length) add("warn","ETF",`${e.name}: ${noInfo.join(", ")}의 회사 소개가 없어요.`);
       const wsum = e.h.reduce((a,[,w])=>a+w,0) + (e.rest ? e.rest.w : 0) + (e.cash||0);
       if(Math.abs(wsum-1) > 0.03) add("warn","ETF",`${e.name}: 비중을 모두 더하면 ${(wsum*100).toFixed(1)}%예요. 100%에 가까워야 해요.`);
       if(e.rest && e.rest.n && e.rest.n < e.h.length) add("warn","ETF",`${e.name}: 전체 종목 수(${e.rest.n})가 표시한 종목 수(${e.h.length})보다 적어요.`);
       const c = calc(e);
-      if(!fin(c.total) || !fin(c.est)) add("err","ETF",`${e.name}: 추정 계산 결과가 숫자가 아니에요.`);
+      if(!fin(c.total) || !fin(c.est)) add("err","ETF",`${e.name}: 추정 계산 결과가 숫자가 아니에요.`, "etf:"+e.code);
       else if(Math.abs(c.total) > 0.15) add("warn","ETF",`${e.name}: 하룻밤 추정 변화가 ${pctx(c.total)}예요. 너무 커서 입력값 확인이 필요해요.`);
     });
   });
   guard("시세", ()=>{
     Object.entries(STOCKS).forEach(([t,[name,price,r]])=>{
       tick();
-      if(!(price>0)) add("err","시세",`${name}(${t}): 가격이 비어 있거나 0이에요.`);
-      if(!fin(r)) add("err","시세",`${name}(${t}): 등락률이 숫자가 아니에요.`);
+      if(!(price>0)) add("err","시세",`${name}(${t}): 가격이 비어 있거나 0이에요.`, "stock:"+t);
+      if(!fin(r)) add("err","시세",`${name}(${t}): 등락률이 숫자가 아니에요.`, "stock:"+t);
       else if(Math.abs(r) > 0.3) add("warn","시세",`${name}(${t}): 하루 등락률이 ${pctx(r)}예요. 실제로 크게 움직였는지 확인이 필요해요.`);
     });
     tick();
-    if(!(FX.now>0 && FX.base>0)) add("err","환율","원/달러 환율이 비어 있어요.");
+    if(!(FX.now>0 && FX.base>0)) add("err","환율","원/달러 환율이 비어 있어요.", "fx");
     else if(Math.abs(FX.now/FX.base-1) > 0.03) add("warn","환율",`원/달러 환율이 기준보다 ${pctx(FX.now/FX.base-1)} 움직였어요. 하루 변동으로는 커서 확인이 필요해요.`);
     Object.entries(FUT).forEach(([k,v])=>{ tick(); if(!fin(v) || Math.abs(v) > 0.1) add("warn","선물",`${k==="nq"?"나스닥100":"S&P500"} 선물 변화 ${fin(v)?pctx(v):"값 없음"}가 이상해요.`); });
     tick();
@@ -2350,7 +2357,7 @@ function runChecks(){
       const nm = v.name || k;
       if(!v.name || v.unit==null) add("err","매크로 지표",`${k}: 이름이나 단위가 비어 있어요.`);
       const cur = curVal(v);
-      if(!fin(cur)){ add("err","매크로 지표",`${nm}: 현재 값이 숫자가 아니에요.`); return; }
+      if(!fin(cur)){ add("err","매크로 지표",`${nm}: 현재 값이 숫자가 아니에요.`, "ind:"+k); return; }
       if(v.unit==="%" && (cur < -50 || cur > 100)) add("warn","매크로 지표",`${nm}: ${cur}%는 범위를 벗어난 값 같아요.`);
       if(v.g==="mkt"){
         if(Array.isArray(v.spark) && v.spark.length){
@@ -2446,6 +2453,17 @@ function runChecks(){
   });
   return {items: out, count: n, at: now()};
 }
+function refreshFlags(){
+  FLAG = {etf:new Set(), stock:new Set(), ind:new Set()};
+  let items = [];
+  try{ items = runChecks().items; }catch(e){ return; }
+  const next = {etf:new Set(), stock:new Set(), ind:new Set()};
+  items.filter(x=>x.lv==="err" && x.key).forEach(x=>{
+    if(x.key==="fx") ETFS.forEach(e=>next.etf.add(e.code));
+    else { const [t,id] = x.key.split(":"); if(next[t]) next[t].add(id); }
+  });
+  FLAG = next;
+}
 function checkSummary(){
   const r = runChecks(); const e = r.items.filter(x=>x.lv==="err").length, w = r.items.filter(x=>x.lv==="warn").length;
   return {r, e, w};
@@ -2471,6 +2489,7 @@ function viewCheck(){
 function route(){ const h = (location.hash||"").replace("#",""); return h || "main"; }
 function go(name){ if(location.hash !== "#"+name) location.hash = name; else render(); }
 function render(){
+  refreshFlags();
   const st = renderTop();
   const r = route();
   let html;
