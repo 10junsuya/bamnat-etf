@@ -377,7 +377,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
 </style>
 </head>
 <body data-mode="light">
-<div class="splash" id="splash" role="button" tabindex="0" aria-label="GNOMON 노몬, 눌러서 시작"><div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.<span class="cite">— Logan Roy, <i>Succession</i></span></div><div class="sp-hint">눌러서 시작</div></div></div>
+<div class="splash" id="splash" role="button" tabindex="0" aria-label="GNOMON 노몬, 눌러서 시작"><div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.<span class="cite">— <i>Succession</i></span></div><div class="sp-hint">눌러서 시작</div></div></div>
 <div class="app">
   <div class="top">
     <div class="brand">
@@ -1347,7 +1347,7 @@ function viewMain(st){
         <div class="lfoot">${(()=>{ const n = nextUpcoming().filter(x=>x.r.ymd>=ymd(st.k))[0]; return n?`다음 <b>${IND[n.k].name}</b><div class="num muted">${n.r.label}</div>`:""; })()}</div>
       </button>
     </div>
-    <div class="motto mmotto">Money wins. Here’s to us.<span class="cite">— Logan Roy, <i>Succession</i></span></div>
+    <div class="motto mmotto">Money wins. Here’s to us.<span class="cite">— <i>Succession</i></span></div>
   </div>
   <footer class="sitefoot">
     <div class="sf-brand"><b>GNOMON</b> 노몬 <span>Since 2026</span></div>
@@ -2327,7 +2327,7 @@ function render(){
 }
 window.addEventListener("hashchange", ()=>{ showAll=false; render(); window.scrollTo(0,0); });
 
-const SPLASH_IN = `<div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.<span class="cite">— Logan Roy, <i>Succession</i></span></div><div class="sp-hint">눌러서 시작</div></div>`;
+const SPLASH_IN = `<div class="sp-in"><div class="wordmark">GNOMON</div><div class="motto sp-motto">Money wins. Here’s to us.<span class="cite">— <i>Succession</i></span></div><div class="sp-hint">눌러서 시작</div></div>`;
 const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 const flyTo = (el, target) => { const a = el.getBoundingClientRect(), b = target.getBoundingClientRect();
   const dx = (b.left+b.width/2)-(a.left+a.width/2), dy = (b.top+b.height/2)-(a.top+a.height/2), k = b.width/a.width;
