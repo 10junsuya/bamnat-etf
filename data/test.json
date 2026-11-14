@@ -1,0 +1,117 @@
+{
+  "generated_at_kst": "2026-11-14 23:21:02",
+  "finnhub_us_quotes": {
+    "NVDA": {
+      "price": 162.85,
+      "prev_close": 166.19,
+      "change_pct": -2.0097,
+      "time_utc": "2026-11-13T21:00:00+00:00"
+    },
+    "AAPL": {
+      "price": 356.27,
+      "prev_close": 354.88,
+      "change_pct": 0.3917,
+      "time_utc": "2026-11-13T21:00:00+00:00"
+    },
+    "MSFT": {
+      "price": 523.88,
+      "prev_close": 523,
+      "change_pct": 0.1683,
+      "time_utc": "2026-11-13T21:00:00+00:00"
+    },
+    "AVGO": {
+      "price": 347.01,
+      "prev_close": 364.36,
+      "change_pct": -4.7618,
+      "time_utc": "2026-11-13T21:00:00+00:00"
+    },
+    "QQQ": {
+      "price": 679.89,
+      "prev_close": 688.17,
+      "change_pct": -1.2032,
+      "time_utc": "2026-11-13T21:00:00+00:00"
+    },
+    "SPY": {
+      "price": 754.37,
+      "prev_close": 757.12,
+      "change_pct": -0.3632,
+      "time_utc": "2026-11-13T21:00:00+00:00"
+    },
+    "SOXX": {
+      "price": 149.3,
+      "prev_close": 154.99,
+      "change_pct": -3.6712,
+      "time_utc": "2026-11-13T21:00:00+00:00"
+    }
+  },
+  "krx_etf_prices": {
+    "working_url": null,
+    "tried": [
+      {
+        "url": "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService/getETFPriceInfo",
+        "status": 403,
+        "header": {}
+      },
+      {
+        "url": "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService/getETFPriceInfo_V2",
+        "status": 400,
+        "header": {}
+      },
+      {
+        "url": "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService_V2/getETFPriceInfo_V2",
+        "status": 400,
+        "header": {}
+      },
+      {
+        "url": "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService/getETFPriceInfo",
+        "status": 403,
+        "header": {}
+      },
+      {
+        "url": "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService/getETFPriceInfo_V2",
+        "status": 400,
+        "header": {}
+      },
+      {
+        "url": "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService_V2/getETFPriceInfo_V2",
+        "status": 400,
+        "header": {}
+      }
+    ],
+    "etfs": {
+      "381180": {
+        "name": "TIGER 미국필라델피아반도체나스닥",
+        "error": "모든 주소 실패"
+      },
+      "360750": {
+        "name": "TIGER 미국S&P500",
+        "error": "모든 주소 실패"
+      },
+      "379800": {
+        "name": "KODEX 미국S&P500",
+        "error": "모든 주소 실패"
+      },
+      "360200": {
+        "name": "ACE 미국S&P500",
+        "error": "모든 주소 실패"
+      },
+      "133690": {
+        "name": "TIGER 미국나스닥100",
+        "error": "모든 주소 실패"
+      },
+      "379810": {
+        "name": "KODEX 미국나스닥100",
+        "error": "모든 주소 실패"
+      },
+      "0181L0": {
+        "name": "SOL 미국우주항공TOP10",
+        "error": "모든 주소 실패"
+      }
+    }
+  },
+  "fx_usdkrw_ecb": {
+    "source": "api.frankfurter.dev",
+    "date": "2026-11-13",
+    "usdkrw": 1337.13
+  }
+}
