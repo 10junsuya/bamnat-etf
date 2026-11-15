@@ -1,0 +1,22 @@
+name: 데이터 검사
+
+# 일정·실적·임무 데이터(data/*.json)가 형식에 맞는지, 앱(index.html)에 똑같이 들어갔는지 확인해요.
+on:
+  push:
+    branches: [main]
+    paths: ["data/events.json", "data/missions.json", "data/money.json", "index.html", "scripts/check_data.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/check_data.py
