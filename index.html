@@ -584,9 +584,10 @@ const store = {
 
 /* ===================== 샘플 데이터 ===================== */
 const FX = { base: 1330.3, now: 1336.3, baseTime: "11/12 15:30" };
-const FUT = { nq: 0.0066, es: 0.0041 };
+const FUT = { nq: NaN, es: NaN, sox: NaN };  /* 실제 값은 아래 applyLive()가 채워요 (QQQ·SPY·SOXQ 움직임) */
 
 const STOCKS = {
+  GOOG:["알파벳 C",NaN,NaN], WMT:["월마트",NaN,NaN], CSCO:["시스코",NaN,NaN], SPCX:["스페이스X",NaN,NaN], BKSY:["블랙스카이",NaN,NaN], SATL:["새틀로직",NaN,NaN],
   NVDA:["엔비디아",186.40,-0.0315], AVGO:["브로드컴",352.10,0.0648], AMD:["AMD",238.60,0.0583],
   TXN:["텍사스인스트루먼트",178.20,0.0177], AMAT:["어플라이드머티리얼즈",201.50,-0.0244], QCOM:["퀄컴",171.30,0.0168],
   MU:["마이크론",214.80,0.0091], TSM:["TSMC",291.40,-0.0081], LRCX:["램리서치",147.90,0.0120],
@@ -688,6 +689,12 @@ const CO = {
   PL:{tag:"지구 관측 위성", cat:"위성 데이터", one:"작은 위성 수백 기로 지구를 매일 찍어서 사진과 데이터를 파는 회사예요.", does:["지구 관측 위성 운영","농업·국방·환경용 위성 사진 구독"], money:"정부와 기업의 데이터 구독료예요.", chain:"—", rel:["RKLB"], form:"10-K"},
   LUNR:{tag:"달 착륙선", cat:"우주 인프라", one:"달 착륙선을 만들어 NASA 임무를 수행하는 회사예요.", does:["달 착륙선 발사·운영","달 궤도 통신 중계","우주 관련 엔지니어링 서비스"], money:"NASA 등 정부 계약 비중이 커요.", chain:"—", rel:["FLY"], form:"10-K"},
   RDW:{tag:"우주 인프라 부품", cat:"우주 인프라", one:"위성과 우주선에 들어가는 구조물·부품을 만드는 회사예요.", does:["펼치는 태양전지판·안테나","우주 공간 제조 기술","드론 등 방산 사업"], money:"정부·방산 계약 비중이 커요.", chain:"위성 만드는 회사들에 부품을 파는 쪽이에요.", rel:["RKLB","KRMN"], form:"10-K"},
+  GOOG:{tag:"검색·유튜브 광고", cat:"빅테크", one:"알파벳(구글)의 의결권 없는 C주예요. 회사는 GOOGL과 같아요.", does:["구글 검색·유튜브 광고","구글 클라우드","AI 모델 제미나이, 자체 AI 칩(TPU)"], money:"매출 대부분이 광고예요.", chain:"GOOGL과 같은 회사예요.", rel:["GOOGL"], form:"10-K", cik:"GOOGL"},
+  WMT:{tag:"대형 마트", cat:"소비·유통", one:"미국 최대 대형마트 체인 월마트를 운영하는 회사예요.", does:["월마트·샘스클럽 매장","온라인 쇼핑과 배송","광고·회원제(월마트+)"], money:"생활용품·식료품 판매가 대부분이에요.", chain:"—", rel:["COST","AMZN"], form:"10-K"},
+  CSCO:{tag:"네트워크 장비", cat:"네트워크", one:"인터넷과 회사 전산망에 쓰는 네트워크 장비를 파는 회사예요.", does:["라우터·스위치 같은 네트워크 장비","보안·협업 소프트웨어(웹엑스)","AI 데이터센터용 네트워크"], money:"장비 판매와 소프트웨어 구독이에요.", chain:"데이터센터 회사들에 장비를 파는 쪽이에요.", rel:["AVGO"], form:"10-K"},
+  SPCX:{tag:"로켓·위성 인터넷", cat:"발사체", one:"재사용 로켓과 위성 인터넷 스타링크를 운영하는 회사예요. 2026년 6월 나스닥에 상장했어요.", does:["팰컨9·스타십 로켓 발사","스타링크 위성 인터넷","유인 우주선 드래건"], money:"스타링크 구독과 발사 서비스예요.", chain:"다른 위성 회사의 위성을 쏘아 주기도 하고, 경쟁하기도 해요.", rel:["RKLB","ASTS"], form:"10-K"},
+  BKSY:{tag:"지구 관측 위성", cat:"위성 데이터", one:"작은 위성으로 지구를 자주 찍어 분석 정보를 파는 회사예요.", does:["지구 관측 위성 운영","국방·정보기관용 실시간 영상 분석"], money:"정부·국방 고객 비중이 커요.", chain:"—", rel:["PL"], form:"10-K"},
+  SATL:{tag:"지구 관측 위성", cat:"위성 데이터", one:"작은 위성으로 고해상도 지구 사진을 찍어 파는 회사예요.", does:["지구 관측 위성 운영","위성 사진·데이터 판매"], money:"정부·기업의 위성 사진 구매예요.", chain:"—", rel:["PL","BKSY"], form:"10-K"},
   KRMN:{tag:"미사일·우주 부품", cat:"부품·방산", one:"미사일과 로켓에 들어가는 부품·시스템을 만드는 회사예요.", does:["미사일·방어 시스템 부품","로켓·우주선 구조물과 부품"], money:"방산 비중이 커요.", chain:"방산·우주 회사들에 부품을 파는 쪽이에요.", rel:["RDW"], form:"10-K"}
 };
 const CAT_COLORS = ["#3A3A3C","#636366","#8E8E93","#48484A","#AEAEB2","#545458","#7C7C80"];
@@ -719,7 +726,7 @@ const GLOSS = {
   "추정 iNAV":"이 앱이 구성종목의 지금 가격과 환율로 직접 계산한 추정 가치예요. 한국장이 닫힌 밤에도 계산해요.",
   "괴리율":"시장에서 거래되는 가격이 추정 가치보다 얼마나 높거나 낮은지예요. (시장가 − 추정 가치) ÷ 추정 가치.",
   "기여도":"그 종목이 ETF 등락을 얼마나 움직였는지예요. 비중 × 등락률로 계산하고, 단위는 %p예요.",
-  "시세 반영 비중":"ETF 자산 중 개별 종목 시세로 계산한 비율이에요. 나머지는 지수 선물로 보정해요.",
+  "시세 반영 비중":"ETF 자산 중 담긴 회사 시세로 하나씩 계산한 비율이에요. 나머지는 같은 지수를 따르는 미국 ETF(SPY·QQQ·SOXQ) 움직임에 맞춰 채워요.",
   "추정 오차":"과거에 이 방식으로 추정한 값과 다음 날 실제 NAV의 차이예요. 작을수록 잘 맞았다는 뜻이에요.",
   "환율 효과":"원/달러 환율이 바뀌어서 생긴 등락이에요. 환헤지(H) ETF는 거의 영향을 받지 않아요.",
   "LP":"유동성 공급자예요. 시장가가 추정 가치 근처에서 거래되도록 사고팔 호가를 내요.",
@@ -847,15 +854,127 @@ function isMarketNight(k, u){
 }
 function fmtLeft(min){ const h=Math.floor(min/60), m=min%60; return h ? `${h}시간 ${m}분` : `${m}분`; }
 
+/* ===================== 실제 숫자 연결 (구성종목 · 미국 시세 · 기준가 · 환율) =====================
+   - 구성종목: data/holdings.json (지수형은 같은 지수를 따르는 미국 ETF 보유종목, 우주항공은 운용사 PDF)
+   - 시세·종가 기록·기준가·환율: data/live.json (GitHub에서 하루 몇 번 받아서 이 파일에 넣어요)
+   - 실시간 서버(gnomon-live)에 닿으면 미국 시세·환율을 그 자리에서 새로 받아요. 못 닿으면 저장된 숫자와 그 시각을 보여줘요.
+   계산: 한국 마지막 장 마감 때 기준가에 반영된 미국 종가 → 지금 미국 가격까지의 변화 × 환율 변화 */
+const LIVE_URL = "https://gnomon-live.leejoonsoo85.workers.dev";
+const LIVE_RAW = "https://raw.githubusercontent.com/10junsuya/gnomon/main/data/live.json";
+let LIVE = readData("d-live") || {};
+const HOLD = readData("d-holdings") || {};
+const LV = {src:"저장", at:LIVE.generated_at_kst||"", quoteT:"", fxDate:"", fxSrc:"", navDate:"", kr:"", U:"", ok:false};
+const TK = t => String(t||"").replace(/[-.]/g,"");
+const isoAdd = (s,n) => { const d = new Date(s+"T00:00:00Z"); d.setUTCDate(d.getUTCDate()+n); return d.toISOString().slice(0,10); };
+const krOpenDay = s => { const wd = new Date(s+"T00:00:00Z").getUTCDay(); return wd>0 && wd<6 && !KRX_HOL.some(h=>h[0]===s); };
+const usOpenDay = s => { const [y,m,d] = s.split("-").map(Number); return usTradingDay(y,m,d); };
+const prevUs = s => { do { s = isoAdd(s,-1); } while(!usOpenDay(s)); return s; };
+function lastKrClose(){ const k = parts(now(),"Asia/Seoul"); let s = ymd(k);
+  if(!(krOpenDay(s) && k.h*60+k.mi >= 930)){ do { s = isoAdd(s,-1); } while(!krOpenDay(s)); } return s; }
+const mdTxt = s => { if(!s) return ""; const [y,m,d] = s.split("-").map(Number); return `${m}/${d}(${KDAY[new Date(Date.UTC(y,m-1,d)).getUTCDay()]})`; };
+/* 미국 종목 t의 날짜 s 종가 */
+function usClose(t, s){ const q = (LIVE.quotes||{})[t];
+  if(q && q.d===s && LV.sessionOver(q)) return q.p;
+  if(q && q.pc && prevUs(q.d)===s) return q.pc;
+  const c = (LIVE.closes||{})[s]; return c && c[t] ? c[t] : NaN; }
+LV.sessionOver = q => { const u = parts(now(),"America/New_York"); return ymd(u) > q.d || u.h >= 16; };
+/* 한국 마지막 장 마감 뒤 미국에서 움직인 만큼 */
+function usMove(t){ const q = (LIVE.quotes||{})[t]; if(!q) return NaN;
+  const base = q.d===LV.U ? q.p : (q.pc && prevUs(q.d)===LV.U) ? q.pc : usClose(t, LV.U);
+  return okn(base) && base>0 ? q.p/base - 1 : NaN; }
+function fxAt(s){ const h = (LIVE.fx||{}).hist || {}; const ks = Object.keys(h).filter(d=>d<=s).sort(); return ks.length ? [ks[ks.length-1], h[ks[ks.length-1]]] : [null, NaN]; }
+
+function applyHoldings(){
+  for(const e of ETFS){
+    const hv = (HOLD.etfs||{})[e.code];
+    e.live = true; e.hsrc = hv ? hv.src : ""; e.hasof = hv ? hv.asof : "";
+    if(hv && hv.kind==="pdf"){
+      e.h = hv.top.filter(x=>x.ticker).map(x=>[TK(x.ticker), x.weight/100]); e.rest = null; e.cash = (hv.cash_weight||0)/100; e.proxy = "";
+    }else{
+      e.proxy = hv ? hv.proxy : ({sox:"SOXQ", sp:"SPY", ndx:"QQQ"})[e.group];
+      e.h = hv ? hv.top.filter(x=>x.ticker).map(x=>[TK(x.ticker), x.weight/100]) : [];
+      e.nTotal = hv ? hv.n_total : ({sox:30, sp:503, ndx:101})[e.group]; e.cash = 0;
+      e.rest = {w:0, n:0, fut:({sp:"es", ndx:"nq", sox:"sox"})[e.group]||"es", r:NaN};
+    }
+    if(hv) hv.top.forEach(x=>{ const k = TK(x.ticker); if(k && !STOCKS[k]) STOCKS[k] = [x.name, NaN, NaN]; });
+  }
+}
+function applyLive(){
+  const kr = lastKrClose(); LV.kr = kr; LV.U = prevUs(kr);
+  const qs = LIVE.quotes || {};
+  // 종목 시세: 실제 값이 있는 것만, 없으면 '확인 중'
+  for(const t of Object.keys(STOCKS)){ const q = qs[t] || qs[t==="BRKB"?"BRK-B":t]; const r = q ? usMove(qs[t]?t:"BRK-B") : NaN;
+    STOCKS[t][1] = q ? q.p : NaN; STOCKS[t][2] = r; }
+  LV.quoteT = Object.values(qs).map(q=>q.t).sort().pop() || "";
+  FUT.es = usMove("SPY"); FUT.nq = usMove("QQQ"); FUT.sox = usMove("SOXQ");
+  // 환율
+  const [bd, br] = fxAt(kr); const fx = LIVE.fx || {};
+  FX.base = br; FX.now = okn(fx.rate) ? fx.rate : br; FX.baseTime = bd ? mdTxt(bd) : "";
+  LV.fxDate = fx.date||""; LV.fxSrc = fx.src||""; LV.fxLive = !!fx.live;
+  for(const e of ETFS){
+    // 지수형: 담긴 회사 중 시세 있는 것만 하나씩, 나머지는 같은 지수 미국 ETF 움직임에 맞춰 채워요
+    if(e.rest){
+      const R = usMove(e.proxy); e.proxyR = R;
+      const hv = (HOLD.etfs||{})[e.code];
+      e.h = (hv ? hv.top : []).filter(x=>x.ticker && okn(STOCKS[TK(x.ticker)]?.[2])).map(x=>[TK(x.ticker), x.weight/100]);
+      const sw = e.h.reduce((a,[,w])=>a+w,0), sc = e.h.reduce((a,[t,w])=>a+w*STOCKS[t][2],0);
+      e.rest.w = Math.max(0, 1-sw); e.rest.n = Math.max(0, (e.nTotal||0) - e.h.length);
+      e.rest.r = e.rest.w>0 ? (R - sc)/e.rest.w : 0;
+    }
+    // 기준가: 한국 마지막 장 날짜 것이 있으면 그대로, 없으면 이전 기준가에서 미국 종가·환율 변화로 이어 붙여요
+    const rows = (LIVE.kr||{})[e.code] || [];
+    const hit = rows.find(r=>r.d===kr);
+    e.prem = NaN;
+    const pr = rows.filter(r=>r.nav>0 && r.close>0).map(r=>r.close/r.nav-1);
+    e.avgPrem = pr.length ? pr.reduce((a,x)=>a+x,0)/pr.length : NaN;
+    if(hit){ e.nav = hit.nav; e.close = hit.close; e.navNote = `${mdTxt(kr)} 기준가`; e.navReal = true; continue; }
+    const prev = rows.filter(r=>r.d<kr).pop();
+    e.close = NaN; e.navReal = false;
+    if(!prev){ e.nav = NaN; e.navNote = "기준가 확인 중"; continue; }
+    const u0 = prevUs(prev.d), fx0 = fxAt(prev.d)[1];
+    const legs = e.rest ? [[e.proxy,1]] : e.h.map(([t,w])=>[t==="BRKB"?"BRK-B":t,w]);
+    let f = e.cash||0; for(const [t,w] of legs){ f += w * (usClose(t, LV.U)/usClose(t, u0)); }
+    e.nav = prev.nav * f * (br/fx0);
+    e.navNote = okn(e.nav) ? `${mdTxt(kr)} 기준가 추정 · ${mdTxt(prev.d)} 공시 기준가에서 이어 계산` : "기준가 확인 중";
+  }
+  LV.ok = Object.keys(qs).length>0;
+}
+/* 화면에 쓰는 '언제 숫자인가' 한 줄 */
+function dataStamp(){
+  const t = LV.quoteT ? (()=>{ const p = parts(new Date(LV.quoteT),"America/New_York"); return `${p.m}/${p.d} ${pad(p.h)}:${pad(p.mi)} 뉴욕`; })() : "없음";
+  return `미국 시세 ${t}${LV.src==="실시간"?" · 실시간 연결":""} · 원/달러 ${LV.fxDate?mdTxt(LV.fxDate):"없음"} ${LV.fxSrc}${LV.fxLive?"":"(하루 한 번)"} · ${mdTxt(LV.kr)} 장 마감 기준`;
+}
+/* 시작 계산(applyHoldings·applyLive)은 숫자 포맷 함수들이 준비된 뒤 '상태' 바로 앞에서 해요 */
+/* 실시간 서버 → 새 숫자. 미리보기처럼 바깥 연결이 막힌 곳에서는 조용히 넘어가요. */
+async function pullLive(){
+  const tm = ms => ({signal: (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(ms) : undefined});
+  let changed = false;
+  try{ const r = await fetch(LIVE_RAW+"?t="+Date.now(), tm(6000)); if(r.ok){ const j = await r.json();
+    if(j && j.generated_at_kst && j.generated_at_kst > (LIVE.generated_at_kst||"")){ LIVE = j; changed = true; } } }catch(_){}
+  try{
+    const syms = [...new Set([...Object.keys(LIVE.quotes||{}), "SPY","QQQ","SOXQ"])].slice(0,40);
+    const r = await fetch(`${LIVE_URL}/quote?s=${encodeURIComponent(syms.join(","))}`, tm(6000));
+    if(r.ok){ const j = await r.json(); const src = j.quotes || j; let n = 0;
+      LIVE.quotes = {...(LIVE.quotes||{})};
+      for(const [t,v] of Object.entries(src)){ if(!v || v.error || !okn(v.price) || !v.time) continue;
+        const p = parts(new Date(v.time),"America/New_York");
+        LIVE.quotes[t] = {p:v.price, pc:v.prev, dp:v.change_pct, t:v.time, d:ymd(p)}; n++; }
+      if(n){ LV.src = "실시간"; changed = true; } }
+  }catch(_){}
+  try{ const r = await fetch(`${LIVE_URL}/fx`, tm(5000)); if(r.ok){ const j = await r.json();
+    if(okn(j.usdkrw)){ LIVE.fx = {...(LIVE.fx||{}), rate:j.usdkrw, date:j.date || (j.time||"").slice(0,10) || (LIVE.fx||{}).date, src:j.source||"", live:!!j.live}; changed = true; } } }catch(_){}
+  if(changed){ applyLive(); syncFxInd(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
+}
+
 /* ===================== 계산 ===================== */
 function calc(e){
   const rows = e.h.map(([t,w])=>{ const s = STOCKS[t] || [t, NaN, NaN]; const bad = FLAG.stock.has(t);
     const r = bad ? NaN : s[2]; return {t, name:s[0], price: bad ? NaN : s[1], r, w, c:w*r}; });
   let usd = rows.reduce((a,x)=>a+x.c,0);
   let restC = 0;
-  if(e.rest){ restC = e.rest.w * FUT[e.rest.fut]; usd += restC; }
-  const fxR = FX.now/FX.base - 1;
-  const total = (1+usd)*(1+fxR) - 1;
+  if(e.rest){ restC = e.rest.w * (okn(e.rest.r) ? e.rest.r : FUT[e.rest.fut]); usd += restC; }
+  let fxR = FX.now/FX.base - 1; if(Math.abs(fxR) < 1e-9) fxR = 0;
+  const total = fxR===0 ? usd : (1+usd)*(1+fxR) - 1;
   const fxC = total - usd;
   const est = e.nav*(1+total);
   const coverage = rows.reduce((a,x)=>a+x.w,0) + (e.cash||0);
@@ -889,6 +1008,8 @@ function logo(t, small){
   return `<span class="logo${small?" sm":""}" aria-hidden="true">${txt}</span>`;
 }
 const q = term => `<button class="qbtn" type="button" data-term="${term}" aria-label="${term} 설명">?</button>`;
+
+applyHoldings(); applyLive();
 
 /* ===================== 상태 ===================== */
 let stars = store.get("stars", ["381180","133690"]);
@@ -930,16 +1051,16 @@ function heroLabel(ks){
   return ks.key==="closed" ? "한국 장 마감 후 지금까지" : "장중 · 전일 마감 iNAV 대비";
 }
 function usNote(us, e){
-  const fut = e.rest ? (e.rest.fut==="nq"?"나스닥100 선물":"S&P500 선물") : "지수 선물";
+  const fut = e.rest ? `${e.proxy}(같은 지수 미국 ETF)` : "마지막 거래 가격";
   if(us.key==="regular") return "미국 정규장 시세를 반영했어요.";
-  if(us.key==="pre"||us.key==="after") return `미국 정규장이 닫혀 있어 프리·애프터마켓 가격과 ${fut}로 보정했어요.`;
-  return `미국장이 휴장이라 마지막 거래 가격과 ${fut}로 보정했어요.`;
+  if(us.key==="pre"||us.key==="after") return `미국 정규장이 닫혀 있어 마지막 정규장 가격으로 계산했어요. 프리·애프터마켓 움직임은 아직 넣지 않았어요.`;
+  return `미국장이 쉬는 중이라 마지막 정규장 가격으로 계산했어요.${e.rest?` 나머지 회사는 ${fut} 움직임에 맞췄어요.`:""}`;
 }
 
 let homeQuery = "";
 function etfCard(e, hit){ const c = calc(e); return `
     <button class="etf-card" type="button" data-etf="${e.code}">
-      <div><div class="nm">${e.name}</div><div class="meta">${e.code} · 시세 반영 ${Math.round(c.coverage*100)}%${e.rest?" + 선물 보정":""}</div>${hit?`<div class="hit">${hit}</div>`:""}</div>
+      <div><div class="nm">${e.name}</div><div class="meta">${e.code} · ${c.rows.length?`시세 반영 ${Math.round(c.coverage*100)}%`:""}${e.rest?`${c.rows.length?" + ":""}${e.proxy} 보정`:""}</div>${hit?`<div class="hit">${hit}</div>`:""}</div>
       <div><div class="chg num ${cls(c.total)}">${pct(c.total)}</div><div class="est num">예상 ${won(c.est)}</div></div>
     </button>`; }
 function searchEtfs(qs){
@@ -976,17 +1097,21 @@ function viewHome(st){
     </div>
     ${holdings.length && inBriefWindow(st.k) ? briefingHtml(st) : ""}
     <div class="strip">
-      <div class="tile"><div class="lbl">나스닥100 선물</div><div class="val num ${cls(FUT.nq)}">${pct(FUT.nq)}</div></div>
-      <div class="tile"><div class="lbl">S&amp;P500 선물</div><div class="val num ${cls(FUT.es)}">${pct(FUT.es)}</div></div>
-      <div class="tile"><div class="lbl">원/달러</div><div class="val num">${FX.now.toFixed(1)}</div><div class="tiny num ${cls(FX.now/FX.base-1)}">${pct(FX.now/FX.base-1)}</div></div>
+      <div class="tile"><div class="lbl">나스닥100 <span class="tiny muted">QQQ</span></div><div class="val num ${cls(FUT.nq)}">${pct(FUT.nq)}</div></div>
+      <div class="tile"><div class="lbl">S&amp;P500 <span class="tiny muted">SPY</span></div><div class="val num ${cls(FUT.es)}">${pct(FUT.es)}</div></div>
+      <div class="tile"><div class="lbl">원/달러</div><div class="val num">${okn(FX.now)?FX.now.toFixed(1):PEND}</div><div class="tiny num ${cls(FX.now/FX.base-1)}">${pct(FX.now/FX.base-1)}</div></div>
     </div>
+    <p class="tiny muted stamp" style="margin:6px 4px 0">${dataStamp()} · 한국 장 마감 뒤 움직임이에요</p>
     <div id="homeList">${homeListHtml(st)}</div>`;
 }
 
 function priceStateCard(e, c, st){
   const k = st.ks.key;
   let body;
-  if(k==="closed"){
+  if(k==="closed" && !okn(e.close)){
+    body = `<div class="state-line">지금 추정 변화 <b class="num ${cls(c.total)}">${spct(c.total)}</b></div>
+      <div class="small muted">${mdTxt(LV.kr)} 종가와 기준가가 공시되면 원화 가격도 함께 보여드려요. 다음 정규장은 한국 시간 09:00에 열려요.</div>`;
+  }else if(k==="closed"){
     const diff = c.est/e.close - 1;
     body = `<div class="state-line">오늘 종가 <span class="num">${won(e.close)}</span> → 지금 추정 가치 <b class="num ${cls(diff)}" style="white-space:nowrap">${won(c.est)}</b></div>
       <div class="small muted">추정 가치가 종가보다 <span class="num ${cls(diff)}">${okn(diff) ? `${Math.abs(diff*100).toFixed(2)}% ${diff>=0?"높아요":"낮아요"}` : PEND}</span>. 다음 정규장은 한국 시간 09:00에 열려요.</div>`;
@@ -1017,8 +1142,8 @@ function trustCard(e, c){
     return `<rect x="${(i*bw+2).toFixed(1)}" y="${y.toFixed(1)}" width="${(bw-4).toFixed(1)}" height="${Math.max(h,1).toFixed(1)}" rx="2" fill="var(--${i===errs.length-1?"accent":"muted"})" opacity="${i===errs.length-1?1:.45}"/>`; }).join("");
   return `<section class="card"><h2>이 추정을 얼마나 믿을 수 있나 ${q("추정 오차")}</h2>
     <div class="kv">
-      <div><div class="k">시세 반영 비중 ${q("시세 반영 비중")}</div><div class="v num">${Math.round(c.coverage*100)}%${e.rest?` <span class="tiny muted">+ 선물 ${Math.round(e.rest.w*100)}%</span>`:""}</div></div>
-      <div><div class="k">최근 20일 평균 오차</div><div class="v num">±${(avg*100).toFixed(2)}%</div></div>
+      <div><div class="k">시세 반영 비중 ${q("시세 반영 비중")}</div><div class="v num">${Math.round(c.coverage*100)}%${e.rest?` <span class="tiny muted">+ ${e.proxy} ${Math.round(e.rest.w*100)}%</span>`:""}</div></div>
+      <div><div class="k">최근 20일 평균 오차 <span class="tiny muted">샘플</span></div><div class="v num">±${(avg*100).toFixed(2)}%</div></div>
     </div>
     <svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="최근 20거래일 추정 오차" style="margin-top:12px">
       <line x1="0" x2="${W}" y1="${H/2}" y2="${H/2}" stroke="var(--line)"/>${bars}</svg>
@@ -1040,15 +1165,16 @@ function holdingsCard(e, c){
       <div><div class="r1 num ${cls(x.r)}">${spct(x.r)}</div><div class="r2 num">기여 ${pctp(x.c)}</div></div>
     </button>`;
   let extra = "";
-  if(e.rest) extra += `<div class="row total"><div><div class="n">나머지 ${e.rest.n}종목</div><div class="t">비중 ${(e.rest.w*100).toFixed(1)}% · ${e.rest.fut==="nq"?"나스닥100":"S&P500"} 선물로 보정</div></div><div><div class="r2 num">기여 ${pctp(c.restC)}</div></div></div>`;
+  if(e.rest) extra += `<div class="row total"><div><div class="n">나머지 ${e.rest.n}종목</div><div class="t">비중 ${(e.rest.w*100).toFixed(1)}% · ${e.proxy} 움직임에 맞춤</div></div><div><div class="r2 num">기여 ${pctp(c.restC)}</div></div></div>`;
   extra += `<div class="row total"><div><div class="n">미국 주식 합계</div></div><div><div class="r1 num ${cls(c.usd)}">${pctp(c.usd)}</div></div></div>`;
   extra += `<div class="row total"><div><div class="n">환율 효과</div><div class="t num">${FX.base} → ${FX.now}</div></div><div><div class="r1 num ${cls(c.fxC)}">${pctp(c.fxC)}</div></div></div>`;
-  return `<section class="card"><h2>구성종목 ${q("기여도")}<span class="sub">총 ${total}종목 · 미국 시세 몇 분 단위 갱신</span></h2>
+  return `<section class="card"><h2>구성종목 ${q("기여도")}<span class="sub">총 ${total}종목 · ${e.hsrc||"구성종목"}${e.hasof?` · ${String(e.hasof).replace(/^As of /,"")}`:""}</span></h2>
     <div class="seg" role="group" aria-label="정렬">
       <button type="button" data-sort="w" aria-pressed="${sortKey==="w"}">비중순</button>
       <button type="button" data-sort="c" aria-pressed="${sortKey==="c"}">기여도순</button>
       <button type="button" data-sort="r" aria-pressed="${sortKey==="r"}">등락순</button>
     </div>
+    ${rows.length?"":`<p class="small muted" style="margin:8px 2px">이 ETF의 구성종목 비중은 아직 받아오지 못했어요. 지금 계산은 같은 지수를 따르는 미국 ETF ${e.proxy} 움직임으로 해요.</p>`}
     ${shown.map(row).join("")}
     ${rows.length>5 ? `<button class="more" type="button" data-toggle-all>${showAll?"접기":`${rows.length}개 전체 보기`}</button>` : ""}
     <div style="margin-top:10px">${extra}</div>
@@ -1257,7 +1383,8 @@ function viewEtf(code, st){
       <div class="lbl">${heroLabel(st.ks)}</div>
       <div class="big num ${cls(c.total)}">${pct(c.total)}</div>
       <div class="price num">예상 ${won(c.est)}</div>
-      <div class="basis num">마감 iNAV ${won(e.nav)} 기준 · 오늘 종가 ${won(e.close)} · ${calcT} 계산</div>
+      <div class="basis num">${okn(e.nav) ? `${e.navNote} ${won(e.nav)}${okn(e.close)?` · 종가 ${won(e.close)}`:""}` : `${mdTxt(LV.kr)} 기준가·종가는 아직 공시 전이에요 (보통 다음 날 오후)`}</div>
+      <div class="tiny muted stamp" style="margin-top:4px">${dataStamp()}</div>
       <div class="split">
         <div>미국 주식<b class="num ${cls(c.usd)}">${spct(c.usd)}</b></div>
         <div>환율 효과 ${q("환율 효과")}<b class="num ${cls(c.fxC)}">${spct(c.fxC)}</b></div>
@@ -1282,7 +1409,7 @@ function distCard(e, st){
   return `<section class="card"><h2>분배금 ${q("분배금")}<span class="sub">${D.freq} · 샘플</span></h2>
     <div class="kv">
       <div><div class="k">최근 분배금</div><div class="v num">${won(D.last[1])}</div><div class="tiny muted num">${fmtD(D.last[0])} 기준</div></div>
-      <div><div class="k">최근 1년 합계</div><div class="v num">${won(D.yearSum)}</div><div class="tiny muted num">종가 대비 연 ${(D.yieldPct*100).toFixed(2)}%</div></div>
+      <div><div class="k">최근 1년 합계</div><div class="v num">${won(D.yearSum)}</div>${okn(D.yieldPct)?`<div class="tiny muted num">종가 대비 연 ${(D.yieldPct*100).toFixed(2)}%</div>`:""}</div>
     </div>
     ${D.next?`<div class="callout" style="margin-top:10px">
       <div>다음 기준일 <b class="num">${D.next.rec.slice(0,4)}년 ${fmtD(D.next.rec)}</b> <span class="tiny muted">예시 · </span><span class="tiny pt">${dayDiff(today, D.next.rec)}일 남음</span></div>
@@ -1424,7 +1551,7 @@ function etfBriefHtml(code){
   const up = c.rows.filter(x=>x.r>0).length, down = c.rows.filter(x=>x.r<0).length;
   const cats = catStats(c);
   const maxAbs = Math.max(...cats.map(x=>Math.abs(x.r)), .001);
-  const futName = e.rest ? (e.rest.fut==="nq"?"나스닥100 선물":"S&P500 선물") : "";
+  const futName = e.rest ? `${e.proxy}(같은 지수를 따르는 미국 ETF)` : "";
   const sorted = [...c.rows].sort((a,b)=>Math.abs(b.c)-Math.abs(a.c));
   const lead = sorted.filter((x,i)=> Math.abs(x.r)>=BIG || i<4);
   const others = sorted.filter(x=>!lead.includes(x));
@@ -1441,7 +1568,7 @@ function etfBriefHtml(code){
     </div>
 
     <div class="bsection"><h4>① 밤사이 ${gi.title}</h4>
-      <p>${gi.idx}에 담긴 회사들은 달러 기준으로 <b class="num ${cls(c.usd)}">${spct(c.usd)}</b> 움직였어요.${e.rest?` ${futName}은 <b class="num ${cls(FUT[e.rest.fut])}">${spct(FUT[e.rest.fut])}</b>였어요.`:""}</p>
+      <p>${gi.idx}에 담긴 회사들은 달러 기준으로 <b class="num ${cls(c.usd)}">${spct(c.usd)}</b> 움직였어요.${e.rest?` 지수 전체를 따르는 ${futName}의 움직임은 <b class="num ${cls(e.proxyR)}">${spct(e.proxyR)}</b>였어요.`:""}</p>
       <p>개별로 계산한 ${c.rows.length}개 회사 중 <b class="up">${up}개가 오르고</b> <b class="down">${down}개가 내렸어요</b>.</p>
       ${cats.length>1?`<p>분야별로 보면 가장 강한 곳은 <b>${cats[0].k}</b>(<span class="num ${cls(cats[0].r)}">${spct(cats[0].r)}</span>), 가장 약한 곳은 <b>${cats[cats.length-1].k}</b>(<span class="num ${cls(cats[cats.length-1].r)}">${spct(cats[cats.length-1].r)}</span>)이었어요.</p>
       ${cats.map(g=>`<div class="secbar"><span>${g.k}</span><span class="track"><span class="fill" style="${g.r>=0?"left:50%":"right:50%"};width:${(Math.abs(g.r)/maxAbs*50).toFixed(1)}%;background:var(--${g.r>=0?"up":"down"})"></span></span><span class="num ${cls(g.r)}" style="text-align:right">${spct(g.r)}</span></div>`).join("")}`:""}
@@ -1454,7 +1581,7 @@ function etfBriefHtml(code){
       <div class="small muted">ETF를 많이 움직인 회사부터 보여줘요.</div>
       ${lead.map(x=>coBlock(x, code, true)).join("")}
       ${others.length?`<details class="rest"><summary>나머지 ${others.length}개 회사 보기</summary>${others.map(x=>coBlock(x, code, false)).join("")}</details>`:""}
-      ${e.rest?`<p class="small muted" style="margin-top:10px">나머지 ${e.rest.n}개 회사(비중 ${(e.rest.w*100).toFixed(0)}%)는 하나씩 계산하지 않고 ${futName} ${spct(FUT[e.rest.fut])}로 반영했어요.</p>`:""}
+      ${e.rest?`<p class="small muted" style="margin-top:10px">나머지 ${e.rest.n}개 회사(비중 ${(e.rest.w*100).toFixed(0)}%)는 하나씩 계산하지 않고, 합계가 ${futName} 움직임(${spct(e.proxyR)})과 같아지도록 채웠어요.</p>`:""}
     </div>
 
     ${evs.length?`<div class="bsection"><h4>③ 다가오는 일정</h4>${evs.map(v=>evRow(v,false)).join("")}</div>`:""}
@@ -1716,7 +1843,14 @@ const IND = {
   wti:{g:"mkt", name:"WTI 유가", full:"서부 텍사스산 원유 (1배럴)", unit:"달러", now:72.4, chg:-0.8, spark:[70.1,71.5,73.2,72.8,74.0,73.1,72.5,71.9,73.6,73.2,72.4],
     one:"미국 원유 가격의 기준이에요. 휘발유·항공료·운송비를 거쳐 물가에 바로 영향을 줘요.",
     read:"많이 오르면 물가가 다시 오를 수 있다는 걱정에 금리 인하 기대가 줄어드는 쪽으로 해석되기도 해요."}
-};
+};/* 원/달러는 ETF 계산과 같은 값을 써요 */
+function syncFxInd(){ const v = IND.usdkrw; if(!v || !okn(FX.now)) return;
+  const h = Object.entries((LIVE.fx||{}).hist||{}).sort((a,b)=>a[0]<b[0]?-1:1).map(x=>x[1]);
+  v.now = +FX.now.toFixed(1);
+  if(h.length>=2){ v.spark = h.slice(-11).map(x=>+x.toFixed(1)); v.spark[v.spark.length-1] = v.now; v.chg = +(v.now - v.spark[v.spark.length-2]).toFixed(1); }
+}
+syncFxInd();
+
 IND.vix.cc = "us"; IND.us10y.cc = "us";
 /* 구간 해석·연결 고리·다음에 볼 것 (일반적인 해석, 투자 권유 아님) */
 const INF = Infinity;
@@ -4003,11 +4137,10 @@ function runChecks(){
     ETFS.forEach(e=>{
       tick();
       if(seen.has(e.code)) add("err","ETF",`${e.name}: 종목코드 ${e.code}가 두 번 들어 있어요.`); seen.add(e.code);
-      if(!(e.nav>0 && e.close>0)){ add("err","ETF",`${e.name}: NAV나 종가가 비어 있거나 0이에요.`, "etf:"+e.code); return; }
+      if(!(e.nav>0)) add("warn","ETF",`${e.name}: ${LV.kr?mdTxt(LV.kr)+" ":""}기준가가 아직 공개 전이라 원화 가격은 '확인 중'으로 보여요. 등락률은 계산돼요.`);
       const gap = e.close/e.nav - 1;
-      if(Math.abs(gap) > 0.03) add("warn","ETF",`${e.name}: 종가와 NAV 차이가 ${pctx(gap)}예요. 보통 1% 안쪽이라 값이 맞는지 확인이 필요해요.`);
-      if(!fin(e.prem)) add("err","ETF",`${e.name}: 장중 괴리율이 숫자가 아니에요.`);
-      else if(Math.abs(e.prem) > 0.02) add("warn","ETF",`${e.name}: 장중 괴리율이 ${pctx(e.prem)}예요. LP가 있는 ETF는 보통 1% 안쪽이라 확인이 필요해요.`);
+      if(fin(gap) && Math.abs(gap) > 0.03) add("warn","ETF",`${e.name}: 종가와 NAV 차이가 ${pctx(gap)}예요. 보통 1% 안쪽이라 값이 맞는지 확인이 필요해요.`);
+      if(fin(e.prem) && Math.abs(e.prem) > 0.02) add("warn","ETF",`${e.name}: 장중 괴리율이 ${pctx(e.prem)}예요. LP가 있는 ETF는 보통 1% 안쪽이라 확인이 필요해요.`);
       const missing = e.h.filter(([t])=>!STOCKS[t]).map(([t])=>t);
       if(missing.length) add("err","ETF",`${e.name}: 구성종목 ${missing.join(", ")}의 시세가 없어요.`, "etf:"+e.code);
       const noInfo = e.h.filter(([t])=>!CO[t]).map(([t])=>t);
@@ -4016,13 +4149,15 @@ function runChecks(){
       if(Math.abs(wsum-1) > 0.03) add("warn","ETF",`${e.name}: 비중을 모두 더하면 ${(wsum*100).toFixed(1)}%예요. 100%에 가까워야 해요.`);
       if(e.rest && e.rest.n && e.rest.n < e.h.length) add("warn","ETF",`${e.name}: 전체 종목 수(${e.rest.n})가 표시한 종목 수(${e.h.length})보다 적어요.`);
       const c = calc(e);
-      if(!fin(c.total) || !fin(c.est)) add("err","ETF",`${e.name}: 추정 계산 결과가 숫자가 아니에요.`, "etf:"+e.code);
+      if(!fin(c.total)) add("err","ETF",`${e.name}: 추정 계산 결과가 숫자가 아니에요.`, "etf:"+e.code);
       else if(Math.abs(c.total) > 0.15) add("warn","ETF",`${e.name}: 하룻밤 추정 변화가 ${pctx(c.total)}예요. 너무 커서 입력값 확인이 필요해요.`);
     });
   });
   guard("시세", ()=>{
+    const used = new Set(ETFS.flatMap(e=>e.h.map(([t])=>t)));
     Object.entries(STOCKS).forEach(([t,[name,price,r]])=>{
       tick();
+      if(!used.has(t) && !okn(price)) return;  // ETF에 안 담긴 회사는 시세가 없을 수 있어요
       if(!(price>0)) add("err","시세",`${name}(${t}): 가격이 비어 있거나 0이에요.`, "stock:"+t);
       if(!fin(r)) add("err","시세",`${name}(${t}): 등락률이 숫자가 아니에요.`, "stock:"+t);
       else if(Math.abs(r) > 0.3) add("warn","시세",`${name}(${t}): 하루 등락률이 ${pctx(r)}예요. 실제로 크게 움직였는지 확인이 필요해요.`);
@@ -4030,7 +4165,7 @@ function runChecks(){
     tick();
     if(!(FX.now>0 && FX.base>0)) add("err","환율","원/달러 환율이 비어 있어요.", "fx");
     else if(Math.abs(FX.now/FX.base-1) > 0.03) add("warn","환율",`원/달러 환율이 기준보다 ${pctx(FX.now/FX.base-1)} 움직였어요. 하루 변동으로는 커서 확인이 필요해요.`);
-    Object.entries(FUT).forEach(([k,v])=>{ tick(); if(!fin(v) || Math.abs(v) > 0.1) add("warn","선물",`${k==="nq"?"나스닥100":"S&P500"} 선물 변화 ${fin(v)?pctx(v):"값 없음"}가 이상해요.`); });
+    Object.entries(FUT).forEach(([k,v])=>{ tick(); if(!fin(v) || Math.abs(v) > 0.1) add("warn","미국 지수",`${({nq:"나스닥100(QQQ)",es:"S&P500(SPY)",sox:"반도체(SOXQ)"})[k]||k} 변화 ${fin(v)?pctx(v):"값 없음"}가 이상해요.`); });
     tick();
     if(IND.usdkrw && Math.abs(IND.usdkrw.now - FX.now) > 0.05) add("warn","환율",`매크로 지표의 원/달러(${IND.usdkrw.now})와 ETF 계산에 쓰는 환율(${FX.now})이 달라요.`);
   });
@@ -4357,6 +4492,8 @@ document.addEventListener("click", ev=>{
 document.getElementById("simSel").addEventListener("change", ev=>{ simHM = ev.target.value; render(); });
 render();
 setInterval(()=>{ if(!overlay.classList.contains("open")) renderTop(); }, 20000);
+/* 자동 화면 검사(Keene)는 인터넷 없이 돌아서 연결 시도를 건너뛰어요 */
+if(!navigator.webdriver){ pullLive(); setInterval(()=>{ if(document.visibilityState!=="hidden") pullLive(); }, 60000); }
 </script>
 </body>
 </html>
