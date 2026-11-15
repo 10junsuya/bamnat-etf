@@ -142,6 +142,40 @@ details.cat:not([open]) summary b::after{content:" ▾"; color:var(--muted); fon
 .hit{font-size:12px; color:var(--accent); margin-top:2px}
 .ev{display:grid; grid-template-columns:48px 34px 1fr; gap:10px; align-items:start; padding:10px 0; border-top:1px solid var(--line)}
 .ev:first-of-type{border-top:0}
+
+/* 제품 */
+.art{width:100%; height:auto; display:block; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round}
+.art .a{stroke:var(--pt)} .art .f{fill:currentColor; stroke:none}
+.pcat{display:flex; gap:6px; overflow-x:auto; padding-bottom:2px; scrollbar-width:none}
+.pcat::-webkit-scrollbar{display:none}
+.pc{flex:none; border:1px solid var(--line); background:none; color:var(--muted); border-radius:999px; padding:6px 12px; font:inherit; font-size:13px; cursor:pointer; min-height:32px}
+.pc.on{background:var(--ink); color:var(--bg); border-color:var(--ink); font-weight:600}
+.pgroup{margin-top:10px}
+.pitem{border-top:1px solid var(--line)} .pitem:first-child{border-top:0}
+.phead{display:grid; grid-template-columns:64px 1fr 14px; gap:12px; align-items:center; width:100%; padding:12px 0; background:none; border:0; text-align:left; font:inherit; color:var(--ink); cursor:pointer}
+.pthumb{background:var(--surface-2); border-radius:12px; padding:6px; color:var(--ink)}
+.ptext b{display:block; font-size:15px} .ptext small{display:block; font-size:12px; color:var(--muted); margin-top:1px} .pone{display:block; font-size:13px; color:var(--muted); margin-top:4px; line-height:1.45}
+.pchev{color:var(--muted); font-size:18px; transition:transform .2s} .pitem.open .pchev{transform:rotate(90deg)}
+.pbody{padding:0 0 16px}
+.pfig{position:relative; background:var(--surface-2); border-radius:16px; padding:18px 28px; color:var(--ink)}
+.pfig .art{max-width:240px; margin:0 auto; stroke-width:1.2}
+.ptag{position:absolute; left:12px; top:12px; font-size:11px; font-weight:600; color:var(--pt); background:var(--bg); padding:3px 8px; border-radius:999px}
+.pspecs{margin-top:10px} .pspecs>div{display:flex; justify-content:space-between; gap:14px; padding:8px 2px; border-bottom:1px solid var(--line); font-size:13px}
+.pspecs span{color:var(--muted); flex:none} .pspecs b{font-weight:600; text-align:right; overflow-wrap:anywhere}
+.pbody p{font-size:14px; line-height:1.6; margin:10px 2px 0}
+.pgen{margin-top:18px; padding:14px; border-radius:16px; background:var(--surface-2)}
+.pgen h4{margin:0 0 12px; font-size:14px}
+.pline{display:flex; overflow-x:auto; padding-bottom:4px; scrollbar-width:none} .pline::-webkit-scrollbar{display:none}
+.pstep{flex:none; width:84px; position:relative; padding-top:16px}
+.pstep::before{content:""; position:absolute; left:0; right:0; top:5px; border-top:1px solid var(--line)}
+.pstep:first-child::before{left:6px} .pstep:last-child::before{right:auto; width:6px}
+.pstep i{position:absolute; left:0; top:0; width:11px; height:11px; border-radius:50%; background:var(--muted)}
+.pstep.now i{background:var(--pt); box-shadow:0 0 0 4px color-mix(in srgb, var(--pt) 25%, transparent)} .pstep.plan i{background:var(--surface-2); border:1.5px dashed var(--muted)}
+.pstep b{display:block; font-size:12px; line-height:1.3; padding-right:8px} .pstep span{display:block; font-size:11px; color:var(--muted); margin-top:2px}
+.pstep.now b{color:var(--pt)} .pstep.plan b{color:var(--muted); font-weight:500}
+.psrc{display:flex; flex-direction:column; margin-top:12px} .psrc a{display:flex; align-items:center; min-height:28px}
+.does>div{padding:9px 0; border-top:1px solid var(--line); font-size:14px; line-height:1.5} .does>div:first-child{border-top:0}
+.does b{display:block; font-size:14px} .does span{color:var(--muted)}
 .ev .d{font-weight:600; font-size:13px}
 .evbadge{display:inline-block; vertical-align:middle; font-size:12px; font-weight:700; padding:2px 8px; border-radius:999px; color:var(--pt); box-shadow:inset 0 0 0 1px var(--pt)}
 .evbadge.done{color:var(--muted); box-shadow:inset 0 0 0 1px var(--line)}
@@ -2396,14 +2430,191 @@ function closeSheet(){ overlay.classList.remove("open"); if(lastFocus) lastFocus
 overlay.addEventListener("click", ev=>{ if(ev.target===overlay || ev.target.closest("[data-close]")) closeSheet(); });
 document.addEventListener("keydown", ev=>{ if(ev.key==="Escape" && overlay.classList.contains("open")) closeSheet();
   const t = ev.target.closest && ev.target.closest("[data-evt]"); if(t && (ev.key==="Enter" || ev.key===" ")){ ev.preventDefault(); eventSheet(t.dataset.evt); } });
+/* 제품 선 그림: 실사 사진·이모지 대신 앱 톤에 맞춘 단색 선화. 강조 부분만 금색(--pt) */
+const ART = {
+  chip:`<rect x="34" y="14" width="52" height="52" rx="4"/><rect x="46" y="26" width="28" height="28" rx="2" class="a"/><path d="M40 10v4M50 10v4M60 10v4M70 10v4M80 10v4M40 66v4M50 66v4M60 66v4M70 66v4M80 66v4M30 20h4M30 30h4M30 40h4M30 50h4M30 60h4M86 20h4M86 30h4M86 40h4M86 50h4M86 60h4"/>`,
+  chip2:`<rect x="22" y="16" width="76" height="48" rx="4"/><rect x="30" y="24" width="26" height="32" rx="2" class="a"/><rect x="64" y="24" width="26" height="32" rx="2" class="a"/><path d="M30 64v6M44 64v6M58 64v6M72 64v6M86 64v6"/>`,
+  chip4:`<rect x="24" y="10" width="72" height="60" rx="4"/><rect x="31" y="17" width="27" height="20" rx="2" class="a"/><rect x="62" y="17" width="27" height="20" rx="2" class="a"/><rect x="31" y="43" width="27" height="20" rx="2" class="a"/><rect x="62" y="43" width="27" height="20" rx="2" class="a"/>`,
+  rack:`<rect x="40" y="6" width="40" height="68" rx="3"/><path d="M44 14h32M44 21h32M44 28h32M44 35h32M44 42h32M44 49h32M44 56h32M44 63h32"/><circle cx="74" cy="14" r="1.4" class="f"/><circle cx="74" cy="35" r="1.4" class="f"/><circle cx="74" cy="56" r="1.4" class="f"/><path d="M36 74h48"/>`,
+  tower:`<rect x="44" y="8" width="32" height="62" rx="4"/><path d="M50 18h20M50 24h20"/><circle cx="60" cy="50" r="9" class="a"/><path d="M48 74h24"/>`,
+  cpu:`<rect x="30" y="10" width="60" height="60" rx="5"/><g class="a"><rect x="40" y="20" width="10" height="10" rx="1"/><rect x="55" y="20" width="10" height="10" rx="1"/><rect x="70" y="20" width="10" height="10" rx="1"/><rect x="40" y="35" width="10" height="10" rx="1"/><rect x="55" y="35" width="10" height="10" rx="1"/><rect x="70" y="35" width="10" height="10" rx="1"/><rect x="40" y="50" width="10" height="10" rx="1"/><rect x="55" y="50" width="10" height="10" rx="1"/><rect x="70" y="50" width="10" height="10" rx="1"/></g>`,
+  lpu:`<rect x="20" y="22" width="80" height="36" rx="4"/><path d="M28 40h64" class="a"/><path d="M28 32h10M28 48h10M82 32h10M82 48h10"/><path d="M50 30l10 10-10 10" class="a"/>`,
+  switch:`<rect x="14" y="28" width="92" height="24" rx="3"/><g class="a"><rect x="20" y="35" width="8" height="10" rx="1"/><rect x="31" y="35" width="8" height="10" rx="1"/><rect x="42" y="35" width="8" height="10" rx="1"/><rect x="53" y="35" width="8" height="10" rx="1"/></g><path d="M70 40h28M84 33v14"/>`,
+  nic:`<path d="M18 26h76v28H18z"/><path d="M26 54v8h40v-8"/><rect x="28" y="32" width="22" height="16" rx="2" class="a"/><path d="M94 30h8v20h-8M60 34h24M60 40h24M60 46h16"/>`,
+  card:`<rect x="12" y="22" width="96" height="36" rx="5"/><circle cx="40" cy="40" r="12"/><circle cx="76" cy="40" r="12"/><circle cx="40" cy="40" r="3" class="a"/><circle cx="76" cy="40" r="3" class="a"/><path d="M20 58v6h30v-6"/>`,
+  laptop:`<rect x="28" y="14" width="64" height="40" rx="3"/><rect x="34" y="20" width="52" height="28" rx="1" class="a"/><path d="M18 60h84l-6-6H24z"/>`,
+  car:`<path d="M14 54h92v-8l-12-4-14-12H44L32 42l-14 4z"/><circle cx="34" cy="56" r="7"/><circle cx="86" cy="56" r="7"/><path d="M60 22v-8M54 14h12" class="a"/><path d="M48 32h28"/>`,
+  robot:`<rect x="50" y="8" width="20" height="16" rx="4"/><circle cx="56" cy="16" r="1.6" class="f"/><circle cx="64" cy="16" r="1.6" class="f"/><rect x="46" y="28" width="28" height="24" rx="4" class="a"/><path d="M46 32l-10 14M74 32l10 14M54 52v20M66 52v20M50 72h8M62 72h8"/>`,
+  code:`<rect x="18" y="14" width="84" height="52" rx="4"/><path d="M18 24h84"/><path d="M44 36l-10 8 10 8M76 36l10 8-10 8" class="a"/><path d="M64 34l-8 20"/>`,
+  layers:`<path d="M60 14l40 14-40 14-40-14z" class="a"/><path d="M20 40l40 14 40-14M20 52l40 14 40-14"/>`,
+  electron:`<path d="M60 4c4 6 5 12 5 18v38h-10V22c0-6 1-12 5-18z" class="a"/><path d="M55 30h10M55 46h10"/><path d="M55 60l-3 10h16l-3-10"/><path d="M58 70v6M62 70v6"/>`,
+  haste:`<path d="M60 10c4 6 5 12 5 18v32h-10V28c0-6 1-12 5-18z" class="a"/><path d="M55 34h10"/><path d="M55 60l-3 10h16l-3-10"/><path d="M78 20c8 4 14 10 18 18M90 30l6 8-10 1"/>`,
+  neutron:`<path d="M50 10c3-4 7-6 10-6s7 2 10 6l2 6H48z" class="a"/><path d="M48 16h24l4 46H44z"/><path d="M48 16l-6-6M72 16l6-6" class="a"/><path d="M44 62l-8 12M76 62l8 12M60 62v12"/>`,
+  sat:`<rect x="50" y="30" width="20" height="20" rx="2" class="a"/><rect x="12" y="32" width="30" height="16" rx="1"/><rect x="78" y="32" width="30" height="16" rx="1"/><path d="M42 40h8M70 40h8M22 32v16M32 32v16M88 32v16M98 32v16M60 30v-8M56 22h8"/>`,
+  constel:`<path d="M10 70c20-34 80-34 100 0"/><circle cx="26" cy="38" r="3" class="f"/><circle cx="48" cy="26" r="3" class="f"/><circle cx="72" cy="26" r="3" class="f"/><circle cx="94" cy="38" r="3" class="f"/><path d="M26 38L48 26 72 26 94 38" class="a" stroke-dasharray="3 3"/>`,
+  solar:`<rect x="20" y="16" width="80" height="48" rx="2"/><path d="M40 16v48M60 16v48M80 16v48M20 32h80M20 48h80"/><path d="M90 6l-6 8M98 12l-8 4M80 4l-2 8" class="a"/>`,
+  wheel:`<circle cx="60" cy="40" r="26"/><circle cx="60" cy="40" r="16" class="a"/><circle cx="60" cy="40" r="4" class="f"/><path d="M92 26c4 8 4 20 0 28M88 50l4 4 4-4"/>`,
+  star:`<rect x="30" y="26" width="34" height="34" rx="4"/><path d="M64 34l18-8v34l-18-8"/><path d="M98 14l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" class="a"/>`,
+  ring:`<ellipse cx="60" cy="40" rx="40" ry="14"/><ellipse cx="60" cy="40" rx="28" ry="8" class="a"/><path d="M20 40v8c0 8 18 14 40 14s40-6 40-14v-8"/>`,
+  memory:`<rect x="14" y="26" width="92" height="28" rx="2"/><g class="a"><rect x="22" y="32" width="12" height="16" rx="1"/><rect x="40" y="32" width="12" height="16" rx="1"/><rect x="58" y="32" width="12" height="16" rx="1"/><rect x="76" y="32" width="12" height="16" rx="1"/></g><path d="M20 54v6M28 54v6M36 54v6M44 54v6M52 54v6M60 54v6M68 54v6M76 54v6M84 54v6M92 54v6"/>`
+};
+const artSvg = (k, cls="") => `<svg class="art ${cls}" viewBox="0 0 120 80" aria-hidden="true">${ART[k]||ART.chip}</svg>`;
+
+/* 회사별 제품 (공식 발표·연간 보고서 기준 정리). asof 이후 바뀐 내용은 주간 AI 검토가 확인해요 */
+const PRODUCTS = {
+  NVDA:{asof:"2026-11-15",
+    cats:[
+      {k:"AI 데이터센터", items:[
+        {name:"베라 루빈", en:"Vera Rubin", art:"rack", tag:"2026 하반기 출하",
+          one:"루빈 GPU와 베라 CPU를 한 묶음으로 만든 차세대 AI 서버 플랫폼",
+          specs:[["메모리","HBM4"],["랙 하나 성능","블랙웰 울트라 랙의 약 3.3배"],["구성","GPU·CPU·네트워크 칩 한 세트"]],
+          body:"엔비디아는 이제 칩 하나가 아니라 GPU·CPU·네트워크 장비를 묶은 '랙(서버 장) 단위'로 팔아요. 베라 루빈은 2026년 하반기부터 본격 출하되는 주력 신제품이에요."},
+        {name:"블랙웰 · 블랙웰 울트라", en:"Blackwell · B200 · B300", art:"chip2", tag:"현재 주력",
+          one:"지금 데이터센터 매출 대부분을 만드는 AI 가속기",
+          specs:[["출시","2024 (울트라 2025)"],["대표 제품","B200, GB200, B300"],["대표 시스템","GB200 NVL72 (GPU 72개 한 랙)"]],
+          body:"칩 두 개를 하나처럼 붙인 설계예요. 울트라 버전은 계산 속도보다 메모리를 크게 늘려서, 큰 AI 모델을 돌리기 좋게 만들었어요."},
+        {name:"루빈 울트라", en:"Rubin Ultra", art:"chip4", tag:"2027 예정",
+          one:"칩 4개를 한 패키지에 넣는 다음 세대 가속기",
+          specs:[["메모리","HBM4E 1TB"],["시스템","카이버 랙 (GPU 144개)"]],
+          body:"루빈의 칩 수를 두 배로 늘린 버전이에요. 메모리가 크게 늘어 더 큰 AI 모델을 한 번에 돌릴 수 있어요."},
+        {name:"그록 LPU 추론 가속기", en:"Groq 3 LPX", art:"lpu", tag:"양산 중",
+          one:"AI가 답을 만드는 '추론'만 빠르게 처리하는 전용 칩",
+          specs:[["용도","대화형 AI 응답 속도"],["상태","2026년 양산 시작"]],
+          body:"AI를 학습시키는 일과 답을 만드는 일은 필요한 칩 성격이 달라요. 그록(Groq)의 LPU 기술을 바탕으로, 응답 속도가 중요한 서비스용 칩을 따로 내놨어요."},
+        {name:"DGX 스테이션", en:"DGX Station", art:"tower", tag:"책상 위 AI 컴퓨터",
+          one:"데이터센터급 AI 칩을 넣은 책상용 컴퓨터",
+          specs:[["대상","AI 개발자·연구실"],["특징","윈도우용 버전도 출시"]],
+          body:"회사나 연구실이 AI 에이전트를 직접 개발·실행할 수 있게 만든 고성능 워크스테이션이에요."}]},
+      {k:"CPU·네트워크", items:[
+        {name:"베라 CPU", en:"Vera", art:"cpu", tag:"2026",
+          one:"GPU 옆에서 일을 나눠 맡는 엔비디아의 서버용 CPU",
+          specs:[["코어","맞춤형 Arm 코어 88개"],["GPU 연결","초당 1.8TB"],["이전 세대","그레이스 CPU"]],
+          body:"AI 에이전트처럼 여러 단계를 처리하는 작업이 늘면서 CPU 역할이 다시 커졌어요. 엔비디아는 'AI 에이전트용으로 만든 첫 CPU'라고 소개해요."},
+        {name:"NV링크", en:"NVLink · NVLink Switch", art:"switch", tag:"6세대 (2026)",
+          one:"GPU 수십 개를 하나의 거대한 GPU처럼 묶는 연결 기술",
+          specs:[["역할","랙 안 GPU끼리 초고속 연결"],["다음","NV링크 7 (2027)"]],
+          body:"AI 모델이 너무 커서 GPU 하나에 안 들어가요. NV링크가 GPU끼리 데이터를 빠르게 주고받게 해서, 경쟁사가 따라오기 어려운 강점이 됐어요."},
+        {name:"스펙트럼 이더넷 스위치", en:"Spectrum-X · Spectrum-6", art:"switch", tag:"광 연결 지원",
+          one:"AI 서버 수천 대를 잇는 데이터센터 네트워크 장비",
+          specs:[["역할","랙과 랙 사이 연결"],["특징","빛(광)으로 바로 연결하는 방식 지원"]],
+          body:"랙 안은 NV링크, 랙 사이는 스펙트럼 스위치가 맡아요. 네트워크 매출도 데이터센터와 함께 빠르게 커지고 있어요."},
+        {name:"커넥트X · 블루필드", en:"ConnectX-9 · BlueField-4", art:"nic", tag:"서버 네트워크 카드",
+          one:"서버마다 꽂는 네트워크 카드와 데이터 처리 칩",
+          specs:[["커넥트X","서버의 통신 담당"],["블루필드","저장·보안 처리 담당"]],
+          body:"GPU가 계산에만 집중하도록 통신·저장·보안 일을 대신 처리해 줘요."}]},
+      {k:"PC·게이밍", items:[
+        {name:"지포스 RTX 50 시리즈", en:"GeForce RTX 5090 · 5080 · 5070", art:"card", tag:"2025.1 출시",
+          one:"게임·영상 작업용 그래픽카드",
+          specs:[["설계","블랙웰"],["라인업","5090, 5080, 5070 Ti, 5070, 5060 Ti, 5060, 5050"],["특징","GDDR7 메모리 첫 탑재, DLSS 4"]],
+          body:"AI로 화면 프레임을 만들어 게임 속도를 높이는 DLSS 기술이 핵심이에요. 회사 전체 매출에서 게임 비중은 작아졌지만 브랜드의 출발점이에요."},
+        {name:"RTX 스파크", en:"RTX Spark", art:"laptop", tag:"마이크로소프트와 협력",
+          one:"윈도우 PC용으로 만든 1페타플롭급 슈퍼칩",
+          specs:[["성능","1페타플롭"],["특징","CUDA 그대로 사용"]],
+          body:"마이크로소프트와 함께 PC 안에서 AI를 직접 돌리는 칩을 만들었어요. 엔비디아가 PC 칩 시장으로 넓히는 시도예요."}]},
+      {k:"자동차·로봇", items:[
+        {name:"드라이브 하이페리온", en:"DRIVE Hyperion", art:"car", tag:"로보택시용",
+          one:"자율주행차에 들어가는 컴퓨터·센서·소프트웨어 묶음",
+          specs:[["협력사","폭스콘, 빈패스트, 우버 등"],["AI 모델","알파마요 2"]],
+          body:"자동차 회사가 자율주행차를 빨리 만들 수 있게 표준 설계를 통째로 제공해요."},
+        {name:"젯슨 토르 · 아이작 그루트", en:"Jetson Thor · Isaac GR00T", art:"robot", tag:"휴머노이드 로봇",
+          one:"로봇 몸에 들어가는 AI 컴퓨터와 휴머노이드 로봇 설계도",
+          specs:[["젯슨 토르","로봇용 AI 컴퓨터"],["그루트","공개 휴머노이드 기준 설계"]],
+          body:"현실 세계에서 움직이는 '피지컬 AI'를 다음 성장 시장으로 보고 있어요. 이 부문 매출은 '엣지 컴퓨팅'으로 따로 집계돼요."}]},
+      {k:"소프트웨어", items:[
+        {name:"쿠다", en:"CUDA", art:"code", tag:"2006년부터",
+          one:"엔비디아 GPU로 프로그램을 짜는 개발 도구",
+          specs:[["역할","개발자 생태계"],["효과","다른 칩으로 옮기기 어려움"]],
+          body:"전 세계 AI 개발자 대부분이 쿠다로 코드를 짜요. 경쟁사 칩이 성능이 비슷해도 쉽게 바꾸지 못하는 이유예요."},
+        {name:"AI 모델 · 플랫폼", en:"Nemotron · Cosmos · DSX", art:"layers", tag:"공개 모델",
+          one:"엔비디아가 직접 만들어 공개하는 AI 모델과 AI 공장 설계 도구",
+          specs:[["네모트론","언어 AI 모델"],["코스모스 3","로봇·자율주행용 모델"],["DSX","AI 데이터센터 설계 플랫폼"]],
+          body:"모델과 설계도를 무료로 풀어 엔비디아 칩을 쓰는 사람을 늘리는 전략이에요."}]}
+    ],
+    gen:{title:"데이터센터 GPU 세대", note:"매년 새 세대를 내는 계획이에요. 2027년 이후는 회사가 발표한 로드맵이에요.",
+      steps:[["파스칼","2016"],["볼타","2017"],["앰페어","2020"],["호퍼","2022"],["블랙웰","2024"],["블랙웰 울트라","2025"],["루빈","2026","now"],["루빈 울트라","2027","plan"],["파인먼","2028","plan"]]},
+    src:[["엔비디아 2분기 실적 발표 (제품 소식 포함)","https://www.earningswhispers.com/epsdetails/nvda"],["GTC 2026 로드맵 (Tom's Hardware)","https://www.tomshardware.com/pc-components/gpus/nvidia-updates-data-center-roadmap-with-rosa-cpu-and-stacked-feynman-gpus-optical-nvlink-groq-lpus-with-nvfp4-and-nvlink-also-on-deck"],["엔비디아 데이터센터 로드맵 (Next Platform)","https://www.nextplatform.com/compute/2026/03/19/driving-down-the-ai-system-roadmap-with-nvidia/5210195"],["지포스 RTX 50 시리즈 (엔비디아)","https://www.nvidia.com/en-au/geforce/products/"]]},
+  RKLB:{asof:"2026-11-15",
+    cats:[
+      {k:"발사체", items:[
+        {name:"일렉트론", en:"Electron", art:"electron", tag:"100회 발사",
+          one:"작은 위성 하나를 원하는 궤도에 바로 올려 주는 소형 로켓",
+          specs:[["높이 · 지름","18m · 1.2m"],["실을 수 있는 무게","저궤도 300kg"],["엔진","러더퍼드 9+1개"],["누적 발사","100회 (2026.11)"]],
+          body:"큰 로켓에 여러 위성을 함께 싣는 방식과 달리, 고객 한 곳을 위해 시간과 궤도를 맞춰 쏴요. 엔진은 3D 프린터로 찍어 내고, 연료 펌프를 배터리 전기 모터로 돌리는 세계 최초 방식이에요."},
+        {name:"헤이스트", en:"HASTE", art:"haste", tag:"방산 시험용",
+          one:"일렉트론을 바꿔 만든 극초음속 시험 로켓",
+          specs:[["궤도","궤도에 오르지 않는 준궤도 비행"],["고객","미국 정부·동맹국"]],
+          body:"음속의 5배 이상으로 나는 극초음속 무기·기술을 시험하는 데 쓰여요. 같은 로켓을 방산 시장에도 파는 구조예요."},
+        {name:"뉴트론", en:"Neutron", art:"neutron", tag:"2027 첫 발사 예정",
+          one:"위성 수십 기를 한 번에 올릴 수 있는 재사용 중형 로켓",
+          specs:[["높이 · 지름","약 43m · 7m"],["실을 수 있는 무게","저궤도 13,000kg (재사용 시)"],["엔진","아르키메데스 9+1개 (메탄)"],["발사장","미국 버지니아 LC-3"]],
+          body:"로켓 끝의 덮개(페어링)가 떨어지지 않고 입을 벌리듯 열렸다 닫히는 '헝그리 히포' 설계가 특징이에요. 1단이 바다 위 착륙 플랫폼에 내려와 다시 쓰여요. 첫 발사는 2026년에서 2027년으로 미뤄졌어요."}]},
+      {k:"우주선", items:[
+        {name:"포톤 위성 본체", en:"Photon", art:"sat", tag:"위성 플랫폼",
+          one:"고객 장비만 얹으면 바로 위성이 되는 위성 몸체",
+          specs:[["용도","관측, 과학 연구, 달·행성 탐사"],["대표 사례","NASA 화성 탐사선 에스카페이드"]],
+          body:"전원·통신·자세 제어가 다 들어 있는 본체를 팔아요. 로켓과 위성을 한 회사에서 사면 일정을 맞추기 쉬워요."},
+        {name:"군집 위성 제작", en:"Constellations", art:"constel", tag:"국방 위성망",
+          one:"미국 국방 위성망 등에 들어갈 위성을 수십 기 단위로 생산",
+          specs:[["주요 고객","미 우주개발청(SDA)"],["의미","여러 해에 걸친 큰 계약"]],
+          body:"위성을 하나씩이 아니라 공장처럼 대량으로 만드는 사업이에요. 발사보다 계약 규모가 커서 회사 매출 구조를 바꾸고 있어요."}]},
+      {k:"위성 부품", items:[
+        {name:"우주용 태양전지", en:"Solar cells · panels", art:"solar", tag:"고효율",
+          one:"위성에 전기를 공급하는 태양전지와 패널",
+          specs:[["범위","저궤도부터 정지궤도·심우주까지"],["출처","솔에어로 인수 (2022)"]],
+          body:"위성의 수명과 성능을 좌우하는 핵심 부품이에요. 경쟁 로켓 회사에 위성을 맡기는 고객에게도 팔 수 있어요."},
+        {name:"반작용 휠", en:"Reaction wheels", art:"wheel", tag:"연 2,000개 생산",
+          one:"바퀴를 돌려 위성 방향을 바꾸는 자세 제어 장치",
+          specs:[["원리","바퀴 회전 반작용으로 방향 전환"],["보통 쓰는 수","위성당 3~4개"]],
+          body:"위성 카메라가 정확한 곳을 보려면 꼭 필요해요. 한때 공급이 부족했던 부품이라 직접 대량 생산 체계를 갖췄어요."},
+        {name:"스타 트래커", en:"Star trackers", art:"star", tag:"방향 센서",
+          one:"별을 찍어서 위성이 어디를 보고 있는지 알아내는 센서",
+          specs:[["원리","별 사진을 지도와 비교"],["구성","렌즈·센서·처리기 일체형"]],
+          body:"위성의 '눈' 역할을 하는 부품이에요. 반작용 휠과 함께 위성 자세 제어를 이뤄요."},
+        {name:"분리 장치", en:"Separation systems", art:"ring", tag:"라이트밴드",
+          one:"로켓에서 위성을 정확히 떼어 내는 고리 모양 장치",
+          specs:[["역할","궤도에서 위성 분리"],["사용","자사·타사 로켓 모두"]],
+          body:"모든 위성 발사에 하나씩 필요한 부품이라, 로켓을 누가 쏘든 매출이 생겨요."}]}
+    ],
+    gen:{title:"로켓랩 발사 흐름", note:"뉴트론 첫 발사 일정은 회사 발표 기준이에요.",
+      steps:[["일렉트론 첫 상업 발사","2018"],["탑재량 300kg로 확대","2020"],["연 21회 발사","2025"],["100번째 발사","2026","now"],["뉴트론 첫 발사","2027","plan"]]},
+    src:[["일렉트론 사양 (로켓랩)","https://rocketlab.co.nz/launch/electron/"],["뉴트론 '헝그리 히포' 발표 (로켓랩 IR)","https://investors.rocketlabcorp.com/node/11961/pdf"],["뉴트론 첫 발사 연기","https://newspaceeconomy.ca/2026/10/15/why-has-rocket-lab-delayed-neutrons-first-orbital-launch-until-2027/"],["우주 시스템 사업 (연간 보고서)","https://www.sec.gov/Archives/edgar/data/1819994/000162828025034793/rklb2024arsfiling.pdf"],["반작용 휠 공장 (TechCrunch)","https://techcrunch.com/?p=2196689"]]}
+};
+
+function productsHtml(t){
+  const P = PRODUCTS[t]; if(!P) return "";
+  const cats = P.cats;
+  const card = p => `<div class="pitem">
+      <button type="button" class="phead" data-pitem aria-expanded="false">
+        <span class="pthumb">${artSvg(p.art)}</span>
+        <span class="ptext"><b>${p.name}</b>${p.en?`<small>${p.en}</small>`:""}<span class="pone">${p.one}</span></span>
+        <span class="pchev" aria-hidden="true">›</span>
+      </button>
+      <div class="pbody" hidden>
+        <div class="pfig">${artSvg(p.art,"big")}${p.tag?`<span class="ptag">${p.tag}</span>`:""}</div>
+        <div class="pspecs">${p.specs.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join("")}</div>
+        <p>${p.body}</p>
+      </div></div>`;
+  const G = P.gen;
+  const gen = G ? `<div class="pgen"><div class="pgen-h"><h4>${G.title}</h4></div>
+      <div class="pline">${G.steps.map(([n,y,st])=>`<div class="pstep ${st||""}"><i></i><b>${n}</b><span class="num">${y}${st==="now"?" · 지금":st==="plan"?" · 예정":""}</span></div>`).join("")}</div>
+      <p class="tiny muted" style="margin:6px 0 0">${G.note}</p></div>` : "";
+  return `<div class="prod">
+    <h4 style="margin:18px 0 8px">주요 제품</h4>
+    <div class="pcat" role="tablist" aria-label="제품 분류">${cats.map((c,i)=>`<button type="button" class="pc${i===0?" on":""}" role="tab" aria-selected="${i===0}" data-pcat="${i}">${c.k}</button>`).join("")}</div>
+    ${cats.map((c,i)=>`<div class="pgroup" data-pg="${i}"${i?" hidden":""}>${c.items.map(card).join("")}</div>`).join("")}
+    ${gen}
+    <div class="psrc"><span class="tiny muted">${+P.asof.slice(5,7)}/${+P.asof.slice(8,10)} 기준 · 출처</span>${P.src.map(([n,u])=>`<a class="tiny" href="${u}" target="_blank" rel="noopener">${n} ›</a>`).join("")}</div>
+  </div>`;
+}
+
 function stockSheet(t, from){
   const s = STOCKS[t]; const evs = EVENTS.filter(v=>v.t===t);
   const sym = t==="BRKB"?"BRK.B":t; // eslint-disable-line no-shadow
   const co = CO[t];
   const about = co ? `
     <div class="callout" style="font-size:15px;background:var(--accent-soft)">${co.one}</div>
-    <h4 style="margin:16px 0 6px">무슨 일을 하나</h4>
-    <ul style="margin:0;padding-left:18px">${co.does.map(d=>{ const [h,...r]=d.split(": "); return `<li style="margin:4px 0">${r.length?`<b>${h}</b> — ${r.join(": ")}`:h}</li>`; }).join("")}</ul>
+    ${PRODUCTS[t] ? productsHtml(t) : `<h4 style="margin:16px 0 6px">주요 사업</h4>
+    <div class="does">${co.does.map(d=>{ const [h,...r]=d.split(": "); return `<div>${r.length?`<b>${h}</b><span>${r.join(": ")}</span>`:`<span>${h}</span>`}</div>`; }).join("")}</div>`}
     <div class="kv" style="margin-top:12px;grid-template-columns:1fr">
       <div><div class="k">돈은 어디서 버나</div><div class="small">${co.money}</div></div>
       ${co.chain && co.chain!=="—" ? `<div><div class="k">업계에서의 위치</div><div class="small">${co.chain}</div></div>`:""}
@@ -2420,6 +2631,7 @@ function stockSheet(t, from){
     <div class="news"><span class="tag">${sym}</span>[예시] ${s[0]} 관련 뉴스 제목<div class="tiny muted">출처 · 원문 링크</div></div>
     <div class="news"><span class="tag">${sym}</span>[예시] ${s[0]} 관련 두 번째 뉴스 제목<div class="tiny muted">출처 · 원문 링크</div></div>
     `);
+  const now = sheet.querySelector(".pline .now"); if(now) now.parentElement.scrollLeft = Math.max(0, now.offsetLeft - 140);
 }
 
 
@@ -2728,7 +2940,7 @@ function reopenSplash(){
 (function(){ const sp = document.getElementById("splash"); if(sp) bindSplash(sp); })();
 document.addEventListener("click", ev=>{ if(ev.target.closest(".landing.main .mlogo")) reopenSplash(); });
 document.addEventListener("click", ev=>{
-  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill],[data-evt]");
+  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill],[data-evt],[data-pcat],[data-pitem]");
   if(!el || el.closest("#sheet [data-close]")) return;
   if(el.dataset.share!==undefined){ openShare(el.dataset.share || null); return; }
   if(el.dataset.saveimg!==undefined){ saveShare(); return; }
@@ -2774,6 +2986,12 @@ document.addEventListener("click", ev=>{
   if(el.dataset.toggleAll!==undefined){ showAll=!showAll; render(); return; }
   if(el.dataset.stock){ stockSheet(el.dataset.stock, el.dataset.from); return; }
   if(el.dataset.cal){ calFilter = el.dataset.cal; render(); return; }
+  if(el.dataset.pcat!==undefined){ const box = el.closest(".prod"); box.querySelectorAll(".pc").forEach(b=>{ const on = b===el; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); });
+    box.querySelectorAll(".pgroup").forEach(g=>g.hidden = g.dataset.pg!==el.dataset.pcat); return; }
+  if(el.dataset.pitem!==undefined){ const item = el.closest(".pitem"), open = el.getAttribute("aria-expanded")!=="true";
+    el.closest(".prod").querySelectorAll(".pitem").forEach(x=>{ x.querySelector(".pbody").hidden = true; x.querySelector(".phead").setAttribute("aria-expanded","false"); x.classList.remove("open"); });
+    if(open){ item.querySelector(".pbody").hidden = false; el.setAttribute("aria-expanded","true"); item.classList.add("open"); }
+    return; }
   if(el.dataset.evt){ if(ev.target.closest("a")) return; eventSheet(el.dataset.evt); return; }
   if(el.dataset.del!==undefined){ holdings.splice(+el.dataset.del,1); exampleHoldings=false; store.set("holdings",holdings); render(); return; }
 });

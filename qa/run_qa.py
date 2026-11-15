@@ -137,7 +137,14 @@ class QA:
                 page.evaluate("() => { location.hash = 'home'; }"); page.wait_for_timeout(100)
                 for t in meta["stocks"]:
                     page.evaluate(f"() => stockSheet('{t}')"); page.wait_for_timeout(50)
-                    self.probe(page, f"종목 시트 {t} [{theme}]"); self.close_sheet(page)
+                    self.probe(page, f"종목 시트 {t} [{theme}]")
+                    # 제품 카드: 분류마다 첫 카드를 펼쳐서 확인
+                    for ci in range(page.evaluate("() => document.querySelectorAll('#sheet .pc').length")):
+                        page.evaluate(f"() => document.querySelector('#sheet .pc[data-pcat=\"{ci}\"]').click()"); page.wait_for_timeout(30)
+                        for pi in range(page.evaluate("() => document.querySelectorAll('#sheet .pgroup:not([hidden]) .phead').length")):
+                            page.evaluate(f"() => document.querySelectorAll('#sheet .pgroup:not([hidden]) .phead')[{pi}].click()"); page.wait_for_timeout(30)
+                            self.probe(page, f"제품 카드 {t} 분류{ci} #{pi} [{theme}]")
+                    self.close_sheet(page)
                 for c in meta["etfs"]:
                     page.evaluate(f"() => openBrief('{c}')"); page.wait_for_timeout(60)
                     self.probe(page, f"브리핑 {c} [{theme}]"); self.close_sheet(page)
