@@ -104,6 +104,25 @@ def quotes(old, errors):
     return (q or old.get("quotes", {})), closes
 
 
+def logos(old, errors):
+    """회사 로고 주소(Finnhub 회사 정보). 그림은 복사하지 않고 주소만 저장해요."""
+    out = dict(old.get("logos", {}))
+    if not FINNHUB_KEY:
+        return out
+    n = 0
+    for t in tickers():
+        if t in out or n >= 25:
+            continue
+        n += 1
+        try:
+            j = json.loads(get("https://finnhub.io/api/v1/stock/profile2?" + urllib.parse.urlencode({"symbol": t, "token": FINNHUB_KEY})))
+            u = (j or {}).get("logo") or ""
+            out[t] = u if u.startswith("https://") else ""
+        except Exception as e:  # noqa: BLE001
+            errors.append(scrub(f"로고 {t}: {type(e).__name__}")[:80])
+    return out
+
+
 def kr_navs(old, errors):
     out = {c: list(v) for c, v in old.get("kr", {}).items()}
     if not DATA_KEY:
@@ -152,7 +171,7 @@ def main():
     errors = []
     q, closes = quotes(old, errors)
     out = {"generated_at_kst": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "quotes": q, "closes": closes,
-           "kr": kr_navs(old, errors), "fx": fx(old, errors), "errors": errors[:20]}
+           "kr": kr_navs(old, errors), "fx": fx(old, errors), "logos": logos(old, errors), "errors": errors[:20]}
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     print(f"시세 {len(q)}개 · 종가 {len(closes)}일 · 국내 {sum(1 for v in out['kr'].values() if v)}개 · 오류 {len(errors)}")
     for e in errors:
