@@ -79,7 +79,7 @@ def tickers():
     for t in out:
         if t not in seen:
             seen.append(t)
-    return seen[:120]
+    return seen[:260]
 
 
 BACK_DAYS = 8  # 이어 계산에 쓰는 최근 미국 장 날 수
