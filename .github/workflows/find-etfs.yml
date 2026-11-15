@@ -1,0 +1,33 @@
+name: ETF 후보 찾기 (한 번씩 수동)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/find_etfs.py"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-writer
+  cancel-in-progress: false
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/find_etfs.py
+        env:
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
+      - name: 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp data/etf_candidates.json /tmp/c.json
+          for i in 1 2 3; do git fetch -q origin main && git reset -q --hard origin/main; cp /tmp/c.json data/etf_candidates.json; git add data/etf_candidates.json; git diff --cached --quiet && exit 0; git commit -q -m "ETF 후보 목록"; git push -q && exit 0; sleep 5; done
