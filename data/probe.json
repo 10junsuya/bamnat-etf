@@ -1,86 +1,448 @@
 {
- "smh": {
-  "err": "HTTPError: HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error messag"
- },
- "schd_wallst": {
-  "status": 200,
-  "len": 51242,
-  "pct_cells": 38,
-  "tickers": [
-   "CVX",
-   "KO",
-   "MRK",
-   "PEP",
-   "TXN"
+ "funetf_381180": {
+  "len": 840389,
+  "rows": [
+   [
+    "NAV (%)",
+    "-14.8",
+    "-20.44",
+    "-20.03",
+    "34.07",
+    "193.81",
+    "217.62",
+    "35.17"
+   ],
+   [
+    "종가 (%)",
+    "-13.89",
+    "-21.38",
+    "-22.1",
+    "32.27",
+    "189.26",
+    "201.54",
+    "33.59"
+   ],
+   [
+    "엔비디아/NVIDIA Corp (NVDA)",
+    "10.3",
+    "813.96",
+    "188,173,316",
+    "231,183",
+    "-13.93"
+   ],
+   [
+    "브로드컴/BROADCOM LTD (AVGO)",
+    "10.2",
+    "404.37",
+    "185,761,210",
+    "459,384",
+    "5.16"
+   ],
+   [
+    "마이크론/Micron Technology Inc (MU)",
+    "7.4",
+    "124.96",
+    "134,906,429",
+    "1,079,597",
+    "1.15"
+   ],
+   [
+    "Texas Instruments Inc (TXN)",
+    "5.2",
+    "229.59",
+    "94,651,730",
+    "412,264",
+    "-1.38"
+   ],
+   [
+    "Advanced Micro Devices Inc (AMD)",
+    "5.1",
+    "127.25",
+    "93,623,427",
+    "735,744",
+    "12.16"
+   ],
+   [
+    "Analog Devices Inc (ADI)",
+    "4.9",
+    "165.41",
+    "90,043,043",
+    "544,363",
+    "-0.16"
+   ],
+   [
+    "QUALCOMM Inc (QCOM)",
+    "4.5",
+    "351.37",
+    "82,558,492",
+    "234,962",
+    "1.09"
+   ],
+   [
+    "TSMC/TAIWAN SEMICONDUCTOR-SP ADR (TSM)",
+    "4.3",
+    "144.23",
+    "79,332,967",
+    "550,045",
+    "3.56"
+   ],
+   [
+    "KLA-TENCOR CORPORATION (KLAC)",
+    "4.0",
+    "341.42",
+    "73,151,285",
+    "214,256",
+    "6.58"
+   ],
+   [
+    "ASML Holding NV-NY REG SHS (ASML)",
+    "4.0",
+    "35.31",
+    "72,097,818",
+    "2,041,852",
+    "1.68"
+   ],
+   [
+    "APPLIED MATERIALS INC (AMAT)",
+    "3.8",
+    "130.68",
+    "68,702,782",
+    "525,733",
+    "6.04"
+   ],
+   [
+    "Monolithic Power Systems Inc (MPWR)",
+    "3.6",
+    "33.4",
+    "65,720,938",
+    "1,967,690",
+    "16.26"
+   ],
+   [
+    "마벨/Marvell Technology Inc (MRVL)",
+    "3.5",
+    "283.01",
+    "63,570,317",
+    "224,622",
+    "4.73"
+   ],
+   [
+    "LAM RESEARCH CORP (LRCX)",
+    "3.4",
+    "198.68",
+    "62,362,774",
+    "313,886",
+    "5.62"
+   ],
+   [
+    "NXP Semiconductors NV (NXPI)",
+    "3.4",
+    "171.4",
+    "61,470,374",
+    "358,637",
+    "0.83"
+   ],
+   [
+    "인텔/INTEL ORD (INTC)",
+    "3.1",
+    "669.22",
+    "55,658,190",
+    "83,169",
+    "6.35"
+   ],
+   [
+    "코히런트/Coherent Corp (COHR)",
+    "2.3",
+    "133.11",
+    "41,538,633",
+    "312,062",
+    "19.19"
+   ],
+   [
+    "Teradyne Inc (TER)",
+    "2.1",
+    "106.27",
+    "37,584,877",
+    "353,673",
+    "4.99"
+   ],
+   [
+    "Astera Labs Inc (ALAB)",
+    "2.0",
+    "117.92",
+    "36,233,506",
+    "307,271",
+    "2.54"
+   ],
+   [
+    "MICROCHIP TECHNOLOGY INC (MCHP)",
+    "1.7",
+    "369.1",
+    "30,515,855",
+    "82,676",
+    "-18.23"
+   ],
+   [
+    "ARM Holdings PLC (ARM)",
+    "1.5",
+    "98.81",
+    "26,739,087",
+    "270,611",
+    "5.13"
+   ],
+   [
+    "ON SEMICONDUCTOR CORP (ON)",
+    "1.4",
+    "264.62",
+    "25,923,798",
+    "97,966",
+    "2.46"
+   ],
+   [
+    "Credo Technology Holding Ltd (CRDO)",
+    "1.3",
+    "127.74",
+    "24,037,383",
+    "188,174",
+    "2.72"
+   ],
+   [
+    "Qnity Electronics Inc (Q)",
+    "1.3",
+    "142.2",
+    "23,950,276",
+    "168,426",
+    "5.65"
+   ],
+   [
+    "Entegris Inc (ENTG)",
+    "1.2",
+    "103.86",
+    "21,314,206",
+    "205,220",
+    "7.03"
+   ],
+   [
+    "GLOBALFOUNDRIES INC (GFS)",
+    "1.2",
+    "372.97",
+    "21,266,934",
+    "57,020",
+    "5.32"
+   ],
+   [
+    "MACOM Technology Solutions Holdings Inc (MTSI)",
+    "0.9",
+    "51.91",
+    "17,259,488",
+    "332,489",
+    "6.27"
+   ],
+   [
+    "Tower Semiconductor Ltd (TSEM)",
+    "0.9",
+    "76.69",
+    "16,212,903",
+    "211,408",
+    "5.86"
+   ],
+   [
+    "LATTICE SEMICONDUCTOR CORP (LSCC)",
+    "0.9",
+    "96.54",
+    "15,771,743",
+    "163,370",
+    "13.50"
+   ],
+   [
+    "SITIME CORP (SITM)",
+    "0.7",
+    "20.44",
+    "12,853,399",
+    "628,909",
+    "16.19"
+   ],
+   [
+    "원화현금 (KRD010010001)",
+    "0.1",
+    "1,263,063",
+    "1,263,063",
+    "-",
+    "-"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ]
   ],
-  "links": [
-   "/schwab/Prospect/research/etfs/schwabETF/index.asp?YYY101_z5K6INmijHmyop7FVDMq9/azsLtoJ9UfvNHDWzAB8WbVjKhq+VI1wsPaVFN2dsTN8XX4/r4SGYIvcLALPPNyQE871M8JHsw8M3T+/n3cR0M=&type=holdings&symbol=SCHD"
+  "ajax": [
+   "/api/public/product/view/etfbmidxpdf",
+   "/api/public/product/view/etfpdf",
+   "/api/public/usetf/autoCmpl/holdingStockItemList"
   ],
-  "title": "SCHD Portfolio"
- },
- "schd_sam": {
-  "err": "HTTPError: HTTP Error 403: Forbidden"
- },
- "funetf_465580": {
-  "status": 200,
-  "len": 813306,
-  "pct_cells": 29,
-  "tickers": [],
-  "links": [],
-  "title": "ACE 미국빅테크TOP7 Plus(465580)주가, 분배금,구성종목 | FunETF"
+  "around": "구성종목 | FunETF <script type=\"text/"
  },
  "funetf_381170": {
-  "err": "HTTPError: HTTP Error 404: Not Found"
- },
- "mirae_381170": {
-  "err": "HTTPError: HTTP Error 403: Forbidden"
- },
- "tigeretf_381170": {
-  "err": "HTTPError: HTTP Error 403: Forbidden"
- },
- "ace_search": {
-  "status": 200,
-  "len": 100857,
-  "pct_cells": 0,
-  "tickers": [],
-  "links": [],
-  "title": "ACE ETF"
- },
- "soletf_list": {
-  "status": 200,
-  "len": 349592,
-  "pct_cells": 408,
-  "tickers": [],
-  "links": [
-   "/ko/fund/etf/210367",
-   "/ko/fund/etf/210728",
-   "/ko/fund/etf/210734",
-   "/ko/fund/etf/210811",
-   "/ko/fund/etf/210880",
-   "/ko/fund/etf/210884",
-   "/ko/fund/etf/210885",
-   "/ko/fund/etf/210890",
-   "/ko/fund/etf/210895",
-   "/ko/fund/etf/210896",
-   "/ko/fund/etf/210897",
-   "/ko/fund/etf/210908",
-   "/ko/fund/etf/210919",
-   "/ko/fund/etf/210930",
-   "/ko/fund/etf/210932",
-   "/ko/fund/etf/210934",
-   "/ko/fund/etf/210935",
-   "/ko/fund/etf/210940",
-   "/ko/fund/etf/210942",
-   "/ko/fund/etf/210945",
-   "/ko/fund/etf/210961",
-   "/ko/fund/etf/210972",
-   "/ko/fund/etf/210980",
-   "/ko/fund/etf/210981",
-   "/ko/fund/etf/211000"
+  "len": 813549,
+  "rows": [
+   [
+    "NAV (%)",
+    "-9.05",
+    "-8.77",
+    "-15.07",
+    "-7.79",
+    "98.62",
+    "129.12",
+    "-5.77"
+   ],
+   [
+    "종가 (%)",
+    "-8.87",
+    "-9.26",
+    "-15.68",
+    "-8.78",
+    "98.96",
+    "126.59",
+    "-6.16"
+   ],
+   [
+    "애플/Apple Inc (AAPL)",
+    "20.5",
+    "620.18",
+    "293,492,024",
+    "473,237",
+    "0.89"
+   ],
+   [
+    "엔비디아/NVIDIA Corp (NVDA)",
+    "15.9",
+    "986.28",
+    "228,010,686",
+    "231,183",
+    "-13.93"
+   ],
+   [
+    "마이크로소프트/MICROSOFT CORP (MSFT)",
+    "15.0",
+    "310.94",
+    "215,624,775",
+    "693,461",
+    "-7.04"
+   ],
+   [
+    "알파벳 A/Alphabet Inc (GOOGL)",
+    "14.1",
+    "516.81",
+    "201,811,160",
+    "390,494",
+    "0.70"
+   ],
+   [
+    "아마존/Amazon.com Inc (AMZN)",
+    "10.3",
+    "417.35",
+    "147,822,206",
+    "354,192",
+    "-0.80"
+   ],
+   [
+    "브로드컴/BROADCOM LTD (AVGO)",
+    "6.4",
+    "198.46",
+    "91,169,399",
+    "459,384",
+    "5.16"
+   ],
+   [
+    "메타/페이스북/Meta Platforms Inc-CL A (META)",
+    "6.3",
+    "108.13",
+    "90,472,829",
+    "836,704",
+    "-1.04"
+   ],
+   [
+    "테슬라/Tesla Inc (TSLA)",
+    "4.4",
+    "120.03",
+    "62,426,497",
+    "520,091",
+    "0.60"
+   ],
+   [
+    "마이크론/Micron Technology Inc (MU)",
+    "3.6",
+    "47.88",
+    "51,691,100",
+    "1,079,597",
+    "1.15"
+   ],
+   [
+    "Advanced Micro Devices Inc (AMD)",
+    "3.5",
+    "69.08",
+    "50,825,197",
+    "735,744",
+    "12.16"
+   ],
+   [
+    "원화현금 (KRD010010001)",
+    "0.0",
+    "195,378",
+    "195,378",
+    "-",
+    "-"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ],
+   [
+    "26.09",
+    "25.09"
+   ]
   ],
-  "title": "SOL ETF"
+  "ajax": [
+   "/api/public/product/view/etfbmidxpdf",
+   "/api/public/product/view/etfpdf",
+   "/api/public/usetf/autoCmpl/holdingStockItemList"
+  ],
+  "around": "구성종목 | FunETF <script type=\"text/javascript\" sr"
  },
- "indxx_tech10": {
-  "err": "HTTPError: HTTP Error 404: Not Found"
+ "smh": {
+  "len": 285035,
+  "rows": [],
+  "ajax": [
+   "/us/en/etf/equity/smh/holdings/download/xlsx/"
+  ],
+  "around": ""
  }
 }
