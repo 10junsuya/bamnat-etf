@@ -181,6 +181,7 @@ details.cat:not([open]) summary b::after{content:" ▾"; color:var(--muted); fon
 :root{--d2:#1D1D1F; --d3:#8E8E93; --d4:#AEAEB2; --d5:#C7C7CC; --d6:#E5E5EA}
 body[data-mode="dark"]{--d2:#F5F5F7; --d3:#8E8E93; --d4:#636366; --d5:#48484A; --d6:#3A3A3C}
 .accs{margin-top:14px; border-top:1px solid var(--line)}
+details.sfoot{margin-top:18px} details.sfoot>summary{cursor:pointer; list-style:none; font-size:12px; color:var(--muted); padding:6px 0} details.sfoot>summary::-webkit-details-marker{display:none} details.sfoot a{display:block; padding:3px 0} details.sfoot p{margin:8px 0 0}
 .acc{border-bottom:1px solid var(--line)}
 .accbtn{display:flex; align-items:center; gap:10px; width:100%; min-height:48px; padding:10px 2px; background:none; border:0; font:inherit; color:var(--ink); text-align:left; cursor:pointer}
 .accbtn>b{font-size:15px; font-weight:700; flex:none}
@@ -1458,6 +1459,13 @@ function compareCard(e, st){
 function exposureChips(t){
   return ETFS.filter(e=>e.h.some(([x])=>x===t)).map(e=>{ const w = e.h.find(([x])=>x===t)[1];
     return `<span class="chip${stars.includes(e.code)?" mine":""}">${e.name.replace(/^(TIGER|KODEX|ACE|SOL) /,"$1 ")} ${(w*100).toFixed(1)}%</span>`; }).join("");
+}
+function exposureHtml(t){
+  const xs = ETFS.filter(e=>e.h.some(([x])=>x===t)).map(e=>[e, e.h.find(([x])=>x===t)[1]]).sort((a,b)=>b[1]-a[1]);
+  if(!xs.length) return `<div class="small muted">담은 ETF가 없어요.</div>`;
+  const chip = ([e,w]) => `<span class="chip${stars.includes(e.code)?" mine":""}">${e.name} ${(w*100).toFixed(1)}%</span>`;
+  const head = xs.slice(0,8).map(chip).join(""), rest = xs.slice(8);
+  return `<div class="chips">${head}</div>${rest.length?`<details class="sfoot" style="margin-top:4px"><summary>${rest.length}개 더 보기 ›</summary><div class="chips">${rest.map(chip).join("")}</div></details>`:""}`;
 }
 function evRow(ev, withChips=true){
   const [y,m,d] = ev.d.split("-").map(Number);
@@ -4452,7 +4460,6 @@ function productsHtml(t){
     <div class="pcat" role="tablist" aria-label="제품 분류">${cats.map((c,i)=>`<button type="button" class="pc${i===0?" on":""}" role="tab" aria-selected="${i===0}" data-pcat="${i}">${c.k}</button>`).join("")}</div>
     ${cats.map((c,i)=>`<div class="pgroup" data-pg="${i}"${i?" hidden":""}>${c.items.map(card).join("")}</div>`).join("")}
     ${gen}
-    <div class="psrc"><span class="tiny muted">${+P.asof.slice(5,7)}/${+P.asof.slice(8,10)} 기준 · 출처</span>${P.src.map(([n,u])=>`<a class="tiny" href="${u}" target="_blank" rel="noopener">${n} ›</a>`).join("")}</div>
   </div>`;
 }
 
@@ -4739,9 +4746,13 @@ function stockSheet(t, from, fromEv, fromCo){
     <div class="callout" style="font-size:15px;background:var(--accent-soft)">${co.one}</div>
     ${PRODUCTS[t] ? productsHtml(t) : `<h4 style="margin:16px 0 6px">주요 사업</h4>
     <div class="does">${co.does.map(d=>{ const [h,...r]=d.split(": "); return `<div>${r.length?`<b>${h}</b><span>${r.join(": ")}</span>`:`<span>${h}</span>`}</div>`; }).join("")}</div>`}
-    ${aboutAccs(t, co)}
-    ${co.rel.length?`<h4 style="margin:16px 0 6px">같이 알아두면 좋은 회사</h4><div class="chips">${co.rel.filter(r=>STOCKS[r]).map(r=>`<button class="chip" type="button" data-stock="${r}" style="border:0;cursor:pointer">${STOCKS[r][0]}</button>`).join("")}</div>`:""}
-    ${co.form==="ETF" ? `<p class="tiny muted" style="margin-top:12px">ETF라서 담은 종목과 비중은 운용사 홈페이지에서 확인할 수 있어요.</p>` : `<p class="tiny muted" style="margin-top:12px">설명은 공개 자료를 정리한 초안이에요. 정확한 내용은 <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${co.cik||t}&type=${co.form}" target="_blank" rel="noopener">연간 보고서(${co.form}) 원문 ›</a>에서 확인할 수 있어요.</p>`}` : "";
+    ${aboutAccs(t, co)}` : "";
+  const P = PRODUCTS[t];
+  const rel = co && co.rel.filter(r=>STOCKS[r]).length ? `<h4 style="margin:16px 0 6px">같이 알아두면 좋은 회사</h4><div class="chips">${co.rel.filter(r=>STOCKS[r]).map(r=>`<button class="chip" type="button" data-stock="${r}" style="border:0;cursor:pointer">${STOCKS[r][0]}</button>`).join("")}</div>` : "";
+  const srcLinks = P ? P.src.map(([n,u])=>`<a class="tiny" href="${u}" target="_blank" rel="noopener">${n} ›</a>`).join("") : "";
+  const foot = co ? `<details class="sfoot"><summary>${P?`${+P.asof.slice(5,7)}/${+P.asof.slice(8,10)} 기준 · `:""}출처와 안내 ›</summary>
+      ${srcLinks}
+      ${co.form==="ETF" ? `<p class="tiny muted">ETF라서 담은 종목과 비중은 운용사 홈페이지에서 확인할 수 있어요.</p>` : `<p class="tiny muted">설명은 공개 자료를 정리한 초안이에요. 정확한 내용은 <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${co.cik||t}&type=${co.form}" target="_blank" rel="noopener">연간 보고서(${co.form}) 원문 ›</a>에서 확인할 수 있어요.</p>`}</details>` : "";
   const fromE = from ? ETFS.find(x=>x.code===from) : null;
   const backEv = fromEv ? EVENTS.find(v=>`${v.t}:${v.d}`===fromEv) : null;
   const back = fromCo && STOCKS[fromCo] ? `<button class="btn ghost backev" type="button" data-stock="${fromCo}" style="margin-bottom:10px">‹ ${STOCKS[fromCo][0]}</button>`
@@ -4750,11 +4761,13 @@ function stockSheet(t, from, fromEv, fromCo){
   openSheet(`${back}<div class="with-logo" style="margin-bottom:6px">${logo(t)}<div><h3 id="sheetTitle" style="margin:0">${s[0]} <span class="muted small">${sym}</span></h3>${co?`<div class="tiny muted">${co.cat} · ${co.tag}</div>`:""}</div></div>
     <div class="num" style="font-size:22px;font-weight:700"><span>${usd(s[1])}</span> <span class="${cls(s[2])}" style="font-size:15px">${spct(s[2])}</span> <span class="tiny muted" style="font-weight:400">${okn(s[1])?"한국 장 마감 뒤 변화":"시세 확인 중"}</span></div>
     ${about}
-    <h4 style="margin:16px 0 4px">이 종목을 담은 ETF</h4><div class="chips">${exposureChips(t)}</div>
     <h4 style="margin:16px 0 4px">일정</h4>${evs.length?evs.map(v=>evRow(v,false)).join(""):`<div class="small muted">예정된 일정이 없어요.</div>`}
     <h4 style="margin:16px 0 4px">뉴스</h4>
     <div class="news"><span class="tag">${sym}</span>[예시] ${s[0]} 관련 뉴스 제목<div class="tiny muted">출처 · 원문 링크</div></div>
     <div class="news"><span class="tag">${sym}</span>[예시] ${s[0]} 관련 두 번째 뉴스 제목<div class="tiny muted">출처 · 원문 링크</div></div>
+    <h4 style="margin:16px 0 4px">이 종목을 담은 ETF</h4>${exposureHtml(t)}
+    ${rel}
+    ${foot}
     `);
   const now = sheet.querySelector(".pline .now"); if(now) now.parentElement.scrollLeft = Math.max(0, now.offsetLeft - 140);
 }
