@@ -1,10 +1,218 @@
 {
- "generated_at_kst": "2026-11-15 15:46",
+ "generated_at_kst": "2026-11-15 15:50",
  "etfs": {
   "360750": {
    "kind": "index",
    "group": "sp",
    "name": "TIGER 미국S&P500",
+   "index": "S&P500",
+   "proxy": "SPY",
+   "asof": "2026-11-15 받음",
+   "n_total": 297,
+   "top": [
+    {
+     "ticker": "AAPL",
+     "name": "Apple Inc",
+     "ko": "애플",
+     "weight": 7.9
+    },
+    {
+     "ticker": "NVDA",
+     "name": "NVIDIA Corp",
+     "ko": "엔비디아",
+     "weight": 6.4
+    },
+    {
+     "ticker": "MSFT",
+     "name": "MICROSOFT CORP",
+     "ko": "마이크로소프트",
+     "weight": 5.9
+    },
+    {
+     "ticker": "AMZN",
+     "name": "Amazon.com Inc",
+     "ko": "아마존",
+     "weight": 4.0
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
+     "weight": 2.6
+    },
+    {
+     "ticker": "AVGO",
+     "name": "BROADCOM LTD",
+     "ko": "브로드컴",
+     "weight": 2.5
+    },
+    {
+     "ticker": "META",
+     "name": "Meta Platforms Inc-CL A",
+     "ko": "메타",
+     "weight": 2.1
+    },
+    {
+     "ticker": "GOOG",
+     "name": "Alphabet Inc C",
+     "ko": "알파벳 C",
+     "weight": 2.1
+    },
+    {
+     "ticker": "LLY",
+     "name": "일라이릴리",
+     "ko": "Lilly (Eli) & Co",
+     "weight": 1.7
+    },
+    {
+     "ticker": "TSLA",
+     "name": "Tesla Inc",
+     "ko": "테슬라",
+     "weight": 1.7
+    },
+    {
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
+     "weight": 1.7
+    },
+    {
+     "ticker": "MU",
+     "name": "Micron Technology Inc",
+     "ko": "마이크론",
+     "weight": 1.4
+    },
+    {
+     "ticker": "JPM",
+     "name": "제이피모간체이스",
+     "ko": "JPMORGAN_CHASE",
+     "weight": 1.4
+    },
+    {
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices Inc",
+     "ko": "",
+     "weight": 1.4
+    },
+    {
+     "ticker": "V",
+     "name": "비자",
+     "ko": "VISA INC-CLASS A SHARES",
+     "weight": 1.1
+    }
+   ],
+   "top_weight": 43.9,
+   "cash_weight": 0,
+   "src": "FunETF 구성종목(PDF)"
+  },
+  "379800": {
+   "kind": "index",
+   "group": "sp",
+   "name": "KODEX 미국S&P500",
+   "index": "S&P500",
+   "proxy": "SPY",
+   "asof": "2026-11-15 받음",
+   "n_total": 297,
+   "top": [
+    {
+     "ticker": "AAPL",
+     "name": "APPLE Inc",
+     "ko": "",
+     "weight": 7.9
+    },
+    {
+     "ticker": "NVDA",
+     "name": "NVIDIA Corp",
+     "ko": "",
+     "weight": 6.4
+    },
+    {
+     "ticker": "MSFT",
+     "name": "MICROSOFT",
+     "ko": "",
+     "weight": 5.9
+    },
+    {
+     "ticker": "AMZN",
+     "name": "Amazon.com Inc",
+     "ko": "",
+     "weight": 4.0
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "ALPHABET INC-CL A",
+     "ko": "",
+     "weight": 2.6
+    },
+    {
+     "ticker": "AVGO",
+     "name": "BROADCOM LTD",
+     "ko": "",
+     "weight": 2.5
+    },
+    {
+     "ticker": "META",
+     "name": "Meta Platforms Inc-CL A",
+     "ko": "",
+     "weight": 2.1
+    },
+    {
+     "ticker": "GOOG",
+     "name": "ALPHABET INC-CL C",
+     "ko": "",
+     "weight": 2.1
+    },
+    {
+     "ticker": "LLY",
+     "name": "ELI LILLY & CO",
+     "ko": "",
+     "weight": 1.8
+    },
+    {
+     "ticker": "TSLA",
+     "name": "TESLA MOTORS",
+     "ko": "",
+     "weight": 1.7
+    },
+    {
+     "ticker": "BRK-B",
+     "name": "BERKSHIRE HATHAWAY CL B ORD.",
+     "ko": "",
+     "weight": 1.7
+    },
+    {
+     "ticker": "MU",
+     "name": "MICRON TECH",
+     "ko": "",
+     "weight": 1.4
+    },
+    {
+     "ticker": "JPM",
+     "name": "JPMORGAN CHASE & CO",
+     "ko": "",
+     "weight": 1.4
+    },
+    {
+     "ticker": "AMD",
+     "name": "ADVANCED MICRO DEVICES",
+     "ko": "",
+     "weight": 1.4
+    },
+    {
+     "ticker": "V",
+     "name": "VISA INC-CLASS A SHARES",
+     "ko": "",
+     "weight": 1.1
+    }
+   ],
+   "top_weight": 44.0,
+   "cash_weight": 0,
+   "src": "FunETF 구성종목(PDF)"
+  },
+  "360200": {
+   "kind": "index",
+   "group": "sp",
+   "name": "ACE 미국S&P500",
    "index": "S&P500",
    "proxy": "SPY",
    "asof": "2026-11-15 받음",
@@ -71,211 +279,9 @@
      "weight": 1.7
     },
     {
-     "ticker": "MU",
-     "name": "Micron Technology Inc",
-     "ko": "마이크론",
-     "weight": 1.4
-    },
-    {
-     "ticker": "JPM",
-     "name": "제이피모간체이스",
-     "ko": "JPMORGAN_CHASE",
-     "weight": 1.4
-    },
-    {
-     "ticker": "AMD",
-     "name": "Advanced Micro Devices Inc",
-     "ko": "",
-     "weight": 1.4
-    },
-    {
-     "ticker": "V",
-     "name": "비자",
-     "ko": "VISA INC-CLASS A SHARES",
-     "weight": 1.1
-    },
-    {
-     "ticker": "XOM",
-     "name": "EXXONMOBIL HOLDINGS CORP",
-     "ko": "",
-     "weight": 1.0
-    }
-   ],
-   "top_weight": 43.2,
-   "cash_weight": 0,
-   "src": "FunETF 구성종목(PDF)"
-  },
-  "379800": {
-   "kind": "index",
-   "group": "sp",
-   "name": "KODEX 미국S&P500",
-   "index": "S&P500",
-   "proxy": "SPY",
-   "asof": "2026-11-15 받음",
-   "n_total": 505,
-   "top": [
-    {
-     "ticker": "AAPL",
-     "name": "Apple Inc",
-     "ko": "",
-     "weight": 7.904
-    },
-    {
-     "ticker": "NVDA",
-     "name": "Nvidia Corp",
-     "ko": "",
-     "weight": 6.138
-    },
-    {
-     "ticker": "MSFT",
-     "name": "Microsoft Corp",
-     "ko": "",
-     "weight": 5.927
-    },
-    {
-     "ticker": "AMZN",
-     "name": "Amazon.Com Inc",
-     "ko": "",
-     "weight": 4.006
-    },
-    {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc Cl A",
-     "ko": "",
-     "weight": 2.675
-    },
-    {
-     "ticker": "AVGO",
-     "name": "Broadcom Inc",
-     "ko": "",
-     "weight": 2.646
-    },
-    {
-     "ticker": "GOOG",
-     "name": "Alphabet Inc Cl C",
-     "ko": "",
-     "weight": 2.143
-    },
-    {
-     "ticker": "META",
-     "name": "Meta Platforms Inc Class A",
-     "ko": "",
-     "weight": 2.099
-    },
-    {
-     "ticker": "LLY",
-     "name": "Eli Lilly + Co",
-     "ko": "",
-     "weight": 1.741
-    },
-    {
-     "ticker": "TSLA",
-     "name": "Tesla Inc",
-     "ko": "",
-     "weight": 1.71
-    },
-    {
      "ticker": "BRK-B",
-     "name": "Berkshire Hathaway Inc Cl B",
-     "ko": "",
-     "weight": 1.677
-    },
-    {
-     "ticker": "AMD",
-     "name": "Advanced Micro Devices",
-     "ko": "",
-     "weight": 1.458
-    },
-    {
-     "ticker": "JPM",
-     "name": "Jpmorgan Chase + Co",
-     "ko": "",
-     "weight": 1.391
-    },
-    {
-     "ticker": "MU",
-     "name": "Micron Technology Inc",
-     "ko": "",
-     "weight": 1.376
-    },
-    {
-     "ticker": "V",
-     "name": "Visa Inc Class A Shares",
-     "ko": "",
-     "weight": 1.093
-    }
-   ],
-   "top_weight": 43.98,
-   "cash_weight": 0,
-   "src": "SPY 보유종목 공시"
-  },
-  "360200": {
-   "kind": "index",
-   "group": "sp",
-   "name": "ACE 미국S&P500",
-   "index": "S&P500",
-   "proxy": "SPY",
-   "asof": "2026-11-15 받음",
-   "n_total": 295,
-   "top": [
-    {
-     "ticker": "AAPL",
-     "name": "Apple Inc",
-     "ko": "애플",
-     "weight": 7.9
-    },
-    {
-     "ticker": "NVDA",
-     "name": "NVIDIA Corp",
-     "ko": "엔비디아",
-     "weight": 6.4
-    },
-    {
-     "ticker": "MSFT",
-     "name": "MICROSOFT CORP",
-     "ko": "마이크로소프트",
-     "weight": 5.9
-    },
-    {
-     "ticker": "AMZN",
-     "name": "Amazon.com Inc",
-     "ko": "아마존",
-     "weight": 4.0
-    },
-    {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.6
-    },
-    {
-     "ticker": "AVGO",
-     "name": "BROADCOM LTD",
-     "ko": "브로드컴",
-     "weight": 2.5
-    },
-    {
-     "ticker": "META",
-     "name": "Meta Platforms Inc-CL A",
-     "ko": "메타",
-     "weight": 2.1
-    },
-    {
-     "ticker": "GOOG",
-     "name": "Alphabet Inc C",
-     "ko": "알파벳 C",
-     "weight": 2.1
-    },
-    {
-     "ticker": "LLY",
-     "name": "일라이릴리",
-     "ko": "Lilly (Eli) & Co",
-     "weight": 1.7
-    },
-    {
-     "ticker": "TSLA",
-     "name": "Tesla Inc",
-     "ko": "테슬라",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
      "weight": 1.7
     },
     {
@@ -301,15 +307,9 @@
      "name": "비자",
      "ko": "VISA INC-CLASS A SHARES",
      "weight": 1.1
-    },
-    {
-     "ticker": "XOM",
-     "name": "EXXONMOBIL HOLDINGS CORP",
-     "ko": "",
-     "weight": 1.0
     }
    ],
-   "top_weight": 43.2,
+   "top_weight": 43.9,
    "cash_weight": 0,
    "src": "FunETF 구성종목(PDF)"
   },
@@ -497,103 +497,103 @@
    "name": "KODEX 미국나스닥100",
    "index": "나스닥100",
    "proxy": "QQQ",
-   "asof": "2026-11-12",
-   "n_total": 103,
+   "asof": "2026-11-15 받음",
+   "n_total": 101,
    "top": [
     {
      "ticker": "AAPL",
-     "name": "Apple Inc",
+     "name": "APPLE Inc",
      "ko": "",
-     "weight": 8.446
+     "weight": 8.4
     },
     {
      "ticker": "NVDA",
-     "name": "Nvidia Corp",
+     "name": "NVIDIA Corp",
      "ko": "",
-     "weight": 6.527
+     "weight": 6.8
     },
     {
      "ticker": "MSFT",
-     "name": "Microsoft Corp",
+     "name": "MICROSOFT",
      "ko": "",
-     "weight": 6.329
+     "weight": 6.3
     },
     {
      "ticker": "AMZN",
-     "name": "Amazon.Com Inc",
+     "name": "Amazon.com Inc",
      "ko": "",
-     "weight": 4.701
-    },
-    {
-     "ticker": "AMD",
-     "name": "Advanced Micro Devices Inc",
-     "ko": "",
-     "weight": 4.298
+     "weight": 4.7
     },
     {
      "ticker": "MU",
-     "name": "Micron Technology Inc",
+     "name": "MICRON TECH",
      "ko": "",
-     "weight": 4.057
+     "weight": 4.1
+    },
+    {
+     "ticker": "AMD",
+     "name": "ADVANCED MICRO DEVICES",
+     "ko": "",
+     "weight": 4.1
     },
     {
      "ticker": "TSLA",
-     "name": "Tesla Inc",
+     "name": "TESLA MOTORS",
      "ko": "",
-     "weight": 3.402
+     "weight": 3.3
     },
     {
      "ticker": "META",
-     "name": "Meta Platforms Inc",
+     "name": "Meta Platforms Inc-CL A",
      "ko": "",
-     "weight": 3.022
+     "weight": 3.0
     },
     {
      "ticker": "GOOGL",
-     "name": "Alphabet Inc Class A",
+     "name": "ALPHABET INC-CL A",
      "ko": "",
-     "weight": 2.856
-    },
-    {
-     "ticker": "AVGO",
-     "name": "Broadcom Inc",
-     "ko": "",
-     "weight": 2.825
+     "weight": 2.8
     },
     {
      "ticker": "WMT",
-     "name": "Walmart Inc",
+     "name": "WAL-MART STORES INC",
      "ko": "",
-     "weight": 2.761
+     "weight": 2.7
     },
     {
      "ticker": "SPCX",
      "name": "Space Exploration Technologies Corp",
      "ko": "",
-     "weight": 2.701
+     "weight": 2.7
+    },
+    {
+     "ticker": "AVGO",
+     "name": "BROADCOM LTD",
+     "ko": "",
+     "weight": 2.7
     },
     {
      "ticker": "GOOG",
-     "name": "Alphabet Inc Class C",
+     "name": "ALPHABET INC-CL C",
      "ko": "",
-     "weight": 2.66
+     "weight": 2.6
     },
     {
      "ticker": "COST",
-     "name": "Costco Wholesale Corp",
+     "name": "COSTCO WHOLESALE CORP",
      "ko": "",
-     "weight": 2.182
+     "weight": 2.2
     },
     {
      "ticker": "CSCO",
-     "name": "Cisco Systems Inc",
+     "name": "CISCO SYSTEMS INC",
      "ko": "",
-     "weight": 1.809
+     "weight": 1.8
     }
    ],
-   "top_weight": 58.57,
+   "top_weight": 58.2,
    "cash_weight": 0,
-   "src": "QQQ 보유종목 공시"
+   "src": "FunETF 구성종목(PDF)"
   },
   "381180": {
    "kind": "index",
@@ -706,7 +706,7 @@
    "index": "S&P500",
    "proxy": "SPY",
    "asof": "2026-11-15 받음",
-   "n_total": 296,
+   "n_total": 297,
    "top": [
     {
      "ticker": "AAPL",
@@ -769,6 +769,12 @@
      "weight": 1.7
     },
     {
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
+     "weight": 1.7
+    },
+    {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
@@ -791,15 +797,9 @@
      "name": "비자",
      "ko": "VISA INC-CLASS A SHARES",
      "weight": 1.1
-    },
-    {
-     "ticker": "XOM",
-     "name": "EXXONMOBIL HOLDINGS CORP",
-     "ko": "",
-     "weight": 1.0
     }
    ],
-   "top_weight": 43.3,
+   "top_weight": 44.0,
    "cash_weight": 0,
    "src": "FunETF 구성종목(PDF)"
   },
@@ -810,7 +810,7 @@
    "index": "S&P500",
    "proxy": "SPY",
    "asof": "2026-11-15 받음",
-   "n_total": 296,
+   "n_total": 297,
    "top": [
     {
      "ticker": "AAPL",
@@ -873,6 +873,12 @@
      "weight": 1.7
     },
     {
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
+     "weight": 1.7
+    },
+    {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
@@ -895,15 +901,9 @@
      "name": "비자",
      "ko": "VISA INC-CLASS A SHARES",
      "weight": 1.1
-    },
-    {
-     "ticker": "XOM",
-     "name": "EXXONMOBIL HOLDINGS CORP",
-     "ko": "",
-     "weight": 1.0
     }
    ],
-   "top_weight": 43.3,
+   "top_weight": 44.0,
    "cash_weight": 0,
    "src": "FunETF 구성종목(PDF)"
   },
@@ -914,7 +914,7 @@
    "index": "S&P500",
    "proxy": "SPY",
    "asof": "2026-11-15 받음",
-   "n_total": 298,
+   "n_total": 299,
    "top": [
     {
      "ticker": "AAPL",
@@ -977,6 +977,12 @@
      "weight": 1.7
     },
     {
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
+     "weight": 1.7
+    },
+    {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
@@ -999,15 +1005,9 @@
      "name": "비자",
      "ko": "VISA INC-CLASS A SHARES",
      "weight": 1.1
-    },
-    {
-     "ticker": "XOM",
-     "name": "EXXONMOBIL HOLDINGS CORP",
-     "ko": "",
-     "weight": 1.0
     }
    ],
-   "top_weight": 43.2,
+   "top_weight": 43.9,
    "cash_weight": 0,
    "src": "FunETF 구성종목(PDF)"
   },
@@ -1856,9 +1856,111 @@
    "top_weight": 99.7,
    "cash_weight": 0.3,
    "src": "FunETF 구성종목(PDF)"
+  },
+  "390390": {
+   "kind": "index",
+   "group": "semi",
+   "name": "KODEX 미국반도체",
+   "index": "미국 반도체 (MVIS 25)",
+   "proxy": "SMH",
+   "asof": "2026-11-15 받음",
+   "n_total": 25,
+   "top": [
+    {
+     "ticker": "NVDA",
+     "name": "NVIDIA Corp",
+     "ko": "",
+     "weight": 17.7
+    },
+    {
+     "ticker": "TSM",
+     "name": "TAIWAN SEMICONDUCTOR-SP ADR",
+     "ko": "",
+     "weight": 10.0
+    },
+    {
+     "ticker": "AVGO",
+     "name": "BROADCOM LTD",
+     "ko": "",
+     "weight": 6.1
+    },
+    {
+     "ticker": "TXN",
+     "name": "TEXAS INSTRUMENTS",
+     "ko": "",
+     "weight": 6.1
+    },
+    {
+     "ticker": "AMD",
+     "name": "ADVANCED MICRO DEVICES",
+     "ko": "",
+     "weight": 6.0
+    },
+    {
+     "ticker": "ADI",
+     "name": "ANALOG DEVICES",
+     "ko": "",
+     "weight": 5.0
+    },
+    {
+     "ticker": "ASML",
+     "name": "ASML HOLDING",
+     "ko": "",
+     "weight": 4.5
+    },
+    {
+     "ticker": "KLAC",
+     "name": "KLA Corp",
+     "ko": "",
+     "weight": 4.5
+    },
+    {
+     "ticker": "MU",
+     "name": "MICRON TECH",
+     "ko": "",
+     "weight": 4.5
+    },
+    {
+     "ticker": "AMAT",
+     "name": "APPLIED MATERIALS INC",
+     "ko": "",
+     "weight": 4.3
+    },
+    {
+     "ticker": "QCOM",
+     "name": "QUALCOMM Inc",
+     "ko": "",
+     "weight": 4.3
+    },
+    {
+     "ticker": "SKHY",
+     "name": "SK hynix Inc",
+     "ko": "",
+     "weight": 4.1
+    },
+    {
+     "ticker": "LRCX",
+     "name": "LAM RESEARCH",
+     "ko": "",
+     "weight": 3.8
+    },
+    {
+     "ticker": "MRVL",
+     "name": "MARVELL TECHNOLOGY INC",
+     "ko": "",
+     "weight": 3.4
+    },
+    {
+     "ticker": "INTC",
+     "name": "INTEL Corp",
+     "ko": "",
+     "weight": 3.0
+    }
+   ],
+   "top_weight": 87.3,
+   "cash_weight": 0,
+   "src": "FunETF 구성종목(PDF)"
   }
  },
- "errors": [
-  "390390 KODEX 미국반도체: 구성종목을 못 받아서 이전 값을 그대로 둬요"
- ]
+ "errors": []
 }
