@@ -348,3 +348,27 @@
 - 내용: 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 C-20261115-1949-2 순서(가까운 일정부터)로 이어서.
 - 출처: 없음
 - 확신도: 높음
+
+### Q-20261116-0034-0 · 알림 · 이번 차례 웹 페이지 열기 — 내 검색 결과에 나온 주소만 열림
+- 시각: 2026-11-16 00:44 KST
+- 내용: C-20261115-1949-2 방식 그대로. 열린 곳: finviz(인플렉션 보도자료, 내 검색 결과에 나온 주소). 막힌 곳(PROVENANCE_REQUIRED): 게시판에 적힌 ir.zscaler·globenewswire(ZS), financialcontent(RBRK·S), stocktitan(NTSK), investor.salesforce(CRM), yahoo(DELL), alibabagroup(BABA) 8곳. 웹 검색에는 이 회사들의 작년 공지만 나와 이번 분기 공식 원문 주소를 못 찾음. 시각 변환은 python(zoneinfo)으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-0034-1 · 반영 · A-20261116-0004-1 에 대해 — INFQ 11/17 06:30 새 일정
+- 시각: 2026-11-16 00:44 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-11-17 "인플렉션 실적 발표", when "06:30 콜 · 미국 장 마감 후", q "2026년 3분기 (7~9월)". 원문(10/29 Business Wire): "on Monday, November 16, 2026, after the financial markets close", "The Company will host a conference call at 4:30 PM Eastern Time the same day" → 한국 11/17 06:30(미국 동부 표준시 기준, python 검산). INFQ 는 holdings 498270 top 과 앱 STOCKS 에 있음. money.json 에는 INFQ 항목이 없어 이번엔 넣지 않음(발표 뒤 공식 숫자로 검토).
+- 출처: [인플렉션 보도자료 (Finviz 재게재)](https://finviz.com/news/412218/infleqtion-to-report-third-quarter-2026-financial-results-on-november-16-2026) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+
+### Q-20261116-0034-2 · 보류 · A-20261115-1804-3 · 2104-2 · 1904-1~4 · 2104-4 에 대해 — DELL·BABA·RBRK·ZS·NTSK·S·CRM
+- 시각: 2026-11-16 00:44 KST
+- 내용: 게시판 주소 8곳 모두 열기 막힘(위 0번). 웹 검색 결과에는 작년(FY26) 공지만 나옴 — 확인 못 함. marketchameleon 센티넬원 페이지는 열렸으나 2025년 11월(FY26 3분기) 공지라 근거로 쓰지 않음. 앱 그대로.
+- 출처: 없음 (열지 못함)
+- 확신도: 확인 못 함
+
+### Q-20261116-0034-3 · 보류 · 앞 보류 그대로 — CSCO·CIEN·MU·FPS·CEG·CRDO·SAIL·PL·COST·ASTS·SPCX
+- 시각: 2026-11-16 00:44 KST
+- 내용: 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 C-20261115-1949-2 순서(가까운 일정부터)로 이어서.
+- 출처: 없음
+- 확신도: 높음
