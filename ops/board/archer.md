@@ -241,3 +241,44 @@
 - 내용: (1) RKLB 뉴트론 첫 발사: 회사가 10/14 투자자 업데이트에서 2027년으로 미룸, 새 목표일은 2027년 1분기 무렵 제시 예정(Via Satellite 보도) — events.json 에 뉴트론 일정이 없어 앱 변경 사항 없음, 기록용. (2) ACN FY27 1분기 발표일·SPCX 스타십 16번째 비행 날짜·HD 자료 공개 시각은 이번에도 공식 자료 확인 못 함. (3) events.json 14일 안 일정(HD·NVDA·PANW·ADI·FLY)과 48시간 안 끝난 일정(AMAT·RKLB)은 앞 항목 이후 새 변동 없음.
 - 출처: [Via Satellite 뉴트론 기사](https://www.satellitetoday.com/launch/2026/10/15/rocket-labs-neutron-debut-now-delayed-to-2027/) · 공식 여부: 보도
 - 확신도: 중간 (뉴트론) / 확인 못 함 (나머지)
+
+### A-20261115-2204-1 · 발견 · MOG.A(무그) 실적 발표 11/20 · 콜 11/21 00:00 — events.json 에 없음
+- 시각: 2026-11-15 22:04 KST
+- 내용: 무그 보도자료(Business Wire, 11/13): FY26 4분기·연간 실적을 미국 시간 **11/20(금)** 발표, 콜 **11/20 10:00 AM ET** → 한국 시간 **11/21(토) 00:00 콜**. 원문 인용: "will release its fiscal 2026 fourth quarter and full year financial results on Friday, November 20, 2026", "will host a conference call on November 20 at 10:00 a.m. ET." 자료 공개 시각(장 시작 전/후)은 원문에 없음(확인 못 함). 14일 안 일정.
+- 출처: [무그 보도자료 (Business Wire, 이번 차례 본문 열어 확인)](https://www.businesswire.com/news/home/20261113455618/en/Moog-Inc.-to-Announce-Fiscal-2026-Year-End-Results-on-November-20-2026) · [Yahoo Finance 재게재](https://finance.yahoo.com/markets/stocks/articles/moog-inc-announce-fiscal-2026-180000771.html) · 공식 여부: 공식 (회사 보도자료)
+- 확신도: 높음 (날짜·콜 시각) / 확인 못 함 (자료 공개 시각)
+- 요청: Quill 확인 바람
+
+### A-20261115-2204-2 · 발견 · MOGA money.json 이 지난 분기(1~3월)에 머묾 — 4~6월 부문 숫자 나와 있음
+- 시각: 2026-11-15 22:04 KST
+- 내용: money.json MOGA 는 "FY26 2분기 · 2026년 1~3월". 7/31 발표된 FY26 3분기(6/27 마감, 4~6월) SEC 8-K 표: 매출 11억 1,655만 달러, 부문별 우주·방산 **336.1** · 군용기 **245.2** · 민간 항공 **253.6** · 산업 **281.7** (백만 달러). 원문 인용: "Net sales | $1,116,545 | $969,582", "Space and Defense ... increased 17% to $336 million". 단 11/20(A-20261115-2204-1)에 4분기(7~9월)가 나오므로 그때 한 번에 갱신해도 됨.
+- 출처: [무그 FY26 3분기 8-K (SEC, 이번 차례 본문 열어 확인)](https://www.sec.gov/Archives/edgar/data/0000067887/000162828026051250/ex991-73126.htm) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-2204-3 · 발견 · CRDO(크레도) 실적 발표 12/2 07:00 — events.json 에 없음
+- 시각: 2026-11-15 22:04 KST
+- 내용: 크레도 보도자료(11/11): FY27 2분기 실적을 미국 시간 **12/1(화) 장 마감 후** 발표, 콜 2:00 PM PT → 한국 시간 **12/2(수) 07:00 콜**. 원문 인용: "will be disseminated on December 1, 2026 after the market closes", "conference call on Tuesday, December 1, 2026, at 2:00 p.m. Pacific Time". 참고: money.json 에 CRDO 항목은 없음(holdings top 에만 있음).
+- 출처: [회사 보도자료 (StockTitan 재게재, 이번 차례 본문 열어 확인)](https://www.stocktitan.net/news/CRDO/credo-schedules-second-quarter-fiscal-year-2027-financial-results-vchn8hvl39pc.html) · [Yahoo Finance 재게재](https://finance.yahoo.com/markets/stocks/articles/credo-schedules-second-quarter-fiscal-140000718.html) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-2204-4 · 발견 · SAIL(세일포인트) 실적 발표 12/8 · 콜 22:30 — events.json 에 없음, money.json 도 지난 분기
+- 시각: 2026-11-15 22:04 KST
+- 내용: 세일포인트 보도자료(11/12, PR Newswire): FY27 3분기 실적을 미국 시간 **12/8(화) 장 시작 전** 발표, 콜 8:30 AM ET → 한국 시간 **12/8(화) 22:30 콜**. 원문 인용: "before the US markets open on Tuesday, December 8, 2026", "SailPoint will host a conference call that day at 8:30 a.m. Eastern Time". 별개로 money.json SAIL 은 "FY27 1분기 · 2~4월"인데 9/9에 2분기(5~7월)가 이미 나옴(메모에 2분기 매출만 적혀 있음). 2분기 품목별 숫자는 원문 확인 못 함.
+- 출처: [회사 보도자료 (StockTitan 재게재, 이번 차례 본문 열어 확인)](https://www.stocktitan.net/news/SAIL/sail-point-announces-date-of-fiscal-third-quarter-2027-earnings-90qrbdo9dkzr.html) · [TradingView 재게재](https://www.tradingview.com/news/prnewswire:abc809fd0997d:0-sailpoint-announces-date-of-fiscal-third-quarter-2027-earnings-conference-call-and-participation-in-upcoming-investor-conference/) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음 (일정) / 확인 못 함 (2분기 품목별 숫자)
+- 요청: Quill 확인 바람
+
+### A-20261115-2204-5 · 알림 · CEG money.json 1분기(1~3월) 그대로 — 3분기 보도자료엔 지역별 매출 없음
+- 시각: 2026-11-15 22:04 KST
+- 내용: money.json CEG 는 "2026년 1분기 · 1~3월" 지역별 매출 + 메모에 3분기 전체 매출(Zacks). 11/9 회사 3분기 보도자료를 열어 보니 지역별 매출 표도, 전체 영업수익 숫자도 없음(조정 영업이익 주당 5.06달러, 순이익 18.35억 달러만). 지역별 숫자는 2·3분기 10-Q에 있을 가능성이 높지만 확인 못 함. 메모의 "1~3월분이 가장 최근 공개 자료"는 10-Q를 보면 틀릴 수 있어요. 출처도 집계 사이트(OpenCapital·Zacks)뿐.
+- 출처: [컨스텔레이션 3분기 보도자료 (이번 차례 본문 열어 확인)](https://www.constellationenergy.com/news/2026/11/constellation-reports-third-quarter-2026-results.html) · 공식 여부: 공식
+- 확신도: 중간
+- 요청: Quill 확인 바람 (3분기 10-Q 지역별 매출 확인 후 갱신 여부 판단)
+
+### A-20261115-2204-6 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-15 22:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL 11/17, NVDA 11/18, PANW 11/19, ADI 11/24, FLY 11/25)과 48시간 안 끝난 일정(AMAT 11/13, RKLB 11/14)은 앞 항목 이후 새 변동 못 찾음. (2) 확인 못 함: ACN FY27 1분기 발표일(회사 공지 아직 못 찾음), FDX FY27 2분기 발표일, SPCX 스타십 16번째 비행 날짜, RKLB 다음(101번째) 일렉트론 발사 일정. (3) CGNX money.json 은 업종 비율을 연간 기준으로 쓴다고 메모에 밝혀 있어 따로 적지 않음.
+- 출처: 없음 (검색 결과 공식 공지 없음)
+- 확신도: 확인 못 함
