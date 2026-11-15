@@ -143,3 +143,34 @@
 - 내용: (1) CSCO: 시스코 뉴스룸 "Cisco Reports First Quarter Earnings"(2026-11) 제목은 확인했으나 제품군별 매출은 본문을 열지 못해 확인 못 함. MO·NOC 도 SEC 원문을 열지 못함 → 세 곳 모두 그대로(Q-20261115-1734-3 · 1734-4 · 1834-1). (2) 2차 출처 → 공시 원문 링크 교체도 원문을 열어 숫자를 대조해야 해서 이번엔 못 했어요. 웹 페이지 읽기가 되면 CSCO·MO·NOC 부터, 그다음 출처 교체를 차례로 할게요.
 - 출처: [시스코 1분기 실적 (뉴스룸)](https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html) · [시스코 FY27 1분기 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000858877/000085887726000170/exhibit991pressrelease-q1f.htm) · 공식 여부: 공식 (제목만 확인)
 - 확신도: 확인 못 함
+
+### Q-20261115-1934-0 · 알림 · 네 차례 연속 웹 페이지 열기 실패 — 앱 데이터 변경 없음
+- 시각: 2026-11-15 19:45 KST
+- 내용: 이번 실행에서도 웹 페이지 읽기가 모두 실패했어요(financialcontent.com · ir.zscaler.com · globenewswire.com · stocktitan.net · investors.netskope.com · 브로드컴·마벨 IR · finviz — "권한 요청에 응답이 없음(PROVENANCE_REQUIRED)", 무인 실행이라 승인할 사람이 없음). Archer 차례(19:04)에는 financialcontent·ir.zscaler·stocktitan 이 열렸지만 Quill 차례에선 같은 주소가 막혔어요. 웹 검색에는 이번 분기(FY27 3분기·1분기) 일정 공지 제목도 나오지 않고 작년 공지만 나왔어요. 그래서 이번 대상(A-20261115-1904-1~4)은 모두 보류했고 data/*.json·index.html 은 건드리지 않았어요. 앞 차례 보류 항목(A-20261115-1504-1~7, 1704-1~5, 1804-1~7, V-20261115-1821-7)도 그대로 보류예요(AVGO·MRVL 원문 재시도 실패).
+- 출처: 없음 (실행 환경 문제)
+- 확신도: 높음
+- 요청: Conrad — Q-20261115-1834-0 과 같은 문제가 네 번째예요. 대표 보고에 "무인 실행 Quill 의 웹 페이지 읽기 허용(회사 IR·sec.gov·보도자료 배포 사이트)"을 승인 대기로 올려 주세요. 허용 전까지 Quill 은 일정·숫자 반영을 할 수 없어요.
+
+### Q-20261115-1934-1 · 보류 · A-20261115-1904-1 에 대해 — RBRK 12/1 07:00 새 일정
+- 시각: 2026-11-15 19:45 KST
+- 내용: 루브릭 보도자료 재게재(FinancialContent)를 열지 못했고(대체 주소 Yahoo 는 같은 권한 문제로 시도 불가), 웹 검색에도 FY27 3분기 일정 공지는 나오지 않음(FY26 공지만). 발표일(미국 11/30 장 마감 후)·콜 시각(2:00 PM PT) 확인 못 함 → 추가 보류.
+- 출처: [회사 보도자료 (FinancialContent 재게재)](https://www.financialcontent.com/article/bizwire-2026-11-11-rubrik-to-report-third-quarter-fiscal-2027-financial-results-on-november-30-2026) · 공식 여부: 공식 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1934-2 · 보류 · A-20261115-1904-2 에 대해 — ZS 12/3 06:30 새 일정
+- 시각: 2026-11-15 19:45 KST
+- 내용: 지스케일러 IR·GlobeNewswire 원문을 열지 못함. 웹 검색에는 투자자의 날 보도자료(1분기 전망 재확인)만 나오고 이번 콜 일정 공지는 나오지 않음. 발표일(미국 12/2 장 마감 후)·콜 시각(1:30 PM PT) 확인 못 함 → 추가 보류.
+- 출처: [지스케일러 IR 보도자료](https://ir.zscaler.com/news-releases/news-release-details/zscaler-host-first-quarter-fiscal-year-2027-earnings-conference) · [GlobeNewswire](https://www.globenewswire.com/news-release/2026/11/05/3396397/0/en/zscaler-to-host-first-quarter-fiscal-year-2027-earnings-conference-call.html) · 공식 여부: 공식 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1934-3 · 보류 · A-20261115-1904-3 에 대해 — NTSK 12/3 07:00 새 일정
+- 시각: 2026-11-15 19:45 KST
+- 내용: 넷스코프 보도자료 재게재(StockTitan)·넷스코프 IR 을 열지 못함. 웹 검색에는 2분기 실적·2분기 일정 공지만 나옴. 발표일(미국 12/2 장 마감 후)·콜 시각(2:00 PM PT) 확인 못 함 → 추가 보류.
+- 출처: [회사 보도자료 (StockTitan 재게재)](https://www.stocktitan.net/news/NTSK/netskope-to-report-fiscal-third-quarter-2027-financial-results-on-a24j9vajst29.html) · 공식 여부: 공식 보도자료 재게재 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1934-4 · 보류 · A-20261115-1904-4 에 대해 — S(센티넬원) 12/4 07:00 새 일정
+- 시각: 2026-11-15 19:45 KST
+- 내용: 센티넬원 보도자료 재게재(FinancialContent)를 열지 못함. 웹 검색에는 FY26 3분기·FY27 2분기 일정 공지만 나옴. 발표일(미국 12/3 장 마감 후)·콜 시각(2:00 PM PT) 확인 못 함 → 추가 보류.
+- 출처: [회사 보도자료 (FinancialContent 재게재)](https://www.financialcontent.com/article/bizwire-2026-11-12-sentinelone-announces-date-of-fiscal-third-quarter-2027-financial-results-conference-call-and-participation-in-upcoming-investor-conference) · 공식 여부: 공식 보도자료 재게재 (본문 확인 못 함)
+- 확신도: 확인 못 함
