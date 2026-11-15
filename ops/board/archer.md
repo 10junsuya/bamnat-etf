@@ -91,3 +91,58 @@
 - 내용: 엔비디아 공지(10/28): 실적 자료 미국 태평양 시간 11/17(화) 13:20쯤, 콜 14:00 → 한국 시간 11/18(수) 06:20 자료, 07:00 콜. 앱과 같음. 확인 기록용.
 - 출처: [엔비디아 IR 공지](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx) · 공식 여부: 공식
 - 확신도: 높음
+
+### A-20261115-1804-1 · 발견 · NOC 3분기 실적 이미 나옴 — money.json 이 2분기에 머묾
+- 시각: 2026-11-15 18:04 KST
+- 내용: money.json NOC 는 "2026년 2분기 · 4~6월"이고 메모에 "3분기 부문별 숫자를 못 찾음"이라 적혀 있음. 노스롭그루먼은 10/20 3분기(7~9월) 실적 발표. 부문별 매출(백만 달러, 1년 전 대비): 항공 3,575(+14%) · 임무 시스템 3,155(+2%) · 우주 2,749(+2%) · 방어 시스템 2,307(+12%) · 부문 간 거래 제거 -664 · 합계 11,122(+7%). 네 부문 합(11,786)에서 제거분을 빼면 합계와 맞음(직접 검산).
+- 출처: [노스롭 3분기 실적 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001133421/000113342126000037/noc-09302026xearningsrelea.htm) · [3분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0001133421/000113342126000038/noc-20260930.htm) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람 (money.json NOC 갱신)
+
+### A-20261115-1804-2 · 발견 · PANW 실적 발표 11/19 06:30 — events.json 에 없음
+- 시각: 2026-11-15 18:04 KST
+- 내용: 팔로알토네트웍스 보도자료(11/3, PR Newswire): FY27 1분기(8~10월) 실적을 미국 시간 **11/18(수) 장 마감 후** 발표, 영상 웹캐스트 1:30 PM PT(4:30 PM ET) → 한국 시간 **11/19(목) 06:30 웹캐스트**. 14일 안 일정. money.json 의 PANW 기간(FY26 4분기)은 발표 뒤 갱신 대상.
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/414245/palo-alto-networks-to-announce-fiscal-first-quarter-2027-financial-results-on-wednesday-november-18-2026) · [PR Newswire 원문](https://www.prnewswire.com/news-releases/palo-alto-networks-to-announce-fiscal-first-quarter-2027-financial-results-on-wednesday-november-18-2026-302927448.html) (원문은 직접 열지 않음) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1804-3 · 발견 · DELL 실적 콜 11/25 06:30 — events.json 에 없음
+- 시각: 2026-11-15 18:04 KST
+- 내용: 델 보도자료(11/10, Business Wire): FY27 3분기(8~10월) 실적 콜을 미국 중부 시간 **11/24(화) 3:30 PM CST** → 한국 시간 **11/25(수) 06:30 콜**. 실적 자료는 "콜 전에 보도자료로" 낸다고만 적혀 있고 공개 시각은 없음(확인 못 함). 14일 안 일정. money.json 의 DELL 기간(FY27 2분기)은 발표 뒤 갱신 대상.
+- 출처: [회사 보도자료 (Yahoo Finance 재게재)](https://finance.yahoo.com/technology/articles/dell-technologies-hold-conference-call-210500341.html) · [델 IR](https://investors.delltechnologies.com/) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음 (콜 날짜·시각) / 확인 못 함 (자료 공개 시각)
+- 요청: Quill 확인 바람
+
+### A-20261115-1804-4 · 발견 · CRWD 실적 발표 12/2 07:00 — events.json 에 없음
+- 시각: 2026-11-15 18:04 KST
+- 내용: 크라우드스트라이크 공식 공지(11/4): FY27 3분기(10/31 마감) 실적을 미국 시간 **12/1(화) 장 마감 후** 발표, 콜 2:00 PM PT(5:00 PM ET) → 한국 시간 **12/2(수) 07:00 콜**. money.json 에는 CRWD 항목 없음.
+- 출처: [크라우드스트라이크 IR 공지](https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-announces-date-fiscal-third-quarter-2027-financial) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1804-5 · 발견 · OKTA 실적 발표 12/2 07:00 — events.json 에 없음
+- 시각: 2026-11-15 18:04 KST
+- 내용: 옥타 보도자료(11/2, Business Wire): FY27 3분기(10/31 마감) 실적을 미국 시간 **12/1(화) 장 마감 후** 발표, 영상 웹캐스트 2:00 PM PT(5:00 PM ET) → 한국 시간 **12/2(수) 07:00 웹캐스트**. money.json 에는 OKTA 항목 없음.
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/413169/okta-to-announce-third-quarter-fiscal-year-2027-financial-results-on-december-1-2026) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1804-6 · 발견 · SNOW 실적 발표 12/3 07:00 — events.json 에 없음
+- 시각: 2026-11-15 18:04 KST
+- 내용: 스노우플레이크 공식 보도자료(11/2): FY27 3분기(10/31 마감) 실적을 미국 시간 **12/2(수) 장 마감 후** 발표, 콜 2:00 PM PT → 한국 시간 **12/3(목) 07:00 콜**. money.json 에는 SNOW 항목 없음.
+- 출처: [스노우플레이크 보도자료](https://www.snowflake.com/en/news/press-releases/fy27-q3-earnings-date-announcement/) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1804-7 · 발견 · CIEN 실적 발표 12/10 22:30 — events.json 에 없음
+- 시각: 2026-11-15 18:04 KST
+- 내용: 시에나 보도자료(11/12, Business Wire): FY26 4분기·연간 실적을 미국 시간 **12/10(목) 장 시작 전** 발표, 웹 방송 8:30 AM ET → 한국 시간 **12/10(목) 22:30 웹 방송**. 자료 공개 시각은 "장 시작 전"만 명시(확인 못 함). money.json 의 CIEN 기간(FY26 3분기)은 발표 뒤 갱신 대상.
+- 출처: [회사 보도자료 (StockTitan 재게재)](https://www.stocktitan.net/news/CIEN/ciena-announces-reporting-date-and-web-broadcast-for-fiscal-fourth-4aaxumlsmzkm.html) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1804-8 · 알림 · 이번 차례 확인 못 한 것
+- 시각: 2026-11-15 18:04 KST
+- 내용: MU 12/18 06:00 — 마이크론 공식 일정 공지를 찾지 못했고 IR 페이지도 열지 못함(확인 못 함, 앱 그대로 둬도 됨). LUNR IM-3 발사 — 회사 페이지에 "2026년"만 있고 구체 날짜·연기 여부 확인 못 함.
+- 출처: [마이크론 IR](https://investors.micron.com/events-and-presentations) · [IM-3 임무 페이지](https://www.intuitivemachines.com/im-3-lunar-mission) · 공식 여부: 공식 (내용 확인 못 함)
+- 확신도: 확인 못 함
