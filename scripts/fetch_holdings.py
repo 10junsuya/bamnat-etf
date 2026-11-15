@@ -68,8 +68,9 @@ def spy():
 def invesco(ticker):
     """Invesco 보유종목: JSON API → CSV 다운로드 순서로 시도. 실패하면 응답 앞부분을 오류에 남겨요."""
     notes = []
-    try:
-        raw = get(f"https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/{ticker}/holdings/fund?idType=ticker&interval=daily&productType=ETF")
+    for interval in ("daily", "monthly"):
+      try:
+        raw = get(f"https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/{ticker}/holdings/fund?idType=ticker&interval={interval}&productType=ETF")
         j = json.loads(raw)
         hs = j.get("holdings") or []
         items = [{"ticker": str(h.get("ticker") or "").replace(".", "-"), "name": str(h.get("issuerName") or h.get("name") or "").title(),
@@ -78,9 +79,9 @@ def invesco(ticker):
         items = [i for i in items if i["weight"] is not None]
         if items:
             return str(j.get("effectiveDate") or j.get("asOfDate") or ""), items
-        notes.append("json:" + raw[:160].decode("utf-8", "replace"))
-    except Exception as e:  # noqa: BLE001
-        notes.append(f"json:{type(e).__name__}:{str(e)[:80]}")
+        notes.append(f"json-{interval}:" + raw[:160].decode("utf-8", "replace"))
+      except Exception as e:  # noqa: BLE001
+        notes.append(f"json-{interval}:{type(e).__name__}:{str(e)[:80]}")
     raw = get(f"https://www.invesco.com/us/financial-products/etfs/holdings/main/holdings/0?audienceType=Investor&action=download&ticker={ticker}").decode("utf-8-sig", "replace")
     lines = raw.splitlines()
     hi = next((i for i, l in enumerate(lines[:15]) if "Weight" in l and ("Ticker" in l or "ticker" in l)), None)
