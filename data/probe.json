@@ -1,0 +1,86 @@
+{
+ "smh": {
+  "err": "HTTPError: HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error messag"
+ },
+ "schd_wallst": {
+  "status": 200,
+  "len": 51242,
+  "pct_cells": 38,
+  "tickers": [
+   "CVX",
+   "KO",
+   "MRK",
+   "PEP",
+   "TXN"
+  ],
+  "links": [
+   "/schwab/Prospect/research/etfs/schwabETF/index.asp?YYY101_z5K6INmijHmyop7FVDMq9/azsLtoJ9UfvNHDWzAB8WbVjKhq+VI1wsPaVFN2dsTN8XX4/r4SGYIvcLALPPNyQE871M8JHsw8M3T+/n3cR0M=&type=holdings&symbol=SCHD"
+  ],
+  "title": "SCHD Portfolio"
+ },
+ "schd_sam": {
+  "err": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ "funetf_465580": {
+  "status": 200,
+  "len": 813306,
+  "pct_cells": 29,
+  "tickers": [],
+  "links": [],
+  "title": "ACE 미국빅테크TOP7 Plus(465580)주가, 분배금,구성종목 | FunETF"
+ },
+ "funetf_381170": {
+  "err": "HTTPError: HTTP Error 404: Not Found"
+ },
+ "mirae_381170": {
+  "err": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ "tigeretf_381170": {
+  "err": "HTTPError: HTTP Error 403: Forbidden"
+ },
+ "ace_search": {
+  "status": 200,
+  "len": 100857,
+  "pct_cells": 0,
+  "tickers": [],
+  "links": [],
+  "title": "ACE ETF"
+ },
+ "soletf_list": {
+  "status": 200,
+  "len": 349592,
+  "pct_cells": 408,
+  "tickers": [],
+  "links": [
+   "/ko/fund/etf/210367",
+   "/ko/fund/etf/210728",
+   "/ko/fund/etf/210734",
+   "/ko/fund/etf/210811",
+   "/ko/fund/etf/210880",
+   "/ko/fund/etf/210884",
+   "/ko/fund/etf/210885",
+   "/ko/fund/etf/210890",
+   "/ko/fund/etf/210895",
+   "/ko/fund/etf/210896",
+   "/ko/fund/etf/210897",
+   "/ko/fund/etf/210908",
+   "/ko/fund/etf/210919",
+   "/ko/fund/etf/210930",
+   "/ko/fund/etf/210932",
+   "/ko/fund/etf/210934",
+   "/ko/fund/etf/210935",
+   "/ko/fund/etf/210940",
+   "/ko/fund/etf/210942",
+   "/ko/fund/etf/210945",
+   "/ko/fund/etf/210961",
+   "/ko/fund/etf/210972",
+   "/ko/fund/etf/210980",
+   "/ko/fund/etf/210981",
+   "/ko/fund/etf/211000"
+  ],
+  "title": "SOL ETF"
+ },
+ "indxx_tech10": {
+  "err": "HTTPError: HTTP Error 404: Not Found"
+ }
+}
