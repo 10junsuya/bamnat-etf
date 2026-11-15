@@ -193,3 +193,51 @@
 - 내용: (1) GEV: 검색에 나오는 "12/9 투자자 행사" 보도자료는 **2025년** 행사(2025-11-18 발표, 2025-12-09 개최)라 올해 일정 아님. 2026년 행사 공지는 확인 못 함. (2) ASTS 블루버드 14~16: 발사 일정 사이트(Space Launch Schedule, The Space Devs 자료)는 "Date/Time TBD · 2026년 12월 예상"으로만 표시 — 12/4 근거는 여전히 확인 못 함(A-20261115-1504-7 그대로). (3) ACN FY27 1분기 발표일 공지, SPCX 스타십 16번째 비행 날짜는 공식 자료 확인 못 함. (4) events.json 14일 안 일정(NVDA 11/18, FLY 11/25)·48시간 안 끝난 일정(AMAT 11/13, RKLB 11/14)은 앞 항목 이후 새 변동 없음.
 - 출처: [GE 버노바 2025 투자자 행사 공지](https://www.gevernova.com/news/press-releases/ge-vernova-host-investor-update-event-december-9) · [Space Launch Schedule 블루버드 14~16](https://www.spacelaunchschedule.com/launch/falcon-9-block-5-bluebird-14-16-block-2-9-11/) · 공식 여부: 공식(GEV) / 보도(발사 일정 사이트)
 - 확신도: 높음 (GEV 2025 행사) / 확인 못 함 (나머지)
+
+### A-20261115-2104-1 · 발견 · POWL 실적 발표 11/17 새벽 · 콜 11/18 01:00 — events.json 에 없음
+- 시각: 2026-11-15 21:04 KST
+- 내용: 파월인더스트리즈 보도자료(11/3, GlobeNewswire): FY26 4분기·연간(9/30 마감) 실적을 미국 시간 **11/16(월) 장 마감 후** 발표, 콜 **11/17(화) 11:00 AM ET** → 한국 시간 **11/17(화) 새벽 발표, 11/18(수) 01:00 콜**. 원문 인용: "on Monday, November 16, 2026 after the market closes", "on Tuesday, November 17, 2026 at 11:00 a.m. eastern time". 자료 공개 정확한 시각은 원문에 없음(확인 못 함). 14일 안 일정. money.json 의 POWL 기간(FY26 3분기 · 4~6월)은 발표 뒤 갱신 대상.
+- 출처: [회사 보도자료 (Finviz 재게재, 이번 차례 본문 열어 확인)](https://finviz.com/news/414733/powell-industries-announces-date-and-conference-call-for-fiscal-2026-fourth-quarter-and-full-year-results) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-2104-2 · 발견 · BABA 9월 분기 실적 발표 11/19 — events.json 에 없음
+- 시각: 2026-11-15 21:04 KST
+- 내용: 알리바바 공식 보도자료 목록(11/6 게시)에 "Alibaba Group Will Announce September Quarter 2026 Results on November 19, 2026" 가 있음. 발표 시각·시간대·콜 시각은 본문을 열지 못해 확인 못 함(한국 날짜도 시각을 알아야 확정). 14일 안 일정. money.json 의 BABA 기간(2026년 2분기 · 4~6월)은 발표 뒤 7~9월로 갱신 대상.
+- 출처: [알리바바 보도자료 목록](https://alibabagroup.com/news-press-releases) · [해당 보도자료 (이번 차례 열지 못함)](https://www.alibabagroup.com/en-US/document-2054756418245885952) · 공식 여부: 공식
+- 확신도: 높음 (날짜) / 확인 못 함 (시각)
+- 요청: Quill 확인 바람
+
+### A-20261115-2104-3 · 발견 · NTAP 실적 발표 12/2 07:30 — events.json 에 없음
+- 시각: 2026-11-15 21:04 KST
+- 내용: 넷앱 공식 보도자료(11/10): FY27 2분기(10/30 마감) 실적을 미국 시간 **12/1(화) 장 마감 후** 발표, 웹캐스트 2:30 PM PT → 한국 시간 **12/2(수) 07:30 웹캐스트**. 원문 인용: "After market close on December 1, 2026, NetApp (NASDAQ: NTAP) will announce financial results for the second quarter of fiscal year 2027, which ended October 30, 2026", "conference call Webcast at 2:30 p.m. Pacific Time". money.json 의 NTAP 기간(FY27 1분기 · 5~7월)은 발표 뒤 갱신 대상.
+- 출처: [넷앱 보도자료](https://www.netapp.com/newsroom/press-releases/news-rel-20261110-705988/) · [Finviz 재게재](https://finviz.com/news/419746/netapp-hosts-second-quarter-of-fiscal-year-2027-financial-results-webcast) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-2104-4 · 발견 · CRM 실적 발표 12/3 07:00 — events.json 에 없음
+- 시각: 2026-11-15 21:04 KST
+- 내용: 세일즈포스 IR 보도자료(11/10): FY27 3분기(8~10월) 실적을 미국 시간 **12/2(수) 장 마감 후** 발표, 생중계 2:00 PM PT(5:00 PM ET) → 한국 시간 **12/3(목) 07:00 생중계**. 원문 인용: "its third quarter fiscal 2027 results will be released on Wednesday, December 2, 2026, after the close of the market", "live broadcast at 2:00 p.m. (PT) / 5:00 p.m. (ET)". money.json 의 CRM 기간(FY27 2분기 · 5~7월)은 발표 뒤 갱신 대상. 참고: money.json CRM 출처가 집계 사이트(pulse2)뿐이라 갱신 때 SEC 8-K로 바꾸면 좋음.
+- 출처: [세일즈포스 IR 보도자료](https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Date-of-Third-Quarter-Fiscal-2027-Earnings-Release-and-Webcast/default.aspx) · [Yahoo Finance 재게재](https://finance.yahoo.com/markets/stocks/articles/salesforce-announces-date-third-quarter-213000861.html) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-2104-5 · 발견 · SNPS 실적 발표 12/9 07:00 — events.json 에 없음
+- 시각: 2026-11-15 21:04 KST
+- 내용: 시놉시스 보도자료(11/5, PR Newswire): FY26 4분기·연간 실적을 미국 시간 **12/8(화) 장 마감 후** 발표, 콜 2:00 PM PT(5:00 PM ET) → 한국 시간 **12/9(수) 07:00 콜**. 원문 인용: "will report results for the fourth quarter and fiscal year 2026 on Tuesday, Dec. 8, 2026, after market close", "conference call at 2:00 p.m. Pacific Time / 5:00 p.m. Eastern Time". money.json 의 SNPS 기간(FY26 3분기 · 5~7월)은 발표 뒤 갱신 대상.
+- 출처: [회사 보도자료 (Finviz 재게재, 이번 차례 본문 열어 확인)](https://finviz.com/news/417651/synopsys-announces-earnings-release-date-for-fourth-quarter-and-fiscal-year-2026) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-2104-6 · 발견 · FPS(포전트) money.json 이 두 분기 전(1~3월)에 머묾
+- 시각: 2026-11-15 21:04 KST
+- 내용: money.json FPS 는 "FY26 3분기 · 2026년 1~3월"(회계연도 6/30 마감). 그 뒤 두 번 발표됨: (1) 9/15 FY26 4분기(4~6월) 매출 4억 6,167만 달러(+94%), (2) **11/12 FY27 1분기(7~9월) 매출 4억 7,857만 달러(+69%)**, FY27 매출 전망 24.5~26.5억 달러로 올림(이전 24~26억). 원문 인용: "Forgent reported first quarter revenues of $479 million, an increase of $195 million, or 69%." 두 보도자료 모두 품목별(맞춤형 배전·파워트레인·표준·서비스) 달러 숫자는 없음 — 9/15 자료에 "파워트레인이 4분기 매출의 거의 3분의 1"이라는 문장만 있음. 품목별 숫자는 10-Q 확인 필요(확인 못 함). money.json 현재 출처도 집계 사이트(OpenCapital)라 원문 교체 대상.
+- 출처: [포전트 FY27 1분기 실적 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0002080126/000208012626000045/exhibit991earningsrelease_.htm) · [FY26 4분기 실적 (Business Wire 재게재)](https://www.01net.it/forgent-reports-record-fourth-quarter-and-full-year-2026-results-exceeds-high-end-of-guidance-and-enters-fiscal-2027-with-all-time-high-backlog/) · 공식 여부: 공식
+- 확신도: 높음 (기간이 지남·합계 매출) / 확인 못 함 (품목별 숫자)
+- 요청: Quill 확인 바람 (money.json FPS 갱신)
+
+### A-20261115-2104-7 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-15 21:04 KST
+- 내용: (1) RKLB 뉴트론 첫 발사: 회사가 10/14 투자자 업데이트에서 2027년으로 미룸, 새 목표일은 2027년 1분기 무렵 제시 예정(Via Satellite 보도) — events.json 에 뉴트론 일정이 없어 앱 변경 사항 없음, 기록용. (2) ACN FY27 1분기 발표일·SPCX 스타십 16번째 비행 날짜·HD 자료 공개 시각은 이번에도 공식 자료 확인 못 함. (3) events.json 14일 안 일정(HD·NVDA·PANW·ADI·FLY)과 48시간 안 끝난 일정(AMAT·RKLB)은 앞 항목 이후 새 변동 없음.
+- 출처: [Via Satellite 뉴트론 기사](https://www.satellitetoday.com/launch/2026/10/15/rocket-labs-neutron-debut-now-delayed-to-2027/) · 공식 여부: 보도
+- 확신도: 중간 (뉴트론) / 확인 못 함 (나머지)
