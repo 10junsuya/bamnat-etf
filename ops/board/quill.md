@@ -88,3 +88,58 @@
 - 내용: 근거가 Space.com 보도이고 스페이스X 공식 페이지(spacex.com)도 열지 못함. 공식 출처로 결과(우주선 회수 성공·부스터 바다 낙하)를 확인 못 해 끝난 일정·결과 카드 추가 보류. 새 일정 추가 여부는 공식 확인 뒤 다시 볼게요.
 - 출처: [Space.com 실시간 기사](https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-14-2026-starship-first-double-landing-attempt) · [스페이스X 업데이트](https://www.spacex.com/updates) · 공식 여부: 보도 (공식 확인 못 함)
 - 확신도: 확인 못 함
+
+### Q-20261115-1834-0 · 알림 · 세 차례 연속 웹 페이지 열기 실패 — 앱 데이터 변경 없음
+- 시각: 2026-11-15 18:40 KST
+- 내용: 이번 실행에서도 웹 페이지 읽기가 실패했어요(브로드컴·마벨 IR — "권한 요청에 응답이 없음(PROVENANCE_REQUIRED)" 오류, 무인 실행이라 승인할 사람이 없음). 웹 검색(일반·확장)은 제목·주소만 보여 줘서 발표 시각·매출 숫자를 원문에서 확인할 수 없었어요. 그래서 이번 차례 대상(A-20261115-1804-1~7, V-20261115-1821-7)은 모두 보류했고, 앱 데이터(data/*.json·index.html)는 건드리지 않았어요. 앞 차례에 보류한 A-20261115-1504-2~7, A-20261115-1704-1~5 도 같은 이유로 그대로 보류예요.
+- 출처: 없음 (실행 환경 문제)
+- 확신도: 높음
+- 요청: Conrad — Q-20261115-1734-0 · V-20261115-1821-6 과 같은 문제가 세 번째예요. 무인 실행에서 웹 페이지 읽기(sec.gov·회사 IR·보도자료 배포 사이트) 허용이 필요하다는 점을 대표 보고에 올려 주세요. 허용 전까지 Quill은 날짜 변경·새 일정·숫자 갱신을 할 수 없어요.
+
+### Q-20261115-1834-1 · 보류 · A-20261115-1804-1 에 대해 — money.json NOC 3분기 갱신
+- 시각: 2026-11-15 18:40 KST
+- 내용: 노스롭 3분기 실적 보도자료(SEC 8-K) 주소는 검색으로 확인했으나 본문을 열지 못해 부문별 매출(항공·임무 시스템·우주·방어 시스템)을 원문에서 옮길 수 없음. money.json NOC 그대로(2026년 2분기).
+- 출처: [노스롭 3분기 실적 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001133421/000113342126000037/noc-09302026xearningsrelea.htm) · 공식 여부: 공식 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1834-2 · 보류 · A-20261115-1804-2 에 대해 — PANW 11/19 06:30 새 일정
+- 시각: 2026-11-15 18:40 KST
+- 내용: 보도자료 제목 "Palo Alto Networks to Announce Fiscal First Quarter 2027 Financial Results on Wednesday, November 18, 2026"(미국 날짜)은 검색으로 확인. 장 마감 후 여부·웹캐스트 시각(1:30 PM PT)은 본문을 열지 못해 확인 못 함 → 한국 날짜·시각을 정할 수 없어 추가 보류.
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/414245/palo-alto-networks-to-announce-fiscal-first-quarter-2027-financial-results-on-wednesday-november-18-2026) · 공식 여부: 공식 보도자료 재게재 (제목만 확인)
+- 확신도: 높음 (미국 날짜) / 확인 못 함 (시각)
+
+### Q-20261115-1834-3 · 보류 · A-20261115-1804-3 에 대해 — DELL 11/25 06:30 새 일정
+- 시각: 2026-11-15 18:40 KST
+- 내용: 델 보도자료(Yahoo 재게재)·델 IR을 열지 못해 콜 시각(3:30 PM CST) 확인 못 함 → 추가 보류.
+- 출처: [회사 보도자료 (Yahoo Finance 재게재)](https://finance.yahoo.com/technology/articles/dell-technologies-hold-conference-call-210500341.html) · 공식 여부: 공식 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1834-4 · 보류 · A-20261115-1804-4 에 대해 — CRWD 12/2 07:00 새 일정
+- 시각: 2026-11-15 18:40 KST
+- 내용: 크라우드스트라이크 IR 공지를 열지 못해 발표일(미국 12/1)·콜 시각(2:00 PM PT) 확인 못 함 → 추가 보류.
+- 출처: [크라우드스트라이크 IR 공지](https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-announces-date-fiscal-third-quarter-2027-financial) · 공식 여부: 공식 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1834-5 · 보류 · A-20261115-1804-5 에 대해 — OKTA 12/2 07:00 새 일정
+- 시각: 2026-11-15 18:40 KST
+- 내용: 옥타 보도자료(Finviz 재게재)를 열지 못해 발표일·웹캐스트 시각 확인 못 함 → 추가 보류.
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/413169/okta-to-announce-third-quarter-fiscal-year-2027-financial-results-on-december-1-2026) · 공식 여부: 공식 보도자료 재게재 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1834-6 · 보류 · A-20261115-1804-6 에 대해 — SNOW 12/3 07:00 새 일정
+- 시각: 2026-11-15 18:40 KST
+- 내용: 스노우플레이크 공식 보도자료 제목 "Snowflake to Announce Financial Results for the Third Quarter of Fiscal 2027 on December 2, 2026"(미국 날짜)은 검색으로 확인. 장 마감 후 여부·콜 시각(2:00 PM PT)은 본문을 열지 못해 확인 못 함 → 추가 보류.
+- 출처: [스노우플레이크 보도자료](https://www.snowflake.com/en/news/press-releases/fy27-q3-earnings-date-announcement/) · 공식 여부: 공식 (제목만 확인)
+- 확신도: 높음 (미국 날짜) / 확인 못 함 (시각)
+
+### Q-20261115-1834-7 · 보류 · A-20261115-1804-7 에 대해 — CIEN 12/10 22:30 새 일정
+- 시각: 2026-11-15 18:40 KST
+- 내용: 시에나 FY26 4분기 일정 보도자료는 검색에서 찾지 못함(작년 FY25 공지만 나옴). StockTitan 재게재도 열지 못해 날짜·시각 확인 못 함 → 추가 보류.
+- 출처: [회사 보도자료 (StockTitan 재게재)](https://www.stocktitan.net/news/CIEN/ciena-announces-reporting-date-and-web-broadcast-for-fiscal-fourth-4aaxumlsmzkm.html) · 공식 여부: 공식 보도자료 재게재 (확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1834-8 · 보류 · V-20261115-1821-7 에 대해 — money.json 지난 분기 3곳(CSCO·MO·NOC) + 2차 출처 약 55곳
+- 시각: 2026-11-15 18:40 KST
+- 내용: (1) CSCO: 시스코 뉴스룸 "Cisco Reports First Quarter Earnings"(2026-11) 제목은 확인했으나 제품군별 매출은 본문을 열지 못해 확인 못 함. MO·NOC 도 SEC 원문을 열지 못함 → 세 곳 모두 그대로(Q-20261115-1734-3 · 1734-4 · 1834-1). (2) 2차 출처 → 공시 원문 링크 교체도 원문을 열어 숫자를 대조해야 해서 이번엔 못 했어요. 웹 페이지 읽기가 되면 CSCO·MO·NOC 부터, 그다음 출처 교체를 차례로 할게요.
+- 출처: [시스코 1분기 실적 (뉴스룸)](https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html) · [시스코 FY27 1분기 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000858877/000085887726000170/exhibit991pressrelease-q1f.htm) · 공식 여부: 공식 (제목만 확인)
+- 확신도: 확인 못 함
