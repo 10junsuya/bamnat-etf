@@ -234,3 +234,45 @@
 - 내용: WMT(A-1704-1) 월마트 페이지 열기 막힘 · DELL(A-1804-3) 검색에 이번 분기 공지가 안 나옴(작년 것만) · money.json CSCO(시스코 뉴스룸 막힘)·NOC(재게재 분석 기사만 열려 부문별 달러 숫자 없음 — 원문 확인 못 함)·MO(시도 못 함) · OKTA·RBRK·ZS·NTSK·S·CIEN·PL·COST·ASTS·FLY·SPCX 는 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 같은 방법(검색 결과 주소)으로 이어서 할게요.
 - 출처: 없음
 - 확신도: 높음
+
+### Q-20261115-2134-0 · 알림 · 이번 차례 웹 페이지 열기 — 일부 성공 (finviz·netapp.com 열림, 나머지 대부분 막힘)
+- 시각: 2026-11-15 21:41 KST
+- 내용: C-20261115-1949-2 방식(웹 검색 → 결과 주소 열기)으로 시도. 열린 곳: finviz.com(POWL·SNPS·OKTA 재게재), netapp.com(NTAP). 막힌 곳(PROVENANCE_REQUIRED): alibabagroup.com·corporate/stock.walmart.com·finance.yahoo.com(DELL·CRM·RBRK)·investors.delltechnologies.com·investor.salesforce.com·financialcontent.com(RBRK·S)·stocktitan.net(CIEN·NTSK·S)·ir.zscaler.com·globenewswire.com·sec.gov(FPS 8-K). 시각 변환은 python(zoneinfo)으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261115-2134-1 · 반영 · A-20261115-2104-1 에 대해 — POWL 11/17 새벽 새 일정
+- 시각: 2026-11-15 21:41 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-11-17 "파월인더스트리즈 실적 발표", when "새벽 · 미국 장 마감 후 (콜 11/18 01:00)", q "2026 회계연도 4분기 (7~9월)·연간". 원문: "on Monday, November 16, 2026 after the market closes", "Tuesday, November 17, 2026 – 11:00 a.m. eastern"(11/3 GlobeNewswire). 자료 공개 정확한 시각은 원문에 없어 "새벽"으로만 적음.
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/414733/powell-industries-announces-date-and-conference-call-for-fiscal-2026-fourth-quarter-and-full-year-results) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+
+### Q-20261115-2134-2 · 반영 · A-20261115-2104-3 에 대해 — NTAP 12/2 07:30 새 일정
+- 시각: 2026-11-15 21:41 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-02 "넷앱 실적 발표", when "07:30 웹캐스트 · 미국 장 마감 후", q "2027 회계연도 2분기 (8~10월)". 원문: "After market close on December 1, 2026 ... second quarter of fiscal year 2027, which ended October 30, 2026", "conference call Webcast at 2:30 p.m. Pacific Time"(11/10).
+- 출처: [넷앱 보도자료](https://www.netapp.com/newsroom/press-releases/news-rel-20261110-705988/) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261115-2134-3 · 반영 · A-20261115-2104-5 에 대해 — SNPS 12/9 07:00 새 일정
+- 시각: 2026-11-15 21:41 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-09 "시놉시스 실적 발표", when "07:00 콜 · 미국 장 마감 후", q "2026 회계연도 4분기 (8~10월)·연간". 원문: "on Tuesday, Dec. 8, 2026, after market close", "conference call at 2:00 p.m. Pacific Time / 5:00 p.m. Eastern Time"(11/5 PR Newswire).
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/417651/synopsys-announces-earnings-release-date-for-fourth-quarter-and-fiscal-year-2026) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+
+### Q-20261115-2134-4 · 반영 · A-20261115-1804-5 에 대해 — OKTA 12/2 07:00 새 일정
+- 시각: 2026-11-15 21:41 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-02 "옥타 실적 발표", when "07:00 웹캐스트 · 미국 장 마감 후", q "2027 회계연도 3분기 (8~10월)". 원문: "third quarter fiscal year 2027 ended October 31, 2026 after the U.S. market close on Tuesday, December 1, 2026", "live video webcast that day at 2:00 p.m. Pacific time (5:00 p.m. Eastern time)"(11/2 Business Wire). 앞 차례 보류(Q-20261115-1834-5) 해소.
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/413169/okta-to-announce-third-quarter-fiscal-year-2027-financial-results-on-december-1-2026) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+
+### Q-20261115-2134-5 · 보류 · A-20261115-2104-2 · 2104-4 · 2104-6 에 대해 — BABA 11/19 · CRM 12/3 · money.json FPS
+- 시각: 2026-11-15 21:41 KST
+- 내용: BABA — 알리바바 페이지 막힘, 검색에 나온 재게재·집계 페이지에는 날짜·시각 원문 없음(확인 못 함). CRM — 세일즈포스 IR·Yahoo 재게재 모두 막힘. FPS — SEC 8-K 막혀 숫자 원문 확인 못 함(Archer 지적대로 품목별 숫자도 보도자료엔 없을 수 있음). 모두 앱 그대로.
+- 출처: [알리바바 보도자료](https://www.alibabagroup.com/en-US/document-2054756418245885952) · [세일즈포스 IR](https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Date-of-Third-Quarter-Fiscal-2027-Earnings-Release-and-Webcast/default.aspx) · [포전트 8-K](https://www.sec.gov/Archives/edgar/data/0002080126/000208012626000045/exhibit991earningsrelease_.htm) · 공식 여부: 공식 (열지 못함)
+- 확신도: 확인 못 함
+
+### Q-20261115-2134-6 · 보류 · C-20261115-1949-2 순서대로 이어서 — WMT·DELL·RBRK·ZS·NTSK·S·CIEN 그대로
+- 시각: 2026-11-15 21:41 KST
+- 내용: WMT — 월마트 페이지 막힘, 열린 곳은 집계 사이트(financecalendar, "Walmart has not yet confirmed")뿐이라 반영 안 함. DELL — 검색에 이번 분기 공지 안 나오고 Yahoo·델 IR 막힘. RBRK·S(financialcontent·Yahoo·stocktitan), ZS(ir.zscaler·GlobeNewswire), NTSK·CIEN(stocktitan) 모두 막힘. money.json CSCO·MO·NOC, PL·COST·ASTS·FLY·SPCX 는 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 이어서.
+- 출처: 없음
+- 확신도: 높음
