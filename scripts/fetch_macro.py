@@ -145,11 +145,16 @@ def main():
                 if int(d[5:7]) in (1, 3, 5, 6, 7, 9, 10, 12):
                     mm[d[:7]] = r1(v, 2)
             x["series"] = [[k, v] for k, v in sorted(mm.items())][-24:]
+            x["hist"] = [v for _, v in x["series"][-6:]]
+            x["a"], x["p"] = x["hist"][-1], x["hist"][-2]  # 직전 회의 때 금리
             return x
         run("fomc", fomc)
         run("us10y", lambda: market(fred("DGS10", 800), 2, "FRED DGS10"))
         run("us2y", lambda: market(fred("DGS2", 800), 2, "FRED DGS2"))
-        run("spread", lambda: market(fred("T10Y2Y", 800), 2, "FRED T10Y2Y"))
+        def spread():
+            a, b = dict(fred("DGS10", 800)), dict(fred("DGS2", 800))
+            return market([(d, a[d] - b[d]) for d in sorted(a) if d in b], 2, "FRED DGS10−DGS2")
+        run("spread", spread)
         run("vix", lambda: market(fred("VIXCLS", 800), 1, "FRED VIXCLS (CBOE)"))
         run("wti", lambda: market(fred("DCOILWTICO", 800), 1, "FRED DCOILWTICO (EIA)"))
     else:
@@ -158,10 +163,10 @@ def main():
         def bok():
             o = ecos("722Y001", "0101000", 30)
             chg = [o[0]] + [o[i] for i in range(1, len(o)) if o[i][1] != o[i - 1][1]]
-            return {"a": r1(o[-1][1], 2), "p": r1(chg[-2][1], 2) if len(chg) >= 2 else r1(o[-1][1], 2),
+            return {"a": r1(o[-1][1], 2), "p": r1(o[-2][1], 2),
                     "hist": [r1(v, 2) for _, v in o[-6:]], "ref": mon(o[-1][0]), "asof": o[-1][0], "src": "ECOS 722Y001"}
         run("bok", bok)
-        run("kcpi", lambda: monthly("kcpi", yoy_series(ecos("901Y009", "0", 30)), 1, "ECOS 901Y009"))
+        run("kcpi", lambda: monthly("kcpi", yoy_series(ecos("901Y009", "0", 52)), 1, "ECOS 901Y009"))
     else:
         errors.append("ECOS_API_KEY 없음")
     out = {"generated_at_kst": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "ind": ind, "errors": errors}

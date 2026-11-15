@@ -539,7 +539,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
     </div>
   </div>
 
-  <div class="banner" id="protoBanner">프로토타입이에요. 모든 숫자·일정·뉴스는 <b>샘플</b>이고 실제 시세가 아니에요.</div>
+  <div class="banner" id="protoBanner">만드는 중이에요. 미국 시세·구성종목·매크로 지표는 실제 값이고, <b>‘샘플’</b> 표시가 있는 숫자와 예시 뉴스는 아직 실제가 아니에요.</div>
 
   <main id="view"></main>
 
@@ -1851,6 +1851,19 @@ function syncFxInd(){ const v = IND.usdkrw; if(!v || !okn(FX.now)) return;
   if(h.length>=2){ v.spark = h.slice(-11).map(x=>+x.toFixed(1)); v.spark[v.spark.length-1] = v.now; v.chg = +(v.now - v.spark[v.spark.length-2]).toFixed(1); }
 }
 syncFxInd();
+/* 매크로 실제 값: data/macro.json (FRED·한국은행 ECOS). 시장 예상치·발표 후 반응은 아직 샘플이라 따로 표시해요 */
+const MACRO = readData("d-macro") || {};
+function applyMacro(){
+  for(const [k,m] of Object.entries(MACRO.ind||{})){ const v = IND[k]; if(!v || !m) continue;
+    v.real = true; v.asof = m.asof; v.srcSeries = m.src || ""; v.rnote = m.note || "";
+    if(m.a!=null && v.last){ v.last = {a:m.a, f:null, p:m.p}; v.hist = m.hist; if(m.ref) v.ref = m.ref; v.noCons = true; delete v.core; }
+    if(m.now!=null){ v.now = m.now; v.chg = m.chg; v.spark = m.spark; }
+    if(m.series && m.series.length) v.series = m.series;
+  }
+}
+applyMacro();
+const asofTxt = v => v.g==="mkt" ? mdTxt(v.asof) : (v.ref || mdTxt(v.asof));
+const realTag = v => v.real ? `실제 · ${asofTxt(v)} 기준 · ${v.srcSeries.split(" ")[0]}${v.rnote?` · ${v.rnote}`:""}` : "샘플 숫자";
 
 IND.vix.cc = "us"; IND.us10y.cc = "us";
 /* 구간 해석·연결 고리·다음에 볼 것 (일반적인 해석, 투자 권유 아님) */
@@ -1904,7 +1917,7 @@ const IND_X = {
     chain:["한국 물가","한국은행 금리 판단","한미 금리 차이","원/달러 환율","해외 ETF 원화 가치"], sens:"fx",
     watch:["근원물가 (농산물·석유류 제외)","석유류·농축수산물: 환율과 날씨에 크게 흔들려요","생활물가지수: 체감 물가에 가까워요"]},
   us2y:{min:1, max:6, zones:[[2.5,"낮음","금리가 크게 내려갈 거라는 기대가 반영된 수준이에요."],[3.75,"보통","중립 금리 근처의 기대예요."],[4.75,"높은 편","금리가 한동안 높게 유지될 거라는 기대예요."],[INF,"높음","2023년에는 5%를 넘기도 했어요."]],
-    note:`지금 미국 기준금리(상단)는 ${IND.fomc.last.a.toFixed(2)}%예요(샘플). 2년물이 이보다 낮으면 시장이 금리 인하를 예상한다는 뜻으로 많이 읽어요.`,
+    note:`지금 미국 기준금리(상단)는 ${IND.fomc.last.a.toFixed(2)}%예요${IND.fomc.real?"":"(샘플)"}. 2년물이 이보다 낮으면 시장이 금리 인하를 예상한다는 뜻으로 많이 읽어요.`,
     chain:["물가·고용 발표","금리 인하 기대","2년물 금리","달러·원/달러","내 해외 ETF"], sens:"rate"},
   spread:{min:-1.5, max:3, zones:[[0,"역전","장기 금리가 단기보다 낮은 상태예요. 경기침체 신호로 자주 언급되고, 2022~2024년에 길게 이어졌어요."],[0.5,"평평함","단기와 장기 금리가 비슷해요."],[1.5,"보통","정상적인 모양이에요."],[INF,"가파름","경기 회복 기대나 장기 물가·나라 빚 걱정이 클 때 나타나요."]],
     note:"역전 자체보다, 역전이 끝나고 다시 플러스로 돌아설 때를 더 주목하는 사람도 많아요.",
@@ -2120,7 +2133,7 @@ function histBars(ind){
   return `<svg viewBox="0 0 ${W} ${H+18}" width="100%" height="${H+18}" role="img" aria-label="최근 6번 발표 결과">${arr.map((v,i)=>{ const h=(v-mn)/(mx-mn||1)*(H-20)+14; return `<rect x="${(i*bw+8).toFixed(1)}" y="${(H-h).toFixed(1)}" width="${(bw-16).toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="var(--${i===arr.length-1?"accent":"muted"})" opacity="${i===arr.length-1?1:.35}"/><text x="${(i*bw+bw/2).toFixed(1)}" y="${(H-h-4).toFixed(1)}" text-anchor="middle" font-size="11" fill="var(--muted)">${v}</text>`; }).join("")}<text x="0" y="${H+14}" font-size="11" fill="var(--muted)">6번 전</text><text x="${W}" y="${H+14}" font-size="11" fill="var(--muted)" text-anchor="end">최근</text></svg>`;
 }
 function surpriseText(ind){
-  if(ind.last.f==null) return "시장 예상치를 따로 내지 않는 지표예요";
+  if(ind.last.f==null) return ind.noCons ? "시장 예상치는 아직 연결 전이에요" : "시장 예상치를 따로 내지 않는 지표예요";
   const d = ind.last.a - ind.last.f;
   if(Math.abs(d) < 1e-9) return "예상과 같았어요";
   const unit = ind.unit==="%" ? "%p" : ind.unit;
@@ -2181,7 +2194,7 @@ function viewMacro(st){
       <button class="acard wide hl" type="button" data-go="macro-map"><div class="c">우리 앱만의 기능</div><div class="t">연관성 지도</div><div class="s">지표들이 서로 어떻게 이어지는지, 무엇이 먼저 움직이는지 한눈에 봐요</div><div class="f muted">발표 반응 · 최근 동조화 · 선행·후행</div></button>
       <button class="acard wide" type="button" data-go="macro-cal"><div class="c">한국 시간</div><div class="t">발표 일정</div><div class="s">앞으로 나올 지표를 날짜순으로 모아봤어요</div><div class="f muted">서머타임 자동 반영</div></button>
     </div>
-    <p class="tiny muted" style="margin-top:14px">지금 숫자와 일정은 모두 샘플이에요. 실제 데이터는 2단계에서 연결해요.</p>`;
+    <p class="tiny muted" style="margin-top:14px">지표 숫자는 FRED(세인트루이스 연준)·한국은행 ECOS의 실제 값이에요. ISM·수출입·달러 인덱스, 시장 예상치, 발표 후 시장 반응은 아직 샘플이에요.</p>`;
 }
 
 function curVal(v){ return v.g==="mkt" ? v.now : v.last.a; }
@@ -2241,7 +2254,7 @@ function viewMacroGroup(key, st){
       <p class="tiny muted" style="margin-top:10px">미국 지표는 미국 현지 시간에 맞춰 발표돼서, 서머타임이 끝나면 한국 시간으로 1시간 늦어져요. 시간은 자동으로 바꿔서 보여줘요.</p></section>`;
   }
   const G = IND_GROUPS[key] || IND_GROUPS[IND_GROUP_ALIAS[key]]; if(!G) return viewMacro(st);
-  return `<div class="back"><button class="icon-btn" type="button" data-go="macro" aria-label="매크로 지표 홈으로">‹</button><div class="title"><b>${G.title}</b><span class="tiny muted">${G.sub} · 샘플 숫자</span></div></div>
+  return `<div class="back"><button class="icon-btn" type="button" data-go="macro" aria-label="매크로 지표 홈으로">‹</button><div class="title"><b>${G.title}</b><span class="tiny muted">${G.sub} · ${G.keys.every(k=>IND[k].real)?"실제 숫자":G.keys.some(k=>IND[k].real)?"실제 숫자 · 일부 샘플":"샘플 숫자"}</span></div></div>
     ${G.keys.map(k=>indRow(k, st)).join("")}
     <p class="tiny muted" style="margin-top:12px">지표를 누르면 무엇인지, 지난 결과, 발표 후 시장 반응을 볼 수 있어요.</p>`;
 }
@@ -2259,6 +2272,8 @@ const REF = {cpi:[2,"목표 2%"], pce:[2,"목표 2%"], kcpi:[2,"목표 2%"], ism
 const TEN = {cpi:[[9.1,"2022.6"],[0.1,"2020.5"]], kcpi:[[6.3,"2022.7"],[-0.4,"2019.9"]], fomc:[[5.50,"2023.7"],[0.25,"2020.3"]], bok:[[3.50,"2023.1"],[0.50,"2020.5"]],
   us10y:[[4.98,"2023.10"],[0.52,"2020.8"]], us2y:[[5.19,"2023.10"],[0.11,"2021.2"]], spread:[[1.59,"2021.3"],[-1.08,"2023.7"]], m2:[[26.9,"2021.2"],[-4.6,"2023.4"]],
   vix:[[82.7,"2020.3"],[9.1,"2017.11"]], wti:[[123.7,"2022.3"],[-37.6,"2020.4"]]};
+for(const k in TEN){ const v = IND[k]; if(!v || !v.real) continue; const cur = v.g==="mkt" ? v.now : v.last.a;
+  if(cur > TEN[k][0][0]) TEN[k][0] = [cur, "최근"]; if(cur < TEN[k][1][0]) TEN[k][1] = [cur, "최근"]; }
 function ctype(k){ const v = IND[k]; return v.g==="mkt" ? "daily" : (k==="fomc"||k==="bok") ? "meet" : k==="claims" ? "week" : "month"; }
 const CPER = {month:[["1년",12],["3년",36]], week:[["1년",52],["3년",156]], meet:[["1년",8],["3년",24]], daily:[["3개월",63],["1년",252]], spreadDaily:[["1년",252],["3년",756]]};
 function cperOf(k){ return k==="spread" ? CPER.spreadDaily : CPER[ctype(k)]; }
@@ -2268,6 +2283,7 @@ function hashK(s){ let h=7; for(const c of s) h = (h*31 + c.charCodeAt(0))|0; re
 const _ser = {};
 function seriesFor(k){
   if(_ser[k]) return _ser[k];
+  if(k!=="bok" && IND[k].series) return (_ser[k] = IND[k].series.map(([t,x])=>({t, v:x})));
   const v = IND[k], t = ctype(k), R = rng(hashK(k)), dec = v.dec!=null ? v.dec : (v.unit==="원"?1:1);
   const rd = x => +x.toFixed(dec);
   let out = [];
@@ -2341,7 +2357,7 @@ function chartHtml(k){
       <span class="cper">${per.map(([lb])=>`<button type="button" data-cp="${lb}" data-ck="${k}" class="${lb===p?"on":""}" aria-pressed="${lb===p}">${lb}</button>`).join("")}</span></div>
     ${chartSvg(k, pts)}
     ${ten?`<div class="tiny muted" style="margin-top:2px">최근 10년 최고 <b class="num">${fmtVal(v,ten[0][0])}</b> (${ten[0][1]}) · 최저 <b class="num">${fmtVal(v,ten[1][0])}</b> (${ten[1][1]}) <span>· 대략적인 기록</span></div>`:""}
-    <div class="tiny muted">${k==="bok"?"한국은행 결정 기록":"샘플 흐름이에요. 2단계에서 실제 기록으로 바뀌어요."}</div>`;
+    <div class="tiny muted">${k==="bok"?"한국은행 결정 기록":v.series?`${v.srcSeries} 실제 기록`:"샘플 흐름이에요. 실제 기록은 아직 연결 전이에요."}</div>`;
 }
 function chartRead(svg, clientX){
   const k = svg.dataset.ck, pts = _shown[k]; if(!pts) return;
@@ -2364,7 +2380,7 @@ function indSheet(k, from, prev){
   const chart = `<div class="cbox" id="chartBox">${chartHtml(k)}</div>`;
   const disc = `<p class="tiny muted" style="margin-top:16px">구간과 해석은 투자자들이 일반적으로 보는 기준이에요. 투자 권유가 아니고, 시장 상황에 따라 다르게 움직일 수 있어요.</p>`;
   if(v.g==="mkt"){
-    openSheet(`${prevBtn}<h3 id="sheetTitle">${v.name}${ccTag(v)}</h3><div class="tiny muted">${v.full} · 샘플 숫자</div>
+    openSheet(`${prevBtn}<h3 id="sheetTitle">${v.name}${ccTag(v)}</h3><div class="tiny muted">${v.full} · ${realTag(v)}</div>
       <div class="bhead"><div class="big num">${fmtVal(v, v.now)}</div><div class="num ${cls(v.chg)}">어제보다 ${chgTxt(v)}</div><div style="margin-top:6px">${zoneChip(k)}</div></div>
       ${chart}${linkPreview(k)}${what}${zone}
       ${IND_X[k]?`<details class="more"><summary>더 보기 <span>· 해석, 이어지는 흐름</span></summary>
@@ -2387,7 +2403,7 @@ function indSheet(k, from, prev){
     <div class="hnext sm"><div class="small">다음 발표 (예시 일정) · <b class="num">${r.label}</b> · <span class="pt num">${dayDiff(ymd(st.k), r.ymd)}일 남음</span></div></div>
     ${what}${zone}
     <details class="more"><summary>더 보기 <span>· 지난 결과, 해석, 시장 반응</span></summary>
-      <div class="bsection"><h4>지난 발표 결과 <span class="tiny muted" style="font-weight:400">샘플</span></h4>
+      <div class="bsection"><h4>지난 발표 결과 <span class="tiny muted" style="font-weight:400">${v.real?"실제 · 예상치는 연결 전":"샘플"}</span></h4>
         <div class="trio"><div class="hit"><div class="k">실제</div><div class="v num ${cls(v.last.a-(v.last.f??v.last.p))}">${fv(v.last.a)}</div></div><div><div class="k">예상</div><div class="v num sub">${fv(v.last.f)}</div></div><div><div class="k">이전</div><div class="v num sub">${fv(v.last.p)}</div></div></div>
         <p style="margin-top:10px">${surpriseText(v)}.</p>${core}</div>
       <div class="bsection"><h4>보통 이렇게 해석돼요</h4><p>${v.read}</p><p class="small muted">${v.more}</p><p class="tiny muted">항상 그렇지는 않아요. 다른 지표나 그때 시장 분위기에 따라 반대로 움직이기도 해요.</p></div>
@@ -2629,7 +2645,7 @@ async function drawShare(code){
   g.fillStyle=INK; g.font=`600 36px ${F}`;
   g.fillText(LAST_NIGHT.map(kk=>`${IND[kk].name} ${fmtVal(IND[kk],IND[kk].last.a)} (예상 ${fmtVal(IND[kk],IND[kk].last.f)})`).join("   "), 90, y+44);
   g.fillStyle=MUT; g.font=`400 26px ${F}`;
-  g.fillText("샘플 데이터 · 추정치는 실제와 다를 수 있어요 · 투자 권유가 아니에요", 80, H-70);
+  g.fillText("추정치는 실제와 다를 수 있어요 · 투자 권유가 아니에요", 80, H-70);
   return new Promise(res=>cv.toBlob(b=>res({blob:b, url:cv.toDataURL("image/png")}), "image/png"));
 }
 async function openShare(code){
@@ -4108,7 +4124,7 @@ function stockSheet(t, from, fromEv, fromCo){
     : backEv ? `<button class="btn ghost backev" type="button" data-evt="${fromEv}" style="margin-bottom:10px">‹ ${backEv.title}</button>`
     : fromE ? `<button class="btn ghost" type="button" data-brief="${from}" style="margin-bottom:10px">‹ ${fromE.name} 브리핑으로</button>` : "";
   openSheet(`${back}<div class="with-logo" style="margin-bottom:6px">${logo(t)}<div><h3 id="sheetTitle" style="margin:0">${s[0]} <span class="muted small">${sym}</span></h3>${co?`<div class="tiny muted">${co.cat} · ${co.tag}</div>`:""}</div></div>
-    <div class="num" style="font-size:22px;font-weight:700"><span>${usd(s[1])}</span> <span class="${cls(s[2])}" style="font-size:15px">${spct(s[2])}</span> <span class="tiny muted" style="font-weight:400">샘플 시세</span></div>
+    <div class="num" style="font-size:22px;font-weight:700"><span>${usd(s[1])}</span> <span class="${cls(s[2])}" style="font-size:15px">${spct(s[2])}</span> <span class="tiny muted" style="font-weight:400">${okn(s[1])?"한국 장 마감 뒤 변화":"시세 확인 중"}</span></div>
     ${about}
     <h4 style="margin:16px 0 4px">이 종목을 담은 ETF</h4><div class="chips">${exposureChips(t)}</div>
     <h4 style="margin:16px 0 4px">일정</h4>${evs.length?evs.map(v=>evRow(v,false)).join(""):`<div class="small muted">예정된 일정이 없어요.</div>`}
