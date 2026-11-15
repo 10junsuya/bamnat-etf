@@ -1,0 +1,155 @@
+"""매크로 지표 실제 값 → data/macro.json (앱에 내장)
+
+미국: FRED(세인트루이스 연준) · 한국: ECOS(한국은행). 키는 GitHub Secrets 환경변수로만 들어와요.
+발표 '예상치(컨센서스)'는 무료 공식 출처가 없어서 여기서 만들지 않아요(앱에서는 '연결 전'으로 표시).
+실패한 지표는 기존 값을 지우지 않고 오류만 기록해요.
+"""
+import datetime as dt
+import json
+import os
+import urllib.parse
+import urllib.request
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "data" / "macro.json"
+KST = ZoneInfo("Asia/Seoul")
+FRED_KEY = os.environ.get("FRED_API_KEY", "").strip()
+ECOS_KEY = os.environ.get("ECOS_API_KEY", "").strip()
+
+
+def scrub(t):
+    for k in (FRED_KEY, ECOS_KEY):
+        if k:
+            t = t.replace(k, "***")
+    return t
+
+
+def get(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "gnomon/0.1 (+github.com/10junsuya/gnomon)"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode("utf-8", "replace"))
+
+
+def fred(sid, limit=40):
+    j = get("https://api.stlouisfed.org/fred/series/observations?" + urllib.parse.urlencode(
+        {"series_id": sid, "api_key": FRED_KEY, "file_type": "json", "sort_order": "desc", "limit": limit}))
+    obs = [(o["date"], float(o["value"])) for o in j.get("observations", []) if o.get("value") not in (".", None, "")]
+    return list(reversed(obs))  # 오래된 것 → 최신
+
+
+def ecos(code, item, months=40):
+    now = dt.datetime.now(KST)
+    start = (now - dt.timedelta(days=31 * months)).strftime("%Y%m")
+    j = get(f"https://ecos.bok.or.kr/api/StatisticSearch/{ECOS_KEY}/json/kr/1/100/{code}/M/{start}/{now.strftime('%Y%m')}/{item}")
+    rows = j.get("StatisticSearch", {}).get("row") or []
+    return [(f"{r['TIME'][:4]}-{r['TIME'][4:6]}-01", float(r["DATA_VALUE"])) for r in rows if r.get("DATA_VALUE") not in (None, "")]
+
+
+mon = lambda d: f"{int(d[5:7])}월"
+r1 = lambda x, n=1: round(x, n)
+
+
+def yoy_series(obs):
+    """월간 지수 → 전년 대비 %, [(날짜, 값)]"""
+    m = {d[:7]: v for d, v in obs}
+    out = []
+    for d, v in obs:
+        y = f"{int(d[:4]) - 1}{d[4:7]}"
+        if y in m:
+            out.append((d, (v / m[y] - 1) * 100))
+    return out
+
+
+def monthly(key, s, dec=1, src=""):
+    """발표형(월간) 지표: 최신 값·이전 값·최근 6개"""
+    if len(s) < 2:
+        raise ValueError("값이 부족해요")
+    return {"a": r1(s[-1][1], dec), "p": r1(s[-2][1], dec), "hist": [r1(v, dec) for _, v in s[-6:]], "ref": mon(s[-1][0]), "asof": s[-1][0], "src": src}
+
+
+def market(s, dec=2, src=""):
+    """시장 지표: 지금 값·전일 대비·최근 11개"""
+    if len(s) < 2:
+        raise ValueError("값이 부족해요")
+    sp = [r1(v, dec) for _, v in s[-11:]]
+    return {"now": sp[-1], "chg": r1(sp[-1] - sp[-2], dec), "spark": sp, "asof": s[-1][0], "src": src}
+
+
+def main():
+    old = {}
+    if OUT.exists():
+        try:
+            old = json.loads(OUT.read_text(encoding="utf-8"))
+        except ValueError:
+            old = {}
+    ind, errors = dict(old.get("ind", {})), []
+
+    def run(key, fn):
+        try:
+            ind[key] = fn()
+        except Exception as e:  # noqa: BLE001
+            errors.append(scrub(f"{key}: {type(e).__name__}: {e}")[:200])
+
+    if FRED_KEY:
+        run("cpi", lambda: monthly("cpi", yoy_series(fred("CPIAUCSL")), 1, "FRED CPIAUCSL"))
+        run("pce", lambda: monthly("pce", yoy_series(fred("PCEPI")), 1, "FRED PCEPI"))
+        run("ppi", lambda: monthly("ppi", yoy_series(fred("PPIFIS")), 1, "FRED PPIFIS"))
+        run("m2", lambda: monthly("m2", yoy_series(fred("M2SL")), 1, "FRED M2SL"))
+
+        def nfp():
+            o = fred("PAYEMS", 12)
+            d = [(o[i][0], (o[i][1] - o[i - 1][1]) / 10) for i in range(1, len(o))]  # 천 명 → 만 명
+            return monthly("nfp", d, 1, "FRED PAYEMS (전월 대비 증가)")
+        run("nfp", nfp)
+
+        def retail():
+            o = fred("RSAFS", 12)
+            d = [(o[i][0], (o[i][1] / o[i - 1][1] - 1) * 100) for i in range(1, len(o))]
+            return monthly("retail", d, 1, "FRED RSAFS (전월 대비)")
+        run("retail", retail)
+
+        def claims():
+            o = [(d, v / 10000) for d, v in fred("ICSA", 10)]
+            x = monthly("claims", o, 1, "FRED ICSA")
+            x["ref"] = f"{int(o[-1][0][5:7])}/{int(o[-1][0][8:10])} 주간"
+            return x
+        run("claims", claims)
+
+        def fomc():
+            o = fred("DFEDTARU", 400)
+            chg = [o[0]] + [o[i] for i in range(1, len(o)) if o[i][1] != o[i - 1][1]]
+            x = {"a": r1(o[-1][1], 2), "p": r1(chg[-2][1], 2) if len(chg) >= 2 else r1(o[-1][1], 2),
+                 "hist": [r1(v, 2) for _, v in o[-130::26]][-6:], "ref": "", "asof": o[-1][0], "src": "FRED DFEDTARU (목표 범위 상단)",
+                 "last_change": chg[-1][0]}
+            return x
+        run("fomc", fomc)
+        run("us10y", lambda: market(fred("DGS10", 30), 2, "FRED DGS10"))
+        run("us2y", lambda: market(fred("DGS2", 30), 2, "FRED DGS2"))
+        run("spread", lambda: market(fred("T10Y2Y", 30), 2, "FRED T10Y2Y"))
+        run("vix", lambda: market(fred("VIXCLS", 30), 1, "FRED VIXCLS (CBOE)"))
+        run("wti", lambda: market(fred("DCOILWTICO", 30), 1, "FRED DCOILWTICO (EIA)"))
+    else:
+        errors.append("FRED_API_KEY 없음")
+    if ECOS_KEY:
+        def bok():
+            o = ecos("722Y001", "0101000", 30)
+            chg = [o[0]] + [o[i] for i in range(1, len(o)) if o[i][1] != o[i - 1][1]]
+            return {"a": r1(o[-1][1], 2), "p": r1(chg[-2][1], 2) if len(chg) >= 2 else r1(o[-1][1], 2),
+                    "hist": [r1(v, 2) for _, v in o[-6:]], "ref": mon(o[-1][0]), "asof": o[-1][0], "src": "ECOS 722Y001"}
+        run("bok", bok)
+        run("kcpi", lambda: monthly("kcpi", yoy_series(ecos("901Y009", "0", 30)), 1, "ECOS 901Y009"))
+    else:
+        errors.append("ECOS_API_KEY 없음")
+    out = {"generated_at_kst": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "ind": ind, "errors": errors}
+    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"지표 {len(ind)}개 · 오류 {len(errors)}개")
+    for e in errors:
+        print(" -", e)
+    for k, v in ind.items():
+        print(k, {x: v[x] for x in v if x != "hist"})
+
+
+if __name__ == "__main__":
+    main()

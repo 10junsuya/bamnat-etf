@@ -1,0 +1,47 @@
+name: 매크로 지표 받아오기
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/fetch_macro.py", ".github/workflows/live.yml"]
+  schedule:
+    - cron: "23 0 * * *"    # 한국 09:23 (미국 전날 발표·금리 반영)
+    - cron: "53 13 * * 1-5"  # 한국 22:53 (미국 08:30 발표 뒤)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-writer
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/fetch_macro.py
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+      - name: 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp data/macro.json /tmp/new.json
+          for i in 1 2 3 4; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp /tmp/new.json data/macro.json
+            python scripts/check_data.py --embed
+            git add data/macro.json index.html
+            git diff --cached --quiet && exit 0
+            git commit -q -m "매크로 지표 업데이트"
+            git push -q && exit 0
+            sleep $((i*7))
+          done
+          exit 1
