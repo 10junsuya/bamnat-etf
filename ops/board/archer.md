@@ -146,3 +146,37 @@
 - 내용: MU 12/18 06:00 — 마이크론 공식 일정 공지를 찾지 못했고 IR 페이지도 열지 못함(확인 못 함, 앱 그대로 둬도 됨). LUNR IM-3 발사 — 회사 페이지에 "2026년"만 있고 구체 날짜·연기 여부 확인 못 함.
 - 출처: [마이크론 IR](https://investors.micron.com/events-and-presentations) · [IM-3 임무 페이지](https://www.intuitivemachines.com/im-3-lunar-mission) · 공식 여부: 공식 (내용 확인 못 함)
 - 확신도: 확인 못 함
+
+### A-20261115-1904-1 · 발견 · RBRK 실적 발표 12/1 07:00 — events.json 에 없음
+- 시각: 2026-11-15 19:04 KST
+- 내용: 루브릭 보도자료(11/11, Business Wire): FY27 3분기(10/31 마감) 실적을 미국 시간 **11/30(월) 장 마감 후** 발표, 콜 2:00 PM PT(5:00 PM ET) → 한국 시간 **12/1(화) 07:00 콜**. 원문 인용: "will release financial results ... after the market closes on Monday, November 30, 2026", "live conference call that day at 2:00 pm PT / 5:00 pm ET". 14일 밖·45일 안. money.json 의 RBRK 기간(FY27 2분기)은 발표 뒤 갱신 대상.
+- 출처: [회사 보도자료 (FinancialContent 재게재, 이번 차례 본문 열어 확인)](https://www.financialcontent.com/article/bizwire-2026-11-11-rubrik-to-report-third-quarter-fiscal-2027-financial-results-on-november-30-2026) · [Yahoo Finance 재게재](https://finance.yahoo.com/markets/stocks/articles/rubrik-report-third-quarter-fiscal-130000880.html) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1904-2 · 발견 · ZS 실적 발표 12/3 06:30 — events.json 에 없음
+- 시각: 2026-11-15 19:04 KST
+- 내용: 지스케일러 공식 IR 보도자료(11/5): FY27 1분기(8~10월) 실적을 미국 시간 **12/2(수) 장 마감 후** 발표, 콜 1:30 PM PT(4:30 PM ET) → 한국 시간 **12/3(목) 06:30 콜**. 원문 인용: "will release its first quarter fiscal year 2027 earnings after the market closes on Wednesday, December 2, 2026", "investor conference call that day at 1:30 p.m. Pacific Time (4:30 p.m. Eastern Time)". money.json 의 ZS 기간(FY26 4분기)은 발표 뒤 갱신 대상.
+- 출처: [지스케일러 IR 보도자료 (이번 차례 본문 열어 확인)](https://ir.zscaler.com/news-releases/news-release-details/zscaler-host-first-quarter-fiscal-year-2027-earnings-conference) · [GlobeNewswire](https://www.globenewswire.com/news-release/2026/11/05/3396397/0/en/zscaler-to-host-first-quarter-fiscal-year-2027-earnings-conference-call.html) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1904-3 · 발견 · NTSK 실적 발표 12/3 07:00 — events.json 에 없음
+- 시각: 2026-11-15 19:04 KST
+- 내용: 넷스코프 보도자료(11/4, GlobeNewswire): FY27 3분기(10/31 마감) 실적을 미국 시간 **12/2(수) 장 마감 후** 발표, 콜 2:00 PM PT(5:00 PM ET) → 한국 시간 **12/3(목) 07:00 콜**. 원문 인용: "after the market closes on Wednesday, December 2, 2026", "live conference call that day at 2:00 pm PT / 5:00 pm ET". money.json 에는 NTSK 항목 없음.
+- 출처: [회사 보도자료 (StockTitan 재게재, 이번 차례 본문 열어 확인)](https://www.stocktitan.net/news/NTSK/netskope-to-report-fiscal-third-quarter-2027-financial-results-on-a24j9vajst29.html) · [넷스코프 IR](https://investors.netskope.com/) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1904-4 · 발견 · S(센티넬원) 실적 발표 12/4 07:00 — events.json 에 없음
+- 시각: 2026-11-15 19:04 KST
+- 내용: 센티넬원 보도자료(11/12, Business Wire): FY27 3분기(10/31 마감) 실적을 미국 시간 **12/3(목) 장 마감 후** 발표, 콜 2:00 PM PT(5:00 PM ET) → 한국 시간 **12/4(금) 07:00 콜**. 원문 인용: "Results will be released after market close on Thursday, December 3, 2026", "conference call ... at 2:00 p.m. PT (5:00 p.m. ET) on the same day". money.json 의 S 기간(FY27 2분기)은 발표 뒤 갱신 대상.
+- 출처: [회사 보도자료 (FinancialContent 재게재, 이번 차례 본문 열어 확인)](https://www.financialcontent.com/article/bizwire-2026-11-12-sentinelone-announces-date-of-fiscal-third-quarter-2027-financial-results-conference-call-and-participation-in-upcoming-investor-conference) · [StockTitan 재게재](https://www.stocktitan.net/news/S/sentinel-one-announces-date-of-fiscal-third-quarter-2027-financial-w6fr97go35dt.html) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1904-5 · 알림 · 이번 차례 확인 못 한 것 · 웹 페이지 열기 상황
+- 시각: 2026-11-15 19:04 KST
+- 내용: (1) events.json 의 14일 안 일정(NVDA 11/18, FLY 11/25)과 48시간 안 끝난 일정(AMAT 11/13, RKLB 11/14)은 새 변동 없음(앞 항목 A-20261115-1504-3 · 1704-6 그대로). (2) 확인 못 함: MU 12/18 공식 일정 공지(아직 못 찾음), ACN FY27 1분기 발표일(공지 못 찾음), GEV 2026 투자자 행사(공지 못 찾음), LUNR IM-3 — 보도(Jspace News 11/14)는 "NASA 발사 일정표상 2027년 초"라 적었으나 회사 공식 문서(회사 페이지·SEC)는 열지 못함. RKLB 다음 일렉트론 발사 일정 공지 없음. (3) 참고: 이번 차례엔 ir.zscaler.com · financialcontent.com · stocktitan.net 본문은 열렸고, intuitivemachines.com · sec.gov 는 Quill 과 같은 "권한 요청에 응답 없음"으로 막혔어요.
+- 출처: [Jspace News IM-3 기사](https://jspacenews.com/industry/intuitive-machines-q3-2026-results-lanteris-november-2026/) · 공식 여부: 보도
+- 확신도: 확인 못 함
