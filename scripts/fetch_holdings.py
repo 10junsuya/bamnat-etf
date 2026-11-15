@@ -23,6 +23,7 @@ ISIN_ALIAS = {"US25460G2865": ("TSLL", "Direxion Daily TSLA Bull 2X", "테슬라
               "US7534221046": ("RPD", "Rapid7", ""), "US68287N1000": ("OSPN", "OneSpan", ""), "US87969B1017": ("TLS", "Telos", ""),
               "CA8795123097": ("TSAT", "Telesat", ""), "CA2483561072": ("DNN", "Denison Mines", ""), "CA91688R1082": ("URG", "Ur-Energy", ""),
               "CA29259W7008": ("EU", "enCore Energy", ""), "US37954Y8306": ("COPX", "Global X Copper Miners ETF", "구리 광산 ETF")}
+NAME_FIX = {"SIEMENS ENERGY": "SMNEY"}  # 미국에 같은 표기의 다른 회사가 있는 경우: 미국 ADR로
 ASIA_SFX = {"JP", "HK", "TT", "KS", "KQ", "CH", "C1", "C2", "SP", "AU", "IN"}   # 아시아 거래소: 낮에 거래돼서 밤사이 변화 없음
 SAME_ADR = {"ASML", "SAP", "NOK", "STM", "ARM", "TSM", "SHOP", "SPOT", "NVO", "AZN", "SNY", "TM", "SONY", "BABA"}  # 유럽 등 본국 표기와 미국 표기가 같은 종목  # 종목코드 없이 ISIN만 나오는 미국 상장 상품
 NAME2TICKER = {"space exploration technologies": "SPCX", "rocket lab": "RKLB", "viasat": "VSAT", "ast spacemobile": "ASTS",
@@ -72,7 +73,8 @@ def funetf(code):
             continue
         nm = m.group(1).split("/")[-1].strip()
         ko = m.group(1).split("/")[0].strip() if "/" in m.group(1) else ""
-        items.append({"ticker": m.group(2).replace(".", "-").replace("/", "-"), "name": nm, "ko": ko, "weight": w})
+        tk = next((t for k, t in NAME_FIX.items() if k in nm.upper()), m.group(2).replace(".", "-").replace("/", "-"))
+        items.append({"ticker": tk, "name": nm, "ko": ko, "weight": w})
     d = re.search(r"구성종목[^<]{0,40}?(20\d{2}[.\-/]\d{1,2}[.\-/]\d{1,2})", page)
     funetf.other, funetf.asia, funetf.isin_rest = other, asia, isin_rest
     for i in items:  # 지수 선물은 같은 지수 미국 ETF로 바꿔서 계산해요
