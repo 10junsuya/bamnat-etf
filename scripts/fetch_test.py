@@ -44,7 +44,7 @@ def scrub(text):
 
 
 def get(url, timeout=25):
-    req = urllib.request.Request(url, headers={"User-Agent": "bamnat-etf/0.1 (+github.com/10junsuya/bamnat-etf)"})
+    req = urllib.request.Request(url, headers={"User-Agent": "gnomon/0.1 (+github.com/10junsuya/gnomon)"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return r.status, r.read().decode("utf-8", "replace")
