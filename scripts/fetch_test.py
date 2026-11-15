@@ -14,6 +14,9 @@ import urllib.request
 
 FINNHUB_KEY = os.environ.get("FINNHUB_API_KEY", "").strip()
 DATA_KEY = os.environ.get("DATA_GO_KR_API_KEY", "").strip()
+# 공공데이터포털은 키를 Encoding(%xx가 들어간 것)과 Decoding 두 가지로 보여줘요.
+# 어느 쪽을 넣었든 원래 키로 되돌린 뒤 한 번만 인코딩해서 보내요(이중 인코딩 방지).
+DATA_KEY_RAW = urllib.parse.unquote(DATA_KEY)
 FRED_KEY = os.environ.get("FRED_API_KEY", "").strip()
 ECOS_KEY = os.environ.get("ECOS_API_KEY", "").strip()
 
@@ -37,7 +40,7 @@ KST = dt.timezone(dt.timedelta(hours=9))
 
 def scrub(text):
     """혹시라도 키가 섞이면 지워요."""
-    for k in (FINNHUB_KEY, DATA_KEY, urllib.parse.quote(DATA_KEY, safe=""), FRED_KEY, ECOS_KEY):
+    for k in (FINNHUB_KEY, DATA_KEY, DATA_KEY_RAW, urllib.parse.quote(DATA_KEY_RAW, safe=""), urllib.parse.quote_plus(DATA_KEY_RAW), FRED_KEY, ECOS_KEY):
         if k:
             text = text.replace(k, "***")
     return text
@@ -79,7 +82,7 @@ def etf_prices():
     for code, name in KR_ETFS.items():
         urls = [working] if working else ETF_URLS
         for base in urls:
-            params = {"serviceKey": DATA_KEY, "resultType": "json", "numOfRows": 20, "pageNo": 1,
+            params = {"serviceKey": DATA_KEY_RAW, "resultType": "json", "numOfRows": 20, "pageNo": 1,
                       "likeSrtnCd": code, "beginBasDt": begin}
             try:
                 st, body = get(base + "?" + urllib.parse.urlencode(params))
