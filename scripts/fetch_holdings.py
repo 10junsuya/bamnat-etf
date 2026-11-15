@@ -41,13 +41,13 @@ def funetf(code):
         cells = [c for c in cells if c]
         if len(cells) < 2:
             continue
-        m = re.fullmatch(r"(.+?)\s*\(([A-Z][A-Z0-9.\-]{0,9})\)", cells[0])
+        m = re.fullmatch(r"(.+?)\s*\(([A-Z][A-Z0-9.\-/]{0,9})(?:\s+[A-Z]{2})?\)", cells[0])
         w = num(cells[1])
         if not m or w is None or w <= 0:
             continue
         nm = m.group(1).split("/")[-1].strip()
         ko = m.group(1).split("/")[0].strip() if "/" in m.group(1) else ""
-        items.append({"ticker": m.group(2).replace(".", "-"), "name": nm, "ko": ko, "weight": w})
+        items.append({"ticker": m.group(2).replace(".", "-").replace("/", "-"), "name": nm, "ko": ko, "weight": w})
     d = re.search(r"구성종목[^<]{0,40}?(20\d{2}[.\-/]\d{1,2}[.\-/]\d{1,2})", page)
     return (d.group(1) if d else ""), items
 
