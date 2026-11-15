@@ -101,6 +101,37 @@ def invesco(ticker):
     return asof, items
 
 
+def sox_fallback(err):
+    """SOXQ가 안 되면: 나스닥 지수 비중 파일 → TIGER 운용사 페이지 순서로 시도."""
+    import openpyxl  # noqa: PLC0415
+    notes = [str(err)[:120]]
+    today = dt.datetime.now(KST).date()
+    for back in range(1, 6):
+        d = (today - dt.timedelta(days=back)).isoformat()
+        try:
+            raw = get(f"https://indexes.nasdaqomx.com/Index/ExportWeightings/SOX?tradeDate={d}T00:00:00.000&timeOfDay=SOD")
+            ws = openpyxl.load_workbook(io.BytesIO(raw), read_only=True, data_only=True).active
+            rows = [r for r in ws.iter_rows(values_only=True)]
+            hi = next(i for i, r in enumerate(rows) if r and any(str(c).strip().lower() in ("symbol", "ticker") for c in r if c))
+            head = [str(c or "").strip().lower() for c in rows[hi]]
+            ti = next(i for i, h in enumerate(head) if h in ("symbol", "ticker"))
+            ni = next((i for i, h in enumerate(head) if "name" in h), ti)
+            wi = next(i for i, h in enumerate(head) if "weight" in h)
+            items = []
+            for r in rows[hi + 1:]:
+                if r and r[ti] and num(r[wi]) is not None:
+                    w = num(r[wi]); w = w * 100 if w <= 1 else w
+                    items.append({"ticker": str(r[ti]).strip(), "name": str(r[ni] or "").title(), "weight": w})
+            if items:
+                return d, items, "나스닥 SOX 지수 비중"
+            notes.append(f"nasdaq {d}: 행 없음")
+        except Exception as e:  # noqa: BLE001
+            notes.append(f"nasdaq {d}: {type(e).__name__}:{str(e)[:60]}")
+            if back >= 2:
+                break
+    raise ValueError(" / ".join(notes))
+
+
 def space():
     page = get(SPACE["url"], timeout=60).decode("utf-8", "replace")
     rows = re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S)
@@ -132,7 +163,16 @@ def main():
     out = {"generated_at_kst": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "etfs": dict(old.get("etfs", {})), "errors": []}
     for g, cfg in GROUPS.items():
         try:
-            asof, items = spy() if cfg["proxy"] == "SPY" else invesco(cfg["proxy"])
+            src = f"{cfg['proxy']} 보유종목 공시"
+            if cfg["proxy"] == "SPY":
+                asof, items = spy()
+            else:
+                try:
+                    asof, items = invesco(cfg["proxy"])
+                except Exception as e:  # noqa: BLE001
+                    if g != "sox":
+                        raise
+                    asof, items, src = sox_fallback(e)
             items = sorted([i for i in items if i["weight"]], key=lambda i: -i["weight"])
             if len(items) < 10:
                 raise ValueError(f"보유종목이 {len(items)}개뿐이에요")
@@ -140,7 +180,7 @@ def main():
             entry = {"kind": "index", "index": cfg["index"], "proxy": cfg["proxy"], "asof": asof, "n_total": len(items),
                      "top": [{"ticker": i["ticker"], "name": i["name"], "weight": round(i["weight"], 3)} for i in top],
                      "top_weight": round(sum(i["weight"] for i in top), 2),
-                     "src": f"{cfg['proxy']} 보유종목 공시"}
+                     "src": src}
             for c in cfg["codes"]:
                 out["etfs"][c] = entry
         except Exception as e:  # noqa: BLE001
