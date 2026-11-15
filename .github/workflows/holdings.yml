@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/fetch_holdings.py", ".github/workflows/holdings.yml"]
+    paths: ["scripts/fetch_holdings.py", "scripts/etf_list.py", ".github/workflows/holdings.yml"]
   schedule:
     - cron: "41 22 * * 0-4"   # 한국 시간 평일 아침 07:41 (전날 장 마감 PDF)
 
