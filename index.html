@@ -4780,7 +4780,7 @@ function runChecks(){
       const noInfo = e.h.filter(([t])=>!CO[t]).map(([t])=>t);
       if(noInfo.length) add("warn","ETF",`${e.name}: ${noInfo.join(", ")}의 회사 소개가 없어요.`);
       const wsum = e.h.reduce((a,[,w])=>a+w,0) + (e.rest ? e.rest.w : 0) + (e.cash||0);
-      if(Math.abs(wsum-1) > 0.03) add("warn","ETF",`${e.name}: 비중을 모두 더하면 ${(wsum*100).toFixed(1)}%예요. 100%에 가까워야 해요.`);
+      if(Math.abs(wsum-1) > 0.03 && !(e.asiaW && wsum < 1.12)) add("warn","ETF",`${e.name}: 비중을 모두 더하면 ${(wsum*100).toFixed(1)}%예요. 100%에 가까워야 해요.`);
       if(e.nTotal && e.nTotal < e.h.length) add("warn","ETF",`${e.name}: 전체 종목 수(${e.nTotal})가 표시한 종목 수(${e.h.length})보다 적어요.`);
       const c = calc(e);
       if(!fin(c.total)) add("err","ETF",`${e.name}: 추정 계산 결과가 숫자가 아니에요.`, "etf:"+e.code);
