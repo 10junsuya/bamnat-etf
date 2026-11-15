@@ -282,3 +282,16 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL 11/17, NVDA 11/18, PANW 11/19, ADI 11/24, FLY 11/25)과 48시간 안 끝난 일정(AMAT 11/13, RKLB 11/14)은 앞 항목 이후 새 변동 못 찾음. (2) 확인 못 함: ACN FY27 1분기 발표일(회사 공지 아직 못 찾음), FDX FY27 2분기 발표일, SPCX 스타십 16번째 비행 날짜, RKLB 다음(101번째) 일렉트론 발사 일정. (3) CGNX money.json 은 업종 비율을 연간 기준으로 쓴다고 메모에 밝혀 있어 따로 적지 않음.
 - 출처: 없음 (검색 결과 공식 공지 없음)
 - 확신도: 확인 못 함
+
+### A-20261116-0004-1 · 발견 · INFQ(인플렉션) 실적 발표 11/17 06:30 콜 — events.json 에 없음
+- 시각: 2026-11-16 00:04 KST
+- 내용: 인플렉션 보도자료(10/29, Business Wire): 3분기(9/30 마감) 실적을 미국 시간 **11/16(월) 장 마감 후** 발표, 콜 **4:30 PM ET** → 한국 시간 **11/17(화) 06:30 콜**. 원문 인용: "on Monday, November 16, 2026, after the financial markets close", "will host a conference call at 4:30 PM Eastern Time the same day". 14일 안 일정. 참고: holdings 상 498270 KIWOOM 미국양자컴퓨팅 안 비중 0.8%로 작고, money.json 에 INFQ 항목은 없음.
+- 출처: [회사 보도자료 (Finviz 재게재, 이번 차례 본문 열어 확인)](https://finviz.com/news/412218/infleqtion-to-report-third-quarter-2026-financial-results-on-november-16-2026) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261116-0004-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 00:04 KST
+- 내용: (1) RKLB 11/14 100번째 발사: 발사 일정 사이트도 11/14 05:30 UTC(한국 14:30) 발사·성공으로 표시 — 앱 결과 카드와 일치. (2) ASTS: 블루버드 14~16은 발사 일정 사이트에서도 "Date/Time TBD · 2026년 12월 예상" 그대로 — A-20261115-1504-7 이후 새 공식 날짜 없음. (3) QNT·BETA·VOYG·XE·YSS·SMNEY 는 3분기(또는 회계연도 4분기) 실적이 이미 나왔고 money.json 기간도 최신이거나 money.json 에 항목 없음 — 따로 적을 것 없음. (4) 확인 못 함: ACN FY27 1분기·FDX FY27 2분기·MU FY27 1분기·UEC FY27 1분기 발표일(회사 공지 아직 못 찾음), SPCX 스타십 16번째 비행 날짜, LUNR IM-3 새 공식 날짜, GEV 2026년 투자자 행사.
+- 출처: [Space Launch Schedule 일렉트론 iQPS 10](https://www.spacelaunchschedule.com/launch/electron-the-mountain-god-rises-iqps-launch-10/) · [Space Launch Schedule 블루버드 14~16](https://www.spacelaunchschedule.com/launch/falcon-9-block-5-bluebird-14-16-block-2-9-11/) · 공식 여부: 보도 (발사 일정 집계 사이트)
+- 확신도: 중간 (1·2) / 확인 못 함 (4)
