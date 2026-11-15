@@ -18,6 +18,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 OP = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 TOP_PDF = 25    # 비중형은 위에서 25개까지만 하나씩, 나머지 비중은 받은 종목 평균으로 채워요
 TOP_INDEX = 15  # 지수형은 위에서 15개만 하나씩 계산하고 나머지는 같은 지수 미국 ETF 움직임에 맞춰요
+ISIN_ALIAS = {"US25460G2865": ("TSLL", "Direxion Daily TSLA Bull 2X", "테슬라 2배 ETF")}  # 종목코드 없이 ISIN만 나오는 미국 상장 상품
 NAME2TICKER = {"space exploration technologies": "SPCX", "rocket lab": "RKLB", "viasat": "VSAT", "ast spacemobile": "ASTS",
                "firefly aerospace": "FLY", "planet labs": "PL", "intuitive machines": "LUNR", "redwire": "RDW", "blacksky": "BKSY", "satellogic": "SATL"}
 
@@ -36,7 +37,7 @@ def num(x):
 
 def funetf(code):
     page = get(f"https://www.funetf.co.kr/product/etf/view/{isin(code)}").decode("utf-8", "replace")
-    items, other = [], []
+    items, other, asia = [], [], []
     for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S):
         cells = [re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", c))).strip() for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
         cells = [c for c in cells if c]
@@ -44,6 +45,14 @@ def funetf(code):
             continue
         m = re.fullmatch(r"(.+?)\s*\(([A-Z][A-Z0-9.\-/]{0,9})(?:\s+[A-Z]{2})?\)", cells[0])
         w = num(cells[1])
+        alias = next((t for k, t in ISIN_ALIAS.items() if k in cells[0]), None)
+        if alias and w and w > 0:
+            items.append({"ticker": alias[0], "name": alias[1], "ko": alias[2], "weight": w}); continue
+        kr_etf = re.search(r"미국(나스닥100|S&P500)", cells[0]) if not m else None
+        if kr_etf and w and w > 0:  # 국내 상장 미국 지수 ETF를 담은 경우: 같은 지수 미국 ETF로 계산
+            items.append({"ticker": "QQQ" if kr_etf.group(1) == "나스닥100" else "SPY", "name": cells[0], "ko": cells[0].split(" (")[0], "weight": w}); continue
+        if not m and w and w > 0 and re.search(r"\((\d{4,6}|[0-9]{3,5}[A-Z]?)\)\s*$", cells[0]) and "KRD" not in cells[0]:
+            asia.append([cells[0], w]); continue  # 아시아 거래소 종목: 낮에 거래돼서 밤사이 움직임은 없어요
         if not m or w is None or w <= 0:
             if w is not None and len(other) < 25:
                 other.append(cells[:4])  # 종목코드가 없는 줄(옵션·채권·해외 주식 등) — 확인용으로 남겨요
@@ -52,7 +61,11 @@ def funetf(code):
         ko = m.group(1).split("/")[0].strip() if "/" in m.group(1) else ""
         items.append({"ticker": m.group(2).replace(".", "-").replace("/", "-"), "name": nm, "ko": ko, "weight": w})
     d = re.search(r"구성종목[^<]{0,40}?(20\d{2}[.\-/]\d{1,2}[.\-/]\d{1,2})", page)
-    funetf.other = other
+    funetf.other, funetf.asia = other, asia
+    for i in items:  # 지수 선물은 같은 지수 미국 ETF로 바꿔서 계산해요
+        f = re.fullmatch(r"(NQ|ES)[FGHJKMNQUVXZ]\d", i["ticker"])
+        if f:
+            i["ticker"], i["ko"] = ("QQQ", "나스닥100 선물") if f.group(1) == "NQ" else ("SPY", "S&P500 선물")
     return (d.group(1) if d else ""), items
 
 
@@ -104,7 +117,7 @@ def main():
     for code, name, g in ETFS:
         G = GROUPS[g]
         src, asof, items = "", "", []
-        funetf.other = []
+        funetf.other, funetf.asia = [], []
         if G["kind"] == "bond":  # 채권형은 회사가 아니라 국채를 담아서, 같은 지수 미국 ETF(proxy)만 써요
             out["etfs"][code] = {"kind": "bond", "group": g, "name": name, "index": G["name"], "proxy": G["proxy"], "asof": f"{today} 확인",
                                  "n_total": 0, "top": [], "top_weight": 0, "cash_weight": 0, "src": f"채권형 · {G['proxy']}(같은 지수 미국 ETF)로 계산"}
@@ -126,13 +139,22 @@ def main():
         if len(items) < 5:
             out["errors"].append(f"{code} {name}: 구성종목을 못 받아서 이전 값을 그대로 둬요")
             continue
-        items = sorted([i for i in items if i["weight"]], key=lambda i: -i["weight"])
+        merged = {}
+        for i in items:
+            if i["weight"]:
+                if i["ticker"] in merged:
+                    merged[i["ticker"]]["weight"] += i["weight"]
+                else:
+                    merged[i["ticker"]] = dict(i)
+        items = sorted(merged.values(), key=lambda i: -i["weight"])
+        asia_w = round(sum(w for _, w in funetf.asia), 2)
         top = items[:TOP_INDEX] if G["kind"] == "index" else items[:TOP_PDF]
         tw = sum(i["weight"] for i in items)
         out["etfs"][code] = {"kind": G["kind"], "group": g, "name": name, "index": G["name"], "proxy": G["proxy"],
                              "asof": asof or f"{today} 받음", "n_total": len(items),
                              "top": [{"ticker": i["ticker"], "name": i["name"], "ko": i.get("ko", ""), "weight": round(i["weight"], 3)} for i in top],
-                             "top_weight": round(sum(i["weight"] for i in top), 2), "cash_weight": round(max(0.0, 100 - tw), 2) if G["kind"] == "pdf" else 0,
+                             "top_weight": round(sum(i["weight"] for i in top), 2), "cash_weight": round(max(0.0, 100 - tw - asia_w), 2) if G["kind"] == "pdf" else 0,
+                             "asia_weight": asia_w if G["kind"] == "pdf" else 0, "asia": [a[0] for a in funetf.asia[:12]] if G["kind"] == "pdf" else [],
                              "rest_weight": round(max(0.0, tw - sum(i["weight"] for i in top)), 2) if G["kind"] == "pdf" else 0,
                              "src": src, "other": funetf.other[:15]}
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
