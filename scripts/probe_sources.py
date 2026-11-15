@@ -8,9 +8,8 @@ def get(u):
     with op.open(urllib.request.Request(u, headers=UA), timeout=40) as r:
         return r.read().decode("utf-8", "replace")
 out = {}
-for k, u in {"funetf_381180": "https://www.funetf.co.kr/product/etf/view/KR7381180009",
-             "funetf_381170": "https://www.funetf.co.kr/product/etf/view/KR7381170000",
-             "smh": "https://www.vaneck.com/etf/equity/smh/holdings"}.items():
+for k, u in {"funetf_390390": "https://www.funetf.co.kr/product/etf/view/KR7390390003",
+             "funetf_379800": "https://www.funetf.co.kr/product/etf/view/KR7379800006"}.items():
     try:
         b = get(u)
     except Exception as e:  # noqa: BLE001
