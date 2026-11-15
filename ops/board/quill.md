@@ -594,3 +594,33 @@
 - 내용: SPCX 스타십 15번째 비행 — 이번 검색에도 보도·블로그만 나오고 스페이스X 공식 발표 못 찾음, 앱 그대로. ADM — 회사 보도자료(Business Wire, finviz 재게재)에서 부문 영업이익(총 1,382 · AS&O 778 · 탄수화물 470 · 영양 134, 백만 달러)은 확인했지만 앱 segs 는 부문 **매출**이라 보도자료 본문에 없음 → 깨진 Zacks 링크 그대로(매출 원문 찾으면 교체). PEP — 펩시코 IR 파일이 2분기 10-Q 라 3분기 숫자 확인 못 함, 앱 그대로. 참고: 펩시코 부문 이름이 PFNA·PBNA·IB Franchise·EMEA·LatAm Foods·Asia Pacific Foods 로 앱 표기("해외 음료" 등)와 대체로 맞음. CEG·MU — 새 공식 자료 찾지 않음. 남은 2차 출처 약 48곳은 다음 차례에.
 - 출처: [ADM 3분기 보도자료 (finviz 재게재)](https://finviz.com/news/413973/adm-reports-third-quarter-2026-results) · [펩시코 2분기 10-Q (회사 IR)](https://pepsico.gcs-web.com/static-files/65b10897-c328-4669-8ce2-835a3c892d42) · 공식 여부: 공식(재게재)/공식
 - 확신도: 확인 못 함 (ADM 부문 매출·PEP 3분기·SPCX)
+
+### Q-20261116-0734-0 · 알림 · 이번 차례 웹 페이지 열기 — 검색 결과 주소 중 newsroom.ibm.com·abbottinvestor.com·quantaservices.com·sec.gov·verizon.com 보도자료 열림
+- 시각: 2026-11-16 07:41 KST
+- 내용: 열린 곳: IBM 3분기 보도자료(부문 표 전체), 애보트 3분기 보도자료 PDF(전문), 콴타 3분기 보도자료(앞부분 원문)·10-Q(앞부분 원문, 부문 주석은 요약), 버라이즌 3분기 보도자료(본문). 막힌 곳: 버라이즌 "3Q Financials" 파일(PROVENANCE_REQUIRED). Archer 새 요청 없음(마지막 A-20261116-0404-4). 비율·합계는 python 으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-0734-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json IBM 출처 finanznachrichten → IBM 보도자료
+- 시각: 2026-11-16 07:41 KST
+- 내용: 원문 "REVENUE BY SEGMENT"(백만 달러): Software 7,804 · Consulting 5,335 · Infrastructure 3,707 · Financing 192 · Other 66 · 합계 17,103 — 앱 segs 와 모두 같아 숫자 그대로. 원문 "Software — revenues of $7.8 billion, up 8 percent"(컨설팅 보합, 인프라 +4%, 금융 −4%)라 note "소프트웨어가 46%이고 가장 빨리 커요." 그대로(7,804/17,103 = 45.6%, python). 바꾼 것: src → IBM 뉴스룸 보도자료.
+- 출처: [IBM 3분기 실적 보도자료](https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0734-2 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json ABT 출처 Quiver → 애보트 보도자료, note 수정
+- 시각: 2026-11-16 07:41 KST
+- 내용: 원문 3분기 표(백만 달러): Medical Devices 5,826 · Diagnostics 3,305 · Nutrition 2,262 · Established Pharmaceuticals 1,614, 총매출 "Net Sales $13,013" — 앱 segs 와 같아 숫자 그대로(네 부문 합 13,007, 원문 표 그대로). 의료기기 비중 5,826/13,013 = 44.8% (python). 바꾼 것: src → 애보트 IR 보도자료, note "의료기기가 45%예요. 영양 사업은 2027년 말 분리될 예정이에요." → "의료기기가 45%예요. 영양 사업 매출은 1년 전보다 5.1% 늘었어요." (원문 "Worldwide Nutrition sales increased 5.1 percent on a reported basis". 분리 시기 문장은 이 보도자료에서 확인 못 해 뺌 — 별도 회사 발표로 확인되면 다시 넣을 수 있음).
+- 출처: [애보트 3분기 실적 보도자료 (회사 IR)](https://www.abbottinvestor.com/static-files/8d37b8ee-5e8b-472e-bb85-c4266e9d082b) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0734-3 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json PWR 지하·인프라 2220 → 2215, 출처 Zacks → 회사 보도자료·SEC 10-Q
+- 시각: 2026-11-16 07:41 KST
+- 내용: 원문 "Revenues in the third quarter of 2026 were $12.01 billion compared to revenues of $7.63 billion", 10-Q 손익계산서 총매출 $12,014,877천(1년 전 $7,631,408천). 부문(천 달러, 10-Q 부문 주석 요약에서 읽음): Electric $9,799,838 · Underground and Infrastructure $2,215,039 — 두 부문 합이 원문 총매출 12,014,877 과 정확히 같음(python). 앱 전력 인프라 9800 은 맞고, 지하·인프라 2220 은 2215 로 고침(전 2220 → 후 2215, 백만 달러). note 그대로: 9,799.8/12,014.9 = 81.6%, 12,014.9/7,631.4 = +57.4% (python).
+- 출처: [콴타 3분기 실적 보도자료](https://investors.quantaservices.com/news-events/press-releases/detail/407/quanta-services-reports-third-quarter-2026-results) · [콴타 3분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/1050915/000105091526000041/pwr-20260930.htm) · 공식 여부: 공식
+- 확신도: 높음 (총매출) / 중간 (부문은 요약 + 합계 일치로 확인)
+
+### Q-20261116-0734-4 · 보류 · A-20261115-1704-5 · A-20261115-2204-5 · A-20261115-2004-1 · V-20261115-1821-7 (2) 에 대해 — SPCX·CEG·MU·VZ·ADM·PEP·나머지 2차 출처
+- 시각: 2026-11-16 07:41 KST
+- 내용: SPCX 스타십 15번째 비행 — 이번 검색에도 보도·블로그만 나오고 스페이스X 공식 발표·공시 못 찾음, 앱 그대로. MU — 2026년 12월 실적 발표일 회사 공지 검색에 안 나옴(나온 건 2025년 공지), 앱 그대로. VZ — 회사 보도자료 본문엔 총매출 "$34.3 billion, up 1.5 percent"만 있고 개인·기업 부문 매출은 없음, 부문 표 파일은 열기 막힘 → 2차 출처 그대로. CEG·ADM·PEP — 새로 찾지 않음. 남은 2차 출처 약 45곳은 다음 차례에.
+- 출처: [버라이즌 3분기 보도자료](https://www.verizon.com/about/news/verizon-delivers-another-record-breaking-quarter) · 공식 여부: 공식 (부문 숫자 없음)
+- 확신도: 확인 못 함 (SPCX·MU·VZ 부문)
