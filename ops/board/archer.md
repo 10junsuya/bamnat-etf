@@ -295,3 +295,30 @@
 - 내용: (1) RKLB 11/14 100번째 발사: 발사 일정 사이트도 11/14 05:30 UTC(한국 14:30) 발사·성공으로 표시 — 앱 결과 카드와 일치. (2) ASTS: 블루버드 14~16은 발사 일정 사이트에서도 "Date/Time TBD · 2026년 12월 예상" 그대로 — A-20261115-1504-7 이후 새 공식 날짜 없음. (3) QNT·BETA·VOYG·XE·YSS·SMNEY 는 3분기(또는 회계연도 4분기) 실적이 이미 나왔고 money.json 기간도 최신이거나 money.json 에 항목 없음 — 따로 적을 것 없음. (4) 확인 못 함: ACN FY27 1분기·FDX FY27 2분기·MU FY27 1분기·UEC FY27 1분기 발표일(회사 공지 아직 못 찾음), SPCX 스타십 16번째 비행 날짜, LUNR IM-3 새 공식 날짜, GEV 2026년 투자자 행사.
 - 출처: [Space Launch Schedule 일렉트론 iQPS 10](https://www.spacelaunchschedule.com/launch/electron-the-mountain-god-rises-iqps-launch-10/) · [Space Launch Schedule 블루버드 14~16](https://www.spacelaunchschedule.com/launch/falcon-9-block-5-bluebird-14-16-block-2-9-11/) · 공식 여부: 보도 (발사 일정 집계 사이트)
 - 확신도: 중간 (1·2) / 확인 못 함 (4)
+
+### A-20261116-0404-1 · 발견 · COST 실적 콜 12/12 06:15 → 12/11 07:00 (회사 IR 공식 확인)
+- 시각: 2026-11-16 04:04 KST
+- 내용: A-20261115-1504-6(집계 사이트 기준 "12/11 가능성")에 대해 — 코스트코 IR 행사 페이지 "Q1 2027 Earnings Call"에 날짜가 올라옴. 원문: "December 10, 2026 02:00 PM PT" → 한국 시간 **12/11(금) 07:00 콜**(python zoneinfo 변환). 앱 events.json 은 2026-12-12 06:15 라 날짜·시각 모두 다름. 실적 자료 공개 시각은 이 페이지에 없음(확인 못 함). 회사 보도자료(발표일 공지)는 아직 못 찾음.
+- 출처: [코스트코 IR · Q1 2027 Earnings Call 행사 페이지 (이번 차례 본문 열어 확인)](https://investor.costco.com/events-and-presentations/events/event-details/2026/Q1-2027-Earnings-Call/default.aspx) · 공식 여부: 공식 (회사 IR)
+- 확신도: 높음 (콜 날짜·시각) / 확인 못 함 (자료 공개 시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-0404-2 · 발견 · ASTS 12/4 발사 — 회사 11/9 공시: 블루버드 14~16 "SpaceX 발사일 확정 대기", 12월 발사 언급 없음
+- 시각: 2026-11-16 04:04 KST
+- 내용: A-20261115-1504-7 에 대해 공식 근거 추가. AST스페이스모바일 3분기 실적·사업 업데이트(11/9, SEC 8-K 보도자료·발표 자료) 원문: "BlueBirds 14, 15, and 16 shipped to Cape Canaveral in September 2026 awaiting SpaceX launch date confirmation", "BlueBirds 17, 18, and 19 expected to ship by end of November 2026 for a Blue Origin launch expected in early Q1 2027". 두 문서 어디에도 2026년 12월 발사 날짜는 없음(12월은 위성 생산 월 6기 목표·20~25번 출하 시기로만 나옴). 앱의 2026-12-04 발사 일정은 회사 공식 근거가 없고, 회사는 날짜 자체를 아직 못 받았다고 밝힌 상태. 보도자료 뒤쪽 재무표 부분은 원문 전부를 읽지는 못함.
+- 출처: [ASTS 3분기 보도자료 (SEC 8-K Ex 99.1, 이번 차례 본문 열어 확인)](https://www.sec.gov/Archives/edgar/data/0001780312/000119312526453758/asts-ex99_1.htm) · [ASTS 3분기 발표 자료 (SEC 8-K Ex 99.2)](https://www.sec.gov/Archives/edgar/data/0001780312/000119312526453758/asts-ex99_2.htm) · 공식 여부: 공식
+- 확신도: 높음 (회사가 발사일 미확정이라 밝힘) / 확인 못 함 (실제 발사일)
+- 요청: Quill 확인 바람 (12/4 날짜의 출처 확인, "발사일 미정" 표시 등 처리 판단)
+
+### A-20261116-0404-3 · 발견 · TSLA 2026년 정기 주주총회 12/4 06:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 04:04 KST
+- 내용: 테슬라 위임장 설명서(DEF 14A, 10/19 무렵 발송) 원문: "will be held on December 3, 2026, at 3:00 p.m. Central Time, both virtually via the Internet ... and in person for a limited number of shareholders at Tesla's Gigafactory Texas" → 한국 시간 **12/4(금) 06:00**(python zoneinfo 변환). 기준일 10/13. 안건(위임장 기준 이사 재선임·보수 자문 투표 등)은 원문 세부를 다 읽지 못함. 참고: 앱 events.json 은 지금 실적(earn)·발사(launch) 종류만 있어 주주총회는 새 종류 — 넣을지는 Quill·Conrad 판단.
+- 출처: [테슬라 DEF 14A (SEC, 이번 차례 본문 열어 확인)](https://www.sec.gov/Archives/edgar/data/0001318605/000110465926116700/tm267596-1_def14a.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-0404-4 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 04:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA 11/18, PANW·WMT·BABA 11/19, MOGA 11/20, ADI 11/24, FLY·DELL 11/25)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정(AMAT 11/13, RKLB 11/14 100번째 발사 성공 — 회사 보도자료 11/14 확인)은 앱 결과 카드와 같음. (2) 확인 못 함: ACN FY27 1분기·FDX FY27 2분기·MU FY27 1분기 발표일(검색에 지난해 공지만 나옴), RKLB 101번째 일렉트론 발사 일정, SPCX 스타십 16번째 비행 날짜. (3) money.json 기간: 새로 지난 분기가 된 회사 없음(HD·BABA·MOGA·POWL 은 이번 주 발표 뒤 갱신 대상, CEG 는 A-20261115-2204-5 그대로).
+- 출처: [로켓랩 100번째 발사 보도자료](https://rocketlabcorp.com/updates/rocket-lab-hits-100-electron-launches-fastest-commercial-rocket-to-reach-the-milestone/) · 공식 여부: 공식 (1) / 해당 없음 (2·3)
+- 확신도: 중간 (1) / 확인 못 함 (2)
