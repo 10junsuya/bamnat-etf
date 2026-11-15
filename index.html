@@ -165,6 +165,17 @@ details.cat:not([open]) summary b::after{content:" ▾"; color:var(--muted); fon
 .ptag{position:absolute; left:12px; top:12px; font-size:11px; font-weight:600; color:var(--pt); background:var(--bg); padding:3px 8px; border-radius:999px}
 .pspecs{margin-top:10px} .pspecs>div{display:flex; justify-content:space-between; gap:14px; padding:8px 2px; border-bottom:1px solid var(--line); font-size:13px}
 .pspecs span{color:var(--muted); flex:none} .pspecs b{font-weight:600; text-align:right; overflow-wrap:anywhere}
+.pspecs>.psx{display:block; padding:0}
+.psxbtn{display:flex; justify-content:space-between; align-items:center; gap:14px; width:100%; padding:8px 2px; min-height:36px; background:none; border:0; font:inherit; font-size:13px; color:var(--ink); text-align:left; cursor:pointer}
+.psxbtn span{color:var(--muted); flex:none} .psxbtn b{font-weight:600; text-align:right; display:inline-flex; align-items:center; gap:6px}
+.psx .tri{width:9px; height:6px; fill:var(--pt); flex:none; transition:transform .2s}
+.psx.open .tri{transform:rotate(180deg)}
+.psxlist{padding:2px 0 10px; animation:psxIn .22s ease}
+.psxlist>div{display:flex; flex-direction:column; gap:1px; padding:8px 12px; margin-top:6px; border-radius:10px; background:var(--surface-2); font-size:13px}
+.psxlist b{font-weight:600; text-align:left} .psxlist span{color:var(--muted); font-size:12px; text-align:left}
+.psxlist em{font-style:normal; font-size:10px; font-weight:600; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:0 6px; margin-left:4px; vertical-align:2px}
+.psxlist p{margin:8px 2px 0}
+@keyframes psxIn{from{opacity:0; transform:translateY(-4px)} to{opacity:1; transform:none}}
 .pbody p{font-size:14px; line-height:1.6; margin:10px 2px 0}
 .pgen{margin-top:18px; padding:14px; border-radius:16px; background:var(--surface-2)}
 .pgen h4{margin:0 0 12px; font-size:14px}
@@ -2666,7 +2677,7 @@ const PRODUCTS = {
     ],
     gen:{title:"데이터센터 GPU 세대", note:"매년 새 세대를 내는 계획이에요. 2027년 이후는 회사가 발표한 로드맵이에요.",
       steps:[["파스칼","2016"],["볼타","2017"],["앰페어","2020"],["호퍼","2022"],["블랙웰","2024"],["블랙웰 울트라","2025"],["루빈","2026","now"],["루빈 울트라","2027","plan"],["파인먼","2028","plan"]]},
-    src:[["엔비디아 2분기 실적 발표 (제품 소식 포함)","https://www.earningswhispers.com/epsdetails/nvda"],["GTC 2026 로드맵 (Tom's Hardware)","https://www.tomshardware.com/pc-components/gpus/nvidia-updates-data-center-roadmap-with-rosa-cpu-and-stacked-feynman-gpus-optical-nvlink-groq-lpus-with-nvfp4-and-nvlink-also-on-deck"],["엔비디아 데이터센터 로드맵 (Next Platform)","https://www.nextplatform.com/compute/2026/03/19/driving-down-the-ai-system-roadmap-with-nvidia/5210195"],["지포스 RTX 50 시리즈 (엔비디아)","https://www.nvidia.com/en-au/geforce/products/"]]},
+    src:[["엔비디아 2분기 실적 발표 (제품 소식 포함)","https://www.earningswhispers.com/epsdetails/nvda"],["GTC 2026 로드맵 (Tom's Hardware)","https://www.tomshardware.com/pc-components/gpus/nvidia-updates-data-center-roadmap-with-rosa-cpu-and-stacked-feynman-gpus-optical-nvlink-groq-lpus-with-nvfp4-and-nvlink-also-on-deck"],["엔비디아 데이터센터 로드맵 (Next Platform)","https://www.nextplatform.com/compute/2026/03/19/driving-down-the-ai-system-roadmap-with-nvidia/5210195"],["지포스 RTX 50 시리즈 (엔비디아)","https://www.nvidia.com/en-au/geforce/products/"],["루빈 칩 6종 발표 (엔비디아)","https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Kicks-Off-the-Next-Generation-of-AI-With-Rubin--Six-New-Chips-One-Incredible-AI-Supercomputer/"]]},
   RKLB:{asof:"2026-11-15",
     cats:[
       {k:"발사체", items:[
@@ -2711,7 +2722,7 @@ const PRODUCTS = {
     ],
     gen:{title:"로켓랩 발사 흐름", note:"뉴트론 첫 발사 일정은 회사 발표 기준이에요.",
       steps:[["일렉트론 첫 상업 발사","2018"],["탑재량 300kg로 확대","2020"],["연 21회 발사","2025"],["100번째 발사","2026","now"],["뉴트론 첫 발사","2027","plan"]]},
-    src:[["일렉트론 사양 (로켓랩)","https://rocketlab.co.nz/launch/electron/"],["뉴트론 '헝그리 히포' 발표 (로켓랩 IR)","https://investors.rocketlabcorp.com/node/11961/pdf"],["뉴트론 첫 발사 연기","https://newspaceeconomy.ca/2026/10/15/why-has-rocket-lab-delayed-neutrons-first-orbital-launch-until-2027/"],["우주 시스템 사업 (연간 보고서)","https://www.sec.gov/Archives/edgar/data/1819994/000162828025034793/rklb2024arsfiling.pdf"],["반작용 휠 공장 (TechCrunch)","https://techcrunch.com/?p=2196689"]]}
+    src:[["일렉트론 사양 (로켓랩)","https://rocketlab.co.nz/launch/electron/"],["뉴트론 '헝그리 히포' 발표 (로켓랩 IR)","https://investors.rocketlabcorp.com/node/11961/pdf"],["뉴트론 첫 발사 연기","https://newspaceeconomy.ca/2026/10/15/why-has-rocket-lab-delayed-neutrons-first-orbital-launch-until-2027/"],["우주 시스템 사업 (연간 보고서)","https://www.sec.gov/Archives/edgar/data/1819994/000162828025034793/rklb2024arsfiling.pdf"],["반작용 휠 공장 (TechCrunch)","https://techcrunch.com/?p=2196689"],["우주개발청 추적 위성 계약 (로켓랩)","https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-awarded-816m-prime-contract-build-missile-defense"]]}
 };
 
 Object.assign(PRODUCTS, {
@@ -2750,7 +2761,7 @@ Object.assign(PRODUCTS, {
   ],
   gen:{title:"토마호크 스위치 칩 세대", note:"숫자는 칩 하나가 처리하는 속도예요. 대략 2~3년마다 두 배가 돼요.",
     steps:[["토마호크 3 · 12.8T","2017"],["토마호크 4 · 25.6T","2019"],["토마호크 5 · 51.2T","2022"],["토마호크 6 · 102.4T","2025","now"]]},
-  src:[["토마호크 6 출하 발표","https://www.hpcwire.com/off-the-wire/broadcom-unveils-tomahawk-6-with-102-4-tbps-switching-for-ai-scale-networks/"],["토르 울트라 발표","https://www.crnasia.com/news-network/2025/broadcom-vs"],["구글 TPU 8세대 (브로드컴 설계 참여)","https://thenextweb.com/news/google-ironwood-tpu-inference-cloud-next"],["브로드컴 제품 안내","https://www.broadcom.com/products"]]},
+  src:[["토마호크 6 출하 발표","https://www.hpcwire.com/off-the-wire/broadcom-unveils-tomahawk-6-with-102-4-tbps-switching-for-ai-scale-networks/"],["토르 울트라 발표","https://www.crnasia.com/news-network/2025/broadcom-vs"],["구글 TPU 8세대 (브로드컴 설계 참여)","https://thenextweb.com/news/google-ironwood-tpu-inference-cloud-next"],["브로드컴 제품 안내","https://www.broadcom.com/products"],["앤트로픽 주문 공개 (DCD)","https://www.datacenterdynamics.com/en/news/broadcom-bulges-with-anthropic-ai-orders/"]]},
 
   AMD:{asof:"2026-11-15", cats:[
     {k:"AI 데이터센터", items:[
@@ -3627,6 +3638,128 @@ Object.assign(PRODUCTS, {
   src:[["카르만 회사 소개 자료","https://karman-sd.com/wp-content/uploads/2025/12/2025-Company-Overview-Karman-Space-Defense-12.3.25.pdf"],["사드 장기 계약 (2026.10)","https://finviz.com/news/404447/karman-space-defense-awarded-218-million-long-term-agreement-to-support-thaad-production"],["카르만 제품군","https://karman-sd.com/space/"]]}
 });
 
+/* 제품 사양 줄을 눌렀을 때 아래로 펼쳐지는 상세 목록. [이름, 한 줄 설명, "보도"(공식 발표가 아닌 경우)] */
+const PX = {
+  QCOM:{
+    "스냅드래곤 8 엘리트 5세대":{"탑재 폰":{v:"샤오미·원플러스 등", list:[["샤오미 17","첫 탑재 (2025.9)"],["원플러스 15",""],["갤럭시 S26 울트라","삼성"]]}}
+  },
+  MRVL:{
+    "맞춤형 AI 칩":{"고객":{list:[["아마존","트레이니엄 2 협력 · 5년 계약 (2024.12)"],["마이크로소프트","차세대 마이아 칩","보도"]]}}
+  },
+  INTC:{
+    "인텔 18A 공정":{"외부 고객":{v:"마이크로소프트·아마존", list:[["마이크로소프트","18A 칩 생산 계약 (2024)"],["아마존","AWS용 AI 칩 (2024)"],["미 국방부","국방용 첨단 칩 시험 생산 사업"]]}}
+  },
+  TXN:{
+    "300mm 웨이퍼 공장":{"위치":{list:[["텍사스 리처드슨","RFAB1 · RFAB2"],["텍사스 셔먼","새 대형 공장"],["유타 리하이","LFAB"]]}}
+  },
+  ADI:{
+    "전원 모듈":{"출처":{list:[["리니어 테크놀로지","2017 · 약 148억 달러 · 전원 칩"],["맥심 인터그레이티드","2021 · 약 210억 달러 · 자동차·데이터센터 칩"]]}}
+  },
+  NXPI:{
+    "S32 차량용 프로세서":{"제품군":{v:"S32G·K·Z·E·N", list:[["S32G","차 안 네트워크 연결 (게이트웨이)"],["S32K","차체 제어용 마이크로컨트롤러"],["S32Z · S32E","실시간 제어"],["S32N","차량 중앙 컴퓨터 (2025 공개)"]]}}
+  },
+  MCHP:{
+    "PIC · AVR 마이크로컨트롤러":{"제품군":{v:"8비트~32비트", list:[["PIC16 · PIC18","8비트 · 가전·산업"],["AVR","아두이노 우노의 ATmega328P · 아트멜 인수 (2016)"],["PIC32","32비트"],["SAM","Arm 코어 기반"]]}}
+  },
+  MU:{
+    "D램 (1-감마)":{"제품 종류":{v:"4가지", list:[["DDR5","PC · 서버"],["LPDDR5X","스마트폰 · 노트북"],["GDDR7","그래픽카드"],["HBM","AI 가속기"]]}}
+  },
+  AMAT:{"엔듀라":{"주요 고객":{v:"TSMC·삼성 등", list:[["TSMC","대만 · 파운드리"],["삼성전자","한국 · 메모리·파운드리"],["SK하이닉스","한국 · 메모리"],["인텔","미국"],["마이크론","미국 · 메모리"]], note:"반도체 장비 회사들의 공통 대형 고객이에요."}}},
+  LRCX:{"키요 · 아카라":{"주요 고객":{v:"TSMC·삼성 등", list:[["TSMC","대만 · 파운드리"],["삼성전자","한국 · 메모리·파운드리"],["SK하이닉스","한국 · 메모리"],["인텔","미국"],["마이크론","미국 · 메모리"]], note:"반도체 장비 회사들의 공통 대형 고객이에요."}}},
+  KLAC:{"웨이퍼 결함 검사":{"주요 고객":{v:"TSMC·삼성 등", list:[["TSMC","대만 · 파운드리"],["삼성전자","한국 · 메모리·파운드리"],["SK하이닉스","한국 · 메모리"],["인텔","미국"],["마이크론","미국 · 메모리"]], note:"반도체 장비 회사들의 공통 대형 고객이에요."}}},
+  TSLA:{
+    "모델 Y · 모델 3":{"생산 공장":{v:"4곳", list:[["미국 프리몬트","캘리포니아"],["미국 텍사스","오스틴 · 사이버트럭·사이버캡도 생산"],["중국 상하이","수출 거점"],["독일 베를린","유럽용 모델 Y"]]}}
+  },
+  COST:{
+    "창고형 매장":{"진출 국가":{v:"14개 나라", list:[["미국 · 캐나다 · 멕시코",""],["한국 · 일본 · 대만 · 중국",""],["영국 · 스페인 · 프랑스 · 아이슬란드 · 스웨덴",""],["호주 · 뉴질랜드",""]]}}
+  },
+  JPM:{
+    "체이스":{"대표 상품":{v:"카드·대출", list:[["체이스 사파이어","여행 혜택 신용카드"],["체이스 프리덤","캐시백 카드"],["아마존 제휴카드","아마존 프라임 비자"],["주택·자동차 대출",""]]}}
+  },
+  V:{
+    "비자넷":{"수익 종류":{v:"4가지", list:[["서비스 수수료","카드 결제 금액 기준"],["데이터 처리 수수료","결제 건수 기준"],["해외 결제 수수료","나라를 넘는 결제"],["기타","부가 서비스 · 보안·데이터"]]}}
+  },
+  IRDM:{
+    "이리듐 넥스트":{"주요 고객":{v:"미 국방부 등", list:[["미 국방부","전용 게이트웨이 · 가장 큰 단일 고객"],["해운 · 항공","선박·항공기 안전 통신"],["사물인터넷 기업","화물·장비 추적"]]}}
+  },
+  VSAT:{
+    "인마샛 위성":{"다음":{list:[["GX 7 · 8 · 9","Ka 대역 · 유연한 용량 배분"],["인마샛-8 3기","L 대역 · 해상·항공 안전 통신"]]}}
+  },
+  SATS:{
+    "주파수 매각 · 스페이스X 지분":{"AT&T":{list:[["AT&T","3.45GHz · 600MHz 주파수"],["스페이스X","AWS-4 · H블록 주파수 → 스타링크 폰 직결용"]]}}
+  },
+  NVDA:{
+    "베라 루빈":{"구성":{list:[["루빈 GPU","AI 계산 · HBM4 메모리"],["베라 CPU","Arm 코어 88개"],["NV링크 6 스위치","GPU끼리 연결 · GPU당 초당 3.6TB"],["커넥트X-9 슈퍼NIC","서버 네트워크 카드"],["블루필드-4 DPU","저장·보안 처리"],["스펙트럼-6 스위치","랙 사이 연결 · 광 연결"]], note:"엔비디아가 '칩 6개로 만든 하나의 AI 슈퍼컴퓨터'라고 발표했어요."}},
+    "블랙웰 · 블랙웰 울트라":{"대표 제품":{list:[["B200","블랙웰 GPU"],["GB200","그레이스 CPU 1개 + B200 2개"],["B300","블랙웰 울트라 GPU · 메모리 증가"],["GB300","그레이스 CPU 1개 + B300 2개"]]}},
+    "드라이브 하이페리온":{"협력사":{list:[["폭스콘","차량 제조"],["빈패스트","베트남 전기차 회사"],["우버","로보택시 운영"],["휴메인","사우디 AI 회사"]]}}
+  },
+  RKLB:{
+    "일렉트론":{"주요 고객":{v:"iQPS·NASA 등", list:[["iQPS","일본 · 레이더 위성 (100번째 발사 고객)"],["신스펙티브","일본 · 레이더 위성"],["블랙스카이","미국 · 관측 위성"],["키네이스","프랑스 · 사물인터넷 위성"],["NASA","캡스톤 · 트로픽스 등"],["미국 국가정찰국(NRO)","국가 안보 임무"]], note:"일렉트론을 여러 번 이용한 대표 고객이에요."}},
+    "포톤 위성 본체":{"대표 사례":{list:[["에스카페이드","NASA 화성 쌍둥이 탐사선 · 2025.11 발사"],["캡스톤","NASA 달 궤도 시험 · 2022"]]}},
+    "군집 위성 제작":{"주요 고객":{list:[["미 우주개발청 수송 계층 2단계","위성 18기 · 5억 1,500만 달러 (2024)"],["미 우주개발청 추적 계층 3단계","미사일 추적 위성 18기 · 8억 1,600만 달러 (2025.12)"]], note:"우주개발청 계약만 합쳐 13억 달러가 넘어요."}}
+  },
+  AVGO:{
+    "맞춤형 AI 가속기 (XPU)":{"다른 고객":{list:[["구글","TPU 공동 설계 · 가장 큰 고객"],["메타","자체 AI 칩 (MTIA)","보도"],["바이트댄스","틱톡 운영사","보도"],["앤트로픽","TPU 랙 210억 달러 주문 (2025)"],["오픈AI","10GW 규모 맞춤 칩 계약 (2025.10)"],["다섯 번째 고객","10억 달러 주문 · 이름 비공개"]], note:"브로드컴은 보통 고객 이름을 밝히지 않아요. '보도'는 회사 발표가 아니라 언론·업계 추정이에요."}}
+  },
+  AMD:{
+    "헬리오스 랙":{"도입 고객":{v:"오픈AI·메타 등", list:[["오픈AI","6GW 규모 다년 계약 · 첫 단계"],["메타","도입 계획 발표"],["앤트로픽","전략적 협력 · 도입 계획"],["마이크로소프트 애저","첫 대규모 도입처"],["오라클","MI450 5만 개 도입 발표"]], note:"헬리오스·MI450을 쓰겠다고 밝힌 회사들이에요."}}
+  },
+  TSM:{
+    "N2 (2나노)":{"고객":{list:[["애플","아이폰 18 프로 A20 프로 칩"],["AMD","MI400 · 에픽 베니스"]], note:"공식으로 확인된 대표 고객만 적었어요. 20곳 넘는 회사가 설계를 맡겼어요."}},
+    "해외 공장":{"공장 위치":{v:"4개 나라", list:[["미국 애리조나","N4·N3 생산 → N2·A16 계획"],["일본 구마모토","자회사 JASM"],["독일 드레스덴","자회사 ESMC · 건설 중"],["중국 난징","구형 공정"]]}}
+  },
+  AAPL:{
+    "앱스토어 · 구독 서비스":{"서비스 목록":{v:"앱스토어·아이클라우드 등", list:[["앱스토어","앱 판매·구독 수수료"],["아이클라우드+","사진·파일 저장 구독"],["애플 뮤직 · 애플 TV+","음악·영상 구독"],["애플페이 · 애플 카드","결제"],["애플케어","보증 연장"],["구글 검색 계약","사파리 기본 검색 대가"]]}}
+  },
+  MSFT:{
+    "엑스박스 · 게임":{"대표 게임":{v:"콜 오브 듀티 등", list:[["콜 오브 듀티","액티비전"],["월드 오브 워크래프트 · 디아블로","블리자드"],["캔디 크러시","킹"],["마인크래프트","모장 (2014 인수)"],["헤일로","자체 개발"]]}}
+  },
+  AMZN:{
+    "아마존 레오":{"고객":{list:[["델타항공","항공기 500대 · 2028년부터"],["제트블루","기내 인터넷"],["AT&T","통신망 보완"],["보다폰","유럽·아프리카 통신"],["NASA","정부 고객"],["호주 국가망 NBN","오지 인터넷"]]}}
+  },
+  GOOGL:{
+    "TPU 8t · 8i":{"외부 고객":{v:"앤트로픽 등", list:[["앤트로픽","2027년까지 3.5GW 규모 사용 계약"],["애플 · SSI 등","구글 클라우드로 TPU 사용"]], note:"구글 TPU를 외부에서 쓰는 대표 고객이에요."}}
+  },
+  META:{
+    "페이스북 · 인스타그램 · 왓츠앱":{"앱 목록":{v:"5개", list:[["페이스북","SNS"],["인스타그램","사진·릴스"],["왓츠앱","메신저 · 기업 메시지 유료"],["메신저","페이스북 메신저"],["스레드","텍스트 SNS · 광고 시작"]]}}
+  },
+  BRKB:{
+    "제조 · 소매 자회사":{"예":{list:[["프리시전 캐스트파츠","항공기 엔진 부품"],["루브리졸","화학 첨가제"],["클레이턴 홈즈","조립식 주택"],["넷젯","전용기 공유"],["듀라셀","건전지"],["파일럿","트럭 휴게소"],["데어리퀸 · 시즈캔디","아이스크림 · 초콜릿"]]}},
+    "주식 투자":{"대표 보유 종목":{v:"애플·코카콜라 등", list:[["애플","가장 큰 보유 종목 중 하나 (일부 매도)"],["아메리칸 익스프레스","카드"],["뱅크오브아메리카","은행 (일부 매도)"],["코카콜라","음료"],["셰브론","석유"],["무디스","신용평가"],["옥시덴탈 페트롤리엄","석유"]], note:"대표 보유 종목이에요. 비중과 수량은 분기마다 바뀌어요."}}
+  },
+  LLY:{
+    "마운자로 · 젭바운드":{"승인된 질환":{v:"당뇨·비만 등", list:[["제2형 당뇨","마운자로 · 2022"],["비만","젭바운드 · 2023"],["수면무호흡증 (비만 동반)","젭바운드 · 2024"]], note:"미국 FDA 승인 기준이에요. 정보 제공용이며 복용은 의사와 상담해야 해요."}}
+  },
+  FLY:{
+    "알파":{"고객 예":{v:"록히드 마틴·NASA 등", list:[["록히드 마틴","시험 위성 (7번째 비행)"],["NASA","소형 위성 발사"],["미 우주군","빅터스 녹스 · 24시간 대기 후 즉시 발사 (2023)"]], note:"알파를 이용한 대표 고객이에요."}},
+    "블루 고스트":{"2호":{list:[["라시드 2 로버","아랍에미리트 · MBRSC"],["SPIDER","호주 플리트 스페이스 · 지진계"],["NASA JPL 통신 단말","달 뒷면 통신 시험"],["엘리트라 다크","파이어플라이 · 달 궤도 중계·촬영"]], note:"2호에 실리는 것으로 발표된 탑재물 일부예요."}}
+  },
+  LUNR:{
+    "노바-C":{"임무 기록":{v:"IM-1·2·3", list:[["IM-1 오디세우스","2024.2 · 달 남극 근처 · 착륙 후 기울어짐"],["IM-2 아테나","2025.3 · 달 남극 · 착륙 후 옆으로 누움"],["IM-3 트리니티","2027 1분기 이후 · 라이너 감마 · 탑재물 12개"]]}}
+  },
+  ASTS:{
+    "폰 직결 위성 통신":{"협력 통신사":{list:[["AT&T","미국"],["버라이즌","미국"],["보다폰","유럽 · 합작사 설립"],["라쿠텐","일본"],["벨 캐나다","캐나다"],["stc","사우디아라비아"]], note:"약 60곳 중 대표 통신사만 적었어요."}}
+  },
+  PL:{
+    "펠리컨":{"주요 고객":{v:"독일·스웨덴", list:[["독일 정부","2억 4,000만 유로 다년 계약"],["스웨덴 국방","펠리컨 고해상도 영상"]]}}
+  },
+  RDW:{
+    "롤아웃 태양전지 (ROSA)":{"사용처":{list:[["국제우주정거장 iROSA","6쌍 설치"],["NASA DART","소행성 충돌 실험 (2021 발사)"],["루나 게이트웨이","달 궤도 정거장 전력 모듈"],["액시엄 정거장","1·2번째 모듈"]]}}
+  },
+  KRMN:{
+    "페어링 · 보호 덮개":{"사용처":{list:[["ULA 벌컨","우주 발사체"],["스탠더드 미사일","해군 요격 미사일"],["사드 (THAAD)","록히드 마틴 · 7년 장기 계약 (2026.10)"]]}}
+  }
+};
+
+function specRows(t, p){
+  const X = (PX[t]||{})[p.name] || {};
+  const rows = p.specs.map(([k,v])=>[k, v, X[k]]);
+  Object.entries(X).forEach(([k,x])=>{ if(!p.specs.some(([kk])=>kk===k)) rows.push([k, x.v||"", x]); });
+  return rows.map(([k,v,x])=> x
+    ? `<div class="psx"><button type="button" class="psxbtn" data-pspec aria-expanded="false"><span>${k}</span><b>${v}<svg class="tri" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0h10L5 6z"/></svg></b></button>
+       <div class="psxlist" hidden>${x.list.map(([n,sub,tag])=>`<div><b>${n}${tag?` <em>${tag}</em>`:""}</b>${sub?`<span>${sub}</span>`:""}</div>`).join("")}${x.note?`<p class="tiny muted">${x.note}</p>`:""}</div></div>`
+    : `<div><span>${k}</span><b>${v}</b></div>`).join("");
+}
 function productsHtml(t){
   const P = PRODUCTS[t]; if(!P) return "";
   const cats = P.cats;
@@ -3638,7 +3771,7 @@ function productsHtml(t){
       </button>
       <div class="pbody" hidden>
         <div class="pfig${FIG[p.art]?" tall":""}">${figSvg(p.art)}${p.tag?`<span class="ptag">${p.tag}</span>`:""}</div>
-        <div class="pspecs">${p.specs.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join("")}</div>
+        <div class="pspecs">${specRows(t,p)}</div>
         <p>${p.body}</p>
       </div></div>`;
   const G = P.gen;
@@ -3990,7 +4123,7 @@ function reopenSplash(){
 (function(){ const sp = document.getElementById("splash"); if(sp) bindSplash(sp); })();
 document.addEventListener("click", ev=>{ if(ev.target.closest(".landing.main .mlogo")) reopenSplash(); });
 document.addEventListener("click", ev=>{
-  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill],[data-evt],[data-pcat],[data-pitem]");
+  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill],[data-evt],[data-pcat],[data-pitem],[data-pspec]");
   if(!el || el.closest("#sheet [data-close]")) return;
   if(el.dataset.share!==undefined){ openShare(el.dataset.share || null); return; }
   if(el.dataset.saveimg!==undefined){ saveShare(); return; }
@@ -4038,6 +4171,8 @@ document.addEventListener("click", ev=>{
   if(el.dataset.cal){ calFilter = el.dataset.cal; render(); return; }
   if(el.dataset.pcat!==undefined){ const box = el.closest(".prod"); box.querySelectorAll(".pc").forEach(b=>{ const on = b===el; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); });
     box.querySelectorAll(".pgroup").forEach(g=>g.hidden = g.dataset.pg!==el.dataset.pcat); return; }
+  if(el.dataset.pspec!==undefined){ const box = el.parentElement, open = el.getAttribute("aria-expanded")!=="true";
+    el.setAttribute("aria-expanded", open); box.classList.toggle("open", open); box.querySelector(".psxlist").hidden = !open; return; }
   if(el.dataset.pitem!==undefined){ const item = el.closest(".pitem"), open = el.getAttribute("aria-expanded")!=="true";
     el.closest(".prod").querySelectorAll(".pitem").forEach(x=>{ x.querySelector(".pbody").hidden = true; x.querySelector(".phead").setAttribute("aria-expanded","false"); x.classList.remove("open"); });
     if(open){ item.querySelector(".pbody").hidden = false; el.setAttribute("aria-expanded","true"); item.classList.add("open"); }

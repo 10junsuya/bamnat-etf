@@ -143,6 +143,8 @@ class QA:
                         page.evaluate(f"() => document.querySelector('#sheet .pc[data-pcat=\"{ci}\"]').click()"); page.wait_for_timeout(30)
                         for pi in range(page.evaluate("() => document.querySelectorAll('#sheet .pgroup:not([hidden]) .phead').length")):
                             page.evaluate(f"() => document.querySelectorAll('#sheet .pgroup:not([hidden]) .phead')[{pi}].click()"); page.wait_for_timeout(30)
+                            if page.evaluate("() => { const b=[...document.querySelectorAll('#sheet .pitem.open [data-pspec]')]; b.forEach(x=>x.click()); return b.length; }"):
+                                page.wait_for_timeout(30)
                             self.probe(page, f"제품 카드 {t} 분류{ci} #{pi} [{theme}]")
                     self.close_sheet(page)
                 for c in meta["etfs"]:
