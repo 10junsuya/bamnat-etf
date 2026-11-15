@@ -50,3 +50,44 @@
 - 출처: [ASTS 3분기 업데이트 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001780312/000119312526453758/asts-ex99_1.htm) · [Advanced Television](https://www.advanced-television.com/2026/10/19/ast-spacemobile-launch-schedule-updated/) · 공식 여부: 공식 (8-K) / 보도
 - 확신도: 중간 (12/4 날짜 근거만 확인 못 함)
 - 요청: Quill 확인 바람
+
+### A-20261115-1704-1 · 발견 · WMT 실적 발표 11/19 — events.json 에 없음
+- 시각: 2026-11-15 17:04 KST
+- 내용: 월마트 공식 이벤트 페이지: FY27 3분기(8~10월) 실적을 미국 중부 시간 **11/19(목) 06:00 자료 공개, 07:00 콜** → 한국 시간 **11/19(목) 21:00 자료 공개, 22:00 콜** (미국 장 시작 전). 14일 안 일정. money.json 의 WMT 기간(FY27 2분기)은 발표 뒤 갱신 대상.
+- 출처: [월마트 FY27 3분기 실적 이벤트](https://corporate.walmart.com/news/events/fy2027-q3-earnings-release) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람
+
+### A-20261115-1704-2 · 발견 · HD 실적 콜 11/17 — events.json 에 없음
+- 시각: 2026-11-15 17:04 KST
+- 내용: 홈디포 보도자료(11/3, PR Newswire): 3분기 실적 콜을 미국 동부 시간 **11/17(화) 09:00** → 한국 시간 **11/17(화) 23:00 콜**. 실적 자료 공개 시각은 확인 못 함(보통 장 시작 전이지만 이번 공지 본문에서 직접 확인 못 함). HD는 배당·S&P500 계열 ETF 구성종목. money.json 에는 HD 항목 없음.
+- 출처: [Earnings Whispers (회사 보도자료 인용)](https://www.earningswhispers.com/article/HD/2611036981) · [PR Newswire 원문](https://www.prnewswire.com/news-releases/the-home-depot-to-host-third-quarter-earnings-conference-call-on-november-17-302926992.html) (원문·ir.homedepot.com 은 열지 못함) · 공식 여부: 공식 보도자료 (재인용 경로)
+- 확신도: 높음 (콜 날짜·시각) / 확인 못 함 (자료 공개 시각)
+- 요청: Quill 확인 바람
+
+### A-20261115-1704-3 · 발견 · CSCO 11/12 실적 발표 끝남 — money.json 기간이 지난 분기
+- 시각: 2026-11-15 17:04 KST
+- 내용: money.json CSCO 는 "FY26 4분기 · 2026년 5~7월". 시스코는 미국 시간 11/12 장 마감 후 FY27 1분기(8~10월, 10/24 마감) 실적 발표. 매출 185.17억 달러(+24%). 제품군별(백만 달러): 네트워킹 11,132(+43%) · 서비스 3,850(+1%) · 보안 2,120(+7%) · 협업 1,136(+8%) · 관측 279(+2%). 2분기 매출 전망 180~182억 달러. events.json 에는 이 일정이 원래 없었음.
+- 출처: [시스코 FY27 1분기 실적 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000858877/000085887726000170/exhibit991pressrelease-q1f.htm) · [콜 일정 공지](https://investor.cisco.com/news/news-details/2026/Cisco-Schedules-Conference-Call-for-Q1-Fiscal-Year-2027-Financial-Results/default.aspx) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람 (money.json CSCO 갱신)
+
+### A-20261115-1704-4 · 발견 · MO 3분기 실적 나옴 — money.json 이 2분기에 머묾
+- 시각: 2026-11-15 17:04 KST
+- 내용: money.json MO 는 "2026년 2분기 · 4~6월". 알트리아 3분기(7~9월) 10-Q 기준 매출(담배세 포함, 백만 달러): 궐련 5,432 · 입에 넣는 담배 688 · 기타 12 · 합계 6,132. 주당순이익 1.51달러. 2분기와 같은 기준(담배세 포함)이라 그대로 비교 가능. 3분기 실적 발표일·10-Q 제출일은 확인 못 함(10월 말로 보이나 직접 확인 못 함).
+- 출처: [알트리아 3분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0000764180/000076418026000114/mo-20260930.htm) · 공식 여부: 공식
+- 확신도: 높음 (숫자) / 확인 못 함 (발표일)
+- 요청: Quill 확인 바람 (money.json MO 갱신, 실적 보도자료 8-K 도 함께 확인하면 좋음)
+
+### A-20261115-1704-5 · 발견 · SPCX 스타십 15번째 비행 끝남 (11/14) — events.json 에 없음
+- 시각: 2026-11-15 17:04 KST
+- 내용: 스페이스X 스타십 15번째 시험비행이 미국 텍사스 스타베이스에서 **한국 시간 11/14(토) 07:47** 발사. 2단 우주선(Ship 42)은 궤도 진입, 스타링크 V3 위성 26기 배치, 약 22.5시간 비행 뒤 **한국 시간 11/15(일) 06:20쯤 발사탑 팔로 우주선 첫 회수(캐치)** 성공. 1단 부스터(Booster 22)는 회수 시도를 스스로 중단하고 멕시코만 바다로 내려감(스페이스X 측 "연료량 경보로 귀환 연소를 일찍 끝냄" 설명). 앱에 이 일정·결과가 없음.
+- 출처: [Space.com 실시간 기사 (스페이스X 해설진 발언 인용)](https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-14-2026-starship-first-double-landing-attempt) · 공식 여부: 보도 (스페이스X 공식 페이지 spacex.com 은 열지 못해 확인 못 함)
+- 확신도: 높음 (결과 보도) / 공식 문서 확인 못 함
+- 요청: Quill 확인 바람 (새 일정 추가인지 판단은 Conrad 몫일 수 있음)
+
+### A-20261115-1704-6 · 알림 · NVDA 11/18 06:20 — 공식 공지와 일치 (변경 없음)
+- 시각: 2026-11-15 17:04 KST
+- 내용: 엔비디아 공지(10/28): 실적 자료 미국 태평양 시간 11/17(화) 13:20쯤, 콜 14:00 → 한국 시간 11/18(수) 06:20 자료, 07:00 콜. 앱과 같음. 확인 기록용.
+- 출처: [엔비디아 IR 공지](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx) · 공식 여부: 공식
+- 확신도: 높음
