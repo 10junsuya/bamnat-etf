@@ -138,6 +138,11 @@ class QA:
                 for t in meta["stocks"]:
                     page.evaluate(f"() => stockSheet('{t}')"); page.wait_for_timeout(50)
                     self.probe(page, f"종목 시트 {t} [{theme}]")
+                    # 돈은 어디서 버나 · 업계에서의 위치: 둘 다 펼쳐서 확인
+                    if page.evaluate("() => { const b=[...document.querySelectorAll('#sheet [data-acc]')]; b.forEach(x=>x.click()); return b.length; }"):
+                        page.wait_for_timeout(30)
+                        self.probe(page, f"매출 구성·업계 위치 {t} [{theme}]")
+                        if theme == "light" and t in ("NVDA", "BRKB"): self.shot(page, f"sheet-money-{t}", full=True)
                     # 제품 카드: 분류마다 첫 카드를 펼쳐서 확인
                     for ci in range(page.evaluate("() => document.querySelectorAll('#sheet .pc').length")):
                         page.evaluate(f"() => document.querySelector('#sheet .pc[data-pcat=\"{ci}\"]').click()"); page.wait_for_timeout(30)

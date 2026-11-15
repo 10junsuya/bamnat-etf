@@ -175,6 +175,48 @@ details.cat:not([open]) summary b::after{content:" ▾"; color:var(--muted); fon
 .psxlist b{font-weight:600; text-align:left} .psxlist span{color:var(--muted); font-size:12px; text-align:left}
 .psxlist em{font-style:normal; font-size:10px; font-weight:600; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:0 6px; margin-left:4px; vertical-align:2px}
 .psxlist p{margin:8px 2px 0}
+/* 돈은 어디서 버나 · 업계에서의 위치 (눌러서 펼치기) */
+:root{--d2:#1D1D1F; --d3:#8E8E93; --d4:#AEAEB2; --d5:#C7C7CC; --d6:#E5E5EA}
+body[data-mode="dark"]{--d2:#F5F5F7; --d3:#8E8E93; --d4:#636366; --d5:#48484A; --d6:#3A3A3C}
+.accs{margin-top:14px; border-top:1px solid var(--line)}
+.acc{border-bottom:1px solid var(--line)}
+.accbtn{display:flex; align-items:center; gap:10px; width:100%; min-height:48px; padding:10px 2px; background:none; border:0; font:inherit; color:var(--ink); text-align:left; cursor:pointer}
+.accbtn>b{font-size:15px; font-weight:700; flex:none}
+.accbtn>span{flex:1; min-width:0; text-align:right; font-size:13px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.accbtn>span em{font-style:normal; color:var(--pt); font-weight:700}
+.acc .tri{width:9px; height:6px; fill:var(--pt); flex:none; transition:transform .2s}
+.acc.open .tri{transform:rotate(180deg)}
+.accbody{padding:4px 0 14px; animation:psxIn .22s ease}
+.donut{display:flex; align-items:center; gap:16px}
+.donut .ring{position:relative; width:124px; height:124px; flex:none}
+.donut .ring svg{width:100%; height:100%; display:block}
+.donut .ring circle{fill:none; stroke-width:15}
+.donut .ctr{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 24px}
+.donut .ctr b{font-size:22px; font-weight:800; color:var(--pt); letter-spacing:-.5px; line-height:1.1}
+.donut .ctr i{font-style:normal; font-size:11px; color:var(--muted); line-height:1.25; margin-top:2px; max-width:64px; word-break:break-all}
+.leg{flex:1; min-width:0; display:grid; gap:7px}
+.leg>div{display:grid; grid-template-columns:9px 1fr auto; column-gap:8px; align-items:baseline; font-size:13px}
+.leg .dot{width:9px; height:9px; border-radius:3px; align-self:center}
+.leg .nm{min-width:0; font-weight:600; word-break:keep-all}
+.leg .nm small{display:block; font-weight:400; font-size:11px; color:var(--muted); margin-top:1px}
+.leg .lv{font-weight:700; font-variant-numeric:tabular-nums; text-align:right}
+.leg .lv small{display:block; font-weight:400; font-size:11px; color:var(--muted)}
+.leg>div:first-child .lv{color:var(--pt)}
+.mnote{margin:12px 0 0; font-size:13px; line-height:1.5}
+.msrc{display:flex; flex-wrap:wrap; align-items:center; gap:0 10px; margin-top:6px} .msrc a{display:inline-flex; align-items:center; min-height:28px}
+.vchain{display:grid; grid-template-columns:minmax(0,1fr) 12px auto 12px minmax(0,1fr); align-items:center; gap:0 4px}
+.vchain .colh{font-size:11px; color:var(--muted); font-weight:600; margin-bottom:6px; text-align:center}
+.vchain .col{display:grid; gap:6px; align-content:center}
+.vchain .it{display:block; width:100%; padding:7px 8px; border-radius:10px; background:var(--surface-2); border:0; font:inherit; text-align:left; color:var(--ink)}
+.vchain .it b{display:block; font-size:12.5px; font-weight:600; line-height:1.25; word-break:keep-all}
+.vchain .it small{display:block; font-size:10.5px; color:var(--muted); line-height:1.3; margin-top:1px; word-break:keep-all}
+.vchain button.it{cursor:pointer}
+.vchain button.it b{text-decoration:underline; text-decoration-color:var(--pt); text-decoration-thickness:1.5px; text-underline-offset:3px}
+.vchain .ar{color:var(--pt); font-size:13px; text-align:center}
+.vchain .me{background:var(--ink); color:var(--bg); border-radius:12px; padding:10px 8px; text-align:center; max-width:96px}
+.vchain .me b{display:block; font-size:13px; font-weight:800; line-height:1.2; overflow-wrap:anywhere}
+.vchain .me small{display:block; font-size:10.5px; color:var(--pt); margin-top:4px; line-height:1.3; word-break:keep-all; font-weight:600}
+body[data-mode="dark"] .vchain .me small{color:#8A6A2C}
 @keyframes psxIn{from{opacity:0; transform:translateY(-4px)} to{opacity:1; transform:none}}
 .mstage{position:relative; aspect-ratio:3/2; background:var(--surface-2); border-radius:16px; overflow:hidden; cursor:pointer; color:var(--ink)}
 .mfr{position:absolute; inset:0; width:100%; height:100%; opacity:0; transform:scale(1.05); transition:opacity .55s ease, transform 2.6s ease-out; stroke-width:1.4}
@@ -3850,7 +3892,131 @@ function productsHtml(t){
   </div>`;
 }
 
-function stockSheet(t, from, fromEv){
+/* 돈은 어디서 버나: 최근 분기 사업별 매출(백만 달러). pct:true 이면 회사가 비율만 공개 */
+const MONEY = {
+  NVDA:{p:"FY27 2분기 · 2026년 5~7월", segs:[["데이터센터",89000,"AI 서버 칩·네트워크"],["엣지 컴퓨팅",7200,"게임·PC·자동차·로봇"]], note:"AI 서버용 칩과 네트워크 장비가 거의 다예요.", src:[["엔비디아 IR","https://investor.nvidia.com/financial-info/quarterly-results/default.aspx"]]},
+  AVGO:{p:"FY26 3분기 · 2026년 5~7월", segs:[["AI 반도체",16700,"맞춤 AI 칩·AI 네트워크"],["인프라 소프트웨어",8752,"VMware 등"],["기타 반도체",4139,"무선·저장장치·광대역"]], note:"AI 칩이 절반을 넘고, 소프트웨어가 30%예요.", src:[["브로드컴 IR","https://investors.broadcom.com"]]},
+  AMD:{p:"2026년 3분기 · 7~9월", segs:[["데이터센터",8546,"서버 CPU·AI 가속기"],["클라이언트",2949,"PC용 CPU"],["임베디드",1109,"FPGA 등"],["게임",773,"게임기 칩·그래픽카드"]], note:"서버 CPU와 AI 가속기를 합친 데이터센터가 3분의 2예요.", src:[["AMD IR","https://ir.amd.com"]]},
+  QCOM:{p:"FY26 4분기 · 2026년 7~9월", segs:[["휴대폰 칩",5137,"스냅드래곤·모뎀"],["자동차",1990,"차량용 칩"],["사물인터넷",1888,"PC·XR·산업용"],["특허료(QTL)",1304,"휴대폰 회사들의 로열티"]], note:"휴대폰 칩이 절반이에요. 특허료는 매출 비중은 작아도 이익 비중이 커요.", src:[["퀄컴 IR","https://investor.qualcomm.com"]]},
+  MRVL:{p:"FY27 2분기 · 2026년 5~7월", segs:[["데이터센터",2171,"광통신·맞춤 AI 칩"],["통신·기타",568,"통신망·기업 네트워크·자동차"]], note:"데이터센터가 80% 가까이예요.", src:[["마벨 IR","https://investor.marvell.com"]]},
+  INTC:{p:"2026년 3분기 · 7~9월", segs:[["PC 칩",8100,"코어 CPU"],["데이터센터·AI",7300,"제온 CPU 등"],["기타",1100,"알테라·모빌아이 등"]], note:"PC 칩과 서버 칩이 비슷하게 나눠요. 파운드리 매출은 대부분 회사 안 거래라 따로 빼요.", src:[["인텔 IR","https://www.intc.com"]]},
+  TXN:{p:"2026년 3분기 · 7~9월", segs:[["아날로그",4911,"전력·신호 칩"],["임베디드",858,"제어용 프로세서"],["기타",286,""]], note:"아날로그 칩이 80%를 넘어요.", src:[["TI IR","https://investor.ti.com"]]},
+  ADI:{p:"FY26 3분기 · 2026년 5~7월", segs:[["산업",1971,"공장 자동화·계측 장비"],["자동차",1006,"배터리 관리 등"],["통신",644,"기지국·데이터센터"],["소비자",402,"가전·웨어러블"]], note:"산업용이 절반이에요.", src:[["ADI 분기 자료(PDF)","https://investor.analog.com"]]},
+  NXPI:{p:"2026년 3분기 · 7~9월", segs:[["자동차",2070,"차량 제어·레이더"],["산업·사물인터넷",802,""],["통신 인프라",503,""],["모바일",411,"NFC 결제 칩 등"]], note:"자동차가 절반이 넘어요.", src:[["NXP IR","https://investors.nxp.com"]]},
+  MCHP:{p:"FY27 2분기 · 2026년 7~9월", segs:[["혼합신호 MCU",774,"기기 제어용 칩"],["아날로그",459,""],["기타",388,"FPGA·특허 등"]], note:"작은 제어용 칩(MCU)이 절반 가까이예요.", src:[["마이크로칩 IR","https://ir.microchip.com"]]},
+  MU:{p:"FY26 4분기 · 2026년 6~8월", segs:[["코어 데이터센터",18002,"서버 D램·데이터센터 SSD"],["클라우드 메모리",16283,"HBM 중심"],["모바일·PC",13114,""],["자동차·임베디드",6824,""]], note:"데이터센터와 AI(HBM)가 60%를 넘어요. D램이 매출의 73%예요.", src:[["마이크론 실적 발표(SEC)","https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm"]]},
+  TSM:{p:"2026년 3분기 · 7~9월", pct:true, segs:[["고성능 컴퓨팅",68,"AI 가속기·서버 CPU"],["스마트폰",21,""],["사물인터넷",4,""],["자동차",4,""],["기타",3,"가전 등"]], note:"AI 칩이 들어가는 고성능 컴퓨팅이 3분의 2를 넘어요. 회사가 비율만 공개해요.", src:[["TSMC 실적(SEC)","https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000726/a3q26e_withguidancexfinal.htm"]]},
+  AMAT:{p:"FY26 4분기 · 2026년 8~10월", segs:[["파운드리·로직 장비",4638,""],["D램 장비",2639,"HBM 포장 포함"],["서비스",1896,"부품·유지보수"],["낸드 장비",720,""],["디스플레이 등",517,""]], note:"장비 판매가 77%, 이미 깔린 장비 관리(서비스)가 18%예요.", src:[["어플라이드 실적(SEC)","https://www.sec.gov/Archives/edgar/data/0000006951/000162828026073360/exhibit991q42026earningsre.htm"]]},
+  LRCX:{p:"2026년 9월 분기 · 7~9월", segs:[["파운드리용 장비",2637,""],["고객 지원·서비스",2487,"부품·업그레이드"],["낸드용 장비",1491,""],["D램용 장비",1147,""],["로직 등",459,""]], note:"메모리와 파운드리 장비가 반반이고, 서비스가 30%예요. 장비 몫은 공시 비율로 나눈 값이에요.", src:[["램리서치 10-Q(SEC)","https://www.sec.gov/Archives/edgar/data/0000707549/000070754926000054/lrcx-20260927.htm"]]},
+  KLAC:{p:"FY27 1분기 · 2026년 7~9월", segs:[["웨이퍼 검사 장비",2111,""],["패터닝",862,"마스크·정렬 계측"],["서비스",851,""],["PCB·부품 검사",168,""],["특수 공정 장비",114,""],["기타",30,""]], note:"불량을 찾는 검사 장비가 절반이에요.", src:[["KLA 10-Q(SEC)","https://www.sec.gov/Archives/edgar/data/0000319201/000031920126000034/klac-20260930.htm"]]},
+  AAPL:{p:"FY26 4분기 · 2026년 7~9월", segs:[["아이폰",57583,""],["서비스",31573,"앱스토어·아이클라우드 등"],["맥",10792,""],["웨어러블·홈",8300,"워치·에어팟 등"],["아이패드",6229,""]], note:"아이폰이 절반, 서비스가 28%예요.", src:[["애플 IR","https://investor.apple.com"]]},
+  MSFT:{p:"FY27 1분기 · 2026년 7~9월", segs:[["애저 클라우드",33200,""],["M365 클라우드",27800,"오피스·팀즈 등"],["검색·광고",6600,"빙"],["엑스박스",5400,""],["윈도우",3600,""],["기타",15700,"링크드인·다이내믹스 등"]], note:"클라우드(애저+M365)가 3분의 2예요.", src:[["마이크로소프트 IR","https://www.microsoft.com/en-us/investor"]]},
+  GOOGL:{p:"2026년 3분기 · 7~9월", segs:[["구글 검색",63350,"검색 광고"],["구글 클라우드",30709,""],["구독·기기",14290,"유튜브 프리미엄·픽셀 등"],["유튜브 광고",11207,""],["광고 네트워크",7455,"다른 사이트 광고"]], note:"검색 광고가 절반, 클라우드가 4분의 1이에요.", src:[["알파벳 IR","https://abc.xyz/investor/"]]},
+  AMZN:{p:"2026년 3분기 · 7~9월", segs:[["북미 쇼핑",112900,"광고 포함"],["AWS",46000,"클라우드"],["해외 쇼핑",43100,""]], note:"매출은 쇼핑이 크지만, 영업이익은 AWS가 60% 넘게 벌어요.", src:[["아마존 IR","https://ir.aboutamazon.com"]]},
+  META:{p:"2026년 3분기 · 7~9월", segs:[["광고",63060,"페이스북·인스타그램 등"],["앱 기타 매출",1140,"구독·결제 등"],["리얼리티 랩스",443,"퀘스트·AI 안경"]], note:"거의 전부 광고예요.", src:[["메타 실적 발표","https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/"]]},
+  TSLA:{p:"2026년 3분기 · 7~9월", segs:[["자동차",20560,""],["서비스·기타",4605,"충전·보험·중고차 등"],["에너지 저장",2881,"메가팩 등"]], note:"자동차가 4분의 3이에요.", src:[["테슬라 IR","https://ir.tesla.com"]]},
+  COST:{p:"FY26 4분기 · 2026년 5~8월(16주)", segs:[["상품 판매",93873,""],["회비",1850,"연회비"]], note:"매출은 거의 상품이지만, 회비가 영업이익의 절반쯤 돼요.", src:[["코스트코 IR","https://investor.costco.com"]]},
+  BRKB:{p:"2026년 3분기 · 7~9월", segs:[["제조·서비스·유통",63067,"자회사 매출"],["보험",27946,"보험료·투자수익"],["에너지·유틸리티",7794,"BHE"],["철도",6840,"BNSF"]], note:"여러 회사를 가진 지주회사라 매출이 넓게 나뉘어요. 주식 투자 손익은 빼고 봤어요.", src:[["버크셔 3분기 보고서(PDF)","https://www.berkshirehathaway.com/qtrly/3rdqtr26.pdf"]]},
+  JPM:{p:"2026년 3분기 · 7~9월", segs:[["기업·투자은행",22700,"대출·결제·투자은행"],["소비자 은행",21200,"예금·카드·대출"],["자산관리",6900,""]], note:"기업 쪽과 개인 쪽이 비슷하게 나눠요.", src:[["JP모건 IR","https://www.jpmorganchase.com/ir/quarterly-earnings"]]},
+  V:{p:"FY26 4분기 · 2026년 7~9월", segs:[["결제 처리",6200,"승인·정산 수수료"],["서비스",5300,"결제액에 따른 수수료"],["해외 결제",4100,""],["기타",1600,"부가 서비스 등"]], note:"카드가 긁힐 때마다 수수료를 받아요. 은행에 돌려주는 인센티브를 빼기 전 금액이에요.", src:[["비자 IR","https://investor.visa.com"]]},
+  LLY:{p:"2026년 3분기 · 7~9월", segs:[["마운자로",10723,"당뇨약"],["젭바운드",5352,"비만약"],["버제니오",1510,"유방암약"],["기타 약",6812,""]], note:"같은 성분(터제파타이드)의 두 약이 3분의 2예요.", src:[["릴리 IR","https://investor.lilly.com"]]},
+  RKLB:{p:"2026년 3분기 · 7~9월", segs:[["우주 시스템",214.8,"위성·부품"],["발사",53.1,"일렉트론·HASTE"]], note:"로켓보다 위성과 부품 매출이 4배 커요.", src:[["로켓랩 IR","https://investors.rocketlabcorp.com"]]},
+  FLY:{p:"2026년 3분기 · 7~9월", segs:[["우주선 솔루션",106.0,"블루 고스트·사이텍"],["발사",4.7,"알파 로켓"]], note:"달 착륙선과 국방 소프트웨어(사이텍)가 대부분이에요.", src:[["파이어플라이 10-Q(SEC)","https://www.sec.gov/Archives/edgar/data/0001860160/000186016026000031/fly-20260930.htm"]]},
+  ASTS:{p:"2026년 3분기 · 7~9월", segs:[["정부 서비스",21.8,"미국 정부 계약"],["게이트웨이 장비",20.6,"지상국 장비 판매"]], note:"아직 휴대폰 통신 서비스 매출은 없어요. 서비스는 연말부터 시작할 계획이에요.", src:[["AST 스페이스모바일 IR","https://investors.ast-science.com"]]},
+  IRDM:{p:"2026년 3분기 · 7~9월", segs:[["상업 서비스",159.9,"음성·데이터·IoT·항공 감시"],["엔지니어링·지원",39.2,"대부분 미국 정부"],["정부 서비스",27.6,"미 우주군 계약"],["단말기",19.0,""]], note:"통신 서비스가 76%예요. 항공기 감시(에어리온) 인수로 더 커졌어요.", src:[["이리듐 IR","https://investor.iridium.com"]]},
+  VSAT:{p:"FY27 2분기 · 2026년 7~9월", segs:[["통신 서비스",814.5,"기내 와이파이·해상·정부 위성통신"],["국방·첨단기술",365.5,"보안·전술 통신"]], note:"통신 서비스가 70%, 국방이 빠르게 커지는 중이에요.", src:[["비아샛 IR","https://investors.viasat.com"]]},
+  SATS:{p:"2026년 3분기 · 7~9월", segs:[["무선(부스트 모바일)",905.2,""],["브로드밴드·위성",119.3,"휴즈"],["유료 TV",73.5,"남은 부분"],["5G 망",31.8,""]], note:"6월 말에 DISH TV 등을 떼어내 매출이 크게 줄었어요. 지금은 휴대폰 요금이 대부분이에요.", src:[["에코스타 IR","https://ir.echostar.com"]]},
+  PL:{p:"FY27 2분기 · 2026년 5~7월", segs:[["국방·정보",81.0,"위성 영상·위성 서비스"],["상업",17.6,"농업·기업"],["민간 정부",17.5,""]], note:"국방·정보기관이 70%예요.", src:[["플래닛 IR","https://investors.planet.com"]]},
+  LUNR:{p:"2026년 3분기 · 7~9월", segs:[["제품",215.1,"위성 제작(란테리스)"],["서비스",54.1,"달 착륙·데이터·통신망"]], note:"올해 인수한 위성 제작사(란테리스)가 매출의 80%예요.", src:[["인튜이티브 머신스 10-Q(SEC)","https://www.sec.gov/Archives/edgar/data/0001844452/000162828026073512/lunr-20260930.htm"]]},
+  RDW:{p:"2026년 3분기 · 7~9월", segs:[["우주",61.3,"태양전지판·위성 부품"],["국방 기술",47.8,"정찰 드론 등"]], note:"우주 부품이 조금 더 커요.", src:[["레드와이어 10-Q(SEC)","https://www.sec.gov/Archives/edgar/data/0001819810/000181981026000142/rdw-20260930.htm"]]},
+  KRMN:{p:"2026년 3분기 · 7~9월", segs:[["전술 미사일·방어",67.6,""],["극초음속·전략 방어",51.1,"요격 미사일 부품"],["해양 방어",45.0,""],["우주·발사",37.9,"로켓 부품"]], note:"미사일 부품이 대부분이고, 우주·발사는 20% 정도예요.", src:[["카르만 실적(SEC)","https://www.sec.gov/Archives/edgar/data/0002040127/000119312526449899/krmn-ex99_1.htm"]]},
+};
+
+/* 업계에서의 위치: [이름, 티커(앱에 있으면 눌러서 이동), 짧은 설명] */
+const CHAIN = {
+  NVDA:{role:"AI 칩 설계", up:[["TSMC","TSM","칩 생산·포장"],["SK하이닉스","","HBM 메모리"],["마이크론","MU","HBM 메모리"]], down:[["마이크로소프트","MSFT","클라우드"],["아마존","AMZN","클라우드"],["구글","GOOGL","클라우드"],["메타","META","AI 서버"]]},
+  AVGO:{role:"맞춤 AI 칩·통신 칩", up:[["TSMC","TSM","칩 생산"]], down:[["구글","GOOGL","TPU 공동 설계"],["메타","META","맞춤 AI 칩"],["오픈AI","","맞춤 AI 칩"],["애플","AAPL","무선 부품"]]},
+  AMD:{role:"CPU·AI 가속기 설계", up:[["TSMC","TSM","칩 생산"],["SK하이닉스·삼성","","HBM 메모리"]], down:[["마이크로소프트","MSFT","AI 가속기"],["메타","META","AI 가속기"],["오픈AI","","AI 가속기"],["소니","","플레이스테이션 칩"]]},
+  QCOM:{role:"스마트폰 칩 설계", up:[["TSMC","TSM","칩 생산"],["삼성전자","","칩 생산"]], down:[["삼성전자","","갤럭시"],["샤오미 등","","안드로이드폰"],["자동차 회사","","차량용 칩"]]},
+  MRVL:{role:"데이터센터 통신 칩", up:[["TSMC","TSM","칩 생산"]], down:[["아마존","AMZN","맞춤 AI 칩"],["마이크로소프트","MSFT","맞춤 칩"],["클라우드 회사들","","광통신 칩"]]},
+  INTC:{role:"CPU 설계·생산", up:[["자체 공장","","미국·아일랜드 등"],["TSMC","TSM","일부 칩 생산"],["장비 회사","AMAT","AMAT·램리서치·KLA"]], down:[["PC 제조사","","델·HP·레노버"],["서버 회사","","데이터센터"]]},
+  TXN:{role:"아날로그 칩 생산", up:[["자체 공장","","미국 대형 공장"],["장비 회사","AMAT",""]], down:[["산업 장비","","공장·의료·계측"],["자동차","","전력·센서"],["가전","",""]]},
+  ADI:{role:"정밀 아날로그 칩", up:[["자체 공장","",""],["TSMC","TSM","일부 위탁 생산"]], down:[["산업 장비","","자동화·계측"],["자동차","","배터리 관리"],["통신 장비","","기지국"]]},
+  NXPI:{role:"차량용 칩", up:[["자체 공장","",""],["TSMC","TSM","일부 위탁 생산"]], down:[["자동차 부품사","","보쉬·콘티넨탈 등"],["완성차 회사","",""],["스마트폰","","NFC 결제"]]},
+  MCHP:{role:"제어용 칩(MCU)", up:[["자체 공장","",""],["위탁 생산","TSM",""]], down:[["산업·가전 회사","","수만 곳"],["자동차","",""],["대리점","","소량 고객 판매"]]},
+  MU:{role:"메모리 생산", up:[["어플라이드","AMAT","생산 장비"],["램리서치","LRCX","생산 장비"],["KLA","KLAC","검사 장비"]], down:[["엔비디아","NVDA","HBM"],["AMD","AMD","HBM"],["서버·클라우드","","D램·SSD"],["휴대폰·PC","",""]]},
+  TSM:{role:"칩 위탁 생산", up:[["어플라이드","AMAT","생산 장비"],["램리서치","LRCX","생산 장비"],["KLA","KLAC","검사 장비"],["ASML","","노광 장비"]], down:[["애플","AAPL",""],["엔비디아","NVDA",""],["AMD","AMD",""],["브로드컴","AVGO",""],["퀄컴","QCOM",""]]},
+  AMAT:{role:"반도체 생산 장비", up:[["부품 협력사","","진공·로봇·센서 등"]], down:[["TSMC","TSM","파운드리"],["삼성·SK하이닉스","","메모리"],["마이크론","MU","메모리"],["인텔","INTC",""]]},
+  LRCX:{role:"식각·증착 장비", up:[["부품 협력사","",""]], down:[["삼성·SK하이닉스","","메모리"],["마이크론","MU","메모리"],["TSMC","TSM","파운드리"],["중국 칩 회사","",""]]},
+  KLAC:{role:"검사·계측 장비", up:[["부품 협력사","","광학·레이저 등"]], down:[["TSMC","TSM","최대 고객"],["삼성전자","",""],["인텔","INTC",""],["마이크론","MU",""]]},
+  AAPL:{role:"기기 설계·브랜드", up:[["TSMC","TSM","A·M 칩 생산"],["폭스콘 등","","조립"],["브로드컴","AVGO","무선 부품"],["퀄컴","QCOM","모뎀 일부"]], down:[["소비자","","전 세계"],["통신사","","아이폰 판매"],["앱 개발자","","앱스토어 수수료"]]},
+  MSFT:{role:"클라우드·소프트웨어", up:[["엔비디아","NVDA","AI 칩"],["AMD","AMD","AI 칩"],["자체 칩","","마이아·코발트"]], down:[["기업","","애저·M365"],["오픈AI","","애저 이용"],["게이머","","엑스박스"]]},
+  AMZN:{role:"쇼핑·클라우드", up:[["엔비디아","NVDA","AI 칩"],["자체 칩","","트레이니엄"],["판매자","","오픈마켓"]], down:[["소비자","","쇼핑·프라임"],["광고주","",""],["AWS 고객","","기업·AI 회사"]]},
+  GOOGL:{role:"검색·광고·클라우드", up:[["브로드컴","AVGO","TPU 공동 설계"],["TSMC","TSM","칩 생산"],["엔비디아","NVDA","AI 칩"]], down:[["광고주","","검색·유튜브"],["클라우드 고객","",""],["구독자","","유튜브·원"]]},
+  META:{role:"SNS·광고", up:[["엔비디아","NVDA","AI 칩"],["AMD","AMD","AI 칩"],["브로드컴","AVGO","맞춤 칩"]], down:[["광고주","","소상공인~대기업"],["이용자","","하루 36억 명"]]},
+  TSLA:{role:"전기차·에너지", up:[["배터리 회사","","파나소닉·LG엔솔·CATL"],["삼성·TSMC","TSM","자율주행 칩 생산"],["엔비디아","NVDA","AI 학습용"]], down:[["소비자","","차량"],["전력회사·기업","","메가팩"]]},
+  COST:{role:"회원제 창고형 매장", up:[["식품·생활용품 제조사","",""],["자체 브랜드 협력사","","커클랜드"]], down:[["회원","","개인·사업자"]]},
+  BRKB:{role:"지주회사", lab:["가진 회사","주요 주식 투자"], up:[["가이코","","자동차 보험"],["BNSF","","철도"],["BHE","","전력·가스"],["프리시전 캐스트파츠 등","","제조"]], down:[["애플","AAPL",""],["아메리칸 익스프레스","",""],["코카콜라","",""]]},
+  JPM:{role:"종합 은행", lab:["돈이 들어오는 곳","돈이 나가는 곳"], up:[["예금자","","개인·기업"],["투자자","","채권·주식"]], down:[["대출 고객","","주택·카드·기업"],["투자은행 고객","","인수합병·상장"],["카드 회원","V","체이스 비자 카드"]]},
+  V:{role:"카드 결제망", lab:["카드 내주는 곳","카드 받는 곳"], up:[["은행","JPM","체이스 등 카드 발급"],["핀테크","",""]], down:[["가맹점","","온라인·오프라인"],["소비자","","전 세계 결제"]]},
+  LLY:{role:"신약 개발·생산", up:[["자체 공장","","미국·유럽 증설 중"],["위탁 생산","",""]], down:[["도매상·약국","",""],["보험사·정부","","메디케어 등"],["환자","",""]]},
+  RKLB:{role:"발사·위성 제작", up:[["자체 생산","","엔진·부품까지 직접"]], down:[["NASA","",""],["미 우주군","",""],["위성 회사","","아이스아이·키네이스 등"],["이리듐","IRDM","인수 진행 중"]]},
+  FLY:{role:"로켓·달 착륙선", up:[["자체 생산","",""]], down:[["NASA","","달 착륙(CLPS)"],["미 국방부","","국방 소프트웨어"],["AST 스페이스모바일","ASTS","전략 계약"],["록히드 마틴","","발사 계약"]]},
+  ASTS:{role:"위성 휴대폰 통신망", up:[["자체 생산","","블루버드 위성"],["스페이스X","","발사"],["블루 오리진","","발사"]], down:[["AT&T","",""],["버라이즌","",""],["보다폰","",""],["미국 정부","",""]]},
+  IRDM:{role:"위성 통신 사업자", up:[["탈레스 알레니아","","위성 제작"],["스페이스X","","발사"]], down:[["해운·항공","",""],["미 국방부","","EMSS 계약"],["IoT 파트너","","단말 제조사"],["로켓랩","RKLB","인수 진행 중"]]},
+  VSAT:{role:"위성 통신 사업자", up:[["보잉","","위성 제작"],["발사 회사","","스페이스X 등"]], down:[["항공사","","기내 와이파이"],["미 국방부","",""],["해운","",""]]},
+  SATS:{role:"휴대폰 요금제·위성", up:[["AT&T","","망 빌려 씀"]], down:[["부스트 모바일 가입자","","약 720만 명"],["AT&T·스페이스X","","주파수 매각"]]},
+  PL:{role:"지구 관측 위성", up:[["자체 생산","","도브·펠리컨 위성"],["스페이스X","","발사"]], down:[["미 국방·정보기관","","NGA 등"],["유럽 정부","","독일·스웨덴"],["기업","","농업·AI 회사"]]},
+  LUNR:{role:"달 착륙·위성 제작", up:[["자체 생산","","란테리스 공장"],["스페이스X","","발사"]], down:[["NASA","","달 착륙·통신망"],["국가안보","",""],["위성 회사","","정지궤도 위성"]]},
+  RDW:{role:"우주 부품·드론", up:[["자체 생산","",""]], down:[["NASA","",""],["액시엄","","우주정거장 태양전지판"],["미·유럽 국방","","정찰 드론"]]},
+  KRMN:{role:"미사일·로켓 부품", up:[["자체 생산","",""]], down:[["록히드 마틴","","THAAD"],["RTX","","미사일"],["ULA","","벌컨 로켓"],["블루 오리진","","뉴 글렌"]]},
+};
+const TRI = `<svg class="tri" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0h10L5 6z"/></svg>`;
+function moneyAmt(m){ return m>=1000 ? `${Math.round(m/100).toLocaleString()}억 달러` : m>=100 ? `${(m/100).toFixed(1)}억 달러` : `${Math.round(m*100).toLocaleString()}만 달러`; }
+function moneySegs(t){
+  const M = MONEY[t]; if(!M) return null;
+  const tot = M.segs.reduce((a,b)=>a+b[1],0);
+  const oth = x => /^기타/.test(x[0]);
+  const segs = M.segs.map(x=>({n:x[0], v:x[1], sub:x[2]||"", p:x[1]/tot*100})).sort((a,b)=> (oth([a.n])-oth([b.n])) || b.v-a.v);
+  return {M, tot, segs};
+}
+function pctTxt(p){ return p<1 ? "1% 미만" : Math.round(p)+"%"; }
+function moneyHtml(t){
+  const d = moneySegs(t); if(!d) return "";
+  const {M, tot, segs} = d, C = 2*Math.PI*44, gap = segs.length>1 ? 1.6 : 0;
+  let off = 0;
+  const arcs = segs.map((x,i)=>{ const len = C*x.p/100, a = `<circle r="44" cx="60" cy="60" stroke="var(--${i?"d"+Math.min(i+1,6):"pt"})" stroke-dasharray="${Math.max(len-gap,.6).toFixed(2)} ${(C-Math.max(len-gap,.6)).toFixed(2)}" stroke-dashoffset="${(-off).toFixed(2)}"/>`; off += len; return a; }).join("");
+  const top = segs[0];
+  return `<div class="donut"><div class="ring"><svg viewBox="0 0 120 120" role="img" aria-label="사업별 매출 비중"><g transform="rotate(-90 60 60)">${arcs}</g></svg>
+      <div class="ctr"><b>${pctTxt(top.p)}</b><i>${top.n}</i></div></div>
+    <div class="leg">${segs.map((x,i)=>`<div><span class="dot" style="background:var(--${i?"d"+Math.min(i+1,6):"pt"})"></span><span class="nm">${x.n}${x.sub?`<small>${x.sub}</small>`:""}</span><span class="lv">${pctTxt(x.p)}${M.pct?"":`<small>${moneyAmt(x.v)}</small>`}</span></div>`).join("")}</div></div>
+    <p class="mnote">${M.note}</p>
+    <div class="msrc"><span class="tiny muted">${M.p}${M.pct?"":` · 합계 ${moneyAmt(tot)}`} · 출처</span>${M.src.map(([n,u])=>`<a class="tiny" href="${u}" target="_blank" rel="noopener">${n} ›</a>`).join("")}</div>`;
+}
+function coChainHtml(t){
+  const c = CHAIN[t]; if(!c) return "";
+  const lab = c.lab || ["만드는 곳·부품","사는 곳"];
+  const it = ([n,tk,sub]) => tk && STOCKS[tk] && tk!==t
+    ? `<button type="button" class="it" data-stock="${tk}" data-fromco="${t}"><b>${n}</b>${sub?`<small>${sub}</small>`:""}</button>`
+    : `<div class="it"><b>${n}</b>${sub?`<small>${sub}</small>`:""}</div>`;
+  return `<div class="vchain">
+      <div class="colh">${lab[0]}</div><span></span><div class="colh">이 회사</div><span></span><div class="colh">${lab[1]}</div>
+      <div class="col">${c.up.map(it).join("")}</div><div class="ar">→</div>
+      <div class="me"><b>${STOCKS[t][0]}</b><small>${c.role}</small></div>
+      <div class="ar">→</div><div class="col">${c.down.map(it).join("")}</div></div>
+    <p class="tiny muted" style="margin:10px 0 0">밑줄 친 회사는 눌러서 볼 수 있어요. 공개된 계약·발표를 정리한 대표 예시예요.</p>`;
+}
+function aboutAccs(t, co){
+  const d = moneySegs(t), c = CHAIN[t];
+  const acc = (k, title, prev, body) => `<div class="acc"><button type="button" class="accbtn" data-acc="${k}" aria-expanded="false"><b>${title}</b><span>${prev}</span>${TRI}</button><div class="accbody" hidden>${body}</div></div>`;
+  const m = d ? acc("money","돈은 어디서 버나", `${d.segs[0].n} <em>${pctTxt(d.segs[0].p)}</em>`, moneyHtml(t))
+    : acc("money","돈은 어디서 버나", "", `<p class="mnote" style="margin:0">${co.money}</p>`);
+  const ch = c ? acc("chain","업계에서의 위치", c.role, coChainHtml(t))
+    : (co.chain && co.chain!=="—" ? acc("chain","업계에서의 위치","",`<p class="mnote" style="margin:0">${co.chain}</p>`) : "");
+  return `<div class="accs">${m}${ch}</div>`;
+}
+
+function stockSheet(t, from, fromEv, fromCo){
   const s = STOCKS[t]; const evs = EVENTS.filter(v=>v.t===t);
   const sym = t==="BRKB"?"BRK.B":t; // eslint-disable-line no-shadow
   const co = CO[t];
@@ -3858,15 +4024,13 @@ function stockSheet(t, from, fromEv){
     <div class="callout" style="font-size:15px;background:var(--accent-soft)">${co.one}</div>
     ${PRODUCTS[t] ? productsHtml(t) : `<h4 style="margin:16px 0 6px">주요 사업</h4>
     <div class="does">${co.does.map(d=>{ const [h,...r]=d.split(": "); return `<div>${r.length?`<b>${h}</b><span>${r.join(": ")}</span>`:`<span>${h}</span>`}</div>`; }).join("")}</div>`}
-    <div class="kv" style="margin-top:12px;grid-template-columns:1fr">
-      <div><div class="k">돈은 어디서 버나</div><div class="small">${co.money}</div></div>
-      ${co.chain && co.chain!=="—" ? `<div><div class="k">업계에서의 위치</div><div class="small">${co.chain}</div></div>`:""}
-    </div>
+    ${aboutAccs(t, co)}
     ${co.rel.length?`<h4 style="margin:16px 0 6px">같이 알아두면 좋은 회사</h4><div class="chips">${co.rel.filter(r=>STOCKS[r]).map(r=>`<button class="chip" type="button" data-stock="${r}" style="border:0;cursor:pointer">${STOCKS[r][0]}</button>`).join("")}</div>`:""}
     <p class="tiny muted" style="margin-top:12px">설명은 공개 자료를 정리한 초안이에요. 정확한 내용은 <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${co.cik||t}&type=${co.form}" target="_blank" rel="noopener">연간 보고서(${co.form}) 원문 ›</a>에서 확인할 수 있어요.</p>` : "";
   const fromE = from ? ETFS.find(x=>x.code===from) : null;
   const backEv = fromEv ? EVENTS.find(v=>`${v.t}:${v.d}`===fromEv) : null;
-  const back = backEv ? `<button class="btn ghost backev" type="button" data-evt="${fromEv}" style="margin-bottom:10px">‹ ${backEv.title}</button>`
+  const back = fromCo && STOCKS[fromCo] ? `<button class="btn ghost backev" type="button" data-stock="${fromCo}" style="margin-bottom:10px">‹ ${STOCKS[fromCo][0]}</button>`
+    : backEv ? `<button class="btn ghost backev" type="button" data-evt="${fromEv}" style="margin-bottom:10px">‹ ${backEv.title}</button>`
     : fromE ? `<button class="btn ghost" type="button" data-brief="${from}" style="margin-bottom:10px">‹ ${fromE.name} 브리핑으로</button>` : "";
   openSheet(`${back}<div class="with-logo" style="margin-bottom:6px">${logo(t)}<div><h3 id="sheetTitle" style="margin:0">${s[0]} <span class="muted small">${sym}</span></h3>${co?`<div class="tiny muted">${co.cat} · ${co.tag}</div>`:""}</div></div>
     <div class="num" style="font-size:22px;font-weight:700"><span>${usd(s[1])}</span> <span class="${cls(s[2])}" style="font-size:15px">${spct(s[2])}</span> <span class="tiny muted" style="font-weight:400">샘플 시세</span></div>
@@ -4186,7 +4350,7 @@ function reopenSplash(){
 (function(){ const sp = document.getElementById("splash"); if(sp) bindSplash(sp); })();
 document.addEventListener("click", ev=>{ if(ev.target.closest(".landing.main .mlogo")) reopenSplash(); });
 document.addEventListener("click", ev=>{
-  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill],[data-evt],[data-pcat],[data-pitem],[data-pspec],[data-mstep],[data-mplay],[data-mtap]");
+  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill],[data-evt],[data-pcat],[data-pitem],[data-pspec],[data-mstep],[data-mplay],[data-mtap],[data-acc]");
   if(!el || el.closest("#sheet [data-close]")) return;
   if(el.dataset.share!==undefined){ openShare(el.dataset.share || null); return; }
   if(el.dataset.saveimg!==undefined){ saveShare(); return; }
@@ -4230,7 +4394,7 @@ document.addEventListener("click", ev=>{
   if(el.dataset.star){ const c = el.dataset.star; stars = stars.includes(c) ? stars.filter(x=>x!==c) : [...stars,c]; store.set("stars",stars); render(); return; }
   if(el.dataset.sort){ sortKey = el.dataset.sort; render(); return; }
   if(el.dataset.toggleAll!==undefined){ showAll=!showAll; render(); return; }
-  if(el.dataset.stock){ stockSheet(el.dataset.stock, el.dataset.from, el.dataset.fromev); return; }
+  if(el.dataset.stock){ stockSheet(el.dataset.stock, el.dataset.from, el.dataset.fromev, el.dataset.fromco); return; }
   if(el.dataset.cal){ calFilter = el.dataset.cal; render(); return; }
   if(el.dataset.pcat!==undefined){ const box = el.closest(".prod"); box.querySelectorAll(".pc").forEach(b=>{ const on = b===el; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); });
     box.querySelectorAll(".pgroup").forEach(g=>g.hidden = g.dataset.pg!==el.dataset.pcat); return; }
@@ -4238,6 +4402,8 @@ document.addEventListener("click", ev=>{
   if(el.dataset.mplay!==undefined){ ev.stopPropagation(); missionShow(el.closest(".msn"), 0, true); return; }
   if(el.dataset.mtap!==undefined){ const box = el.closest(".msn"), r = el.getBoundingClientRect(), x = (ev.clientX||r.left+r.width)-r.left;
     missionShow(box, (+box.dataset.i||0) + (x < r.width/3 ? -1 : 1), false); return; }
+  if(el.dataset.acc!==undefined){ const box = el.parentElement, open = el.getAttribute("aria-expanded")!=="true";
+    el.setAttribute("aria-expanded", open); box.classList.toggle("open", open); box.querySelector(".accbody").hidden = !open; return; }
   if(el.dataset.pspec!==undefined){ const box = el.parentElement, open = el.getAttribute("aria-expanded")!=="true";
     el.setAttribute("aria-expanded", open); box.classList.toggle("open", open); box.querySelector(".psxlist").hidden = !open; return; }
   if(el.dataset.pitem!==undefined){ const item = el.closest(".pitem"), open = el.getAttribute("aria-expanded")!=="true";
