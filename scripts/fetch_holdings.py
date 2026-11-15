@@ -129,7 +129,26 @@ def sox_fallback(err):
             notes.append(f"nasdaq {d}: {type(e).__name__}:{str(e)[:60]}")
             if back >= 2:
                 break
+    try:
+        page = get("https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7381180009", timeout=40).decode("utf-8", "replace")
+        items = table_rows(page)
+        if len(items) >= 10:
+            return "", items, "미래에셋자산운용 구성종목(PDF)"
+        paths = sorted(set(re.findall(r"[\"'](/tigeretf/[^\"'?#]+\.(?:ajax|do|json))", page)))[:12]
+        notes.append(f"mirae: 표 {len(items)}행, 길이 {len(page)}, 경로 {paths}")
+    except Exception as e:  # noqa: BLE001
+        notes.append(f"mirae: {type(e).__name__}:{str(e)[:60]}")
     raise ValueError(" / ".join(notes))
+
+
+def table_rows(page):
+    out = []
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S):
+        cells = [html.unescape(re.sub(r"<[^>]+>", "", c)).strip() for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
+        cells = [c for c in cells if c]
+        if len(cells) >= 3 and re.fullmatch(r"\d{1,2}\.\d{1,2}%?", cells[-1]):
+            out.append({"ticker": None, "name": cells[0] if not re.fullmatch(r"\d+", cells[0]) else cells[1], "weight": num(cells[-1])})
+    return out
 
 
 def space():
