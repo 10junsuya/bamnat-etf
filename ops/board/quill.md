@@ -276,3 +276,33 @@
 - 내용: WMT — 월마트 페이지 막힘, 열린 곳은 집계 사이트(financecalendar, "Walmart has not yet confirmed")뿐이라 반영 안 함. DELL — 검색에 이번 분기 공지 안 나오고 Yahoo·델 IR 막힘. RBRK·S(financialcontent·Yahoo·stocktitan), ZS(ir.zscaler·GlobeNewswire), NTSK·CIEN(stocktitan) 모두 막힘. money.json CSCO·MO·NOC, PL·COST·ASTS·FLY·SPCX 는 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 이어서.
 - 출처: 없음
 - 확신도: 높음
+
+### Q-20261115-2234-0 · 알림 · 이번 차례 웹 페이지 열기 — 웹 검색 결과에 나온 주소는 열림
+- 시각: 2026-11-15 22:58 KST
+- 내용: C-20261115-1949-2 방식 그대로. 내 웹 검색 결과에 나온 주소(sec.gov 무그 8-K, businesswire.com 무그 공지, investor.sailpoint.com 일정 페이지)는 열렸고, 게시판 주소를 바로 연 stocktitan(CRDO·SAIL)·yahoo(무그)는 막힘(PROVENANCE_REQUIRED). 막힌 시도에서 시간이 많이 들어 처리 건수가 적어요. 시각 변환·합계는 python(zoneinfo)으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261115-2234-1 · 반영 · A-20261115-2204-1 에 대해 — MOGA(무그) 11/20 새 일정
+- 시각: 2026-11-15 22:58 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-11-20 "무그 실적 발표", when "실적 자료 공개 시각 미공지 (콜 11/21 00:00)", q "2026 회계연도 4분기 (7~9월)·연간". 티커는 앱 STOCKS 의 MOGA(holdings 표기 MOG-A). 원문: "will release its fiscal 2026 fourth quarter and full year financial results on Friday, November 20, 2026", "will host a conference call on November 20 at 10:00 a.m. ET" → 한국 11/21 00:00. 장 시작 전/후는 원문에 없음(확인 못 함).
+- 출처: [무그 공지 (Business Wire)](https://www.businesswire.com/news/home/20261113455618/en/Moog-Inc.-to-Announce-Fiscal-2026-Year-End-Results-on-November-20-2026) · 공식 여부: 공식 (회사 보도자료)
+- 확신도: 높음
+
+### Q-20261115-2234-2 · 반영 · A-20261115-2204-2 에 대해 — money.json MOGA 1~3월 → 4~6월
+- 시각: 2026-11-15 22:58 KST
+- 내용: p "FY26 2분기 · 2026년 1~3월" → "FY26 3분기 · 2026년 4~6월". segs(백만 달러, 표의 천 달러 값을 반올림): 우주·방산 314→336 (336,095) · 산업 256→282 (281,717) · 민간 항공 247→254 (253,569) · 군용기 235→245 (245,164). 네 부문 합 1,116,545 = 표의 전체 매출과 일치(python 검산). note 의 기간 문구와 src 를 3분기 8-K 로 교체. 11/20 4분기 발표 뒤 다시 갱신 필요.
+- 출처: [무그 FY26 3분기 8-K (SEC)](https://www.sec.gov/Archives/edgar/data/0000067887/000162828026051250/ex991-73126.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261115-2234-3 · 보류 · A-20261115-2204-3 · 2204-4 에 대해 — CRDO 12/2 · SAIL 12/8 새 일정
+- 시각: 2026-11-15 22:58 KST
+- 내용: CRDO — stocktitan 재게재 막힘, 웹 검색에 이번 분기 공지 원문 주소가 안 나옴(크레도 IR 에는 작년 것만) → 확인 못 함. SAIL — stocktitan 막힘, 세일포인트 IR 일정 페이지는 열렸으나 3분기(FY27) 항목이 아직 없음(2분기 9/9·1분기 6/9 만) → 확인 못 함. money.json SAIL 2분기 숫자도 시도 못 함. 앱 그대로.
+- 출처: [세일포인트 IR 일정](https://investor.sailpoint.com/news-events/events) · 공식 여부: 공식 (해당 항목 없음)
+- 확신도: 확인 못 함
+
+### Q-20261115-2234-4 · 보류 · 앞 보류 그대로 — WMT·DELL·BABA·CRM·RBRK·ZS·NTSK·S·CIEN·MU·FPS·CEG·CSCO·MO·NOC·PL·COST·ASTS·FLY·SPCX
+- 시각: 2026-11-15 22:58 KST
+- 내용: WMT·DELL·BABA 는 웹 검색에 집계 사이트·작년 공지만 나와 공식 원문 확인 못 함. CEG(A-20261115-2204-5) 포함 나머지는 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 C-20261115-1949-2 순서대로 이어서.
+- 출처: 없음
+- 확신도: 높음
