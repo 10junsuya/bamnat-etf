@@ -174,3 +174,63 @@
 - 내용: 센티넬원 보도자료 재게재(FinancialContent)를 열지 못함. 웹 검색에는 FY26 3분기·FY27 2분기 일정 공지만 나옴. 발표일(미국 12/3 장 마감 후)·콜 시각(2:00 PM PT) 확인 못 함 → 추가 보류.
 - 출처: [회사 보도자료 (FinancialContent 재게재)](https://www.financialcontent.com/article/bizwire-2026-11-12-sentinelone-announces-date-of-fiscal-third-quarter-2027-financial-results-conference-call-and-participation-in-upcoming-investor-conference) · 공식 여부: 공식 보도자료 재게재 (본문 확인 못 함)
 - 확신도: 확인 못 함
+
+### Q-20261115-2034-0 · 알림 · C-20261115-1949-2 에 대해 — 검색 결과 주소로 열기, 일부 성공
+- 시각: 2026-11-15 20:55 KST
+- 내용: Conrad 요청대로 먼저 웹 검색으로 같은 보도자료를 찾고 검색 결과에 나온 주소를 열었더니 8곳 중 6곳이 열렸어요(재게재 포함: stockhub.kr·earningswhispers·analog.com·finviz·investor.marvell.com PDF·snowflake.com). 열리지 않은 곳: corporate.walmart.com·stock.walmart.com·prnewswire.com·newsroom.cisco.com(PROVENANCE_REQUIRED). 원문을 연 7건(HD·PANW·ADI·AVGO·MRVL·CRWD·SNOW)은 반영, 나머지는 보류 유지. 시각 변환은 python(zoneinfo)으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261115-2034-1 · 반영 · A-20261115-1704-2 에 대해 — HD 11/17 23:00 콜 새 일정
+- 시각: 2026-11-15 20:55 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-11-17 "홈디포 실적 발표", when "23:00 콜 · 실적 자료 공개 시각 미공지", q "2026 회계연도 3분기". 원문: "Third Quarter Earnings Conference Call on Tuesday, November 17, at 9 a.m. ET"(11/3 PR Newswire 배포). 자료 공개 시각은 원문에 없어 적지 않음.
+- 출처: [회사 보도자료 (Earnings Whispers 재게재)](https://www.earningswhispers.com/article/HD/2611036981) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+
+### Q-20261115-2034-2 · 반영 · A-20261115-1804-2 에 대해 — PANW 11/19 06:30 새 일정
+- 시각: 2026-11-15 20:55 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-11-19 "팔로알토네트웍스 실적 발표", when "06:30 웹캐스트 · 미국 장 마감 후", q "2027 회계연도 1분기 (8~10월)". 원문: "after U.S. markets close on Wednesday, November 18, 2026", "video webcast that day at 1:30 p.m. Pacific time (4:30 p.m. Eastern time)"(11/3 PR Newswire). money.json PANW 는 발표 뒤 갱신 대상.
+- 출처: [회사 보도자료 (StockHub 재게재)](https://stockhub.kr/en/newswire/prn/302927448) · [PR Newswire 원문](https://www.prnewswire.com/news-releases/palo-alto-networks-to-announce-fiscal-first-quarter-2027-financial-results-on-wednesday-november-18-2026-302927448.html) · 공식 여부: 공식 (회사 보도자료)
+- 확신도: 높음
+
+### Q-20261115-2034-3 · 반영 · A-20261115-1504-4 에 대해 — ADI 11/24 21:00 새 일정
+- 시각: 2026-11-15 20:55 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-11-24 "아날로그디바이스 실적 발표", when "21:00 · 미국 장 시작 전 (콜 11/25 00:00)", q "2026 회계연도 4분기 (8~10월)". 원문: "release financial results ... at 7:00 a.m. Eastern time on Tuesday, November 24, 2026", "conference call at 10:00 a.m. Eastern time, the same day". 앞 차례 보류(Q-20261115-1534-4) 해소.
+- 출처: [ADI 보도자료](https://www.analog.com/en/newsroom/press-releases/2026/10-22-2026-adi-report-4q-fy2026-financial-results.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261115-2034-4 · 반영 · A-20261115-1504-1 에 대해 — AVGO 12/12 → 12/10
+- 시각: 2026-11-15 20:55 KST
+- 내용: events.json AVGO: d 2026-12-12 → 2026-12-10, when "06:15 · 미국 장 마감 후 · 변동 가능성 보도" → "07:00 콜 · 미국 장 마감 후"(공식 확인으로 보도 표시 뗌). 원문: 12/9(수) "after the close of the U.S. trading session", "Time: 2:00 PM (PT); 5:00 PM (ET)"(11/9 PR Newswire). 자료 공개 시각은 원문에 없음.
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/418980/broadcom-inc-to-announce-fourth-quarter-and-fiscal-year-2026-financial-results-on-wednesday-december-9-2026) · [브로드컴 IR 공지](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announce-fourth-quarter-and-fiscal-year-2026) · 공식 여부: 공식 (회사 보도자료)
+- 확신도: 높음
+
+### Q-20261115-2034-5 · 반영 · A-20261115-1504-2 에 대해 — MRVL 12/3 → 12/2
+- 시각: 2026-11-15 20:55 KST
+- 내용: events.json MRVL: d 2026-12-03 → 2026-12-02, when "06:05 · 미국 장 마감 후" → "06:30 콜 · 실적 자료는 콜 전 공개". 원문: "conference call following the release of its third quarter of fiscal year 2027 financial results", "on Tuesday, December 1, 2026, at 1:30 p.m. Pacific Time"(11/6 Business Wire). 자료 공개 시각·장 마감 후 여부는 원문에 없어 "콜 전 공개"로만 적음.
+- 출처: [마벨 IR 보도자료 PDF](https://investor.marvell.com/_assets/_de258ecc084556935b61ff8ecc599288/marvell/news/2026-11-06_Marvell_Technology_Inc_Announces_Conference_Call_1041.pdf) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261115-2034-6 · 반영 · A-20261115-1804-4 에 대해 — CRWD 12/2 07:00 새 일정
+- 시각: 2026-11-15 20:55 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-02 "크라우드스트라이크 실적 발표", when "07:00 콜 · 미국 장 마감 후", q "2027 회계연도 3분기 (8~10월)". 원문: "after the U.S. market close on Tuesday, December 1, 2026", "at 2:00 p.m. Pacific time (5:00 p.m. Eastern time)"(11/4 Business Wire). 앞 차례 보류(Q-20261115-1834-4) 해소.
+- 출처: [회사 보도자료 (Finviz 재게재)](https://finviz.com/news/415373/crowdstrike-announces-date-of-fiscal-third-quarter-2027-financial-results-conference-call) · [크라우드스트라이크 IR 공지](https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-announces-date-fiscal-third-quarter-2027-financial) · 공식 여부: 공식 (회사 보도자료)
+- 확신도: 높음
+
+### Q-20261115-2034-7 · 반영 · A-20261115-1804-6 에 대해 — SNOW 12/3 07:00 새 일정
+- 시각: 2026-11-15 20:55 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-03 "스노우플레이크 실적 발표", when "07:00 콜 · 미국 장 마감 후", q "2027 회계연도 3분기 (8~10월)". 원문: "following the close of the U.S. markets on Wednesday, December 2, 2026", "conference call will begin at 2 p.m. Pacific Time on December 2, 2026"(11/2). 앞 차례 보류(Q-20261115-1834-6) 해소.
+- 출처: [스노우플레이크 보도자료](https://www.snowflake.com/en/news/press-releases/fy27-q3-earnings-date-announcement/) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261115-2034-8 · 보류 · A-20261115-2004-1 에 대해 — MU 12/18 06:00 출처
+- 시각: 2026-11-15 20:55 KST
+- 내용: events.json MU 항목에는 출처 필드가 없고, 마이크론 회사 공지도 이번 차례에 찾지 못함(확인 못 함). 집계 사이트의 12/23(미국)은 "UNCONFIRMED" 추정이라 보도로도 보지 않음 → 날짜·표시 모두 그대로. 회사 공지가 나오면 반영.
+- 출처: [Wall Street Horizon](https://www.wallstreethorizon.com/micron-earnings-calendar) · 공식 여부: 집계 사이트 추정 (확인 못 함)
+- 확신도: 낮음
+
+### Q-20261115-2034-9 · 보류 · 이번 차례에도 못 한 것 (앞 보류 그대로)
+- 시각: 2026-11-15 20:55 KST
+- 내용: WMT(A-1704-1) 월마트 페이지 열기 막힘 · DELL(A-1804-3) 검색에 이번 분기 공지가 안 나옴(작년 것만) · money.json CSCO(시스코 뉴스룸 막힘)·NOC(재게재 분석 기사만 열려 부문별 달러 숫자 없음 — 원문 확인 못 함)·MO(시도 못 함) · OKTA·RBRK·ZS·NTSK·S·CIEN·PL·COST·ASTS·FLY·SPCX 는 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 같은 방법(검색 결과 주소)으로 이어서 할게요.
+- 출처: 없음
+- 확신도: 높음
