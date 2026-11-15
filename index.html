@@ -46,6 +46,7 @@ a{color:var(--accent)}
 .clock .city,.clock .pill{max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:block; width:fit-content}
 .clock:hover{border-color:var(--accent)}
 .cmore{font-size:11px; color:var(--accent); margin-left:2px}
+.cleft{display:block; margin-top:3px; font-size:11px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .hnext{background:var(--accent-soft); border-radius:14px; padding:14px 16px; margin:12px 0 4px}
 .hnext .d{font-size:24px; font-weight:700}
 .hrow{display:grid; grid-template-columns:96px 1fr auto; gap:10px; padding:11px 0; border-top:1px solid var(--line); align-items:baseline}
@@ -73,7 +74,7 @@ a{color:var(--accent)}
 section.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:16px; margin-top:12px}
 .card h2{font-size:15px; margin:0 0 10px; display:flex; align-items:center; gap:6px; text-wrap:balance}
 .card h2 .sub{margin-left:auto; font-weight:400; font-size:12px; color:var(--muted)}
-.qbtn{border:1px solid var(--line); background:none; width:20px; height:20px; border-radius:50%; font-size:12px; line-height:1; cursor:pointer; color:var(--muted); padding:0}
+.qbtn{border:1px solid var(--line); background:none; width:24px; height:24px; min-width:24px; flex:none; border-radius:50%; font-size:12px; line-height:1; cursor:pointer; color:var(--muted); padding:0}
 
 /* 홈 */
 .strip{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:12px}
@@ -140,6 +141,7 @@ details.cat:not([open]) summary b::after{content:" ▾"; color:var(--muted); fon
 .ev .d small{display:block; font-weight:400; color:var(--muted)}
 .chips{display:flex; flex-wrap:wrap; gap:4px; margin-top:4px}
 .chip{font-size:12px; padding:1px 8px; border-radius:999px; background:var(--surface-2); color:var(--muted)}
+button.chip{min-height:28px; padding:4px 10px}
 .chip.mine{background:var(--accent-soft); color:var(--accent)}
 .news{padding:10px 0; border-top:1px solid var(--line)} .news:first-of-type{border-top:0}
 .tag{font-size:11px; font-weight:600; padding:1px 6px; border-radius:6px; background:var(--surface-2); margin-right:6px}
@@ -395,7 +397,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
     </div>
     <div class="clocks" id="clocks">
       <button class="clock" type="button" data-holi="kr" aria-label="한국장 휴장일 보기"><div class="city">서울 <span class="cmore">휴장일 ›</span></div><div class="time num" id="kstTime">--:--</div><span class="pill" id="krxPill">-</span></button>
-      <button class="clock" type="button" data-holi="us" aria-label="미국장 휴장일과 서머타임 보기"><div class="city">뉴욕 (미국 동부) <span class="cmore">휴장일·서머타임 ›</span></div><div class="time num" id="nyTime">--:--</div><span class="pill" id="usPill">-</span></button>
+      <button class="clock" type="button" data-holi="us" aria-label="미국장 휴장일과 서머타임 보기"><div class="city">뉴욕 <span class="cmore">휴장일 ›</span></div><div class="time num" id="nyTime">--:--</div><span class="pill" id="usPill">-</span><span class="cleft" id="usLeft"></span></button>
     </div>
     <nav class="tabs" aria-label="화면">
       <button class="tab" type="button" data-go="home">홈</button>
@@ -774,8 +776,9 @@ function renderTop(){
   const ks = krxState(k), us = usState(u);
   const kp = document.getElementById("krxPill"); kp.textContent = "한국장 · "+ks.label; kp.className = "pill"+(ks.key.startsWith("open")?" live":"");
   const up = document.getElementById("usPill");
-  let ut = "미국장 · "+us.label;
-  if(us.key!=="regular"){ const l = untilUsOpen(u); if(l!==null) ut += ` · 개장까지 ${fmtLeft(l)}`; }
+  let ut = "미국장 · "+us.label, left = "";
+  if(us.key!=="regular"){ const l = untilUsOpen(u); if(l!==null) left = `개장까지 ${fmtLeft(l)}`; }
+  document.getElementById("usLeft").textContent = left;
   up.textContent = ut; up.className = "pill"+(us.key==="regular"?" live":"");
   // 테마: 미국 거래일엔 미국장 시간(프리마켓 시작~정규장 마감)이 밤, 쉬는 날엔 시계 기준(19~07시)
   const autoDark = isMarketNight(k, u);
@@ -1386,7 +1389,7 @@ const IND = {
     more:"변동이 큰 식품·에너지를 뺀 '근원 CPI'도 같이 발표되는데, 시장은 근원 CPI를 더 중요하게 봐요.",
     read:"예상보다 높으면 물가가 덜 잡혔다는 뜻이라, 보통 금리 인하 기대가 줄어드는 쪽으로 해석돼요.",
     last:{a:2.9, f:2.8, p:3.0}, hist:[3.1,3.0,2.9,3.0,3.0,2.9], react:[-0.42,0.06,0.18,3.5], src:"https://www.bls.gov/cpi/"},
-  pce:{g:"us", name:"PCE 물가", ref:"9월", full:"개인소비지출 물가지수", org:"미국 경제분석국(BEA)", freq:"매월 말", next:["2026-12-23","08:30","ET"], unit:"%", sub:"전년 대비",
+  pce:{g:"us", name:"PCE 물가", ref:"9월", full:"개인소비지출 물가지수", org:"미국 경제분석국(BEA)", freq:"매월 말", next:["2026-11-25","08:30","ET"], unit:"%", sub:"전년 대비",
     one:"연준이 물가 목표(2%)를 잴 때 공식적으로 쓰는 물가 지표예요.",
     more:"CPI보다 늦게 나와서 놀라움은 덜하지만, 연준이 직접 보는 숫자라 중요해요.",
     read:"예상보다 높으면 금리 인하 기대가 줄어드는 쪽으로 해석돼요.",
@@ -1401,7 +1404,7 @@ const IND = {
     more:"한 주 숫자는 들쭉날쭉해서 4주 평균도 같이 봐요.",
     read:"예상보다 많으면 해고가 늘고 있다는 신호로 해석돼요.",
     last:{a:22.1, f:22.5, p:22.8}, hist:[23.0,22.4,21.9,22.8,22.8,22.1], react:[0.08,-0.01,-0.03,-1.0], src:"https://www.dol.gov/ui/data.pdf"},
-  fomc:{g:"us", dec:2, name:"FOMC 금리 결정", full:"연방공개시장위원회", org:"미국 연방준비제도(연준)", freq:"1년에 8번", next:["2026-12-16","14:00","ET"], unit:"%", sub:"기준금리 (상단)",
+  fomc:{g:"us", dec:2, name:"FOMC 금리 결정", full:"연방공개시장위원회", org:"미국 연방준비제도(연준)", freq:"1년에 8번", next:["2026-12-09","14:00","ET"], unit:"%", sub:"기준금리 (상단)",
     one:"미국 기준금리를 올릴지, 내릴지, 그대로 둘지 정하는 회의예요.",
     more:"결정 30분 뒤 연준 의장 기자회견이 있어요. 시장은 결정 자체보다 앞으로의 힌트에 더 크게 반응하기도 해요.",
     read:"시장 예상과 다르게 결정되면 크게 움직여요. 예상대로 나오면 기자회견 발언이 더 중요해져요.",
@@ -1430,13 +1433,13 @@ const IND = {
     one:"S&P500 옵션 가격으로 계산한, 앞으로 30일 동안 시장이 얼마나 출렁일지에 대한 기대예요.", read:"보통 20을 넘으면 불안이 커진 편, 30을 넘으면 크게 불안한 편으로 봐요."},
   usdkrw:{g:"mkt", name:"원/달러 환율", full:"1달러당 원화", unit:"원", now:1336.3, chg:6.0, spark:[1322,1325,1329,1327,1331,1328,1330,1333,1330,1330,1336.3],
     one:"1달러를 사려면 원화가 얼마 필요한지예요.", read:"오르면(원화 약세) 환헤지하지 않은 해외 ETF의 원화 가치가 올라가요."},
-  ppi:{g:"us", name:"PPI", full:"생산자물가지수", org:"미국 노동통계국(BLS)", freq:"매월 중순 (CPI 앞뒤)", ref:"10월", next:["2026-12-11","08:30","ET"], unit:"%", sub:"전년 대비",
+  ppi:{g:"us", name:"PPI", full:"생산자물가지수", org:"미국 노동통계국(BLS)", freq:"매월 중순 (CPI 앞뒤)", ref:"10월", next:["2026-12-15","08:30","ET"], unit:"%", sub:"전년 대비",
     one:"기업이 물건과 서비스를 팔 때 받는 값이 1년 전보다 얼마나 올랐는지예요.",
     more:"기업 비용이 오르면 몇 달 뒤 소비자 가격으로 넘어가는 경우가 많아서, 물가를 미리 보는 지표로 써요.",
     read:"예상보다 높으면 앞으로 소비자물가도 오를 수 있다는 뜻이라, 금리 인하 기대가 줄어드는 쪽으로 해석돼요.",
     core:{name:"근원 PPI", a:2.7, f:2.6, p:2.8},
     last:{a:2.6, f:2.5, p:2.7}, hist:[2.4,2.6,2.9,2.7,2.7,2.6], react:[-0.18,0.03,0.08,1.4], src:"https://www.bls.gov/ppi/"},
-  retail:{g:"us", name:"소매판매", full:"소매판매 (Retail Sales)", org:"미국 인구조사국(Census Bureau)", freq:"매월 중순", ref:"10월", next:["2026-12-15","08:30","ET"], unit:"%", sub:"전월 대비 (계절조정)",
+  retail:{g:"us", name:"소매판매", full:"소매판매 (Retail Sales)", org:"미국 인구조사국(Census Bureau)", freq:"매월 중순", ref:"9월", next:["2026-11-17","08:30","ET"], unit:"%", sub:"전월 대비 (계절조정)",
     one:"한 달 동안 상점·온라인·음식점에서 팔린 금액이 전달보다 얼마나 늘었는지예요. 미국 경제의 약 3분의 2가 소비라서 중요해요.",
     more:"자동차·주유소·건축자재·음식점을 뺀 '컨트롤 그룹'이 GDP 계산에 바로 쓰여서, 전문가들은 이 숫자를 더 중요하게 봐요.",
     read:"예상보다 높으면 소비가 탄탄하다는 뜻이에요. 경기에는 좋은 신호지만, 금리 인하 기대는 줄어들 수 있어요.",
@@ -2056,6 +2059,7 @@ const CALC = {
   avg(f){
     const q1 = numIn(f,"q1"), p1 = numIn(f,"p1"), q2 = numIn(f,"q2"), p2 = numIn(f,"p2");
     let now = numIn(f,"now"); if(!isFinite(now)) now = p2;
+    if(!(now > 0)) return `<p class="small muted">현재가는 0보다 커야 해요.</p>`;
     if(![q1,p1,q2,p2].every(x=>isFinite(x)&&x>0)) return `<p class="small muted">네 칸을 모두 채우면 결과가 나와요.</p>`;
     const avg = (q1*p1 + q2*p2) / (q1+q2), q = q1+q2;
     return outRow("새 평단가", won(avg), true) +
