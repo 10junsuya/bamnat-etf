@@ -36,12 +36,17 @@ a{color:var(--accent)}
 .app{max-width:680px; margin:0 auto; padding:0 16px 40px}
 
 /* 상단 고정 영역 */
-.top{position:sticky; top:0; z-index:20; background:var(--bg); padding:12px 0 0; border-bottom:1px solid var(--line)}
-.brand{display:flex; align-items:center; justify-content:space-between; gap:12px}
+.top{position:sticky; top:0; z-index:20; pointer-events:none}
+.brand{display:flex; align-items:center; justify-content:space-between; gap:12px; position:relative; z-index:2; background:var(--bg); padding:12px 0 10px; pointer-events:auto; border-bottom:1px solid transparent; transition:border-color .2s}
+.topx{position:relative; z-index:1; background:var(--bg); border-bottom:1px solid var(--line); pointer-events:auto; transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.top.compact .topx{transform:translateY(calc(-100% - 1px)); pointer-events:none}
+.top.compact .brand{border-bottom-color:var(--line)}
+.top.bare .topx{border-bottom:0}
+@media (prefers-reduced-motion: reduce){ .topx{transition:none} }
 .brand h1{font-size:18px; margin:0; letter-spacing:-.01em}
 .brand h1 span{color:var(--accent)}
 .mode-btn{border:1px solid var(--line); background:var(--surface); border-radius:999px; padding:4px 12px; cursor:pointer; font-size:13px}
-.clocks{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; margin-top:10px}
+.clocks{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px}
 .clock{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:8px 12px; text-align:left; cursor:pointer; display:block; width:100%; min-width:0; overflow:hidden}
 .clock .city,.clock .pill{max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:block; width:fit-content}
 .clock:hover{border-color:var(--accent)}
@@ -395,6 +400,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
       <h1 id="brandTitle" style="margin-right:auto">밤낮 <span>ETF</span></h1>
       <button class="mode-btn" id="modeBtn" type="button" aria-label="화면 테마 바꾸기">자동</button>
     </div>
+    <div class="topx" id="topx">
     <div class="clocks" id="clocks">
       <button class="clock" type="button" data-holi="kr" aria-label="한국장 휴장일 보기"><div class="city">서울 <span class="cmore">휴장일 ›</span></div><div class="time num" id="kstTime">--:--</div><span class="pill" id="krxPill">-</span></button>
       <button class="clock" type="button" data-holi="us" aria-label="미국장 휴장일과 서머타임 보기"><div class="city">뉴욕 <span class="cmore">휴장일 ›</span></div><div class="time num" id="nyTime">--:--</div><span class="pill" id="usPill">-</span><span class="cleft" id="usLeft"></span></button>
@@ -406,6 +412,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
       <button class="tab" type="button" data-go="portfolio">내 계좌</button>
       <button class="tab" type="button" data-go="guide">도구</button>
     </nav>
+    </div>
   </div>
 
   <div class="banner" id="protoBanner">프로토타입이에요. 모든 숫자·일정·뉴스는 <b>샘플</b>이고 실제 시세가 아니에요.</div>
@@ -2492,8 +2499,25 @@ function viewCheck(){
 /* ===================== 라우팅 ===================== */
 function route(){ const h = (location.hash||"").replace("#",""); return h || "main"; }
 function go(name){ if(location.hash !== "#"+name) location.hash = name; else render(); }
+/* 아래로 스크롤하면 시계·탭을 접고, 위로 올리면 다시 보여요 */
+const topEl = document.querySelector(".top");
+let lastY = window.scrollY, scrollTick = false;
+function setCompact(on){ topEl.classList.toggle("compact", on); }
+window.addEventListener("scroll", ()=>{
+  if(scrollTick) return; scrollTick = true;
+  requestAnimationFrame(()=>{
+    const y = window.scrollY, dy = y - lastY;
+    if(y < 80) setCompact(false);
+    else if(dy > 6) setCompact(true);
+    else if(dy < -6) setCompact(false);
+    if(Math.abs(dy) > 6 || y < 80) lastY = y;
+    scrollTick = false;
+  });
+}, {passive:true});
+let lastRoute = null;
 function render(){
   refreshFlags();
+  if(route() !== lastRoute){ lastRoute = route(); setCompact(false); lastY = window.scrollY; }
   const st = renderTop();
   const r = route();
   let html;
