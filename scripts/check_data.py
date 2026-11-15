@@ -12,7 +12,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 APP = ROOT / "index.html"
-FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-money": "data/money.json"}
+FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-money": "data/money.json",
+         "d-holdings": "data/holdings.json", "d-live": "data/live.json"}
+OPTIONAL = {"d-holdings", "d-live"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 URL = re.compile(r"^https?://\S+$")
 TYPES = {"earn", "launch", "land", "event"}
@@ -133,7 +135,10 @@ def main():
         try:
             data[id_] = json.loads((ROOT / f).read_text(encoding="utf-8"))
         except (OSError, ValueError) as e:
-            err(f, f"JSON을 읽을 수 없어요: {e}")
+            if id_ in OPTIONAL:
+                data[id_] = {}
+            else:
+                err(f, f"JSON을 읽을 수 없어요: {e}")
     if not errors:
         known = tickers()
         check_events(data["d-events"], known)
@@ -146,6 +151,9 @@ def main():
     s = APP.read_text(encoding="utf-8")
     new = s
     for id_ in FILES:
+        if f'id="{id_}"' not in new:
+            new = new.replace('<!-- DATA:END -->', block(id_, data[id_]) + '\n<!-- DATA:END -->', 1)
+            continue
         new = re.sub(rf'<script type="application/json" id="{id_}">.*?</script>', lambda _m, i=id_: block(i, data[i]), new, count=1, flags=re.S)
     if new != s:
         if embed:
