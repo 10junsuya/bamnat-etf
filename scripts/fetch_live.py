@@ -82,6 +82,63 @@ def tickers():
     return seen[:120]
 
 
+BACK_DAYS = 8  # 이어 계산에 쓰는 최근 미국 장 날 수
+BROWSER = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36",
+           "Accept": "application/json,text/plain,*/*"}
+
+
+def daily_closes(t):
+    """한 종목의 최근 한 달 정규장 종가 {날짜: 종가}. 야후 → 나스닥 순으로 시도."""
+    try:
+        u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(t)}?range=1mo&interval=1d"
+        with urllib.request.urlopen(urllib.request.Request(u, headers=BROWSER), timeout=20) as r:
+            res = json.loads(r.read())["chart"]["result"][0]
+        ts, cl = res.get("timestamp") or [], res["indicators"]["quote"][0].get("close") or []
+        out = {dt.datetime.fromtimestamp(a, NY).date().isoformat(): round(b, 4) for a, b in zip(ts, cl) if b}
+        if out:
+            return out
+    except Exception:  # noqa: BLE001
+        pass
+    for cls in ("stocks", "etf"):
+        try:
+            u = f"https://api.nasdaq.com/api/quote/{urllib.parse.quote(t.replace('-', '.'))}/historical?assetclass={cls}&limit=30&fromdate=" + (dt.date.today() - dt.timedelta(days=40)).isoformat()
+            with urllib.request.urlopen(urllib.request.Request(u, headers=BROWSER), timeout=20) as r:
+                rows = ((json.loads(r.read()).get("data") or {}).get("tradesTable") or {}).get("rows") or []
+            out = {}
+            for x in rows:
+                m, d, y = x["date"].split("/")
+                out[f"{y}-{m}-{d}"] = float(x["close"].replace("$", "").replace(",", ""))
+            if out:
+                return out
+        except Exception:  # noqa: BLE001
+            continue
+    return {}
+
+
+def backfill(closes, names, errors):
+    """기록이 빠진 최근 미국 장 날 종가를 채워요(이미 있는 값은 그대로). 오늘 장중 값은 넣지 않아요."""
+    now_ny = dt.datetime.now(NY)
+    today = now_ny.date()
+    d = today if (us_trading(today) and now_ny.hour >= 16) else prev_us(today)
+    days = []
+    while len(days) < BACK_DAYS:
+        days.append(d.isoformat()); d = prev_us(d)
+    need = [t for t in names if any(t not in closes.get(x, {}) for x in days)]
+    filled = 0
+    for t in need:
+        time.sleep(0.4)
+        got = daily_closes(t)
+        if not got:
+            errors.append(f"{t}: 지난 종가 못 받음")
+            continue
+        for x in days:
+            if x in got and t not in closes.get(x, {}):
+                closes.setdefault(x, {})[t] = got[x]; filled += 1
+    if need:
+        print(f"지난 종가 채움: {len(need)}종목 확인 · {filled}칸")
+    return closes
+
+
 def quotes(old, errors):
     q, closes = {}, {k: dict(v) for k, v in old.get("closes", {}).items()}
     if not FINNHUB_KEY:
@@ -106,6 +163,7 @@ def quotes(old, errors):
         session_over = now_ny.date() > d or now_ny.hour >= 16
         if session_over:
             closes.setdefault(d.isoformat(), {})[t] = j["c"]
+    closes = backfill(closes, list(q) or list(old.get("quotes", {})), errors)
     closes = dict(sorted(closes.items())[-KEEP:])
     return (q or old.get("quotes", {})), closes
 
