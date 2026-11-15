@@ -119,9 +119,11 @@ def sox_fallback(err):
             if hi is None:
                 raise ValueError(f"머리줄 못 찾음 · 행 {len(rows)}개 · 앞 6행 {[r for r in rows[:6]]!r}"[:600])
             head = [str(c or "").strip().lower() for c in rows[hi]]
-            ti = next(i for i, h in enumerate(head) if h in ("symbol", "ticker"))
+            ti = next(i for i, h in enumerate(head) if h in ("symbol", "ticker", "security symbol"))
             ni = next((i for i, h in enumerate(head) if "name" in h), ti)
-            wi = next(i for i, h in enumerate(head) if "weight" in h)
+            wi = next((i for i, h in enumerate(head) if "weight" in h or "비중" in h), None)
+            if wi is None:
+                raise ValueError(f"비중 열 없음 · 머리줄 {rows[hi]!r} · 다음 3행 {rows[hi+1:hi+4]!r}"[:900])
             items = []
             for r in rows[hi + 1:]:
                 if r and r[ti] and num(r[wi]) is not None:
