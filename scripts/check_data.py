@@ -121,7 +121,7 @@ BRANDED_ART = {"electron": {"RKLB"}, "neutron": {"RKLB"}, "haste": {"RKLB"}, "al
                "ltamds": {"RTX"}, "e2d": {"NOC"}, "b21": {"NOC"}, "triton": {"NOC"}, "icbm": {"NOC"}, "aargm": {"NOC"},
                "falcon9": {"SPCX"}, "falconheavy": {"SPCX"}, "dragon": {"SPCX"}, "hls": {"SPCX"},
                "turbofan": {"GE", "RTX"}, "jeteng": {"GE", "RTX"}, "davinci": {"ISRG"}, "oklo": {"OKLO"}, "nuscale": {"SMR"}, "joby": {"JOBY"}, "vertiport": {"JOBY"}, "midnight": {"ACHR"},
-               "alia": {"BETA"}, "alia250": {"BETA"}}
+               "alia": {"BETA"}, "alia250": {"BETA"}, "xe100": {"XE"}}
 
 
 def check_product_art():
