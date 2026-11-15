@@ -1,14 +1,268 @@
 {
- "generated_at_kst": "2026-11-15 14:26:33",
- "source": "한국거래소 정보데이터시스템 ETF PDF",
- "etfs": {},
+ "generated_at_kst": "2026-11-15 14:29",
+ "etfs": {
+  "360750": {
+   "kind": "index",
+   "index": "S&P 500",
+   "proxy": "SPY",
+   "asof": "As of 12-Nov-2026",
+   "n_total": 505,
+   "top": [
+    {
+     "ticker": "AAPL",
+     "name": "Apple Inc",
+     "weight": 7.904
+    },
+    {
+     "ticker": "NVDA",
+     "name": "Nvidia Corp",
+     "weight": 6.138
+    },
+    {
+     "ticker": "MSFT",
+     "name": "Microsoft Corp",
+     "weight": 5.927
+    },
+    {
+     "ticker": "AMZN",
+     "name": "Amazon.Com Inc",
+     "weight": 4.006
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc Cl A",
+     "weight": 2.675
+    },
+    {
+     "ticker": "AVGO",
+     "name": "Broadcom Inc",
+     "weight": 2.646
+    },
+    {
+     "ticker": "GOOG",
+     "name": "Alphabet Inc Cl C",
+     "weight": 2.143
+    },
+    {
+     "ticker": "META",
+     "name": "Meta Platforms Inc Class A",
+     "weight": 2.099
+    },
+    {
+     "ticker": "LLY",
+     "name": "Eli Lilly + Co",
+     "weight": 1.741
+    },
+    {
+     "ticker": "TSLA",
+     "name": "Tesla Inc",
+     "weight": 1.71
+    },
+    {
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc Cl B",
+     "weight": 1.677
+    },
+    {
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices",
+     "weight": 1.458
+    },
+    {
+     "ticker": "JPM",
+     "name": "Jpmorgan Chase + Co",
+     "weight": 1.391
+    },
+    {
+     "ticker": "MU",
+     "name": "Micron Technology Inc",
+     "weight": 1.376
+    },
+    {
+     "ticker": "V",
+     "name": "Visa Inc Class A Shares",
+     "weight": 1.093
+    }
+   ],
+   "top_weight": 43.98,
+   "src": "SPY 보유종목 공시"
+  },
+  "379800": {
+   "kind": "index",
+   "index": "S&P 500",
+   "proxy": "SPY",
+   "asof": "As of 12-Nov-2026",
+   "n_total": 505,
+   "top": [
+    {
+     "ticker": "AAPL",
+     "name": "Apple Inc",
+     "weight": 7.904
+    },
+    {
+     "ticker": "NVDA",
+     "name": "Nvidia Corp",
+     "weight": 6.138
+    },
+    {
+     "ticker": "MSFT",
+     "name": "Microsoft Corp",
+     "weight": 5.927
+    },
+    {
+     "ticker": "AMZN",
+     "name": "Amazon.Com Inc",
+     "weight": 4.006
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc Cl A",
+     "weight": 2.675
+    },
+    {
+     "ticker": "AVGO",
+     "name": "Broadcom Inc",
+     "weight": 2.646
+    },
+    {
+     "ticker": "GOOG",
+     "name": "Alphabet Inc Cl C",
+     "weight": 2.143
+    },
+    {
+     "ticker": "META",
+     "name": "Meta Platforms Inc Class A",
+     "weight": 2.099
+    },
+    {
+     "ticker": "LLY",
+     "name": "Eli Lilly + Co",
+     "weight": 1.741
+    },
+    {
+     "ticker": "TSLA",
+     "name": "Tesla Inc",
+     "weight": 1.71
+    },
+    {
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc Cl B",
+     "weight": 1.677
+    },
+    {
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices",
+     "weight": 1.458
+    },
+    {
+     "ticker": "JPM",
+     "name": "Jpmorgan Chase + Co",
+     "weight": 1.391
+    },
+    {
+     "ticker": "MU",
+     "name": "Micron Technology Inc",
+     "weight": 1.376
+    },
+    {
+     "ticker": "V",
+     "name": "Visa Inc Class A Shares",
+     "weight": 1.093
+    }
+   ],
+   "top_weight": 43.98,
+   "src": "SPY 보유종목 공시"
+  },
+  "360200": {
+   "kind": "index",
+   "index": "S&P 500",
+   "proxy": "SPY",
+   "asof": "As of 12-Nov-2026",
+   "n_total": 505,
+   "top": [
+    {
+     "ticker": "AAPL",
+     "name": "Apple Inc",
+     "weight": 7.904
+    },
+    {
+     "ticker": "NVDA",
+     "name": "Nvidia Corp",
+     "weight": 6.138
+    },
+    {
+     "ticker": "MSFT",
+     "name": "Microsoft Corp",
+     "weight": 5.927
+    },
+    {
+     "ticker": "AMZN",
+     "name": "Amazon.Com Inc",
+     "weight": 4.006
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc Cl A",
+     "weight": 2.675
+    },
+    {
+     "ticker": "AVGO",
+     "name": "Broadcom Inc",
+     "weight": 2.646
+    },
+    {
+     "ticker": "GOOG",
+     "name": "Alphabet Inc Cl C",
+     "weight": 2.143
+    },
+    {
+     "ticker": "META",
+     "name": "Meta Platforms Inc Class A",
+     "weight": 2.099
+    },
+    {
+     "ticker": "LLY",
+     "name": "Eli Lilly + Co",
+     "weight": 1.741
+    },
+    {
+     "ticker": "TSLA",
+     "name": "Tesla Inc",
+     "weight": 1.71
+    },
+    {
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc Cl B",
+     "weight": 1.677
+    },
+    {
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices",
+     "weight": 1.458
+    },
+    {
+     "ticker": "JPM",
+     "name": "Jpmorgan Chase + Co",
+     "weight": 1.391
+    },
+    {
+     "ticker": "MU",
+     "name": "Micron Technology Inc",
+     "weight": 1.376
+    },
+    {
+     "ticker": "V",
+     "name": "Visa Inc Class A Shares",
+     "weight": 1.093
+    }
+   ],
+   "top_weight": 43.98,
+   "src": "SPY 보유종목 공시"
+  }
+ },
  "errors": [
-  "381180: HTTPError: HTTP Error 400: Bad Request",
-  "360750: HTTPError: HTTP Error 400: Bad Request",
-  "379800: HTTPError: HTTP Error 400: Bad Request",
-  "360200: HTTPError: HTTP Error 400: Bad Request",
-  "133690: HTTPError: HTTP Error 400: Bad Request",
-  "379810: HTTPError: HTTP Error 400: Bad Request",
-  "0181L0: HTTPError: HTTP Error 400: Bad Request"
+  "ndx(QQQ): ValueError: 보유종목이 0개뿐이에요",
+  "sox(SOXQ): ValueError: 보유종목이 0개뿐이에요",
+  "우주항공(soletf): URLError: <urlopen error timed out>"
  ]
 }
