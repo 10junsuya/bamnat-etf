@@ -143,6 +143,19 @@ details.cat:not([open]) summary b::after{content:" ▾"; color:var(--muted); fon
 .ev{display:grid; grid-template-columns:48px 34px 1fr; gap:10px; align-items:start; padding:10px 0; border-top:1px solid var(--line)}
 .ev:first-of-type{border-top:0}
 .ev .d{font-weight:600; font-size:13px}
+.evbadge{display:inline-block; vertical-align:middle; font-size:12px; font-weight:700; padding:2px 8px; border-radius:999px; color:var(--pt); box-shadow:inset 0 0 0 1px var(--pt)}
+.evbadge.done{color:var(--muted); box-shadow:inset 0 0 0 1px var(--line)}
+.evsum{font-size:17px; font-weight:600; line-height:1.5; margin:12px 0 14px}
+.evtiles{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.evtiles>div{background:var(--surface-2); border-radius:12px; padding:10px 12px}
+.evtiles .k{font-size:12px; color:var(--muted)} .evtiles .v{font-size:20px; font-weight:700; color:var(--pt); margin-top:2px; letter-spacing:-.02em} .evtiles .s{font-size:12px; color:var(--muted); margin-top:2px}
+.evcheck{margin:0; padding-left:20px} .evcheck li{margin:6px 0}
+.evif{display:grid; gap:8px} .evif>div{border:1px solid var(--line); border-radius:12px; padding:10px 12px} .evif b{display:block; font-size:13px; margin-bottom:2px} .evif span{font-size:14px}
+.impact>div{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:8px 0; border-top:1px solid var(--line); font-size:14px}
+.impact>div:first-child{border-top:0} .impact small{display:block; color:var(--muted); font-size:12px} .impact b{color:var(--pt); white-space:nowrap}
+.evsrc a{display:flex; align-items:center; min-height:28px}
+.evsrc{display:flex; flex-direction:column; gap:0; margin-top:16px; padding-top:12px; border-top:1px solid var(--line)}
+.okchip{color:var(--ink); box-shadow:inset 0 0 0 1px var(--line); background:none}
 .ev.tap{cursor:pointer} .ev.tap:hover .evmore{color:var(--ink)} .evmore{color:var(--muted); font-weight:400}
 .ev .d small{display:block; font-weight:400; color:var(--muted)}
 .chips{display:flex; flex-wrap:wrap; gap:4px; margin-top:4px}
@@ -577,9 +590,29 @@ const ETFS = [
 
 /* 예시 일정 (실제 일정 아님) — 날짜는 한국 시간 */
 const EVENTS = [
-  {d:"2026-11-13", t:"AMAT", type:"earn", title:"어플라이드머티리얼즈 실적 발표", when:"06:05 · 미국 장 마감 후", done:true, q:"2026 회계연도 4분기 (8~10월)", watch:["반도체 장비 주문이 늘었는지 (특히 AI용 첨단 공정)","중국 매출 비중과 수출 규제 영향","다음 분기 매출 전망(가이던스)"]},
-  {d:"2026-11-18", t:"RKLB", type:"launch", title:"로켓랩 일렉트론 발사", when:"발사 창 12:00~14:00", what:"일렉트론은 로켓랩의 소형 발사체예요. 작은 위성 여러 개를 고객 대신 궤도에 올려 줘요.", watch:["발사가 예정된 시간에 진행되는지 (날씨·기술 문제로 자주 미뤄져요)","위성이 목표 궤도에 제대로 들어갔는지","올해 누적 발사 횟수와 다음 발사 일정"]},
-  {d:"2026-11-20", t:"NVDA", type:"earn", title:"엔비디아 실적 발표", when:"06:20 · 미국 장 마감 후", q:"2027 회계연도 3분기 (8~10월)", watch:["데이터센터(AI 가속기) 매출이 예상보다 많았는지","다음 분기 매출 전망(가이던스)","새 제품 출하 일정과 공급 상황"]},
+  {d:"2026-11-13", t:"AMAT", type:"earn", title:"어플라이드머티리얼즈 실적 발표", when:"새벽 · 미국 장 마감 후", done:true, q:"2026 회계연도 4분기 (8~10월)",
+    card:{real:true, asof:"2026-11-15",
+      sum:"회사가 석 달 전에 내놓은 전망보다 매출과 이익이 모두 높게 나왔어요. AI 반도체 공장 투자가 장비 주문으로 이어지고 있다는 뜻이에요.",
+      tiles:[["매출","104.1억 달러","1년 전보다 +53% · 전망 102.5억 달러"],["주당순이익 (조정)","4.16달러","1년 전보다 +92% · 전망 4.02달러"],["다음 분기 매출 전망","111억 달러","±5억 달러"],["중국 매출 비중","25%","1년 전 29%"]],
+      check:["다음 분기 전망(111억 달러)이 이번 분기보다 높아요. 장비 주문이 계속 늘 거라는 회사의 판단이에요.","반도체 장비 매출이 80.0억 달러로 1년 전 48.8억 달러보다 크게 늘었어요. AI용 첨단 공정 투자가 이끌었어요.","중국 비중은 25%로 낮아졌어요. 수출 규제 영향이 커져도 실적이 흔들릴 여지가 줄었다는 뜻으로 읽혀요."],
+      detail:["어플라이드머티리얼즈는 반도체 공장에 들어가는 장비를 만들어요. 그래서 이 회사 실적은 '반도체 회사들이 공장에 얼마나 돈을 쓰는지'를 보여주는 지표로도 읽혀요.","이번 회계연도 전체 매출은 344.5억 달러로 1년 전보다 21% 늘어 최대치를 기록했어요. 장비 판매 뒤에 따라오는 유지보수·부품 서비스 매출도 19.0억 달러로 늘었어요."],
+      src:[["어플라이드머티리얼즈 4분기 실적 발표 (SEC 8-K)","https://www.sec.gov/Archives/edgar/data/0000006951/000162828026073360/exhibit991q42026earningsre.htm"],["3분기 실적·4분기 전망 (Zacks)","https://zacks.com/stock/news/2974848/-applied-materials-q3-earnings-beat-estimates-revenues-rise-yy"]]}},
+  {d:"2026-11-14", t:"RKLB", type:"launch", title:"로켓랩 일렉트론 100번째 발사", when:"14:30 · 뉴질랜드 발사장", done:true,
+    card:{real:true, asof:"2026-11-15",
+      sum:"로켓랩의 소형 로켓 일렉트론이 100번째 발사에 성공했어요. 일본 iQPS의 레이더 지구관측 위성 1기를 목표 궤도에 올렸어요.",
+      tiles:[["고객","iQPS (일본)","레이더(SAR) 위성 회사 · 11번째 발사"],["실은 것","QPS-SAR-19","별칭 '야마츠미-II' · 1기"],["목표 궤도","575km","저궤도 · 투입 성공"],["일렉트론 누적","100번째","2017년 첫 발사 이후"]],
+      check:["결과: 위성이 목표 궤도에 들어갔고, iQPS가 첫 교신과 안테나 전개를 확인했어요.","iQPS는 이번 뒤에도 2030년까지 일렉트론 발사 7번을 더 예약해 뒀어요. 반복 고객이 많을수록 매출이 안정적이에요.","다음에 볼 것: 대형 로켓 '뉴트론'의 첫 발사 일정이에요. 로켓랩이 더 큰 위성 시장에 들어갈 수 있는지가 걸려 있어요."],
+      detail:["SAR(합성개구레이더) 위성은 전파를 쏘아 지표를 찍어서, 구름이 끼거나 밤이어도 관측할 수 있어요. iQPS는 이런 위성 약 36기로 지구를 자주 찍는 망을 만들고 있어요.","100번째 발사는 상업 개발 로켓 가운데 가장 빠른 기록이라고 로켓랩은 밝혔어요. 발사 서비스는 같은 로켓을 자주, 실패 없이 쏘는 것이 신뢰와 가격의 근거가 돼요."],
+      src:[["로켓랩 100번째 발사 발표","https://rocketlabcorp.com/updates/rocket-lab-hits-100-electron-launches-fastest-commercial-rocket-to-reach-the-milestone/"],["iQPS 발사 안내","https://i-qps.net/en/news/4162/"],["Space.com 보도","https://www.space.com/space-exploration/launches-spacecraft/rocket-lab-100th-launch-iqps-electron-sar-satellite"]]}},
+  {d:"2026-11-18", t:"NVDA", type:"earn", title:"엔비디아 실적 발표", when:"06:20 · 미국 장 마감 후", q:"2027 회계연도 3분기 (8~10월)",
+    card:{real:true, asof:"2026-11-15",
+      sum:"AI 투자가 계속 커지고 있는지 시장이 가장 먼저 확인하는 발표예요. 회사가 약속한 매출(1,080억 달러 안팎)을 얼마나 넘는지가 핵심이에요.",
+      tiles:[["회사 전망 매출","1,080억 달러","±2% (1,058~1,102억)"],["시장 예상 매출","1,088억 달러","증권사 예상치 모음"],["시장 예상 주당순이익","2.47달러","지난 분기 2.22달러"],["지난 분기 매출","962억 달러","1년 전보다 +106%"]],
+      check:["매출이 시장 예상 1,088억 달러를 넘는지, 회사 전망 상단(1,102억 달러)까지 가는지 봐요.","데이터센터 매출 (지난 분기 890억 달러, 전체의 약 92%)이 계속 늘었는지 봐요.","총이익률이 회사 전망 74% 안팎을 지켰는지, 그리고 다음 분기(11~1월) 매출 전망이 얼마로 나오는지 봐요."],
+      ifGood:"보통 AI 반도체 수요가 여전히 강하다는 신호로 읽혀요. 엔비디아를 많이 담은 반도체·나스닥 ETF가 같이 움직이기 쉬워요.",
+      ifBad:"예상을 넘어도 '넘은 폭'이 작거나 다음 분기 전망이 기대에 못 미치면 주가가 내리기도 해요. 기대가 이미 높은 회사라 그래요.",
+      detail:["이번 전망에는 중국 데이터센터 매출이 빠져 있어요. 중국 판매가 다시 허용되면 그만큼 더해질 수 있고, 반대로 규제가 세지면 영향이 없어요.","회사는 지난 발표 때 다음 회계연도(2027년 2월~2028년 1월) 매출이 70% 늘 거라고 내다봤어요. 이번 발표에서 이 숫자를 유지하거나 올리는지도 함께 봐요. 공급(생산 능력)이 수요를 못 따라가는지도 질문으로 자주 나와요."],
+      src:[["엔비디아 실적 발표 일정 공지","https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/"],["엔비디아 2분기 실적·3분기 전망","https://mfn.se/all/a/nvidia/nvidia-announces-financial-results-for-second-quarter-fiscal-2027-0d0c3f31"],["시장 예상치 (MarketBeat 인용)","https://eciks.org/29651-nvidia-fiscal-2027-q3-results"],["다음 회계연도 전망 (Outlook Business)","https://www.outlookbusiness.com/corporate/nvidia-quarter-results-revenue-profits-data-centre-chips-jensen-huang-ai-investment-risk"]]}},
   {d:"2026-11-25", t:"FLY", type:"launch", title:"파이어플라이 알파 발사", when:"발사 창 미정", what:"알파는 파이어플라이의 소형 발사체예요. 1톤 안팎의 화물을 저궤도에 올리는 로켓이에요.", watch:["발사 창이 확정되는지","발사 성공 여부와 궤도 투입 결과","정부·국방 계약 고객의 화물인지"]},
   {d:"2026-12-03", t:"MRVL", type:"earn", title:"마벨 실적 발표", when:"06:05 · 미국 장 마감 후", q:"2027 회계연도 3분기 (8~10월)", watch:["데이터센터용 맞춤형 AI 칩·광통신 칩 매출","주요 클라우드 고객과의 계약 소식","다음 분기 매출 전망"]},
   {d:"2026-12-04", t:"ASTS", type:"launch", title:"AST스페이스모바일 위성 발사", when:"발사 창 미정", what:"AST스페이스모바일은 일반 휴대폰과 바로 연결되는 대형 통신위성(블루버드)을 쏘아 올려 우주 휴대폰망을 만들고 있어요.", watch:["발사 일정이 확정되는지","위성이 정상적으로 펼쳐지고 작동하는지","통신사와의 서비스 시작 일정"]},
@@ -978,13 +1011,47 @@ function evRow(ev, withChips=true){
   if(ev.type==="dist") return `<div ${open}><div class="d num">${m}/${d}<small>(${wd})</small></div><span class="logo" style="background:var(--accent)" aria-hidden="true">분배</span>
     <div><div>${ev.title} <span class="evmore">›</span></div><div class="tiny muted num">${ev.when}</div></div></div>`;
   const kind = ev.type==="earn" ? "실적" : "발사";
-  const done = ev.done ? ` <span class="chip">발표 완료</span>` : "";
+  const done = (ev.done ? ` <span class="chip">${ev.type==="earn"?"발표 완료":"완료"}</span>` : "") + (ev.card && ev.card.real ? ` <span class="chip okchip">확인됨</span>` : "");
   const sec = ev.type==="earn" ? ` · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${ev.t}&type=8-K" target="_blank" rel="noopener">SEC 공시 원문 ›</a>` : "";
   return `<div ${open}><div class="d num">${m}/${d}<small>(${wd})</small></div>${logo(ev.t)}
     <div><div><span class="evtype">${kind}</span>${ev.title}${done} <span class="evmore">›</span></div><div class="tiny muted">${ev.when}${ev.done?sec:""}</div>
     ${withChips?`<div class="chips">${exposureChips(ev.t)}</div>`:""}</div></div>`;
 }
 
+function etfImpactHtml(t, move){
+  const rows = ETFS.filter(e=>e.h.some(([x])=>x===t)).map(e=>({e, w:e.h.find(([x])=>x===t)[1]})).sort((a,b)=>b.w-a.w).slice(0,4);
+  if(!rows.length) return "";
+  const name = STOCKS[t] ? STOCKS[t][0] : t;
+  return `<div class="bsection"><h4>내 ETF에는 얼마나?</h4>
+    <p class="small" style="margin:0 0 8px">${josaIGa(name)} 하루에 <b class="num">${move}%</b> 움직이면, 다른 종목이 그대로일 때 ETF는 대략 이만큼 움직여요.</p>
+    <div class="impact">${rows.map(r=>`<div><span>${r.e.name}<small class="num">비중 ${(r.w*100).toFixed(1)}%</small></span><b class="num">±${(r.w*move).toFixed(2)}%</b></div>`).join("")}</div>
+    <p class="tiny muted" style="margin-top:6px">비중 × 움직임으로 계산한 대략적인 값이에요. 환율과 다른 종목 움직임은 빼고 계산했어요.</p></div>`;
+}
+function eventCardSheet(ev){
+  const C = ev.card, t = ev.t, co = CO[t] || {};
+  const [y,m,dd] = ev.d.split("-").map(Number); const wd = KDAY[new Date(Date.UTC(y,m-1,dd)).getUTCDay()];
+  const today = ymd(parts(now(),"Asia/Seoul")); const left = dayDiff(today, ev.d);
+  const badge = ev.done ? `<span class="evbadge done">${ev.type==="earn"?"발표 완료":"완료"}</span>` : left===0 ? `<span class="evbadge">오늘</span>` : left>0 ? `<span class="evbadge">D-${left}</span>` : "";
+  const fmtAsof = C.asof ? `${+C.asof.slice(5,7)}/${+C.asof.slice(8,10)}` : "";
+  openSheet(`<h3 id="sheetTitle">${ev.title} ${badge}</h3>
+    <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간${ev.q?` · ${ev.q}`:""}</p>
+    <p class="evsum">${C.sum}</p>
+    <div class="evtiles">${C.tiles.map(([k,v,sub])=>`<div><div class="k">${k}</div><div class="v num">${v}</div>${sub?`<div class="s num">${sub}</div>`:""}</div>`).join("")}</div>
+    <div class="bsection"><h4>${ev.done ? "핵심만 보면" : "발표 때 이것만 보면 돼요"}</h4><ol class="evcheck">${C.check.map(c=>`<li>${c}</li>`).join("")}</ol></div>
+    ${C.ifGood || C.ifBad ? `<div class="bsection"><h4>결과는 보통 이렇게 읽혀요</h4><div class="evif">
+      ${C.ifGood?`<div><b>예상보다 좋으면</b><span>${C.ifGood}</span></div>`:""}${C.ifBad?`<div><b>예상에 못 미치면</b><span>${C.ifBad}</span></div>`:""}</div>
+      <p class="tiny muted" style="margin-top:6px">항상 그렇지는 않아요. 그날 시장 분위기와 다른 발표에 따라 반대로 움직이기도 해요.</p></div>` : ""}
+    ${etfImpactHtml(t, ev.type==="earn" ? 5 : 3)}
+    <details class="more"><summary>더 자세히 <span>· 배경과 분석${co.one?", 회사 소개":""}</span></summary>
+      <div class="bsection">${C.detail.map(x=>`<p>${x}</p>`).join("")}</div>
+      ${co.one ? `<div class="bsection"><h4>어떤 회사예요?</h4><p>${co.one}</p></div>` : ""}
+    </details>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:14px">
+      ${STOCKS[t] ? `<button class="more" type="button" data-stock="${t}" style="flex:1">회사 자세히 보기 ›</button>` : ""}
+    </div>
+    <div class="evsrc"><span class="tiny muted">출처 · ${fmtAsof} 기준</span>${C.src.map(([n,u])=>`<a class="tiny" href="${u}" target="_blank" rel="noopener">${n} ›</a>`).join("")}</div>
+    <p class="tiny muted" style="margin-top:10px">정보 제공용이며 투자 권유가 아니에요.</p>`, true);
+}
 function josaIGa(w){ const c = w.charCodeAt(w.length-1); return w + ((c>=0xAC00 && c<=0xD7A3 && (c-0xAC00)%28) ? "이" : "가"); }
 function eventSheet(id){
   if(id.startsWith("dist:")){
@@ -1002,6 +1069,7 @@ function eventSheet(id){
     return;
   }
   const [t, d] = id.split(":"); const ev = EVENTS.find(v=>v.t===t && v.d===d); if(!ev) return;
+  if(ev.card){ eventCardSheet(ev); return; }
   const s = STOCKS[t], co = CO[t] || {};
   const [y,m,dd] = d.split("-").map(Number); const wd = KDAY[new Date(Date.UTC(y,m-1,dd)).getUTCDay()];
   const isEarn = ev.type==="earn";
@@ -1097,7 +1165,7 @@ function viewCalendar(){
   const myTick = new Set(ETFS.filter(e=>stars.includes(e.code)).flatMap(e=>e.h.map(([t])=>t)));
   const dists = distEvents().filter(v => calFilter==="all" || stars.includes(v.code));
   const list = [...EVENTS.filter(v => calFilter==="all" || myTick.has(v.t)), ...dists].sort((a,b)=>a.d.localeCompare(b.d));
-  return `<section class="card"><h2>실적 발표·주요 일정<span class="sub">예시 일정 · 한국 시간</span></h2>
+  return `<section class="card"><h2>실적 발표·주요 일정<span class="sub">한국 시간 · '확인됨' 외에는 예시</span></h2>
     <div class="seg" role="group" aria-label="일정 범위">
       <button type="button" data-cal="all" aria-pressed="${calFilter==="all"}">전체</button>
       <button type="button" data-cal="mine" aria-pressed="${calFilter==="mine"}">관심 ETF 구성종목만</button>
