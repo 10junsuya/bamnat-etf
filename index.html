@@ -36,12 +36,12 @@ a{color:var(--accent)}
 .app{max-width:680px; margin:0 auto; padding:0 16px 40px}
 
 /* 상단 고정 영역 */
-.top{position:sticky; top:0; z-index:20; pointer-events:none}
+.app > .top{position:sticky; top:0; z-index:20; pointer-events:none}  /* 앱 머리만 고정 (카드 안 .top 과 구분) */
 .brand{display:flex; align-items:center; justify-content:space-between; gap:12px; position:relative; z-index:2; background:var(--bg); padding:12px 0 10px; pointer-events:auto; border-bottom:1px solid transparent; transition:border-color .2s}
 .topx{position:relative; z-index:1; background:var(--bg); border-bottom:1px solid var(--line); pointer-events:auto; transition:transform .28s cubic-bezier(.2,.8,.2,1)}
-.top.compact .topx{transform:translateY(calc(-100% - 1px)); pointer-events:none}
-.top.compact .brand{border-bottom-color:var(--line)}
-.top.bare .topx{border-bottom:0}
+.app > .top.compact .topx{transform:translateY(calc(-100% - 1px)); pointer-events:none}
+.app > .top.compact .brand{border-bottom-color:var(--line)}
+.app > .top.bare .topx{border-bottom:0}
 @media (prefers-reduced-motion: reduce){ .topx{transition:none} }
 .brand h1{font-size:18px; margin:0; letter-spacing:-.01em}
 .brand h1 span{color:var(--accent)}
@@ -290,7 +290,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 /* 메인 화면 */
 .landing{padding:28px 0 8px}
 .landing h2{font-size:22px; margin:0 0 4px; text-wrap:balance}
-.top.bare{border-bottom:0}
+.app > .top.bare{border-bottom:0}
 .landing.main{padding-top:6vh}
 .mlogo{display:flex; flex-direction:column; align-items:center; gap:6px; margin:0 auto 8px; padding:0; border:0; background:none; font:inherit; color:var(--ink); cursor:pointer; -webkit-tap-highlight-color:transparent}
 .wordmark{font-size:44px; font-weight:600; letter-spacing:.26em; padding:.04em 0 .04em .26em; line-height:1; border-top:.036em solid currentColor; border-bottom:.036em solid currentColor; text-box:trim-both cap alphabetic; scale:1 1.06; font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif}
@@ -4420,7 +4420,7 @@ function viewCheck(){
 function route(){ const h = (location.hash||"").replace("#",""); return h || "main"; }
 function go(name){ if(location.hash !== "#"+name) location.hash = name; else render(); }
 /* 아래로 스크롤하면 시계·탭을 접고, 위로 올리면 다시 보여요 */
-const topEl = document.querySelector(".top");
+const topEl = document.querySelector(".app > .top");
 let lastY = window.scrollY, scrollTick = false;
 function setCompact(on){ topEl.classList.toggle("compact", on); }
 window.addEventListener("scroll", ()=>{
@@ -4449,7 +4449,7 @@ function render(){
   document.getElementById("protoBanner").hidden = (r==="main");
   document.getElementById("previewBox").hidden = (r==="main");
   document.getElementById("discLine").hidden = (r==="main");
-  document.querySelector(".top").classList.toggle("bare", r==="main");
+  document.querySelector(".app > .top").classList.toggle("bare", r==="main");
   document.getElementById("brandTitle").innerHTML = r==="main" ? "" : r==="check" ? "자동 <span>점검</span>" : (inA ? "매크로 <span>지표</span>" : "밤낮 <span>ETF</span>");
   if(r==="main") html = viewMain(st);
   else if(r==="macro") html = viewMacro(st);
