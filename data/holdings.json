@@ -1,5 +1,5 @@
 {
- "generated_at_kst": "2026-11-15 15:03",
+ "generated_at_kst": "2026-11-15 15:06",
  "etfs": {
   "360750": {
    "kind": "index",
@@ -493,6 +493,7 @@
   }
  },
  "errors": [
-  "sox(SOXQ): ValueError: json-daily:HTTPError:HTTP Error 500: Internal Server Error / json-monthly:HTTPError:HTTP Error 500: Internal Server Erro / nasdaq 2026-11-14: StopIteration: / nasdaq 2026-11-13: StopIteration: / mirae: HTTPError:HTTP Error 403: Forbidden"
+  "sox(SOXQ): ValueError: json-daily:HTTPError:HTTP Error 500: Internal Server Error / json-monthly:HTTPError:HTTP Error 500: Internal Server Erro / nasdaq 2026-11-14: ValueError:비중 열 없음 · 머리줄 ('Company Name', 'Security Symbol', None, None, None, None, None, None, None, None, None) · 다음 3행 [(None, None, None, None, None, None, None, None, None, None, None)] / nasdaq 2026-11-13: ValueError:비중 열 없음 · 머리줄 ('Company Name', 'Security Symbol', None, None, None, None, None, None, None, None, None) · 다음 3행 [('ANALOG DEVICES CMN', 'ADI', None, None, None, None, None, None, None, None, None), ('ASTERA LABS, INC.', 'ALAB', None, None, None, None, None, None, None, None, None), ('APPLIED MATERIALS', 'AMAT', None, None, None, None, None, None, None, None, None)] / mirae: HTTPError:HTTP Error 403: Forbidden",
+  "우주항공(soletf): URLError: <urlopen error timed out>"
  ]
 }
