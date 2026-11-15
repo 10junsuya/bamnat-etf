@@ -203,7 +203,7 @@ def main():
             for c in cfg["codes"]:
                 out["etfs"][c] = entry
         except Exception as e:  # noqa: BLE001
-            out["errors"].append(f"{g}({cfg['proxy']}): {type(e).__name__}: {str(e)[:180]}")
+            out["errors"].append(f"{g}({cfg['proxy']}): {type(e).__name__}: {str(e)[:700]}")
     try:
         asof, items, cash = space()
         if len(items) < 5:
@@ -215,7 +215,7 @@ def main():
                                      "top": [{"ticker": i["ticker"], "name": i["name"], "weight": i["weight"]} for i in sorted(items, key=lambda i: -i["weight"])],
                                      "cash_weight": round(cash, 2), "src": "신한자산운용 구성종목(PDF)"}
     except Exception as e:  # noqa: BLE001
-        out["errors"].append(f"우주항공(soletf): {type(e).__name__}: {str(e)[:180]}")
+        out["errors"].append(f"우주항공(soletf): {type(e).__name__}: {str(e)[:700]}")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"ETF {len(out['etfs'])}개, 오류 {len(out['errors'])}개")
     for e in out["errors"]:
