@@ -593,7 +593,7 @@ const EVENTS = [
   {d:"2026-11-13", t:"AMAT", type:"earn", title:"어플라이드머티리얼즈 실적 발표", when:"새벽 · 미국 장 마감 후", done:true, q:"2026 회계연도 4분기 (8~10월)",
     card:{real:true, asof:"2026-11-15",
       sum:"회사가 석 달 전에 내놓은 전망보다 매출과 이익이 모두 높게 나왔어요. AI 반도체 공장 투자가 장비 주문으로 이어지고 있다는 뜻이에요.",
-      tiles:[["매출","104.1억 달러","1년 전보다 +53% · 전망 102.5억 달러"],["주당순이익 (조정)","4.16달러","1년 전보다 +92% · 전망 4.02달러"],["다음 분기 매출 전망","111억 달러","±5억 달러"],["중국 매출 비중","25%","1년 전 29%"]],
+      tiles:[["매출","104.1억 달러","1년 전보다 +53% · 전망 102.5억 달러"],["조정 주당순이익 (EPS)","4.16달러","1년 전보다 +92% · 전망 4.02달러"],["다음 분기 매출 전망","111억 달러","±5억 달러"],["중국 매출 비중","25%","1년 전 29%"]],
       check:["다음 분기 전망(111억 달러)이 이번 분기보다 높아요. 장비 주문이 계속 늘 거라는 회사의 판단이에요.","반도체 장비 매출이 80.0억 달러로 1년 전 48.8억 달러보다 크게 늘었어요. AI용 첨단 공정 투자가 이끌었어요.","중국 비중은 25%로 낮아졌어요. 수출 규제 영향이 커져도 실적이 흔들릴 여지가 줄었다는 뜻으로 읽혀요."],
       detail:["어플라이드머티리얼즈는 반도체 공장에 들어가는 장비를 만들어요. 그래서 이 회사 실적은 '반도체 회사들이 공장에 얼마나 돈을 쓰는지'를 보여주는 지표로도 읽혀요.","이번 회계연도 전체 매출은 344.5억 달러로 1년 전보다 21% 늘어 최대치를 기록했어요. 장비 판매 뒤에 따라오는 유지보수·부품 서비스 매출도 19.0억 달러로 늘었어요."],
       src:[["어플라이드머티리얼즈 4분기 실적 발표 (SEC 8-K)","https://www.sec.gov/Archives/edgar/data/0000006951/000162828026073360/exhibit991q42026earningsre.htm"],["3분기 실적·4분기 전망 (Zacks)","https://zacks.com/stock/news/2974848/-applied-materials-q3-earnings-beat-estimates-revenues-rise-yy"]]}},
@@ -607,7 +607,7 @@ const EVENTS = [
   {d:"2026-11-18", t:"NVDA", type:"earn", title:"엔비디아 실적 발표", when:"06:20 · 미국 장 마감 후", q:"2027 회계연도 3분기 (8~10월)",
     card:{real:true, asof:"2026-11-15",
       sum:"AI 투자가 계속 커지고 있는지 시장이 가장 먼저 확인하는 발표예요. 회사가 약속한 매출(1,080억 달러 안팎)을 얼마나 넘는지가 핵심이에요.",
-      tiles:[["회사 전망 매출","1,080억 달러","±2% (1,058~1,102억)"],["시장 예상 매출","1,088억 달러","증권사 예상치 모음"],["시장 예상 주당순이익","2.47달러","지난 분기 2.22달러"],["지난 분기 매출","962억 달러","1년 전보다 +106%"]],
+      tiles:[["회사 전망 매출","1,080억 달러","±2% (1,058~1,102억)"],["시장 예상 매출","1,088억 달러","증권사 예상치 모음"],["시장 예상 주당순이익 (EPS)","2.47달러","지난 분기 2.22달러"],["지난 분기 매출","962억 달러","1년 전보다 +106%"]],
       check:["매출이 시장 예상 1,088억 달러를 넘는지, 회사 전망 상단(1,102억 달러)까지 가는지 봐요.","데이터센터 매출 (지난 분기 890억 달러, 전체의 약 92%)이 계속 늘었는지 봐요.","총이익률이 회사 전망 74% 안팎을 지켰는지, 그리고 다음 분기(11~1월) 매출 전망이 얼마로 나오는지 봐요."],
       ifGood:"보통 AI 반도체 수요가 여전히 강하다는 신호로 읽혀요. 엔비디아를 많이 담은 반도체·나스닥 ETF가 같이 움직이기 쉬워요.",
       ifBad:"예상을 넘어도 '넘은 폭'이 작거나 다음 분기 전망이 기대에 못 미치면 주가가 내리기도 해요. 기대가 이미 높은 회사라 그래요.",
@@ -1022,7 +1022,7 @@ function etfImpactHtml(t, move){
   const rows = ETFS.filter(e=>e.h.some(([x])=>x===t)).map(e=>({e, w:e.h.find(([x])=>x===t)[1]})).sort((a,b)=>b.w-a.w).slice(0,4);
   if(!rows.length) return "";
   const name = STOCKS[t] ? STOCKS[t][0] : t;
-  return `<div class="bsection"><h4>내 ETF에는 얼마나?</h4>
+  return `<div class="bsection"><h4>ETF 영향</h4>
     <p class="small" style="margin:0 0 8px">${josaIGa(name)} 하루에 <b class="num">${move}%</b> 움직이면, 다른 종목이 그대로일 때 ETF는 대략 이만큼 움직여요.</p>
     <div class="impact">${rows.map(r=>`<div><span>${r.e.name}<small class="num">비중 ${(r.w*100).toFixed(1)}%</small></span><b class="num">±${(r.w*move).toFixed(2)}%</b></div>`).join("")}</div>
     <p class="tiny muted" style="margin-top:6px">비중 × 움직임으로 계산한 대략적인 값이에요. 환율과 다른 종목 움직임은 빼고 계산했어요.</p></div>`;
@@ -1037,14 +1037,14 @@ function eventCardSheet(ev){
     <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간${ev.q?` · ${ev.q}`:""}</p>
     <p class="evsum">${C.sum}</p>
     <div class="evtiles">${C.tiles.map(([k,v,sub])=>`<div><div class="k">${k}</div><div class="v num">${v}</div>${sub?`<div class="s num">${sub}</div>`:""}</div>`).join("")}</div>
-    <div class="bsection"><h4>${ev.done ? "핵심만 보면" : "발표 때 이것만 보면 돼요"}</h4><ol class="evcheck">${C.check.map(c=>`<li>${c}</li>`).join("")}</ol></div>
-    ${C.ifGood || C.ifBad ? `<div class="bsection"><h4>결과는 보통 이렇게 읽혀요</h4><div class="evif">
+    <div class="bsection"><h4>${ev.done ? "핵심 정리" : "관전 포인트"}</h4><ol class="evcheck">${C.check.map(c=>`<li>${c}</li>`).join("")}</ol></div>
+    ${C.ifGood || C.ifBad ? `<div class="bsection"><h4>결과별 해석</h4><div class="evif">
       ${C.ifGood?`<div><b>예상보다 좋으면</b><span>${C.ifGood}</span></div>`:""}${C.ifBad?`<div><b>예상에 못 미치면</b><span>${C.ifBad}</span></div>`:""}</div>
       <p class="tiny muted" style="margin-top:6px">항상 그렇지는 않아요. 그날 시장 분위기와 다른 발표에 따라 반대로 움직이기도 해요.</p></div>` : ""}
     ${etfImpactHtml(t, ev.type==="earn" ? 5 : 3)}
-    <details class="more"><summary>더 자세히 <span>· 배경과 분석${co.one?", 회사 소개":""}</span></summary>
+    <details class="more"><summary>더 보기 <span>· 배경 분석${co.one?", 회사 개요":""}</span></summary>
       <div class="bsection">${C.detail.map(x=>`<p>${x}</p>`).join("")}</div>
-      ${co.one ? `<div class="bsection"><h4>어떤 회사예요?</h4><p>${co.one}</p></div>` : ""}
+      ${co.one ? `<div class="bsection"><h4>회사 개요</h4><p>${co.one}</p></div>` : ""}
     </details>
     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:14px">
       ${STOCKS[t] ? `<button class="more" type="button" data-stock="${t}" style="flex:1">회사 자세히 보기 ›</button>` : ""}
@@ -1076,13 +1076,13 @@ function eventSheet(id){
   const held = ETFS.filter(e=>e.h.some(([x])=>x===t));
   openSheet(`<h3 id="sheetTitle">${ev.title}</h3>
     <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간 · 예시 일정${ev.done?" · 발표 완료":""}</p>
-    ${isEarn ? `<div class="bsection"><h4>무슨 발표예요?</h4><p>${josaIGa(s?s[0]:t)} ${ev.q||"지난 분기"} 성적표를 내놓는 날이에요. 매출과 주당순이익(EPS)이 시장 예상보다 높았는지, 그리고 회사가 말하는 다음 분기 전망(가이던스)을 함께 봐요.</p>
+    ${isEarn ? `<div class="bsection"><h4>발표 개요</h4><p>${josaIGa(s?s[0]:t)} ${ev.q||"지난 분기"} 성적표를 내놓는 날이에요. 매출과 주당순이익(EPS)이 시장 예상보다 높았는지, 그리고 회사가 말하는 다음 분기 전망(가이던스)을 함께 봐요.</p>
       <p class="small muted">미국 장이 끝난 뒤 발표돼서, 주가 반응은 시간외 거래와 다음 날 정규장에서 먼저 나타나요. 국내 상장 ETF에는 보통 그다음 한국 장에 반영돼요.</p></div>`
-    : `<div class="bsection"><h4>무슨 일정이에요?</h4><p>${ev.what||"로켓 발사 일정이에요."}</p>
+    : `<div class="bsection"><h4>일정 개요</h4><p>${ev.what||"로켓 발사 일정이에요."}</p>
       <p class="small muted">발사 일정은 날씨나 기술 점검 때문에 자주 바뀌어요. 성공·실패나 지연 소식이 회사 주가에 영향을 줄 수 있어요.</p></div>`}
-    ${ev.watch ? `<div class="bsection"><h4>이번에 볼 것</h4><ul style="margin:0;padding-left:18px">${ev.watch.map(w=>`<li style="margin:4px 0">${w}</li>`).join("")}</ul></div>` : ""}
-    ${co.one ? `<div class="bsection"><h4>어떤 회사예요?</h4><p>${co.one}</p></div>` : ""}
-    ${held.length ? `<div class="bsection"><h4>이 회사가 들어 있는 ETF</h4><div class="chips">${exposureChips(t)}</div><p class="tiny muted">숫자는 그 ETF 안에서 이 회사가 차지하는 비중이에요. 비중이 클수록 이 일정의 영향을 더 받아요.</p></div>` : ""}
+    ${ev.watch ? `<div class="bsection"><h4>관전 포인트</h4><ul style="margin:0;padding-left:18px">${ev.watch.map(w=>`<li style="margin:4px 0">${w}</li>`).join("")}</ul></div>` : ""}
+    ${co.one ? `<div class="bsection"><h4>회사 개요</h4><p>${co.one}</p></div>` : ""}
+    ${held.length ? `<div class="bsection"><h4>편입 ETF</h4><div class="chips">${exposureChips(t)}</div><p class="tiny muted">숫자는 그 ETF 안에서 이 회사가 차지하는 비중이에요. 비중이 클수록 이 일정의 영향을 더 받아요.</p></div>` : ""}
     ${isEarn && ev.done ? `<p class="small muted">발표 결과를 예상치와 비교해 보여주는 실적 결과 카드는 2차 버전에서 추가돼요.</p>` : ""}
     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:14px">
       ${s ? `<button class="more" type="button" data-stock="${t}" style="flex:1">회사 자세히 보기 ›</button>` : ""}
