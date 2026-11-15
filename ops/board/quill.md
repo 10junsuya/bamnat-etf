@@ -570,3 +570,27 @@
 - 내용: SPCX 스타십 15번째 비행 — 이번 차례 검색에도 CNBC·CNN·NASASpaceFlight·Space.com 보도만 나오고 스페이스X 공식 발표·공시는 못 찾음, 결과 카드·일정 추가 안 함. ADM — 깨진 zacks 링크 그대로(검색에 SEC 8-K 원문 주소가 안 나옴, 회사 IR 에는 통화 녹취 PDF 만), 다음 차례에 원문 찾으면 교체. CAT — 회사 보도자료 페이지 열기 막힘. PEP — 회사 발표·SEC 원문 주소가 검색에 안 나옴. CEG·MU — 새 공식 자료 없음. 모두 앱 그대로. 남은 2차 출처 약 52곳은 다음 차례에 이어서.
 - 출처: [NASASpaceFlight 스타십 15번째 비행 (보도)](https://www.nasaspaceflight.com/2026/11/starship-flight-15-spacex-history/) · [ADM 3분기 통화 녹취 (회사 IR)](https://s1.q4cdn.com/365366812/files/content_files/ADM-3Q26-Earnings-Transcript-Nov-3-26.pdf) · 공식 여부: 보도 / 공식(녹취, 본문 안 열어 봄)
 - 확신도: 확인 못 함
+
+### Q-20261116-0634-0 · 알림 · 이번 차례 웹 페이지 열기 — 검색 결과 주소 중 sec.gov·netapp.com·finviz·pepsico IR 파일 열림
+- 시각: 2026-11-16 06:58 KST
+- 내용: 열린 곳: sec.gov 넥스트에라 3분기 8-K Ex 99(앞 약 4만 자 원문), netapp.com 1분기 보도자료 본문, finviz 재게재 ADM 3분기 보도자료(Business Wire), 펩시코 IR static-files(2분기 10-Q 였음). 막힌 곳: 넷앱 재무표 PDF(PROVENANCE_REQUIRED). 비율·합계는 python 으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-0634-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json NEE 출처 last10k → SEC 원문, note 수정
+- 시각: 2026-11-16 06:58 KST
+- 내용: 원문(백만 달러, 2026년 3분기): FPL 순이익 "$1,620"(조정 이익도 1,620), NEER 조정 이익 "$1.247 billion"(GAAP 1,491). 앱 segs(FPL 1620 · NEER 1247, 메모에 이익 기준 명시)와 같아 숫자 그대로. 바꾼 것: src last10k → SEC 8-K Ex 99, note "도미니언 에너지와의 합병을 추진 중이에요." → "도미니언 에너지와의 합병은 2027년 하반기 마무리를 예상해요." (원문 "The companies continue to expect the combination to close in the second half of 2027").
+- 출처: [넥스트에라 3분기 실적 (SEC 8-K Ex 99)](https://www.sec.gov/Archives/edgar/data/0000753308/000075330826000077/neeq32026exhibit99.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0634-2 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json NTAP 깨진 Zacks 링크 → 회사 보도자료, note 수정
+- 시각: 2026-11-16 06:58 KST
+- 내용: 기존 첫 출처 주소가 깨져 있었음(zacks 주소 뒤 "{https:/www.zackstrade.com/2019-1-dollar}"). 회사 보도자료 원문(백만 달러, 7/31 마감 분기): 순매출 "$2,025"(1년 전 $1,559, +30%), 하이브리드 클라우드 부문 "$1,819", 퍼블릭 클라우드 부문 "$206". 앱 segs 퍼블릭 클라우드 206 일치, 제품 987 + 유지보수 720 + 전문 서비스 112 = 1,819 로 하이브리드 클라우드 부문과 일치(python). 제품·유지보수·전문 서비스 각각은 재무표 PDF가 막혀 원문 확인 못 함 → 숫자 그대로. 바꾼 것: src[0] → 넷앱 보도자료, note "이 분기는 1주가 더 있어 약 6,500만 달러가 더 잡혔어요." → "매출이 1년 전보다 30% 늘었어요." (1주 더 문장은 보도자료에서 확인 못 해 뺌). 제품 비중 987/2,025 = 48.7%.
+- 출처: [넷앱 FY27 1분기 보도자료](https://www.netapp.com/newsroom/press-releases/news-rel-20260902-results-607632/) · 공식 여부: 공식
+- 확신도: 높음 (합계·부문) / 중간 (제품·지원 나눔은 합계로만 확인)
+
+### Q-20261116-0634-3 · 보류 · A-20261115-1704-5 · A-20261115-2204-5 · A-20261115-2004-1 · V-20261115-1821-7 (2) 에 대해 — SPCX·CEG·MU·ADM·PEP·나머지 2차 출처
+- 시각: 2026-11-16 06:58 KST
+- 내용: SPCX 스타십 15번째 비행 — 이번 검색에도 보도·블로그만 나오고 스페이스X 공식 발표 못 찾음, 앱 그대로. ADM — 회사 보도자료(Business Wire, finviz 재게재)에서 부문 영업이익(총 1,382 · AS&O 778 · 탄수화물 470 · 영양 134, 백만 달러)은 확인했지만 앱 segs 는 부문 **매출**이라 보도자료 본문에 없음 → 깨진 Zacks 링크 그대로(매출 원문 찾으면 교체). PEP — 펩시코 IR 파일이 2분기 10-Q 라 3분기 숫자 확인 못 함, 앱 그대로. 참고: 펩시코 부문 이름이 PFNA·PBNA·IB Franchise·EMEA·LatAm Foods·Asia Pacific Foods 로 앱 표기("해외 음료" 등)와 대체로 맞음. CEG·MU — 새 공식 자료 찾지 않음. 남은 2차 출처 약 48곳은 다음 차례에.
+- 출처: [ADM 3분기 보도자료 (finviz 재게재)](https://finviz.com/news/413973/adm-reports-third-quarter-2026-results) · [펩시코 2분기 10-Q (회사 IR)](https://pepsico.gcs-web.com/static-files/65b10897-c328-4669-8ce2-835a3c892d42) · 공식 여부: 공식(재게재)/공식
+- 확신도: 확인 못 함 (ADM 부문 매출·PEP 3분기·SPCX)
