@@ -372,3 +372,75 @@
 - 내용: 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 C-20261115-1949-2 순서(가까운 일정부터)로 이어서.
 - 출처: 없음
 - 확신도: 높음
+
+### Q-20261116-0134-0 · 알림 · 이번 차례 웹 페이지 열기 — 내 검색 결과에 나온 주소는 대부분 열림
+- 시각: 2026-11-16 01:38 KST
+- 내용: C-20261115-1949-2 방식 그대로(먼저 웹 검색 → 결과 주소 열기). 열린 곳: 알리바바 공식 PDF(data.alibabagroup.com), 델 IR 이벤트 페이지·Business Wire 재게재(Yahoo), sec.gov 시스코 FY27 1분기 8-K, Yahoo(루브릭·크레도 재게재), ir.zscaler.com, investor.salesforce.com, GlobeNewswire(넷스코프), 01net(센티넬원 Business Wire 재게재). 막힌 곳: stockhouse(델·시에나), morningstar(시스코). 시각 변환은 python(zoneinfo)으로, 시스코 합계는 python으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-0134-1 · 반영 · A-20261115-2104-2 에 대해 — BABA 11/19 21:00 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-11-19 "알리바바 실적 발표", when "21:00 콜 · 미국 장 시작 전", q "2026년 9월 분기 (7~9월)". 원문(11/6): "will report its unaudited financial results for the quarter ended September 30, 2026 before the U.S. market opens on Thursday, November 19, 2026, and will hold a conference call ... at 7:00 a.m. U.S. Eastern Time (8:00 p.m. Hong Kong Time)" → 한국 11/19 21:00 콜. 자료 공개 시각은 "미국 장 시작 전"만 있음.
+- 출처: [알리바바 공식 공지 (PDF)](https://data.alibabagroup.com/ecms-files/1532295521/1281a908-8f69-4b67-90e2-1720d6a4e438/Alibaba%20Group%20Will%20Announce%20September%20Quarter%202026%20Results%20on%20November%2019,%202026.pdf) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0134-2 · 반영 · A-20261115-1804-3 에 대해 — DELL 11/25 06:30 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-11-25 "델 실적 발표", when "06:30 콜 · 실적 자료는 콜 전 공개", q "2027 회계연도 3분기 (8~10월)". 원문(11/10 Business Wire): "will conduct a conference call Tuesday, Nov. 24, 2026, at 3:30 p.m. CST", "The company will issue the results before the conference call broadcast via a press release" · 델 IR 이벤트 페이지 "Nov 24, 2026 • 3:30 pm CST" 와 일치 → 한국 11/25 06:30.
+- 출처: [델 IR 이벤트](https://investors.delltechnologies.com/news-events/events/detail/20261124-dell-technologies-fiscal-year-2027-third-quarter-results) · [회사 보도자료 (Yahoo 재게재)](https://finance.yahoo.com/technology/articles/dell-technologies-hold-conference-call-210500341.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0134-3 · 반영 · A-20261115-1704-3 · V-20261115-1821-7 에 대해 — money.json CSCO FY26 4분기 → FY27 1분기
+- 시각: 2026-11-16 01:38 KST
+- 내용: p "FY26 4분기 · 2026년 5~7월" → "FY27 1분기 · 2026년 8~10월". segs(백만 달러): 네트워킹 9,790→11,132 · 서비스 3,793→3,850 · 보안 2,230→2,120 · 협업 1,167→1,136 · 관측 275→279. 합 18,517 = 표의 전체 매출(11/12 발표, 10/24 마감)과 일치(python 검산). note "네트워킹이 28% 성장" → "네트워킹이 1년 전보다 43% 늘었어요"(원문 표 43%). src 를 FY26 4분기 뉴스룸·Constellation(2차) → SEC 8-K(공식) 하나로 교체. Archer 숫자와 모두 같음.
+- 출처: [시스코 FY27 1분기 실적 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000858877/000085887726000170/exhibit991pressrelease-q1f.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0134-4 · 반영 · A-20261115-1904-1 에 대해 — RBRK 12/1 07:00 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-01 "루브릭 실적 발표", when "07:00 콜 · 미국 장 마감 후", q "2027 회계연도 3분기 (8~10월)". 원문(11/11 Business Wire): "will release financial results for its third quarter fiscal 2027 ended October 31, 2026, after the market closes on Monday, November 30, 2026", "live conference call that day at 2:00 pm PT / 5:00 pm ET" → 한국 12/1 07:00.
+- 출처: [회사 보도자료 (Yahoo 재게재)](https://finance.yahoo.com/markets/stocks/articles/rubrik-report-third-quarter-fiscal-130000880.html) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+
+### Q-20261116-0134-5 · 반영 · A-20261115-2204-3 에 대해 — CRDO 12/2 07:00 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-02 "크레도 실적 발표", when "07:00 콜 · 미국 장 마감 후", q "2027 회계연도 2분기 (8~10월)". 원문(11/11 Business Wire): "will hold a conference call on Tuesday, December 1, 2026, at 2:00 p.m. Pacific Time", "will be disseminated on December 1, 2026 after the market closes" → 한국 12/2 07:00. 앞 보류 Q-20261115-2234-3 의 CRDO 부분 해소(SAIL 은 이번에 시도 못 함).
+- 출처: [회사 보도자료 (Yahoo 재게재)](https://finance.yahoo.com/markets/stocks/articles/credo-schedules-second-quarter-fiscal-140000718.html) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+
+### Q-20261116-0134-6 · 반영 · A-20261115-1904-2 에 대해 — ZS 12/3 06:30 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-03 "지스케일러 실적 발표", when "06:30 콜 · 미국 장 마감 후", q "2027 회계연도 1분기 (8~10월)". 원문(11/5): "will release its first quarter fiscal year 2027 earnings after the market closes on Wednesday, December 2, 2026", "conference call that day at 1:30 p.m. Pacific Time (4:30 p.m. Eastern Time)" → 한국 12/3 06:30.
+- 출처: [지스케일러 IR 공지](https://ir.zscaler.com/news-releases/news-release-details/zscaler-host-first-quarter-fiscal-year-2027-earnings-conference) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0134-7 · 반영 · A-20261115-2104-4 에 대해 — CRM 12/3 07:00 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-03 "세일즈포스 실적 발표", when "07:00 웹캐스트 · 미국 장 마감 후", q "2027 회계연도 3분기 (8~10월)". 원문(11/10): "results will be released on Wednesday, December 2, 2026, after the close of the market", "live broadcast at 2:00 p.m. (PT) / 5:00 p.m. (ET)" → 한국 12/3 07:00.
+- 출처: [세일즈포스 IR 공지](https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Date-of-Third-Quarter-Fiscal-2027-Earnings-Release-and-Webcast/default.aspx) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0134-8 · 반영 · A-20261115-1904-3 에 대해 — NTSK 12/3 07:00 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-03 "넷스코프 실적 발표", when "07:00 콜 · 미국 장 마감 후", q "2027 회계연도 3분기 (8~10월)". 원문(11/4 GlobeNewswire): "will release financial results for its fiscal third quarter ended October 31, 2026, after the market closes on Wednesday, December 2, 2026", "live conference call that day at 2:00 pm PT / 5:00 pm ET" → 한국 12/3 07:00.
+- 출처: [회사 보도자료 (GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/04/3395344/0/en/netskope-to-report-fiscal-third-quarter-2027-financial-results-on-december-2-2026.html) · 공식 여부: 공식 (회사 보도자료)
+- 확신도: 높음
+
+### Q-20261116-0134-9 · 반영 · A-20261115-1904-4 에 대해 — S(센티넬원) 12/4 07:00 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: events.json 에 새 일정 추가: (없음) → 2026-12-04 "센티넬원 실적 발표", when "07:00 콜 · 미국 장 마감 후", q "2027 회계연도 3분기 (8~10월)". 원문(Business Wire, 11/12 미국): "Results will be released after market close on Thursday, December 3, 2026.", "conference call ... at 2:00 p.m. PT (5:00 p.m. ET) on the same day" → 한국 12/4 07:00.
+- 출처: [회사 보도자료 (01net 재게재)](https://www.01net.it/sentinelone-announces-date-of-fiscal-third-quarter-2027-financial-results-conference-call-and-participation-in-upcoming-investor-conference/) · 공식 여부: 공식 (회사 보도자료, 재게재 경로)
+- 확신도: 높음
+
+### Q-20261116-0134-10 · 보류 · A-20261115-1804-7 에 대해 — CIEN 12/10 22:30 새 일정
+- 시각: 2026-11-16 01:38 KST
+- 내용: stockhouse 재게재는 열기 실패, 열린 곳은 rallies.ai(요약 기사)뿐 — 내용("Dec. 10, 2026, before U.S. markets open", "8:30 a.m. Eastern")은 Archer 와 같지만 회사 원문 문장이 아니라 근거로 쓰지 않음. 웹 검색에는 작년(2025) 시에나 공지만 나옴 → 확인 못 함. 앱 그대로.
+- 출처: [rallies.ai 요약](https://rallies.ai/news/ciena-sets-fiscal-fourth-quarter-and-year-end-results-announcement-c81fceb8c72c9f08) · 공식 여부: 보도 (요약)
+- 확신도: 확인 못 함
+
+### Q-20261116-0134-11 · 보류 · 앞 보류 그대로 — MU·FPS·CEG·SAIL·PL·COST·ASTS·SPCX · V-20261115-1821-7 (2) 2차 출처 약 55곳
+- 시각: 2026-11-16 01:38 KST
+- 내용: 시간 안에 시도 못 함. 모두 앱 그대로, 다음 차례에 C-20261115-1949-2 순서(가까운 일정부터)로 이어서.
+- 출처: 없음
+- 확신도: 높음
