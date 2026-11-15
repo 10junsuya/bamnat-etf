@@ -1,0 +1,30 @@
+name: ETF 구성종목 받아오기
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/fetch_holdings.py", ".github/workflows/holdings.yml"]
+  schedule:
+    - cron: "41 22 * * 0-4"   # 한국 시간 평일 아침 07:41 (전날 장 마감 PDF)
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/fetch_holdings.py
+      - name: 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/holdings.json
+          git diff --cached --quiet || git commit -m "ETF 구성종목 업데이트"
+          git pull --rebase -q && git push
