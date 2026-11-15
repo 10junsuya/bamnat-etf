@@ -1,0 +1,169 @@
+{
+ "groups": {
+  "sp": {
+   "name": "S&P500",
+   "kind": "index",
+   "proxy": "SPY",
+   "title": "미국 대형주 시장",
+   "idx": "S&P500"
+  },
+  "ndx": {
+   "name": "나스닥100",
+   "kind": "index",
+   "proxy": "QQQ",
+   "title": "미국 기술주 시장",
+   "idx": "나스닥100"
+  },
+  "sox": {
+   "name": "필라델피아 반도체 지수",
+   "kind": "index",
+   "proxy": "SOXQ",
+   "title": "반도체 산업",
+   "idx": "필라델피아 반도체 지수"
+  },
+  "semi": {
+   "name": "미국 반도체 (MVIS 25)",
+   "kind": "index",
+   "proxy": "SMH",
+   "title": "반도체 산업",
+   "idx": "MVIS 미국 반도체 25 지수"
+  },
+  "div": {
+   "name": "미국배당다우존스",
+   "kind": "index",
+   "proxy": "SCHD",
+   "title": "미국 배당주",
+   "idx": "다우존스 미국 배당 100 지수"
+  },
+  "tech": {
+   "name": "미국 테크 TOP10 (Indxx)",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "미국 대형 기술주",
+   "idx": "Indxx 미국 테크 TOP10 지수"
+  },
+  "bigtech": {
+   "name": "미국 빅테크 TOP7 Plus",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "미국 빅테크",
+   "idx": "Solactive 미국 빅테크 TOP7 Plus 지수"
+  },
+  "space": {
+   "name": "미국 우주항공 TOP10",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "우주항공 산업",
+   "idx": "KEDI 미국 우주항공 TOP10 지수"
+  },
+  "spacetech": {
+   "name": "미국 우주테크 (Akros)",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "우주항공 산업",
+   "idx": "Akros 미국 우주테크 지수"
+  }
+ },
+ "etfs": [
+  [
+   "381180",
+   "TIGER 미국필라델피아반도체나스닥",
+   "sox"
+  ],
+  [
+   "390390",
+   "KODEX 미국반도체",
+   "semi"
+  ],
+  [
+   "360750",
+   "TIGER 미국S&P500",
+   "sp"
+  ],
+  [
+   "379800",
+   "KODEX 미국S&P500",
+   "sp"
+  ],
+  [
+   "360200",
+   "ACE 미국S&P500",
+   "sp"
+  ],
+  [
+   "379780",
+   "RISE 미국S&P500",
+   "sp"
+  ],
+  [
+   "0026S0",
+   "1Q 미국S&P500",
+   "sp"
+  ],
+  [
+   "433330",
+   "SOL 미국S&P500",
+   "sp"
+  ],
+  [
+   "133690",
+   "TIGER 미국나스닥100",
+   "ndx"
+  ],
+  [
+   "379810",
+   "KODEX 미국나스닥100",
+   "ndx"
+  ],
+  [
+   "367380",
+   "ACE 미국나스닥100",
+   "ndx"
+  ],
+  [
+   "368590",
+   "RISE 미국나스닥100",
+   "ndx"
+  ],
+  [
+   "0069M0",
+   "1Q 미국나스닥100",
+   "ndx"
+  ],
+  [
+   "458730",
+   "TIGER 미국배당다우존스",
+   "div"
+  ],
+  [
+   "446720",
+   "SOL 미국배당다우존스",
+   "div"
+  ],
+  [
+   "402970",
+   "ACE 미국배당다우존스",
+   "div"
+  ],
+  [
+   "381170",
+   "TIGER 미국테크TOP10 INDXX",
+   "tech"
+  ],
+  [
+   "465580",
+   "ACE 미국빅테크TOP7 Plus",
+   "bigtech"
+  ],
+  [
+   "0181L0",
+   "SOL 미국우주항공TOP10",
+   "space"
+  ],
+  [
+   "0183J0",
+   "TIGER 미국우주테크",
+   "spacetech"
+  ]
+ ]
+}

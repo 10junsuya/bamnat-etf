@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 APP = ROOT / "index.html"
 FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-money": "data/money.json",
-         "d-holdings": "data/holdings.json", "d-live": "data/live.json", "d-macro": "data/macro.json"}
+         "d-holdings": "data/holdings.json", "d-live": "data/live.json", "d-macro": "data/macro.json", "d-etfs": "data/etfs.json"}
 OPTIONAL = {"d-holdings", "d-live", "d-macro"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 URL = re.compile(r"^https?://\S+$")

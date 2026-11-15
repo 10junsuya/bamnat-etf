@@ -15,7 +15,12 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+import sys
+import time
 from zoneinfo import ZoneInfo
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from etf_list import ETFS as ETF_LIST, GROUPS  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "live.json"
@@ -24,8 +29,8 @@ KST, NY = ZoneInfo("Asia/Seoul"), ZoneInfo("America/New_York")
 FINNHUB_KEY = os.environ.get("FINNHUB_API_KEY", "").strip()
 DATA_KEY = urllib.parse.unquote(os.environ.get("DATA_GO_KR_API_KEY", "").strip())
 ETF_URL = "https://apis.data.go.kr/1160100/GetSecuritiesProductInfoService_V2/getETFPriceInfo_V2"
-KR_ETFS = ["381180", "360750", "379800", "360200", "133690", "379810", "0181L0"]
-PROXIES = ["SPY", "QQQ", "SOXQ"]
+KR_ETFS = [c for c, _, _ in ETF_LIST]
+PROXIES = sorted({g["proxy"] for g in GROUPS.values() if g.get("proxy")})
 KEEP = 30
 
 
@@ -74,7 +79,7 @@ def tickers():
     for t in out:
         if t not in seen:
             seen.append(t)
-    return seen[:60]
+    return seen[:120]
 
 
 def quotes(old, errors):
@@ -84,6 +89,7 @@ def quotes(old, errors):
         return old.get("quotes", {}), closes
     now_ny = dt.datetime.now(NY)
     for t in tickers():
+        time.sleep(1.05)  # 무료 한도: 1분에 60번
         try:
             j = json.loads(get("https://finnhub.io/api/v1/quote?" + urllib.parse.urlencode({"symbol": t, "token": FINNHUB_KEY})))
         except Exception as e:  # noqa: BLE001
@@ -111,9 +117,10 @@ def logos(old, errors):
         return out
     n = 0
     for t in tickers():
-        if t in out or n >= 25:
+        if t in out or n >= 40:
             continue
         n += 1
+        time.sleep(1.05)
         try:
             j = json.loads(get("https://finnhub.io/api/v1/stock/profile2?" + urllib.parse.urlencode({"symbol": t, "token": FINNHUB_KEY})))
             u = (j or {}).get("logo") or ""
