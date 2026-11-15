@@ -31,7 +31,7 @@ DATA_KEY = urllib.parse.unquote(os.environ.get("DATA_GO_KR_API_KEY", "").strip()
 ETF_URL = "https://apis.data.go.kr/1160100/GetSecuritiesProductInfoService_V2/getETFPriceInfo_V2"
 KR_ETFS = [c for c, _, _ in ETF_LIST]
 PROXIES = sorted({g["proxy"] for g in GROUPS.values() if g.get("proxy")})
-KEEP = 30
+KEEP = 30  # 종가 기록 일수
 
 
 def scrub(t):
