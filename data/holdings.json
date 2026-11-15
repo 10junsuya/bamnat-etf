@@ -1,5 +1,5 @@
 {
- "generated_at_kst": "2026-11-15 14:29",
+ "generated_at_kst": "2026-11-15 14:31",
  "etfs": {
   "360750": {
    "kind": "index",
@@ -262,67 +262,237 @@
   "0181L0": {
    "kind": "pdf",
    "index": "KEDI 미국우주항공TOP10",
-   "asof": "2026-11-14 확인",
+   "asof": "2026-11-13",
    "n_total": 10,
    "top": [
     {
      "ticker": "SPCX",
-     "name": "Space Exploration Technologies",
+     "name": "Space Exploration Technologies Corp",
      "weight": 25.32
     },
     {
      "ticker": "RKLB",
-     "name": "Rocket Lab",
+     "name": "Rocket Lab USA Inc",
      "weight": 24.96
     },
     {
      "ticker": "VSAT",
-     "name": "Viasat",
+     "name": "Viasat Inc",
      "weight": 10.48
     },
     {
      "ticker": "ASTS",
-     "name": "AST SpaceMobile",
+     "name": "AST SpaceMobile Inc",
      "weight": 8.63
     },
     {
      "ticker": "FLY",
-     "name": "Firefly Aerospace",
+     "name": "Firefly Aerospace Inc",
      "weight": 8.18
     },
     {
      "ticker": "PL",
-     "name": "Planet Labs",
+     "name": "Planet Labs PBC",
      "weight": 6.85
     },
     {
      "ticker": "LUNR",
-     "name": "Intuitive Machines",
+     "name": "Intuitive Machines Inc",
      "weight": 5.42
     },
     {
      "ticker": "RDW",
-     "name": "Redwire",
+     "name": "Redwire Corp",
      "weight": 5.11
     },
     {
      "ticker": "BKSY",
-     "name": "BlackSky",
+     "name": "BlackSky Technology Inc",
      "weight": 2.47
     },
     {
      "ticker": "SATL",
-     "name": "Satellogic",
+     "name": "Satellogic Inc",
      "weight": 1.5
     }
    ],
    "cash_weight": 1.06,
    "src": "신한자산운용 구성종목(PDF)"
+  },
+  "133690": {
+   "kind": "index",
+   "index": "나스닥100",
+   "proxy": "QQQ",
+   "asof": "2026-11-12",
+   "n_total": 103,
+   "top": [
+    {
+     "ticker": "AAPL",
+     "name": "Apple Inc",
+     "weight": 8.446
+    },
+    {
+     "ticker": "NVDA",
+     "name": "Nvidia Corp",
+     "weight": 6.527
+    },
+    {
+     "ticker": "MSFT",
+     "name": "Microsoft Corp",
+     "weight": 6.329
+    },
+    {
+     "ticker": "AMZN",
+     "name": "Amazon.Com Inc",
+     "weight": 4.701
+    },
+    {
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices Inc",
+     "weight": 4.298
+    },
+    {
+     "ticker": "MU",
+     "name": "Micron Technology Inc",
+     "weight": 4.057
+    },
+    {
+     "ticker": "TSLA",
+     "name": "Tesla Inc",
+     "weight": 3.402
+    },
+    {
+     "ticker": "META",
+     "name": "Meta Platforms Inc",
+     "weight": 3.022
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc Class A",
+     "weight": 2.856
+    },
+    {
+     "ticker": "AVGO",
+     "name": "Broadcom Inc",
+     "weight": 2.825
+    },
+    {
+     "ticker": "WMT",
+     "name": "Walmart Inc",
+     "weight": 2.761
+    },
+    {
+     "ticker": "SPCX",
+     "name": "Space Exploration Technologies Corp",
+     "weight": 2.701
+    },
+    {
+     "ticker": "GOOG",
+     "name": "Alphabet Inc Class C",
+     "weight": 2.66
+    },
+    {
+     "ticker": "COST",
+     "name": "Costco Wholesale Corp",
+     "weight": 2.182
+    },
+    {
+     "ticker": "CSCO",
+     "name": "Cisco Systems Inc",
+     "weight": 1.809
+    }
+   ],
+   "top_weight": 58.57,
+   "src": "QQQ 보유종목 공시"
+  },
+  "379810": {
+   "kind": "index",
+   "index": "나스닥100",
+   "proxy": "QQQ",
+   "asof": "2026-11-12",
+   "n_total": 103,
+   "top": [
+    {
+     "ticker": "AAPL",
+     "name": "Apple Inc",
+     "weight": 8.446
+    },
+    {
+     "ticker": "NVDA",
+     "name": "Nvidia Corp",
+     "weight": 6.527
+    },
+    {
+     "ticker": "MSFT",
+     "name": "Microsoft Corp",
+     "weight": 6.329
+    },
+    {
+     "ticker": "AMZN",
+     "name": "Amazon.Com Inc",
+     "weight": 4.701
+    },
+    {
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices Inc",
+     "weight": 4.298
+    },
+    {
+     "ticker": "MU",
+     "name": "Micron Technology Inc",
+     "weight": 4.057
+    },
+    {
+     "ticker": "TSLA",
+     "name": "Tesla Inc",
+     "weight": 3.402
+    },
+    {
+     "ticker": "META",
+     "name": "Meta Platforms Inc",
+     "weight": 3.022
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc Class A",
+     "weight": 2.856
+    },
+    {
+     "ticker": "AVGO",
+     "name": "Broadcom Inc",
+     "weight": 2.825
+    },
+    {
+     "ticker": "WMT",
+     "name": "Walmart Inc",
+     "weight": 2.761
+    },
+    {
+     "ticker": "SPCX",
+     "name": "Space Exploration Technologies Corp",
+     "weight": 2.701
+    },
+    {
+     "ticker": "GOOG",
+     "name": "Alphabet Inc Class C",
+     "weight": 2.66
+    },
+    {
+     "ticker": "COST",
+     "name": "Costco Wholesale Corp",
+     "weight": 2.182
+    },
+    {
+     "ticker": "CSCO",
+     "name": "Cisco Systems Inc",
+     "weight": 1.809
+    }
+   ],
+   "top_weight": 58.57,
+   "src": "QQQ 보유종목 공시"
   }
  },
  "errors": [
-  "ndx(QQQ): ValueError: 보유종목이 0개뿐이에요",
-  "sox(SOXQ): ValueError: 보유종목이 0개뿐이에요",
-  "우주항공(soletf): URLError: <urlopen error timed out>"
+  "sox(SOXQ): ValueError: json:HTTPError:HTTP Error 500: Internal Server Error / csv:<!-- | * This file is created specifically to update | * lang attribute in html tag and | * data-language attribute body "
  ]
 }
