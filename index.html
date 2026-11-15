@@ -143,6 +143,7 @@ details.cat:not([open]) summary b::after{content:" ▾"; color:var(--muted); fon
 .ev{display:grid; grid-template-columns:48px 34px 1fr; gap:10px; align-items:start; padding:10px 0; border-top:1px solid var(--line)}
 .ev:first-of-type{border-top:0}
 .ev .d{font-weight:600; font-size:13px}
+.ev.tap{cursor:pointer} .ev.tap:hover .evmore{color:var(--ink)} .evmore{color:var(--muted); font-weight:400}
 .ev .d small{display:block; font-weight:400; color:var(--muted)}
 .chips{display:flex; flex-wrap:wrap; gap:4px; margin-top:4px}
 .chip{font-size:12px; padding:1px 8px; border-radius:999px; background:var(--surface-2); color:var(--muted)}
@@ -576,15 +577,15 @@ const ETFS = [
 
 /* 예시 일정 (실제 일정 아님) — 날짜는 한국 시간 */
 const EVENTS = [
-  {d:"2026-11-13", t:"AMAT", type:"earn", title:"어플라이드머티리얼즈 실적 발표", when:"06:05 · 미국 장 마감 후", done:true},
-  {d:"2026-11-18", t:"RKLB", type:"launch", title:"로켓랩 일렉트론 발사", when:"발사 창 12:00~14:00"},
-  {d:"2026-11-20", t:"NVDA", type:"earn", title:"엔비디아 실적 발표", when:"06:20 · 미국 장 마감 후"},
-  {d:"2026-11-25", t:"FLY", type:"launch", title:"파이어플라이 알파 발사", when:"발사 창 미정"},
-  {d:"2026-12-03", t:"MRVL", type:"earn", title:"마벨 실적 발표", when:"06:05 · 미국 장 마감 후"},
-  {d:"2026-12-04", t:"ASTS", type:"launch", title:"AST스페이스모바일 위성 발사", when:"발사 창 미정"},
-  {d:"2026-12-12", t:"AVGO", type:"earn", title:"브로드컴 실적 발표", when:"06:15 · 미국 장 마감 후"},
-  {d:"2026-12-12", t:"COST", type:"earn", title:"코스트코 실적 발표", when:"06:15 · 미국 장 마감 후"},
-  {d:"2026-12-18", t:"MU", type:"earn", title:"마이크론 실적 발표", when:"06:00 · 미국 장 마감 후"}
+  {d:"2026-11-13", t:"AMAT", type:"earn", title:"어플라이드머티리얼즈 실적 발표", when:"06:05 · 미국 장 마감 후", done:true, q:"2026 회계연도 4분기 (8~10월)", watch:["반도체 장비 주문이 늘었는지 (특히 AI용 첨단 공정)","중국 매출 비중과 수출 규제 영향","다음 분기 매출 전망(가이던스)"]},
+  {d:"2026-11-18", t:"RKLB", type:"launch", title:"로켓랩 일렉트론 발사", when:"발사 창 12:00~14:00", what:"일렉트론은 로켓랩의 소형 발사체예요. 작은 위성 여러 개를 고객 대신 궤도에 올려 줘요.", watch:["발사가 예정된 시간에 진행되는지 (날씨·기술 문제로 자주 미뤄져요)","위성이 목표 궤도에 제대로 들어갔는지","올해 누적 발사 횟수와 다음 발사 일정"]},
+  {d:"2026-11-20", t:"NVDA", type:"earn", title:"엔비디아 실적 발표", when:"06:20 · 미국 장 마감 후", q:"2027 회계연도 3분기 (8~10월)", watch:["데이터센터(AI 가속기) 매출이 예상보다 많았는지","다음 분기 매출 전망(가이던스)","새 제품 출하 일정과 공급 상황"]},
+  {d:"2026-11-25", t:"FLY", type:"launch", title:"파이어플라이 알파 발사", when:"발사 창 미정", what:"알파는 파이어플라이의 소형 발사체예요. 1톤 안팎의 화물을 저궤도에 올리는 로켓이에요.", watch:["발사 창이 확정되는지","발사 성공 여부와 궤도 투입 결과","정부·국방 계약 고객의 화물인지"]},
+  {d:"2026-12-03", t:"MRVL", type:"earn", title:"마벨 실적 발표", when:"06:05 · 미국 장 마감 후", q:"2027 회계연도 3분기 (8~10월)", watch:["데이터센터용 맞춤형 AI 칩·광통신 칩 매출","주요 클라우드 고객과의 계약 소식","다음 분기 매출 전망"]},
+  {d:"2026-12-04", t:"ASTS", type:"launch", title:"AST스페이스모바일 위성 발사", when:"발사 창 미정", what:"AST스페이스모바일은 일반 휴대폰과 바로 연결되는 대형 통신위성(블루버드)을 쏘아 올려 우주 휴대폰망을 만들고 있어요.", watch:["발사 일정이 확정되는지","위성이 정상적으로 펼쳐지고 작동하는지","통신사와의 서비스 시작 일정"]},
+  {d:"2026-12-12", t:"AVGO", type:"earn", title:"브로드컴 실적 발표", when:"06:15 · 미국 장 마감 후", q:"2026 회계연도 4분기 (8~10월)", watch:["AI용 맞춤형 칩과 네트워크 칩 매출","소프트웨어(VM웨어) 부문 매출","다음 분기와 내년 전망"]},
+  {d:"2026-12-12", t:"COST", type:"earn", title:"코스트코 실적 발표", when:"06:15 · 미국 장 마감 후", q:"2027 회계연도 1분기 (9~11월)", watch:["기존 매장 매출 증가율","회원 수와 회원 갱신율","연말 쇼핑 시즌 분위기"]},
+  {d:"2026-12-18", t:"MU", type:"earn", title:"마이크론 실적 발표", when:"06:00 · 미국 장 마감 후", q:"2027 회계연도 1분기 (9~11월)", watch:["AI 서버용 고대역폭 메모리(HBM) 매출","D램·낸드 가격 흐름","다음 분기 매출 전망"]}
 ];
 
 const GLOSS = {
@@ -972,16 +973,55 @@ function exposureChips(t){
 function evRow(ev, withChips=true){
   const [y,m,d] = ev.d.split("-").map(Number);
   const wd = KDAY[new Date(Date.UTC(y,m-1,d)).getUTCDay()];
-  if(ev.type==="dist") return `<div class="ev"><div class="d num">${m}/${d}<small>(${wd})</small></div><span class="logo" style="background:var(--accent)" aria-hidden="true">분배</span>
-    <div><div>${ev.title}</div><div class="tiny muted num">${ev.when}</div></div></div>`;
+  const evid = ev.type==="dist" ? `dist:${ev.code}` : `${ev.t}:${ev.d}`;
+  const open = `class="ev tap" role="button" tabindex="0" data-evt="${evid}" aria-label="${ev.title} 자세히 보기"`;
+  if(ev.type==="dist") return `<div ${open}><div class="d num">${m}/${d}<small>(${wd})</small></div><span class="logo" style="background:var(--accent)" aria-hidden="true">분배</span>
+    <div><div>${ev.title} <span class="evmore">›</span></div><div class="tiny muted num">${ev.when}</div></div></div>`;
   const kind = ev.type==="earn" ? "실적" : "발사";
   const done = ev.done ? ` <span class="chip">발표 완료</span>` : "";
   const sec = ev.type==="earn" ? ` · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${ev.t}&type=8-K" target="_blank" rel="noopener">SEC 공시 원문 ›</a>` : "";
-  return `<div class="ev"><div class="d num">${m}/${d}<small>(${wd})</small></div>${logo(ev.t)}
-    <div><div><span class="evtype">${kind}</span>${ev.title}${done}</div><div class="tiny muted">${ev.when}${ev.done?sec:""}</div>
+  return `<div ${open}><div class="d num">${m}/${d}<small>(${wd})</small></div>${logo(ev.t)}
+    <div><div><span class="evtype">${kind}</span>${ev.title}${done} <span class="evmore">›</span></div><div class="tiny muted">${ev.when}${ev.done?sec:""}</div>
     ${withChips?`<div class="chips">${exposureChips(ev.t)}</div>`:""}</div></div>`;
 }
 
+function josaIGa(w){ const c = w.charCodeAt(w.length-1); return w + ((c>=0xAC00 && c<=0xD7A3 && (c-0xAC00)%28) ? "이" : "가"); }
+function eventSheet(id){
+  if(id.startsWith("dist:")){
+    const e = ETFS.find(x=>x.code===id.slice(5)); if(!e) return;
+    const D = distInfo(e); if(!D) return;
+    openSheet(`<h3 id="sheetTitle">${e.name} 분배금</h3>
+      <p class="small muted" style="margin-top:0">${D.freq} 지급 · 예시 일정</p>
+      <div class="kv"><div><div class="k">다음 기준일</div><div class="v num">${D.next ? fmtD(D.next.rec) : "미정"}</div></div>
+        <div><div class="k">지급 예정일</div><div class="v num">${D.next ? fmtD(D.next.pay) : "미정"}</div></div>
+        <div><div class="k">받으려면 이날까지 매수</div><div class="v num">${D.lastBuy ? fmtD(D.lastBuy) : "—"}</div></div>
+        <div><div class="k">최근 분배금</div><div class="v num">${D.last ? won(D.last[1]) : "—"}</div></div></div>
+      <div class="bsection"><h4>분배 기준일이 뭐예요?</h4><p>${GLOSS["분배 기준일"] || "이날 ETF를 가지고 있는 사람이 분배금을 받아요. 결제가 2영업일 걸려서, 기준일 2영업일 전까지 사야 해요."}</p>
+        <p class="small muted">분배금이 나가면 그만큼 ETF 가격(NAV)이 내려가요. 받은 돈만큼 값이 빠지는 거라 공짜 이익은 아니에요.</p></div>
+      <button class="more" type="button" data-go="etf-${e.code}">${e.name} 화면으로 ›</button>`, true);
+    return;
+  }
+  const [t, d] = id.split(":"); const ev = EVENTS.find(v=>v.t===t && v.d===d); if(!ev) return;
+  const s = STOCKS[t], co = CO[t] || {};
+  const [y,m,dd] = d.split("-").map(Number); const wd = KDAY[new Date(Date.UTC(y,m-1,dd)).getUTCDay()];
+  const isEarn = ev.type==="earn";
+  const held = ETFS.filter(e=>e.h.some(([x])=>x===t));
+  openSheet(`<h3 id="sheetTitle">${ev.title}</h3>
+    <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간 · 예시 일정${ev.done?" · 발표 완료":""}</p>
+    ${isEarn ? `<div class="bsection"><h4>무슨 발표예요?</h4><p>${josaIGa(s?s[0]:t)} ${ev.q||"지난 분기"} 성적표를 내놓는 날이에요. 매출과 주당순이익(EPS)이 시장 예상보다 높았는지, 그리고 회사가 말하는 다음 분기 전망(가이던스)을 함께 봐요.</p>
+      <p class="small muted">미국 장이 끝난 뒤 발표돼서, 주가 반응은 시간외 거래와 다음 날 정규장에서 먼저 나타나요. 국내 상장 ETF에는 보통 그다음 한국 장에 반영돼요.</p></div>`
+    : `<div class="bsection"><h4>무슨 일정이에요?</h4><p>${ev.what||"로켓 발사 일정이에요."}</p>
+      <p class="small muted">발사 일정은 날씨나 기술 점검 때문에 자주 바뀌어요. 성공·실패나 지연 소식이 회사 주가에 영향을 줄 수 있어요.</p></div>`}
+    ${ev.watch ? `<div class="bsection"><h4>이번에 볼 것</h4><ul style="margin:0;padding-left:18px">${ev.watch.map(w=>`<li style="margin:4px 0">${w}</li>`).join("")}</ul></div>` : ""}
+    ${co.one ? `<div class="bsection"><h4>어떤 회사예요?</h4><p>${co.one}</p></div>` : ""}
+    ${held.length ? `<div class="bsection"><h4>이 회사가 들어 있는 ETF</h4><div class="chips">${exposureChips(t)}</div><p class="tiny muted">숫자는 그 ETF 안에서 이 회사가 차지하는 비중이에요. 비중이 클수록 이 일정의 영향을 더 받아요.</p></div>` : ""}
+    ${isEarn && ev.done ? `<p class="small muted">발표 결과를 예상치와 비교해 보여주는 실적 결과 카드는 2차 버전에서 추가돼요.</p>` : ""}
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:14px">
+      ${s ? `<button class="more" type="button" data-stock="${t}" style="flex:1">회사 자세히 보기 ›</button>` : ""}
+      ${isEarn ? `<a class="more" style="flex:1; text-align:center; text-decoration:none" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${t}&type=8-K" target="_blank" rel="noopener">SEC 공시 원문 ›</a>` : ""}
+    </div>
+    <p class="tiny muted" style="margin-top:12px">정보 제공용이며 투자 권유가 아니에요.</p>`, true);
+}
 function eventsCard(e){
   const tick = e.h.map(([t])=>t);
   const evs = EVENTS.filter(v=>tick.includes(v.t));
@@ -2285,7 +2325,8 @@ let lastFocus = null;
 function openSheet(html, big){ sheet.classList.toggle("big", !!big); if(!overlay.classList.contains("open")) lastFocus = document.activeElement; sheet.scrollTop = 0; sheet.innerHTML = `<button class="icon-btn close" type="button" data-close aria-label="닫기">✕</button>`+html; overlay.classList.add("open"); sheet.querySelector("[data-close]").focus(); }
 function closeSheet(){ overlay.classList.remove("open"); if(lastFocus) lastFocus.focus(); }
 overlay.addEventListener("click", ev=>{ if(ev.target===overlay || ev.target.closest("[data-close]")) closeSheet(); });
-document.addEventListener("keydown", ev=>{ if(ev.key==="Escape" && overlay.classList.contains("open")) closeSheet(); });
+document.addEventListener("keydown", ev=>{ if(ev.key==="Escape" && overlay.classList.contains("open")) closeSheet();
+  const t = ev.target.closest && ev.target.closest("[data-evt]"); if(t && (ev.key==="Enter" || ev.key===" ")){ ev.preventDefault(); eventSheet(t.dataset.evt); } });
 function stockSheet(t, from){
   const s = STOCKS[t]; const evs = EVENTS.filter(v=>v.t===t);
   const sym = t==="BRKB"?"BRK.B":t; // eslint-disable-line no-shadow
@@ -2618,7 +2659,7 @@ function reopenSplash(){
 (function(){ const sp = document.getElementById("splash"); if(sp) bindSplash(sp); })();
 document.addEventListener("click", ev=>{ if(ev.target.closest(".landing.main .mlogo")) reopenSplash(); });
 document.addEventListener("click", ev=>{
-  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill]");
+  const el = ev.target.closest("[data-go],[data-etf],[data-star],[data-sort],[data-toggle-all],[data-stock],[data-term],[data-cal],[data-del],[data-clearq],[data-copy],[data-import],[data-tipok],[data-brief],[data-news],[data-howto],[data-holi],[data-ind],[data-share],[data-saveimg],[data-lh],[data-jump],[data-map],[data-mh],[data-cp],[data-tool],[data-tipk],[data-howt],[data-fxfill],[data-evt]");
   if(!el || el.closest("#sheet [data-close]")) return;
   if(el.dataset.share!==undefined){ openShare(el.dataset.share || null); return; }
   if(el.dataset.saveimg!==undefined){ saveShare(); return; }
@@ -2664,6 +2705,7 @@ document.addEventListener("click", ev=>{
   if(el.dataset.toggleAll!==undefined){ showAll=!showAll; render(); return; }
   if(el.dataset.stock){ stockSheet(el.dataset.stock, el.dataset.from); return; }
   if(el.dataset.cal){ calFilter = el.dataset.cal; render(); return; }
+  if(el.dataset.evt){ if(ev.target.closest("a")) return; eventSheet(el.dataset.evt); return; }
   if(el.dataset.del!==undefined){ holdings.splice(+el.dataset.del,1); exampleHoldings=false; store.set("holdings",holdings); render(); return; }
 });
 

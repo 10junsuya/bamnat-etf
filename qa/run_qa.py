@@ -141,6 +141,10 @@ class QA:
                 for c in meta["etfs"]:
                     page.evaluate(f"() => openBrief('{c}')"); page.wait_for_timeout(60)
                     self.probe(page, f"브리핑 {c} [{theme}]"); self.close_sheet(page)
+                page.evaluate("() => { location.hash = 'calendar'; }"); page.wait_for_timeout(100)
+                for ev in page.evaluate("() => [...document.querySelectorAll('[data-evt]')].map(e => e.dataset.evt)"):
+                    page.evaluate(f"() => eventSheet({json.dumps(ev)})"); page.wait_for_timeout(50)
+                    self.probe(page, f"일정 시트 {ev} [{theme}]"); self.close_sheet(page)
                 for w in ("kr", "us"):
                     page.evaluate(f"() => holiSheet('{w}')"); page.wait_for_timeout(60)
                     self.probe(page, f"휴장일 {w} [{theme}]"); self.close_sheet(page)
