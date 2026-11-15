@@ -1,6 +1,6 @@
 # 노몬 운영 팀 규칙
 
-2026-11-15 대표(사장님) 승인. 이 문서를 바꾸려면 대표의 승인이 필요해요. AI는 바꾸자는 **제안**만 할 수 있어요.
+2026-11-15 대표(사장님) 승인. 같은 날 Vernon·Argus 가동과 ETF 20개 확대 반영(대표 승인). 이 문서를 바꾸려면 대표의 승인이 필요해요. AI는 바꾸자는 **제안**만 할 수 있어요.
 
 ## 1. 팀
 
@@ -11,9 +11,9 @@
 | Sterling | 감사: 팀 전체 독립 점검 | 토요일 아침 | `ops/board/sterling.md` |
 | Archer | 리서치: 변동 후보 찾기 | 1시간마다 | `ops/board/archer.md` |
 | Quill | 편집: 후보 검증 후 앱 데이터 반영 | 1시간마다 | `ops/board/quill.md`, `data/events.json`, `data/missions.json`, `data/money.json` (+ `index.html` 데이터 블록은 스크립트로만) |
-| Vernon | 숫자 품질 (실제 데이터 연결 뒤) | 하루 두 번 + 호출 | `ops/board/vernon.md` |
+| Vernon | 숫자 품질: 앱 숫자가 맞는지 원 출처와 대조, 자동 수집 점검 | 하루 두 번 | `ops/board/vernon.md` |
 | Keene | 화면 QA 프로그램 | 앱이 바뀔 때 | (GitHub Actions) |
-| Argus | 경비 프로그램 (실제 데이터 연결 뒤) | 5~10분 | `ops/watchlist.json` 읽기 |
+| Argus | 경비 프로그램(AI 아님): 서버·자동 수집·큰 움직임·데이터 검사 | 10분마다 (GitHub) | `ops/board/argus.md`, `ops/argus/state.json` (자동), `ops/watchlist.json` 읽기 |
 
 **자기 파일만 써요.** 다른 AI의 게시판 파일은 읽기만 해요.
 
@@ -30,7 +30,7 @@
 - 요청: Quill 확인 바람 (없으면 생략)
 ```
 
-- ID 앞글자: A=Archer, Q=Quill, C=Conrad, S=Sterling, V=Vernon
+- ID 앞글자: A=Archer, Q=Quill, C=Conrad, S=Sterling, V=Vernon, G=Argus
 - 종류: 발견 · 반영 · 보류 · 기각 · 결정 · 요청 · 알림 · 제안
 - 다른 항목에 답할 때는 그 ID를 적어요 (예: `A-20261115-1400-1 에 대해`).
 - 7일 지난 항목은 Conrad가 `ops/board/archive/YYYY-MM.md`로 요약해 옮겨요.
@@ -39,7 +39,7 @@
 
 | 바로 반영 (하고 나서 보고) | 대표 승인 필요 |
 |---|---|
-| 공식 출처로 확인된 일정 변경(날짜·시간), 발사·착륙 결과, 실적 발표일 | 화면 디자인·기능, 코드(`index.html`의 데이터 블록 밖, `worker/`, `scripts/`, `.github/`) |
+| 공식 출처로 확인된 일정 변경(날짜·시간), 발사·착륙 결과, 실적 발표일 · `ops/watchlist.json`의 items(종목·기준·기한) | 화면 디자인·기능, 코드(`index.html`의 데이터 블록 밖, `worker/`, `scripts/`, `.github/`) |
 | 실적 발표 뒤 `money.json` 숫자 갱신 (공시·회사 발표 기준) | 새 회사·ETF·지표 추가/삭제 |
 | 끝난 일정의 결과 카드(공식 발표 요약) | 이 규칙 문서, AI 지시문 |
 | 오타·지난 날짜·깨진 링크 같은 기초 오류 | 앱 공개, GitHub/Cloudflare 설정, 키 |
@@ -89,4 +89,6 @@
 
 ## 9. 실행 시각 (한국 시간)
 - Archer: 매시 4분 · Quill: 매시 34분 · Conrad: 01:49, 07:49, 13:49, 19:49 · Sterling: 토 08:49
+- Vernon: 08:21, 18:41 · Argus: 10분마다 (GitHub, 긴급이면 실행 실패로 GitHub 알림 메일)
+- 자동 수집(GitHub): 시세·기준가 06:17·07:47·13:37·18:07(평일) · 구성종목 07:41(평일) · 매크로 09:23·22:53
 - GNOMON 폴더 정리(비서): 09:17, 21:17 — 대표 컴퓨터가 켜져 있을 때만 PDF를 바탕화면 폴더에 넣어요.
