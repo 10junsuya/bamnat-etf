@@ -66,21 +66,42 @@ def spy():
 
 
 def invesco(ticker):
-    raw = get(f"https://www.invesco.com/us/financial-products/etfs/holdings/main/holdings/0?audienceType=Investor&action=download&ticker={ticker}").decode("utf-8", "replace")
-    rd = csv.DictReader(io.StringIO(raw))
+    """Invesco 보유종목: JSON API → CSV 다운로드 순서로 시도. 실패하면 응답 앞부분을 오류에 남겨요."""
+    notes = []
+    try:
+        raw = get(f"https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/{ticker}/holdings/fund?idType=ticker&interval=daily&productType=ETF")
+        j = json.loads(raw)
+        hs = j.get("holdings") or []
+        items = [{"ticker": str(h.get("ticker") or "").replace(".", "-"), "name": str(h.get("issuerName") or h.get("name") or "").title(),
+                  "weight": num(h.get("percentageOfTotalNetAssets") if h.get("percentageOfTotalNetAssets") is not None else h.get("weight"))}
+                 for h in hs if h.get("ticker")]
+        items = [i for i in items if i["weight"] is not None]
+        if items:
+            return str(j.get("effectiveDate") or j.get("asOfDate") or ""), items
+        notes.append("json:" + raw[:160].decode("utf-8", "replace"))
+    except Exception as e:  # noqa: BLE001
+        notes.append(f"json:{type(e).__name__}:{str(e)[:80]}")
+    raw = get(f"https://www.invesco.com/us/financial-products/etfs/holdings/main/holdings/0?audienceType=Investor&action=download&ticker={ticker}").decode("utf-8-sig", "replace")
+    lines = raw.splitlines()
+    hi = next((i for i, l in enumerate(lines[:15]) if "Weight" in l and ("Ticker" in l or "ticker" in l)), None)
     items, asof = [], ""
-    for r in rd:
-        t = (r.get("Holding Ticker") or r.get("Ticker") or "").strip()
-        w = num(r.get("Weight") or r.get("weight"))
-        if not t or w is None:
-            continue
-        asof = asof or (r.get("Date") or "").strip()
-        items.append({"ticker": t.replace(".", "-"), "name": (r.get("Name") or "").strip().title(), "weight": w})
+    if hi is not None:
+        for r in csv.DictReader(io.StringIO("\n".join(lines[hi:]))):
+            r = {(k or "").strip(): (v or "").strip() for k, v in r.items()}
+            t = r.get("Holding Ticker") or r.get("Ticker") or ""
+            w = num(r.get("Weight") or "")
+            if not t or w is None:
+                continue
+            asof = asof or r.get("Date", "")
+            items.append({"ticker": t.replace(".", "-"), "name": r.get("Name", "").title(), "weight": w})
+    if not items:
+        notes.append("csv:" + raw[:160].replace("\n", " | "))
+        raise ValueError(" / ".join(notes))
     return asof, items
 
 
 def space():
-    page = get(SPACE["url"]).decode("utf-8", "replace")
+    page = get(SPACE["url"], timeout=60).decode("utf-8", "replace")
     rows = re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S)
     items, cash = [], 0.0
     for tr in rows:

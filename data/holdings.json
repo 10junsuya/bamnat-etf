@@ -258,6 +258,66 @@
    ],
    "top_weight": 43.98,
    "src": "SPY 보유종목 공시"
+  },
+  "0181L0": {
+   "kind": "pdf",
+   "index": "KEDI 미국우주항공TOP10",
+   "asof": "2026-11-14 확인",
+   "n_total": 10,
+   "top": [
+    {
+     "ticker": "SPCX",
+     "name": "Space Exploration Technologies",
+     "weight": 25.32
+    },
+    {
+     "ticker": "RKLB",
+     "name": "Rocket Lab",
+     "weight": 24.96
+    },
+    {
+     "ticker": "VSAT",
+     "name": "Viasat",
+     "weight": 10.48
+    },
+    {
+     "ticker": "ASTS",
+     "name": "AST SpaceMobile",
+     "weight": 8.63
+    },
+    {
+     "ticker": "FLY",
+     "name": "Firefly Aerospace",
+     "weight": 8.18
+    },
+    {
+     "ticker": "PL",
+     "name": "Planet Labs",
+     "weight": 6.85
+    },
+    {
+     "ticker": "LUNR",
+     "name": "Intuitive Machines",
+     "weight": 5.42
+    },
+    {
+     "ticker": "RDW",
+     "name": "Redwire",
+     "weight": 5.11
+    },
+    {
+     "ticker": "BKSY",
+     "name": "BlackSky",
+     "weight": 2.47
+    },
+    {
+     "ticker": "SATL",
+     "name": "Satellogic",
+     "weight": 1.5
+    }
+   ],
+   "cash_weight": 1.06,
+   "src": "신한자산운용 구성종목(PDF)"
   }
  },
  "errors": [
