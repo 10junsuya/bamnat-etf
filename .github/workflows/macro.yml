@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/fetch_macro.py", ".github/workflows/live.yml"]
+    paths: ["scripts/fetch_macro.py", ".github/workflows/macro.yml"]
   schedule:
     - cron: "23 0 * * *"    # 한국 09:23 (미국 전날 발표·금리 반영)
     - cron: "53 13 * * 1-5"  # 한국 22:53 (미국 08:30 발표 뒤)

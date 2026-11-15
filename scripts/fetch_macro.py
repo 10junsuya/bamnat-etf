@@ -57,16 +57,30 @@ def yoy_series(obs):
     out = []
     for d, v in obs:
         y = f"{int(d[:4]) - 1}{d[4:7]}"
-        if y in m:
-            out.append((d, (v / m[y] - 1) * 100))
+        base = m.get(y)
+        if base is None:
+            # 1년 전 달이 발표되지 않은 경우(예: 2025년 10월 미국 정부 셧다운) 앞뒤 달의 가운데 값으로 채워요
+            yy, mm = int(y[:4]), int(y[5:7])
+            pv = m.get(f"{yy if mm > 1 else yy - 1}-{(mm - 2) % 12 + 1:02d}")
+            nx = m.get(f"{yy if mm < 12 else yy + 1}-{mm % 12 + 1:02d}")
+            if pv and nx:
+                base = (pv * nx) ** 0.5
+                IMPUTED.add(d[:7])
+        if base:
+            out.append((d, (v / base - 1) * 100))
     return out
+
+
+IMPUTED = set()
 
 
 def monthly(key, s, dec=1, src=""):
     """발표형(월간) 지표: 최신 값·이전 값·최근 6개"""
     if len(s) < 2:
         raise ValueError("값이 부족해요")
-    return {"a": r1(s[-1][1], dec), "p": r1(s[-2][1], dec), "hist": [r1(v, dec) for _, v in s[-6:]], "ref": mon(s[-1][0]), "asof": s[-1][0], "src": src}
+    note = "1년 전 값이 발표되지 않아 앞뒤 달 가운데 값으로 계산했어요" if s[-1][0][:7] in IMPUTED else ""
+    IMPUTED.clear()
+    return {"note": note, "a": r1(s[-1][1], dec), "p": r1(s[-2][1], dec), "hist": [r1(v, dec) for _, v in s[-6:]], "ref": mon(s[-1][0]), "asof": s[-1][0], "src": src}
 
 
 def market(s, dec=2, src=""):
