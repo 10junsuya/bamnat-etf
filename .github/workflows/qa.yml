@@ -9,7 +9,7 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: "17 22 * * 0"   # 매주 월요일 07:17 (한국 시간)
+    - cron: "17 23 * * 5"   # 매주 토요일 08:17 (한국 시간), AI 검토(08:49) 직전
 
 permissions:
   contents: read

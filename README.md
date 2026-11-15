@@ -22,4 +22,4 @@
 - `qa/run_qa.py` — 앱을 실제 브라우저로 열어 모든 화면(밤·낮, 시간대, 휴대폰·PC 크기), 지표 시트, 계산기(이상한 입력 포함), 시작 화면 전환, 데이터 점검기를 검사해 `qa-out/report.md`와 캡처를 만든다. 앱 파일은 수정하지 않는다.
 - `qa/REVIEW_GUIDE.md` — AI 검토 기준서. AI는 찾고 제안만 하며 저장소를 수정하지 않는다.
 - `qa/DECISIONS.md` — 이미 정한 디자인·내용 결정.
-- `.github/workflows/qa.yml` — push마다, 그리고 매주 월요일 아침에 자동 검사.
+- `.github/workflows/qa.yml` — push마다, 그리고 매주 토요일 아침 08:17에 자동 검사. AI 검토는 매주 토요일 08:49 (예약 작업).
