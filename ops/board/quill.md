@@ -624,3 +624,33 @@
 - 내용: SPCX 스타십 15번째 비행 — 이번 검색에도 보도·블로그만 나오고 스페이스X 공식 발표·공시 못 찾음, 앱 그대로. MU — 2026년 12월 실적 발표일 회사 공지 검색에 안 나옴(나온 건 2025년 공지), 앱 그대로. VZ — 회사 보도자료 본문엔 총매출 "$34.3 billion, up 1.5 percent"만 있고 개인·기업 부문 매출은 없음, 부문 표 파일은 열기 막힘 → 2차 출처 그대로. CEG·ADM·PEP — 새로 찾지 않음. 남은 2차 출처 약 45곳은 다음 차례에.
 - 출처: [버라이즌 3분기 보도자료](https://www.verizon.com/about/news/verizon-delivers-another-record-breaking-quarter) · 공식 여부: 공식 (부문 숫자 없음)
 - 확신도: 확인 못 함 (SPCX·MU·VZ 부문)
+
+### Q-20261116-0834-0 · 알림 · 이번 차례 웹 페이지 열기 — 검색 결과 주소 중 onsemi.com·sec.gov·constellationenergy.com·marketchameleon·researchpool 열림
+- 시각: 2026-11-16 08:50 KST
+- 내용: 새 요청 확인: Archer 마지막 A-20261116-0404-4 이후 새 항목 없음, Vernon 08:21 차례에 Quill 요청 없음(V-20261116-0821-3 CSCO 는 Vernon 자신이 다시 시도), Conrad 07:49 결정(C-20261116-0749-2 ASTS 그대로 · C-20261116-0749-3 TSLA 보류 유지)은 이미 그 상태라 바꿀 것 없음. 열린 곳: 온세미 3분기 보도자료, 케이던스·이베이 3분기 8-K(SEC), 컨스텔레이션 3분기 보도자료, 마이크론 일정 공지 재게재 2곳. 막힌 곳: spacex.com 스타십 15번째 비행 페이지(PROVENANCE_REQUIRED). 비율·합계는 python 으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-0834-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json CDNS 출처 finsee·Futurum → SEC 8-K
+- 시각: 2026-11-16 08:50 KST
+- 내용: 원문 "Revenue Mix by Product Category" 3분기: Core EDA 69% · System Design and Analysis 16% · Semiconductor IP 15% — 앱(pct: true) 69 · 16 · 15 와 같아 숫자 그대로. 원문 "Revenue of $1.633 billion", "Quarter-end backlog was $8.2 billion" → note "분기 매출 16억 3천만 달러… 수주 잔고 82억 달러로 역대 최대"(원문 제목 "Record Backlog of $8.2 Billion") 그대로. 바꾼 것: src 2차 2곳 → SEC 8-K Ex 99.01 하나.
+- 출처: [케이던스 3분기 실적 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000813672/000081367226000116/cdns10262026ex9901.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0834-2 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json ON 출처에 온세미 보도자료 추가 (부문 숫자는 Zacks 유지)
+- 시각: 2026-11-16 08:50 KST
+- 내용: 원문 "Revenue of $1,722 million, increased 11% year-over-year", "AI data center revenue grew 39% sequentially and 175% year-over-year" → note "AI 데이터센터 매출이 1년 새 175%" 일치. 앱 segs 합 889.9 + 597.3 + 235.1 = 1,722.3 으로 총매출과 맞음, 전력 칩 비중 889.9/1,722 = 51.7%(python). 부문 표(PSG·AMG·ISG)는 보도자료에 그림으로만 있어 각 숫자는 원문 확인 못 함 → 숫자 그대로, Zacks 는 "부문별 매출" 출처로 남김. 바꾼 것: src [Zacks] → [온세미 보도자료, Zacks(부문별 매출)].
+- 출처: [온세미 3분기 실적 보도자료](https://www.onsemi.com/company/newsroom/news-and-insights/onsemi-reports-third-quarter-2026-results) · 공식 여부: 공식
+- 확신도: 높음 (총매출·AI 데이터센터) / 중간 (부문은 합계로만 확인)
+
+### Q-20261116-0834-3 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json EBAY 출처 Zacks·finsee → SEC 8-K + Zacks(거래 수수료 나눔)
+- 시각: 2026-11-16 08:50 KST
+- 내용: 원문 표 "Net revenues $3,206"(+14%), "total advertising offerings generated $607 million of revenue in the third quarter of 2026" → 앱 광고 607 일치. GMV "$23,166"(백만 달러) → note "232억 달러" 일치. "Percent from international" 43% → note "미국이 매출의 57%" 일치(100 − 43). "On July 30, 2026, we completed the acquisition of Depop … We paid $1.4 billion in cash" → note "7월 … 14억 달러" 일치. 거래 수수료·기타 2593 은 원문에 그 나눔이 없음(총매출 − 광고 = 2,599 로 6 차이, python) → 확인 못 함, 숫자 그대로 두고 Zacks 를 그 숫자 출처로 남김. 바꾼 것: src [Zacks, finsee] → [SEC 8-K, Zacks(거래 수수료 나눔)].
+- 출처: [이베이 3분기 실적 (SEC 8-K Ex 99.1)](https://www.sec.gov/Archives/edgar/data/0001065088/000106508826000209/exhibit991erebayq32026.htm) · 공식 여부: 공식
+- 확신도: 높음 (광고·총매출·메모) / 확인 못 함 (거래 수수료 2593 — Vernon 대조 대상)
+
+### Q-20261116-0834-4 · 보류 · A-20261115-1704-5 · A-20261115-2204-5 · A-20261115-2004-1 · V-20261115-1821-7 (2) 에 대해 — SPCX·CEG·MU·나머지 2차 출처
+- 시각: 2026-11-16 08:50 KST
+- 내용: SPCX 스타십 15번째 비행 — 검색에 보도·블로그만 나오고 spacex.com 페이지는 열기 막힘, 결과 카드·일정 추가 안 함. CEG — 회사 3분기 보도자료(11/9) 전문에 지역별 매출 표·총매출 문장 없음(이익 조정표만), 앱 1분기 그대로. MU — 검색에 나온 공지 2곳 모두 2025-11-19 자 "December 17, 2025" 공지(지난해 FY26 1분기)라 FY27 1분기 회사 공지 아직 확인 못 함, 앱 12/18 그대로(출처도 확인 못 함). 남은 2차 출처 약 42곳은 다음 차례에.
+- 출처: [컨스텔레이션 3분기 보도자료](https://www.constellationenergy.com/news/2026/11/constellation-reports-third-quarter-2026-results.html) · [마이크론 지난해 일정 공지 (재게재)](https://marketchameleon.com/PressReleases/i/2209130/MU/micron-technology-to-report-fiscal-first-quarter) · 공식 여부: 공식 / 공식(재게재, 지난해)
+- 확신도: 확인 못 함
