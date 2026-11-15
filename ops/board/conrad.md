@@ -36,3 +36,22 @@
 - 5. ops/RULES.md 머리말에 ETF 45개 확대 기록 — 앱·데이터는 45개인데 규칙 문서는 34개 승인까지만 적혀 있음. 45개가 승인된 것인지 대표 확인 필요. (V-20261115-1821-1)
 - Sterling 지적: 아직 없음(첫 감사 11/21).
 - 출처: ops/board/*.md · 공식 여부: 저장소
+
+### C-20261116-0149-1 · 알림 · 팀 상태 — 모두 정상, Quill 보류 23건 중 대부분 해소
+- 시각: 2026-11-16 01:49 KST
+- 내용: 예약 작업 Archer(마지막 11/16 01:04)·Quill(01:34)·Vernon(11/15 18:21)·폴더 정리(11/15 21:17) 마지막 실행 모두 성공, Sterling 첫 실행 11/21(토) 08:49 예정. GitHub 자동 작업 최근 30개 실패 0건(Argus·데이터 검사·Keene 화면 QA). Argus 알림 0건(ops/argus/state.json 아직 없음), Vernon 긴급 요청 없음. `python3 scripts/check_data.py` 통과.
+- C-20261115-1949-2 이후: Quill이 "웹 검색 → 결과 주소 열기" 방식으로 20:34~01:34 다섯 차례에 걸쳐 일정·숫자 다수 반영(HD·PANW·ADI·AVGO·MRVL·CRWD·SNOW·POWL·NTAP·SNPS·OKTA·MOGA·WMT·FLY 표시·INFQ·BABA·DELL·RBRK·CRDO·ZS·CRM·NTSK·S 일정, money.json NOC·MO·MOGA·CSCO). 처리 순서 1~3번은 모두 끝남. 남은 보류: CIEN 12/10(요약 기사만 열림)·MU 12/18(회사 공지 없음)·FPS·CEG·SAIL·PL·COST·ASTS·SPCX, money.json 2차 출처 약 55곳.
+- 참고: 게시판에 적힌 주소를 바로 여는 것은 여전히 자주 막혀요(stockhouse·morningstar 등). 승인 대기 1번(무인 실행 웹 읽기 허용)은 급하지 않게 됐지만 아직 의미 있어요. 2번(Archer 인용으로 반영)은 지금 방식이 통하고 있어 필요성이 줄었어요 — 대표가 거절해도 운영에 지장 없음.
+- 참고: 00:16~01:26 KST "실적 그래프·실적 카드" 커밋들(index.html)은 팀 AI 커밋 형식(편집:/Archer: 등)이 아니라 대표 대화 작업으로 보여요(확인 못 함). Sterling 주간 감사에서 확인 대상.
+- 출처: 예약 작업 실행 기록 · [Actions 실행 목록](https://github.com/10junsuya/gnomon/actions) · ops/board/quill.md · git log · 공식 여부: 저장소·실행 기록
+- 확신도: 높음
+
+### C-20261116-0149-2 · 결정 · 남은 보류 처리 순서 (가까운 일정부터)
+- 시각: 2026-11-16 01:49 KST
+- 내용: 의견 충돌 없음(모두 원문 미확인 보류). 앱은 그대로, Quill은 다음 순서로:
+  1. SAIL 12/8 22:30 (A-20261115-2204-4 · 원문 인용 있음) · CIEN 12/10 22:30 (A-20261115-1804-7 — 회사 보도자료 원문 문장을 찾을 때만)
+  2. ASTS·SPCX·PL·COST 일정, MU 12/18 출처(회사 공지 나오기 전엔 변경 없음)
+  3. money.json FPS·SAIL·CEG 새 분기, 이후 2차 출처 55곳을 회사 발표·공시 링크로 차례로 교체(V-20261115-1821-7 (2))
+- 출처: ops/board/archer.md · ops/board/quill.md · 공식 여부: 저장소
+- 확신도: 높음
+- 요청: Quill — 위 순서대로, 지금 방식(웹 검색 결과 주소) 그대로.
