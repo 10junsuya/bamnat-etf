@@ -204,6 +204,94 @@
    "title": "로봇",
    "idx": "iSelect 미국 휴머노이드 로봇 지수",
    "sec": "미래 기술"
+  },
+  "globalai": {
+   "name": "글로벌 AI 액티브",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "AI 산업",
+   "idx": "Solactive 글로벌 인공지능 지수 (운용역이 비중 조절)",
+   "sec": "빅테크·AI 인프라"
+  },
+  "gsemi4": {
+   "name": "글로벌 반도체 TOP4 Plus",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "반도체 산업",
+   "idx": "Solactive 글로벌 반도체 TOP4 Plus 지수",
+   "sec": "반도체"
+  },
+  "hbm": {
+   "name": "글로벌 HBM 반도체",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "반도체 산업",
+   "idx": "iSelect 글로벌 HBM 반도체 지수",
+   "sec": "반도체"
+  },
+  "nvchain": {
+   "name": "엔비디아 밸류체인",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "반도체 산업",
+   "idx": "KEDI 글로벌 AI 반도체 지수 (운용역이 비중 조절)",
+   "sec": "반도체"
+  },
+  "nasgrowth": {
+   "name": "미국 나스닥 성장기업 액티브",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "미국 기술주 시장",
+   "idx": "나스닥 종합지수 (운용역이 비중 조절)",
+   "sec": "대표 지수"
+  },
+  "gaipower": {
+   "name": "글로벌 AI 전력 인프라 액티브",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "AI 인프라",
+   "idx": "미래에셋 AI 인프라 지수 (운용역이 비중 조절)",
+   "sec": "빅테크·AI 인프라"
+  },
+  "quantum2": {
+   "name": "미국 양자컴퓨팅 (Solactive)",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "양자컴퓨터",
+   "idx": "Solactive 미국 양자컴퓨팅 지수",
+   "sec": "미래 기술"
+  },
+  "spaceace": {
+   "name": "미국 우주테크 액티브",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "우주항공 산업",
+   "idx": "FnGuide 미국 스페이스테크 지수 (운용역이 비중 조절)",
+   "sec": "우주항공"
+  },
+  "smr": {
+   "name": "미국 원자력 SMR",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "원자력",
+   "idx": "KEDI 미국 원자력 SMR 지수",
+   "sec": "빅테크·AI 인프라"
+  },
+  "nasbio": {
+   "name": "미국 나스닥 바이오",
+   "kind": "index",
+   "proxy": "IBB",
+   "title": "바이오",
+   "idx": "나스닥 바이오테크놀로지 지수",
+   "sec": "바이오·보안"
+  },
+  "cyber": {
+   "name": "글로벌 AI 사이버보안",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "사이버보안",
+   "idx": "Indxx 사이버보안 지수",
+   "sec": "바이오·보안"
   }
  },
  "etfs": [
@@ -376,6 +464,61 @@
    "0038A0",
    "KODEX 미국휴머노이드로봇",
    "humanoid"
+  ],
+  [
+   "456600",
+   "TIME 글로벌AI인공지능액티브",
+   "globalai"
+  ],
+  [
+   "446770",
+   "ACE 글로벌반도체TOP4 Plus",
+   "gsemi4"
+  ],
+  [
+   "442580",
+   "PLUS 글로벌HBM반도체",
+   "hbm"
+  ],
+  [
+   "483320",
+   "ACE 엔비디아밸류체인액티브",
+   "nvchain"
+  ],
+  [
+   "0015B0",
+   "KoAct 미국나스닥성장기업액티브",
+   "nasgrowth"
+  ],
+  [
+   "491010",
+   "TIGER 글로벌AI전력인프라액티브",
+   "gaipower"
+  ],
+  [
+   "498270",
+   "KIWOOM 미국양자컴퓨팅",
+   "quantum2"
+  ],
+  [
+   "0180V0",
+   "ACE 미국우주테크액티브",
+   "spaceace"
+  ],
+  [
+   "0051G0",
+   "SOL 미국원자력SMR",
+   "smr"
+  ],
+  [
+   "203780",
+   "TIGER 미국나스닥바이오",
+   "nasbio"
+  ],
+  [
+   "418670",
+   "TIGER 글로벌AI사이버보안",
+   "cyber"
   ]
  ],
  "sections": [
@@ -385,6 +528,7 @@
   "빅테크·AI 인프라",
   "우주항공",
   "미래 기술",
+  "바이오·보안",
   "채권"
  ]
 }
