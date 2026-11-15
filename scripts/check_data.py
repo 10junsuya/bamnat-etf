@@ -112,7 +112,16 @@ def check_money(mo, known):
 
 # 특정 회사 제품을 그린 그림: 다른 회사 제품에 쓰면 틀린 그림이 나와요 (예: 스타십 자리에 뉴트론)
 BRANDED_ART = {"electron": {"RKLB"}, "neutron": {"RKLB"}, "haste": {"RKLB"}, "alpha": {"FLY"}, "blueghost": {"FLY"},
-               "novac": {"LUNR"}, "bluebird": {"ASTS"}, "dove": {"PL"}, "starship": {"SPCX"}, "iphone": {"AAPL", "VZ", "GLW"}}
+               "novac": {"LUNR"}, "bluebird": {"ASTS"}, "dove": {"PL"}, "starship": {"SPCX"}, "iphone": {"AAPL", "VZ", "GLW"},
+               # 실제 제품 모양 그림 (2026-11 대표 요청으로 추가)
+               "f35": {"LMT", "NOC"}, "f22": {"LMT"}, "f16": {"LMT"}, "c130": {"LMT"}, "uh60": {"LMT"}, "ch53k": {"LMT"},
+               "pac3": {"LMT"}, "thaad": {"LMT"}, "prsm": {"LMT"}, "himars": {"LMT"}, "jassm": {"LMT"}, "javelin": {"LMT"},
+               "trident": {"LMT"}, "orion": {"LMT"}, "destroyer": {"LMT", "RTX"},
+               "tomahawk": {"RTX"}, "sm6": {"RTX"}, "sm3": {"RTX"}, "amraam": {"RTX"}, "patriot": {"RTX"}, "nasams": {"RTX"},
+               "ltamds": {"RTX"}, "e2d": {"NOC"}, "b21": {"NOC"}, "triton": {"NOC"}, "icbm": {"NOC"}, "aargm": {"NOC"},
+               "falcon9": {"SPCX"}, "falconheavy": {"SPCX"}, "dragon": {"SPCX"}, "hls": {"SPCX"},
+               "turbofan": {"GE", "RTX"}, "jeteng": {"GE", "RTX"}, "davinci": {"ISRG"}, "oklo": {"OKLO"}, "nuscale": {"SMR"}, "joby": {"JOBY"}, "vertiport": {"JOBY"}, "midnight": {"ACHR"},
+               "alia": {"BETA"}, "alia250": {"BETA"}}
 
 
 def check_product_art():
