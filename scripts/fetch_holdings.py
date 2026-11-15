@@ -1,100 +1,140 @@
-"""국내 ETF 구성종목(PDF, 자산구성내역) 받아오기 → data/holdings.json
+"""ETF 구성종목 받아오기 → data/holdings.json (이후 check_data.py --embed 로 앱에 반영)
 
-ETF는 매일 장 마감 뒤 구성종목(PDF)을 공개해요. 한국거래소 정보데이터시스템에서 받아요.
-첫 단계라 받아지는지 시험하는 용도도 겸해요. 결과·오류를 data/holdings.json 에 남겨요.
+- 지수형(S&P500, 나스닥100, 필라델피아 반도체): 같은 지수를 따르는 미국 ETF의 공개 보유종목 상위 비중을 써요.
+  국내 ETF가 같은 지수를 따라가므로 비중이 거의 같아요. 예상 등락률은 그 미국 ETF 시세로 계산해요.
+- 테마형(SOL 미국우주항공TOP10): 운용사(신한자산운용)가 매일 공개하는 구성종목(PDF)을 그대로 써요.
+실패해도 기존 값을 지우지 않고 오류만 기록해요.
 """
+import csv
 import datetime as dt
+import html
+import io
 import json
-import time
-import urllib.parse
+import re
 import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "holdings.json"
 KST = dt.timezone(dt.timedelta(hours=9))
-ETFS = {
-    "381180": "TIGER 미국필라델피아반도체나스닥",
-    "360750": "TIGER 미국S&P500",
-    "379800": "KODEX 미국S&P500",
-    "360200": "ACE 미국S&P500",
-    "133690": "TIGER 미국나스닥100",
-    "379810": "KODEX 미국나스닥100",
-    "0181L0": "SOL 미국우주항공TOP10",
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36 gnomon/0.1",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8"}
+TOP = 15
+
+GROUPS = {
+    "sp": {"proxy": "SPY", "index": "S&P 500", "codes": ["360750", "379800", "360200"]},
+    "ndx": {"proxy": "QQQ", "index": "나스닥100", "codes": ["133690", "379810"]},
+    "sox": {"proxy": "SOXQ", "index": "필라델피아 반도체", "codes": ["381180"]},
 }
-KRX = "https://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd"
-HEAD = {
-    "User-Agent": "Mozilla/5.0 (gnomon; +https://github.com/10junsuya/gnomon)",
-    "Referer": "https://data.krx.co.kr/contents/MDC/MDI/mdiLoader/index.cmd?menuId=MDC0201030108",
-    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "X-Requested-With": "XMLHttpRequest",
+SPACE = {"code": "0181L0", "url": "https://www.soletf.com/ko/fund/etf/211110?tabIndex=3"}
+NAME2TICKER = {
+    "space exploration technologies": "SPCX", "rocket lab": "RKLB", "viasat": "VSAT", "ast spacemobile": "ASTS",
+    "firefly aerospace": "FLY", "planet labs": "PL", "intuitive machines": "LUNR", "redwire": "RDW",
+    "blacksky": "BKSY", "satellogic": "SATL", "iridium": "IRDM", "echostar": "SATS", "karman": "KRMN",
 }
 
 
-def post(params, timeout=25):
-    req = urllib.request.Request(KRX, data=urllib.parse.urlencode(params).encode(), headers=HEAD, method="POST")
+def get(url, timeout=30):
+    req = urllib.request.Request(url, headers=UA)
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.status, r.read().decode("utf-8", "replace")
+        return r.read()
 
 
 def num(x):
     try:
-        return float(str(x).replace(",", ""))
+        return float(str(x).replace(",", "").replace("%", "").strip())
     except ValueError:
         return None
 
 
-def isin_of(code):
-    st, body = post({"bld": "dbms/comm/finder/finder_secuprodisu", "mktsel": "ETF", "searchText": code})
-    j = json.loads(body)
-    for b in j.get("block1", []):
-        if b.get("short_code") == code:
-            return b.get("full_code"), b.get("codeName")
-    return None, None
+def spy():
+    """SSGA SPY 일일 보유종목(xlsx)."""
+    import openpyxl  # noqa: PLC0415
+    raw = get("https://www.ssga.com/us/en/intermediary/library-content/products/fund-data/etfs/us/holdings-daily-us-en-spy.xlsx")
+    ws = openpyxl.load_workbook(io.BytesIO(raw), read_only=True, data_only=True).active
+    rows = list(ws.iter_rows(values_only=True))
+    asof = next((str(r[1]) for r in rows[:6] if r and r[0] and "Holdings" in str(r[0])), "")
+    hi = next(i for i, r in enumerate(rows) if r and r[0] == "Name")
+    head = [str(h) for h in rows[hi]]
+    ix = {k: head.index(k) for k in ("Name", "Ticker", "Weight")}
+    items = []
+    for r in rows[hi + 1:]:
+        if not r or not r[ix["Ticker"]] or r[ix["Weight"]] in (None, "-"):
+            continue
+        items.append({"ticker": str(r[ix["Ticker"]]).replace(".", "-"), "name": str(r[ix["Name"]]).title(), "weight": num(r[ix["Weight"]])})
+    return asof, items
 
 
-def pdf(isin, day):
-    st, body = post({"bld": "dbms/MDC/STAT/standard/MDCSTAT05001", "locale": "ko_KR", "tboxisuCd_finder_secuprodisu1_0": "",
-                     "isuCd": isin, "isuCd2": "", "codeNmisuCd_finder_secuprodisu1_0": "", "param1isuCd_finder_secuprodisu1_0": "",
-                     "trdDd": day, "share": "1", "money": "1", "csvxls_isNo": "false"})
-    j = json.loads(body)
-    return j.get("output", [])
+def invesco(ticker):
+    raw = get(f"https://www.invesco.com/us/financial-products/etfs/holdings/main/holdings/0?audienceType=Investor&action=download&ticker={ticker}").decode("utf-8", "replace")
+    rd = csv.DictReader(io.StringIO(raw))
+    items, asof = [], ""
+    for r in rd:
+        t = (r.get("Holding Ticker") or r.get("Ticker") or "").strip()
+        w = num(r.get("Weight") or r.get("weight"))
+        if not t or w is None:
+            continue
+        asof = asof or (r.get("Date") or "").strip()
+        items.append({"ticker": t.replace(".", "-"), "name": (r.get("Name") or "").strip().title(), "weight": w})
+    return asof, items
+
+
+def space():
+    page = get(SPACE["url"]).decode("utf-8", "replace")
+    rows = re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S)
+    items, cash = [], 0.0
+    for tr in rows:
+        cells = [html.unescape(re.sub(r"<[^>]+>", "", c)).strip() for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
+        cells = [c for c in cells if c != ""]
+        if len(cells) < 4 or not cells[-1].endswith("%"):
+            continue
+        name, qty, val, w = cells[-4], num(cells[-3]), num(cells[-2]), num(cells[-1])
+        if w is None:
+            continue
+        if "현금" in name:
+            cash += w
+            continue
+        tk = next((t for k, t in NAME2TICKER.items() if k in name.lower()), None)
+        items.append({"ticker": tk, "name": name, "qty": qty, "value_krw": val, "weight": w})
+    d = re.search(r"(20\d{2}[.\-]\d{2}[.\-]\d{2})", page)
+    return (d.group(1) if d else ""), items, cash
 
 
 def main():
-    now = dt.datetime.now(KST)
-    out = {"generated_at_kst": now.strftime("%Y-%m-%d %H:%M:%S"), "source": "한국거래소 정보데이터시스템 ETF PDF", "etfs": {}, "errors": []}
-    for code, name in ETFS.items():
+    old = {}
+    if OUT.exists():
         try:
-            isin, nm = isin_of(code)
-            if not isin:
-                out["errors"].append(f"{code}: ISIN을 찾지 못했어요")
-                continue
-            rows, day_used = [], None
-            for back in range(0, 7):
-                day = (now - dt.timedelta(days=back)).strftime("%Y%m%d")
-                rows = pdf(isin, day)
-                if rows:
-                    day_used = day
-                    break
-                time.sleep(0.5)
-            if not rows:
-                out["errors"].append(f"{code}: 최근 7일 PDF가 비어 있어요")
-                continue
-            keys = sorted(rows[0].keys())
-            items = []
-            for r in rows:
-                items.append({
-                    "code": r.get("COMPST_ISU_CD") or r.get("ISU_CD"),
-                    "name": r.get("COMPST_ISU_NM") or r.get("ISU_NM"),
-                    "qty": num(r.get("COMPST_ISU_CU1_SHRS") or r.get("COMPST_AMT")),
-                    "value_krw": num(r.get("VALU_AMT")),
-                    "weight_pct": num(r.get("COMPST_RTO")),
-                })
-            out["etfs"][code] = {"name": nm or name, "isin": isin, "date": day_used, "n": len(items), "raw_keys": keys, "items": items}
+            old = json.loads(OUT.read_text(encoding="utf-8"))
+        except ValueError:
+            old = {}
+    out = {"generated_at_kst": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "etfs": dict(old.get("etfs", {})), "errors": []}
+    for g, cfg in GROUPS.items():
+        try:
+            asof, items = spy() if cfg["proxy"] == "SPY" else invesco(cfg["proxy"])
+            items = sorted([i for i in items if i["weight"]], key=lambda i: -i["weight"])
+            if len(items) < 10:
+                raise ValueError(f"보유종목이 {len(items)}개뿐이에요")
+            top = items[:TOP]
+            entry = {"kind": "index", "index": cfg["index"], "proxy": cfg["proxy"], "asof": asof, "n_total": len(items),
+                     "top": [{"ticker": i["ticker"], "name": i["name"], "weight": round(i["weight"], 3)} for i in top],
+                     "top_weight": round(sum(i["weight"] for i in top), 2),
+                     "src": f"{cfg['proxy']} 보유종목 공시"}
+            for c in cfg["codes"]:
+                out["etfs"][c] = entry
         except Exception as e:  # noqa: BLE001
-            out["errors"].append(f"{code}: {type(e).__name__}: {str(e)[:200]}")
-        time.sleep(1)
+            out["errors"].append(f"{g}({cfg['proxy']}): {type(e).__name__}: {str(e)[:180]}")
+    try:
+        asof, items, cash = space()
+        if len(items) < 5:
+            raise ValueError(f"구성종목이 {len(items)}개뿐이에요")
+        miss = [i["name"] for i in items if not i["ticker"]]
+        if miss:
+            out["errors"].append("우주항공: 티커를 모르는 종목 " + ", ".join(miss))
+        out["etfs"][SPACE["code"]] = {"kind": "pdf", "index": "KEDI 미국우주항공TOP10", "asof": asof, "n_total": len(items),
+                                     "top": [{"ticker": i["ticker"], "name": i["name"], "weight": i["weight"]} for i in sorted(items, key=lambda i: -i["weight"])],
+                                     "cash_weight": round(cash, 2), "src": "신한자산운용 구성종목(PDF)"}
+    except Exception as e:  # noqa: BLE001
+        out["errors"].append(f"우주항공(soletf): {type(e).__name__}: {str(e)[:180]}")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"ETF {len(out['etfs'])}개, 오류 {len(out['errors'])}개")
     for e in out["errors"]:
