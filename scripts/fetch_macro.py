@@ -80,7 +80,8 @@ def monthly(key, s, dec=1, src=""):
         raise ValueError("값이 부족해요")
     note = "1년 전 값이 발표되지 않아 앞뒤 달 가운데 값으로 계산했어요" if s[-1][0][:7] in IMPUTED else ""
     IMPUTED.clear()
-    return {"note": note, "a": r1(s[-1][1], dec), "p": r1(s[-2][1], dec), "hist": [r1(v, dec) for _, v in s[-6:]], "ref": mon(s[-1][0]), "asof": s[-1][0], "src": src}
+    return {"note": note, "a": r1(s[-1][1], dec), "p": r1(s[-2][1], dec), "hist": [r1(v, dec) for _, v in s[-6:]], "ref": mon(s[-1][0]), "asof": s[-1][0], "src": src,
+            "series": [[d[:7], r1(v, dec)] for d, v in s[-36:]]}
 
 
 def market(s, dec=2, src=""):
@@ -88,7 +89,8 @@ def market(s, dec=2, src=""):
     if len(s) < 2:
         raise ValueError("값이 부족해요")
     sp = [r1(v, dec) for _, v in s[-11:]]
-    return {"now": sp[-1], "chg": r1(sp[-1] - sp[-2], dec), "spark": sp, "asof": s[-1][0], "src": src}
+    return {"now": sp[-1], "chg": r1(sp[-1] - sp[-2], dec), "spark": sp, "asof": s[-1][0], "src": src,
+            "series": [[d, r1(v, dec)] for d, v in s[-756:]]}
 
 
 def main():
@@ -107,43 +109,49 @@ def main():
             errors.append(scrub(f"{key}: {type(e).__name__}: {e}")[:200])
 
     if FRED_KEY:
-        run("cpi", lambda: monthly("cpi", yoy_series(fred("CPIAUCSL")), 1, "FRED CPIAUCSL"))
-        run("pce", lambda: monthly("pce", yoy_series(fred("PCEPI")), 1, "FRED PCEPI"))
-        run("ppi", lambda: monthly("ppi", yoy_series(fred("PPIFIS")), 1, "FRED PPIFIS"))
-        run("m2", lambda: monthly("m2", yoy_series(fred("M2SL")), 1, "FRED M2SL"))
+        run("cpi", lambda: monthly("cpi", yoy_series(fred("CPIAUCSL", 60)), 1, "FRED CPIAUCSL"))
+        run("pce", lambda: monthly("pce", yoy_series(fred("PCEPI", 60)), 1, "FRED PCEPI"))
+        run("ppi", lambda: monthly("ppi", yoy_series(fred("PPIFIS", 60)), 1, "FRED PPIFIS"))
+        run("m2", lambda: monthly("m2", yoy_series(fred("M2SL", 60)), 1, "FRED M2SL"))
 
         def nfp():
-            o = fred("PAYEMS", 12)
+            o = fred("PAYEMS", 40)
             d = [(o[i][0], (o[i][1] - o[i - 1][1]) / 10) for i in range(1, len(o))]  # 천 명 → 만 명
             return monthly("nfp", d, 1, "FRED PAYEMS (전월 대비 증가)")
         run("nfp", nfp)
 
         def retail():
-            o = fred("RSAFS", 12)
+            o = fred("RSAFS", 40)
             d = [(o[i][0], (o[i][1] / o[i - 1][1] - 1) * 100) for i in range(1, len(o))]
             return monthly("retail", d, 1, "FRED RSAFS (전월 대비)")
         run("retail", retail)
 
         def claims():
-            o = [(d, v / 10000) for d, v in fred("ICSA", 10)]
+            o = [(d, v / 10000) for d, v in fred("ICSA", 160)]
             x = monthly("claims", o, 1, "FRED ICSA")
+            x["series"] = [[d, r1(v, 1)] for d, v in o[-156:]]
             x["ref"] = f"{int(o[-1][0][5:7])}/{int(o[-1][0][8:10])} 주간"
             return x
         run("claims", claims)
 
         def fomc():
-            o = fred("DFEDTARU", 400)
+            o = fred("DFEDTARU", 1200)
             chg = [o[0]] + [o[i] for i in range(1, len(o)) if o[i][1] != o[i - 1][1]]
             x = {"a": r1(o[-1][1], 2), "p": r1(chg[-2][1], 2) if len(chg) >= 2 else r1(o[-1][1], 2),
                  "hist": [r1(v, 2) for _, v in o[-130::26]][-6:], "ref": "", "asof": o[-1][0], "src": "FRED DFEDTARU (목표 범위 상단)",
                  "last_change": chg[-1][0]}
+            mm = {}
+            for d, v in o:
+                if int(d[5:7]) in (1, 3, 5, 6, 7, 9, 10, 12):
+                    mm[d[:7]] = r1(v, 2)
+            x["series"] = [[k, v] for k, v in sorted(mm.items())][-24:]
             return x
         run("fomc", fomc)
-        run("us10y", lambda: market(fred("DGS10", 30), 2, "FRED DGS10"))
-        run("us2y", lambda: market(fred("DGS2", 30), 2, "FRED DGS2"))
-        run("spread", lambda: market(fred("T10Y2Y", 30), 2, "FRED T10Y2Y"))
-        run("vix", lambda: market(fred("VIXCLS", 30), 1, "FRED VIXCLS (CBOE)"))
-        run("wti", lambda: market(fred("DCOILWTICO", 30), 1, "FRED DCOILWTICO (EIA)"))
+        run("us10y", lambda: market(fred("DGS10", 800), 2, "FRED DGS10"))
+        run("us2y", lambda: market(fred("DGS2", 800), 2, "FRED DGS2"))
+        run("spread", lambda: market(fred("T10Y2Y", 800), 2, "FRED T10Y2Y"))
+        run("vix", lambda: market(fred("VIXCLS", 800), 1, "FRED VIXCLS (CBOE)"))
+        run("wti", lambda: market(fred("DCOILWTICO", 800), 1, "FRED DCOILWTICO (EIA)"))
     else:
         errors.append("FRED_API_KEY 없음")
     if ECOS_KEY:
