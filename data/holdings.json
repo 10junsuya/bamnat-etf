@@ -1,5 +1,5 @@
 {
- "generated_at_kst": "2026-11-15 14:31",
+ "generated_at_kst": "2026-11-15 14:32",
  "etfs": {
   "360750": {
    "kind": "index",
@@ -493,6 +493,6 @@
   }
  },
  "errors": [
-  "sox(SOXQ): ValueError: json:HTTPError:HTTP Error 500: Internal Server Error / csv:<!-- | * This file is created specifically to update | * lang attribute in html tag and | * data-language attribute body "
+  "sox(SOXQ): ValueError: json-daily:HTTPError:HTTP Error 500: Internal Server Error / json-monthly:HTTPError:HTTP Error 500: Internal Server Error / csv:<!-- | * This file is created specifically to update"
  ]
 }
