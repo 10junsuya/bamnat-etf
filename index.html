@@ -148,7 +148,7 @@ details.cat:not([open]) summary b::after{content:" ▾"; color:var(--muted); fon
 .evsum{font-size:17px; font-weight:600; line-height:1.5; margin:12px 0 14px}
 .evtiles{display:grid; grid-template-columns:1fr 1fr; gap:8px}
 .evtiles>div{background:var(--surface-2); border-radius:12px; padding:10px 12px}
-.evtiles .k{font-size:12px; color:var(--muted)} .evtiles .v{font-size:20px; font-weight:700; color:var(--pt); margin-top:2px; letter-spacing:-.02em} .evtiles .s{font-size:12px; color:var(--muted); margin-top:2px}
+.evtiles .k{font-size:12px; color:var(--muted)} .evtiles .v{font-size:20px; font-weight:700; color:var(--pt); margin-top:2px; letter-spacing:-.02em} .evtiles .v.up{color:var(--up)} .evtiles .v.down{color:var(--down)} .evtiles .v.flat{color:var(--ink)} .evtiles .s{font-size:12px; color:var(--muted); margin-top:2px}
 .evcheck{margin:0; padding-left:20px} .evcheck li{margin:6px 0}
 .evif{display:grid; gap:8px} .evif>div{border:1px solid var(--line); border-radius:12px; padding:10px 12px} .evif b{display:block; font-size:13px; margin-bottom:2px} .evif span{font-size:14px}
 .impact>div{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:8px 0; border-top:1px solid var(--line); font-size:14px}
@@ -593,7 +593,7 @@ const EVENTS = [
   {d:"2026-11-13", t:"AMAT", type:"earn", title:"어플라이드머티리얼즈 실적 발표", when:"새벽 · 미국 장 마감 후", done:true, q:"2026 회계연도 4분기 (8~10월)",
     card:{real:true, asof:"2026-11-15",
       sum:"회사가 석 달 전에 내놓은 전망보다 매출과 이익이 모두 높게 나왔어요. AI 반도체 공장 투자가 장비 주문으로 이어지고 있다는 뜻이에요.",
-      tiles:[["매출","104.1억 달러","1년 전보다 +53% · 전망 102.5억 달러"],["조정 주당순이익 (EPS)","4.16달러","1년 전보다 +92% · 전망 4.02달러"],["다음 분기 매출 전망","111억 달러","±5억 달러"],["중국 매출 비중","25%","1년 전 29%"]],
+      tiles:[["매출","104.1억 달러","회사 전망 102.5억 달러 상회 · 1년 전보다 +53%",[10.41,10.25]],["조정 주당순이익 (EPS)","4.16달러","회사 전망 4.02달러 상회 · 1년 전보다 +92%",[4.16,4.02]],["다음 분기 매출 전망","111억 달러","±5억 달러"],["중국 매출 비중","25%","1년 전 29%"]],
       check:["다음 분기 전망(111억 달러)이 이번 분기보다 높아요. 장비 주문이 계속 늘 거라는 회사의 판단이에요.","반도체 장비 매출이 80.0억 달러로 1년 전 48.8억 달러보다 크게 늘었어요. AI용 첨단 공정 투자가 이끌었어요.","중국 비중은 25%로 낮아졌어요. 수출 규제 영향이 커져도 실적이 흔들릴 여지가 줄었다는 뜻으로 읽혀요."],
       detail:["어플라이드머티리얼즈는 반도체 공장에 들어가는 장비를 만들어요. 그래서 이 회사 실적은 '반도체 회사들이 공장에 얼마나 돈을 쓰는지'를 보여주는 지표로도 읽혀요.","이번 회계연도 전체 매출은 344.5억 달러로 1년 전보다 21% 늘어 최대치를 기록했어요. 장비 판매 뒤에 따라오는 유지보수·부품 서비스 매출도 19.0억 달러로 늘었어요."],
       src:[["어플라이드머티리얼즈 4분기 실적 발표 (SEC 8-K)","https://www.sec.gov/Archives/edgar/data/0000006951/000162828026073360/exhibit991q42026earningsre.htm"],["3분기 실적·4분기 전망 (Zacks)","https://zacks.com/stock/news/2974848/-applied-materials-q3-earnings-beat-estimates-revenues-rise-yy"]]}},
@@ -1036,7 +1036,8 @@ function eventCardSheet(ev){
   openSheet(`<h3 id="sheetTitle">${ev.title} ${badge}</h3>
     <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간${ev.q?` · ${ev.q}`:""}</p>
     <p class="evsum">${C.sum}</p>
-    <div class="evtiles">${C.tiles.map(([k,v,sub])=>`<div><div class="k">${k}</div><div class="v num">${v}</div>${sub?`<div class="s num">${sub}</div>`:""}</div>`).join("")}</div>
+    <div class="evtiles">${C.tiles.map(([k,v,sub,cmp])=>`<div><div class="k">${k}</div><div class="v num${cmp?" "+cls(cmp[0]-cmp[1]):""}">${v}</div>${sub?`<div class="s num">${sub}</div>`:""}</div>`).join("")}</div>
+    ${C.tiles.some(x=>x[3]) ? `<p class="tiny muted" style="margin:6px 2px 0">빨강은 예상보다 높게, 파랑은 낮게 나온 숫자예요.</p>` : ""}
     <div class="bsection"><h4>${ev.done ? "핵심 정리" : "관전 포인트"}</h4><ol class="evcheck">${C.check.map(c=>`<li>${c}</li>`).join("")}</ol></div>
     ${C.ifGood || C.ifBad ? `<div class="bsection"><h4>결과별 해석</h4><div class="evif">
       ${C.ifGood?`<div><b>예상보다 좋으면</b><span>${C.ifGood}</span></div>`:""}${C.ifBad?`<div><b>예상에 못 미치면</b><span>${C.ifBad}</span></div>`:""}</div>
