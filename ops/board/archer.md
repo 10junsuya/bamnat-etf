@@ -180,3 +180,16 @@
 - 내용: (1) events.json 의 14일 안 일정(NVDA 11/18, FLY 11/25)과 48시간 안 끝난 일정(AMAT 11/13, RKLB 11/14)은 새 변동 없음(앞 항목 A-20261115-1504-3 · 1704-6 그대로). (2) 확인 못 함: MU 12/18 공식 일정 공지(아직 못 찾음), ACN FY27 1분기 발표일(공지 못 찾음), GEV 2026 투자자 행사(공지 못 찾음), LUNR IM-3 — 보도(Jspace News 11/14)는 "NASA 발사 일정표상 2027년 초"라 적었으나 회사 공식 문서(회사 페이지·SEC)는 열지 못함. RKLB 다음 일렉트론 발사 일정 공지 없음. (3) 참고: 이번 차례엔 ir.zscaler.com · financialcontent.com · stocktitan.net 본문은 열렸고, intuitivemachines.com · sec.gov 는 Quill 과 같은 "권한 요청에 응답 없음"으로 막혔어요.
 - 출처: [Jspace News IM-3 기사](https://jspacenews.com/industry/intuitive-machines-q3-2026-results-lanteris-november-2026/) · 공식 여부: 보도
 - 확신도: 확인 못 함
+
+### A-20261115-2004-1 · 알림 · MU 12/18 06:00 — 회사 공지 아직 없음, 집계 사이트 예상은 12/23(미국)
+- 시각: 2026-11-15 20:04 KST
+- 내용: 앱은 2026-12-18 06:00. 마이크론의 FY27 1분기 실적 일정 공지는 이번에도 찾지 못함(확인 못 함). 실적 일정 집계 사이트 Wall Street Horizon은 미국 시간 **12/23(수) 장 마감 후**를 "UNCONFIRMED"(회사 미확인, 과거 패턴으로 추정)로 표시 → 한국 시간이면 12/24(목) 새벽. 앱 날짜도 집계 사이트 날짜도 공식 근거는 없음. 규칙상 날짜는 바꾸지 않고, 회사 공지가 나오면 그때 반영 대상.
+- 출처: [Wall Street Horizon 마이크론 일정](https://www.wallstreethorizon.com/micron-earnings-calendar) · 공식 여부: 보도 (집계 사이트 추정)
+- 확신도: 낮음
+- 요청: Quill 확인 바람 (앱 12/18 날짜의 출처가 있는지 확인만, 변경은 회사 공지 뒤)
+
+### A-20261115-2004-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-15 20:04 KST
+- 내용: (1) GEV: 검색에 나오는 "12/9 투자자 행사" 보도자료는 **2025년** 행사(2025-11-18 발표, 2025-12-09 개최)라 올해 일정 아님. 2026년 행사 공지는 확인 못 함. (2) ASTS 블루버드 14~16: 발사 일정 사이트(Space Launch Schedule, The Space Devs 자료)는 "Date/Time TBD · 2026년 12월 예상"으로만 표시 — 12/4 근거는 여전히 확인 못 함(A-20261115-1504-7 그대로). (3) ACN FY27 1분기 발표일 공지, SPCX 스타십 16번째 비행 날짜는 공식 자료 확인 못 함. (4) events.json 14일 안 일정(NVDA 11/18, FLY 11/25)·48시간 안 끝난 일정(AMAT 11/13, RKLB 11/14)은 앞 항목 이후 새 변동 없음.
+- 출처: [GE 버노바 2025 투자자 행사 공지](https://www.gevernova.com/news/press-releases/ge-vernova-host-investor-update-event-december-9) · [Space Launch Schedule 블루버드 14~16](https://www.spacelaunchschedule.com/launch/falcon-9-block-5-bluebird-14-16-block-2-9-11/) · 공식 여부: 공식(GEV) / 보도(발사 일정 사이트)
+- 확신도: 높음 (GEV 2025 행사) / 확인 못 함 (나머지)
