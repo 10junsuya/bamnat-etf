@@ -51,3 +51,40 @@
 - 내용: ASTS 3분기 업데이트(SEC 8-K)가 있는 것은 검색으로 확인했으나 본문을 열지 못해 "스페이스X 발사일 확정 대기" 내용 확인 못 함. 검색 제목 중 Light Reading "AST SpaceMobile D2D satellite launch target slips again"이 있으나 본문 미확인. 앱 그대로.
 - 출처: [ASTS 3분기 업데이트 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001780312/000119312526453758/asts-ex99_1.htm) · [Light Reading](https://lightreading.com/satellite/ast-spacemobile-d2d-satellite-launch-target-slips-again) · 공식 여부: 공식 (본문 확인 못 함) / 보도
 - 확신도: 확인 못 함
+
+### Q-20261115-1734-0 · 알림 · 이번 차례도 웹 페이지 열기 실패 — 앱 데이터 변경 없음
+- 시각: 2026-11-15 17:45 KST
+- 내용: 이번 실행에서도 웹 페이지 읽기가 모두 실패했어요(월마트·홈디포·시스코·알트리아·브로드컴·마벨·ADI·플래닛·파이어플라이·ASTS·코스트코·스페이스X, SEC 포함 — "권한 요청에 응답이 없음" 오류, 무인 실행이라 승인할 사람이 없음). 웹 검색은 제목·주소만 보여 줘서 발표 시각·매출 숫자를 원문에서 확인할 수 없었어요. 그래서 날짜 변경·새 일정·숫자 갱신은 모두 보류했고, 앱 데이터는 건드리지 않았어요. 15:34 차례에 보류한 A-20261115-1504-1~7 도 같은 이유로 그대로 보류예요.
+- 출처: 없음 (실행 환경 문제)
+- 확신도: 높음
+- 요청: Conrad — 두 차례 연속 웹 페이지 열기가 막혀 Quill이 검증을 못 하고 있어요. 무인 실행에서 웹 페이지 읽기 권한이 필요하다는 점을 대표 보고에 올려 주세요.
+
+### Q-20261115-1734-1 · 보류 · A-20261115-1704-1 에 대해 — WMT 11/19 실적 발표 새 일정
+- 시각: 2026-11-15 17:45 KST
+- 내용: 월마트 공식 이벤트 페이지를 열지 못했고, 웹 검색에서도 이번(FY27 3분기) 일정 공지 제목은 찾지 못함(작년 2025-11-20 공지만 나옴). 발표 날짜·시각 확인 못 함 → 추가 보류.
+- 출처: [월마트 FY27 3분기 실적 이벤트](https://corporate.walmart.com/news/events/fy2027-q3-earnings-release) · 공식 여부: 공식 (확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1734-2 · 보류 · A-20261115-1704-2 에 대해 — HD 11/17 실적 콜 새 일정
+- 시각: 2026-11-15 17:45 KST
+- 내용: PR Newswire 원문·홈디포 IR을 열지 못함. 검색 결과에 Earnings Whispers 주소만 나오고 본문 확인 못 함. 미국 날짜(11/17)는 Archer가 본 보도자료 제목과 같지만, 콜·자료 공개 시각을 확인 못 해 한국 날짜·시각을 정할 수 없음 → 추가 보류.
+- 출처: [PR Newswire 원문](https://www.prnewswire.com/news-releases/the-home-depot-to-host-third-quarter-earnings-conference-call-on-november-17-302926992.html) · [홈디포 IR 행사](https://ir.homedepot.com/events-and-presentations) · 공식 여부: 공식 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1734-3 · 보류 · A-20261115-1704-3 에 대해 — money.json CSCO FY27 1분기 갱신
+- 시각: 2026-11-15 17:45 KST
+- 내용: 시스코 실적 보도자료(SEC 8-K)와 시스코 뉴스룸을 열지 못함. 웹 검색에는 1분기 실적 보도자료 자체가 나오지 않고 콜 일정 공지만 나옴. 제품군별 매출 숫자를 원문에서 옮길 수 없어 money.json CSCO 는 그대로(FY26 4분기).
+- 출처: [시스코 FY27 1분기 실적 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000858877/000085887726000170/exhibit991pressrelease-q1f.htm) · [콜 일정 공지](https://investor.cisco.com/news/news-details/2026/Cisco-Schedules-Conference-Call-for-Q1-Fiscal-Year-2027-Financial-Results/default.aspx) · 공식 여부: 공식 (본문 확인 못 함)
+- 확신도: 확인 못 함
+
+### Q-20261115-1734-4 · 보류 · A-20261115-1704-4 에 대해 — money.json MO 3분기 갱신
+- 시각: 2026-11-15 17:45 KST
+- 내용: 알트리아 10-Q(SEC)·8-K 목록을 열지 못함. 검색 제목에 3분기 매출 61억 달러·주당순이익 1.51달러가 보이지만(Quiver Quant, 보도) 부문별 숫자(궐련·입에 넣는 담배·기타)는 원문에서 확인 못 함 → money.json MO 그대로(2분기).
+- 출처: [알트리아 3분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0000764180/000076418026000114/mo-20260930.htm) · [Quiver Quant (제목만)](https://www.quiverquant.com/news/Altria+Q3+Revenue+Rises+to+%246.1+Billion+as+EPS+Reaches+%241.51) · 공식 여부: 공식 (본문 확인 못 함) / 보도
+- 확신도: 확인 못 함
+
+### Q-20261115-1734-5 · 보류 · A-20261115-1704-5 에 대해 — SPCX 스타십 15번째 비행 결과
+- 시각: 2026-11-15 17:45 KST
+- 내용: 근거가 Space.com 보도이고 스페이스X 공식 페이지(spacex.com)도 열지 못함. 공식 출처로 결과(우주선 회수 성공·부스터 바다 낙하)를 확인 못 해 끝난 일정·결과 카드 추가 보류. 새 일정 추가 여부는 공식 확인 뒤 다시 볼게요.
+- 출처: [Space.com 실시간 기사](https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-14-2026-starship-first-double-landing-attempt) · [스페이스X 업데이트](https://www.spacex.com/updates) · 공식 여부: 보도 (공식 확인 못 함)
+- 확신도: 확인 못 함
