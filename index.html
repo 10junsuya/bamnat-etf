@@ -399,6 +399,8 @@ body[data-mode="dark"] .zc{background:transparent!important; border-color:var(--
 .co-block .meta{font-size:14px; color:var(--muted)}
 .newsbox{background:var(--surface-2); border-radius:12px; padding:10px 12px; margin-top:8px; font-size:15px; line-height:1.55}
 .newsbox .src{font-size:13px; color:var(--muted)}
+.colink{border:0; background:none; padding:0; font:inherit; color:inherit; cursor:pointer; text-decoration:underline; text-decoration-thickness:1.5px; text-underline-offset:4px; text-decoration-color:var(--pt)}
+.colink:hover{color:var(--pt)}
 .linkbtn{border:0; background:none; color:var(--accent); cursor:pointer; padding:6px 0; font-size:15px}
 /* 내 계좌 브리핑 카드 */
 .bcard{display:block; width:100%; text-align:left; cursor:pointer; background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:18px; margin-top:10px}
@@ -1064,13 +1066,20 @@ function etfImpactHtml(t, move){
     <div class="impact">${rows.map(r=>`<div><span>${r.e.name}<small class="num">비중 ${(r.w*100).toFixed(1)}%</small></span><b class="num">±${(r.w*move).toFixed(2)}%</b></div>`).join("")}</div>
     <p class="tiny muted" style="margin-top:6px">비중 × 움직임으로 계산한 대략적인 값이에요. 환율과 다른 종목 움직임은 빼고 계산했어요.</p></div>`;
 }
+function evTitleHtml(ev){
+  const s = STOCKS[ev.t]; if(!s) return ev.title;
+  const key = s[0].replace(/\s/g,""); let cut = -1;
+  for(let i=1;i<=ev.title.length;i++){ if(ev.title.slice(0,i).replace(/\s/g,"")===key){ cut=i; break; } }
+  const link = txt => `<button class="colink" type="button" data-stock="${ev.t}" data-fromev="${ev.t}:${ev.d}" aria-label="${s[0]} 회사 설명 보기">${txt}</button>`;
+  return cut>0 ? link(ev.title.slice(0,cut)) + ev.title.slice(cut) : `${ev.title} <span class="small">· ${link(s[0])}</span>`;
+}
 function eventCardSheet(ev){
   const C = ev.card, t = ev.t, co = CO[t] || {};
   const [y,m,dd] = ev.d.split("-").map(Number); const wd = KDAY[new Date(Date.UTC(y,m-1,dd)).getUTCDay()];
   const today = ymd(parts(now(),"Asia/Seoul")); const left = dayDiff(today, ev.d);
   const badge = ev.done ? `<span class="evbadge done">${ev.type==="earn"?"발표 완료":"완료"}</span>` : left===0 ? `<span class="evbadge">오늘</span>` : left>0 ? `<span class="evbadge">D-${left}</span>` : "";
   const fmtAsof = C.asof ? `${+C.asof.slice(5,7)}/${+C.asof.slice(8,10)}` : "";
-  openSheet(`<h3 id="sheetTitle">${ev.title} ${badge}</h3>
+  openSheet(`<h3 id="sheetTitle">${evTitleHtml(ev)} ${badge}</h3>
     <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간${ev.q?` · ${ev.q}`:""}</p>
     <p class="evsum">${C.sum}</p>
     <div class="evtiles">${C.tiles.map(([k,v,sub,cmp])=>`<div><div class="k">${k}</div><div class="v num${cmp?" "+cls(cmp[0]-cmp[1]):""}">${v}</div>${sub?`<div class="s num">${sub}</div>`:""}</div>`).join("")}</div>
@@ -1084,9 +1093,6 @@ function eventCardSheet(ev){
       <div class="bsection">${C.detail.map(x=>`<p>${x}</p>`).join("")}</div>
       ${co.one ? `<div class="bsection"><h4>회사 개요</h4><p>${co.one}</p></div>` : ""}
     </details>
-    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:14px">
-      ${STOCKS[t] ? `<button class="more" type="button" data-stock="${t}" style="flex:1">회사 자세히 보기 ›</button>` : ""}
-    </div>
     <div class="evsrc"><span class="tiny muted">출처 · ${fmtAsof} 기준</span>${C.src.map(([n,u])=>`<a class="tiny" href="${u}" target="_blank" rel="noopener">${n} ›</a>`).join("")}</div>
     <p class="tiny muted" style="margin-top:10px">정보 제공용이며 투자 권유가 아니에요.</p>`, true);
 }
@@ -1112,7 +1118,7 @@ function eventSheet(id){
   const [y,m,dd] = d.split("-").map(Number); const wd = KDAY[new Date(Date.UTC(y,m-1,dd)).getUTCDay()];
   const isEarn = ev.type==="earn";
   const held = ETFS.filter(e=>e.h.some(([x])=>x===t));
-  openSheet(`<h3 id="sheetTitle">${ev.title}</h3>
+  openSheet(`<h3 id="sheetTitle">${evTitleHtml(ev)}</h3>
     <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간 · 예시 일정${ev.done?" · 발표 완료":""}</p>
     ${isEarn ? `<div class="bsection"><h4>발표 개요</h4><p>${josaIGa(s?s[0]:t)} ${ev.q||"지난 분기"} 성적표를 내놓는 날이에요. 매출과 주당순이익(EPS)이 시장 예상보다 높았는지, 그리고 회사가 말하는 다음 분기 전망(가이던스)을 함께 봐요.</p>
       <p class="small muted">미국 장이 끝난 뒤 발표돼서, 주가 반응은 시간외 거래와 다음 날 정규장에서 먼저 나타나요. 국내 상장 ETF에는 보통 그다음 한국 장에 반영돼요.</p></div>`
@@ -1123,7 +1129,6 @@ function eventSheet(id){
     ${held.length ? `<div class="bsection"><h4>편입 ETF</h4><div class="chips">${exposureChips(t)}</div><p class="tiny muted">숫자는 그 ETF 안에서 이 회사가 차지하는 비중이에요. 비중이 클수록 이 일정의 영향을 더 받아요.</p></div>` : ""}
     ${isEarn && ev.done ? `<p class="small muted">발표 결과를 예상치와 비교해 보여주는 실적 결과 카드는 2차 버전에서 추가돼요.</p>` : ""}
     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:14px">
-      ${s ? `<button class="more" type="button" data-stock="${t}" style="flex:1">회사 자세히 보기 ›</button>` : ""}
       ${isEarn ? `<a class="more" style="flex:1; text-align:center; text-decoration:none" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${t}&type=8-K" target="_blank" rel="noopener">SEC 공시 원문 ›</a>` : ""}
     </div>
     <p class="tiny muted" style="margin-top:12px">정보 제공용이며 투자 권유가 아니에요.</p>`, true);
@@ -3649,7 +3654,7 @@ function productsHtml(t){
   </div>`;
 }
 
-function stockSheet(t, from){
+function stockSheet(t, from, fromEv){
   const s = STOCKS[t]; const evs = EVENTS.filter(v=>v.t===t);
   const sym = t==="BRKB"?"BRK.B":t; // eslint-disable-line no-shadow
   const co = CO[t];
@@ -3664,7 +3669,10 @@ function stockSheet(t, from){
     ${co.rel.length?`<h4 style="margin:16px 0 6px">같이 알아두면 좋은 회사</h4><div class="chips">${co.rel.filter(r=>STOCKS[r]).map(r=>`<button class="chip" type="button" data-stock="${r}" style="border:0;cursor:pointer">${STOCKS[r][0]}</button>`).join("")}</div>`:""}
     <p class="tiny muted" style="margin-top:12px">설명은 공개 자료를 정리한 초안이에요. 정확한 내용은 <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${co.cik||t}&type=${co.form}" target="_blank" rel="noopener">연간 보고서(${co.form}) 원문 ›</a>에서 확인할 수 있어요.</p>` : "";
   const fromE = from ? ETFS.find(x=>x.code===from) : null;
-  openSheet(`${fromE?`<button class="btn ghost" type="button" data-brief="${from}" style="margin-bottom:10px">‹ ${fromE.name} 브리핑으로</button>`:""}<div class="with-logo" style="margin-bottom:6px">${logo(t)}<div><h3 id="sheetTitle" style="margin:0">${s[0]} <span class="muted small">${sym}</span></h3>${co?`<div class="tiny muted">${co.cat} · ${co.tag}</div>`:""}</div></div>
+  const backEv = fromEv ? EVENTS.find(v=>`${v.t}:${v.d}`===fromEv) : null;
+  const back = backEv ? `<button class="btn ghost backev" type="button" data-evt="${fromEv}" style="margin-bottom:10px">‹ ${backEv.title}</button>`
+    : fromE ? `<button class="btn ghost" type="button" data-brief="${from}" style="margin-bottom:10px">‹ ${fromE.name} 브리핑으로</button>` : "";
+  openSheet(`${back}<div class="with-logo" style="margin-bottom:6px">${logo(t)}<div><h3 id="sheetTitle" style="margin:0">${s[0]} <span class="muted small">${sym}</span></h3>${co?`<div class="tiny muted">${co.cat} · ${co.tag}</div>`:""}</div></div>
     <div class="num" style="font-size:22px;font-weight:700"><span>${usd(s[1])}</span> <span class="${cls(s[2])}" style="font-size:15px">${spct(s[2])}</span> <span class="tiny muted" style="font-weight:400">샘플 시세</span></div>
     ${about}
     <h4 style="margin:16px 0 4px">이 종목을 담은 ETF</h4><div class="chips">${exposureChips(t)}</div>
@@ -4026,7 +4034,7 @@ document.addEventListener("click", ev=>{
   if(el.dataset.star){ const c = el.dataset.star; stars = stars.includes(c) ? stars.filter(x=>x!==c) : [...stars,c]; store.set("stars",stars); render(); return; }
   if(el.dataset.sort){ sortKey = el.dataset.sort; render(); return; }
   if(el.dataset.toggleAll!==undefined){ showAll=!showAll; render(); return; }
-  if(el.dataset.stock){ stockSheet(el.dataset.stock, el.dataset.from); return; }
+  if(el.dataset.stock){ stockSheet(el.dataset.stock, el.dataset.from, el.dataset.fromev); return; }
   if(el.dataset.cal){ calFilter = el.dataset.cal; render(); return; }
   if(el.dataset.pcat!==undefined){ const box = el.closest(".prod"); box.querySelectorAll(".pc").forEach(b=>{ const on = b===el; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); });
     box.querySelectorAll(".pgroup").forEach(g=>g.hidden = g.dataset.pg!==el.dataset.pcat); return; }
