@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 APP = ROOT / "index.html"
-FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-money": "data/money.json",
+FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-money": "data/money.json", "d-deep": "data/deep.json",
          "d-holdings": "data/holdings.json", "d-live": "data/live.json", "d-macro": "data/macro.json", "d-etfs": "data/etfs.json"}
 OPTIONAL = {"d-holdings", "d-live", "d-macro"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -110,6 +110,51 @@ def check_money(mo, known):
         check_src(w, m.get("src"))
 
 
+DEEP_KINDS = {"facts", "site", "dc", "cust", "deal", "own", "rival", "line", "step", "ip", "next", "kpi", "price", "capex"}
+DEEP_STATUS = {"", "가동", "건설 중", "계획", "완료", "예정", "중단"}
+
+
+def check_deep(dp, known):
+    """회사 더 알아보기: 한눈에 너무 많지 않게, 칸마다 줄 수와 길이를 제한해요."""
+    for t, d in dp.items():
+        w = f"deep {t}"
+        if t not in known:
+            err(w, "앱 종목 목록에 없는 티커예요.")
+        key = d.get("key", [])
+        if not (isinstance(key, list) and 1 <= len(key) <= 3):
+            err(w, "알아 둘 것(key)은 1~3줄이어야 해요.")
+        for k in key:
+            if len(k) > 70:
+                err(w, f"알아 둘 것 한 줄이 너무 길어요(70자 넘음): {k[:30]}…")
+        seen = []
+        for sec in d.get("sec", []):
+            k = sec.get("k")
+            if k not in DEEP_KINDS:
+                err(w, f"모르는 칸 종류예요: {k}")
+                continue
+            if k != "line" and k in seen:
+                err(w, f"같은 칸({k})이 두 번 있어요.")
+            seen.append(k)
+            rows = sec.get("rows")
+            if not (isinstance(rows, list) and rows):
+                err(w, f"{k} 칸이 비어 있어요.")
+                continue
+            if len(rows) > 8:
+                err(w, f"{k} 칸이 8줄을 넘어요. 중요한 것만 남겨 주세요.")
+            for r in rows:
+                if not (isinstance(r, list) and 2 <= len(r) <= 3 and all(isinstance(x, str) for x in r)):
+                    err(w, f"{k} 줄 형식이 틀렸어요: {r!r} (예: [\"이름\", \"설명\", \"가동\"])")
+                    continue
+                if k == "line":
+                    if len(r) == 3 and r[2] not in ("now", "plan"):
+                        err(w, f"세대 표시는 now 또는 plan 이어야 해요: {r!r}")
+                elif k in ("site", "dc") and len(r) == 3 and r[2] not in DEEP_STATUS:
+                    err(w, f"상태는 {sorted(DEEP_STATUS - {''})} 중 하나여야 해요: {r!r}")
+                if len(r[0]) + len(r[1]) > 90:
+                    err(w, f"{k} 한 줄이 너무 길어요: {r[0][:20]}…")
+        check_src(w, d.get("src"))
+
+
 def art_frame_counts():
     s = APP.read_text(encoding="utf-8")
     i = s.find("const MISSION_ART = ")
@@ -144,6 +189,7 @@ def main():
         check_events(data["d-events"], known)
         check_missions(data["d-missions"], data["d-events"], art_frame_counts())
         check_money(data["d-money"], known)
+        check_deep(data["d-deep"], known)
     if errors:
         print("데이터 검사 실패:")
         print("\n".join(" - " + e for e in errors))
