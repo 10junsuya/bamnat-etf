@@ -196,7 +196,14 @@ def kr_navs(old, errors):
     begin = (dt.datetime.now(KST) - dt.timedelta(days=40)).strftime("%Y%m%d")
     for code in KR_ETFS:
         try:
-            body = get(ETF_URL + "?" + urllib.parse.urlencode({"serviceKey": DATA_KEY, "resultType": "json", "numOfRows": 40, "pageNo": 1, "likeSrtnCd": code, "beginBasDt": begin}))
+            url = ETF_URL + "?" + urllib.parse.urlencode({"serviceKey": DATA_KEY, "resultType": "json", "numOfRows": 40, "pageNo": 1, "likeSrtnCd": code, "beginBasDt": begin})
+            for k in range(3):  # 공공데이터 서버가 가끔 늦게 답해서 두 번 더 시도해요
+                try:
+                    body = get(url, timeout=40); break
+                except (urllib.error.URLError, TimeoutError):
+                    if k == 2:
+                        raise
+                    time.sleep(3)
             j = json.loads(body)
             items = j["response"]["body"].get("items", {}) or {}
             items = items.get("item", []) if isinstance(items, dict) else items

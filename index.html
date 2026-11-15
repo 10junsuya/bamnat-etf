@@ -588,7 +588,7 @@ const store = {
 
 /* ===================== 샘플 데이터 ===================== */
 const FX = { base: 1330.3, now: 1336.3, baseTime: "11/12 15:30" };
-const FUT = { nq: NaN, es: NaN, sox: NaN, semi: NaN, div: NaN };  /* 실제 값은 아래 applyLive()가 채워요 (QQQ·SPY·SOXQ 움직임) */
+const FUT = { nq: NaN, es: NaN, sox: NaN, semi: NaN, div: NaN, tlt: NaN };  /* 실제 값은 아래 applyLive()가 채워요 (QQQ·SPY·SOXQ 움직임) */
 
 const STOCKS = {
   ASML:["ASML",NaN,NaN], MPWR:["모놀리식파워",NaN,NaN], SKHY:["SK하이닉스",NaN,NaN], PG:["P&G",NaN,NaN], KO:["코카콜라",NaN,NaN], HD:["홈디포",NaN,NaN], AMGN:["암젠",NaN,NaN], PEP:["펩시코",NaN,NaN], UNH:["유나이티드헬스",NaN,NaN], CVX:["셰브런",NaN,NaN], COP:["코노코필립스",NaN,NaN], ABT:["애보트",NaN,NaN], MRK:["머크",NaN,NaN], ACN:["액센츄어",NaN,NaN], VZ:["버라이즌",NaN,NaN], MO:["알트리아",NaN,NaN], ECHO:["에코스타",NaN,NaN], MDA:["MDA 스페이스",NaN,NaN], VOYG:["보이저 테크놀로지스",NaN,NaN],
@@ -898,19 +898,26 @@ function usMove(t){ const q = (LIVE.quotes||{})[t]; if(!q) return NaN;
 function fxAt(s){ const h = (LIVE.fx||{}).hist || {}; const ks = Object.keys(h).filter(d=>d<=s).sort(); return ks.length ? [ks[ks.length-1], h[ks[ks.length-1]]] : [null, NaN]; }
 
 const FUT_KEY = {sp:"es", ndx:"nq", sox:"sox", semi:"semi", div:"div"};
+const PROXY_FUT = {QQQ:"nq", SPY:"es", SOXQ:"sox", SMH:"semi", SCHD:"div", TLT:"tlt"};
+/* 커버드콜: 오를 때 덜 따라가요 (part: 오를 때 p배만 / cap: 하루 상한) */
+const ccF = (e, r) => !e.cc || !okn(r) ? r : e.cc.type==="cap" ? Math.min(r, e.cc.cap) : (r>0 ? r*e.cc.p : r);
 function applyHoldings(){
   for(const e of ETFS){
     const hv = (HOLD.etfs||{})[e.code];
     e.live = true; e.hsrc = hv ? hv.src : ""; e.hasof = hv ? hv.asof : "";
     const G = ETF_DATA.groups[e.group] || {};
     e.kind = (hv && hv.kind) || G.kind || "index";
+    e.cc = G.cc || null; e.hedge = !!G.hedge;
+    e.asiaW = hv ? (hv.asia_weight||0)/100 : 0; e.asiaN = hv && hv.asia ? hv.asia : [];
     if(e.kind==="pdf"){
-      e.h = hv ? hv.top.filter(x=>x.ticker).map(x=>[TK(x.ticker), x.weight/100]) : []; e.rest = null; e.cash = hv ? (hv.cash_weight||0)/100 : 0; e.proxy = "";
+      e.h = hv ? hv.top.filter(x=>x.ticker).map(x=>[TK(x.ticker), x.weight/100]) : []; e.rest = null; e.proxy = "";
+      e.cash = hv ? ((hv.cash_weight||0) + (hv.asia_weight||0))/100 : 0;  // 아시아 상장 종목은 밤사이 안 움직여서 현금처럼 계산해요
+      e.restW = hv ? (hv.rest_weight||0)/100 : 0; e.restN = hv ? Math.max(0, (hv.n_total||0) - hv.top.length) : 0;
     }else{
       e.proxy = (hv && hv.proxy) || G.proxy;
       e.h = hv ? hv.top.filter(x=>x.ticker).map(x=>[TK(x.ticker), x.weight/100]) : [];
       e.nTotal = hv ? hv.n_total : 0; e.cash = 0;
-      e.rest = {w:0, n:0, fut:FUT_KEY[e.group]||e.group, r:NaN};
+      e.rest = {w:0, n:0, fut:FUT_KEY[e.group]||PROXY_FUT[e.proxy]||e.group, r:NaN};
     }
     if(hv) hv.top.forEach(x=>{ const k = TK(x.ticker); if(k && !STOCKS[k]) STOCKS[k] = [x.ko || x.name, NaN, NaN]; });
   }
@@ -922,7 +929,7 @@ function applyLive(){
   for(const t of Object.keys(STOCKS)){ const q = qs[t] || qs[t==="BRKB"?"BRK-B":t]; const r = q ? usMove(qs[t]?t:"BRK-B") : NaN;
     STOCKS[t][1] = q ? q.p : NaN; STOCKS[t][2] = r; }
   LV.quoteT = Object.values(qs).map(q=>q.t).sort().pop() || "";
-  FUT.es = usMove("SPY"); FUT.nq = usMove("QQQ"); FUT.sox = usMove("SOXQ"); FUT.semi = usMove("SMH"); FUT.div = usMove("SCHD");
+  FUT.es = usMove("SPY"); FUT.nq = usMove("QQQ"); FUT.sox = usMove("SOXQ"); FUT.semi = usMove("SMH"); FUT.div = usMove("SCHD"); FUT.tlt = usMove("TLT");
   // 환율
   const [bd, br] = fxAt(kr); const fx = LIVE.fx || {};
   FX.base = br; FX.now = okn(fx.rate) ? fx.rate : br; FX.baseTime = bd ? mdTxt(bd) : "";
@@ -942,8 +949,8 @@ function applyLive(){
       const ok = all.filter(x=>okn(STOCKS[TK(x.ticker)]?.[2])), miss = all.filter(x=>!ok.includes(x));
       e.h = ok.map(x=>[TK(x.ticker), x.weight/100]);
       const sw = e.h.reduce((a,[,w])=>a+w,0), sc = e.h.reduce((a,[t,w])=>a+w*STOCKS[t][2],0);
-      const mw = miss.reduce((a,x)=>a+x.weight/100,0);
-      e.rest = mw>0 && sw>0 ? {w:mw, n:miss.length, fut:"", r:sc/sw} : null;
+      const mw = miss.reduce((a,x)=>a+x.weight/100,0) + (e.restW||0);  // 시세 없는 종목 + 25위 밖 종목은 받은 종목 평균으로
+      e.rest = mw>0 && sw>0 ? {w:mw, n:miss.length + (e.restN||0), fut:"", r:sc/sw} : null;
       e.proxy = e.rest ? "시세를 받은 종목 평균" : ""; e.proxyR = sw>0 ? sc/sw : NaN; e.missNames = miss.map(x=>x.ko||x.name);
     }
     // 기준가: 한국 마지막 장 날짜 것이 있으면 그대로, 없으면 이전 기준가에서 미국 종가·환율 변화로 이어 붙여요
@@ -960,7 +967,8 @@ function applyLive(){
     const legs = e.kind!=="pdf" ? [[e.proxy,1]] : e.h.map(([t,w])=>[t==="BRKB"?"BRK-B":t,w]);
     let f = e.cash||0; for(const [t,w] of legs){ f += w * (usClose(t, LV.U)/usClose(t, u0)); }
     if(e.kind==="pdf" && e.rest) f += e.rest.w * (1 + e.rest.r);
-    e.nav = prev.nav * f * (br/fx0);
+    f = 1 + ccF(e, f - 1);
+    e.nav = prev.nav * f * (e.hedge ? 1 : br/fx0);
     e.navNote = okn(e.nav) ? `${mdTxt(kr)} 기준가 추정 · ${mdTxt(prev.d)} 공시 기준가에서 이어 계산` : "기준가 확인 중";
   }
   LV.ok = Object.keys(qs).length>0;
@@ -1001,14 +1009,15 @@ function calc(e){
   let usd = rows.reduce((a,x)=>a+x.c,0);
   let restC = 0;
   if(e.rest){ restC = e.rest.w * (okn(e.rest.r) ? e.rest.r : FUT[e.rest.fut]); usd += restC; }
-  let fxR = FX.now/FX.base - 1; if(Math.abs(fxR) < 1e-9) fxR = 0;
+  let ccC = 0; if(e.cc && okn(usd)){ const a = ccF(e, usd); ccC = a - usd; usd = a; }
+  let fxR = e.hedge ? 0 : FX.now/FX.base - 1; if(Math.abs(fxR) < 1e-9) fxR = 0;
   const total = fxR===0 ? usd : (1+usd)*(1+fxR) - 1;
   const fxC = total - usd;
   const est = e.nav*(1+total);
   const coverage = rows.reduce((a,x)=>a+x.w,0) + (e.cash||0);
   const market = est*(1+e.prem);
-  if(FLAG.etf.has(e.code)) return {rows, usd:NaN, restC, fxC:NaN, total:NaN, est:NaN, coverage, market:NaN, fxR};
-  return {rows, usd, restC, fxC, total, est, coverage, market, fxR};
+  if(FLAG.etf.has(e.code)) return {rows, usd:NaN, restC, ccC, fxC:NaN, total:NaN, est:NaN, coverage, market:NaN, fxR};
+  return {rows, usd, restC, ccC, fxC, total, est, coverage, market, fxR};
 }
 /* 실제 추정 오차: 전날 기준가 × 미국 종가 변화 × 환율 변화로 맞힌 값과, 다음 날 실제 공시 기준가의 차이 */
 function realErrs(e){
@@ -1018,7 +1027,8 @@ function realErrs(e){
     if(e.kind==="pdf" && e.rest) continue;  // 시세 없는 종목이 있으면 과거 오차는 계산하지 않아요
     const legs = e.kind!=="pdf" ? [[e.proxy,1]] : e.h.map(([t,w])=>[t==="BRKB"?"BRK-B":t,w]);
     let f = e.cash||0; for(const [t,w] of legs) f += w * (usClose(t,u1)/usClose(t,u0));
-    const pred = r0.nav * f * (f1/f0);
+    f = 1 + ccF(e, f - 1);
+    const pred = r0.nav * f * (e.hedge ? 1 : f1/f0);
     if(okn(pred)) out.push({d:r1.d, v:pred/r1.nav - 1});
   }
   return out.slice(-20);
@@ -1096,7 +1106,9 @@ function usNote(us, e){
   const fut = e.rest ? `${e.proxy}(같은 지수 미국 ETF)` : "마지막 거래 가격";
   if(us.key==="regular") return "미국 정규장 시세를 반영했어요.";
   if(us.key==="pre"||us.key==="after") return `미국 정규장이 닫혀 있어 마지막 정규장 가격으로 계산했어요. 프리·애프터마켓 움직임은 아직 넣지 않았어요.`;
-  return `미국장이 쉬는 중이라 마지막 정규장 가격으로 계산했어요.${e.rest?` 나머지 회사는 ${fut} 움직임에 맞췄어요.`:""}`;
+  const tail = e.kind==="bond" ? ` 미국 장기 국채는 ${e.proxy}(같은 지수 미국 ETF) 움직임으로 계산했어요.`
+    : !e.rest ? "" : e.kind==="pdf" ? ` 시세가 없거나 비중이 작은 ${e.rest.n}종목은 시세를 받은 종목들의 평균 움직임으로 채웠어요.` : ` 나머지 회사는 ${fut} 움직임에 맞췄어요.`;
+  return `미국장이 쉬는 중이라 마지막 정규장 가격으로 계산했어요.${tail}`;
 }
 
 let homeQuery = "";
@@ -1209,16 +1221,18 @@ function holdingsCard(e, c){
       <div><div class="r1 num ${cls(x.r)}">${spct(x.r)}</div><div class="r2 num">기여 ${pctp(x.c)}</div></div>
     </button>`;
   let extra = "";
-  if(e.rest) extra += `<div class="row total"><div><div class="n">나머지 ${e.rest.n}종목</div><div class="t">비중 ${(e.rest.w*100).toFixed(1)}% · ${e.proxy} 움직임에 맞춤</div></div><div><div class="r2 num">기여 ${pctp(c.restC)}</div></div></div>`;
-  extra += `<div class="row total"><div><div class="n">미국 주식 합계</div></div><div><div class="r1 num ${cls(c.usd)}">${pctp(c.usd)}</div></div></div>`;
-  extra += `<div class="row total"><div><div class="n">환율 효과</div><div class="t num">${FX.base} → ${FX.now}</div></div><div><div class="r1 num ${cls(c.fxC)}">${pctp(c.fxC)}</div></div></div>`;
+  if(e.rest) extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 장기 국채":`나머지 ${e.rest.n}종목`}</div><div class="t">비중 ${(e.rest.w*100).toFixed(1)}% · ${e.proxy} 움직임에 맞춤</div></div><div><div class="r2 num">기여 ${pctp(c.restC)}</div></div></div>`;
+  if(e.asiaW) extra += `<div class="row total"><div><div class="n">아시아 상장 ${e.asiaN.length}종목</div><div class="t">비중 ${(e.asiaW*100).toFixed(1)}% · 한국·중국·일본 낮에 거래돼서 밤사이 변화 없음</div></div><div><div class="r2 num">기여 ${pctp(0)}</div></div></div>`;
+  if(e.cc) extra += `<div class="row total"><div><div class="n">콜옵션 매도 효과</div><div class="t">${e.cc.txt}</div></div><div><div class="r2 num ${cls(c.ccC)}">기여 ${pctp(c.ccC)}</div></div></div>`;
+  extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 국채 합계":"미국 주식 합계"}</div></div><div><div class="r1 num ${cls(c.usd)}">${pctp(c.usd)}</div></div></div>`;
+  extra += `<div class="row total"><div><div class="n">환율 효과</div><div class="t num">${e.hedge?"환헤지(H)라 환율 영향을 거의 안 받아요":`${FX.base} → ${FX.now}`}</div></div><div><div class="r1 num ${cls(c.fxC)}">${pctp(c.fxC)}</div></div></div>`;
   return `<section class="card"><h2>구성종목 ${q("기여도")}<span class="sub">총 ${total}종목 · ${e.hsrc||"구성종목"}${e.hasof?` · ${String(e.hasof).replace(/^As of /,"")}`:""}</span></h2>
     <div class="seg" role="group" aria-label="정렬">
       <button type="button" data-sort="w" aria-pressed="${sortKey==="w"}">비중순</button>
       <button type="button" data-sort="c" aria-pressed="${sortKey==="c"}">기여도순</button>
       <button type="button" data-sort="r" aria-pressed="${sortKey==="r"}">등락순</button>
     </div>
-    ${rows.length?"":`<p class="small muted" style="margin:8px 2px">이 ETF의 구성종목 비중은 아직 받아오지 못했어요. 지금 계산은 같은 지수를 따르는 미국 ETF ${e.proxy} 움직임으로 해요.</p>`}
+    ${rows.length?"":e.kind==="bond"?`<p class="small muted" style="margin:8px 2px">이 ETF는 회사 주식이 아니라 미국 장기 국채를 담아요. 같은 지수를 따르는 미국 ETF ${e.proxy} 움직임으로 계산해요.</p>`:`<p class="small muted" style="margin:8px 2px">이 ETF의 구성종목 비중은 아직 받아오지 못했어요. 지금 계산은 같은 지수를 따르는 미국 ETF ${e.proxy} 움직임으로 해요.</p>`}
     ${shown.map(row).join("")}
     ${rows.length>5 ? `<button class="more" type="button" data-toggle-all>${showAll?"접기":`${rows.length}개 전체 보기`}</button>` : ""}
     <div style="margin-top:10px">${extra}</div>
@@ -1227,11 +1241,18 @@ function holdingsCard(e, c){
 }
 
 function compositionCard(e, c){
+  if(e.kind==="bond") return `<section class="card"><h2>담긴 것은 뭔가<span class="sub">회사 주식이 아니에요</span></h2>
+    <p class="small" style="margin:4px 2px 8px">미국 정부가 돈을 빌리며 발행한 <b>만기 20년 이상 국채</b>를 담아요. 국채는 정해진 이자를 주고, 만기에 원금을 돌려줘요.</p>
+    <div class="chain"><span>시장 금리 ↓</span><i>→</i><span>이미 발행된 국채 이자가 더 매력적</span><i>→</i><span class="me">국채 가격 ↑</span></div>
+    <p class="small muted" style="margin:10px 2px 0">만기가 길수록 금리 변화에 크게 움직여요. 이 정도 만기면 금리가 1%p 바뀔 때 가격이 대략 15% 넘게 움직이기도 해요. 이름의 (H)는 환헤지라서 원/달러 환율 영향은 거의 받지 않아요.</p>
+    <div class="note">밤사이 변화는 같은 지수를 따르는 미국 ETF ${e.proxy} 움직임으로 계산해요.</div>
+  </section>`;
   const groups = {};
   c.rows.forEach(x=>{ const k = CO[x.t]?CO[x.t].cat:"기타"; (groups[k] = groups[k]||{w:0, items:[]}); groups[k].w += x.w; groups[k].items.push(x); });
   const list = Object.entries(groups).sort((a,b)=>b[1].w-a[1].w).map(([k,v],i)=>({k, ...v, color:CAT_COLORS[i%CAT_COLORS.length]}));
   if(e.rest) list.push({k:`나머지 ${e.rest.n}종목`, w:e.rest.w, items:[], color:"var(--line)"});
-  if(e.cash) list.push({k:"현금", w:e.cash, items:[], color:"var(--line)"});
+  if(e.asiaW) list.push({k:`아시아 상장 ${e.asiaN.length}종목`, w:e.asiaW, items:[], color:"var(--line)"});
+  if(e.cash - (e.asiaW||0) > 0.0005) list.push({k:"현금", w:e.cash - (e.asiaW||0), items:[], color:"var(--line)"});
   const bar = list.map(g=>`<span title="${g.k}" style="display:block;height:100%;width:${(g.w*100).toFixed(2)}%;background:${g.color}"></span>`).join("");
   return `<section class="card"><h2>담긴 회사들은 뭘 하나<span class="sub">비중 기준</span></h2>
     <div style="display:flex;height:14px;border-radius:7px;overflow:hidden;gap:2px" role="img" aria-label="분야별 비중">${bar}</div>
@@ -1430,8 +1451,9 @@ function viewEtf(code, st){
       <div class="basis num">${okn(e.nav) ? `${e.navNote} ${won(e.nav)}${okn(e.close)?` · 종가 ${won(e.close)}`:""}` : `${mdTxt(LV.kr)} 기준가·종가는 아직 공시 전이에요 (보통 다음 날 오후)`}</div>
       <div class="tiny muted stamp" style="margin-top:4px">${dataStamp()}</div>
       <div class="split">
-        <div>미국 주식<b class="num ${cls(c.usd)}">${spct(c.usd)}</b></div>
-        <div>환율 효과 ${q("환율 효과")}<b class="num ${cls(c.fxC)}">${spct(c.fxC)}</b></div>
+        <div>${e.kind==="bond"?"미국 국채":"미국 주식"}<b class="num ${cls(c.usd)}">${spct(c.usd)}</b></div>
+        ${e.cc?`<div>옵션 매도 영향<b class="num ${cls(c.ccC)}">${spct(c.ccC)}</b></div>`:""}
+        <div>환율 효과${e.hedge?" (환헤지)":""} ${q("환율 효과")}<b class="num ${cls(c.fxC)}">${spct(c.fxC)}</b></div>
       </div>
       <div class="note">${usNote(st.us, e)}</div>
     </section>
@@ -1969,6 +1991,11 @@ const SENS = {
   fx:{title:"환율 영향", map:Object.fromEntries(Object.keys(ETF_DATA.groups).map(k=>[k,"그대로 받아요 · 환헤지 안 함"]))},
   risk:{title:"시장 불안에 민감한 정도", map:{space:"매우 높음 · 작은 성장 기업이 많아서", spacetech:"매우 높음 · 작은 성장 기업이 많아서", sox:"높음", semi:"높음", ndx:"높음", tech:"높음 · 소수 종목에 몰려 있어서", bigtech:"높음 · 소수 종목에 몰려 있어서", sp:"보통", div:"낮은 편 · 배당을 꾸준히 주는 큰 회사들이라"}}
 };
+/* 새로 넣은 ETF 그룹 */
+Object.assign(SENS.rate.map, {ndxact:"높음 · 기술주 비중이 커서", ndxcc:"높음 · 나스닥100을 따라가요", ndxotm:"높음 · 나스닥100을 따라가요", spcc:"보통 · S&P500을 따라가요", divcc:"보통 · 배당주 중심이라", ust30:"매우 높음 · 금리가 내리면 오르고 오르면 내려요 (만기가 길수록 크게)", tesla:"높음 · 성장주라서", spaceisel:"매우 높음 · 아직 이익이 적은 성장 기업이 많아서", spaceakros:"높음 · 성장 기업과 큰 방산 회사가 섞여 있어서", optic:"높음 · 성장주라서", aipower:"높음 · 큰 설비 투자가 필요한 업종이라", aisemi:"높음 · 반도체·성장주라서", quantum:"매우 높음 · 아직 이익이 거의 없는 기업이 많아서", humanoid:"높음 · 성장주라서"});
+Object.assign(SENS.cycle.map, {ndxact:"보통", ndxcc:"보통", ndxotm:"보통", spcc:"보통", divcc:"보통", ust30:"반대로 움직일 때가 많아요 · 경기가 나빠지면 국채를 찾는 사람이 늘어요", tesla:"높음 · 자동차는 경기를 많이 타요", spaceisel:"보통", spaceakros:"보통", optic:"높음 · 데이터센터 투자에 달려 있어요", aipower:"높음 · 데이터센터·전력 투자에 달려 있어요", aisemi:"높음 · 반도체는 경기를 많이 타요", quantum:"보통", humanoid:"높음 · 공장 투자에 달려 있어요"});
+Object.assign(SENS.risk.map, {ndxact:"높음", ndxcc:"높음 · 내릴 때는 그대로 따라가요", ndxotm:"높음 · 내릴 때는 그대로 따라가요", spcc:"보통 · 내릴 때는 그대로 따라가요", divcc:"낮은 편", ust30:"낮은 편 · 불안할 때 오히려 사람들이 찾기도 해요", tesla:"매우 높음 · 한 회사 비중이 커서", spaceisel:"매우 높음 · 작은 성장 기업이 많아서", spaceakros:"높음", optic:"매우 높음 · 소수 종목에 몰려 있어서", aipower:"높음", aisemi:"높음", quantum:"매우 높음 · 작은 성장 기업이 많아서", humanoid:"높음"});
+Object.entries(ETF_DATA.groups).forEach(([k,g])=>{ if(g.hedge) SENS.fx.map[k] = "거의 안 받아요 · 환헤지(H)"; });
 /* ===================== 지표끼리의 연결 (샘플 · 일반적인 경향, 예측 아님) =====================
    ev = 발표 반응(당일), co = 최근 동조화(최근 1년), ll = 선행·후행(몇 달~몇 년)
    dir: same 같은 방향 / opp 반대 방향 / lead 이 지표보다 먼저 움직임 / lag 이 지표를 뒤따라옴 */
@@ -2059,14 +2086,14 @@ const LL_ETF = {
   risk:"불안이 길어지면, 작은 성장 기업이 많은 ETF가 더 크게 흔들리는 경우가 많았어요."
 };
 function myEtfList(){ const pos = myPositions(); return pos.length ? {by:"내 계좌", list:pos.map(p=>p.e)} : {by:"관심 ETF", list:ETFS.filter(e=>stars.includes(e.code))}; }
-function etfReact(v, e){ const beta = ({ndx:1.3, sox:1.3, semi:1.3, tech:1.3, bigtech:1.3, space:1.6, spacetech:1.6, div:0.8})[e.group] || 1; return v.react[0]/100*beta + v.react[3]/1336; }
+function etfReact(v, e){ const beta = ({ndx:1.3, ndxact:1.3, ndxcc:1.2, ndxotm:1.1, spcc:0.95, divcc:0.8, sox:1.3, semi:1.3, aisemi:1.5, tech:1.3, bigtech:1.3, space:1.6, spacetech:1.6, spaceisel:1.7, spaceakros:1.5, div:0.8, tesla:1.6, optic:1.8, aipower:1.6, quantum:2.0, humanoid:1.4})[e.group] || 1; return v.react[0]/100*beta + (e.hedge ? 0 : v.react[3]/1336); }
 function etfLinkRow(k, h){
   const v = IND[k], x = IND_X[k] || {}, me = myEtfList();
   if(!me.list.length) return "";
   let body = "";
   if(h==="ev"){
     if(!v.react) return "";
-    body = `<div class="react">${me.list.map(e=>{ const ch = etfReact(v,e); return `<div>${e.name}</div><div class="num ${cls(ch)}">${spct(ch)}</div>`; }).join("")}</div><p class="tiny muted" style="margin-top:6px">지난 발표 후 30분, 추정 가치 기준이에요.</p>`;
+    body = `<div class="react">${me.list.filter(e=>e.kind!=="bond").map(e=>{ const ch = etfReact(v,e); return `<div>${e.name}</div><div class="num ${cls(ch)}">${spct(ch)}</div>`; }).join("")}</div><p class="tiny muted" style="margin-top:6px">지난 발표 후 30분, 추정 가치 기준이에요.</p>`;
   } else if(h==="co"){
     const S = SENS[x.sens]; if(!S) return "";
     body = `<div class="react">${me.list.map(e=>{ const [lv, why] = (S.map[e.group]||"보통").split(" · "); return `<div>${e.name}${why?`<div class="tiny muted">${why}</div>`:""}</div><div>${lv}</div>`; }).join("")}</div><p class="tiny muted" style="margin-top:6px">기준: ${S.title}</p>`;
@@ -2194,7 +2221,7 @@ function nightFlowHtml(x){
     step("미국 10년물 금리", `${sg(r[1])}%p`, cls(r[1])),
     step("달러 인덱스", `${sg(r[2])}%`, cls(r[2])),
     step("원/달러 환율", `${sg(r[3])}원`, cls(r[3])),
-    ...me.list.map(e=>{ const ch = etfReact(v,e); return step(`${e.name} 추정`, spct(ch), cls(ch)); })
+    ...me.list.filter(e=>e.kind!=="bond").map(e=>{ const ch = etfReact(v,e); return step(`${e.name} 추정`, spct(ch), cls(ch)); })
   ];
   return `<div class="flow"><div class="small" style="font-weight:600;margin-bottom:6px">어젯밤 이렇게 이어졌어요</div>${rows.join('<div class="ar">↓</div>')}
     <p class="tiny muted" style="margin-top:6px">${v.name} 발표 후 30분 기준 · 샘플 숫자${me.list.length?"":" · 내 ETF를 등록하면 마지막 줄에 나와요"}</p></div>`;
