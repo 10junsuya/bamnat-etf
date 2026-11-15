@@ -985,6 +985,18 @@ function calc(e){
   if(FLAG.etf.has(e.code)) return {rows, usd:NaN, restC, fxC:NaN, total:NaN, est:NaN, coverage, market:NaN, fxR};
   return {rows, usd, restC, fxC, total, est, coverage, market, fxR};
 }
+/* 실제 추정 오차: 전날 기준가 × 미국 종가 변화 × 환율 변화로 맞힌 값과, 다음 날 실제 공시 기준가의 차이 */
+function realErrs(e){
+  const rows = ((LIVE.kr||{})[e.code]||[]).filter(r=>r.nav>0), out = [];
+  for(let i=1;i<rows.length;i++){ const r0 = rows[i-1], r1 = rows[i];
+    const u0 = prevUs(r0.d), u1 = prevUs(r1.d), f0 = fxAt(r0.d)[1], f1 = fxAt(r1.d)[1];
+    const legs = e.rest ? [[e.proxy,1]] : e.h.map(([t,w])=>[t==="BRKB"?"BRK-B":t,w]);
+    let f = e.cash||0; for(const [t,w] of legs) f += w * (usClose(t,u1)/usClose(t,u0));
+    const pred = r0.nav * f * (f1/f0);
+    if(okn(pred)) out.push({d:r1.d, v:pred/r1.nav - 1});
+  }
+  return out.slice(-20);
+}
 function errHist(seed){
   let x = seed*9301+49297; const out=[];
   for(let i=0;i<20;i++){ x=(x*9301+49297)%233280; out.push(((x/233280)-.5)*0.006); }
@@ -1139,7 +1151,8 @@ function priceStateCard(e, c, st){
 }
 
 function trustCard(e, c){
-  const errs = errHist(e.seed);
+  const re = realErrs(e), real = re.length >= 3;
+  const errs = real ? re.map(x=>x.v) : errHist(e.seed);
   const avg = errs.reduce((a,x)=>a+Math.abs(x),0)/errs.length;
   const W=300,H=56, bw=W/errs.length, mx=0.004;
   const bars = errs.map((v,i)=>{ const h=Math.min(Math.abs(v)/mx,1)*(H/2-4); const y = v>=0 ? H/2-h : H/2;
@@ -1147,11 +1160,11 @@ function trustCard(e, c){
   return `<section class="card"><h2>이 추정을 얼마나 믿을 수 있나 ${q("추정 오차")}</h2>
     <div class="kv">
       <div><div class="k">시세 반영 비중 ${q("시세 반영 비중")}</div><div class="v num">${Math.round(c.coverage*100)}%${e.rest?` <span class="tiny muted">+ ${e.proxy} ${Math.round(e.rest.w*100)}%</span>`:""}</div></div>
-      <div><div class="k">최근 20일 평균 오차 <span class="tiny muted">샘플</span></div><div class="v num">±${(avg*100).toFixed(2)}%</div></div>
+      <div><div class="k">최근 ${real?errs.length:20}일 평균 오차 <span class="tiny muted">${real?"실제":"샘플 · 기록 쌓는 중"}</span></div><div class="v num">±${(avg*100).toFixed(2)}%</div></div>
     </div>
     <svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="최근 20거래일 추정 오차" style="margin-top:12px">
       <line x1="0" x2="${W}" y1="${H/2}" y2="${H/2}" stroke="var(--line)"/>${bars}</svg>
-    <div class="tiny muted" style="display:flex;justify-content:space-between"><span>20거래일 전</span><span>어제 ${spct(errs[errs.length-1])}</span></div>
+    <div class="tiny muted" style="display:flex;justify-content:space-between"><span>${real?errs.length:20}거래일 전</span><span>${real?mdTxt(re[re.length-1].d):"어제"} ${spct(errs[errs.length-1])}</span></div>
   </section>`;
 }
 

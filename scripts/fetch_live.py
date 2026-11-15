@@ -26,7 +26,7 @@ DATA_KEY = urllib.parse.unquote(os.environ.get("DATA_GO_KR_API_KEY", "").strip()
 ETF_URL = "https://apis.data.go.kr/1160100/GetSecuritiesProductInfoService_V2/getETFPriceInfo_V2"
 KR_ETFS = ["381180", "360750", "379800", "360200", "133690", "379810", "0181L0"]
 PROXIES = ["SPY", "QQQ", "SOXQ"]
-KEEP = 20
+KEEP = 30
 
 
 def scrub(t):
@@ -128,10 +128,10 @@ def kr_navs(old, errors):
     if not DATA_KEY:
         errors.append("DATA_GO_KR_API_KEY 없음")
         return out
-    begin = (dt.datetime.now(KST) - dt.timedelta(days=12)).strftime("%Y%m%d")
+    begin = (dt.datetime.now(KST) - dt.timedelta(days=40)).strftime("%Y%m%d")
     for code in KR_ETFS:
         try:
-            body = get(ETF_URL + "?" + urllib.parse.urlencode({"serviceKey": DATA_KEY, "resultType": "json", "numOfRows": 20, "pageNo": 1, "likeSrtnCd": code, "beginBasDt": begin}))
+            body = get(ETF_URL + "?" + urllib.parse.urlencode({"serviceKey": DATA_KEY, "resultType": "json", "numOfRows": 40, "pageNo": 1, "likeSrtnCd": code, "beginBasDt": begin}))
             j = json.loads(body)
             items = j["response"]["body"].get("items", {}) or {}
             items = items.get("item", []) if isinstance(items, dict) else items
@@ -142,7 +142,7 @@ def kr_navs(old, errors):
                     continue
                 d = i["basDt"]
                 rows[f"{d[:4]}-{d[4:6]}-{d[6:]}"] = {"d": f"{d[:4]}-{d[4:6]}-{d[6:]}", "nav": float(i["nav"]), "close": float(i["clpr"])}
-            out[code] = sorted(rows.values(), key=lambda r: r["d"])[-8:]
+            out[code] = sorted(rows.values(), key=lambda r: r["d"])[-25:]
         except Exception as e:  # noqa: BLE001
             errors.append(scrub(f"{code}: {type(e).__name__}: {e}")[:160])
     return out
@@ -150,7 +150,7 @@ def kr_navs(old, errors):
 
 def fx(old, errors):
     try:
-        start = (dt.date.today() - dt.timedelta(days=21)).isoformat()
+        start = (dt.date.today() - dt.timedelta(days=45)).isoformat()
         j = json.loads(get(f"https://api.frankfurter.dev/v1/{start}..?base=USD&symbols=KRW"))
         hist = {d: r["KRW"] for d, r in j.get("rates", {}).items()}
         hist = dict(sorted({**old.get("fx", {}).get("hist", {}), **hist}.items())[-KEEP:])
