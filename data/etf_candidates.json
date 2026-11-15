@@ -1,1333 +1,3580 @@
-[
- {
-  "word": "미국S&P500",
-  "code": "360750",
-  "name": "TIGER 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 209543,
-  "mcap_eok": 208438,
-  "index": "S&P 500",
-  "nav": "25116.07",
-  "close": "25000"
- },
- {
-  "word": "미국S&P500",
-  "code": "379800",
-  "name": "KODEX 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 105227,
-  "mcap_eok": 104655,
-  "index": "S&P 500",
-  "nav": "22769.12",
-  "close": "22660"
- },
- {
-  "word": "미국S&P500",
-  "code": "360200",
-  "name": "ACE 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 38979,
-  "mcap_eok": 38830,
-  "index": "S&P 500",
-  "nav": "25393.77",
-  "close": "25280"
- },
- {
-  "word": "미국S&P500",
-  "code": "379780",
-  "name": "RISE 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 15254,
-  "mcap_eok": 15215,
-  "index": "S&P 500",
-  "nav": "21948.75",
-  "close": "21860"
- },
- {
-  "word": "미국S&P500",
-  "code": "438080",
-  "name": "ACE 미국S&P500미국채혼합50액티브",
-  "date": "20261112",
-  "aum_eok": 12351,
-  "mcap_eok": 12344,
-  "index": "S&P 500 and Short-Term Treasury 50/50 Blend Index",
-  "nav": "13512.69",
-  "close": "13505"
- },
- {
-  "word": "미국S&P500",
-  "code": "449180",
-  "name": "KODEX 미국S&P500(H)",
-  "date": "20261112",
-  "aum_eok": 10993,
-  "mcap_eok": 10925,
-  "index": "S&P 500",
-  "nav": "16951.56",
-  "close": "16885"
- },
- {
-  "word": "미국S&P500",
-  "code": "482730",
-  "name": "TIGER 미국S&P500타겟데일리커버드콜",
-  "date": "20261112",
-  "aum_eok": 6947,
-  "mcap_eok": 6922,
-  "index": "S&P500 10% Daily Premium Covered Call Index(TR)",
-  "nav": "10940.59",
-  "close": "10900"
- },
- {
-  "word": "미국S&P500",
-  "code": "448290",
-  "name": "TIGER 미국S&P500(H)",
-  "date": "20261112",
-  "aum_eok": 5161,
-  "mcap_eok": 5046,
-  "index": "S&P 500",
-  "nav": "17554.46",
-  "close": "17490"
- },
- {
-  "word": "미국S&P500",
-  "code": "426020",
-  "name": "TIME 미국S&P500액티브",
-  "date": "20261112",
-  "aum_eok": 3804,
-  "mcap_eok": 3775,
-  "index": "S&P 500",
-  "nav": "29352.56",
-  "close": "29175"
- },
- {
-  "word": "미국S&P500",
-  "code": "0026S0",
-  "name": "1Q 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 3428,
-  "mcap_eok": 3411,
-  "index": "S&P 500",
-  "nav": "12285.67",
-  "close": "12225"
- },
- {
-  "word": "미국S&P500",
-  "code": "0052S0",
-  "name": "1Q 미국S&P500미국채혼합50액티브",
-  "date": "20261112",
-  "aum_eok": 3182,
-  "mcap_eok": 3177,
-  "index": "S&P 500 and Short-Term Treasury 50/50 Blend Index",
-  "nav": "11049.21",
-  "close": "11030"
- },
- {
-  "word": "미국S&P500",
-  "code": "433330",
-  "name": "SOL 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 2960,
-  "mcap_eok": 2947,
-  "index": "S&P 500",
-  "nav": "20993.15",
-  "close": "20900"
- },
- {
-  "word": "미국S&P500",
-  "code": "429000",
-  "name": "TIGER 미국S&P500배당귀족",
-  "date": "20261112",
-  "aum_eok": 2007,
-  "mcap_eok": 1991,
-  "index": "S&P 500 Dividend Aristocrats 지수 (Price Return)",
-  "nav": "13655.6",
-  "close": "13685"
- },
- {
-  "word": "미국S&P500",
-  "code": "0005A0",
-  "name": "KODEX 미국S&P500데일리커버드콜OTM",
-  "date": "20261112",
-  "aum_eok": 1972,
-  "mcap_eok": 1961,
-  "index": "S&P 500 Covered Call 1% OTM Daily Index(TR)",
-  "nav": "8686.6",
-  "close": "8640"
- },
- {
-  "word": "미국S&P500",
-  "code": "219480",
-  "name": "KODEX 미국S&P500선물(H)",
-  "date": "20261112",
-  "aum_eok": 1455,
-  "mcap_eok": 1449,
-  "index": "S&P 500 Futures Total Return Index",
-  "nav": "32707.44",
-  "close": "32565"
- },
- {
-  "word": "미국S&P500",
-  "code": "0057H0",
-  "name": "PLUS 미국S&P500미국채혼합50액티브",
-  "date": "20261112",
-  "aum_eok": 1353,
-  "mcap_eok": 1351,
-  "index": "S&P 500 and U.S. Treasury Bill 0-3 Month 50/50 Blend Index (USD)",
-  "nav": "11181.37",
-  "close": "11165"
- },
- {
-  "word": "미국S&P500",
-  "code": "0041E0",
-  "name": "KODEX 미국S&P500액티브",
-  "date": "20261112",
-  "aum_eok": 1318,
-  "mcap_eok": 1310,
-  "index": "S&P 500",
-  "nav": "14645.25",
-  "close": "14555"
- },
- {
-  "word": "미국S&P500",
-  "code": "463680",
-  "name": "KODEX 미국S&P500테크놀로지",
-  "date": "20261112",
-  "aum_eok": 1152,
-  "mcap_eok": 1135,
-  "index": "S&P Technology Select Sector Index(Price Return)",
-  "nav": "20040.85",
-  "close": "19735"
- },
- {
-  "word": "미국S&P500",
-  "code": "488500",
-  "name": "TIGER 미국S&P500동일가중",
-  "date": "20261112",
-  "aum_eok": 1134,
-  "mcap_eok": 1138,
-  "index": "S&P 500 Equal Weight Index(PR)",
-  "nav": "12463.74",
-  "close": "12500"
- },
- {
-  "word": "미국S&P500",
-  "code": "399110",
-  "name": "SOL 미국S&P500ESG",
-  "date": "20261112",
-  "aum_eok": 1110,
-  "mcap_eok": 1103,
-  "index": "S&P500 Scored&Screened(PR)",
-  "nav": "19465.14",
-  "close": "19355"
- },
- {
-  "word": "미국S&P500",
-  "code": "429760",
-  "name": "PLUS 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 1009,
-  "mcap_eok": 1003,
-  "index": "S&P 500",
-  "nav": "18681.49",
-  "close": "18580"
- },
- {
-  "word": "미국S&P500",
-  "code": "0137V0",
-  "name": "KIWOOM 미국S&P500모멘텀",
-  "date": "20261112",
-  "aum_eok": 975,
-  "mcap_eok": 965,
-  "index": "S&P500 모멘텀 지수",
-  "nav": "9998.77",
-  "close": "9945"
- },
- {
-  "word": "미국S&P500",
-  "code": "143850",
-  "name": "TIGER 미국S&P500선물(H)",
-  "date": "20261112",
-  "aum_eok": 895,
-  "mcap_eok": 892,
-  "index": "S&P 500 Futures Index(ER)",
-  "nav": "76169.12",
-  "close": "75895"
- },
- {
-  "word": "미국S&P500",
-  "code": "444490",
-  "name": "WON 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 871,
-  "mcap_eok": 867,
-  "index": "S&P 500",
-  "nav": "19149.53",
-  "close": "19050"
- },
- {
-  "word": "미국S&P500",
-  "code": "269540",
-  "name": "PLUS 미국S&P500(H)",
-  "date": "20261112",
-  "aum_eok": 861,
-  "mcap_eok": 858,
-  "index": "S&P 500",
-  "nav": "29679.37",
-  "close": "29590"
- },
- {
-  "word": "미국S&P500",
-  "code": "453330",
-  "name": "RISE 미국S&P500(H)",
-  "date": "20261112",
-  "aum_eok": 844,
-  "mcap_eok": 841,
-  "index": "S&P 500",
-  "nav": "17954.81",
-  "close": "17885"
- },
- {
-  "word": "미국S&P500",
-  "code": "449770",
-  "name": "KIWOOM 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 784,
-  "mcap_eok": 800,
-  "index": "S&P 500",
-  "nav": "20095.04",
-  "close": "20010"
- },
- {
-  "word": "미국S&P500",
-  "code": "0080X0",
-  "name": "SOL 미국S&P500미국채혼합50",
-  "date": "20261112",
-  "aum_eok": 751,
-  "mcap_eok": 750,
-  "index": "S&P 500 and iBoxx $ Treasuries 7-10Y 5050 Blend Index(USD) PR/TR Hybrid",
-  "nav": "10432.42",
-  "close": "10420"
- },
- {
-  "word": "미국S&P500",
-  "code": "453640",
-  "name": "KODEX 미국S&P500헬스케어",
-  "date": "20261112",
-  "aum_eok": 690,
-  "mcap_eok": 691,
-  "index": "S&P Health Care Select Sector Index(Price Return)",
-  "nav": "15170.04",
-  "close": "15180"
- },
- {
-  "word": "미국S&P500",
-  "code": "0238P0",
-  "name": "TIGER 미국S&P500미국채혼합50",
-  "date": "20261112",
-  "aum_eok": 576,
-  "mcap_eok": 575,
-  "index": "S&P 500 and Short-Term Treasury 50/50 Blend Index",
-  "nav": "9847.44",
-  "close": "9830"
- },
- {
-  "word": "미국S&P500",
-  "code": "225040",
-  "name": "TIGER 미국S&P500레버리지(합성 H)",
-  "date": "20261112",
-  "aum_eok": 563,
-  "mcap_eok": 557,
-  "index": "S&P 500",
-  "nav": "65435",
-  "close": "64785"
- },
- {
-  "word": "미국S&P500",
-  "code": "218420",
-  "name": "KODEX 미국S&P500에너지(합성)",
-  "date": "20261112",
-  "aum_eok": 483,
-  "mcap_eok": 483,
-  "index": "S&P Select Sector Energy Index",
-  "nav": "19688.32",
-  "close": "19670"
- },
- {
-  "word": "미국S&P500",
-  "code": "453650",
-  "name": "KODEX 미국S&P500금융",
-  "date": "20261112",
-  "aum_eok": 477,
-  "mcap_eok": 475,
-  "index": "S&P Financial Select Sector Index(Price Return)",
-  "nav": "19076.03",
-  "close": "18995"
- },
- {
-  "word": "미국S&P500",
-  "code": "200030",
-  "name": "KODEX 미국S&P500산업재(합성)",
-  "date": "20261112",
-  "aum_eok": 442,
-  "mcap_eok": 440,
-  "index": "S&P Select Sector Industrial Index",
-  "nav": "39225.92",
-  "close": "39030"
- },
- {
-  "word": "미국S&P500",
-  "code": "276970",
-  "name": "KODEX 미국S&P500배당귀족커버드콜(합성 H)",
-  "date": "20261112",
-  "aum_eok": 392,
-  "mcap_eok": 391,
-  "index": "S&P500 Dividend Aristocrats Covered Call(7.2% Premium) Index",
-  "nav": "8340.6",
-  "close": "8325"
- },
- {
-  "word": "미국S&P500",
-  "code": "449780",
-  "name": "KIWOOM 미국S&P500(H)",
-  "date": "20261112",
-  "aum_eok": 331,
-  "mcap_eok": 330,
-  "index": "S&P 500",
-  "nav": "18376.29",
-  "close": "18310"
- },
- {
-  "word": "미국S&P500",
-  "code": "494410",
-  "name": "PLUS 미국S&P500성장주",
-  "date": "20261112",
-  "aum_eok": 330,
-  "mcap_eok": 326,
-  "index": "S&P 500 Growth Index(PR)",
-  "nav": "13212.78",
-  "close": "13030"
- },
- {
-  "word": "미국S&P500",
-  "code": "0138T0",
-  "name": "RISE 미국S&P500데일리고정커버드콜",
-  "date": "20261112",
-  "aum_eok": 309,
-  "mcap_eok": 308,
-  "index": "S&P500 10% Daily Fixed Covered Call Index",
-  "nav": "8836.14",
-  "close": "8800"
- },
- {
-  "word": "미국S&P500",
-  "code": "0137W0",
-  "name": "KIWOOM 미국S&P500&GOLD",
-  "date": "20261112",
-  "aum_eok": 256,
-  "mcap_eok": 255,
-  "index": "S&P500 & S&P GSCI 금현물 90/10 혼합지수",
-  "nav": "9851.1",
-  "close": "9805"
- },
- {
-  "word": "미국S&P500",
-  "code": "0089C0",
-  "name": "KODEX 미국S&P500변동성확대시커버드콜",
-  "date": "20261112",
-  "aum_eok": 252,
-  "mcap_eok": 250,
-  "index": "Cboe S&P 500 Volatility Contingent Daily Covered Call Index(Total Retrun)",
-  "nav": "10724.25",
-  "close": "10640"
- },
- {
-  "word": "미국S&P500",
-  "code": "483570",
-  "name": "KCGI 미국S&P500 TOP10",
-  "date": "20261112",
-  "aum_eok": 235,
-  "mcap_eok": 232,
-  "index": "S&P500 Top10 25% Capped Index(PR)",
-  "nav": "14674.48",
-  "close": "14500"
- },
- {
-  "word": "미국S&P500",
-  "code": "0026E0",
-  "name": "KODEX 미국S&P500버퍼3월액티브",
-  "date": "20261112",
-  "aum_eok": 212,
-  "mcap_eok": 210,
-  "index": "S&P500 10% Buffered Index March Series (USD) TR",
-  "nav": "11441.74",
-  "close": "11350"
- },
- {
-  "word": "미국S&P500",
-  "code": "453630",
-  "name": "KODEX 미국S&P500필수소비재",
-  "date": "20261112",
-  "aum_eok": 154,
-  "mcap_eok": 159,
-  "index": "S&P Consumer Staples Select Sector Index(Price Return)",
-  "nav": "12853.26",
-  "close": "12730"
- },
- {
-  "word": "미국S&P500",
-  "code": "432840",
-  "name": "HANARO 미국S&P500",
-  "date": "20261112",
-  "aum_eok": 151,
-  "mcap_eok": 150,
-  "index": "S&P 500",
-  "nav": "18880.42",
-  "close": "18780"
- },
- {
-  "word": "미국S&P500",
-  "code": "0127T0",
-  "name": "KIWOOM 미국S&P500&배당다우존스비중전환",
-  "date": "20261112",
-  "aum_eok": 129,
-  "mcap_eok": 128,
-  "index": "S&P500 생애배당다우존스 2040 지수",
-  "nav": "10724.79",
-  "close": "10685"
- },
- {
-  "word": "미국S&P500",
-  "code": "0127V0",
-  "name": "KIWOOM 미국S&P500 TOP10&배당다우비중전환",
-  "date": "20261112",
-  "aum_eok": 128,
-  "mcap_eok": 127,
-  "index": "S&P500 TOP10 생애배당다우존스 2040 지수",
-  "nav": "10205.75",
-  "close": "10160"
- },
- {
-  "word": "미국S&P500",
-  "code": "0219Z0",
-  "name": "HANARO 미국S&P500액티브",
-  "date": "20261112",
-  "aum_eok": 127,
-  "mcap_eok": 125,
-  "index": "S&P 500",
-  "nav": "9738",
-  "close": "9650"
- },
- {
-  "word": "미국S&P500",
-  "code": "453660",
-  "name": "KODEX 미국S&P500경기소비재",
-  "date": "20261112",
-  "aum_eok": 122,
-  "mcap_eok": 121,
-  "index": "S&P Consumer Discretionary Select Sector Index(Price Return)",
-  "nav": "17395.95",
-  "close": "17285"
- },
- {
-  "word": "미국S&P500",
-  "code": "463640",
-  "name": "KODEX 미국S&P500유틸리티",
-  "date": "20261112",
-  "aum_eok": 108,
-  "mcap_eok": 107,
-  "index": "S&P Utilities Select Sector Index(Price Return)",
-  "nav": "13490.43",
-  "close": "13435"
- },
- {
-  "word": "미국S&P500",
-  "code": "0068M0",
-  "name": "KODEX 미국S&P500버퍼6월액티브",
-  "date": "20261112",
-  "aum_eok": 102,
-  "mcap_eok": 102,
-  "index": "S&P500 10% Buffered Index June Series (USD) TR",
-  "nav": "11356.2",
-  "close": "11295"
- },
- {
-  "word": "미국S&P500",
-  "code": "463690",
-  "name": "KODEX 미국S&P500커뮤니케이션",
-  "date": "20261112",
-  "aum_eok": 84,
-  "mcap_eok": 83,
-  "index": "S&P Communication Services Select Sector Index(Price Return)",
-  "nav": "16700.92",
-  "close": "16580"
- },
- {
-  "word": "미국S&P500",
-  "code": "0005C0",
-  "name": "RISE 미국S&P500엔화노출(합성 H)",
-  "date": "20261112",
-  "aum_eok": 69,
-  "mcap_eok": 69,
-  "index": "S&P500 Yen Hedged Index(PR)",
-  "nav": "10592.38",
-  "close": "10580"
- },
- {
-  "word": "미국S&P500",
-  "code": "225030",
-  "name": "TIGER 미국S&P500선물인버스(H)",
-  "date": "20261112",
-  "aum_eok": 49,
-  "mcap_eok": 48,
-  "index": "S&P 500 Futures Total Return Index",
-  "nav": "2284.66",
-  "close": "2295"
- },
- {
-  "word": "미국S&P500",
-  "code": "499150",
-  "name": "SOL 미국S&P500엔화노출(H)",
-  "date": "20261112",
-  "aum_eok": 41,
-  "mcap_eok": 41,
-  "index": "S&P500 Yen Hedged Index(PR)",
-  "nav": "10192.5",
-  "close": "10265"
- },
- {
-  "word": "미국나스닥100",
-  "code": "133690",
-  "name": "TIGER 미국나스닥100",
-  "date": "20261112",
-  "aum_eok": 114405,
-  "mcap_eok": 113026,
-  "index": "NASDAQ 100",
-  "nav": "166941.88",
-  "close": "165315"
- },
- {
-  "word": "미국나스닥100",
-  "code": "379810",
-  "name": "KODEX 미국나스닥100",
-  "date": "20261112",
-  "aum_eok": 96056,
-  "mcap_eok": 95150,
-  "index": "NASDAQ 100",
-  "nav": "24936.68",
-  "close": "24695"
- },
- {
-  "word": "미국나스닥100",
-  "code": "367380",
-  "name": "ACE 미국나스닥100",
-  "date": "20261112",
-  "aum_eok": 33735,
-  "mcap_eok": 33434,
-  "index": "NASDAQ 100",
-  "nav": "28710.95",
-  "close": "28430"
- },
- {
-  "word": "미국나스닥100",
-  "code": "486290",
-  "name": "TIGER 미국나스닥100타겟데일리커버드콜",
-  "date": "20261112",
-  "aum_eok": 25419,
-  "mcap_eok": 25213,
-  "index": "NASDAQ 100 Daily Covered Call Target Premium 15% 지수(TR)",
-  "nav": "9447.84",
-  "close": "9380"
- },
- {
-  "word": "미국나스닥100",
-  "code": "426030",
-  "name": "TIME 미국나스닥100액티브",
-  "date": "20261112",
-  "aum_eok": 20936,
-  "mcap_eok": 20752,
-  "index": "NASDAQ 100",
-  "nav": "37492.41",
-  "close": "36885"
- },
- {
-  "word": "미국나스닥100",
-  "code": "368590",
-  "name": "RISE 미국나스닥100",
-  "date": "20261112",
-  "aum_eok": 15119,
-  "mcap_eok": 15004,
-  "index": "NASDAQ 100",
-  "nav": "27843.04",
-  "close": "27580"
- },
- {
-  "word": "미국나스닥100",
-  "code": "494300",
-  "name": "KODEX 미국나스닥100데일리커버드콜OTM",
-  "date": "20261112",
-  "aum_eok": 9796,
-  "mcap_eok": 9703,
-  "index": "NASDAQ-100 Daily Covered Call 101 Index(TR)",
-  "nav": "8036.17",
-  "close": "7960"
- },
- {
-  "word": "미국나스닥100",
-  "code": "438100",
-  "name": "ACE 미국나스닥100미국채혼합50액티브",
-  "date": "20261112",
-  "aum_eok": 9164,
-  "mcap_eok": 9151,
-  "index": "NASDAQ-100 US T-Bills 50/50 Index",
-  "nav": "14386.23",
-  "close": "14365"
- },
- {
-  "word": "미국나스닥100",
-  "code": "418660",
-  "name": "TIGER 미국나스닥100레버리지(합성)",
-  "date": "20261112",
-  "aum_eok": 7206,
-  "mcap_eok": 6972,
-  "index": "NASDAQ 100",
-  "nav": "33672.82",
-  "close": "33045"
- },
- {
-  "word": "미국나스닥100",
-  "code": "449190",
-  "name": "KODEX 미국나스닥100(H)",
-  "date": "20261112",
-  "aum_eok": 5500,
-  "mcap_eok": 5449,
-  "index": "NASDAQ 100",
-  "nav": "21274.67",
-  "close": "21080"
- },
- {
-  "word": "미국나스닥100",
-  "code": "0019K0",
-  "name": "TIME 미국나스닥100채권혼합50액티브",
-  "date": "20261112",
-  "aum_eok": 5407,
-  "mcap_eok": 5377,
-  "index": "FnGuide 미국나스닥100 단기채권혼합 지수",
-  "nav": "12109.32",
-  "close": "12015"
- },
- {
-  "word": "미국나스닥100",
-  "code": "435420",
-  "name": "TIGER 미국나스닥100채권혼합50",
-  "date": "20261112",
-  "aum_eok": 5190,
-  "mcap_eok": 5154,
-  "index": "FnGuide 나스닥100채권혼합50 지수(총수익 지수)",
-  "nav": "13657.45",
-  "close": "13600"
- },
- {
-  "word": "미국나스닥100",
-  "code": "448300",
-  "name": "TIGER 미국나스닥100(H)",
-  "date": "20261112",
-  "aum_eok": 3948,
-  "mcap_eok": 3805,
-  "index": "NASDAQ 100",
-  "nav": "21935.12",
-  "close": "21745"
- },
- {
-  "word": "미국나스닥100",
-  "code": "0111P0",
-  "name": "1Q 미국나스닥100미국채혼합50액티브",
-  "date": "20261112",
-  "aum_eok": 3021,
-  "mcap_eok": 3006,
-  "index": "Nasdaq-100 US T-Bills 0-6 Month 50/50 Index",
-  "nav": "10170.15",
-  "close": "10120"
- },
- {
-  "word": "미국나스닥100",
-  "code": "441680",
-  "name": "TIGER 미국나스닥100커버드콜(합성)",
-  "date": "20261112",
-  "aum_eok": 2662,
-  "mcap_eok": 2618,
-  "index": "Cboe Nasdaq-100 BuyWrite V2 지수 (Total Return)",
-  "nav": "10180.87",
-  "close": "10010"
- },
- {
-  "word": "미국나스닥100",
-  "code": "409820",
-  "name": "KODEX 미국나스닥100레버리지(합성 H)",
-  "date": "20261112",
-  "aum_eok": 2296,
-  "mcap_eok": 2243,
-  "index": "NASDAQ 100",
-  "nav": "18009.36",
-  "close": "17665"
- },
- {
-  "word": "미국나스닥100",
-  "code": "0069M0",
-  "name": "1Q 미국나스닥100",
-  "date": "20261112",
-  "aum_eok": 1974,
-  "mcap_eok": 1953,
-  "index": "NASDAQ 100",
-  "nav": "12491.58",
-  "close": "12360"
- },
- {
-  "word": "미국나스닥100",
-  "code": "0261H0",
-  "name": "KODEX 미국나스닥100미국채혼합50",
-  "date": "20261112",
-  "aum_eok": 1508,
-  "mcap_eok": 1501,
-  "index": "Nasdaq-100 US T-Bills 1-3 Month 50/50 Index (USD)",
-  "nav": "10055.54",
-  "close": "10005"
- },
- {
-  "word": "미국나스닥100",
-  "code": "476030",
-  "name": "SOL 미국나스닥100",
-  "date": "20261112",
-  "aum_eok": 1313,
-  "mcap_eok": 1300,
-  "index": "NASDAQ 100",
-  "nav": "15824.58",
-  "close": "15660"
- },
- {
-  "word": "미국나스닥100",
-  "code": "304940",
-  "name": "KODEX 미국나스닥100선물(H)",
-  "date": "20261112",
-  "aum_eok": 1055,
-  "mcap_eok": 1044,
-  "index": "NASDAQ 100",
-  "nav": "31040.61",
-  "close": "30715"
- },
- {
-  "word": "미국나스닥100",
-  "code": "453080",
-  "name": "KIWOOM 미국나스닥100(H)",
-  "date": "20261112",
-  "aum_eok": 875,
-  "mcap_eok": 867,
-  "index": "NASDAQ 100",
-  "nav": "21863.87",
-  "close": "21680"
- },
- {
-  "word": "미국나스닥100",
-  "code": "0089B0",
-  "name": "PLUS 미국나스닥100미국채혼합50",
-  "date": "20261112",
-  "aum_eok": 329,
-  "mcap_eok": 327,
-  "index": "Nasdaq-100 US T-Bills 1-3 Month 50/50 Index (USD)",
-  "nav": "10628.36",
-  "close": "10560"
- },
- {
-  "word": "미국나스닥100",
-  "code": "409810",
-  "name": "KODEX 미국나스닥100선물인버스(H)",
-  "date": "20261112",
-  "aum_eok": 129,
-  "mcap_eok": 142,
-  "index": "NASDAQ 100",
-  "nav": "5754.75",
-  "close": "5810"
- },
- {
-  "word": "미국반도체",
-  "code": "390390",
-  "name": "KODEX 미국반도체",
-  "date": "20261112",
-  "aum_eok": 10940,
-  "mcap_eok": 10799,
-  "index": "MVIS US Listed Semiconductor 25 Index",
-  "nav": "45773.2",
-  "close": "44350"
- },
- {
-  "word": "미국반도체",
-  "code": "480040",
-  "name": "ACE 미국반도체데일리타겟커버드콜(합성)",
-  "date": "20261112",
-  "aum_eok": 1829,
-  "mcap_eok": 1793,
-  "index": "Bloomberg US Listed Semiconductor Premium Decrement 15% Distribution Index",
-  "nav": "11358",
-  "close": "11135"
- },
- {
-  "word": "미국반도체",
-  "code": "469060",
-  "name": "RISE 미국반도체NYSE",
-  "date": "20261112",
-  "aum_eok": 669,
-  "mcap_eok": 651,
-  "index": "NYSE Semicondoctor Index(Price Return)",
-  "nav": "29734.62",
-  "close": "28950"
- },
- {
-  "word": "미국반도체",
-  "code": "469050",
-  "name": "RISE 미국반도체NYSE(H)",
-  "date": "20261112",
-  "aum_eok": 307,
-  "mcap_eok": 313,
-  "index": "NYSE Semicondoctor Index(Price Return)",
-  "nav": "27891.06",
-  "close": "27250"
- },
- {
-  "word": "미국반도체",
-  "code": "491630",
-  "name": "RISE 미국반도체인버스(합성 H)",
-  "date": "20261112",
-  "aum_eok": 32,
-  "mcap_eok": 33,
-  "index": "NYSE Semicondoctor Index(Price Return)",
-  "nav": "5588.97",
-  "close": "5730"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "458730",
-  "name": "TIGER 미국배당다우존스",
-  "date": "20261112",
-  "aum_eok": 46774,
-  "mcap_eok": 46708,
-  "index": "Dow Jones U.S. Dividend 100 Price Return Index",
-  "nav": "15169.09",
-  "close": "15170"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "446720",
-  "name": "SOL 미국배당다우존스",
-  "date": "20261112",
-  "aum_eok": 10843,
-  "mcap_eok": 10874,
-  "index": "Dow Jones U.S. Dividend 100 Price Return Index",
-  "nav": "13900.68",
-  "close": "13905"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "402970",
-  "name": "ACE 미국배당다우존스",
-  "date": "20261112",
-  "aum_eok": 10236,
-  "mcap_eok": 10270,
-  "index": "Dow Jones U.S. Dividend 100 Price Return Index",
-  "nav": "15416.07",
-  "close": "15420"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "458760",
-  "name": "TIGER 미국배당다우존스타겟커버드콜2호",
-  "date": "20261112",
-  "aum_eok": 6957,
-  "mcap_eok": 7003,
-  "index": "DowJones U.S. Dividend 100 7% Premium Covered Call 지수 (TR)",
-  "nav": "11024.9",
-  "close": "11055"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "489250",
-  "name": "KODEX 미국배당다우존스",
-  "date": "20261112",
-  "aum_eok": 6424,
-  "mcap_eok": 6430,
-  "index": "Dow Jones U.S. Dividend 100 Price Return Index",
-  "nav": "13057.47",
-  "close": "13070"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "0008S0",
-  "name": "TIGER 미국배당다우존스타겟데일리커버드콜",
-  "date": "20261112",
-  "aum_eok": 3251,
-  "mcap_eok": 3257,
-  "index": "Dow Jones U.S. Dividend 100 10% Daily Premium Covered Call 지수",
-  "nav": "9820.96",
-  "close": "9840"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "452360",
-  "name": "SOL 미국배당다우존스(H)",
-  "date": "20261112",
-  "aum_eok": 2332,
-  "mcap_eok": 2351,
-  "index": "Dow Jones U.S. Dividend 100 Price Return Index",
-  "nav": "14047.87",
-  "close": "14080"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "483290",
-  "name": "KODEX 미국배당다우존스타겟커버드콜",
-  "date": "20261112",
-  "aum_eok": 1805,
-  "mcap_eok": 1825,
-  "index": "Dow Jones U.S. Dividend 100 10% Premium Covered Call Index(Total Return)",
-  "nav": "10311.95",
-  "close": "10310"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "0254S0",
-  "name": "KODEX 미국배당다우존스액티브",
-  "date": "20261112",
-  "aum_eok": 1010,
-  "mcap_eok": 1020,
-  "index": "Dow Jones U.S. Dividend 100 Price Return Index",
-  "nav": "10410.53",
-  "close": "10405"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "458750",
-  "name": "TIGER 미국배당다우존스타겟커버드콜1호",
-  "date": "20261112",
-  "aum_eok": 705,
-  "mcap_eok": 706,
-  "index": "DowJones U.S. Dividend 100 3% Premium Covered Call 지수 (TR)",
-  "nav": "13064.54",
-  "close": "13065"
- },
- {
-  "word": "미국배당다우존스",
-  "code": "493420",
-  "name": "SOL 미국배당다우존스2호",
-  "date": "20261112",
-  "aum_eok": 296,
-  "mcap_eok": 309,
-  "index": "Dow Jones U.S. Dividend 100 Index(TR)",
-  "nav": "12849.68",
-  "close": "12880"
- },
- {
-  "word": "미국빅테크",
-  "code": "465580",
-  "name": "ACE 미국빅테크TOP7 Plus",
-  "date": "20261112",
-  "aum_eok": 12464,
-  "mcap_eok": 12401,
-  "index": "Solactive US Big Tech Top 7 Plus Price Return Index",
-  "nav": "22702.77",
-  "close": "22465"
- },
- {
-  "word": "미국빅테크",
-  "code": "314250",
-  "name": "KODEX 미국빅테크10(H)",
-  "date": "20261112",
-  "aum_eok": 6170,
-  "mcap_eok": 6117,
-  "index": "NYSE U.S. Big TECH 10 INDEX",
-  "nav": "58598.66",
-  "close": "57980"
- },
- {
-  "word": "미국빅테크",
-  "code": "480020",
-  "name": "ACE 미국빅테크7+데일리타겟커버드콜(합성)",
-  "date": "20261112",
-  "aum_eok": 1790,
-  "mcap_eok": 1771,
-  "index": "Bloomberg US Big Tech Top 7 Plus Premium Decrement 15% Distribution Index",
-  "nav": "8819.13",
-  "close": "8725"
- },
- {
-  "word": "미국빅테크",
-  "code": "465610",
-  "name": "ACE 미국빅테크TOP7 Plus레버리지(합성)",
-  "date": "20261112",
-  "aum_eok": 875,
-  "mcap_eok": 861,
-  "index": "Solactive US Big Tech Top 7 Plus Price Return Index",
-  "nav": "36473.24",
-  "close": "35870"
- },
- {
-  "word": "미국테크TOP10",
-  "code": "381170",
-  "name": "TIGER 미국테크TOP10 INDXX",
-  "date": "20261112",
-  "aum_eok": 35796,
-  "mcap_eok": 35350,
-  "index": "Indxx US Tech Top 10 Index",
-  "nav": "28670.83",
-  "close": "28325"
- },
- {
-  "word": "미국테크TOP10",
-  "code": "474220",
-  "name": "TIGER 미국테크TOP10타겟커버드콜",
-  "date": "20261112",
-  "aum_eok": 3849,
-  "mcap_eok": 3809,
-  "index": "Bloomberg U.S. Tech Top10+10% Premium Covered Call Index",
-  "nav": "13747.08",
-  "close": "13605"
- },
- {
-  "word": "미국테크TOP10",
-  "code": "472170",
-  "name": "TIGER 미국테크TOP10채권혼합",
-  "date": "20261112",
-  "aum_eok": 3343,
-  "mcap_eok": 3322,
-  "index": "FnGuide 미국테크TOP10 채권혼합지수",
-  "nav": "13591.11",
-  "close": "13505"
- },
- {
-  "word": "미국테크TOP10",
-  "code": "481190",
-  "name": "SOL 미국테크TOP10",
-  "date": "20261112",
-  "aum_eok": 2688,
-  "mcap_eok": 2648,
-  "index": "Solactive US Tech TOP 10 Custom Index(PR)",
-  "nav": "15584.47",
-  "close": "15395"
- },
- {
-  "word": "미국테크TOP10",
-  "code": "472160",
-  "name": "TIGER 미국테크TOP10 INDXX(H)",
-  "date": "20261112",
-  "aum_eok": 1771,
-  "mcap_eok": 1849,
-  "index": "Indxx US Tech Top 10 Index",
-  "nav": "18072.02",
-  "close": "17860"
- },
- {
-  "word": "미국테크TOP10",
-  "code": "461900",
-  "name": "PLUS 미국테크TOP10",
-  "date": "20261112",
-  "aum_eok": 168,
-  "mcap_eok": 166,
-  "index": "iSelect 미국 Tech 10 지수",
-  "nav": "20979.63",
-  "close": "20690"
- },
- {
-  "word": "미국테크TOP10",
-  "code": "461910",
-  "name": "PLUS 미국테크TOP10레버리지(합성)",
-  "date": "20261112",
-  "aum_eok": 157,
-  "mcap_eok": 156,
-  "index": "iSelect 미국 Tech 10 지수",
-  "nav": "31366.36",
-  "close": "31110"
- },
- {
-  "word": "우주",
-  "code": "0183J0",
-  "name": "TIGER 미국우주테크",
-  "date": "20261112",
-  "aum_eok": 9796,
-  "mcap_eok": 9676,
-  "index": "Akros U.S. Space Tech 지수(PR)",
-  "nav": "6543.54",
-  "close": "6425"
- },
- {
-  "word": "우주",
-  "code": "463250",
-  "name": "TIGER K방산&우주",
-  "date": "20261112",
-  "aum_eok": 3449,
-  "mcap_eok": 3428,
-  "index": "iSelect K방산&우주",
-  "nav": "22180.51",
-  "close": "22115"
- },
- {
-  "word": "우주",
-  "code": "0131V0",
-  "name": "1Q 미국우주항공테크",
-  "date": "20261112",
-  "aum_eok": 3323,
-  "mcap_eok": 3288,
-  "index": "Akros 미국우주항공테크 지수",
-  "nav": "10318.95",
-  "close": "10180"
- },
- {
-  "word": "우주",
-  "code": "0167Z0",
-  "name": "KODEX 미국우주항공",
-  "date": "20261112",
-  "aum_eok": 3020,
-  "mcap_eok": 2995,
-  "index": "iSelect 미국우주항공지수(Price Return)",
-  "nav": "6426.43",
-  "close": "6305"
- },
- {
-  "word": "우주",
-  "code": "478150",
-  "name": "TIME 글로벌우주테크&방산액티브",
-  "date": "20261112",
-  "aum_eok": 1925,
-  "mcap_eok": 1946,
-  "index": "Solactive Aerospace and Defense USD Index PR",
-  "nav": "17106.85",
-  "close": "16995"
- },
- {
-  "word": "우주",
-  "code": "421320",
-  "name": "PLUS 우주항공",
-  "date": "20261112",
-  "aum_eok": 1563,
-  "mcap_eok": 1565,
-  "index": "iSelect 우주항공UAM 지수",
-  "nav": "21265.34",
-  "close": "21295"
- },
- {
-  "word": "우주",
-  "code": "0180V0",
-  "name": "ACE 미국우주테크액티브",
-  "date": "20261112",
-  "aum_eok": 1319,
-  "mcap_eok": 1335,
-  "index": "FnGuide 미국스페이스테크 지수(시장가격)",
-  "nav": "7189.59",
-  "close": "7080"
- },
- {
-  "word": "우주",
-  "code": "0181L0",
-  "name": "SOL 미국우주항공TOP10",
-  "date": "20261112",
-  "aum_eok": 551,
-  "mcap_eok": 528,
-  "index": "KEDI 미국우주항공 TOP10(PR)",
-  "nav": "6221.16",
-  "close": "6100"
- },
- {
-  "word": "우주",
-  "code": "440910",
-  "name": "WON 미국우주항공방산",
-  "date": "20261112",
-  "aum_eok": 482,
-  "mcap_eok": 490,
-  "index": "S&P Aerospace & Defense Select Industry Index(PR)",
-  "nav": "21902.69",
-  "close": "21775"
- },
- {
-  "word": "우주",
-  "code": "0207G0",
-  "name": "SOL 우주항공밸류체인",
-  "date": "20261112",
-  "aum_eok": 446,
-  "mcap_eok": 444,
-  "index": "Akros 우주항공밸류체인 지수(PR)",
-  "nav": "5903.88",
-  "close": "5925"
- },
- {
-  "word": "우주",
-  "code": "0218J0",
-  "name": "RISE 미국우주&로봇TOP2미국채혼합50",
-  "date": "20261112",
-  "aum_eok": 412,
-  "mcap_eok": 406,
-  "index": "Akros 미국 우주-로봇 TOP2 채권혼합50 지수",
-  "nav": "8959.21",
-  "close": "8920"
- },
- {
-  "word": "우주",
-  "code": "0207Z0",
-  "name": "KIWOOM 미국우주데이터센터인프라",
-  "date": "20261112",
-  "aum_eok": 124,
-  "mcap_eok": 121,
-  "index": "iSelect 미국 우주데이터센터인프라 지수",
-  "nav": "6039.46",
-  "close": "5885"
- },
- {
-  "word": "우주",
-  "code": "0216K0",
-  "name": "KIWOOM 미국우주테크TOP2채권혼합50",
-  "date": "20261112",
-  "aum_eok": 85,
-  "mcap_eok": 84,
-  "index": "Akros 미국 우주 Top 2 채권혼합 지수",
-  "nav": "8531.77",
-  "close": "8375"
- },
- {
-  "word": "우주",
-  "code": "0227K0",
-  "name": "RISE 미국우주위성통신",
-  "date": "20261112",
-  "aum_eok": 77,
-  "mcap_eok": 75,
-  "index": "Indxx US Space Satellite Communications Index PR",
-  "nav": "7719.89",
-  "close": "7530"
- },
- {
-  "word": "필라델피아",
-  "code": "381180",
-  "name": "TIGER 미국필라델피아반도체나스닥",
-  "date": "20261112",
-  "aum_eok": 50039,
-  "mcap_eok": 48922,
-  "index": "PHLX Semiconductor Sector Index",
-  "nav": "36485",
-  "close": "35425"
- },
- {
-  "word": "필라델피아",
-  "code": "497570",
-  "name": "TIGER 미국필라델피아AI반도체나스닥",
-  "date": "20261112",
-  "aum_eok": 8244,
-  "mcap_eok": 8413,
-  "index": "PHLX US AI Semiconductor 지수 (PR)",
-  "nav": "18693.31",
-  "close": "18430"
- },
- {
-  "word": "필라델피아",
-  "code": "423920",
-  "name": "TIGER 미국필라델피아반도체레버리지(합성)",
-  "date": "20261112",
-  "aum_eok": 4012,
-  "mcap_eok": 3822,
-  "index": "PHLX Semiconductor Sector Index",
-  "nav": "55948.63",
-  "close": "53760"
- }
-]
+{
+ "error": null,
+ "date": "2026-11-12",
+ "rows": [
+  {
+   "code": "360750",
+   "name": "TIGER 미국S&P500",
+   "aum_eok": 209543,
+   "trade_eok": 10325.6,
+   "index": "S&P 500",
+   "nav": "25116.07",
+   "close": "25000"
+  },
+  {
+   "code": "133690",
+   "name": "TIGER 미국나스닥100",
+   "aum_eok": 114405,
+   "trade_eok": 5108.9,
+   "index": "NASDAQ 100",
+   "nav": "166941.88",
+   "close": "165315"
+  },
+  {
+   "code": "379800",
+   "name": "KODEX 미국S&P500",
+   "aum_eok": 105227,
+   "trade_eok": 9319.7,
+   "index": "S&P 500",
+   "nav": "22769.12",
+   "close": "22660"
+  },
+  {
+   "code": "379810",
+   "name": "KODEX 미국나스닥100",
+   "aum_eok": 96056,
+   "trade_eok": 4170.5,
+   "index": "NASDAQ 100",
+   "nav": "24936.68",
+   "close": "24695"
+  },
+  {
+   "code": "381180",
+   "name": "TIGER 미국필라델피아반도체나스닥",
+   "aum_eok": 50039,
+   "trade_eok": 666.4,
+   "index": "PHLX Semiconductor Sector Index",
+   "nav": "36485",
+   "close": "35425"
+  },
+  {
+   "code": "458730",
+   "name": "TIGER 미국배당다우존스",
+   "aum_eok": 46774,
+   "trade_eok": 242.8,
+   "index": "Dow Jones U.S. Dividend 100 Price Return Index",
+   "nav": "15169.09",
+   "close": "15170"
+  },
+  {
+   "code": "360200",
+   "name": "ACE 미국S&P500",
+   "aum_eok": 38979,
+   "trade_eok": 119.2,
+   "index": "S&P 500",
+   "nav": "25393.77",
+   "close": "25280"
+  },
+  {
+   "code": "381170",
+   "name": "TIGER 미국테크TOP10 INDXX",
+   "aum_eok": 35796,
+   "trade_eok": 328.5,
+   "index": "Indxx US Tech Top 10 Index",
+   "nav": "28670.83",
+   "close": "28325"
+  },
+  {
+   "code": "367380",
+   "name": "ACE 미국나스닥100",
+   "aum_eok": 33735,
+   "trade_eok": 76.0,
+   "index": "NASDAQ 100",
+   "nav": "28710.95",
+   "close": "28430"
+  },
+  {
+   "code": "486290",
+   "name": "TIGER 미국나스닥100타겟데일리커버드콜",
+   "aum_eok": 25419,
+   "trade_eok": 102.5,
+   "index": "NASDAQ 100 Daily Covered Call Target Premium 15% 지수(TR)",
+   "nav": "9447.84",
+   "close": "9380"
+  },
+  {
+   "code": "426030",
+   "name": "TIME 미국나스닥100액티브",
+   "aum_eok": 20936,
+   "trade_eok": 240.7,
+   "index": "NASDAQ 100",
+   "nav": "37492.41",
+   "close": "36885"
+  },
+  {
+   "code": "284430",
+   "name": "KODEX 200미국채혼합50",
+   "aum_eok": 17054,
+   "trade_eok": 59.9,
+   "index": "코스피 200 미국채 혼합지수",
+   "nav": "18019.4",
+   "close": "18045"
+  },
+  {
+   "code": "441640",
+   "name": "KODEX 미국배당커버드콜액티브",
+   "aum_eok": 16963,
+   "trade_eok": 49.1,
+   "index": "S&P 500",
+   "nav": "11883.2",
+   "close": "11855"
+  },
+  {
+   "code": "456600",
+   "name": "TIME 글로벌AI인공지능액티브",
+   "aum_eok": 15614,
+   "trade_eok": 33.3,
+   "index": "Solactive Global Artificial Intelligence 지수",
+   "nav": "45815.79",
+   "close": "45230"
+  },
+  {
+   "code": "379780",
+   "name": "RISE 미국S&P500",
+   "aum_eok": 15254,
+   "trade_eok": 35.2,
+   "index": "S&P 500",
+   "nav": "21948.75",
+   "close": "21860"
+  },
+  {
+   "code": "368590",
+   "name": "RISE 미국나스닥100",
+   "aum_eok": 15119,
+   "trade_eok": 38.1,
+   "index": "NASDAQ 100",
+   "nav": "27843.04",
+   "close": "27580"
+  },
+  {
+   "code": "453850",
+   "name": "ACE 미국30년국채액티브(H)",
+   "aum_eok": 14485,
+   "trade_eok": 55.3,
+   "index": "Bloomberg U.S Treasury 20+ Year Total Return Index",
+   "nav": "7069.53",
+   "close": "7080"
+  },
+  {
+   "code": "446770",
+   "name": "ACE 글로벌반도체TOP4 Plus",
+   "aum_eok": 12769,
+   "trade_eok": 120.2,
+   "index": "Solactive Global Semiconductor TOP4 Plus Price Return Index",
+   "nav": "64163.33",
+   "close": "62420"
+  },
+  {
+   "code": "465580",
+   "name": "ACE 미국빅테크TOP7 Plus",
+   "aum_eok": 12464,
+   "trade_eok": 107.1,
+   "index": "Solactive US Big Tech Top 7 Plus Price Return Index",
+   "nav": "22702.77",
+   "close": "22465"
+  },
+  {
+   "code": "438080",
+   "name": "ACE 미국S&P500미국채혼합50액티브",
+   "aum_eok": 12351,
+   "trade_eok": 28.4,
+   "index": "S&P 500 and Short-Term Treasury 50/50 Blend Index",
+   "nav": "13512.69",
+   "close": "13505"
+  },
+  {
+   "code": "442580",
+   "name": "PLUS 글로벌HBM반도체",
+   "aum_eok": 12314,
+   "trade_eok": 264.4,
+   "index": "iSelect 글로벌HBM반도체 지수",
+   "nav": "77107.54",
+   "close": "75830"
+  },
+  {
+   "code": "449180",
+   "name": "KODEX 미국S&P500(H)",
+   "aum_eok": 10993,
+   "trade_eok": 32.9,
+   "index": "S&P 500",
+   "nav": "16951.56",
+   "close": "16885"
+  },
+  {
+   "code": "390390",
+   "name": "KODEX 미국반도체",
+   "aum_eok": 10940,
+   "trade_eok": 316.5,
+   "index": "MVIS US Listed Semiconductor 25 Index",
+   "nav": "45773.2",
+   "close": "44350"
+  },
+  {
+   "code": "487230",
+   "name": "KODEX 미국AI전력핵심인프라",
+   "aum_eok": 10861,
+   "trade_eok": 227.3,
+   "index": "iSelect 미국AI전력핵심인프라 지수(Price Return)",
+   "nav": "15211.63",
+   "close": "14890"
+  },
+  {
+   "code": "446720",
+   "name": "SOL 미국배당다우존스",
+   "aum_eok": 10843,
+   "trade_eok": 38.0,
+   "index": "Dow Jones U.S. Dividend 100 Price Return Index",
+   "nav": "13900.68",
+   "close": "13905"
+  },
+  {
+   "code": "402970",
+   "name": "ACE 미국배당다우존스",
+   "aum_eok": 10236,
+   "trade_eok": 37.0,
+   "index": "Dow Jones U.S. Dividend 100 Price Return Index",
+   "nav": "15416.07",
+   "close": "15420"
+  },
+  {
+   "code": "0183J0",
+   "name": "TIGER 미국우주테크",
+   "aum_eok": 9796,
+   "trade_eok": 68.7,
+   "index": "Akros U.S. Space Tech 지수(PR)",
+   "nav": "6543.54",
+   "close": "6425"
+  },
+  {
+   "code": "494300",
+   "name": "KODEX 미국나스닥100데일리커버드콜OTM",
+   "aum_eok": 9796,
+   "trade_eok": 90.2,
+   "index": "NASDAQ-100 Daily Covered Call 101 Index(TR)",
+   "nav": "8036.17",
+   "close": "7960"
+  },
+  {
+   "code": "0048J0",
+   "name": "KODEX 미국머니마켓액티브",
+   "aum_eok": 9355,
+   "trade_eok": 65.2,
+   "index": "KAP 미국 머니마켓 지수",
+   "nav": "13241.94",
+   "close": "13250"
+  },
+  {
+   "code": "438100",
+   "name": "ACE 미국나스닥100미국채혼합50액티브",
+   "aum_eok": 9164,
+   "trade_eok": 23.0,
+   "index": "NASDAQ-100 US T-Bills 50/50 Index",
+   "nav": "14386.23",
+   "close": "14365"
+  },
+  {
+   "code": "497570",
+   "name": "TIGER 미국필라델피아AI반도체나스닥",
+   "aum_eok": 8244,
+   "trade_eok": 86.2,
+   "index": "PHLX US AI Semiconductor 지수 (PR)",
+   "nav": "18693.31",
+   "close": "18430"
+  },
+  {
+   "code": "456610",
+   "name": "TIGER 미국달러SOFR금리액티브(합성)",
+   "aum_eok": 7472,
+   "trade_eok": 9.8,
+   "index": "Solactive SOFR Daily Total Return Index",
+   "nav": "58245.77",
+   "close": "58185"
+  },
+  {
+   "code": "476550",
+   "name": "TIGER 미국30년국채커버드콜액티브(H)",
+   "aum_eok": 7427,
+   "trade_eok": 41.6,
+   "index": "KEDI 미국채30년 위클리 커버드콜30 지수(Total Return)",
+   "nav": "6572.84",
+   "close": "6580"
+  },
+  {
+   "code": "329750",
+   "name": "TIGER 미국달러단기채권액티브",
+   "aum_eok": 7308,
+   "trade_eok": 19.2,
+   "index": "KIS U.S. TREASURY BOND 0-1Y 지수(총수익)",
+   "nav": "12638.67",
+   "close": "12640"
+  },
+  {
+   "code": "418660",
+   "name": "TIGER 미국나스닥100레버리지(합성)",
+   "aum_eok": 7206,
+   "trade_eok": 78.0,
+   "index": "NASDAQ 100",
+   "nav": "33672.82",
+   "close": "33045"
+  },
+  {
+   "code": "481060",
+   "name": "KODEX 미국30년국채타겟커버드콜(합성 H)",
+   "aum_eok": 7042,
+   "trade_eok": 19.9,
+   "index": "Bloomberg U.S.Treasury 20+ Year(TLT)+ 12% Premium Covered Call index(TR)",
+   "nav": "7215",
+   "close": "7200"
+  },
+  {
+   "code": "458760",
+   "name": "TIGER 미국배당다우존스타겟커버드콜2호",
+   "aum_eok": 6957,
+   "trade_eok": 17.5,
+   "index": "DowJones U.S. Dividend 100 7% Premium Covered Call 지수 (TR)",
+   "nav": "11024.9",
+   "close": "11055"
+  },
+  {
+   "code": "482730",
+   "name": "TIGER 미국S&P500타겟데일리커버드콜",
+   "aum_eok": 6947,
+   "trade_eok": 43.3,
+   "index": "S&P500 10% Daily Premium Covered Call Index(TR)",
+   "nav": "10940.59",
+   "close": "10900"
+  },
+  {
+   "code": "457480",
+   "name": "ACE 테슬라밸류체인액티브",
+   "aum_eok": 6917,
+   "trade_eok": 14.9,
+   "index": "Bloomberg EV Supporters Plus Tesla Price Return Index",
+   "nav": "16973.6",
+   "close": "16705"
+  },
+  {
+   "code": "490590",
+   "name": "RISE 미국AI밸류체인데일리고정커버드콜",
+   "aum_eok": 6555,
+   "trade_eok": 108.6,
+   "index": "KEDI 미국 AI밸류체인 90%참여+데일리옵션 프리미엄 지수(TR)",
+   "nav": "11410.39",
+   "close": "11190"
+  },
+  {
+   "code": "489250",
+   "name": "KODEX 미국배당다우존스",
+   "aum_eok": 6424,
+   "trade_eok": 54.9,
+   "index": "Dow Jones U.S. Dividend 100 Price Return Index",
+   "nav": "13057.47",
+   "close": "13070"
+  },
+  {
+   "code": "314250",
+   "name": "KODEX 미국빅테크10(H)",
+   "aum_eok": 6170,
+   "trade_eok": 21.0,
+   "index": "NYSE U.S. Big TECH 10 INDEX",
+   "nav": "58598.66",
+   "close": "57980"
+  },
+  {
+   "code": "0127P0",
+   "name": "ACE 미국대형성장주액티브",
+   "aum_eok": 6040,
+   "trade_eok": 11.7,
+   "index": "CRSP US Large Cap Growth Index(PR)",
+   "nav": "9564.71",
+   "close": "9445"
+  },
+  {
+   "code": "484790",
+   "name": "KODEX 미국30년국채액티브(H)",
+   "aum_eok": 5883,
+   "trade_eok": 17.4,
+   "index": "KEDI-KAP 미국 국채 20+ 지수(TR)",
+   "nav": "8074.53",
+   "close": "8085"
+  },
+  {
+   "code": "491620",
+   "name": "RISE 미국테크100데일리고정커버드콜",
+   "aum_eok": 5571,
+   "trade_eok": 21.6,
+   "index": "KEDI 미국 테크100 90%참여+데일리옵션 프리미엄 지수(TR)",
+   "nav": "9498.42",
+   "close": "9415"
+  },
+  {
+   "code": "449190",
+   "name": "KODEX 미국나스닥100(H)",
+   "aum_eok": 5500,
+   "trade_eok": 25.2,
+   "index": "NASDAQ 100",
+   "nav": "21274.67",
+   "close": "21080"
+  },
+  {
+   "code": "0019K0",
+   "name": "TIME 미국나스닥100채권혼합50액티브",
+   "aum_eok": 5407,
+   "trade_eok": 24.2,
+   "index": "FnGuide 미국나스닥100 단기채권혼합 지수",
+   "nav": "12109.32",
+   "close": "12015"
+  },
+  {
+   "code": "455030",
+   "name": "KODEX 미국달러SOFR금리액티브(합성)",
+   "aum_eok": 5288,
+   "trade_eok": 7.9,
+   "index": "Bloomberg SOFR Daily Total Return Index",
+   "nav": "11407.87",
+   "close": "11385"
+  },
+  {
+   "code": "435420",
+   "name": "TIGER 미국나스닥100채권혼합50",
+   "aum_eok": 5190,
+   "trade_eok": 23.3,
+   "index": "FnGuide 나스닥100채권혼합50 지수(총수익 지수)",
+   "nav": "13657.45",
+   "close": "13600"
+  },
+  {
+   "code": "448290",
+   "name": "TIGER 미국S&P500(H)",
+   "aum_eok": 5161,
+   "trade_eok": 112.9,
+   "index": "S&P 500",
+   "nav": "17554.46",
+   "close": "17490"
+  },
+  {
+   "code": "0015B0",
+   "name": "KoAct 미국나스닥성장기업액티브",
+   "aum_eok": 4895,
+   "trade_eok": 122.6,
+   "index": "나스닥 종합주가지수",
+   "nav": "14810.54",
+   "close": "14675"
+  },
+  {
+   "code": "490490",
+   "name": "SOL 미국배당미국채혼합50",
+   "aum_eok": 4830,
+   "trade_eok": 14.7,
+   "index": "KRX 다우존스 미국배당국채 혼합지수",
+   "nav": "10853.85",
+   "close": "10865"
+  },
+  {
+   "code": "466950",
+   "name": "TIGER 글로벌AI액티브",
+   "aum_eok": 4544,
+   "trade_eok": 4.3,
+   "index": "Indxx Artificial Intelligence and Big Data 지수(PR)",
+   "nav": "24262.12",
+   "close": "24080"
+  },
+  {
+   "code": "476760",
+   "name": "ACE 미국30년국채액티브",
+   "aum_eok": 4534,
+   "trade_eok": 38.8,
+   "index": "Bloomberg U.S Treasury 20+ Year Total Return Index",
+   "nav": "8491.04",
+   "close": "8510"
+  },
+  {
+   "code": "491010",
+   "name": "TIGER 글로벌AI전력인프라액티브",
+   "aum_eok": 4464,
+   "trade_eok": 13.0,
+   "index": "Mirae Asset AI Infrastructure 지수(PR)",
+   "nav": "18963.87",
+   "close": "18675"
+  },
+  {
+   "code": "447770",
+   "name": "TIGER 테슬라채권혼합Fn",
+   "aum_eok": 4397,
+   "trade_eok": 7.8,
+   "index": "FnGuide 테슬라채권혼합 지수",
+   "nav": "14277.12",
+   "close": "14230"
+  },
+  {
+   "code": "0046A0",
+   "name": "TIGER 미국초단기(3개월이하)국채",
+   "aum_eok": 4016,
+   "trade_eok": 38.6,
+   "index": "ICE 0-3 Month US Treasury Securities 지수",
+   "nav": "9216.76",
+   "close": "9215"
+  },
+  {
+   "code": "423920",
+   "name": "TIGER 미국필라델피아반도체레버리지(합성)",
+   "aum_eok": 4012,
+   "trade_eok": 118.3,
+   "index": "PHLX Semiconductor Sector Index",
+   "nav": "55948.63",
+   "close": "53760"
+  },
+  {
+   "code": "483280",
+   "name": "KODEX 미국AI테크TOP10타겟커버드콜",
+   "aum_eok": 3985,
+   "trade_eok": 24.3,
+   "index": "KEDI 미국 AI 테크 TOP10+15%프리미엄 지수(Total Return)",
+   "nav": "10296.11",
+   "close": "10145"
+  },
+  {
+   "code": "448300",
+   "name": "TIGER 미국나스닥100(H)",
+   "aum_eok": 3948,
+   "trade_eok": 6.2,
+   "index": "NASDAQ 100",
+   "nav": "21935.12",
+   "close": "21745"
+  },
+  {
+   "code": "474220",
+   "name": "TIGER 미국테크TOP10타겟커버드콜",
+   "aum_eok": 3849,
+   "trade_eok": 7.3,
+   "index": "Bloomberg U.S. Tech Top10+10% Premium Covered Call Index",
+   "nav": "13747.08",
+   "close": "13605"
+  },
+  {
+   "code": "426020",
+   "name": "TIME 미국S&P500액티브",
+   "aum_eok": 3804,
+   "trade_eok": 11.5,
+   "index": "S&P 500",
+   "nav": "29352.56",
+   "close": "29175"
+  },
+  {
+   "code": "458250",
+   "name": "TIGER 미국30년국채스트립액티브(합성 H)",
+   "aum_eok": 3592,
+   "trade_eok": 14.9,
+   "index": "ICE BofA Long US Treasury Principal STRIPS Index",
+   "nav": "34167.62",
+   "close": "34295"
+  },
+  {
+   "code": "0040Y0",
+   "name": "SOL 팔란티어커버드콜OTM채권혼합",
+   "aum_eok": 3528,
+   "trade_eok": 13.9,
+   "index": "KEDI 팔란티어커버드콜OTM 채권혼합지수(NTR)",
+   "nav": "7539.16",
+   "close": "7470"
+  },
+  {
+   "code": "0026S0",
+   "name": "1Q 미국S&P500",
+   "aum_eok": 3428,
+   "trade_eok": 10.0,
+   "index": "S&P 500",
+   "nav": "12285.67",
+   "close": "12225"
+  },
+  {
+   "code": "0023A0",
+   "name": "SOL 미국양자컴퓨팅TOP10",
+   "aum_eok": 3364,
+   "trade_eok": 32.6,
+   "index": "KEDI 미국양자컴퓨팅 TOP10(PR)",
+   "nav": "18132.5",
+   "close": "17670"
+  },
+  {
+   "code": "472170",
+   "name": "TIGER 미국테크TOP10채권혼합",
+   "aum_eok": 3343,
+   "trade_eok": 6.2,
+   "index": "FnGuide 미국테크TOP10 채권혼합지수",
+   "nav": "13591.11",
+   "close": "13505"
+  },
+  {
+   "code": "0131V0",
+   "name": "1Q 미국우주항공테크",
+   "aum_eok": 3323,
+   "trade_eok": 4.0,
+   "index": "Akros 미국우주항공테크 지수",
+   "nav": "10318.95",
+   "close": "10180"
+  },
+  {
+   "code": "0008S0",
+   "name": "TIGER 미국배당다우존스타겟데일리커버드콜",
+   "aum_eok": 3251,
+   "trade_eok": 13.2,
+   "index": "Dow Jones U.S. Dividend 100 10% Daily Premium Covered Call 지수",
+   "nav": "9820.96",
+   "close": "9840"
+  },
+  {
+   "code": "456880",
+   "name": "ACE 미국달러SOFR금리(합성)",
+   "aum_eok": 3250,
+   "trade_eok": 6.3,
+   "index": "Solactive SOFR Daily Total Return Index",
+   "nav": "11784.53",
+   "close": "11775"
+  },
+  {
+   "code": "0144L0",
+   "name": "KODEX 미국성장커버드콜액티브",
+   "aum_eok": 3213,
+   "trade_eok": 6.4,
+   "index": "NASDAQ 100",
+   "nav": "8801.89",
+   "close": "8705"
+  },
+  {
+   "code": "0052S0",
+   "name": "1Q 미국S&P500미국채혼합50액티브",
+   "aum_eok": 3182,
+   "trade_eok": 6.8,
+   "index": "S&P 500 and Short-Term Treasury 50/50 Blend Index",
+   "nav": "11049.21",
+   "close": "11030"
+  },
+  {
+   "code": "0111P0",
+   "name": "1Q 미국나스닥100미국채혼합50액티브",
+   "aum_eok": 3021,
+   "trade_eok": 13.2,
+   "index": "Nasdaq-100 US T-Bills 0-6 Month 50/50 Index",
+   "nav": "10170.15",
+   "close": "10120"
+  },
+  {
+   "code": "0167Z0",
+   "name": "KODEX 미국우주항공",
+   "aum_eok": 3020,
+   "trade_eok": 15.8,
+   "index": "iSelect 미국우주항공지수(Price Return)",
+   "nav": "6426.43",
+   "close": "6305"
+  },
+  {
+   "code": "433330",
+   "name": "SOL 미국S&P500",
+   "aum_eok": 2960,
+   "trade_eok": 15.8,
+   "index": "S&P 500",
+   "nav": "20993.15",
+   "close": "20900"
+  },
+  {
+   "code": "0173Y0",
+   "name": "KODEX 미국AI광통신네트워크",
+   "aum_eok": 2930,
+   "trade_eok": 327.2,
+   "index": "Akros 미국 AI 광통신 및 네트워크 인프라 지수(PR)",
+   "nav": "8128.63",
+   "close": "7765"
+  },
+  {
+   "code": "475080",
+   "name": "KODEX 테슬라커버드콜채권혼합액티브",
+   "aum_eok": 2793,
+   "trade_eok": 4.3,
+   "index": "KEDI 테슬라 인컴 프리미엄 밸런스드 지수(TR)",
+   "nav": "7800.7",
+   "close": "7775"
+  },
+  {
+   "code": "485540",
+   "name": "KODEX 미국AI테크TOP10",
+   "aum_eok": 2784,
+   "trade_eok": 19.7,
+   "index": "KEDI 미국AI테크 TOP10 지수(PR)",
+   "nav": "13716.63",
+   "close": "13515"
+  },
+  {
+   "code": "473330",
+   "name": "SOL 미국30년국채커버드콜(합성)",
+   "aum_eok": 2758,
+   "trade_eok": 12.3,
+   "index": "KEDI 미국 국채 20년+ 커버드콜 지수(NTR)",
+   "nav": "7525.75",
+   "close": "7450"
+  },
+  {
+   "code": "461490",
+   "name": "RISE 글로벌자산배분액티브",
+   "aum_eok": 2704,
+   "trade_eok": 2.8,
+   "index": "Bloomberg Multi-Asset Weighted (KRW ETFs) 지수(시장가격)",
+   "nav": "14421.75",
+   "close": "14420"
+  },
+  {
+   "code": "481190",
+   "name": "SOL 미국테크TOP10",
+   "aum_eok": 2688,
+   "trade_eok": 14.9,
+   "index": "Solactive US Tech TOP 10 Custom Index(PR)",
+   "nav": "15584.47",
+   "close": "15395"
+  },
+  {
+   "code": "441680",
+   "name": "TIGER 미국나스닥100커버드콜(합성)",
+   "aum_eok": 2662,
+   "trade_eok": 3.5,
+   "index": "Cboe Nasdaq-100 BuyWrite V2 지수 (Total Return)",
+   "nav": "10180.87",
+   "close": "10010"
+  },
+  {
+   "code": "305080",
+   "name": "TIGER 미국채10년선물",
+   "aum_eok": 2497,
+   "trade_eok": 5.8,
+   "index": "S&P 10-Year U.S. Treasury Note Futures(ER)",
+   "nav": "11668.62",
+   "close": "11665"
+  },
+  {
+   "code": "0038A0",
+   "name": "KODEX 미국휴머노이드로봇",
+   "aum_eok": 2481,
+   "trade_eok": 7.3,
+   "index": "iSelect 미국 휴머노이드 로봇 지수(Price Return)",
+   "nav": "13592.4",
+   "close": "13355"
+  },
+  {
+   "code": "452360",
+   "name": "SOL 미국배당다우존스(H)",
+   "aum_eok": 2332,
+   "trade_eok": 22.9,
+   "index": "Dow Jones U.S. Dividend 100 Price Return Index",
+   "nav": "14047.87",
+   "close": "14080"
+  },
+  {
+   "code": "409820",
+   "name": "KODEX 미국나스닥100레버리지(합성 H)",
+   "aum_eok": 2296,
+   "trade_eok": 28.6,
+   "index": "NASDAQ 100",
+   "nav": "18009.36",
+   "close": "17665"
+  },
+  {
+   "code": "483320",
+   "name": "ACE 엔비디아밸류체인액티브",
+   "aum_eok": 2253,
+   "trade_eok": 115.9,
+   "index": "KEDI 글로벌AI반도체 지수",
+   "nav": "19012.46",
+   "close": "18350"
+  },
+  {
+   "code": "493810",
+   "name": "TIGER 미국AI빅테크10타겟데일리커버드콜",
+   "aum_eok": 2176,
+   "trade_eok": 10.2,
+   "index": "KEDI 미국AI빅테크10+15%데일리프리미엄 지수(TR)",
+   "nav": "10050.9",
+   "close": "9905"
+  },
+  {
+   "code": "437080",
+   "name": "KODEX 미국종합채권ESG액티브(H)",
+   "aum_eok": 2090,
+   "trade_eok": 1.4,
+   "index": "Bloomberg MSCI US Aggregate 2bn ex Securitized SRI Capped Index(Total Return)",
+   "nav": "95026.42",
+   "close": "95060"
+  },
+  {
+   "code": "0091C0",
+   "name": "KODEX 미국10년국채액티브(H)",
+   "aum_eok": 2061,
+   "trade_eok": 7.9,
+   "index": "KAP 미국 국채 10년 지수(총수익)",
+   "nav": "9359.99",
+   "close": "9375"
+  },
+  {
+   "code": "423170",
+   "name": "SOL 글로벌AI반도체탑픽액티브",
+   "aum_eok": 2056,
+   "trade_eok": 4.4,
+   "index": "S&P Global Semiconductor Korea Tilted Index(PR)",
+   "nav": "46738.26",
+   "close": "46140"
+  },
+  {
+   "code": "458260",
+   "name": "TIGER 미국투자등급회사채액티브(H)",
+   "aum_eok": 2040,
+   "trade_eok": 2.9,
+   "index": "iBoxx USD Liquid Investment Grade Index(Price Return)",
+   "nav": "45253.03",
+   "close": "45335"
+  },
+  {
+   "code": "429000",
+   "name": "TIGER 미국S&P500배당귀족",
+   "aum_eok": 2007,
+   "trade_eok": 12.4,
+   "index": "S&P 500 Dividend Aristocrats 지수 (Price Return)",
+   "nav": "13655.6",
+   "close": "13685"
+  },
+  {
+   "code": "483340",
+   "name": "ACE 구글밸류체인액티브",
+   "aum_eok": 1998,
+   "trade_eok": 26.6,
+   "index": "KEDI 글로벌 AI 클라우드 지수",
+   "nav": "17603.77",
+   "close": "17400"
+  },
+  {
+   "code": "0069M0",
+   "name": "1Q 미국나스닥100",
+   "aum_eok": 1974,
+   "trade_eok": 32.8,
+   "index": "NASDAQ 100",
+   "nav": "12491.58",
+   "close": "12360"
+  },
+  {
+   "code": "0005A0",
+   "name": "KODEX 미국S&P500데일리커버드콜OTM",
+   "aum_eok": 1972,
+   "trade_eok": 10.4,
+   "index": "S&P 500 Covered Call 1% OTM Daily Index(TR)",
+   "nav": "8686.6",
+   "close": "8640"
+  },
+  {
+   "code": "448540",
+   "name": "ACE 엔비디아채권혼합",
+   "aum_eok": 1946,
+   "trade_eok": 88.9,
+   "index": "Bloomberg Blended NVIDIA Equity and Korean Bond Index",
+   "nav": "24638.59",
+   "close": "24125"
+  },
+  {
+   "code": "490090",
+   "name": "TIGER 미국AI빅테크10",
+   "aum_eok": 1928,
+   "trade_eok": 7.4,
+   "index": "KEDI 미국AI빅테크10 지수(PR)",
+   "nav": "14603.8",
+   "close": "14395"
+  },
+  {
+   "code": "478150",
+   "name": "TIME 글로벌우주테크&방산액티브",
+   "aum_eok": 1925,
+   "trade_eok": 3.2,
+   "index": "Solactive Aerospace and Defense USD Index PR",
+   "nav": "17106.85",
+   "close": "16995"
+  },
+  {
+   "code": "471040",
+   "name": "KoAct 글로벌AI&로봇액티브",
+   "aum_eok": 1924,
+   "trade_eok": 8.5,
+   "index": "iSelect 글로벌AI&로봇PR지수",
+   "nav": "21988.58",
+   "close": "21760"
+  },
+  {
+   "code": "0085P0",
+   "name": "ACE 미국10년국채액티브",
+   "aum_eok": 1910,
+   "trade_eok": 20.1,
+   "index": "ICE U.S. Treasury 7-10 Year Bond Index (Total Return)",
+   "nav": "9315.86",
+   "close": "9320"
+  },
+  {
+   "code": "261260",
+   "name": "KODEX 미국달러선물인버스2X",
+   "aum_eok": 1909,
+   "trade_eok": 8.7,
+   "index": "미국달러선물지수",
+   "nav": "5731.46",
+   "close": "5725"
+  },
+  {
+   "code": "480040",
+   "name": "ACE 미국반도체데일리타겟커버드콜(합성)",
+   "aum_eok": 1829,
+   "trade_eok": 18.5,
+   "index": "Bloomberg US Listed Semiconductor Premium Decrement 15% Distribution Index",
+   "nav": "11358",
+   "close": "11135"
+  },
+  {
+   "code": "498270",
+   "name": "KIWOOM 미국양자컴퓨팅",
+   "aum_eok": 1817,
+   "trade_eok": 3.5,
+   "index": "Solactive U.S. Quantum Computing Index(PR)",
+   "nav": "11992.2",
+   "close": "11790"
+  },
+  {
+   "code": "0233J0",
+   "name": "TIGER 삼성전자SK하이닉스미국채혼합50",
+   "aum_eok": 1816,
+   "trade_eok": 12.5,
+   "index": "KRX 삼성전자 SK하이닉스 미국채 혼합지수",
+   "nav": "9081.7",
+   "close": "9085"
+  },
+  {
+   "code": "483290",
+   "name": "KODEX 미국배당다우존스타겟커버드콜",
+   "aum_eok": 1805,
+   "trade_eok": 8.5,
+   "index": "Dow Jones U.S. Dividend 100 10% Premium Covered Call Index(Total Return)",
+   "nav": "10311.95",
+   "close": "10310"
+  },
+  {
+   "code": "486450",
+   "name": "SOL 미국AI전력인프라",
+   "aum_eok": 1794,
+   "trade_eok": 9.2,
+   "index": "KEDI 미국AI전력인프라 지수(PR)",
+   "nav": "16158.56",
+   "close": "15915"
+  },
+  {
+   "code": "480020",
+   "name": "ACE 미국빅테크7+데일리타겟커버드콜(합성)",
+   "aum_eok": 1790,
+   "trade_eok": 34.4,
+   "index": "Bloomberg US Big Tech Top 7 Plus Premium Decrement 15% Distribution Index",
+   "nav": "8819.13",
+   "close": "8725"
+  },
+  {
+   "code": "472160",
+   "name": "TIGER 미국테크TOP10 INDXX(H)",
+   "aum_eok": 1771,
+   "trade_eok": 7.5,
+   "index": "Indxx US Tech Top 10 Index",
+   "nav": "18072.02",
+   "close": "17860"
+  },
+  {
+   "code": "442320",
+   "name": "RISE 글로벌원자력",
+   "aum_eok": 1650,
+   "trade_eok": 2.9,
+   "index": "iSelect 글로벌원자력 지수(시장가격)",
+   "nav": "26966.99",
+   "close": "26730"
+  },
+  {
+   "code": "490600",
+   "name": "RISE 미국배당100데일리고정커버드콜",
+   "aum_eok": 1626,
+   "trade_eok": 9.5,
+   "index": "KEDI 미국 배당100 90%참여+데일리옵션 프리미엄 지수(총수익지수)",
+   "nav": "8835.85",
+   "close": "8845"
+  },
+  {
+   "code": "0040X0",
+   "name": "SOL 팔란티어미국채커버드콜혼합",
+   "aum_eok": 1616,
+   "trade_eok": 5.6,
+   "index": "KEDI 팔란티어미국채커버드콜혼합지수(NTR)",
+   "nav": "8783.58",
+   "close": "8740"
+  },
+  {
+   "code": "0151S0",
+   "name": "KODEX 미국AI반도체TOP3플러스",
+   "aum_eok": 1578,
+   "trade_eok": 29.7,
+   "index": "Akros 미국 AI 반도체 Top 3 플러스 지수 (Price Return)",
+   "nav": "11691.94",
+   "close": "11345"
+  },
+  {
+   "code": "472870",
+   "name": "RISE 미국30년국채엔화노출(합성 H)",
+   "aum_eok": 1571,
+   "trade_eok": 9.1,
+   "index": "KIS 미국채30년 엔화노출 지수(USD/JPY 헤지)(총수익지수)",
+   "nav": "6476.5",
+   "close": "6480"
+  },
+  {
+   "code": "480030",
+   "name": "ACE 미국500데일리타겟커버드콜(합성)",
+   "aum_eok": 1531,
+   "trade_eok": 6.4,
+   "index": "Bloomberg US 500 Large Cap Premium Decrement 15% Distribution Index",
+   "nav": "8849.1",
+   "close": "8840"
+  },
+  {
+   "code": "473460",
+   "name": "KODEX 미국서학개미",
+   "aum_eok": 1523,
+   "trade_eok": 11.6,
+   "index": "iSelect 서학개미 지수(PR)",
+   "nav": "20721.9",
+   "close": "20230"
+  },
+  {
+   "code": "0261H0",
+   "name": "KODEX 미국나스닥100미국채혼합50",
+   "aum_eok": 1508,
+   "trade_eok": 33.5,
+   "index": "Nasdaq-100 US T-Bills 1-3 Month 50/50 Index (USD)",
+   "nav": "10055.54",
+   "close": "10005"
+  },
+  {
+   "code": "219480",
+   "name": "KODEX 미국S&P500선물(H)",
+   "aum_eok": 1455,
+   "trade_eok": 3.9,
+   "index": "S&P 500 Futures Total Return Index",
+   "nav": "32707.44",
+   "close": "32565"
+  },
+  {
+   "code": "0127M0",
+   "name": "ACE 미국대형가치주액티브",
+   "aum_eok": 1443,
+   "trade_eok": 3.6,
+   "index": "CRSP US Large Cap Value Index(PR)",
+   "nav": "12022.28",
+   "close": "11985"
+  },
+  {
+   "code": "245340",
+   "name": "TIGER 미국다우존스30",
+   "aum_eok": 1400,
+   "trade_eok": 3.1,
+   "index": "Dow Jones Industrial Average",
+   "nav": "33975.57",
+   "close": "34045"
+  },
+  {
+   "code": "0057H0",
+   "name": "PLUS 미국S&P500미국채혼합50액티브",
+   "aum_eok": 1353,
+   "trade_eok": 6.9,
+   "index": "S&P 500 and U.S. Treasury Bill 0-3 Month 50/50 Blend Index (USD)",
+   "nav": "11181.37",
+   "close": "11165"
+  },
+  {
+   "code": "0180V0",
+   "name": "ACE 미국우주테크액티브",
+   "aum_eok": 1319,
+   "trade_eok": 8.2,
+   "index": "FnGuide 미국스페이스테크 지수(시장가격)",
+   "nav": "7189.59",
+   "close": "7080"
+  },
+  {
+   "code": "0041E0",
+   "name": "KODEX 미국S&P500액티브",
+   "aum_eok": 1318,
+   "trade_eok": 3.4,
+   "index": "S&P 500",
+   "nav": "14645.25",
+   "close": "14555"
+  },
+  {
+   "code": "476030",
+   "name": "SOL 미국나스닥100",
+   "aum_eok": 1313,
+   "trade_eok": 3.6,
+   "index": "NASDAQ 100",
+   "nav": "15824.58",
+   "close": "15660"
+  },
+  {
+   "code": "394670",
+   "name": "TIGER 글로벌리튬&2차전지SOLACTIVE(합성)",
+   "aum_eok": 1305,
+   "trade_eok": 1.6,
+   "index": "Solactive Global Lithium 지수(PR)",
+   "nav": "8988.61",
+   "close": "8750"
+  },
+  {
+   "code": "0104H0",
+   "name": "KoAct 미국나스닥채권혼합50액티브",
+   "aum_eok": 1276,
+   "trade_eok": 1.2,
+   "index": "FnGuide 미국나스닥 금융채권혼합 지수",
+   "nav": "10673.7",
+   "close": "10595"
+  },
+  {
+   "code": "447620",
+   "name": "SOL 미국TOP5채권혼합50",
+   "aum_eok": 1257,
+   "trade_eok": 6.9,
+   "index": "Solactive US TOP5 Balanced50 Index(PR)",
+   "nav": "15325.29",
+   "close": "15200"
+  },
+  {
+   "code": "0051G0",
+   "name": "SOL 미국원자력SMR",
+   "aum_eok": 1218,
+   "trade_eok": 2.4,
+   "index": "KEDI 미국원자력 SMR 지수(PR)",
+   "nav": "9981.02",
+   "close": "9910"
+  },
+  {
+   "code": "304660",
+   "name": "KODEX 미국30년국채울트라선물(H)",
+   "aum_eok": 1217,
+   "trade_eok": 2.0,
+   "index": "S&P Ultra T-Bond Futures Index(ER)",
+   "nav": "7203.98",
+   "close": "7215"
+  },
+  {
+   "code": "481180",
+   "name": "SOL 미국AI소프트웨어",
+   "aum_eok": 1168,
+   "trade_eok": 1.8,
+   "index": "KEDI 미국 AI 소프트웨어지수(PR)",
+   "nav": "14780.93",
+   "close": "14625"
+  },
+  {
+   "code": "463680",
+   "name": "KODEX 미국S&P500테크놀로지",
+   "aum_eok": 1152,
+   "trade_eok": 2.9,
+   "index": "S&P Technology Select Sector Index(Price Return)",
+   "nav": "20040.85",
+   "close": "19735"
+  },
+  {
+   "code": "488500",
+   "name": "TIGER 미국S&P500동일가중",
+   "aum_eok": 1134,
+   "trade_eok": 9.3,
+   "index": "S&P 500 Equal Weight Index(PR)",
+   "nav": "12463.74",
+   "close": "12500"
+  },
+  {
+   "code": "309230",
+   "name": "ACE 미국WideMoat동일가중",
+   "aum_eok": 1121,
+   "trade_eok": 2.5,
+   "index": "MorningStar Wide Moat Focus Index",
+   "nav": "31140.54",
+   "close": "30835"
+  },
+  {
+   "code": "399110",
+   "name": "SOL 미국S&P500ESG",
+   "aum_eok": 1110,
+   "trade_eok": 3.4,
+   "index": "S&P500 Scored&Screened(PR)",
+   "nav": "19465.14",
+   "close": "19355"
+  },
+  {
+   "code": "203780",
+   "name": "TIGER 미국나스닥바이오",
+   "aum_eok": 1087,
+   "trade_eok": 9.7,
+   "index": "NASDAQ Biotechnology 지수(시장가격지수)",
+   "nav": "35760.78",
+   "close": "35515"
+  },
+  {
+   "code": "411420",
+   "name": "KODEX 미국나스닥AI테크액티브",
+   "aum_eok": 1082,
+   "trade_eok": 4.0,
+   "index": "Nasdaq CB Insights Metaverse US Index (Price Return)",
+   "nav": "23278",
+   "close": "23050"
+  },
+  {
+   "code": "182480",
+   "name": "TIGER 미국MSCI리츠(합성 H)",
+   "aum_eok": 1059,
+   "trade_eok": 0.8,
+   "index": "MSCI US REIT Index",
+   "nav": "13668.37",
+   "close": "13545"
+  },
+  {
+   "code": "304940",
+   "name": "KODEX 미국나스닥100선물(H)",
+   "aum_eok": 1055,
+   "trade_eok": 0.5,
+   "index": "NASDAQ 100",
+   "nav": "31040.61",
+   "close": "30715"
+  },
+  {
+   "code": "0132K0",
+   "name": "PLUS 테슬라위클리커버드콜채권혼합",
+   "aum_eok": 1044,
+   "trade_eok": 6.2,
+   "index": "Akros 테슬라 위클리 커버드콜 채권혼합 지수",
+   "nav": "7703.85",
+   "close": "7690"
+  },
+  {
+   "code": "308620",
+   "name": "KODEX 미국10년국채선물",
+   "aum_eok": 1032,
+   "trade_eok": 2.3,
+   "index": "S&P 10-Year U.S. Treasury Note Futures KRW(ER)",
+   "nav": "10974.89",
+   "close": "10990"
+  },
+  {
+   "code": "0254S0",
+   "name": "KODEX 미국배당다우존스액티브",
+   "aum_eok": 1010,
+   "trade_eok": 9.8,
+   "index": "Dow Jones U.S. Dividend 100 Price Return Index",
+   "nav": "10410.53",
+   "close": "10405"
+  },
+  {
+   "code": "429760",
+   "name": "PLUS 미국S&P500",
+   "aum_eok": 1009,
+   "trade_eok": 8.6,
+   "index": "S&P 500",
+   "nav": "18681.49",
+   "close": "18580"
+  },
+  {
+   "code": "0036R0",
+   "name": "RISE 미국휴머노이드로봇",
+   "aum_eok": 997,
+   "trade_eok": 2.0,
+   "index": "KEDI 미국 휴머노이드 로봇 지수(시장가격)",
+   "nav": "18121.13",
+   "close": "17920"
+  },
+  {
+   "code": "464930",
+   "name": "TIGER 글로벌혁신블루칩TOP10",
+   "aum_eok": 984,
+   "trade_eok": 0.1,
+   "index": "Mirae Asset Global Innovative Bluechip Top 10 Index(PR)",
+   "nav": "19877.06",
+   "close": "19700"
+  },
+  {
+   "code": "0137V0",
+   "name": "KIWOOM 미국S&P500모멘텀",
+   "aum_eok": 975,
+   "trade_eok": 18.4,
+   "index": "S&P500 모멘텀 지수",
+   "nav": "9998.77",
+   "close": "9945"
+  },
+  {
+   "code": "0123G0",
+   "name": "TIGER 미국AI전력SMR",
+   "aum_eok": 970,
+   "trade_eok": 3.5,
+   "index": "Akros U.S. AI Electricity SMR Index 지수(PR)",
+   "nav": "4631.68",
+   "close": "4560"
+  },
+  {
+   "code": "464310",
+   "name": "TIGER 글로벌AI&로보틱스 INDXX",
+   "aum_eok": 925,
+   "trade_eok": 1.8,
+   "index": "Indxx Global Robotics & Artificial Intelligence Thematic Index(PR)",
+   "nav": "11854.48",
+   "close": "11630"
+  },
+  {
+   "code": "468380",
+   "name": "KODEX iShares미국하이일드액티브",
+   "aum_eok": 908,
+   "trade_eok": 2.3,
+   "index": "ICE BofAML US HY Constrained Index(Total Return)",
+   "nav": "10248.47",
+   "close": "10245"
+  },
+  {
+   "code": "143850",
+   "name": "TIGER 미국S&P500선물(H)",
+   "aum_eok": 895,
+   "trade_eok": 1.0,
+   "index": "S&P 500 Futures Index(ER)",
+   "nav": "76169.12",
+   "close": "75895"
+  },
+  {
+   "code": "453080",
+   "name": "KIWOOM 미국나스닥100(H)",
+   "aum_eok": 875,
+   "trade_eok": 0.8,
+   "index": "NASDAQ 100",
+   "nav": "21863.87",
+   "close": "21680"
+  },
+  {
+   "code": "465610",
+   "name": "ACE 미국빅테크TOP7 Plus레버리지(합성)",
+   "aum_eok": 875,
+   "trade_eok": 1.5,
+   "index": "Solactive US Big Tech Top 7 Plus Price Return Index",
+   "nav": "36473.24",
+   "close": "35870"
+  },
+  {
+   "code": "444490",
+   "name": "WON 미국S&P500",
+   "aum_eok": 871,
+   "trade_eok": 2.0,
+   "index": "S&P 500",
+   "nav": "19149.53",
+   "close": "19050"
+  },
+  {
+   "code": "269540",
+   "name": "PLUS 미국S&P500(H)",
+   "aum_eok": 861,
+   "trade_eok": 0.8,
+   "index": "S&P 500",
+   "nav": "29679.37",
+   "close": "29590"
+  },
+  {
+   "code": "394660",
+   "name": "TIGER 글로벌자율주행&전기차SOLACTIVE",
+   "aum_eok": 858,
+   "trade_eok": 0.8,
+   "index": "Solactive Autonomous & Electric Vehicles 지수(PR)",
+   "nav": "13084.8",
+   "close": "12870"
+  },
+  {
+   "code": "418670",
+   "name": "TIGER 글로벌AI사이버보안",
+   "aum_eok": 852,
+   "trade_eok": 12.9,
+   "index": "Indxx Cybersecurity 지수 (PR)",
+   "nav": "18356.2",
+   "close": "18200"
+  },
+  {
+   "code": "453330",
+   "name": "RISE 미국S&P500(H)",
+   "aum_eok": 844,
+   "trade_eok": 1.9,
+   "index": "S&P 500",
+   "nav": "17954.81",
+   "close": "17885"
+  },
+  {
+   "code": "0255E0",
+   "name": "TIGER 글로벌MLCC&기판",
+   "aum_eok": 834,
+   "trade_eok": 7.0,
+   "index": "Solactive-KEDI Global MLCC and Semiconductor Substrate 지수(Price Return)",
+   "nav": "7655.33",
+   "close": "7250"
+  },
+  {
+   "code": "460960",
+   "name": "ACE 글로벌인컴TOP10",
+   "aum_eok": 800,
+   "trade_eok": 1.0,
+   "index": "Solactive Global Superior Income TOP 10 Price Return Index",
+   "nav": "10123.76",
+   "close": "10105"
+  },
+  {
+   "code": "0181B0",
+   "name": "HANARO 미국AI메모리반도체TOP4+",
+   "aum_eok": 799,
+   "trade_eok": 7.9,
+   "index": "Solactive US AI Memory Semiconductor Top4+ Index",
+   "nav": "6949.04",
+   "close": "6725"
+  },
+  {
+   "code": "449770",
+   "name": "KIWOOM 미국S&P500",
+   "aum_eok": 784,
+   "trade_eok": 8.6,
+   "index": "S&P 500",
+   "nav": "20095.04",
+   "close": "20010"
+  },
+  {
+   "code": "0035T0",
+   "name": "PLUS 글로벌휴머노이드로봇액티브",
+   "aum_eok": 781,
+   "trade_eok": 1.8,
+   "index": "iSelect 글로벌휴머노이드로봇 (PR)",
+   "nav": "16451.47",
+   "close": "16350"
+  },
+  {
+   "code": "0080X0",
+   "name": "SOL 미국S&P500미국채혼합50",
+   "aum_eok": 751,
+   "trade_eok": 1.9,
+   "index": "S&P 500 and iBoxx $ Treasuries 7-10Y 5050 Blend Index(USD) PR/TR Hybrid",
+   "nav": "10432.42",
+   "close": "10420"
+  },
+  {
+   "code": "0174B0",
+   "name": "KoAct 글로벌AI메모리반도체액티브",
+   "aum_eok": 743,
+   "trade_eok": 2.5,
+   "index": "Solactive 글로벌AI메모리반도체 지수 (PR)",
+   "nav": "10766.46",
+   "close": "10575"
+  },
+  {
+   "code": "0246X0",
+   "name": "SOL 글로벌DRAM반도체플러스",
+   "aum_eok": 718,
+   "trade_eok": 30.1,
+   "index": "KEDI 글로벌DRAM반도체플러스지수",
+   "nav": "7184.46",
+   "close": "7075"
+  },
+  {
+   "code": "479620",
+   "name": "SOL 미국AI반도체칩메이커",
+   "aum_eok": 717,
+   "trade_eok": 7.6,
+   "index": "Solactive US AI Semiconductor Chip Makers Index(PR)",
+   "nav": "21402.78",
+   "close": "20920"
+  },
+  {
+   "code": "0049M0",
+   "name": "ACE 미국배당퀄리티+커버드콜액티브",
+   "aum_eok": 712,
+   "trade_eok": 1.7,
+   "index": "Bloomberg WisdomTree U.S. Quality Dividend & B500 Premium Decrement 50:50 Index",
+   "nav": "10634.25",
+   "close": "10635"
+  },
+  {
+   "code": "458750",
+   "name": "TIGER 미국배당다우존스타겟커버드콜1호",
+   "aum_eok": 705,
+   "trade_eok": 4.3,
+   "index": "DowJones U.S. Dividend 100 3% Premium Covered Call 지수 (TR)",
+   "nav": "13064.54",
+   "close": "13065"
+  },
+  {
+   "code": "0142D0",
+   "name": "TIGER 미국AI데이터센터TOP4Plus",
+   "aum_eok": 700,
+   "trade_eok": 28.5,
+   "index": "Akros U.S. AI Data Center TOP4 Plus 지수(PR)",
+   "nav": "7176.19",
+   "close": "6905"
+  },
+  {
+   "code": "453640",
+   "name": "KODEX 미국S&P500헬스케어",
+   "aum_eok": 690,
+   "trade_eok": 16.3,
+   "index": "S&P Health Care Select Sector Index(Price Return)",
+   "nav": "15170.04",
+   "close": "15180"
+  },
+  {
+   "code": "485690",
+   "name": "RISE 미국AI밸류체인TOP3Plus",
+   "aum_eok": 676,
+   "trade_eok": 0.9,
+   "index": "KEDI 미국 AI 밸류체인 TOP3 Plus 지수(Price Return)",
+   "nav": "18282.85",
+   "close": "17895"
+  },
+  {
+   "code": "469060",
+   "name": "RISE 미국반도체NYSE",
+   "aum_eok": 669,
+   "trade_eok": 6.3,
+   "index": "NYSE Semicondoctor Index(Price Return)",
+   "nav": "29734.62",
+   "close": "28950"
+  },
+  {
+   "code": "455960",
+   "name": "RISE 미국달러SOFR금리액티브(합성)",
+   "aum_eok": 643,
+   "trade_eok": 0.4,
+   "index": "KAP SOFR 지수",
+   "nav": "11761.35",
+   "close": "11730"
+  },
+  {
+   "code": "261270",
+   "name": "KODEX 미국달러선물인버스",
+   "aum_eok": 626,
+   "trade_eok": 2.3,
+   "index": "미국달러선물지수",
+   "nav": "8419.17",
+   "close": "8420"
+  },
+  {
+   "code": "455660",
+   "name": "ACE 미국하이일드액티브(H)",
+   "aum_eok": 622,
+   "trade_eok": 0.8,
+   "index": "iBoxx USD Liquid High Yield Total Return Index",
+   "nav": "9150.94",
+   "close": "9135"
+  },
+  {
+   "code": "0176E0",
+   "name": "RISE 미국AI전력인프라액티브",
+   "aum_eok": 602,
+   "trade_eok": 1.9,
+   "index": "Solactive US AI Electricity Infrastructure Index PR",
+   "nav": "7925.39",
+   "close": "7795"
+  },
+  {
+   "code": "473640",
+   "name": "HANARO 글로벌금채굴기업",
+   "aum_eok": 596,
+   "trade_eok": 6.4,
+   "index": "NYSE Arca Gold Miners Index (Price Return)",
+   "nav": "29819.38",
+   "close": "29735"
+  },
+  {
+   "code": "476750",
+   "name": "ACE 미국30년국채엔화노출액티브(H)",
+   "aum_eok": 593,
+   "trade_eok": 7.2,
+   "index": "Bloomberg U.S. Treasury 20+ Year Total Return Index T1530 JPY Currency Hedged",
+   "nav": "6978.67",
+   "close": "7005"
+  },
+  {
+   "code": "0102A0",
+   "name": "TIGER 미국AI소프트웨어TOP4Plus",
+   "aum_eok": 592,
+   "trade_eok": 2.4,
+   "index": "Akros U.S. AI Software TOP4 Plus 지수 (Price Return)",
+   "nav": "7442.32",
+   "close": "7340"
+  },
+  {
+   "code": "261240",
+   "name": "KODEX 미국달러선물",
+   "aum_eok": 592,
+   "trade_eok": 9.7,
+   "index": "미국달러선물지수",
+   "nav": "13840.82",
+   "close": "13830"
+  },
+  {
+   "code": "0113D0",
+   "name": "TIME 글로벌탑픽액티브",
+   "aum_eok": 590,
+   "trade_eok": 1.1,
+   "index": "Bloomberg World Large, Mid & Small cap PR Index",
+   "nav": "11340.71",
+   "close": "11225"
+  },
+  {
+   "code": "412770",
+   "name": "TIGER 글로벌AI플랫폼액티브",
+   "aum_eok": 580,
+   "trade_eok": 0.1,
+   "index": "Indxx Global Metaverse Index (Price Return)",
+   "nav": "10302.42",
+   "close": "10270"
+  },
+  {
+   "code": "0238P0",
+   "name": "TIGER 미국S&P500미국채혼합50",
+   "aum_eok": 576,
+   "trade_eok": 4.5,
+   "index": "S&P 500 and Short-Term Treasury 50/50 Blend Index",
+   "nav": "9847.44",
+   "close": "9830"
+  },
+  {
+   "code": "0190Y0",
+   "name": "TIGER 구글밸류체인",
+   "aum_eok": 571,
+   "trade_eok": 6.6,
+   "index": "Akros Google Value Chain 지수 (Price Return)",
+   "nav": "7047.52",
+   "close": "7000"
+  },
+  {
+   "code": "275980",
+   "name": "TIGER 글로벌4차산업혁신기술(합성 H)",
+   "aum_eok": 569,
+   "trade_eok": 0.2,
+   "index": "Morningstar Exponential Technologies Equal Weighted Select PR USD",
+   "nav": "22944.96",
+   "close": "22600"
+  },
+  {
+   "code": "225040",
+   "name": "TIGER 미국S&P500레버리지(합성 H)",
+   "aum_eok": 563,
+   "trade_eok": 4.1,
+   "index": "S&P 500",
+   "nav": "65435",
+   "close": "64785"
+  },
+  {
+   "code": "0181L0",
+   "name": "SOL 미국우주항공TOP10",
+   "aum_eok": 551,
+   "trade_eok": 4.7,
+   "index": "KEDI 미국우주항공 TOP10(PR)",
+   "nav": "6221.16",
+   "close": "6100"
+  },
+  {
+   "code": "0046Y0",
+   "name": "ACE 미국배당퀄리티",
+   "aum_eok": 520,
+   "trade_eok": 3.5,
+   "index": "WisdomTree U.S. Quality Dividend Growth Index (Price Return)",
+   "nav": "12082.47",
+   "close": "12090"
+  },
+  {
+   "code": "0000D0",
+   "name": "TIGER 엔비디아미국채커버드콜밸런스(합성)",
+   "aum_eok": 504,
+   "trade_eok": 5.8,
+   "index": "KEDI 엔비디아미국채30년타겟커버드콜혼합지수(TR)",
+   "nav": "7935.87",
+   "close": "7865"
+  },
+  {
+   "code": "401470",
+   "name": "KODEX 메타버스액티브",
+   "aum_eok": 492,
+   "trade_eok": 0.1,
+   "index": "FnGuide K-메타버스 지수",
+   "nav": "8856.45",
+   "close": "8865"
+  },
+  {
+   "code": "352560",
+   "name": "KODEX 미국부동산리츠(H)",
+   "aum_eok": 491,
+   "trade_eok": 8.7,
+   "index": "Dow Jones U.S. Real Estate PR Index",
+   "nav": "12266.31",
+   "close": "12290"
+  },
+  {
+   "code": "218420",
+   "name": "KODEX 미국S&P500에너지(합성)",
+   "aum_eok": 483,
+   "trade_eok": 11.0,
+   "index": "S&P Select Sector Energy Index",
+   "nav": "19688.32",
+   "close": "19670"
+  },
+  {
+   "code": "440910",
+   "name": "WON 미국우주항공방산",
+   "aum_eok": 482,
+   "trade_eok": 2.3,
+   "index": "S&P Aerospace & Defense Select Industry Index(PR)",
+   "nav": "21902.69",
+   "close": "21775"
+  },
+  {
+   "code": "480310",
+   "name": "TIGER 글로벌온디바이스AI",
+   "aum_eok": 478,
+   "trade_eok": 1.5,
+   "index": "Mirae Asset Global On-Device AI 지수 (PR)",
+   "nav": "18053.72",
+   "close": "17740"
+  },
+  {
+   "code": "453650",
+   "name": "KODEX 미국S&P500금융",
+   "aum_eok": 477,
+   "trade_eok": 5.5,
+   "index": "S&P Financial Select Sector Index(Price Return)",
+   "nav": "19076.03",
+   "close": "18995"
+  },
+  {
+   "code": "0041D0",
+   "name": "KODEX 미국AI소프트웨어TOP10",
+   "aum_eok": 473,
+   "trade_eok": 9.1,
+   "index": "iSelect 미국 AI 소프트웨어 TOP10 지수(PR)",
+   "nav": "12121.35",
+   "close": "11990"
+  },
+  {
+   "code": "0178H0",
+   "name": "IBK 미국AI TOP10국채혼합50",
+   "aum_eok": 448,
+   "trade_eok": 0.4,
+   "index": "FnGuide 미국AI TOP10국채혼합 지수",
+   "nav": "9531.13",
+   "close": "9400"
+  },
+  {
+   "code": "200030",
+   "name": "KODEX 미국S&P500산업재(합성)",
+   "aum_eok": 442,
+   "trade_eok": 0.2,
+   "index": "S&P Select Sector Industrial Index",
+   "nav": "39225.92",
+   "close": "39030"
+  },
+  {
+   "code": "495940",
+   "name": "RISE 미국AI테크액티브",
+   "aum_eok": 439,
+   "trade_eok": 0.3,
+   "index": "Solactive US AI Tech Active Index PR",
+   "nav": "15666.71",
+   "close": "15600"
+  },
+  {
+   "code": "287180",
+   "name": "PLUS 미국나스닥테크",
+   "aum_eok": 438,
+   "trade_eok": 0.9,
+   "index": "NASDAQ 100 Technology Sector Index",
+   "nav": "48648.05",
+   "close": "47975"
+  },
+  {
+   "code": "0185L0",
+   "name": "TIME 글로벌휴머노이드로봇산업액티브",
+   "aum_eok": 432,
+   "trade_eok": 1.0,
+   "index": "Solactive Global AI Humanoid Robotics 지수(원화환산)(PR)",
+   "nav": "6441.89",
+   "close": "6265"
+  },
+  {
+   "code": "0118Z0",
+   "name": "ACE 미국AI테크핵심산업액티브",
+   "aum_eok": 427,
+   "trade_eok": 1.5,
+   "index": "Akros U.S. AI Innovator Price Return Index",
+   "nav": "7301.62",
+   "close": "7205"
+  },
+  {
+   "code": "440650",
+   "name": "ACE 미국달러단기채권액티브",
+   "aum_eok": 427,
+   "trade_eok": 3.0,
+   "index": "Bloomberg Short-Term Treasury Total Return Index",
+   "nav": "11231.39",
+   "close": "11240"
+  },
+  {
+   "code": "0085N0",
+   "name": "ACE 미국10년국채액티브(H)",
+   "aum_eok": 422,
+   "trade_eok": 1.8,
+   "index": "ICE U.S. Treasury 7-10 Year Bond Index (Total Return)",
+   "nav": "9594.16",
+   "close": "9605"
+  },
+  {
+   "code": "472830",
+   "name": "RISE 미국30년국채커버드콜(합성)",
+   "aum_eok": 414,
+   "trade_eok": 2.6,
+   "index": "Bloomberg U.S. Treasury 20+ Year (TLT) 2% OTM Covered Call Index(TR)",
+   "nav": "7456.41",
+   "close": "7485"
+  },
+  {
+   "code": "0218J0",
+   "name": "RISE 미국우주&로봇TOP2미국채혼합50",
+   "aum_eok": 412,
+   "trade_eok": 24.3,
+   "index": "Akros 미국 우주-로봇 TOP2 채권혼합50 지수",
+   "nav": "8959.21",
+   "close": "8920"
+  },
+  {
+   "code": "494840",
+   "name": "TIGER 미국방산TOP10",
+   "aum_eok": 407,
+   "trade_eok": 4.6,
+   "index": "Mirae Asset US Defense Top 10 Index(PR)",
+   "nav": "12337.11",
+   "close": "12345"
+  },
+  {
+   "code": "0118S0",
+   "name": "SOL 미국넥스트테크TOP10액티브",
+   "aum_eok": 405,
+   "trade_eok": 0.7,
+   "index": "KEDI 미국넥스트테크TOP10(PR)",
+   "nav": "8794.59",
+   "close": "8610"
+  },
+  {
+   "code": "276990",
+   "name": "KODEX 글로벌로봇(합성)",
+   "aum_eok": 399,
+   "trade_eok": 0.8,
+   "index": "ROBO Global Robotics & Automation UCITS Price Return Index",
+   "nav": "22533.85",
+   "close": "22290"
+  },
+  {
+   "code": "473490",
+   "name": "KIWOOM 글로벌AI반도체",
+   "aum_eok": 397,
+   "trade_eok": 15.8,
+   "index": "Solactive Global AI Semiconductor Index (Price Return)",
+   "nav": "28327.9",
+   "close": "27570"
+  },
+  {
+   "code": "276970",
+   "name": "KODEX 미국S&P500배당귀족커버드콜(합성 H)",
+   "aum_eok": 392,
+   "trade_eok": 0.5,
+   "index": "S&P500 Dividend Aristocrats Covered Call(7.2% Premium) Index",
+   "nav": "8340.6",
+   "close": "8325"
+  },
+  {
+   "code": "461340",
+   "name": "HANARO 글로벌생성형AI액티브",
+   "aum_eok": 391,
+   "trade_eok": 1.0,
+   "index": "Solactive United States Technology 100 Index(Price Return)",
+   "nav": "37195.7",
+   "close": "36705"
+  },
+  {
+   "code": "464470",
+   "name": "PLUS 미국채30년액티브",
+   "aum_eok": 388,
+   "trade_eok": 14.9,
+   "index": "ICE U.S. Treasury 20+ Year Bond Index(Total Return)",
+   "nav": "45484.73",
+   "close": "45605"
+  },
+  {
+   "code": "473590",
+   "name": "ACE 미국주식베스트셀러",
+   "aum_eok": 377,
+   "trade_eok": 0.7,
+   "index": "FnGuide 미국 주식 베스트셀러 지수(시장가격지수)",
+   "nav": "16749.8",
+   "close": "16580"
+  },
+  {
+   "code": "0007G0",
+   "name": "PLUS 글로벌원자력밸류체인",
+   "aum_eok": 368,
+   "trade_eok": 0.3,
+   "index": "Solactive Global Nuclear Energy Value Chain Index(PR)",
+   "nav": "10654.16",
+   "close": "10525"
+  },
+  {
+   "code": "0241D0",
+   "name": "KODEX 미국AI에이전트액티브",
+   "aum_eok": 357,
+   "trade_eok": 7.8,
+   "index": "Indxx US AI Agents Index (Price Return)",
+   "nav": "7926.41",
+   "close": "7800"
+  },
+  {
+   "code": "401170",
+   "name": "RISE 메타버스",
+   "aum_eok": 354,
+   "trade_eok": 1.8,
+   "index": "iSelect 메타버스 지수(시장가격지수)",
+   "nav": "9324.84",
+   "close": "9260"
+  },
+  {
+   "code": "0020H0",
+   "name": "KoAct 글로벌양자컴퓨팅액티브",
+   "aum_eok": 349,
+   "trade_eok": 1.4,
+   "index": "FactSet 글로벌양자컴퓨팅 PR 지수",
+   "nav": "16241.51",
+   "close": "15940"
+  },
+  {
+   "code": "0132H0",
+   "name": "KODEX 미국원자력SMR",
+   "aum_eok": 345,
+   "trade_eok": 4.5,
+   "index": "iSelect 미국원자력SMR 지수(Price Return)",
+   "nav": "5522.87",
+   "close": "5450"
+  },
+  {
+   "code": "449780",
+   "name": "KIWOOM 미국S&P500(H)",
+   "aum_eok": 331,
+   "trade_eok": 0.7,
+   "index": "S&P 500",
+   "nav": "18376.29",
+   "close": "18310"
+  },
+  {
+   "code": "0225V0",
+   "name": "KODEX 미국CPU반도체TOP10",
+   "aum_eok": 330,
+   "trade_eok": 14.0,
+   "index": "Indxx US CPU Semiconductor TOP 10 Index (Price Return)",
+   "nav": "8573.15",
+   "close": "8390"
+  },
+  {
+   "code": "494410",
+   "name": "PLUS 미국S&P500성장주",
+   "aum_eok": 330,
+   "trade_eok": 0.3,
+   "index": "S&P 500 Growth Index(PR)",
+   "nav": "13212.78",
+   "close": "13030"
+  },
+  {
+   "code": "0089B0",
+   "name": "PLUS 미국나스닥100미국채혼합50",
+   "aum_eok": 329,
+   "trade_eok": 3.1,
+   "index": "Nasdaq-100 US T-Bills 1-3 Month 50/50 Index (USD)",
+   "nav": "10628.36",
+   "close": "10560"
+  },
+  {
+   "code": "248270",
+   "name": "TIGER S&P글로벌헬스케어(합성)",
+   "aum_eok": 327,
+   "trade_eok": 0.6,
+   "index": "S&P Global 1200 Health Care Index",
+   "nav": "28200.74",
+   "close": "28280"
+  },
+  {
+   "code": "459560",
+   "name": "KODEX 테슬라밸류체인FactSet",
+   "aum_eok": 323,
+   "trade_eok": 0.4,
+   "index": "FactSet TSLA Value Chain Index(PR)",
+   "nav": "20824.75",
+   "close": "20580"
+  },
+  {
+   "code": "491830",
+   "name": "TIGER 미국AI반도체팹리스",
+   "aum_eok": 322,
+   "trade_eok": 10.0,
+   "index": "Mirae Asset US AI Fabless 지수(PR)",
+   "nav": "18373.4",
+   "close": "17880"
+  },
+  {
+   "code": "400970",
+   "name": "TIGER Fn메타버스",
+   "aum_eok": 321,
+   "trade_eok": 1.0,
+   "index": "FnGuide 메타버스테마 지수",
+   "nav": "6492.04",
+   "close": "6475"
+  },
+  {
+   "code": "276650",
+   "name": "RISE 글로벌테크놀로지(합성 H)",
+   "aum_eok": 320,
+   "trade_eok": 0.0,
+   "index": "S&P Global 1200 Information Technology and Interactive Media & Services(PR)",
+   "nav": "42660.3",
+   "close": "42230"
+  },
+  {
+   "code": "474800",
+   "name": "KIWOOM 미국원유에너지기업",
+   "aum_eok": 318,
+   "trade_eok": 6.7,
+   "index": "MSCI US IMI Energy 25/50 Index(Price Return)",
+   "nav": "15161.06",
+   "close": "15090"
+  },
+  {
+   "code": "476690",
+   "name": "TIGER 글로벌비만치료제TOP2Plus",
+   "aum_eok": 318,
+   "trade_eok": 1.8,
+   "index": "Indxx Global Obesity Treatment Top 2 Plus 지수 (시장가격)",
+   "nav": "10964.28",
+   "close": "11005"
+  },
+  {
+   "code": "407830",
+   "name": "에셋플러스 글로벌플랫폼액티브",
+   "aum_eok": 313,
+   "trade_eok": 0.4,
+   "index": "S&P 500",
+   "nav": "13041.97",
+   "close": "12920"
+  },
+  {
+   "code": "0138T0",
+   "name": "RISE 미국S&P500데일리고정커버드콜",
+   "aum_eok": 309,
+   "trade_eok": 0.9,
+   "index": "S&P500 10% Daily Fixed Covered Call Index",
+   "nav": "8836.14",
+   "close": "8800"
+  },
+  {
+   "code": "468630",
+   "name": "KODEX iShares미국투자등급회사채액티브",
+   "aum_eok": 309,
+   "trade_eok": 1.4,
+   "index": "iBoxx USD Liquid Investment Grade Index(Total Return)",
+   "nav": "10274.74",
+   "close": "10265"
+  },
+  {
+   "code": "0238F0",
+   "name": "KODEX 미국AI메모리TOP2플러스",
+   "aum_eok": 308,
+   "trade_eok": 10.2,
+   "index": "Akros 미국 AI 메모리 TOP2 플러스 지수(Price Return)",
+   "nav": "7159.23",
+   "close": "6890"
+  },
+  {
+   "code": "469050",
+   "name": "RISE 미국반도체NYSE(H)",
+   "aum_eok": 307,
+   "trade_eok": 5.1,
+   "index": "NYSE Semicondoctor Index(Price Return)",
+   "nav": "27891.06",
+   "close": "27250"
+  },
+  {
+   "code": "481340",
+   "name": "RISE 미국30년국채액티브",
+   "aum_eok": 301,
+   "trade_eok": 1.4,
+   "index": "Bloomberg U.S Treasury 20+ Year Total Return Index",
+   "nav": "8134.5",
+   "close": "8160"
+  },
+  {
+   "code": "0115C0",
+   "name": "RISE 미국고배당다우존스TOP10",
+   "aum_eok": 297,
+   "trade_eok": 4.5,
+   "index": "Dow Jones U.S. High Dividend 10 Index",
+   "nav": "11226.16",
+   "close": "11265"
+  },
+  {
+   "code": "493420",
+   "name": "SOL 미국배당다우존스2호",
+   "aum_eok": 296,
+   "trade_eok": 4.7,
+   "index": "Dow Jones U.S. Dividend 100 Index(TR)",
+   "nav": "12849.68",
+   "close": "12880"
+  },
+  {
+   "code": "0083S0",
+   "name": "1Q 미국메디컬AI",
+   "aum_eok": 292,
+   "trade_eok": 18.3,
+   "index": "KEDI 미국메디컬AI 지수",
+   "nav": "11230.75",
+   "close": "11145"
+  },
+  {
+   "code": "452250",
+   "name": "ACE 미국30년국채선물레버리지(합성 H)",
+   "aum_eok": 290,
+   "trade_eok": 0.5,
+   "index": "S&P Ultra T-Bond Futures Index(ER)",
+   "nav": "4598.36",
+   "close": "4590"
+  },
+  {
+   "code": "459750",
+   "name": "RISE 글로벌주식분산액티브",
+   "aum_eok": 286,
+   "trade_eok": 1.1,
+   "index": "Bloomberg Global Equity Market Weighted Index(Price Return)",
+   "nav": "16799.37",
+   "close": "16730"
+  },
+  {
+   "code": "476070",
+   "name": "KODEX 글로벌비만치료제TOP2 Plus",
+   "aum_eok": 286,
+   "trade_eok": 0.8,
+   "index": "iSelect 글로벌 비만치료제TOP2 Plus 지수(PR)",
+   "nav": "11214.95",
+   "close": "11180"
+  },
+  {
+   "code": "496770",
+   "name": "PLUS 글로벌방산",
+   "aum_eok": 279,
+   "trade_eok": 1.5,
+   "index": "Solactive Global Defense Index(PR)",
+   "nav": "15915.62",
+   "close": "15795"
+  },
+  {
+   "code": "0023B0",
+   "name": "PLUS 미국양자컴퓨팅TOP10",
+   "aum_eok": 274,
+   "trade_eok": 1.3,
+   "index": "iSelect 미국양자컴퓨팅 TOP10 (PR)",
+   "nav": "12465.88",
+   "close": "12240"
+  },
+  {
+   "code": "475070",
+   "name": "KoAct 글로벌친환경전력인프라액티브",
+   "aum_eok": 273,
+   "trade_eok": 2.1,
+   "index": "Solactive 글로벌친환경전력인프라 PR지수",
+   "nav": "24800.03",
+   "close": "24450"
+  },
+  {
+   "code": "0049K0",
+   "name": "ACE 미국배당퀄리티채권혼합50",
+   "aum_eok": 272,
+   "trade_eok": 0.2,
+   "index": "Bloomberg WisdomTree U.S. Quality Dividend & Short Term KRW Bonds 50:50 TR Index",
+   "nav": "10881.4",
+   "close": "10875"
+  },
+  {
+   "code": "0013R0",
+   "name": "RISE 테슬라미국채타겟커버드콜혼합(합성)",
+   "aum_eok": 271,
+   "trade_eok": 0.1,
+   "index": "KEDI 테슬라미국30년국채15%타겟프리미엄 혼합지수(TR)",
+   "nav": "7523.12",
+   "close": "7540"
+  },
+  {
+   "code": "489290",
+   "name": "WON 미국빌리어네어",
+   "aum_eok": 268,
+   "trade_eok": 4.3,
+   "index": "Bloomberg US Billionaires Investment Select Index(PR)",
+   "nav": "14471.89",
+   "close": "14285"
+  },
+  {
+   "code": "0107F0",
+   "name": "KIWOOM 미국고배당&AI테크",
+   "aum_eok": 266,
+   "trade_eok": 0.2,
+   "index": "Akros 미국AI테크TOP10&미국고배당3070 지수",
+   "nav": "10635.33",
+   "close": "10530"
+  },
+  {
+   "code": "261250",
+   "name": "KODEX 미국달러선물레버리지",
+   "aum_eok": 266,
+   "trade_eok": 4.6,
+   "index": "미국달러선물지수",
+   "nav": "14866.59",
+   "close": "14830"
+  },
+  {
+   "code": "475380",
+   "name": "RISE 글로벌리얼티인컴",
+   "aum_eok": 263,
+   "trade_eok": 0.3,
+   "index": "Solactive Global Realty Income Index(Price Return)",
+   "nav": "9929.01",
+   "close": "9900"
+  },
+  {
+   "code": "0224X0",
+   "name": "1Q 엔비디아알파벳미국채혼합50",
+   "aum_eok": 261,
+   "trade_eok": 7.9,
+   "index": "KEDI 엔비디아알파벳미국채혼합50 지수",
+   "nav": "8565.28",
+   "close": "8415"
+  },
+  {
+   "code": "459790",
+   "name": "KIWOOM 미국성장기업30액티브",
+   "aum_eok": 260,
+   "trade_eok": 0.0,
+   "index": "MSCI USA Index(Price Return)",
+   "nav": "17937.93",
+   "close": "17835"
+  },
+  {
+   "code": "437350",
+   "name": "RISE 미국단기투자등급회사채액티브",
+   "aum_eok": 258,
+   "trade_eok": 6.7,
+   "index": "Bloomberg US Corporate 1-5 Years Total Return Index",
+   "nav": "11714.44",
+   "close": "11700"
+  },
+  {
+   "code": "0137W0",
+   "name": "KIWOOM 미국S&P500&GOLD",
+   "aum_eok": 256,
+   "trade_eok": 0.3,
+   "index": "S&P500 & S&P GSCI 금현물 90/10 혼합지수",
+   "nav": "9851.1",
+   "close": "9805"
+  },
+  {
+   "code": "440340",
+   "name": "TIGER 글로벌멀티에셋TIF액티브",
+   "aum_eok": 256,
+   "trade_eok": 0.9,
+   "index": "INDXX 멀티에셋인컴 지수(시장가격 지수)",
+   "nav": "11373.85",
+   "close": "11475"
+  },
+  {
+   "code": "0089C0",
+   "name": "KODEX 미국S&P500변동성확대시커버드콜",
+   "aum_eok": 252,
+   "trade_eok": 1.0,
+   "index": "Cboe S&P 500 Volatility Contingent Daily Covered Call Index(Total Retrun)",
+   "nav": "10724.25",
+   "close": "10640"
+  },
+  {
+   "code": "415920",
+   "name": "PLUS 글로벌희토류&전략자원생산기업",
+   "aum_eok": 237,
+   "trade_eok": 2.3,
+   "index": "MVIS Global Rare Earth/Strategic Metals Index (Price Return)",
+   "nav": "4844.09",
+   "close": "4695"
+  },
+  {
+   "code": "185680",
+   "name": "KODEX 미국S&P바이오(합성)",
+   "aum_eok": 236,
+   "trade_eok": 0.2,
+   "index": "S&P Biotechnology Select Industry Index",
+   "nav": "44309.71",
+   "close": "44265"
+  },
+  {
+   "code": "491090",
+   "name": "KODEX 미국테크TOP3플러스",
+   "aum_eok": 236,
+   "trade_eok": 6.2,
+   "index": "KEDI 미국테크TOP3플러스 지수(Price Return)",
+   "nav": "16255.93",
+   "close": "16000"
+  },
+  {
+   "code": "0047R0",
+   "name": "RISE 팔란티어고정테크100",
+   "aum_eok": 235,
+   "trade_eok": 0.2,
+   "index": "KEDI 팔란티어고정테크100 지수(PR)",
+   "nav": "14255.25",
+   "close": "14140"
+  },
+  {
+   "code": "483570",
+   "name": "KCGI 미국S&P500 TOP10",
+   "aum_eok": 235,
+   "trade_eok": 0.1,
+   "index": "S&P500 Top10 25% Capped Index(PR)",
+   "nav": "14674.48",
+   "close": "14500"
+  },
+  {
+   "code": "387270",
+   "name": "TIGER 글로벌이노베이션액티브",
+   "aum_eok": 234,
+   "trade_eok": 0.2,
+   "index": "NASDAQ 100",
+   "nav": "21282.29",
+   "close": "21150"
+  },
+  {
+   "code": "138230",
+   "name": "KIWOOM 미국달러선물",
+   "aum_eok": 228,
+   "trade_eok": 0.1,
+   "index": "미국달러선물지수",
+   "nav": "15694.31",
+   "close": "15660"
+  },
+  {
+   "code": "261120",
+   "name": "TIGER 미국달러선물인버스2X",
+   "aum_eok": 228,
+   "trade_eok": 0.6,
+   "index": "미국달러선물지수",
+   "nav": "5699.06",
+   "close": "5685"
+  },
+  {
+   "code": "0247S0",
+   "name": "KIWOOM 글로벌MLCC&AI기판TOP4+",
+   "aum_eok": 227,
+   "trade_eok": 18.9,
+   "index": "iSelect 글로벌MLCC&AI기판 TOP4+ 지수",
+   "nav": "5908.99",
+   "close": "5785"
+  },
+  {
+   "code": "269420",
+   "name": "KODEX S&P글로벌인프라(합성)",
+   "aum_eok": 225,
+   "trade_eok": 0.2,
+   "index": "S&P Global Infrastructure Index",
+   "nav": "21801.63",
+   "close": "21735"
+  },
+  {
+   "code": "494340",
+   "name": "ACE 글로벌AI맞춤형반도체",
+   "aum_eok": 222,
+   "trade_eok": 1.6,
+   "index": "Solactive AI Custom Semiconductor Index(PR)",
+   "nav": "15325.8",
+   "close": "14990"
+  },
+  {
+   "code": "0223R0",
+   "name": "TIGER 미국테크NYSE100액티브",
+   "aum_eok": 221,
+   "trade_eok": 0.5,
+   "index": "NYSE 100 지수(Price Return)",
+   "nav": "7642.08",
+   "close": "7610"
+  },
+  {
+   "code": "0097L0",
+   "name": "KIWOOM 한국고배당&미국AI테크",
+   "aum_eok": 219,
+   "trade_eok": 0.2,
+   "index": "Akros 미국AI테크TOP10&한국고배당3070 지수",
+   "nav": "11241.16",
+   "close": "11210"
+  },
+  {
+   "code": "447660",
+   "name": "PLUS 애플채권혼합",
+   "aum_eok": 219,
+   "trade_eok": 3.4,
+   "index": "FnGuide 애플채권혼합 지수",
+   "nav": "14124.46",
+   "close": "14115"
+  },
+  {
+   "code": "461600",
+   "name": "SOL 미국30년국채액티브(H)",
+   "aum_eok": 219,
+   "trade_eok": 0.8,
+   "index": "KAP 미국채 20Y+ 지수(시장가격)",
+   "nav": "8258.78",
+   "close": "8265"
+  },
+  {
+   "code": "0047P0",
+   "name": "RISE 테슬라고정테크100",
+   "aum_eok": 217,
+   "trade_eok": 0.1,
+   "index": "KEDI 테슬라고정테크100 지수(PR)",
+   "nav": "13978.19",
+   "close": "13820"
+  },
+  {
+   "code": "0155M0",
+   "name": "ACE 미국SMR원자력TOP10",
+   "aum_eok": 216,
+   "trade_eok": 0.4,
+   "index": "Solactive US SMR Nuclear TOP 10 Index (Price Return)",
+   "nav": "4754.95",
+   "close": "4710"
+  },
+  {
+   "code": "414270",
+   "name": "ACE 글로벌자율주행액티브",
+   "aum_eok": 215,
+   "trade_eok": 17.7,
+   "index": "FactSet US-China Electric&Autonomous Vehicle Price Return Index",
+   "nav": "10230.75",
+   "close": "10070"
+  },
+  {
+   "code": "0026E0",
+   "name": "KODEX 미국S&P500버퍼3월액티브",
+   "aum_eok": 212,
+   "trade_eok": 0.0,
+   "index": "S&P500 10% Buffered Index March Series (USD) TR",
+   "nav": "11441.74",
+   "close": "11350"
+  },
+  {
+   "code": "280930",
+   "name": "KODEX 미국러셀2000(H)",
+   "aum_eok": 208,
+   "trade_eok": 1.1,
+   "index": "FTSE Russell 2000 Index",
+   "nav": "15999.08",
+   "close": "15995"
+  },
+  {
+   "code": "465670",
+   "name": "TIGER 미국캐시카우100",
+   "aum_eok": 202,
+   "trade_eok": 1.9,
+   "index": "Global X U.S. Cash Flow Kings 100 Index(PR)",
+   "nav": "16843.37",
+   "close": "16910"
+  },
+  {
+   "code": "213630",
+   "name": "PLUS 미국다우존스고배당주(합성 H)",
+   "aum_eok": 194,
+   "trade_eok": 7.0,
+   "index": "Dow Jones U.S Select Dividend Index(시장가격지수)",
+   "nav": "21095.37",
+   "close": "20965"
+  },
+  {
+   "code": "0067V0",
+   "name": "TIGER 차이나글로벌리더스TOP3+",
+   "aum_eok": 192,
+   "trade_eok": 0.2,
+   "index": "Solactive-KEDI 차이나글로벌리더스TOP3플러스 지수 (Price Return, CNH)",
+   "nav": "8715.44",
+   "close": "8505"
+  },
+  {
+   "code": "0153X0",
+   "name": "PLUS 미국고배당주액티브",
+   "aum_eok": 191,
+   "trade_eok": 1.9,
+   "index": "Akros 미국 고배당주 20 지수",
+   "nav": "10895.35",
+   "close": "10910"
+  },
+  {
+   "code": "0259R0",
+   "name": "ACE 글로벌메모리반도체TOP3채권혼합액티브",
+   "aum_eok": 190,
+   "trade_eok": 31.9,
+   "index": "FnGuide 글로벌메모리반도체TOP3채권혼합지수",
+   "nav": "9499.69",
+   "close": "9425"
+  },
+  {
+   "code": "460660",
+   "name": "RISE 미국S&P배당킹",
+   "aum_eok": 186,
+   "trade_eok": 0.4,
+   "index": "S&P Dividend Monarchs Index(Price Return)",
+   "nav": "11982.54",
+   "close": "12010"
+  },
+  {
+   "code": "433220",
+   "name": "에셋플러스 글로벌대장장이액티브",
+   "aum_eok": 182,
+   "trade_eok": 0.0,
+   "index": "S&P 500",
+   "nav": "24544.84",
+   "close": "24455"
+  },
+  {
+   "code": "449580",
+   "name": "RISE 테슬라애플아마존채권혼합",
+   "aum_eok": 182,
+   "trade_eok": 0.9,
+   "index": "iSelect 테슬라 애플 아마존 채권혼합지수(Price Return)",
+   "nav": "16516.29",
+   "close": "16540"
+  },
+  {
+   "code": "276000",
+   "name": "TIGER 글로벌자원생산기업(합성 H)",
+   "aum_eok": 181,
+   "trade_eok": 0.0,
+   "index": "MorningStar Global Upstream Resources Index(PR)",
+   "nav": "20066.05",
+   "close": "20005"
+  },
+  {
+   "code": "371450",
+   "name": "TIGER 글로벌클라우드컴퓨팅INDXX",
+   "aum_eok": 179,
+   "trade_eok": 2.5,
+   "index": "Indxx Global Cloud Computing Index(PR)",
+   "nav": "12425.21",
+   "close": "12295"
+  },
+  {
+   "code": "497780",
+   "name": "KoAct 미국천연가스인프라액티브",
+   "aum_eok": 179,
+   "trade_eok": 0.8,
+   "index": "Solactive 미국천연가스인프라 PR 지수",
+   "nav": "9666.87",
+   "close": "9615"
+  },
+  {
+   "code": "0186L0",
+   "name": "KoAct 미국로봇피지컬AI액티브",
+   "aum_eok": 176,
+   "trade_eok": 0.3,
+   "index": "iSelect 미국로봇피지컬AI지수",
+   "nav": "7646.48",
+   "close": "7575"
+  },
+  {
+   "code": "0144M0",
+   "name": "KODEX 미국드론UAM TOP10",
+   "aum_eok": 173,
+   "trade_eok": 0.7,
+   "index": "iSelect 미국드론UAM TOP10 지수(Price Return)",
+   "nav": "5981.43",
+   "close": "5905"
+  },
+  {
+   "code": "468370",
+   "name": "KODEX iShares미국인플레이션국채액티브",
+   "aum_eok": 169,
+   "trade_eok": 0.5,
+   "index": "ICE U.S. Treasury Inflation Linked Bond Index(Total Return)",
+   "nav": "10099.95",
+   "close": "10095"
+  },
+  {
+   "code": "461900",
+   "name": "PLUS 미국테크TOP10",
+   "aum_eok": 168,
+   "trade_eok": 0.2,
+   "index": "iSelect 미국 Tech 10 지수",
+   "nav": "20979.63",
+   "close": "20690"
+  },
+  {
+   "code": "494420",
+   "name": "PLUS 미국배당증가성장주데일리커버드콜",
+   "aum_eok": 167,
+   "trade_eok": 0.3,
+   "index": "Bloomberg U.S. Dividend Growth Partial Covered Call Index",
+   "nav": "8804.18",
+   "close": "8800"
+  },
+  {
+   "code": "0127R0",
+   "name": "RISE 미국AI클라우드인프라",
+   "aum_eok": 160,
+   "trade_eok": 7.3,
+   "index": "Akros 미국 AI 클라우드 인프라 지수(Price Return)",
+   "nav": "11410.16",
+   "close": "10880"
+  },
+  {
+   "code": "0018Z0",
+   "name": "RISE 미국양자컴퓨팅",
+   "aum_eok": 159,
+   "trade_eok": 0.2,
+   "index": "Solactive US Quantum Computing Technology Index PR",
+   "nav": "15095.63",
+   "close": "14885"
+  },
+  {
+   "code": "219390",
+   "name": "RISE 미국S&P원유생산기업(합성 H)",
+   "aum_eok": 158,
+   "trade_eok": 1.4,
+   "index": "S&P Oil & Gas Exploration & Production Select Industry Index(PR)",
+   "nav": "7923.93",
+   "close": "7835"
+  },
+  {
+   "code": "461450",
+   "name": "KODEX 코스닥글로벌",
+   "aum_eok": 158,
+   "trade_eok": 0.6,
+   "index": "코스닥 글로벌 지수",
+   "nav": "12156.38",
+   "close": "12135"
+  },
+  {
+   "code": "0190M0",
+   "name": "KIWOOM 미국AI테크하이베타",
+   "aum_eok": 157,
+   "trade_eok": 19.4,
+   "index": "Akros 미국AI&프론티어테크 하이베타 지수",
+   "nav": "6030.88",
+   "close": "5860"
+  },
+  {
+   "code": "332620",
+   "name": "PLUS 미국장기우량회사채",
+   "aum_eok": 157,
+   "trade_eok": 0.1,
+   "index": "ICE BofaAML 15+ Year AAA-A US Corporate Index(총수익지수)",
+   "nav": "83805.3",
+   "close": "84010"
+  },
+  {
+   "code": "461910",
+   "name": "PLUS 미국테크TOP10레버리지(합성)",
+   "aum_eok": 157,
+   "trade_eok": 0.0,
+   "index": "iSelect 미국 Tech 10 지수",
+   "nav": "31366.36",
+   "close": "31110"
+  },
+  {
+   "code": "485810",
+   "name": "TIME 글로벌바이오액티브",
+   "aum_eok": 155,
+   "trade_eok": 1.2,
+   "index": "KEDI 글로벌 불로장생바이오 지수(원화환산)",
+   "nav": "12434.82",
+   "close": "12510"
+  },
+  {
+   "code": "453630",
+   "name": "KODEX 미국S&P500필수소비재",
+   "aum_eok": 154,
+   "trade_eok": 2.4,
+   "index": "S&P Consumer Staples Select Sector Index(Price Return)",
+   "nav": "12853.26",
+   "close": "12730"
+  },
+  {
+   "code": "0093D0",
+   "name": "KoAct 팔란티어밸류체인액티브",
+   "aum_eok": 153,
+   "trade_eok": 1.0,
+   "index": "KEDI 팔란티어밸류체인지수(PR)",
+   "nav": "14587.81",
+   "close": "14415"
+  },
+  {
+   "code": "477490",
+   "name": "에셋플러스 글로벌일등기업포커스10액티브",
+   "aum_eok": 153,
+   "trade_eok": 0.1,
+   "index": "MSCI World",
+   "nav": "16949.99",
+   "close": "16775"
+  },
+  {
+   "code": "432840",
+   "name": "HANARO 미국S&P500",
+   "aum_eok": 151,
+   "trade_eok": 0.1,
+   "index": "S&P 500",
+   "nav": "18880.42",
+   "close": "18780"
+  },
+  {
+   "code": "0256C0",
+   "name": "1Q 엔비디아고정미국AI반도체",
+   "aum_eok": 149,
+   "trade_eok": 14.6,
+   "index": "iSelect 엔비디아고정미국AI반도체",
+   "nav": "9285.76",
+   "close": "9040"
+  },
+  {
+   "code": "0004G0",
+   "name": "1Q 미국배당TOP30",
+   "aum_eok": 146,
+   "trade_eok": 0.8,
+   "index": "Solactive U.S. Dividend TOP 30 Index PR",
+   "nav": "9098.79",
+   "close": "9135"
+  },
+  {
+   "code": "0258B0",
+   "name": "1Q 미국AI테크플랫폼TOP10",
+   "aum_eok": 144,
+   "trade_eok": 16.2,
+   "index": "iSelect 미국AI테크플랫폼TOP10",
+   "nav": "9624.25",
+   "close": "9610"
+  },
+  {
+   "code": "483330",
+   "name": "ACE 마이크로소프트밸류체인액티브",
+   "aum_eok": 140,
+   "trade_eok": 1.6,
+   "index": "KEDI 글로벌생성형AI 지수",
+   "nav": "13970.26",
+   "close": "13880"
+  },
+  {
+   "code": "0084E0",
+   "name": "KIWOOM 미국대형주500월간목표헤지액티브",
+   "aum_eok": 139,
+   "trade_eok": 0.0,
+   "index": "Akros 미국대형주500 월간방어적배분 지수(TR)",
+   "nav": "9559.88",
+   "close": "9555"
+  },
+  {
+   "code": "0028X0",
+   "name": "KODEX 미국금융테크액티브",
+   "aum_eok": 134,
+   "trade_eok": 1.9,
+   "index": "iSelect 미국 차세대 파이낸셜 테크 지수(시장가격)",
+   "nav": "11653.43",
+   "close": "11625"
+  },
+  {
+   "code": "428560",
+   "name": "KODEX 미국ETF산업Top10 Indxx",
+   "aum_eok": 132,
+   "trade_eok": 3.1,
+   "index": "Indxx US ETF Industry Top10 Index(Price Return)",
+   "nav": "17601.08",
+   "close": "17635"
+  },
+  {
+   "code": "419650",
+   "name": "PLUS 글로벌수소&차세대연료전지",
+   "aum_eok": 131,
+   "trade_eok": 0.2,
+   "index": "BlueStar Hydrogen and NextGen Fuel Cell Index (시장가격)",
+   "nav": "3852.21",
+   "close": "3885"
+  },
+  {
+   "code": "0127T0",
+   "name": "KIWOOM 미국S&P500&배당다우존스비중전환",
+   "aum_eok": 129,
+   "trade_eok": 0.1,
+   "index": "S&P500 생애배당다우존스 2040 지수",
+   "nav": "10724.79",
+   "close": "10685"
+  },
+  {
+   "code": "409810",
+   "name": "KODEX 미국나스닥100선물인버스(H)",
+   "aum_eok": 129,
+   "trade_eok": 10.5,
+   "index": "NASDAQ 100",
+   "nav": "5754.75",
+   "close": "5810"
+  },
+  {
+   "code": "0127V0",
+   "name": "KIWOOM 미국S&P500 TOP10&배당다우비중전환",
+   "aum_eok": 128,
+   "trade_eok": 1.1,
+   "index": "S&P500 TOP10 생애배당다우존스 2040 지수",
+   "nav": "10205.75",
+   "close": "10160"
+  },
+  {
+   "code": "0219Z0",
+   "name": "HANARO 미국S&P500액티브",
+   "aum_eok": 127,
+   "trade_eok": 0.2,
+   "index": "S&P 500",
+   "nav": "9738",
+   "close": "9650"
+  },
+  {
+   "code": "0051A0",
+   "name": "KoAct 브로드컴밸류체인액티브",
+   "aum_eok": 126,
+   "trade_eok": 1.8,
+   "index": "FactSet 브로드컴밸류체인 지수",
+   "nav": "19436.1",
+   "close": "18860"
+  },
+  {
+   "code": "0207Z0",
+   "name": "KIWOOM 미국우주데이터센터인프라",
+   "aum_eok": 124,
+   "trade_eok": 1.6,
+   "index": "iSelect 미국 우주데이터센터인프라 지수",
+   "nav": "6039.46",
+   "close": "5885"
+  },
+  {
+   "code": "0013P0",
+   "name": "RISE 미국은행TOP10",
+   "aum_eok": 123,
+   "trade_eok": 0.4,
+   "index": "KEDI 미국 은행 TOP10 지수",
+   "nav": "11189.56",
+   "close": "11240"
+  },
+  {
+   "code": "453660",
+   "name": "KODEX 미국S&P500경기소비재",
+   "aum_eok": 122,
+   "trade_eok": 1.0,
+   "index": "S&P Consumer Discretionary Select Sector Index(Price Return)",
+   "nav": "17395.95",
+   "close": "17285"
+  },
+  {
+   "code": "0088N0",
+   "name": "WON K-글로벌수급상위",
+   "aum_eok": 118,
+   "trade_eok": 4.2,
+   "index": "DeepSearch 외인수급 Top20 지수",
+   "nav": "9403.78",
+   "close": "9605"
+  },
+  {
+   "code": "489860",
+   "name": "KIWOOM 글로벌전력GRID인프라",
+   "aum_eok": 118,
+   "trade_eok": 1.1,
+   "index": "NASDAQ OMX Clean Edge Smart Grid Infrastructure Index",
+   "nav": "13123.75",
+   "close": "13040"
+  },
+  {
+   "code": "269370",
+   "name": "TIGER S&P글로벌인프라(합성)",
+   "aum_eok": 117,
+   "trade_eok": 0.0,
+   "index": "S&P Global Infrastructure Index",
+   "nav": "16710.97",
+   "close": "16750"
+  },
+  {
+   "code": "269530",
+   "name": "PLUS S&P글로벌인프라",
+   "aum_eok": 117,
+   "trade_eok": 0.1,
+   "index": "S&P Global Infrastructure Index",
+   "nav": "19511.67",
+   "close": "19460"
+  },
+  {
+   "code": "332610",
+   "name": "PLUS 미국단기회사채(AAA~A)",
+   "aum_eok": 116,
+   "trade_eok": 0.2,
+   "index": "ICE BofaAML 1-3 Year AAA-A US Corporate Index(총수익지수)",
+   "nav": "120696.64",
+   "close": "120730"
+  },
+  {
+   "code": "0015F0",
+   "name": "KIWOOM 팔란티어미국30년국채혼합액티브(H)",
+   "aum_eok": 115,
+   "trade_eok": 0.2,
+   "index": "Bloomberg Blended PALANTIR and US Long Treasury Bond Index",
+   "nav": "10491.3",
+   "close": "10445"
+  },
+  {
+   "code": "0233N0",
+   "name": "RISE 글로벌AI낸드메모리반도체",
+   "aum_eok": 110,
+   "trade_eok": 1.8,
+   "index": "iSelect 글로벌AI낸드메모리반도체지수",
+   "nav": "7347.5",
+   "close": "7175"
+  },
+  {
+   "code": "463640",
+   "name": "KODEX 미국S&P500유틸리티",
+   "aum_eok": 108,
+   "trade_eok": 2.3,
+   "index": "S&P Utilities Select Sector Index(Price Return)",
+   "nav": "13490.43",
+   "close": "13435"
+  },
+  {
+   "code": "0113G0",
+   "name": "KoAct 미국바이오헬스케어액티브",
+   "aum_eok": 105,
+   "trade_eok": 0.4,
+   "index": "Solactive 미국바이오헬스케어지수 PR",
+   "nav": "11613.99",
+   "close": "11520"
+  },
+  {
+   "code": "354240",
+   "name": "RISE 미국고정배당우선증권",
+   "aum_eok": 105,
+   "trade_eok": 0.2,
+   "index": "ICE BofAML Core Plus Fixed Rate Preferred Securities Index(PR)",
+   "nav": "9575.48",
+   "close": "9485"
+  },
+  {
+   "code": "417450",
+   "name": "RISE 글로벌수소경제",
+   "aum_eok": 105,
+   "trade_eok": 0.5,
+   "index": "Indxx Hydrogen Economy Index (PR)",
+   "nav": "13112.08",
+   "close": "13180"
+  },
+  {
+   "code": "451150",
+   "name": "에셋플러스 글로벌영에이지액티브",
+   "aum_eok": 103,
+   "trade_eok": 0.7,
+   "index": "S&P 500",
+   "nav": "16580.09",
+   "close": "16555"
+  },
+  {
+   "code": "0068M0",
+   "name": "KODEX 미국S&P500버퍼6월액티브",
+   "aum_eok": 102,
+   "trade_eok": 0.1,
+   "index": "S&P500 10% Buffered Index June Series (USD) TR",
+   "nav": "11356.2",
+   "close": "11295"
+  },
+  {
+   "code": "181480",
+   "name": "ACE 미국부동산리츠(합성 H)",
+   "aum_eok": 102,
+   "trade_eok": 0.0,
+   "index": "Dow Jones U.S. Real Estate Index",
+   "nav": "84726.59",
+   "close": "84300"
+  },
+  {
+   "code": "0227L0",
+   "name": "HANARO 미국에이전틱AI TOP2+",
+   "aum_eok": 99,
+   "trade_eok": 1.0,
+   "index": "Indxx US Agentic AI TOP2+ Index(PR)",
+   "nav": "9413.17",
+   "close": "9365"
+  },
+  {
+   "code": "460270",
+   "name": "KIWOOM 미국달러SOFR금리액티브(합성)",
+   "aum_eok": 99,
+   "trade_eok": 0.3,
+   "index": "Solactive SOFR Daily Total Return Index",
+   "nav": "12216.48",
+   "close": "12210"
+  },
+  {
+   "code": "354350",
+   "name": "HANARO 글로벌럭셔리S&P(합성)",
+   "aum_eok": 98,
+   "trade_eok": 0.0,
+   "index": "S&P Global Luxury Index",
+   "nav": "18845.72",
+   "close": "18800"
+  },
+  {
+   "code": "497510",
+   "name": "ACE 글로벌빅파마",
+   "aum_eok": 96,
+   "trade_eok": 1.8,
+   "index": "Solactive Global Big Pharma Index (Price Return)",
+   "nav": "13728.49",
+   "close": "13710"
+  },
+  {
+   "code": "429010",
+   "name": "TIGER 미국나스닥넥스트100",
+   "aum_eok": 93,
+   "trade_eok": 0.4,
+   "index": "Nasdaq Next Generation 100 지수 (Price Return)",
+   "nav": "18533.99",
+   "close": "18560"
+  },
+  {
+   "code": "399580",
+   "name": "RISE 글로벌클린에너지",
+   "aum_eok": 92,
+   "trade_eok": 1.4,
+   "index": "S&P Global Clean Energy Transition Index (Price Return)",
+   "nav": "8371.77",
+   "close": "8130"
+  },
+  {
+   "code": "0093B0",
+   "name": "RISE 엔비디아고정테크100",
+   "aum_eok": 91,
+   "trade_eok": 1.5,
+   "index": "KEDI 엔비디아고정테크100 지수(PR)",
+   "nav": "11427.21",
+   "close": "11180"
+  },
+  {
+   "code": "0174R0",
+   "name": "KIWOOM 미국성장다우존스",
+   "aum_eok": 90,
+   "trade_eok": 0.1,
+   "index": "미국성장다우존스 지수",
+   "nav": "10596.65",
+   "close": "10535"
+  },
+  {
+   "code": "230480",
+   "name": "KIWOOM 미국달러선물인버스2X",
+   "aum_eok": 90,
+   "trade_eok": 0.1,
+   "index": "미국달러선물지수",
+   "nav": "4969.04",
+   "close": "4960"
+  },
+  {
+   "code": "419420",
+   "name": "KODEX 미국클린에너지나스닥",
+   "aum_eok": 88,
+   "trade_eok": 0.2,
+   "index": "Nasdaq Clean Edge Green Energy Index (Price Return)",
+   "nav": "8006.63",
+   "close": "7950"
+  },
+  {
+   "code": "494180",
+   "name": "TIME 글로벌소비트렌드액티브",
+   "aum_eok": 88,
+   "trade_eok": 1.5,
+   "index": "Solactive 뉴에이지컨수머지수",
+   "nav": "12572.88",
+   "close": "12440"
+  },
+  {
+   "code": "0084D0",
+   "name": "KIWOOM 미국테크100월간목표헤지액티브",
+   "aum_eok": 86,
+   "trade_eok": 0.0,
+   "index": "Akros 미국테크100 월간방어적배분 지수(TR)",
+   "nav": "10804.62",
+   "close": "10735"
+  },
+  {
+   "code": "0216K0",
+   "name": "KIWOOM 미국우주테크TOP2채권혼합50",
+   "aum_eok": 85,
+   "trade_eok": 3.0,
+   "index": "Akros 미국 우주 Top 2 채권혼합 지수",
+   "nav": "8531.77",
+   "close": "8375"
+  },
+  {
+   "code": "215620",
+   "name": "HK S&P코리아로우볼",
+   "aum_eok": 85,
+   "trade_eok": 0.0,
+   "index": "S&P Korea 저변동성 지수",
+   "nav": "15662.84",
+   "close": "15710"
+  },
+  {
+   "code": "435040",
+   "name": "ACE 글로벌브랜드TOP10",
+   "aum_eok": 85,
+   "trade_eok": 0.2,
+   "index": "Bloomberg Global Select Industry Leaders TOP10 Index(PR)",
+   "nav": "18919.85",
+   "close": "18905"
+  },
+  {
+   "code": "463690",
+   "name": "KODEX 미국S&P500커뮤니케이션",
+   "aum_eok": 84,
+   "trade_eok": 2.0,
+   "index": "S&P Communication Services Select Sector Index(Price Return)",
+   "nav": "16700.92",
+   "close": "16580"
+  },
+  {
+   "code": "494210",
+   "name": "SOL 미국500타겟데일리커버드콜액티브",
+   "aum_eok": 81,
+   "trade_eok": 0.1,
+   "index": "KEDI 미국퀄리티500+월1%프리미엄 지수(NTR)",
+   "nav": "10065.94",
+   "close": "10010"
+  },
+  {
+   "code": "375270",
+   "name": "RISE 글로벌데이터센터리츠(합성)",
+   "aum_eok": 80,
+   "trade_eok": 0.1,
+   "index": "Kelly Data Center & Tech Infrastructure Net Total Return Index",
+   "nav": "12303.34",
+   "close": "12185"
+  },
+  {
+   "code": "462340",
+   "name": "에셋플러스 글로벌다이나믹시니어액티브",
+   "aum_eok": 80,
+   "trade_eok": 1.6,
+   "index": "S&P 500",
+   "nav": "16085.87",
+   "close": "16045"
+  },
+  {
+   "code": "0255D0",
+   "name": "FOCUS 스페이스X밸류체인",
+   "aum_eok": 79,
+   "trade_eok": 0.4,
+   "index": "iSelect 스페이스X 밸류체인",
+   "nav": "9851.94",
+   "close": "9700"
+  },
+  {
+   "code": "0227K0",
+   "name": "RISE 미국우주위성통신",
+   "aum_eok": 77,
+   "trade_eok": 0.4,
+   "index": "Indxx US Space Satellite Communications Index PR",
+   "nav": "7719.89",
+   "close": "7530"
+  },
+  {
+   "code": "0008E0",
+   "name": "ACE 미국중심중소형제조업",
+   "aum_eok": 76,
+   "trade_eok": 0.0,
+   "index": "NYSE FactSet US Focus Manufacturing Index(Price Return)",
+   "nav": "10859.8",
+   "close": "10880"
+  },
+  {
+   "code": "189400",
+   "name": "PLUS 글로벌MSCI(합성 H)",
+   "aum_eok": 76,
+   "trade_eok": 0.0,
+   "index": "MSCI ACWI Index",
+   "nav": "25208.53",
+   "close": "25095"
+  },
+  {
+   "code": "261110",
+   "name": "TIGER 미국달러선물레버리지",
+   "aum_eok": 75,
+   "trade_eok": 0.1,
+   "index": "미국달러선물지수",
+   "nav": "14919.38",
+   "close": "14870"
+  },
+  {
+   "code": "304670",
+   "name": "KODEX 미국30년국채울트라선물인버스(H)",
+   "aum_eok": 75,
+   "trade_eok": 0.0,
+   "index": "S&P Ultra T-Bond Futures Index(ER)",
+   "nav": "12534.12",
+   "close": "12495"
+  },
+  {
+   "code": "461580",
+   "name": "TIGER 코스닥글로벌",
+   "aum_eok": 75,
+   "trade_eok": 0.1,
+   "index": "코스닥 글로벌 지수",
+   "nav": "12440.05",
+   "close": "12240"
+  },
+  {
+   "code": "0236J0",
+   "name": "마이티 미국피지컬AI액티브",
+   "aum_eok": 74,
+   "trade_eok": 0.5,
+   "index": "iSelect 미국 피지컬 AI 지수",
+   "nav": "9291.37",
+   "close": "9185"
+  },
+  {
+   "code": "429980",
+   "name": "SOL 한국형글로벌전기차&2차전지액티브",
+   "aum_eok": 74,
+   "trade_eok": 0.1,
+   "index": "FactSet Global Electric Vehicle and Rechargeable Battery Korea-Tilted Index(PR)",
+   "nav": "14743.66",
+   "close": "14460"
+  },
+  {
+   "code": "225800",
+   "name": "KIWOOM 미국달러선물레버리지",
+   "aum_eok": 72,
+   "trade_eok": 0.0,
+   "index": "미국달러선물지수",
+   "nav": "14023.06",
+   "close": "14015"
+  },
+  {
+   "code": "400590",
+   "name": "SOL 글로벌탄소배출권선물ICE(합성)",
+   "aum_eok": 72,
+   "trade_eok": 0.0,
+   "index": "ICE Global Carbon Futures Index(Excess Return)",
+   "nav": "14344.58",
+   "close": "14315"
+  },
+  {
+   "code": "437370",
+   "name": "RISE 글로벌농업경제",
+   "aum_eok": 72,
+   "trade_eok": 0.1,
+   "index": "MVIS Global Agribusiness Index(Price Return)",
+   "nav": "10224.08",
+   "close": "10175"
+  },
+  {
+   "code": "0252V0",
+   "name": "ACE 미국CPU반도체TOP3+",
+   "aum_eok": 71,
+   "trade_eok": 22.5,
+   "index": "FnGuide 미국 CPU 반도체 TOP3+ 지수",
+   "nav": "8841.22",
+   "close": "8695"
+  },
+  {
+   "code": "0224D0",
+   "name": "KIWOOM 미국CPU반도체TOP4+",
+   "aum_eok": 70,
+   "trade_eok": 3.3,
+   "index": "iSelect 미국CPU반도체TOP4 지수",
+   "nav": "8267.06",
+   "close": "8110"
+  },
+  {
+   "code": "0005C0",
+   "name": "RISE 미국S&P500엔화노출(합성 H)",
+   "aum_eok": 69,
+   "trade_eok": 0.1,
+   "index": "S&P500 Yen Hedged Index(PR)",
+   "nav": "10592.38",
+   "close": "10580"
+  },
+  {
+   "code": "139660",
+   "name": "KIWOOM 미국달러선물인버스",
+   "aum_eok": 67,
+   "trade_eok": 0.0,
+   "index": "미국달러선물지수",
+   "nav": "8720.79",
+   "close": "8740"
+  },
+  {
+   "code": "0036Z0",
+   "name": "RISE 미국천연가스밸류체인",
+   "aum_eok": 66,
+   "trade_eok": 0.2,
+   "index": "Solactive US Natural Gas Value Chain Index PR",
+   "nav": "11996.09",
+   "close": "11925"
+  },
+  {
+   "code": "456200",
+   "name": "PLUS 미국달러SOFR금리액티브(합성)",
+   "aum_eok": 64,
+   "trade_eok": 0.0,
+   "index": "Solactive SOFR Daily Total Return Index",
+   "nav": "58137.16",
+   "close": "58195"
+  },
+  {
+   "code": "400580",
+   "name": "SOL 유럽탄소배출권선물S&P(H)",
+   "aum_eok": 63,
+   "trade_eok": 0.1,
+   "index": "S&P GSCI Carbon Emission Allowances(EUA)(EUR)ER",
+   "nav": "12598.08",
+   "close": "12610"
+  },
+  {
+   "code": "469530",
+   "name": "RISE 미국달러선물인버스",
+   "aum_eok": 63,
+   "trade_eok": 0.0,
+   "index": "미국달러선물지수",
+   "nav": "9776.06",
+   "close": "9770"
+  },
+  {
+   "code": "0166T0",
+   "name": "PLUS 글로벌저작권핵심기업액티브",
+   "aum_eok": 62,
+   "trade_eok": 1.4,
+   "index": "iSelect 미국AI지적재산 지수(PR)",
+   "nav": "9572.6",
+   "close": "9585"
+  },
+  {
+   "code": "402460",
+   "name": "HANARO Fn K-메타버스MZ",
+   "aum_eok": 62,
+   "trade_eok": 1.5,
+   "index": "FnGuide K-메타버스 MZ 지수(시장가격)",
+   "nav": "12431.46",
+   "close": "12455"
+  },
+  {
+   "code": "401590",
+   "name": "HANARO 글로벌탄소배출권선물ICE(합성)",
+   "aum_eok": 58,
+   "trade_eok": 0.0,
+   "index": "ICE Global Carbon Futures Index(Excess Return)",
+   "nav": "11420.24",
+   "close": "11385"
+  },
+  {
+   "code": "0215T0",
+   "name": "HANARO 미국AI광통신TOP10",
+   "aum_eok": 57,
+   "trade_eok": 2.5,
+   "index": "Indxx US AI Optical Communication TOP10 Index(PR)",
+   "nav": "6303.86",
+   "close": "6015"
+  },
+  {
+   "code": "267450",
+   "name": "RISE 미국장기국채선물인버스(H)",
+   "aum_eok": 56,
+   "trade_eok": 0.0,
+   "index": "S&P U.S. Treasury Bond Futures Excess Return Index",
+   "nav": "11257.09",
+   "close": "11180"
+  },
+  {
+   "code": "476310",
+   "name": "RISE 글로벌비만산업TOP2+",
+   "aum_eok": 56,
+   "trade_eok": 0.0,
+   "index": "KEDI 글로벌 비만 산업 Top2+ 지수(Price Return)",
+   "nav": "10251.05",
+   "close": "10160"
+  },
+  {
+   "code": "483030",
+   "name": "KIWOOM 미국블록버스터바이오테크의약품+",
+   "aum_eok": 55,
+   "trade_eok": 0.3,
+   "index": "Solactive Blockbuster Biotech Drugs Index(PR)",
+   "nav": "12308.67",
+   "close": "12335"
+  },
+  {
+   "code": "0114X0",
+   "name": "RISE 글로벌게임테크TOP3Plus",
+   "aum_eok": 53,
+   "trade_eok": 0.1,
+   "index": "Solactive-KEDI 글로벌 게임 테크 TOP3 플러스 지수",
+   "nav": "8135.83",
+   "close": "8040"
+  },
+  {
+   "code": "0015K0",
+   "name": "TIGER 미국소비트렌드액티브",
+   "aum_eok": 51,
+   "trade_eok": 1.5,
+   "index": "Mirae Asset US Consumer Trend 지수 (PR)",
+   "nav": "7041.15",
+   "close": "7040"
+  },
+  {
+   "code": "0015E0",
+   "name": "KIWOOM 엔비디아미국30년국채혼합액티브(H)",
+   "aum_eok": 50,
+   "trade_eok": 1.1,
+   "index": "Bloomberg Blended NVIDIA and US Long Treasury Bond Index",
+   "nav": "9946.66",
+   "close": "9850"
+  },
+  {
+   "code": "225030",
+   "name": "TIGER 미국S&P500선물인버스(H)",
+   "aum_eok": 49,
+   "trade_eok": 1.4,
+   "index": "S&P 500 Futures Total Return Index",
+   "nav": "2284.66",
+   "close": "2295"
+  },
+  {
+   "code": "390400",
+   "name": "KODEX 미국스마트모빌리티S&P",
+   "aum_eok": 49,
+   "trade_eok": 0.0,
+   "index": "S&P Kensho Smart Transportation",
+   "nav": "6121.3",
+   "close": "6065"
+  },
+  {
+   "code": "267440",
+   "name": "RISE 미국장기국채선물(H)",
+   "aum_eok": 48,
+   "trade_eok": 0.0,
+   "index": "S&P U.S. Treasury Bond Futures Excess Return Index",
+   "nav": "7989.51",
+   "close": "8010"
+  },
+  {
+   "code": "490330",
+   "name": "KoAct 미국치매&뇌질환치료제액티브",
+   "aum_eok": 48,
+   "trade_eok": 0.2,
+   "index": "Solactive 미국뇌질환치료제 PR 지수",
+   "nav": "13739.48",
+   "close": "13635"
+  },
+  {
+   "code": "0087F0",
+   "name": "ACE 차이나AI빅테크TOP2+액티브",
+   "aum_eok": 47,
+   "trade_eok": 0.3,
+   "index": "Solactive China AI Big Tech TOP2+ Index (Price Return)",
+   "nav": "10395.86",
+   "close": "10320"
+  },
+  {
+   "code": "0132D0",
+   "name": "KoAct 글로벌K컬처밸류체인액티브",
+   "aum_eok": 46,
+   "trade_eok": 0.2,
+   "index": "KEDI 글로벌 K컬처밸류체인 지수(PR)",
+   "nav": "8321.15",
+   "close": "8165"
+  },
+  {
+   "code": "0073X0",
+   "name": "FOCUS 알리바바미국채커버드콜혼합",
+   "aum_eok": 45,
+   "trade_eok": 0.0,
+   "index": "KEDI 알리바바미국채커버드콜혼합지수(TR)",
+   "nav": "8169.08",
+   "close": "8155"
+  },
+  {
+   "code": "373790",
+   "name": "KIWOOM 미국방어배당성장나스닥",
+   "aum_eok": 44,
+   "trade_eok": 0.1,
+   "index": "Nasdaq US Low Volatility Dividend Achievers Index",
+   "nav": "15877.94",
+   "close": "15815"
+  },
+  {
+   "code": "391600",
+   "name": "ACE 미국친환경그린테마",
+   "aum_eok": 43,
+   "trade_eok": 1.1,
+   "index": "Indxx US Green Infrastructure Price return Index",
+   "nav": "9615.27",
+   "close": "9520"
+  },
+  {
+   "code": "499150",
+   "name": "SOL 미국S&P500엔화노출(H)",
+   "aum_eok": 41,
+   "trade_eok": 0.1,
+   "index": "S&P500 Yen Hedged Index(PR)",
+   "nav": "10192.5",
+   "close": "10265"
+  },
+  {
+   "code": "0078V0",
+   "name": "PLUS 미국로보택시",
+   "aum_eok": 39,
+   "trade_eok": 0.0,
+   "index": "KEDI 미국로보택시 지수(PR)",
+   "nav": "7766.29",
+   "close": "7650"
+  },
+  {
+   "code": "0050E0",
+   "name": "PLUS 미국AI에이전트",
+   "aum_eok": 37,
+   "trade_eok": 0.3,
+   "index": "Solactive US AI Agents Index(PR)",
+   "nav": "8279.25",
+   "close": "8210"
+  },
+  {
+   "code": "267490",
+   "name": "RISE 미국장기국채선물레버리지(합성 H)",
+   "aum_eok": 34,
+   "trade_eok": 0.0,
+   "index": "S&P U.S. Treasury Bond Futures Excess Return Index",
+   "nav": "4859.59",
+   "close": "4875"
+  },
+  {
+   "code": "491630",
+   "name": "RISE 미국반도체인버스(합성 H)",
+   "aum_eok": 32,
+   "trade_eok": 1.3,
+   "index": "NYSE Semicondoctor Index(Price Return)",
+   "nav": "5588.97",
+   "close": "5730"
+  }
+ ],
+ "total_etfs": 1190
+}
