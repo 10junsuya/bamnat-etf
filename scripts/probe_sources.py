@@ -1,26 +1,18 @@
-"""구성종목 출처 후보 접속 확인(한 번씩). 결과 → data/probe.json"""
-import http.cookiejar, json, re, urllib.request, html as H
+"""과거 미국 종가 출처 후보 접속 확인(한 번씩). 결과 → data/probe.json"""
+import json, urllib.request
 from pathlib import Path
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36",
-      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8"}
-op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+      "Accept": "application/json,text/plain,*/*", "Accept-Language": "en-US,en;q=0.9"}
 def get(u):
-    with op.open(urllib.request.Request(u, headers=UA), timeout=40) as r:
+    with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=30) as r:
         return r.read().decode("utf-8", "replace")
 out = {}
-for k, u in {"funetf_390390": "https://www.funetf.co.kr/product/etf/view/KR7390390003",
-             "funetf_379800": "https://www.funetf.co.kr/product/etf/view/KR7379800006"}.items():
+for k, u in {"yahoo_q1": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?range=1mo&interval=1d",
+             "yahoo_q2": "https://query2.finance.yahoo.com/v8/finance/chart/BRK-B?range=1mo&interval=1d",
+             "nasdaq": "https://api.nasdaq.com/api/quote/SPY/historical?assetclass=etf&fromdate=2026-10-20&limit=30",
+             "stooq": "https://stooq.com/q/d/l/?s=spy.us&i=d"}.items():
     try:
-        b = get(u)
+        b = get(u); out[k] = {"len": len(b), "head": b[:700]}
     except Exception as e:  # noqa: BLE001
-        out[k] = {"err": f"{type(e).__name__}: {str(e)[:120]}"}; continue
-    rows = []
-    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", b, re.S):
-        cells = [H.unescape(re.sub(r"<[^>]+>", " ", c)).strip() for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
-        cells = [re.sub(r"\s+", " ", c) for c in cells if c.strip()]
-        if cells and any(re.fullmatch(r"-?\d{1,3}(\.\d+)?%?", c) for c in cells):
-            rows.append(cells[:8])
-    i = b.find("구성종목")
-    out[k] = {"len": len(b), "rows": rows[:40], "ajax": sorted(set(re.findall(r"['\"](/[a-zA-Z0-9_/\-]*(?:pdf|Pdf|PDF|compos|Compos|holding)[a-zA-Z0-9_/\-\.]*)['\"]", b)))[:20],
-              "around": re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", b[i:i+3000]))[:1200] if i >= 0 else ""}
+        out[k] = {"err": f"{type(e).__name__}: {str(e)[:160]}"}
 Path("data/probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
