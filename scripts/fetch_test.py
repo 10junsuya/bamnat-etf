@@ -31,6 +31,8 @@ KR_ETFS = {
     "0181L0": "SOL 미국우주항공TOP10",
 }
 ETF_URLS = [
+    # 2026년 현재 공공데이터포털 상세 페이지의 주소 (/service/ 없음, _V2)
+    "https://apis.data.go.kr/1160100/GetSecuritiesProductInfoService_V2/getETFPriceInfo_V2",
     "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService/getETFPriceInfo",
     "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService/getETFPriceInfo_V2",
     "https://apis.data.go.kr/1160100/service/GetSecuritiesProductInfoService_V2/getETFPriceInfo_V2",
