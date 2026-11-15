@@ -206,6 +206,20 @@ details.sfoot{margin-top:18px} details.sfoot>summary{cursor:pointer; list-style:
 .leg .lv small{display:block; font-weight:400; font-size:11px; color:var(--muted)}
 .leg>div:first-child .lv{color:var(--pt)}
 .mnote{margin:12px 0 0; font-size:13px; line-height:1.5}
+.earn{margin-top:16px; padding:14px 14px 4px; border:1px solid var(--line); border-radius:14px}
+.earn-h{display:flex; align-items:baseline; justify-content:space-between; gap:8px} .earn-h h4{margin:0}
+.elead{margin-top:8px; font-size:15px} .elead b{font-weight:700} .elead em{font-style:normal; font-weight:700; color:var(--pt)}
+.echart{display:block; width:100%; max-width:380px; height:auto; margin:10px auto 0}
+.echart text{font-size:10px; fill:var(--muted)} .echart text.v{fill:var(--ink); font-weight:600; font-size:10.5px}
+.echart .base{stroke:var(--line); stroke-width:1}
+.echart .b0{fill:var(--d5)} .echart .b1{fill:var(--pt)} .echart .b2{fill:rgba(184,134,43,.12); stroke:var(--pt); stroke-width:1.4; stroke-dasharray:3 2}
+.echart .b2r{fill:var(--pt); opacity:.35} .echart .b3{fill:var(--d4)} .echart .est{stroke:var(--ink); stroke-width:1.4; stroke-dasharray:4 3}
+.elegend{display:flex; flex-wrap:wrap; justify-content:center; gap:4px 12px; margin-top:4px; font-size:11px; color:var(--muted)}
+.elegend span{display:inline-flex; align-items:center; gap:5px} .elegend i{display:inline-block; width:10px; height:10px; border-radius:2px}
+.elegend i.b0{background:var(--d5)} .elegend i.b1{background:var(--pt)} .elegend i.b2{border:1.4px dashed var(--pt)} .elegend i.b3{background:var(--d4)}
+.elegend i.est{height:0; width:14px; border-top:1.6px dashed var(--ink); border-radius:0}
+.elines{margin:10px 0 2px; padding:0; list-style:none; font-size:13px; line-height:1.5} .elines li{padding:3px 0}
+.earn .acc{border-bottom:0; border-top:1px solid var(--line); margin-top:8px}
 .qrec{margin-top:16px; padding-top:12px; border-top:1px solid var(--line)} .qrec h5{margin:0; font-size:14px; display:flex; gap:8px; align-items:baseline} .qrec .pspecs{margin-top:4px}
 .msrc{display:flex; flex-wrap:wrap; align-items:center; gap:0 10px; margin-top:6px} .msrc a{display:inline-flex; align-items:center; min-height:28px}
 .vchain{display:grid; grid-template-columns:minmax(0,1fr) 12px auto 12px minmax(0,1fr); align-items:center; gap:0 4px}
@@ -3503,7 +3517,7 @@ const QREC = {
   ACN:{"p": "4분기 · 2026년 6~8월", "tag": "+7%", "rows": [["4분기 매출", "187억 달러 (현지 통화 +7%)"], ["1년 매출", "740억 달러"], ["1년 수주", "845억 달러 (4분기 222억)"], ["내년 목표", "+3~6% (764억~787억 달러)"], ["인수", "약 50억 달러 계획"]], "note": "", "src": [["액센츄어 4분기 실적 (Zacks)", "https://www.zacks.com/stock/news/2999088/accenture-s-q4-earnings-beat-estimates-revenues-increase-6-y-y"]]},
   QUBT:{"p": "3분기 · 2026년 7~9월", "tag": "인수 매출", "rows": [["3분기 매출", "950만 달러 (인수 사업 880만)"], ["매출총이익률", "4.5%"], ["현금", "약 13억 달러"], ["수주잔고", "3,910만 달러"]], "note": "매출 대부분이 인수한 회사에서 나와요. 번 돈보다 쌓아 둔 현금이 훨씬 커요.", "src": [["퀀텀컴퓨팅 IR", "https://ir.quantumcomputinginc.com"]]},
   RGTI:{"p": "3분기 · 2026년 7~9월", "tag": "예상 밑돎", "rows": [["3분기 매출", "140만 달러"], ["현금", "4.97억 달러"], ["미국 정부", "상무부 1억 달러 계약"]], "note": "매출은 작고 현금은 넉넉해요. 아직 연구 단계 회사예요.", "src": [["리게티 IR", "https://investors.rigetti.com"]]},
-  PLTR:{"p": "3분기 · 2026년 7~9월", "tag": "+96%", "rows": [["3분기 매출", "23.13억 달러 (+96%)"], ["순이익", "11.3억 달러 (이익률 49%)"], ["1천만 달러 넘는 계약", "64건"], ["4분기 매출 예상", "26.49~26.53억 달러"], ["올해 매출 목표", "85.3억 달러"], ["현금", "104억 달러"]], "note": "다만 이번 분기 새로 맺은 계약 총액은 1년 전보다 6% 느는 데 그쳤어요.", "src": [["팔란티어 3분기 실적(SEC)", "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm"], ["새 계약 총액(finsee)", "https://finsee.ai/earnings/pltr/2026/q3/en/"]]},
+  PLTR:{"p": "3분기 · 2026년 7~9월", "tag": "+96%", "rows": [["3분기 매출", "23.13억 달러 (+96%)"], ["순이익", "11.3억 달러 (이익률 49%)"], ["1천만 달러 넘는 계약", "64건"], ["4분기 매출 예상", "26.49~26.53억 달러"], ["올해 매출 목표", "85.3억 달러"], ["현금", "104억 달러"]], "note": "다만 이번 분기 새로 맺은 계약 총액은 1년 전보다 6% 느는 데 그쳤어요.", "src": [["팔란티어 3분기 실적(SEC)", "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm"], ["새 계약 총액(finsee)", "https://finsee.ai/earnings/pltr/2026/q3/en/"], ["예상치(LSEG·FactSet, 테크뉴스)", "https://finance.technews.tw/2026/11/03/palantir-reports-q3-2026-u-s-comm-revenue/"]], "chart": {"cur": "usd", "prev": ["1년 전", 1181], "now": ["7~9월", 2313], "est": 2180, "next": {"label": "10~12월", "guide": [2649, 2653], "cons": 2460, "asof": "11/3", "when": "2027년 2월 초 (예상)"}}},
   PANW:{"p": "4분기 · 2026년 5~7월", "tag": "RPO 212억 달러", "rows": [["남은 계약(RPO)", "212억 달러 (+34%)"], ["내년 목표", "매출 141억~142억 · NGS ARR 110.75억~111.75억 달러"], ["장기 목표", "2030 회계연도 NGS ARR 200억 달러"]], "note": "", "src": [["팔로알토 네트웍스 IR", "https://investors.paloaltonetworks.com"]]},
   CRWD:{"p": "2분기 · 2026년 5~7월", "tag": "+26%", "rows": [["2분기 매출", "14.7억 달러 (+26%)"], ["잉여현금흐름", "3.77억 달러"], ["올해 ARR 목표", "66.03억~66.12억 달러"]], "note": "", "src": [["크라우드스트라이크 IR", "https://ir.crowdstrike.com"]]},
   CRS:{"p": "1분기 · 2026년 7~9월 · 1분기 사상 최대", "tag": "+28%", "rows": [["매출", "7.98억 달러 (+9%)"], ["영업이익", "1.964억 달러 (+28%)"], ["올해 목표", "영업이익 8.5억~8.8억 달러"], ["2029 목표", "영업이익 12억~13억 달러"]], "note": "", "src": [["카펜터 1분기 실적(SEC)", "https://www.sec.gov/Archives/edgar/data/0000017843/000001784326000049/a1stqtrfy2027results.htm"], ["1분기 분석(Beancount)", "https://beancount.io/blog/2026/10/24/carpenter-fy2027-q1-earnings-analysis"]]},
@@ -3554,6 +3568,14 @@ const QREC = {
   BWXT:{"p": "3분기 · 2026년 7~9월", "tag": "+10%", "rows": [["3분기 매출", "9.53억 달러 (+10%)"], ["순이익", "1.02억 달러"], ["조정 EBITDA", "1.80억 달러"], ["수주 잔고", "85.6억 달러 (2027년까지 46%가 매출로)"], ["3분기 신규 수주", "5.38억 달러 (1년 전 22.5억)"]], "note": "성장률이 1분기 26% → 2분기 18% → 3분기 10%로 느려졌어요.", "src": [["BWXT 3분기 실적(SEC)", "https://www.sec.gov/Archives/edgar/data/0001486957/000148695726000053/bwxt_93026xerexhibit991.htm"], ["3분기(Earnings Whispers)", "https://www.earningswhispers.com/article/BWXT/r1088"]]},
   UUUU:{"p": "3분기 · 2026년 7~9월", "tag": "매출 +65%", "rows": [["3분기 매출", "2,920만 달러"], ["우라늄 매출", "2,840만 달러 (32만 파운드)"], ["희토류 합금 매출", "44만 달러"], ["주당 손실", "0.20달러 (투자 평가 손실)"]], "note": "우라늄은 흑자지만 보유 주식 평가 손실로 전체는 적자였어요.", "src": [["에너지퓨얼스 3분기", "https://finviz.com/news/416163/energy-fuels-announces-q3-2026-results"], ["3분기(Zacks)", "https://www.zacks.com/stock/news/3026514/"]]},
   TLN:{"p": "3분기 · 2026년 7~9월", "tag": "+63%", "rows": [["3분기 매출", "13.27억 달러 (+63%)"], ["조정 EBITDA", "6.69억 달러"], ["조정 잉여현금", "4.33억 달러"], ["2027 EBITDA 목표", "26.75억 달러 (중간값)"], ["자사주 매입", "30억 달러 (가속 매입 15억 포함)"], ["장기 부채", "95억 달러"]], "note": "파생상품 평가 손실과 이자 비용 때문에 순이익은 줄었어요.", "src": [["탈렌 3분기 실적", "https://finviz.com/news/414066/talen-energy-reports-third-quarter-2026-results-reaffirms-2026-guidance-and-introduces-2027-guidance"], ["3분기(Earnings Whispers)", "https://www.earningswhispers.com/article/TLN/r1144"]]},
+  NVDA:{"p": "FY27 2분기 · 2026년 5~7월", "tag": "+106%", "rows": [["매출", "962.2억 달러 (+106%)"], ["데이터센터 매출", "890억 달러 (+117%)"], ["주당순이익(조정)", "2.22달러 (예상 2.09달러)"], ["다음 분기 매출 전망", "1,080억 달러 ±2% (중국 데이터센터 제외)"], ["2028 회계연도", "매출 약 70% 성장 전망"]], "note": "11월 17일(미국 시간)에 다음 실적을 발표해요. 발표 뒤 숫자가 바뀌어요.", "src": [["엔비디아 2분기 실적(Earnings Whispers)", "https://www.earningswhispers.com/epsdetails/nvda"], ["2분기 정리(Implicator)", "https://www.implicator.ai/nvidia-70-percent-growth-forecast-margin-outlook/"], ["다음 발표일(엔비디아)", "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"]], "chart": {"cur": "usd", "prev": ["1년 전", 46743], "now": ["5~7월", 96220], "est": 91710, "next": {"label": "8~10월", "guide": [105840, 110160], "cons": 103880, "asof": "8/26", "when": "2026년 11월 17일 (미국)"}}},
+  AAPL:{"p": "FY26 4분기 · 2026년 7~9월", "tag": "+12%", "rows": [["매출", "1,144.8억 달러 (+12%)"], ["주당순이익", "2.10달러 (예상 2.00달러)"], ["순이익", "307.1억 달러"], ["다음 분기 전망", "매출 7~10% 성장 · 회사 사상 최대 분기"], ["서비스 전망", "8~9% 성장"]], "note": "아이폰 18 프로가 분기 끝나기 8일 전에 나와서, 본격 판매는 10~12월 분기에 잡혀요.", "src": [["애플 4분기(9to5Mac)", "https://9to5mac.com/?p=1077100"], ["예상치(S&P Visible Alpha)", "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/10/apple-earnings-preview-q4-2026"], ["다음 분기 예상(FourWeekMBA·LSEG)", "https://fourweekmba.com/ai-apple-guides-holiday-sales-up-7-10-lowest-in-five-calls/"]], "chart": {"cur": "usd", "prev": ["1년 전", 102470], "now": ["7~9월", 114480], "est": 113600, "next": {"label": "10~12월", "guide": [153820, 158130], "cons": 160150, "asof": "10/30", "when": "2027년 1월 말 (예상)"}}},
+  MSFT:{"p": "FY27 1분기 · 2026년 7~9월", "tag": "+19%", "rows": [["매출", "922.8억 달러 (+19%)"], ["마이크로소프트 클라우드", "639억 달러 (+30%)"], ["애저 성장", "48%"], ["주당순이익(조정)", "4.89달러 (예상 4.71달러)"], ["다음 분기 애저 전망", "49~50% 성장 (고정 환율)"], ["설비투자", "452억 달러 · 다음 분기 500억 넘음"]], "note": "고객 수요가 공급(데이터센터 용량)보다 많다고 했어요.", "src": [["MS 1분기(Earnings Whispers)", "https://www.earningswhispers.com/epsdetails/msft"], ["다음 분기 전망(Zacks)", "https://www.zacks.com/stock/news/3023040/"], ["전망 대 예상(FourWeekMBA·LSEG)", "https://fourweekmba.com/ai-microsoft-sees-azure-growing-up-to-50-as-revenue-nears-97b/"]], "chart": {"cur": "usd", "prev": ["1년 전", 77670], "now": ["7~9월", 92280], "est": 90580, "next": {"label": "10~12월", "guide": [96000, 97100], "cons": 95600, "asof": "10/28", "when": "2027년 1월 말 (예상)"}}},
+  GOOGL:{"p": "2026년 3분기 · 7~9월", "tag": "+25%", "rows": [["매출", "1,275.8억 달러 (+25%)"], ["구글 클라우드", "307.1억 달러"], ["구글 서비스", "963억 달러"], ["주당순이익", "2.12달러 (예상 약 3달러 · 보유 주식 평가 손실 87억 달러)"], ["회사 전망", "분기 매출 전망을 내지 않아요"]], "note": "클라우드는 예상보다 컸고, 광고는 예상보다 작았어요.", "src": [["알파벳 3분기(Newsquawk)", "https://www.newsquawk.com/headlines/alphabet-googl-q3-2026-usd-eps-212-exp-303-revenue-1276bln-exp-12791bln"], ["3분기(StockStory)", "https://stockstory.org/us/stocks/nasdaq/googl/news/earnings/alphabet-nasdaqgoogl-posts-q3-2026-sales-in-line-with-estimates-but-stock-drops"]], "chart": {"cur": "usd", "prev": ["1년 전", 102350], "now": ["7~9월", 127580], "est": 127910, "next": {"label": "10~12월", "guide": null, "cons": null, "when": "2027년 2월 초 (예상)"}}},
+  AMZN:{"p": "2026년 3분기 · 7~9월", "tag": "+12%", "rows": [["매출", "2,019.4억 달러 (+12%)"], ["AWS", "460억 달러 (+39%)"], ["영업이익", "281억 달러 (이익률 13.9% · 사상 최대)"], ["주당순이익", "1.89달러 (예상 1.97달러)"], ["다음 분기 영업이익 전망", "285~335억 달러"], ["올해 설비투자", "약 2,200억 달러"]], "note": "주당순이익이 줄어든 건 작년 같은 분기에 앤트로픽 투자 평가 이익이 컸기 때문이에요.", "src": [["아마존 3분기 실적", "https://aboutamazon.com/news/company-news/amazon-earnings-q3-2026-report"], ["예상치(CoinCentral·FactSet)", "https://coincentral.com/?p=216035"], ["다음 분기 예상(Walnut·Yahoo)", "https://walnutinvest.com/stocks/amzn/earnings"]], "chart": {"cur": "usd", "prev": ["1년 전", 180169], "now": ["7~9월", 201944], "est": 202200, "next": {"label": "10~12월", "guide": [240000, 247000], "cons": 244719, "asof": "11/2", "when": "2027년 2월 초 (예상)"}}},
+  META:{"p": "2026년 3분기 · 7~9월", "tag": "+26%", "rows": [["매출", "646억 달러 (+26%)"], ["주당순이익", "3.83달러 (일회성 법률 비용 99억 달러 포함)"], ["리얼리티 랩스 손실", "41.3억 달러"], ["올해 설비투자", "1,350~1,450억 달러"]], "note": "광고 단가와 노출이 모두 두 자릿수로 늘었어요.", "src": [["메타 3분기(Earnings Whispers)", "https://www.earningswhispers.com/epsdetails/META/202609"], ["3분기(Newsquawk)", "https://www.newsquawk.com/headlines/meta-platforms-inc-meta-q3-2026-usd-eps-383-exp-667-revenue-646bln-exp-6331bln"]], "chart": {"cur": "usd", "prev": ["1년 전", 51240], "now": ["7~9월", 64600], "est": 63380, "next": {"label": "10~12월", "guide": [73000, 76000], "cons": 73700, "asof": "10/21", "when": "2027년 1월 말 (예상)"}}},
+  TSLA:{"p": "2026년 3분기 · 7~9월", "tag": "0%", "rows": [["매출", "280.5억 달러 (1년 전과 비슷)"], ["자동차 매출", "205.6억 달러 (−3%)"], ["주당순이익(조정)", "0.48달러 (예상 0.43달러)"], ["인도", "48.65만 대 (예상 46.2만 대)"], ["에너지 저장", "13.7GWh (예상 15.9GWh)"], ["올해 설비투자", "약 200억 달러"]], "note": "회사는 분기 매출 전망을 내지 않아요.", "src": [["테슬라 3분기(Electrek)", "https://electrek.co/2026/10/21/tesla-tsla-q3-2026-financial-results/"], ["3분기(Tech Insider·CNBC)", "https://tech-insider.org/tesla-earnings-beat-energy-storage-hardware-auto-decline-2026/"]], "chart": {"cur": "usd", "prev": ["1년 전", 28095], "now": ["7~9월", 28046], "est": 27900, "next": {"label": "10~12월", "guide": null, "cons": null, "when": "2027년 1월 말 (예상)"}}},
+  AMD:{"p": "2026년 3분기 · 7~9월", "tag": "+45%", "rows": [["매출", "133.8억 달러 (+45%)"], ["데이터센터", "85.5억 달러 (+97%)"], ["주당순이익(조정)", "2.09달러 (예상 1.95달러)"], ["다음 분기 이익률 전망", "약 55%"]], "note": "데이터센터가 매출의 64%가 됐어요(1년 전 47%).", "src": [["AMD 3분기(S&P Global)", "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/10/data-center-strength-powers-amd-s-revenue-in-q3"], ["다음 분기 예상(Tech Insider·LSEG)", "https://tech-insider.org/?p=51435"]], "chart": {"cur": "usd", "prev": ["1년 전", 9246], "now": ["7~9월", 13380], "est": 13090, "next": {"label": "10~12월", "guide": [16490, 17510], "cons": 16230, "asof": "11/3", "when": "2027년 2월 초 (예상)"}}},
 };
 
 function specRows(t, p){
@@ -3844,6 +3866,50 @@ function moneyHtml(t){
     <p class="mnote">${M.note}</p>
     <div class="msrc"><span class="tiny muted">${M.p}${M.pct?"":` · 합계 ${moneyAmt(tot, M.cur)}`} · 출처</span>${M.src.map(([n,u])=>`<a class="tiny" href="${u}" target="_blank" rel="noopener">${n} ›</a>`).join("")}</div>`;
 }
+function earnAmt(m, cur, fine){ const u = cur==="eur" ? "유로" : cur==="cad" ? "캐나다달러" : "달러";
+  if(m>=100000) return `${Math.round(m/100).toLocaleString()}억 ${u}`;
+  if(m>=100) return `${(m/100).toFixed(m>=1000&&!fine?1:2).replace(/\.?0+$/,"")}억 ${u}`;
+  return `${Math.round(m*100).toLocaleString()}만 ${u}`; }
+function earnChart(c){
+  const u = c.cur, V = [c.prev&&c.prev[1], c.now[1], c.est, c.next&&c.next.guide&&c.next.guide[1], c.next&&c.next.cons].filter(x=>x>0);
+  const mx = Math.max(...V)*1.12, H = 92, B = 118, w = 46;
+  const y = v => B - H*v/mx, hh = v => H*v/mx;
+  const n = 1 + (c.prev?1:0) + (c.next&&c.next.guide?1:0) + (c.next&&c.next.cons?1:0), W = 320;
+  const bars = []; let x = (W - n*w - (n-1)*28)/2;
+  const col = (lab1, lab2, inner, val) => { const g = `<g>${inner}<text class="v" x="${x+w/2}" y="${(val[0]-6).toFixed(1)}" text-anchor="middle">${val[1]}</text><text x="${x+w/2}" y="${B+14}" text-anchor="middle">${lab1}</text><text x="${x+w/2}" y="${B+26}" text-anchor="middle">${lab2}</text></g>`; bars.push(g); x += w+28; };
+  const short = v => earnAmt(v,u).replace(/ (달러|유로|캐나다달러)$/,"");
+  if(c.prev) col(c.prev[0], "실제", `<rect class="b0" x="${x}" y="${y(c.prev[1])}" width="${w}" height="${hh(c.prev[1])}" rx="4"/>`, [y(c.prev[1]), short(c.prev[1])]);
+  { const v = c.now[1], top = c.est ? Math.min(y(v), y(c.est)) : y(v);
+    const est = c.est ? `<line class="est" x1="${x-6}" x2="${x+w+6}" y1="${y(c.est)}" y2="${y(c.est)}"/>` : "";
+    col(c.now[0], "실제", `<rect class="b1" x="${x}" y="${y(v)}" width="${w}" height="${hh(v)}" rx="4"/>${est}`, [top, short(v)]); }
+  if(c.next && c.next.guide){ const [lo,hi] = c.next.guide;
+    col(c.next.label, "회사 전망", `<rect class="b2" x="${x}" y="${y(hi)}" width="${w}" height="${hh(hi)}" rx="4"/>${hi>lo?`<rect class="b2r" x="${x}" y="${y(hi)}" width="${w}" height="${Math.max(hh(hi)-hh(lo),2)}" rx="2"/>`:""}`, [y(hi), short(lo)===short(hi)?short(hi):`${short(lo).replace(/억$/,"")}~${short(hi)}`]); }
+  if(c.next && c.next.cons) col(c.next.label, "애널리스트 예상", `<rect class="b3" x="${x}" y="${y(c.next.cons)}" width="${w}" height="${hh(c.next.cons)}" rx="4"/>`, [y(c.next.cons), short(c.next.cons)]);
+  return `<svg class="echart" viewBox="0 0 ${W} 148" role="img" aria-label="분기 매출 막대그래프"><line class="base" x1="8" x2="${W-4}" y1="${B}" y2="${B}"/>${bars.join("")}</svg>`;
+}
+function rowsH0(q){ return `<div class="pspecs">${q.rows.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join("")}</div>`; }
+function earnHtml(t){
+  const q = typeof QREC!=="undefined" ? QREC[t] : null; if(!q) return "";
+  const c = q.chart, u = c && c.cur;
+  const pct = (a,b) => { const p = (a/b-1)*100; return (p>=0?"+":"−")+Math.abs(p).toFixed(Math.abs(p)<10?1:0)+"%"; };
+  const head = !c ? (q.tag?`<div class="elead"><em>${q.tag}</em></div>`:"")+rowsH0(q) : `<div class="elead">${c.now[0]} 매출 <b>${earnAmt(c.now[1],u)}</b>${c.prev?` <em>${pct(c.now[1],c.prev[1])}</em><span class="tiny muted"> 1년 전보다</span>`:""}</div>` ;
+  const lines = [];
+  if(c && c.est){ const p = (c.now[1]/c.est-1)*100; lines.push(Math.abs(p)<0.5 ? `발표 전 애널리스트 예상(${earnAmt(c.est,u)})과 비슷했어요.` : `발표 전 애널리스트 예상(${earnAmt(c.est,u)})보다 ${Math.abs(p).toFixed(1)}% ${p>0?"많았어요":"적었어요"}.`); }
+  if(c && c.next){ const n = c.next;
+    if(n.guide) lines.push(`회사 전망: ${n.label} 매출 ${n.guide[0]===n.guide[1]?earnAmt(n.guide[0],u):`${earnAmt(n.guide[0],u,1).replace(/ (달러|유로|캐나다달러)$/,"")}~${earnAmt(n.guide[1],u,1)}`}`);
+    else lines.push(`회사 전망: 매출 전망을 내지 않아요`);
+    if(n.cons) lines.push(`애널리스트 예상: ${n.label} 매출 ${earnAmt(n.cons,u)}${n.asof?` <span class="tiny muted">(${n.asof} 기준)</span>`:""}`);
+    if(n.when) lines.push(`다음 발표: ${n.when}`); }
+  const leg = c && c.est ? `<div class="elegend"><span><i class="est"></i>발표 전 애널리스트 예상</span>${c.next&&c.next.guide&&c.next.guide[1]>c.next.guide[0]*1.03?`<span><i class="b2"></i>회사 전망 범위</span>`:""}</div>` : "";
+  const rowsH = `<div class="pspecs">${q.rows.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join("")}</div>`;
+  const detail = `${c?rowsH:""}${q.note?`<p class="mnote">${q.note}</p>`:""}
+    <div class="msrc"><span class="tiny muted">출처</span>${q.src.map(([n,u2])=>`<a class="tiny" href="${u2}" target="_blank" rel="noopener">${n} ›</a>`).join("")}</div>
+    ${c&&(c.est||c.next&&c.next.cons)?`<p class="tiny muted" style="margin:8px 0 0">애널리스트 예상은 증권사 추정을 모은 값(보도)이라 공식 숫자가 아니고 자주 바뀌어요.</p>`:""}`;
+  return `<section class="earn"><div class="earn-h"><h4>실적</h4><span class="tiny muted">${q.p}</span></div>
+    ${head}${c?earnChart(c):""}${leg}
+    ${lines.length?`<ul class="elines">${lines.map(l=>`<li>${l}</li>`).join("")}</ul>`:""}
+    <div class="acc"><button type="button" class="accbtn" data-acc="earn" aria-expanded="false"><b>자세히</b><span></span>${TRI}</button><div class="accbody" hidden>${detail}</div></div></section>`;
+}
 function qrecHtml(t){
   const q = typeof QREC!=="undefined" ? QREC[t] : null; if(!q) return "";
   return `<div class="qrec"><h5>최근 분기 <span class="tiny muted">${q.p}</span></h5>
@@ -3868,8 +3934,8 @@ function aboutAccs(t, co){
   const d = moneySegs(t), c = CHAIN[t];
   const acc = (k, title, prev, body) => `<div class="acc"><button type="button" class="accbtn" data-acc="${k}" aria-expanded="false"><b>${title}</b><span>${prev}</span>${TRI}</button><div class="accbody" hidden>${body}</div></div>`;
   const q = typeof QREC!=="undefined" ? QREC[t] : null;
-  const m = d ? acc("money","돈은 어디서 버나", `${d.segs[0].n} <em>${pctTxt(d.segs[0].p)}</em>`, moneyHtml(t)+qrecHtml(t))
-    : acc("money","돈은 어디서 버나", q&&q.tag?`최근 분기 <em>${q.tag}</em>`:"", `<p class="mnote" style="margin:0">${co.money}</p>`+qrecHtml(t));
+  const m = d ? acc("money","돈은 어디서 버나", `${d.segs[0].n} <em>${pctTxt(d.segs[0].p)}</em>`, moneyHtml(t))
+    : acc("money","돈은 어디서 버나", "", `<p class="mnote" style="margin:0">${co.money}</p>`);
   const ch = c ? acc("chain","업계에서의 위치", c.role, coChainHtml(t))
     : (co.chain && co.chain!=="—" ? acc("chain","업계에서의 위치","",`<p class="mnote" style="margin:0">${co.chain}</p>`) : "");
   return `<div class="accs">${m}${ch}</div>`;
@@ -3881,6 +3947,7 @@ function stockSheet(t, from, fromEv, fromCo){
   const co = CO[t];
   const about = co ? `
     <div class="callout" style="font-size:15px;background:var(--accent-soft)">${co.one}</div>
+    ${earnHtml(t)}
     ${PRODUCTS[t] ? productsHtml(t) : `<h4 style="margin:16px 0 6px">주요 사업</h4>
     <div class="does">${co.does.map(d=>{ const [h,...r]=d.split(": "); return `<div>${r.length?`<b>${h}</b><span>${r.join(": ")}</span>`:`<span>${h}</span>`}</div>`; }).join("")}</div>`}
     ${aboutAccs(t, co)}` : "";
