@@ -110,9 +110,14 @@ def sox_fallback(err):
         d = (today - dt.timedelta(days=back)).isoformat()
         try:
             raw = get(f"https://indexes.nasdaqomx.com/Index/ExportWeightings/SOX?tradeDate={d}T00:00:00.000&timeOfDay=SOD")
-            ws = openpyxl.load_workbook(io.BytesIO(raw), read_only=True, data_only=True).active
-            rows = [r for r in ws.iter_rows(values_only=True)]
-            hi = next(i for i, r in enumerate(rows) if r and any(str(c).strip().lower() in ("symbol", "ticker") for c in r if c))
+            try:
+                ws = openpyxl.load_workbook(io.BytesIO(raw), read_only=True, data_only=True).active
+                rows = [r for r in ws.iter_rows(values_only=True)]
+            except Exception as e2:  # noqa: BLE001
+                raise ValueError(f"엑셀 아님({type(e2).__name__}) 길이 {len(raw)} 앞부분 {raw[:200]!r}")
+            hi = next((i for i, r in enumerate(rows) if r and any(str(c).strip().lower() in ("symbol", "ticker", "security symbol") for c in r if c)), None)
+            if hi is None:
+                raise ValueError(f"머리줄 못 찾음 · 행 {len(rows)}개 · 앞 6행 {[r for r in rows[:6]]!r}"[:600])
             head = [str(c or "").strip().lower() for c in rows[hi]]
             ti = next(i for i, h in enumerate(head) if h in ("symbol", "ticker"))
             ni = next((i for i, h in enumerate(head) if "name" in h), ti)
@@ -126,7 +131,7 @@ def sox_fallback(err):
                 return d, items, "나스닥 SOX 지수 비중"
             notes.append(f"nasdaq {d}: 행 없음")
         except Exception as e:  # noqa: BLE001
-            notes.append(f"nasdaq {d}: {type(e).__name__}:{str(e)[:60]}")
+            notes.append(f"nasdaq {d}: {type(e).__name__}:{str(e)[:600]}")
             if back >= 2:
                 break
     try:
@@ -203,7 +208,7 @@ def main():
             for c in cfg["codes"]:
                 out["etfs"][c] = entry
         except Exception as e:  # noqa: BLE001
-            out["errors"].append(f"{g}({cfg['proxy']}): {type(e).__name__}: {str(e)[:700]}")
+            out["errors"].append(f"{g}({cfg['proxy']}): {type(e).__name__}: {str(e)[:2000]}")
     try:
         asof, items, cash = space()
         if len(items) < 5:
@@ -215,7 +220,7 @@ def main():
                                      "top": [{"ticker": i["ticker"], "name": i["name"], "weight": i["weight"]} for i in sorted(items, key=lambda i: -i["weight"])],
                                      "cash_weight": round(cash, 2), "src": "신한자산운용 구성종목(PDF)"}
     except Exception as e:  # noqa: BLE001
-        out["errors"].append(f"우주항공(soletf): {type(e).__name__}: {str(e)[:700]}")
+        out["errors"].append(f"우주항공(soletf): {type(e).__name__}: {str(e)[:2000]}")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"ETF {len(out['etfs'])}개, 오류 {len(out['errors'])}개")
     for e in out["errors"]:
