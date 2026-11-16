@@ -171,3 +171,13 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 시각: 2026-11-16 18:55 KST
 - 내용: "판사가 삼성·SK하이닉스·마이크론의 D램 담합 소송 기각 요청을 받아들이지 않았다"는 글이 MT Newswires 요약(야후)·KuCoin·CryptoBriefing·mlq.ai·개인 블로그에만 있었고, TechPowerUp은 열지 못했어요. 법원·판사·판결일을 확인 못 했어요. 검색에 2010년대 D램 소송(기각·항소 승소) 기사가 섞여 나와 날짜를 꼭 확인해야 해요. 로이터·법원 기록이 나오면 Scout 새 항목으로 다시 봐요.
 - 확신도: 중간
+
+### W-20261116-1913-1 · 반영 · 시장 전체: 엔비디아 우려 속 한국·대만 증시 급락
+- 시각: 2026-11-16 19:25 KST
+- 내용: 엔비디아 실적 발표(미국 화요일)와 CEO 사임 뒤 경영 공백 우려로 월요일 아시아 반도체주가 크게 내렸어요(AP: 코스피 -3.6%, 대만 -6%, 닛케이 -2.4%, 항셍 +0.5%). 매체마다 장중 기준 시각이 달라 숫자가 조금 달라요(Investing.com: 코스피 -4%, 대만 -5%) — AP 숫자를 넣었어요. 앤트로픽 상장·중국 10월 지표 부진·일본 3분기 역성장도 함께 거론됐어요. companies.json market 첫 항목이에요.
+- 출처: [AP(야후 파이낸스)](https://finance.yahoo.com/markets/stocks/articles/stocks-decline-asia-investor-concerns-045636045.html) · [Investing.com(야후 파이낸스)](https://finance.yahoo.com/markets/stocks/articles/asia-stocks-slide-ai-jitters-043337789.html) · [Bloomberg(제목만)](https://www.bloomberg.com/news/articles/2026-11-16/nvidia-fallout-anthropic-listing-squeeze-asian-chip-stocks-anew) · 공식 여부: 보도
+- 확신도: 높음
+
+### W-20261116-1913-2 · 알림 · 건너뛴 것
+- 시각: 2026-11-16 19:25 KST
+- 내용: 새 항목 260건이 모두 kind "market"이라 회사 소식은 없었어요. 1건만 반영하고 나머지(유럽·일본 금리 발언, 중동 정세, 종목 시세 페이지, 의견 칼럼 등)는 done 처리했어요. 중동(이란-바레인 기지) 건은 검색에 7·9월 비슷한 사건 기사가 섞여 날짜 확인이 어려워 넣지 않았어요. 최근 36시간 안에 발표된 미국 지표가 없어(PPI 11-13, 실업수당 11-12) 발표 분석은 쓰지 않았어요 — 다음은 소매판매(11-17 미국).
