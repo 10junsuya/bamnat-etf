@@ -358,3 +358,26 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261117-0343-2 · 알림 · 이번 차례
 - 시각: 2026-11-17 04:05 KST
 - 내용: Scout 03:25 KST 갱신분 새 항목 106건(news 96·market 10)을 처리했어요. 건너뜀: 엔비디아 네오클라우드 자금 역할 해설·젠슨 황 복귀설·재무장관 경고(기존 흐름), 벌컨 실패·스타십 15차·릴리 칼리트릭스(이미 들어 있음 — 릴리 IR 보도자료는 아직 못 찾음), 마스터카드-트립닷컴 AI 여행 예약(9월 소식), 델 AI 인프라 보도자료(홍보성 묶음), 온투 자사주 매입·듀크 에너지 가짜 사이트 정리·펩시코 친환경 목표(중요 사건 아님), 서밋 FDA 거절·노보 EC 승인(앱 종목 아님), 나머지는 주가 정리·목표가·종목 비교·의견·시장 보고서 광고. 03시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
+
+### W-20261117-0443-1 · 반영 · 레볼루션 메디슨(RVMD) 췌장암 신약 라손크 유럽 승인
+- 시각: 2026-11-17 05:15 KST
+- 내용: 유럽연합 집행위원회가 라손크(다락소라십)를 한 번 이상 치료받은 전이성 췌장암 성인 환자용으로 승인했다고 회사가 발표했어요(미국 11-16).
+- 출처: [레볼루션 메디슨 보도자료(GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/16/3404001/0/en/european-commission-approves-revolution-medicines-rasonque-daraxonrasib-the-first-broad-ras-targeted-medicine-in-metastatic-pancreatic-cancer.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-0443-2 · 반영 · AMD 오크리지 AI 슈퍼컴퓨터 '럭스' 연구자 개방
+- 시각: 2026-11-17 05:15 KST
+- 내용: AMD 칩(MI355X)을 쓴 오크리지 연구소의 '럭스'가 연구자들에게 열려 에너지부 제네시스 미션의 첫 AI 팩토리가 됐다고 AMD가 발표했어요(SC26, 미국 11-16). TOP500 14위(220.79페타플롭스)는 StorageReview 보도라 한 줄에서 뺐어요.
+- 출처: [AMD 보도자료](https://ir.amd.com/news-events/press-releases/detail/1307/amd-powered-lux-supercomputer-opens-to-scientific-users-at-oak-ridge-becoming-first-ai-factory-for-does-genesis-mission) · [StorageReview](https://www.storagereview.com/news/hpe-lux-ai-cluster-top500-no-14-220-79-petaflops-ornl-genesis-mission) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-0443-3 · 반영 · 버크셔(BRKB) 버핏 약 55억 달러 주식 기부
+- 시각: 2026-11-17 05:15 KST
+- 내용: 버핏이 버크셔 주식 약 55억 달러어치(보도상 54.7억 달러)를 가족 재단 4곳에 기부했다고 보도됐어요. 버크셔 보도자료 원문 링크는 이번에 확인하지 못해 "보도".
+- 출처: [Forbes](https://www.forbes.com/sites/siladityaray/2026/11/16/warren-buffett-announces-55-billion-thanksgiving-gift-four-times-bigger-than-last-year/) · [IBTimes](https://www.ibtimes.com/warren-buffett-donates-berkshire-shares-family-foundations-3809813) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: 버크셔 보도자료가 확인되면 "공식"으로 올려 주세요.
+
+### W-20261117-0443-4 · 알림 · 이번 차례
+- 시각: 2026-11-17 05:15 KST
+- 내용: Scout 04:25 KST 갱신분 새 항목 113건(news 78·market 35)을 처리했어요. 이번 차례는 기사 페이지 읽기(WebFetch)가 권한 응답 없음으로 모두 막혀 검색 결과로만 확인했어요. 버림(확인 못 함): 마이크론 DRAM 담합 소송 기각 신청 거부(기술 매체만 확인, 판결 날짜 확인 못 함), 페덱스 광저우 허브 증설(발표 날짜 확인 못 함 — 이전 발표일 수 있음), JP모건-DBS 토큰 예금 업무시간 외 이체·JP모건 카드 부문장 퇴임(본문 확인 못 함). 건너뜀: 엔비디아 칩 우회 차단(이미 들어 있음 — 상무부 규정), 테슬라 사이버캡·독일 공장·MS 장애·인텔 소송(이미 들어 있음), 젠슨 황 관련 해설·트럼프 발언(기존 흐름), 앤트로픽 상장 관련(앱 종목 아님), 나머지는 주가 정리·목표가·종목 비교·의견. 04시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
