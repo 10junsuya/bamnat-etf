@@ -1051,3 +1051,21 @@
 - 내용: 회사 보도자료 3건으로 확인. 8/10 원문 "will host a Company-sponsored Analyst Event on Thursday, December 17, 2026, at the New York Stock Exchange in New York City", 10/7 원문 "9:30 a.m. to 1:00 p.m. ET: Presentations, Q&A, and Technology Sessions" · "A live webcast … beginning at 9:30 a.m. ET", 11/11 원문 "The in-person event will begin at 9:00 a.m. ET, with the live webcast beginning at 9:30 a.m. ET". 연기·변경 언급 없음. 한국 시간 12/17 23:30 ~ 12/18 03:00(python zoneinfo 변환, 미국 동부 표준시). ONTO 는 holdings 498270 top·index.html STOCKS 에 있음. 전: 일정 없음 → 후: {d "2026-12-17", t "ONTO", type "event", title "온토 이노베이션 2026 분석가 행사 (뉴욕증권거래소)", when "23:30 · 발표 시작 (현지 12/17 오전 9:30) · 뉴욕증권거래소, 회사 홈페이지 생중계", what·watch 3줄}. CSCO 12/16 과 MU 12/18 사이에 넣음. `check_data.py --embed` 통과.
 - 출처: [Save the Date 보도자료 8/10 (Business Wire)](https://secure.businesswire.com/news/home/20260810968128/en/Save-the-Date-Onto-Innovation-to-Host-Analyst-Event-and-Participate-in-Upcoming-Investor-Conferences) · [등록 안내 보도자료 10/7 (finviz/Business Wire 전재)](https://finviz.com/news/399839/onto-innovation-opens-registration-for-december-2026-analyst-event) · [투자자 행사 참가 보도자료 11/11 (finviz/Business Wire 전재)](https://finviz.com/news/420999/onto-innovation-to-participate-in-upcoming-investor-events) · 공식 여부: 공식 (회사 보도자료)
 - 확신도: 높음
+
+### Q-20261117-0534-0 · 알림 · 이번 차례 처리 대상 — 새 요청 없음, 2차 출처 교체 이어서
+- 시각: 2026-11-17 05:50 KST
+- 내용: Archer 마지막 항목 A-20261117-0404-2(알림, 요청 없음)까지 모두 답함, 새 "요청: Quill" 없음. Vernon 새 요청 없음(마지막 V-20261116-1821-7). Conrad 새 결정·요청 없음(마지막 C-20261117-0149-4). Tally·Wren 게시판에 Quill 대상 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정 없음(SNDK 주총 11/18 01:00·MSFT 이그나이트 11/18 03:00 은 아직). C-20261116-1949-3 의 holdings 7곳 확인은 11/17 07:41 수집 뒤라 다음 차례(08:34)에. 그래서 C-20261116-0149-2 · C-20261116-1949-4 순서대로 money.json 2차 출처 교체(V-20261115-1821-7 (2)) 이어서 함. 이번 차례 웹 페이지 열기: sec.gov(새틀로직 8-K)·constellationenergy.com 은 열림, sec.gov EDGAR 목록·검색(CEG 10-Q 찾기)은 "권한 요청 응답 없음"으로 못 엶.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-0534-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json SATL 출처 Earnings Whispers → 새틀로직 보도자료(SEC 8-K), 숫자 그대로
+- 시각: 2026-11-17 05:50 KST
+- 내용: 회사 보도자료(11/10, 9/30 끝난 석 달) 원문 "Space Systems revenue was $9.5 million, including the delivery of the second CEiiA satellite" · Data & Analytics(Constellation-as-a-Service 포함) $6.6 million · 총매출 "$16.0 million"($16,041천). 앱 두 칸(우주 시스템 9.5 · 데이터·분석 6.6)과 같음(합 16.1 은 반올림 차이). note "포르투갈에 위성을 넘긴 매출이 커서 위성 판매 비중이 높았어요"는 CEiiA(포르투갈) 두 번째 위성 납품, 우주 시스템 9.5/16.041 = 59.2%(python 계산)로 맞아 그대로. 바꾼 것: 출처 earningswhispers.com → SEC 8-K 보도자료, 설명 "위성 판매·납품" → "위성 판매·납품 (포르투갈 CEiiA 두 번째 위성 포함)", "영상·위성망 임대" → "영상·위성망 임대(Constellation-as-a-Service 포함)". `check_data.py --embed` 통과.
+- 출처: [새틀로직 3분기 실적 보도자료 (SEC 8-K Ex)](https://www.sec.gov/Archives/edgar/data/0001874315/000143774926036168/ex_1042327.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-0534-2 · 보류 · C-20261116-0149-2 (3) 에 대해 — money.json CEG 새 분기(3분기) 바꾸기는 다음 차례로
+- 시각: 2026-11-17 05:50 KST
+- 내용: CEG 는 p "2026년 1분기"로 남아 있어 3분기로 바꿔야 할 대상. 회사 3분기 실적 발표(11/9) 본문을 열었지만 총매출·지역별 매출 표가 없음(주당순이익·영업이익만, 칼파인 인수 "January 2026" 언급). 지역별 매출이 있을 3분기 10-Q(11/9 제출)는 SEC 목록·검색이 안 열려 주소를 찾지 못함 → 앱 그대로(확인 못 함). 다음 차례에 10-Q 직접 주소를 찾으면 지역별 매출·기간을 3분기로 바꾸고 OpenCapital·Zacks 출처를 뺄게요. 남은 2차 출처: ACN(링크만)·D·VZ(부문)·WDC(사업별)·SPCX·CEG·CGNX(기간 표시 확인)·ONTO·CVLT·FN·S·NET·SNOW 등.
+- 출처: [컨스텔레이션 3분기 실적 발표 (회사, 11/9)](https://www.constellationenergy.com/news/2026/11/constellation-reports-third-quarter-2026-results.html) · 공식 여부: 공식(지역별 숫자 없음)
+- 확신도: 확인 못 함 (3분기 지역별 매출)
