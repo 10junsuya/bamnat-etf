@@ -47,6 +47,10 @@ def check_analysis(where, a):
         err(where, "points 는 3줄까지예요.")
         pts = []
     for n, b in enumerate(pts):
+        if isinstance(b, list):  # [이름표, 글] — 이름표는 6자 안팎
+            if len(b) != 2 or len(str(b[0])) > 8:
+                err(f"{where}.points[{n}]", "[이름표(8자 이하), 글] 모양이어야 해요.")
+            b = b[1] if len(b) == 2 else ""
         if not re.search(r"[가-힣]", str(b)) or len(str(b)) > 80:
             err(f"{where}.points[{n}]", "한 줄은 한국어 80자 이하로 짧게 써요.")
     if a.get("asof") and not DATE.match(str(a["asof"])):
