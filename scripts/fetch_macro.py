@@ -101,7 +101,7 @@ def next_releases(ind, errors):
 
 
 # 발표 후 30분 반응: 발표 시각(미국 동부 08:30) 직전 5분봉 종가 → 30분 뒤 5분봉 종가
-REACT_SYMS = [("ES=F", "pct"), ("^TNX", "pp"), ("DX-Y.NYB", "pct"), ("KRW=X", "won")]  # 앱 순서: S&P500 선물·10년물·달러 인덱스·원/달러
+REACT_SYMS = [("ES=F", "pct"), ("^TNX", "pp"), ("DX-Y.NYB", "pct"), ("KRW=X", "won"), ("NQ=F", "pct")]  # 앱 순서: S&P500 선물·10년물·달러 인덱스·원/달러·나스닥100 선물(2026-11-16 추가, 뒤에 붙여 기존 순서 유지)
 REL_SERIES = {"cpi": "CPIAUCSL", "pce": "PCEPI", "ppi": "PPIFIS", "nfp": "PAYEMS", "retail": "RSAFS", "claims": "ICSA"}
 
 
@@ -145,7 +145,7 @@ def reactions(ind, errors):
                     r.append(round(b - a, 1))
             if any(v is not None for v in r):
                 ind[k]["react"] = r
-                ind[k]["react_src"] = "야후 5분봉 (S&P500 선물 ES=F · 10년물 ^TNX · 달러 인덱스 · 원/달러)"
+                ind[k]["react_src"] = "야후 5분봉 (S&P500 선물 ES=F · 10년물 ^TNX · 달러 인덱스 · 원/달러 · 나스닥100 선물 NQ=F)"
             else:
                 ind[k].pop("react", None)
             break

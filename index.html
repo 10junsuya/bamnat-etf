@@ -2127,7 +2127,7 @@ const MACRO = readData("d-macro") || {};
 /* 발표 분석 (AI 팀이 공식 발표·시장 반응·매체 해석을 읽고 쓴 분석 글 + 매체 해석 한 줄씩)
    매크로 지표: data/views.json · 실적·회사 이벤트: data/events.json 의 card.views — ops/RULES.md 6-2 */
 const VIEWS = readData("d-views") || {};
-function analysisHtml(A, title, note){
+function analysisHtml(A, title, note, mkt){
   if(!A) return "";
   const pts = (A.points||[]).filter(Boolean).slice(0,3), items = (A.items||[]).slice(0,5);
   if(!A.lead && !pts.length) return "";
@@ -2135,13 +2135,22 @@ function analysisHtml(A, title, note){
       <div><div class="small">${x.t}</div><div class="t">${x.src} · ${mdTxt(x.d)}</div></div><div class="tiny muted">원문 ›</div></a>`).join("");
   return `<div class="bsection"><h4>${title}</h4>
     ${A.lead ? `<p style="font-weight:600;line-height:1.5;margin:0 0 8px">${A.lead}</p>` : ""}
+    ${mkt||""}
     ${pts.length ? `<ul style="margin:0;padding-left:18px">${pts.map(x=>`<li style="margin:5px 0;line-height:1.5">${x}</li>`).join("")}</ul>` : ""}
     ${rows ? `<details class="more" style="margin-top:10px"><summary>매체들은 이렇게 봤어요 <span>· ${items.length}곳</span></summary><div>${rows}</div></details>` : ""}
     <p class="tiny muted" style="margin-top:8px">AI 팀이 ${note||"공식 발표·시장 반응·매체 해석"}을 읽고 정리했어요${A.asof?` (${+A.asof.slice(5,7)}/${+A.asof.slice(8,10)})`:""}. 투자 권유가 아니에요.</p></div>`;
 }
+/* 발표 뒤 30분 시장 반응(노몬이 직접 잰 값): 나스닥·S&P500 선물·10년물 금리·달러 */
+function mktChips(I){
+  if(!I || !I.reactReal || !I.react) return "";
+  const r = I.react, show = [[4,"나스닥 선물","%"],[0,"S&P500 선물","%"],[1,"미 10년물","%p"],[2,"달러","%"]].filter(([i])=>okn(rv(r,i)));
+  if(!show.length) return "";
+  return `<div style="margin:2px 0 10px"><div class="tiny muted" style="margin-bottom:4px">발표 뒤 30분 시장 · 노몬이 잰 값</div><div class="chips">${show.map(([i,n,u])=>`<span class="chip"><span class="muted" style="margin-right:4px">${n}</span><b class="num ${cls(r[i])}">${r[i]>0?"+":""}${r[i]}${u}</b></span>`).join("")}</div></div>`;
+}
 function viewsHtml(k){
   const v = (VIEWS.ind||{})[k]; if(!v) return "";
-  return analysisHtml(v, `이번 발표 분석${v.ref?` · ${v.ref}`:""}`);
+  const I = IND[k], same = I && I.rel && v.rel && String(I.rel).slice(0,10)===String(v.rel).slice(0,10);
+  return analysisHtml(v, `이번 발표 분석${v.ref?` · ${v.ref}`:""}`, null, same ? mktChips(I) : "");
 }
 function applyMacro(){
   for(const [k,m] of Object.entries(MACRO.ind||{})){ const v = IND[k]; if(!v || !m) continue;
@@ -2707,7 +2716,7 @@ function indSheet(k, from, prev){
   const r = releaseKst(v);
   const fromE = from ? ETFS.find(x=>x.code===from) : null;
   const backBtn = prevBtn ? prevBtn : fromE ? `<button class="btn ghost" type="button" data-brief="${from}" style="margin-bottom:10px">‹ ${fromE.name} 브리핑으로</button>` : "";
-  const names = ["S&P500 선물","미국 10년물 금리","달러 인덱스","원/달러 환율"], units = ["%","%p","%","원"];
+  const names = ["S&P500 선물","미국 10년물 금리","달러 인덱스","원/달러 환율","나스닥100 선물"], units = ["%","%p","%","원","%"];
   const core = v.core ? `<div class="small muted" style="margin:14px 0 6px">${v.core.name}</div>
       <div class="trio sm"><div><div class="k">실제</div><div class="v num">${fv(v.core.a)}</div></div><div><div class="k">예상</div><div class="v num">${fv(v.core.f)}</div></div><div><div class="k">이전</div><div class="v num">${fv(v.core.p)}</div></div></div>` : "";
   openSheet(`${backBtn}<h3 id="sheetTitle">${v.name}${ccTag(v)}</h3><div class="tiny muted">${v.full} · ${v.org} · ${v.freq}</div>
