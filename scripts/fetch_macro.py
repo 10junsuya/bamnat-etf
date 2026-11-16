@@ -73,7 +73,7 @@ def fred_release_dates(sid, n=8):
 
 
 NEXT_SERIES = {"cpi": "CPIAUCSL", "pce": "PCEPI", "ppi": "PPIFIS", "nfp": "PAYEMS", "retail": "RSAFS", "claims": "ICSA",
-               "m2": "M2SL", "fomc": "DFEDTARU"}
+               "m2": "M2SL"}  # FOMC는 FRED 시리즈가 매일 갱신돼 회의일이 안 나와요 → 앱에서 연준 공식 일정으로 확인
 
 
 def fred_next_release(sid):
