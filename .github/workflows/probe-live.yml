@@ -1,0 +1,20 @@
+name: 실시간 서버 창고 확인 (손으로 실행)
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: 창고(/snap) 상태
+        run: |
+          curl -sS -m 20 "https://gnomon-live.leejoonsoo85.workers.dev/snap" | python3 -c "
+          import json,sys,datetime as d
+          j=json.load(sys.stdin); kr=j.get('kr',{}); us=j.get('us',{})
+          print('time',j.get('time'),'kr',len(kr),'us',len(us))
+          now=d.datetime.now(d.timezone.utc)
+          ages=sorted((now-d.datetime.fromisoformat(v['time'].replace('Z','+00:00'))).total_seconds()//60 for v in us.values() if v.get('time'))
+          print('us age min/median/max(min)',ages[:1],ages[len(ages)//2:len(ages)//2+1],ages[-1:])
+          print('sess',sorted({v.get('s') for v in us.values()}))
+          print('sample',{k:us[k]['price'] for k in list(us)[:5]})"
