@@ -26,3 +26,21 @@
 - 출처: [파월 4분기·연간 실적 발표 (GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/16/3404107/0/en/powell-industries-announces-fourth-quarter-and-full-year-fiscal-2026-results.html) · [Zacks 예상](https://www.tradingview.com/news/zacks:98344bd4a094b:0-powell-industries-gears-up-to-post-q4-earnings-what-s-in-the-offing/) · 공식 여부: 공식 (예상치는 보도)
 - 확신도: 높음
 - 요청: Tally B — POWL 일정 card.views(주가 반응·매체 해석) 추가 바람. INFQ 3분기 결과 보도자료는 이번 차례 검색에 아직 안 보여 다음 차례에 다시 확인.
+
+### T-20261117-0702-1 · 보류 · INFQ 3분기(7~9월) 실적 카드·일정 분석
+- 시각: 2026-11-17 07:02 KST
+- 내용: 발표는 나왔어요(2026-11-16 미국 장 마감 후, 한국 11/17 06시대). 언론 정리로는 매출 910만 달러(+25%, 1년 전 730만), 1~9월 매출 3,260만, 조정 주당손실 0.08달러, 현금·증권 5.6억, 올해 매출 전망 '최소 4,510만 달러' 유지, 발표 전 매출 예상 약 1,100만(Seeking Alpha, 집계처 미표시), 시간외 +0.8%(Investing.com). 그런데 이번 차례에선 회사 보도자료·SEC 8-K 페이지를 열 수 없었어요(sec.gov·ir.infleqtion.com·businesswire·야후·finviz 열기 권한이 막힘). 회사 원문과 맞춰 보지 못해 카드·일정(11/17 INFQ)은 그대로 뒀어요. 회사가 10-Q 제출 연기 통지(NT 10-Q)를 낸 것도 검색에 보여요 — 원문 확인 필요.
+- 출처: [Investing.com 정리](https://www.investing.com/news/earnings/infleqtion-improves-on-revenue-and-eps-maintains-2026-outlook-5030973) · [Seeking Alpha](https://seekingalpha.com/news/4673259-infleqtions-q3-revenue-falls-short-but-it-maintains-full-year-target) · [NT 10-Q](https://ir.infleqtion.com/sec-filings/all-sec-filings/content/0001193125-26-354303/d64914dnt10q.htm) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: Tally A — 회사 원문(SEC 8-K 보도자료)으로 위 숫자 확인 뒤 INFQ 카드(chart 포함)와 11/17 일정 card 반영 바람. 1년 전 매출 730만은 회사 표로 다시 확인.
+
+### T-20261117-0702-2 · 보류 · POWL 일정 card.views (T-20261117-0631-1 에 대해)
+- 시각: 2026-11-17 07:02 KST
+- 내용: 검색에 2026년 4분기 발표 뒤 주가 반응 기사가 아직 안 보여요(나오는 건 2025년 4분기 기사). 확인된 숫자가 없어 views 는 다음 차례로 넘겨요.
+- 확신도: 높음
+- 요청: Tally A — POWL views 다시 확인 바람.
+
+### T-20261117-0702-3 · 제안 · 자동 차례의 웹페이지 열기 권한
+- 시각: 2026-11-17 07:02 KST
+- 내용: 이번 차례에선 처음 여는 사이트(sec.gov 포함)를 열 때 권한 확인 창이 떠서, 지켜보는 사람이 없어 모두 막혔어요. 회사 원문을 못 열면 실적이 1시간 안에 반영되지 못해요. sec.gov·globenewswire·businesswire·회사 IR 사이트를 자동 작업에서 늘 열 수 있게 해 두면 좋겠어요(설정은 대표님만).
+- 확신도: 높음
