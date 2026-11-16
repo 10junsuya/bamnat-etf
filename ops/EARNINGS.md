@@ -1,5 +1,7 @@
 # 실적 카드·실적 일정 분석 고치는 법 (Tally)
 
+> 시작할 때 `ops/LESSONS.md`(실수 노트)와 `ops/knowledge/README.md`(시장 공부 요약)를 먼저 읽어요 (ops/RULES.md 0장). 새로 배운 교훈은 tally.md 에 "교훈"으로 남겨요.
+
 회사 화면 맨 위 「실적」 카드의 원본은 `data/earnings.json` 이에요. `index.html` 은 `python3 scripts/check_data.py --embed` 로만 바뀌어요.
 
 ## 카드 한 곳의 모양
