@@ -895,3 +895,21 @@
 - 내용: events.json 새 일정: (없음) → 2026-12-23 "길리어드 혈액암 세포치료제 '아니토셀' FDA 허가 결정 기한", type "event", when "결정 기한 12/23(미국 날짜) · 시각 미정 · 더 일찍 결정될 수도 있음", what(다발골수종, 치료 세 번 이상 받은 환자 임상 iMMagine-1 근거)·watch 3개는 다른 행사 일정과 같은 모양. Quill 이 원문 직접 확인: 길리어드 11/4 보도자료 "under review with a Prescription Drug User Fee Act (PDUFA) target date of December 23, 2026." 결정 기한은 시각이 없는 미국 날짜라 한국 시간으로 바꾸지 않고 미국 날짜 그대로 둠(발표가 한국 12/24 에 나올 수 있음). 이번 차례 검색에서 이미 허가됐다는 소식은 못 찾음. GILD 는 holdings top(203780, 9.0%)·앱 STOCKS 에 있음. ASH 학회(12/12~15)는 데이터 발표라 일정으로 넣지 않음. `check_data.py --embed` 통과.
 - 출처: [길리어드 ASH 2026 보도자료 11/4 (공식)](https://www.gilead.com/news/news-details/2026/gilead-and-kite-advance-leadership-with-new-data-across-pipeline-and-portfolio-at-ash-2026) · 공식 여부: 공식
 - 확신도: 높음 (결정 기한 날짜) / 확인 못 함 (그 전에 결정 날지)
+
+### Q-20261116-2034-0 · 알림 · 이번 차례 처리 대상 — A-20261116-2004-1 · A-20261116-2004-2 2건
+- 시각: 2026-11-16 20:41 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261116-2004-1(VRTX 포베타시셉트)·A-20261116-2004-2(REGN 세므디시란) 2건. Vernon 새 요청 없음. Conrad C-20261116-1949-3(holdings 7곳 확인)은 11/17 07:41 수집 뒤 일이라 다음 차례들에서 한 줄로 남길게요. C-20261116-1949-4 는 보류 유지·순서 그대로라 이번 차례 손대지 않음. 실적 카드 요청 없음(넘김: Tally 대상 없음). 이번 차례 웹 페이지 열기: investors.vrtx.com 1곳·drugs.com 2곳 열림, news.vrtx.com·sec.gov(버텍스 8-K)·newsroom.regeneron.com 은 "권한 요청 응답 없음"으로 못 엶.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-2034-1 · 반영 · A-20261116-2004-1 에 대해 — VRTX 11/30 포베타시셉트 FDA 허가 결정 기한 새 일정
+- 시각: 2026-11-16 20:41 KST
+- 내용: events.json 새 일정: (없음) → 2026-11-30 "버텍스 신장병 치료제 '포베타시셉트' FDA 허가 결정 기한", type "event", when "결정 기한 11/30(미국 날짜) · 시각 미정 · 더 일찍 결정될 수도 있음", what(IgA 신증 설명, 가속 승인 심사)·watch 3개는 GILD 12/23 일정과 같은 모양. Quill 이 원문 직접 확인: 버텍스 6/1 보도자료(회사 IR) "The FDA has assigned a Prescription Drug User Fee Act (PDUFA) target action date of November 30, 2026." 결정 기한은 시각 없는 미국 날짜라 한국 시간으로 바꾸지 않음. 이번 차례 검색에서 허가·기한 연장 소식은 못 찾음. 10/23 보도자료·3분기 8-K 는 이번 차례 직접 열지 못함(Archer 가 열어 같은 날짜 확인). VRTX 는 holdings top(203780, 7.8%)·앱 STOCKS 에 있음. 회사 화면 제품 칸 "FDA 결정 11.30"과도 맞음. `check_data.py --embed` 통과.
+- 출처: [버텍스 FDA 신청 접수 보도자료 6/1 (공식)](https://investors.vrtx.com/news-releases/news-release-details/vertex-announces-us-fda-acceptance-biologics-license-application) · 공식 여부: 공식
+- 확신도: 높음 (결정 기한 날짜) / 확인 못 함 (그 전에 결정 날지)
+
+### Q-20261116-2034-2 · 보류 · A-20261116-2004-2 에 대해 — REGN 세므디시란 FDA 결정 기한 "11월 중"은 일정으로 넣지 않음
+- 시각: 2026-11-16 20:41 KST
+- 내용: 앱 변경 없음. Quill 이 확인: 리제네론 6/22 보도자료 전재(drugs.com) "target action date in November 2026, following use of a Priority Review Voucher." — 달만 있고 날짜가 없어, 일정에 날짜(d)를 넣으면 지어낸 날짜가 돼요. drugs.com 이력 페이지 "FDA Approved: No", 승인·거절·연장 소식 못 찾음. 회사 뉴스룸(newsroom.regeneron.com)은 이번 차례 열지 못해 6/22 뒤 회사 발표가 있었는지 확인 못 함. 결정이 발표되면(회사 보도자료) 그때 결과를 반영하거나, 회사가 날짜를 밝히면 새 일정으로 넣을게요. 11월 말까지 다음 차례마다 검색으로 확인.
+- 출처: [리제네론 보도자료 6/22 전재 (drugs.com)](https://www.drugs.com/nda/cemdisiran_260622.html) · [drugs.com 세므디시란 승인 이력](https://www.drugs.com/history/cemdisiran.html) · 공식 여부: 공식 (회사 보도자료 전재)
+- 확신도: 높음 (11월 기한) / 확인 못 함 (정확한 날짜·결정 여부)
