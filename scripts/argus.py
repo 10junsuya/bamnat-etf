@@ -81,6 +81,19 @@ r = subprocess.run([sys.executable, str(ROOT / "scripts/check_data.py")], captur
 if r.returncode != 0:
     alerts.append(("check_data", True, "앱 데이터 검사 실패", (r.stdout + r.stderr).strip()[-400:]))
 
+# 4-1. 구성종목 회사 정보 (지시 모음: 새 회사가 화면에서 빠지거나 소개 없이 들어오면 안 돼요)
+try:
+    _h = json.loads((ROOT / "data/holdings.json").read_text(encoding="utf-8")).get("etfs", {})
+    _co = json.loads((ROOT / "data/companies.json").read_text(encoding="utf-8")).get("co", {})
+    _norm = lambda t: str(t).replace("-", "").replace(".", "")
+    _alias = {"GOOG": "GOOGL", "ECHO": "SATS"}  # 앱의 CO_ALIAS와 같아요 (같은 회사의 다른 티커)
+    _need = sorted({_norm(x["ticker"]) for e in _h.values() for x in e.get("top", []) if x.get("ticker")} - set(_co) - set(_alias))
+    if _need:
+        alerts.append((f"noinfo:{','.join(_need)}", False, f"회사 소개 없는 구성종목 {len(_need)}곳",
+                       f"{', '.join(_need)} — 구성종목에 새로 들어왔어요. Quill이 오늘 안에 data/companies.json·money.json을 공식 출처로 채워요 (RULES 6-1)"))
+except (OSError, ValueError):
+    pass
+
 # 5. 보안 감시 (ops/SECURITY.md · ops/INCIDENT.md)
 import time as _t, urllib.error  # noqa: E402
 
