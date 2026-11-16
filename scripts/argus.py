@@ -5,6 +5,8 @@
 2. 자동 수집 자료가 너무 오래되지 않았는지 (평일 기준)
 3. 미국장이 열려 있을 때: 같은 지수 미국 ETF(SPY·QQQ·SOXQ·SMH·SCHD)와 watchlist 종목이 크게 움직였는지
 4. 앱 데이터 검사(check_data.py)가 통과하는지
+5. 보안 감시: 서버 방어가 그대로 켜져 있는지(실제로 찔러 봐요), 응답이 느려지지 않았는지,
+   저장소에 키·개인정보가 올라오지 않았는지, 앱·서버의 보안 장치가 지워지지 않았는지, 긴급 정지 상태인지
 새 알림만 ops/board/argus.md 에 적고(같은 알림은 6시간에 한 번), 상태는 ops/argus/state.json 에 남겨요.
 앱 숫자가 틀릴 수 있는 '긴급'이면 실행을 실패로 끝내서 GitHub 알림 메일이 가게 해요.
 """
@@ -78,6 +80,57 @@ if ny.weekday() < 5 and (9 * 60 + 30) <= ny.hour * 60 + ny.minute <= 18 * 60:
 r = subprocess.run([sys.executable, str(ROOT / "scripts/check_data.py")], capture_output=True, text=True)
 if r.returncode != 0:
     alerts.append(("check_data", True, "앱 데이터 검사 실패", (r.stdout + r.stderr).strip()[-400:]))
+
+# 5. 보안 감시 (ops/SECURITY.md · ops/INCIDENT.md)
+import time as _t, urllib.error  # noqa: E402
+
+
+def probe(path, method="GET"):
+    """실제 서버에 요청해 보고 (상태 코드, 헤더, 본문 앞부분, 걸린 초)를 돌려줘요."""
+    t0 = _t.time()
+    req = urllib.request.Request(LIVE + path, method=method, headers={"User-Agent": "gnomon-argus"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return r.status, dict(r.headers), r.read(4000).decode("utf-8", "replace"), _t.time() - t0
+    except urllib.error.HTTPError as e:
+        return e.code, dict(e.headers), e.read(4000).decode("utf-8", "replace"), _t.time() - t0
+
+
+sec = []
+try:
+    st, hd, body, sec_t = probe("/health")
+    hl = {k.lower(): v for k, v in hd.items()}
+    if '"lockdown":true' in body.replace(" ", ""):
+        alerts.append(("lockdown", True, "실시간 서버가 긴급 정지 상태예요", "ops/LOCKDOWN 또는 손으로 정지했어요. 사고 정리가 끝나면 0으로 되돌려요 (ops/INCIDENT.md)"))
+    if hl.get("x-content-type-options") != "nosniff" or "default-src 'none'" not in hl.get("content-security-policy", ""):
+        sec.append("보안 헤더가 사라졌어요")
+    if '"keys"' in body:
+        sec.append("상태 확인(/health)이 키 정보를 보여줘요")
+    if sec_t > 8:
+        alerts.append(("slow", False, "실시간 서버가 느려요", f"상태 확인에 {sec_t:.1f}초 (기준 8초). 공격이나 Cloudflare 장애일 수 있어요"))
+    for path, method, want, what in (("/quote?s=NVDA", "POST", 405, "읽기 전용"), ("/quote?s=ZZZZZ", "GET", 400, "앱 종목만 받기"),
+                                     ("/quote?s=NVDA&x=1", "GET", 400, "정해진 질문 칸만"), ("/admin", "GET", 404, "정해진 주소만")):
+        code = probe(path, method)[0]
+        if code != want and code != 503:  # 503은 긴급 정지 중
+            sec.append(f"{what} 방어가 꺼졌어요 ({path} → {code}, 기대 {want})")
+    st, _, body, _ = probe("/kis-check")
+    if any(k in body for k in ('"last"', '"stck_prpr"', '"nav"', "access_token")):
+        sec.append("/kis-check가 값이나 토큰을 보여줘요")
+except Exception as e:  # noqa: BLE001
+    sec.append(f"보안 점검 요청 실패: {type(e).__name__}")
+# 저장소에 키·개인정보
+r = subprocess.run([sys.executable, str(ROOT / "scripts/secret_scan.py")], capture_output=True, text=True)
+if r.returncode != 0:
+    sec.append("저장소에 키·개인정보로 보이는 값이 있어요: " + " / ".join(l.strip() for l in r.stdout.splitlines() if l.startswith(" - "))[:300])
+# 보안 장치가 코드에서 지워지지 않았는지
+app = (ROOT / "index.html").read_text(encoding="utf-8")
+wk = (ROOT / "worker/src/index.js").read_text(encoding="utf-8")
+for ok_, what in (('http-equiv="Content-Security-Policy"' in app, "앱 보안 정책(CSP)"), ("function clean(" in app and "clean(JSON.parse" in app, "앱 글자 안전 처리(clean)"),
+                  ("KIS_READ_ONLY" in wk and "kisAllowed(path, trId)" in wk, "한국투자증권 시세 전용 잠금"), ((ROOT / "worker/test/security.test.mjs").exists(), "서버 보안 시험")):
+    if not ok_:
+        sec.append(f"보안 장치가 코드에서 사라졌어요: {what}")
+for i, m in enumerate(sec):
+    alerts.append((f"sec:{m[:40]}", True, "보안 경보", m))
 
 # 새 알림만 기록
 state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {"seen": {}}

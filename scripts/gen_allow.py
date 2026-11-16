@@ -40,6 +40,9 @@ def main():
             kr.add(str(e[0]))
     us |= set(live.get("quotes", {}))
     us |= set(comp.get("co", {}))
+    wl = ROOT / "ops" / "watchlist.json"  # Argus가 지켜보는 종목
+    if wl.exists():
+        us |= {i.get("t", "") for i in json.loads(wl.read_text(encoding="utf-8")).get("items", [])}
     us = sorted(s.upper() for s in us if SYM.match(str(s).upper()))
     kr = sorted(c.upper() for c in kr if KRC.match(str(c).upper()))
     if len(us) < 20 or len(kr) < 5:

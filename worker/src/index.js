@@ -128,7 +128,7 @@ function kisAllowed(path, trId) {
   return ok && path.includes("/quotations/") && !/order|trading|balance|account|acnt|ccld|psbl/i.test(path + trId);
 }
 async function kisGet(env, path, trId, params) {
-  if (!kisAllowed(path, trId)) return ERR("허용되지 않은 요청이에요");
+  if (!kisAllowed(path, trId)) { blocked("kis-not-allowed", path); return ERR("허용되지 않은 요청이에요"); }
   const t = await kisToken(env);
   if (t.error) return t;
   const r = await fetch(`${KIS_BASE}${path}?${new URLSearchParams(params)}`, {
@@ -244,7 +244,7 @@ async function route(path, q, env) {
   if (path === "/quote") {
     if (!env.FINNHUB_API_KEY) return [ERR("미국 시세 키가 아직 없어요"), 503, 0];
     const list = pick(q.get("s"), SYM, ALLOW_US, 40);
-    if (!list.length) return [ERR("노몬에서 쓰는 종목만 받을 수 있어요"), 400, 0];
+    if (!list.length) { blocked("symbol", path); return [ERR("노몬에서 쓰는 종목만 받을 수 있어요"), 400, 0]; }
     const out = {};
     await Promise.all(list.map(async (s) => { out[s] = await finnhubQuote(env, s).catch(fail); }));
     return [{ quotes: out, time: new Date().toISOString() }, 200, CACHE_SEC];
@@ -252,7 +252,7 @@ async function route(path, q, env) {
   if (path === "/fx") return [await fx(env).catch(fail), 200, 60];
   if (path === "/kr") {
     const list = pick(q.get("c"), KRC, ALLOW_KR, kis ? 20 : 8);
-    if (!list.length) return [ERR("노몬에서 쓰는 ETF만 받을 수 있어요"), 400, 0];
+    if (!list.length) { blocked("symbol", path); return [ERR("노몬에서 쓰는 ETF만 받을 수 있어요"), 400, 0]; }
     const out = {};
     for (const c of list) out[c] = await (kis ? kisEtf(env, c).then((v) => (v && !v.error ? v : funetfKr(c))) : funetfKr(c)).catch(fail);
     return [{ etfs: out, source: kis ? "한국투자증권" : "FunETF", time: new Date().toISOString() }, 200, 30];
@@ -289,17 +289,27 @@ async function route(path, q, env) {
   return null;
 }
 
+/* 차단 기록: 무엇이 왜 막혔는지만 남겨요(IP·질문 값 같은 개인 정보는 안 남겨요). Cloudflare 로그에서 볼 수 있어요. */
+function blocked(reason, path) {
+  try { console.log(JSON.stringify({ gnomon: "blocked", reason, path: String(path).slice(0, 40) })); } catch (_) {}
+}
+
 export default {
   async fetch(request, env, ctx) {
     SECRETS = [env.FINNHUB_API_KEY, env.KIS_APP_KEY, env.KIS_APP_SECRET].filter(Boolean);
     const origin = corsOrigin(request, env);
     if (request.method === "OPTIONS") return json({}, 204, 0, origin);
-    if (request.method !== "GET") return json(ERR("읽기(GET)만 받아요"), 405, 0, origin);
-    if (request.url.length > MAX_URL) return json(ERR("주소가 너무 길어요"), 414, 0, origin);
+    if (request.method !== "GET") { blocked("method", request.method); return json(ERR("읽기(GET)만 받아요"), 405, 0, origin); }
+    if (request.url.length > MAX_URL) { blocked("long-url", ""); return json(ERR("주소가 너무 길어요"), 414, 0, origin); }
     const url = new URL(request.url);
     const allowed = ROUTES[url.pathname];
-    if (!allowed) return json(ERR("없는 주소예요"), 404, 0, origin);
-    for (const k of url.searchParams.keys()) if (!allowed.includes(k)) return json(ERR("받지 않는 질문이에요"), 400, 0, origin);
+    if (!allowed) { blocked("path", url.pathname); return json(ERR("없는 주소예요"), 404, 0, origin); }
+    for (const k of url.searchParams.keys()) if (!allowed.includes(k)) { blocked("param", url.pathname); return json(ERR("받지 않는 질문이에요"), 400, 0, origin); }
+    // 긴급 정지: 사고가 나면 MAINTENANCE=1로 다시 올려서 상태 확인(/health) 말고는 모두 멈춰요 (ops/INCIDENT.md)
+    if (String(env.MAINTENANCE || "0") === "1") {
+      if (url.pathname === "/" || url.pathname === "/health") return json({ ok: true, name: "gnomon-live", lockdown: true, time: new Date().toISOString() }, 200, 0, origin);
+      return json(ERR("점검 중이에요. 잠시 뒤 다시 열려요"), 503, 0, origin);
+    }
 
     // 같은 질문(정리한 뒤 기준)은 모두가 같은 답을 잠깐 나눠 써요 → 바깥 서버는 몇 초에 한 번만 불려요
     const norm = [...url.searchParams.entries()].map(([k, v]) => `${k}=${String(v).toUpperCase().split(",").map((x) => x.trim()).filter(Boolean).sort().join(",")}`).sort().join("&");

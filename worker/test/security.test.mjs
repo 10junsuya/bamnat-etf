@@ -51,5 +51,11 @@ ok("해외 주문 차단", !kisAllowed("/uapi/overseas-stock/v1/trading/order", 
 ok("시세 tr_id를 주문 주소에 붙여도 차단", !kisAllowed("/uapi/domestic-stock/v1/trading/order-cash", "FHKST01010100"));
 ok("정상 시세 요청은 허용", kisAllowed("/uapi/overseas-price/v1/quotations/price", "HHDFS00000300"));
 
+// 긴급 정지 스위치
+const envLock = { ...env, MAINTENANCE: "1" };
+const goL = async (path) => { const r = await w.fetch(new Request("https://x.dev" + path), envLock, {waitUntil(){}}); return [r.status, await r.text()]; };
+let [ls, lb] = await goL("/quote?s=NVDA"); ok("긴급 정지: 시세 멈춤 (503)", ls === 503);
+[ls, lb] = await goL("/health"); ok("긴급 정지: 상태 확인은 됨", ls === 200 && lb.includes("lockdown"));
+
 if (bad) { console.error(`보안 시험 ${bad}개 실패`); process.exit(1); }
 console.log("보안 시험 모두 통과");
