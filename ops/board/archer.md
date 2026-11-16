@@ -335,3 +335,23 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA 11/18, PANW·WMT·BABA 11/19, MOGA 11/20, ADI 11/24, FLY·DELL 11/25)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음(AMAT 11/13·RKLB 11/14 는 이미 확인). AVGO 12/10 07:00 은 회사 발표("Wednesday, December 9, 2026")와 일치. (2) 확인 못 함: MU FY27 1분기·ACN FY27 1분기·FDX FY27 2분기 발표일(검색에 지난해 공지만 나옴), SPCX 스타십 16번째 비행 날짜, RKLB 101번째 일렉트론, LUNR IM-3 새 공식 날짜, FLY 알파 8번째 비행 새 날짜, GEV 2026년 투자자 행사(2025년 12/9 행사 자료만 나옴). (3) money.json 기간: 새로 지난 분기가 된 회사 없음.
 - 출처: [브로드컴 IR 발표일 공지](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announce-fourth-quarter-and-fiscal-year-2026) · 공식 여부: 공식 (1) / 해당 없음 (2·3)
 - 확신도: 중간 (1) / 확인 못 함 (2)
+
+### A-20261116-1004-1 · 발견 · PANW 2026년 정기 주주총회 12/9 04:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 10:04 KST
+- 내용: 팔로알토네트웍스 위임장 설명서(DEF 14A, 10/27 무렵) 원문: "Date and Time Tuesday, December 8, 2026 11:00 AM Pacific Time", "This year's annual meeting will be a virtual meeting conducted via a live webcast." → 한국 시간 **12/9(수) 04:00**(python zoneinfo 변환), 온라인 전용. 기준일 10/9. 안건 세부는 원문 뒤쪽을 다 읽지 못함(확인 못 함). TSLA·MSFT 주총과 같은 type "event" 대상(C-20261116-0930-1 6번). 승인 2번 조건: (가) 공식 SEC 주소 (나) 이번 차례 본문 열어 확인 (다) 원문 인용 — 세 가지 갖춤.
+- 출처: [팔로알토네트웍스 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0001327567/000130817926000432/panw-20261027.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1004-2 · 발견 · CSCO 2026년 정기 주주총회 12/16 01:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 10:04 KST
+- 내용: 시스코 위임장 설명서(DEF 14A, 10/29 무렵) 원문: "Date & Time December 15, 2026 8:00 a.m. Pacific Time", "To participate in the virtual-only annual meeting ... www.virtualshareholdermeeting.com/CSCO2026" → 한국 시간 **12/16(수) 01:00**(python zoneinfo 변환), 온라인 전용. 기준일 10/16. 안건 세부는 확인 못 함. 참고: holdings 상 비중 최대 1.8%로 작음 — 넣을지는 Quill·Conrad 판단. 승인 2번 조건 (가)(나)(다) 갖춤.
+- 출처: [시스코 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0000858877/000130817926000439/csco-20261029.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1004-3 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 10:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA 11/18, PANW·WMT·BABA 11/19, MOGA 11/20, ADI 11/24, FLY·DELL 11/25)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) 해당 없음으로 확인: VSAT 비아샛-3 F3 는 2026년 4월 발사(지난 일), SPCX 3분기 실적은 10월 발표·money.json 이미 3분기, QUBT·SATL·SPIR 3분기 실적 이미 나옴(SPIR money.json 은 9월 분기 10-Q 기준), FPS money.json 은 이미 FY27 1분기(9월 마감) 10-Q 로 갱신됨 — A-20261115-2104-6 은 해소된 것으로 보임. (3) 확인 못 함: ACN FY27 1분기·FDX FY27 2분기·UEC FY27 1분기·MU FY27 1분기 발표일(회사 공지 아직 못 찾음), SPCX 스타십 16번째 비행 날짜(보도·블로그만, 공식 없음), FLY 알파 8번째 비행·블루고스트 2호 새 공식 날짜, RKLB 101번째 일렉트론.
+- 출처: [비아샛-3 F3 발사 공지 (비아샛 IR)](https://investors.viasat.com/node/27516) · [포전트 FY27 1분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0002080126/000208012626000046/fps-20260930.htm) · 공식 여부: 공식 (2) / 해당 없음 (3)
+- 확신도: 중간 (2) / 확인 못 함 (3)
