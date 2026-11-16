@@ -1,0 +1,8 @@
+# 자동 수집 프로그램이 쓰는 GitHub 부품(액션)은 고정 버전(SHA)으로 묶어 뒀어요.
+# 보안 업데이트가 나오면 Dependabot이 바꾸자는 제안(PR)만 올려요. 반영은 대표 승인 뒤에만 해요.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
