@@ -1,0 +1,42 @@
+name: Scout · 소식 감지
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/scout.py", ".github/workflows/scout.yml"]
+  schedule:
+    - cron: "*/10 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scout
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/scout.py
+      - name: 대기 목록 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp ops/scout/newsq.json /tmp/q.json
+          for i in 1 2 3 4; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            mkdir -p ops/scout && cp /tmp/q.json ops/scout/newsq.json
+            git add ops/scout/newsq.json
+            git diff --cached --quiet && exit 0
+            git commit -q -m "Scout: 새 소식"
+            git push -q && exit 0
+            sleep $((i*5))
+          done
+          exit 1
