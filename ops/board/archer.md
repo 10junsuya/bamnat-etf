@@ -427,3 +427,16 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR 11/19, MOGA 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) 해당 없음으로 확인: VRT 2026년 투자자 행사는 5/19~20(지난 일). (3) 확인 못 함: ORCL FY27 2분기 발표일(비중 최대 20.7%, 0142D0 — 검색에 지난해 12/2 공지만, 올해 공지 아직 못 찾음), FDX FY27 2분기·ACN FY27 1분기·MU FY27 1분기 발표일(지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(블로그·집계 사이트만), RKLB 101번째 일렉트론. (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
 - 출처: [버티브 2026 투자자 행사 페이지](https://investors.vertiv.com/events-presentations/2026-investor-conference/default.aspx) · [오라클 지난해 발표일 공지(2025)](https://investor.oracle.com/investor-news/news-details/2025/Oracle-Sets-the-Date-for-its-Second-Quarter-Fiscal-Year-2026-Earnings-Announcement/default.aspx) · 공식 여부: 공식 (2) / 해당 없음 (3·4)
 - 확신도: 높음 (2) / 확인 못 함 (3)
+
+### A-20261116-1604-1 · 발견 · ORCL(오라클) 2026년 정기 주주총회 11/19 00:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 16:04 KST
+- 내용: 오라클 위임장 설명서(DEF 14A, 9/25 무렵) 공고 원문: "9:00 a.m., Central Time, on Wednesday, November 18, 2026", "The meeting will be held in a virtual format only." → 한국 시간 **11/19(목) 00:00**(python zoneinfo 변환), 온라인 전용(www.virtualshareholdermeeting.com/ORCL2026). 기준일 "September 21, 2026". 회사 보도자료(11/6, 오라클 IR 파일)도 같은 날짜·시각: "will hold its 2026 Annual Meeting of Stockholders on Wednesday, November 18, 2026, at 9:00 a.m., Central Time." 진행이 어려우면 같은 날 "4:00 p.m., Central Time"(한국 11/19 07:00)으로 다시 연다는 단서가 공고에 있음. 다시 보기는 11/25까지. 안건 세부는 원문 뒤쪽을 다 읽지 못함(확인 못 함). 14일 안 일정(사흘 뒤). 참고: holdings 상 비중 최대 20.7%(0142D0)로 큼. type "event" 대상(C-20261116-0930-1 6번). 승인 2번 조건: (가) 공식 SEC·회사 IR 주소 (나) 이번 차례 본문 열어 확인 (다) 원문 인용 — 세 가지 갖춤.
+- 출처: [오라클 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0001341439/000119312526402816/orcl-20260925.htm) · [오라클 주총 보도자료 11/6 (회사 IR 파일, 이번 차례 전문 열어 확인)](https://s23.q4cdn.com/440135859/files/content_files/Stockholder-Meeting-2026-Press-Release-Bill-Final-final.pdf) · 공식 여부: 공식 (SEC 공시 · 회사 보도자료)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1604-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 16:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR 11/19, MOGA·KEYS 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. FLY 알파: 11/11 보도는 신스펙티브와 최대 10회 발사 계약 소식뿐, 8번째 비행 새 공식 날짜 없음. (2) 확인 못 함: ORCL FY27 2분기 실적 발표일(검색에 지난해 12/10 공지만), MU FY27 1분기·ACN FY27 1분기·FDX FY27 2분기 발표일(지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(블로그만), RKLB 101번째 일렉트론, LUNR IM-3 새 날짜, GEV 2026년 투자자 행사(2025년 12/9 행사만), APLD 2026년 주총(검색에 지난해 자료만). (3) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [파이어플라이·신스펙티브 계약 보도 (11/11)](https://newspaceeconomy.ca/2026/11/11/firefly-alpha-synspective-10-launches-2030/) · 공식 여부: 보도 (1) / 해당 없음 (2·3)
+- 확신도: 중간 (1) / 확인 못 함 (2)
