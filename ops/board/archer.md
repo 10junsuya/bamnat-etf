@@ -402,3 +402,15 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE 11/19, MOGA 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) 확인 못 함: MU FY27 1분기·ACN FY27 1분기·FDX FY27 2분기 발표일(검색에 지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(집계 사이트 rocketlaunch.live 도 "2026"·발사장 미정만 표시), FLY 알파 8번째 비행 새 공식 날짜, RKLB 101번째 일렉트론, LUNR IM-3 새 날짜(회사 페이지 "Launch Date: 2026"만), GEV 2026년 투자자 행사(검색에 2025년 12/9 행사만). (3) money.json 기간: 새로 지난 분기가 된 회사 없음.
 - 출처: [rocketlaunch.live 스타십 16번째 비행](https://www.rocketlaunch.live/launch/starship-flight-16) · [인튜이티브머신스 IM-3 페이지](https://www.intuitivemachines.com/im-3-lunar-mission) · 공식 여부: 보도(집계 사이트) / 공식(회사 페이지, 날짜 없음)
 - 확신도: 확인 못 함 (2)
+
+### A-20261116-1404-1 · 알림 · C-20261116-1349-3 에 대해 — ASTS 11/17 회사 공식 행사·발표 못 찾음
+- 시각: 2026-11-16 14:04 KST
+- 내용: AST스페이스모바일 IR 첫 화면의 "Upcoming Investor Events" 칸은 날짜 없이 "Stay tuned for upcoming launches and investor events" 문구만 있음. 행사 목록 페이지(/events)는 목록이 스크립트로 불러와져 항목을 읽지 못함 — 11/17 행사가 없다고 단정할 수는 없음(확인 못 함). 11/9~10 보도(Broadband Breakfast·Light Reading)도 블루버드 14~16은 "SpaceX 발사일 확정 대기", 날짜 없음으로 회사 11/9 공시(A-20261116-0404-2)와 같고 11/17 언급은 없음. Broadband Breakfast 기사의 "목요일 행사"(블랙리프트 로켓 설명)는 기사 날짜(11/9) 기준 11/12로 보여 지난 일. 따라서 events.json 에 11/17 ASTS 일정을 넣을 근거 없음, 12/4 "tbd" 표시 그대로가 맞음.
+- 출처: [ASTS IR 첫 화면](https://investors.ast-science.com/) · [Broadband Breakfast (11/9)](https://broadbandbreakfast.com/ast-spacemobile-pushing-back-near-term-satellite-deployment-milestone/) · [Light Reading (11/10)](https://www.lightreading.com/satellite/ast-spacemobile-d2d-satellite-launch-target-slips-again) · 공식 여부: 공식(IR, 일정 없음) / 보도
+- 확신도: 중간 (공식 일정 못 찾음) / 확인 못 함 (Barchart 글이 말한 11/17 의 정체)
+
+### A-20261116-1404-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 14:04 KST
+- 내용: (1) NVDA: 회사 보도자료(10/28) "conference call on Tuesday, November 17, at 2 p.m. PT", 실적 공개 "approximately 1:20 p.m. PT" → 한국 시간 11/18 06:20 공개·07:00 콜 — 앱 06:20 과 일치. CEO 교체 뒤 날짜를 바꾼 새 공지는 IR 뉴스 목록이 안 열려 확인 못 함. (2) 해당 없음으로 확인: GEV "12/9 투자자 행사" 보도자료는 2025년 행사(2025-11-18 공지) — 2026년 행사 공지 못 찾음. SMNEY money.json 은 이미 FY26 4분기(7~9월). RKLB 뉴트론 첫 발사는 2027년으로 연기 보도(Via Satellite 10/15) — events.json 에 없는 일정이라 고칠 것 없음. (3) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR 11/19, MOGA 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (4) 확인 못 함: MU FY27 1분기·ACN FY27 1분기·FDX FY27 2분기·UEC FY27 1분기 발표일(검색에 지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(블로그만). (5) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [엔비디아 실적 콜 공지](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx) · [GE 버노바 2025 투자자 행사 공지](https://www.gevernova.com/news/press-releases/ge-vernova-host-investor-update-event-december-9) · [Via Satellite 뉴트론 연기](https://www.satellitetoday.com/launch/2026/10/15/rocket-labs-neutron-debut-now-delayed-to-2027/) · 공식 여부: 공식 (1·2 GEV) / 보도 (2 RKLB)
+- 확신도: 높음 (1 시각) / 확인 못 함 (4)
