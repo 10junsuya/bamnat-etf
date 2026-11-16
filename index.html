@@ -240,6 +240,10 @@ details.sfoot{margin-top:18px} details.sfoot>summary{cursor:pointer; list-style:
 .elegend span{display:inline-flex; align-items:center; gap:5px} .elegend i{display:inline-block; width:10px; height:10px; border-radius:2px}
 .elegend i.b0{background:var(--d5)} .elegend i.b1{background:var(--pt)} .elegend i.b2{border:1.4px dashed var(--pt)} .elegend i.b3{background:var(--d4)}
 .elegend i.est{height:0; width:14px; border-top:1.6px dashed var(--ink); border-radius:0}
+.anpts{border-top:1px solid var(--line); margin-top:4px}
+.anrow{display:grid; grid-template-columns:64px 1fr; gap:10px; padding:9px 0; border-bottom:1px solid var(--line); line-height:1.5}
+.anrow.nolab{grid-template-columns:1fr}
+.anlab{font-size:12px; color:var(--muted); padding-top:2px; letter-spacing:.02em}
 .elines{margin:10px 0 2px; padding:0; list-style:none; font-size:13px; line-height:1.5} .elines li{padding:3px 0}
 .earn .acc{border-bottom:0; border-top:1px solid var(--line); margin-top:8px}
 .qrec{margin-top:16px; padding-top:12px; border-top:1px solid var(--line)} .qrec h5{margin:0; font-size:14px; display:flex; gap:8px; align-items:baseline} .qrec .pspecs{margin-top:4px}
@@ -1532,7 +1536,7 @@ function eventCardSheet(ev){
     ${C.tiles.some(x=>x[3]) ? `<p class="tiny muted" style="margin:6px 2px 0">빨강은 예상보다 높게, 파랑은 낮게 나온 숫자예요.</p>` : ""}
     ${missionHtml(`${t}:${ev.d}`)}
     <div class="bsection"><h4>${ev.done ? "핵심 정리" : "관전 포인트"}</h4><ol class="evcheck">${C.check.map(c=>`<li>${c}</li>`).join("")}</ol></div>
-    ${ev.done ? analysisHtml(C.views, ev.type==="earn" ? "시장은 이렇게 봤어요" : "이번 일, 이렇게 봤어요", "회사 발표·주가 반응·매체 해석") : ""}
+    ${ev.done ? analysisHtml(C.views, ev.type==="earn" ? "시장은 이렇게 봤어요" : "이번 일, 이렇게 봤어요", "회사 발표·주가 반응·매체 해석", "", ["결과","주가 반응","업종·ETF"]) : ""}
     ${C.ifGood || C.ifBad ? `<div class="bsection"><h4>결과별 해석</h4><div class="evif">
       ${C.ifGood?`<div><b>예상보다 좋으면</b><span>${C.ifGood}</span></div>`:""}${C.ifBad?`<div><b>예상에 못 미치면</b><span>${C.ifBad}</span></div>`:""}</div>
       <p class="tiny muted" style="margin-top:6px">항상 그렇지는 않아요. 그날 시장 분위기와 다른 발표에 따라 반대로 움직이기도 해요.</p></div>` : ""}
@@ -1613,7 +1617,7 @@ function eventSheet(id){
     : `<div class="bsection"><h4>일정 개요</h4><p>${ev.what||"로켓 발사 일정이에요."}</p>
       <p class="small muted">${ev.tbd && !ev.done ? "아직 공식 발사 날짜가 정해지지 않았어요. 날짜 칸은 가안이고, 회사가 날짜를 발표하면 바로 바꿔요." : "발사 일정은 날씨나 기술 점검 때문에 자주 바뀌어요."} 성공·실패나 지연 소식이 회사 주가에 영향을 줄 수 있어요.</p></div>`}
     ${missionHtml(id)}
-    ${ev.watch ? `<div class="bsection"><h4>관전 포인트</h4><ul style="margin:0;padding-left:18px">${ev.watch.map(w=>`<li style="margin:4px 0">${w}</li>`).join("")}</ul></div>` : ""}
+    ${ev.watch ? `<div class="bsection"><h4>관전 포인트</h4>${rowsList(ev.watch)}</div>` : ""}
     ${co.one ? `<div class="bsection"><h4>회사 개요</h4><p>${co.one}</p></div>` : ""}
     ${held.length ? `<div class="bsection"><h4>편입 ETF</h4><div class="chips">${exposureChips(t)}</div><p class="tiny muted">숫자는 그 ETF 안에서 이 회사가 차지하는 비중이에요. 비중이 클수록 이 일정의 영향을 더 받아요.</p></div>` : ""}
     ${isEarn && ev.done ? `<p class="small muted">발표 결과를 예상치와 비교해 보여주는 실적 결과 카드는 2차 버전에서 추가돼요.</p>` : ""}
@@ -2127,7 +2131,12 @@ const MACRO = readData("d-macro") || {};
 /* 발표 분석 (AI 팀이 공식 발표·시장 반응·매체 해석을 읽고 쓴 분석 글 + 매체 해석 한 줄씩)
    매크로 지표: data/views.json · 실적·회사 이벤트: data/events.json 의 card.views — ops/RULES.md 6-2 */
 const VIEWS = readData("d-views") || {};
-function analysisHtml(A, title, note, mkt){
+/* 구분선 줄 목록 (점 대신 얇은 선, 왼쪽 작은 이름표) — 2026-11-16 대표 선택 A안 */
+function rowsList(xs, labs){
+  if(!xs || !xs.length) return "";
+  return `<div class="anpts">${xs.map((x,i)=>{ const l = labs && labs[i]; return `<div class="anrow${l?"":" nolab"}">${l?`<span class="anlab">${l}</span>`:""}<span>${x}</span></div>`; }).join("")}</div>`;
+}
+function analysisHtml(A, title, note, mkt, labs){
   if(!A) return "";
   const pts = (A.points||[]).filter(Boolean).slice(0,3), items = (A.items||[]).slice(0,5);
   if(!A.lead && !pts.length) return "";
@@ -2136,7 +2145,7 @@ function analysisHtml(A, title, note, mkt){
   return `<div class="bsection"><h4>${title}</h4>
     ${A.lead ? `<p style="font-weight:600;line-height:1.5;margin:0 0 8px">${A.lead}</p>` : ""}
     ${mkt||""}
-    ${pts.length ? `<ul style="margin:0;padding-left:18px">${pts.map(x=>`<li style="margin:5px 0;line-height:1.5">${x}</li>`).join("")}</ul>` : ""}
+    ${rowsList(pts, labs || ["발표","시장 반응","주식·ETF"])}
     ${rows ? `<details class="more" style="margin-top:10px"><summary>매체들은 이렇게 봤어요 <span>· ${items.length}곳</span></summary><div>${rows}</div></details>` : ""}
     <p class="tiny muted" style="margin-top:8px">AI 팀이 ${note||"공식 발표·시장 반응·매체 해석"}을 읽고 정리했어요${A.asof?` (${+A.asof.slice(5,7)}/${+A.asof.slice(8,10)})`:""}. 투자 권유가 아니에요.</p></div>`;
 }
@@ -2736,7 +2745,7 @@ function indSheet(k, from, prev){
       ${v.react ? `<div class="bsection"><h4>지난 발표 후 30분, 시장은 이렇게 움직였어요 <span class="tiny muted" style="font-weight:400">실제 · ${relTxt(v)}</span></h4>
         <div class="react">${names.map((n,i)=>okn(rv(v.react,i))?`<div>${n}</div><div class="num ${cls(v.react[i])}">${v.react[i]>0?"+":""}${v.react[i]}${units[i]}</div>`:"").join("")}</div>
         <p class="tiny muted" style="margin-top:6px">발표 직전 5분 가격과 30분 뒤 가격을 비교했어요 (야후 5분봉). 그 30분 동안 다른 뉴스가 같이 반영됐을 수 있어요.</p></div>` : ""}
-      ${IND_X[k] && IND_X[k].watch ? `<div class="bsection"><h4>다음 발표에서 같이 볼 것</h4><ul style="margin:0;padding-left:18px">${IND_X[k].watch.map(w=>`<li style="margin:4px 0">${w}</li>`).join("")}</ul></div>` : ""}
+      ${IND_X[k] && IND_X[k].watch ? `<div class="bsection"><h4>다음 발표에서 같이 볼 것</h4>${rowsList(IND_X[k].watch)}</div>` : ""}
       <p class="small" style="margin-top:16px"><a href="${v.src}" target="_blank" rel="noopener noreferrer">발표 기관 원문 보기 ›</a></p>
     </details>
     ${disc}`, true);
