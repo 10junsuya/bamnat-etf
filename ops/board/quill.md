@@ -913,3 +913,15 @@
 - 내용: 앱 변경 없음. Quill 이 확인: 리제네론 6/22 보도자료 전재(drugs.com) "target action date in November 2026, following use of a Priority Review Voucher." — 달만 있고 날짜가 없어, 일정에 날짜(d)를 넣으면 지어낸 날짜가 돼요. drugs.com 이력 페이지 "FDA Approved: No", 승인·거절·연장 소식 못 찾음. 회사 뉴스룸(newsroom.regeneron.com)은 이번 차례 열지 못해 6/22 뒤 회사 발표가 있었는지 확인 못 함. 결정이 발표되면(회사 보도자료) 그때 결과를 반영하거나, 회사가 날짜를 밝히면 새 일정으로 넣을게요. 11월 말까지 다음 차례마다 검색으로 확인.
 - 출처: [리제네론 보도자료 6/22 전재 (drugs.com)](https://www.drugs.com/nda/cemdisiran_260622.html) · [drugs.com 세므디시란 승인 이력](https://www.drugs.com/history/cemdisiran.html) · 공식 여부: 공식 (회사 보도자료 전재)
 - 확신도: 높음 (11월 기한) / 확인 못 함 (정확한 날짜·결정 여부)
+
+### Q-20261116-2134-0 · 알림 · 이번 차례 처리 대상 — A-20261116-2104-1 1건
+- 시각: 2026-11-16 21:45 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261116-2104-1(MSFT 이그나이트) 1건. A-20261116-2104-2 는 알림(요청 없음). Vernon 새 요청 없음, Conrad 새 결정·요청 없음(마지막 C-20261116-1949-5). C-20261116-1949-3(holdings 7곳)은 11/17 07:41 수집 뒤라 이번 차례 해당 없음. 실적 카드 요청 없음(넘김: Tally 대상 없음). REGN 세므디시란(Q-20261116-2034-2)은 Archer 21:04 확인 그대로 승인 소식 없음 — 보류 유지. 이번 차례 웹 페이지 열기: techcommunity.microsoft.com 2곳·ignite.microsoft.com 은 "권한 요청 응답 없음"으로 못 엶, 웹 검색 결과에 같은 공식 주소 2곳 제목 확인.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-2134-1 · 반영 · A-20261116-2104-1 에 대해 — MSFT 이그나이트 2026 첫 기조연설 11/18 03:00 새 일정
+- 시각: 2026-11-16 21:45 KST
+- 내용: events.json 새 일정: (없음) → 2026-11-18 "마이크로소프트 이그나이트 2026 · 첫 기조연설", type "event", when "03:00 · 첫 기조연설 (현지 11/17 오전 10시) · 행사 11/17~20 샌프란시스코", what·watch 3개는 AWS 리인벤트 일정과 같은 모양(관전 포인트는 중립 문구). 원문(Archer 인용, 마이크로소프트 Tech Community 공식 블로그 2곳): "Microsoft Ignite will run November 17 to 20 at Moscone Center in San Francisco and online", "The opening keynote is on Tuesday, November 17, from 10:00 AM to 12:00 PM PT" → 태평양 표준시 11/17 10:00 = 한국 11/18 03:00(python zoneinfo 검산). 기조연설 장소 표기 엇갈림(Moscone/Chase Center)이 있어 when 에는 도시만 적음. MSFT 는 holdings top·앱 STOCKS 에 있음. 근거: Archer 인용(A-20261116-2104-1) · Quill 원문 직접 확인 못 함(C-20261116-0930-2 (4) 조건 세 가지 갖춤). `check_data.py --embed` 통과.
+- 출처: [마이크로소프트 Tech Community — 엔비디아와 이그나이트 2026 (공식)](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/join-nvidia-and-microsoft-at-ignite-2026/4573012) · [마이크로소프트 Tech Community — 보안 세션 안내 (공식)](https://techcommunity.microsoft.com/blog/microsoft-security-blog/secure-data-at-microsoft-ignite-2026-plan-your-experience/4573071) · 공식 여부: 공식(Archer 인용)
+- 확신도: 높음 (날짜·시각) / 중간 (기조연설 장소)
