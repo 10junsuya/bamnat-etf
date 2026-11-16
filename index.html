@@ -1152,8 +1152,9 @@ function applyLive(){
     if(!prev){ e.nav = NaN; e.navNote = "기준가 확인 중"; continue; }
     const u0 = prevUs(prev.d), fx0 = fxAt(prev.d)[1];
     const legs = e.kind!=="pdf" ? [[e.proxy,1]] : e.h.map(([t,w])=>[t==="BRKB"?"BRK-B":t,w]);
-    let f = e.cash||0; for(const [t,w] of legs){ f += w * (usClose(t, LV.U)/usClose(t, u0)); }
-    if(e.kind==="pdf" && e.rest) f += e.rest.w * (1 + e.rest.r);
+    // 비중 합계가 100%가 아니어도(선물 계약 금액 등) 가격이 그대로면 1이 되도록 '1 + 비중 × 등락률'로 계산해요
+    let f = 1; for(const [t,w] of legs){ f += w * (usClose(t, LV.U)/usClose(t, u0) - 1); }
+    if(e.kind==="pdf" && e.rest) f += e.rest.w * e.rest.r;
     f = 1 + ccF(e, f - 1);
     e.nav = prev.nav * f * (e.hedge ? 1 : br/fx0);
     e.navNote = okn(e.nav) ? `${mdTxt(kr)} 기준가 추정 · ${mdTxt(prev.d)} 공시 기준가에서 이어 계산` : "기준가 확인 중";
@@ -1217,7 +1218,7 @@ function realErrs(e){
     const u0 = prevUs(r0.d), u1 = prevUs(r1.d), f0 = fxAt(r0.d)[1], f1 = fxAt(r1.d)[1];
     if(e.kind==="pdf" && e.rest) continue;  // 시세 없는 종목이 있으면 과거 오차는 계산하지 않아요
     const legs = e.kind!=="pdf" ? [[e.proxy,1]] : e.h.map(([t,w])=>[t==="BRKB"?"BRK-B":t,w]);
-    let f = e.cash||0; for(const [t,w] of legs) f += w * (usClose(t,u1)/usClose(t,u0));
+    let f = 1; for(const [t,w] of legs) f += w * (usClose(t,u1)/usClose(t,u0) - 1);  // 비중 합계가 100%가 아니어도 치우치지 않게
     f = 1 + ccF(e, f - 1);
     const pred = r0.nav * f * (e.hedge ? 1 : f1/f0);
     if(okn(pred)) out.push({d:r1.d, v:pred/r1.nav - 1});
