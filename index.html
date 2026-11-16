@@ -682,8 +682,8 @@ function newsLine(x, tick){
   const sym = tick ? (tick==="BRKB"?"BRK.B":tick) : "";
   const coName = tick ? ((STOCKS[tick]||[])[0] || "") : "";  // 티커만 있으면 어느 회사인지 알기 어려워서 회사 이름도 같이
   const [sn, su] = (x.src||[])[0] || ["",""];
-  return `<div class="news">${sym?`<span class="tag">${coName && coName!==sym ? `${coName} <span class="muted" style="font-weight:500">${sym}</span>` : sym}</span>`:""}<span class="chip" style="font-size:11px;padding:1px 6px;margin-right:4px">${x.kind==="공식"?"공식":"보도"}</span>${x.t}
-    <div class="tiny muted">${mdTxt(x.d)}${x.tm?" "+x.tm:""} · ${su?`<a href="${su}" target="_blank" rel="noopener noreferrer">${sn||"원문"} ›</a>`:sn}</div></div>`;
+  return `<div class="news">${sym?`<span class="tag">${sym}</span>`:""}<span class="chip" style="font-size:11px;padding:1px 6px;margin-right:4px">${x.kind==="공식"?"공식":"보도"}</span>${x.t}
+    <div class="tiny muted">${coName && coName!==sym ? coName+" · " : ""}${mdTxt(x.d)}${x.tm?" "+x.tm:""} · ${su?`<a href="${su}" target="_blank" rel="noopener noreferrer">${sn||"원문"} ›</a>`:sn}</div></div>`;
 }
 function allNews(ticks){ return ticks.flatMap(t=>(CNEWS[t]||[]).map(x=>({...x, tick:t}))).sort((a,b)=>(b.d+(b.tm||"")).localeCompare(a.d+(a.tm||""))); }
 const CAT_COLORS = ["#3A3A3C","#636366","#8E8E93","#48484A","#AEAEB2","#545458","#7C7C80"];
@@ -1635,7 +1635,7 @@ function newsCard(e){
   const rows = [...calc(e).rows], order = [...rows.filter(x=>okn(x.c)).sort((a,b)=>Math.abs(b.c)-Math.abs(a.c)).map(x=>x.t), ...rows.sort((a,b)=>b.w-a.w).map(x=>x.t)];
   const xs = allNews([...new Set(order)]).slice(0, 6);
   return `<section class="card"><h2>담긴 회사 최근 소식<span class="sub">공식 확인 · 한국어 정리</span></h2>
-    ${xs.length ? xs.map(x=>newsLine(x, x.tick)).join("") : `<div class="small muted">아직 확인된 소식이 없어요. 새 소식이 나오면 AI 팀이 확인해서 30분 안쪽으로 여기에 올려요.</div>`}
+    ${xs.length ? xs.map(newsRow).join("") : `<div class="small muted">아직 확인된 소식이 없어요. 새 소식이 나오면 AI 팀이 확인해서 30분 안쪽으로 여기에 올려요.</div>`}
     <div class="note">기사 본문은 옮기지 않아요. 원문 링크에서 읽을 수 있어요.</div></section>`;
 }
 
@@ -1860,6 +1860,13 @@ function openBrief(code){ openSheet(etfBriefHtml(code), true); }
 
 /* ===================== 뉴스 모아보기 ===================== */
 let newsFilter = "mine";
+/* 회사 소식 한 줄 (뉴스 탭·ETF 화면 공통): 왼쪽 티커, 제목, 아랫줄에 회사 이름 · 날짜 · 출처, 오른쪽 오늘 등락률 */
+function newsRow(x){
+  return `<button class="row" type="button" data-stock="${x.tick}" style="text-align:left">
+      <div class="with-logo">${logo(x.tick,true)}<div><div class="n"><span class="chip" style="font-size:11px;padding:1px 6px;margin-right:4px">${x.kind}</span>${x.t}</div>
+        <div class="t">${STOCKS[x.tick]?STOCKS[x.tick][0]:x.tick} · ${mdTxt(x.d)}${x.tm?" "+x.tm:""} · ${(x.src&&x.src[0]&&x.src[0][0])||""}</div></div></div>
+      <div><div class="r1 num ${cls((STOCKS[x.tick]||[])[2])}">${spct((STOCKS[x.tick]||[])[2])}</div></div></button>`;
+}
 function viewNews(){
   const held = new Set(myPositions().map(p=>p.e.code));
   const scopeEtfs = ETFS.filter(e => newsFilter==="all" || (newsFilter==="mine" ? held.has(e.code) : stars.includes(e.code)));
@@ -1873,10 +1880,7 @@ function viewNews(){
     </div>
     ${MNEWS.length ? `<div class="tiny muted" style="margin:10px 0 2px">시장 전체</div>${MNEWS.slice(0,3).map(x=>newsLine(x)).join("")}` : ""}
     ${!tick.length ? `<p class="muted small">${newsFilter==="mine"?"내 계좌에 보유 ETF를 넣으면 담긴 회사 소식이 여기에 모여요.":"관심 ETF가 없어요."}</p>`
-      : xs.length ? xs.map(x=>`<button class="row" type="button" data-stock="${x.tick}" style="text-align:left">
-      <div class="with-logo">${logo(x.tick,true)}<div><div class="n"><span class="chip" style="font-size:11px;padding:1px 6px;margin-right:4px">${x.kind}</span>${x.t}</div>
-        <div class="t">${STOCKS[x.tick]?STOCKS[x.tick][0]:x.tick} · ${mdTxt(x.d)}${x.tm?" "+x.tm:""} · ${(x.src&&x.src[0]&&x.src[0][0])||""}</div></div></div>
-      <div><div class="r1 num ${cls((STOCKS[x.tick]||[])[2])}">${spct((STOCKS[x.tick]||[])[2])}</div></div></button>`).join("")
+      : xs.length ? xs.map(newsRow).join("")
       : `<p class="muted small">아직 확인된 소식이 없어요. 새 소식이 나오면 AI 팀이 확인해서 30분 안쪽으로 올려요.</p>`}
     <div class="note">AI 팀(Wren)이 기사·공시를 확인해 한국어 한 줄로 정리해요. 회사를 누르면 원문 링크가 있어요. 기사 본문은 옮기지 않아요.</div>
   </section>`;
