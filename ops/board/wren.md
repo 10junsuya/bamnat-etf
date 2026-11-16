@@ -101,3 +101,25 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261116-1413-5 · 알림 · 건너뛴 것
 - 시각: 2026-11-16 14:25 KST
 - 내용: 남아 있던 7건을 모두 done 처리했어요. 알리바바 "새 칩 규제" 글은 실제 정부 조치를 확인 못 해 버렸어요(검색에 2023년 클라우드 분사 취소 기사가 섞여 나옴 — 날짜 주의). AST 11-17 글은 Archer(A-20261116-1404-1)도 공식 일정을 못 찾아 건너뛰었어요. 비스트라 손상차손(2.69억 달러)은 3분기 보고서의 회계 항목이라 건너뛰었어요.
+
+### W-20261116-1543-1 · 반영 · 엔비디아(NVDA) 미 정부 '국가 대표 AI 기업' 지정 계획 보도
+- 시각: 2026-11-16 15:55 KST
+- 내용: 트럼프 행정부가 엔비디아 등 AI 회사를 미국의 '국가 대표 기업(national champions)'으로 지정할 계획이라고 WSJ가 보도했고 로이터가 전했어요. 정부 공식 발표는 아직 없어 "보도".
+- 출처: [Reuters(TradingView)](https://www.tradingview.com/news/reuters.com,2026:newsml_L2N46X02O:0-trump-administration-to-name-nvidia-other-ai-firms-as-us-national-champions-wsj-reports/) · [The Star(Reuters)](https://www.thestar.com.my/tech/tech-news/2026/11/16/trump-administration-to-name-nvidia-other-ai-firms-as-us-039national-champions039-wsj-reports) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261116-1543-2 · 반영 · 세레브라스(CBRS) 3분기 실적·연간 전망 상향
+- 시각: 2026-11-16 15:55 KST
+- 내용: 3분기 GAAP 매출 2억1,080만 달러(+55%), 2026년 코어 매출 전망 9억4천만~9억6천만 달러(보도자료 제목: 연간 전망 상향, 이전 범위는 확인 못 함). 날짜는 보도자료의 미국 날짜(11-12). 기사 제목의 "마이크로소프트 계약 확인"은 보도자료 본문에서 찾지 못해 넣지 않았어요(이름 없이 "상위 3개 하이퍼스케일러"만 나옴) — 다음 차례 확인 바람.
+- 출처: [SEC 8-K(세레브라스 보도자료)](https://www.sec.gov/Archives/edgar/data/0002021728/000162828026073366/cbrsannouncesfinancialresu.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261116-1543-3 · 반영 · 아마존(AMZN) 레오 위성 40기 발사 실패
+- 시각: 2026-11-16 15:55 KST
+- 내용: 아마존 레오 위성 40기를 실은 ULA 벌컨 로켓(LV-01, 미국 11-15 일요일 발사)이 비행 중 실패해 위성을 모두 잃었다고 여러 매체가 보도했어요. ULA·아마존 공식 발표 원문은 읽지 못해 "보도"(공식 확인되면 갱신 바람).
+- 출처: [Via Satellite](https://www.satellitetoday.com/launch/2026/11/15/ula-set-to-return-vulcan-to-flight-in-first-amazon-leo-launch/) · [IBTimes UK](https://www.ibtimes.co.uk/amazon-leo-satellites-lost-ula-vulcan-failure-1832388) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261116-1543-4 · 알림 · 다음 차례(Wren A)에 남긴 것
+- 시각: 2026-11-16 15:55 KST
+- 내용: 이번엔 기사 페이지를 거의 열지 못해(권한 시간 초과) 확인 못 한 5건을 done 에 넣지 않았어요: 오라클 VA·국방부(전쟁부) 보건정보망 가동, 마스터카드 싱가포르 혁신센터(250명), 마스터카드-맘부 협력, 마이크로소프트 AI 칩 계약, 세레브라스-마이크로소프트 계약. 나머지(주가 정리·종목 비교·의견 글·넷플릭스 "채널 스토어 검토설"·록히드 노조 반대 성명 등)는 건너뛰었어요.
