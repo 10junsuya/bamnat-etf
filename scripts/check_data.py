@@ -14,7 +14,8 @@ ROOT = Path(__file__).resolve().parent.parent
 APP = ROOT / "index.html"
 FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-money": "data/money.json",
          "d-holdings": "data/holdings.json", "d-live": "data/live.json", "d-macro": "data/macro.json", "d-etfs": "data/etfs.json",
-         "d-earnings": "data/earnings.json", "d-track": "data/track.json"}
+         "d-earnings": "data/earnings.json", "d-track": "data/track.json",
+         "d-companies": "data/companies.json"}
 OPTIONAL = {"d-holdings", "d-live", "d-macro", "d-track"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 URL = re.compile(r"^https?://\S+$")
@@ -164,19 +165,42 @@ BRANDED_ART = {"electron": {"RKLB"}, "neutron": {"RKLB"}, "haste": {"RKLB"}, "al
                "alia": {"BETA"}, "alia250": {"BETA"}, "xe100": {"XE"}}
 
 
-def check_product_art():
-    s = APP.read_text(encoding="utf-8")
-    i = s.find("const PRODUCTS = {"); j = s.find("const PX = {", i)
-    if i < 0 or j < 0:
-        return
-    cur = None
-    for line in s[i:j].splitlines():
-        m = re.match(r"^  ([A-Z][A-Z0-9]*):\{", line)
-        if m:
-            cur = m.group(1)
-        for a in re.findall(r'(?:"art": "|art:")([a-z0-9]+)"', line):
-            if a in BRANDED_ART and cur not in BRANDED_ART[a]:
-                err(f"products {cur}", f"'{a}' 그림은 {sorted(BRANDED_ART[a])} 제품 전용이에요. 이 회사 제품에 맞는 그림을 써 주세요.")
+def check_product_art(comp):
+    for t, p in (comp.get("products") or {}).items():
+        for cat in p.get("cats", []):
+            for it in cat.get("items", []):
+                a = it.get("art")
+                if a in BRANDED_ART and t not in BRANDED_ART[a]:
+                    err(f"products {t}", f"'{a}' 그림은 {sorted(BRANDED_ART[a])} 제품 전용이에요. 이 회사 제품에 맞는 그림을 써 주세요.")
+
+
+def check_companies(comp, known):
+    """회사 정보: 앱 종목만, 소개는 tag·cat·one 필수, 최근 소식은 날짜·제목·출처 필수"""
+    for sec in ("co", "products", "px", "chain", "news"):
+        if not isinstance(comp.get(sec, {}), dict):
+            err("companies", f"{sec} 는 {{티커: ...}} 모양이어야 해요.")
+            return
+    for t, c in comp.get("co", {}).items():
+        w = f"companies.co {t}"
+        if t not in known:
+            err(w, "앱에 없는 종목이에요(index.html STOCKS 에 먼저 있어야 해요).")
+        for k in ("tag", "cat", "one"):
+            if not str(c.get(k, "")).strip():
+                err(w, f"{k} 가 비어 있어요.")
+    for t, xs in comp.get("news", {}).items():
+        w = f"companies.news {t}"
+        if t not in known:
+            err(w, "앱에 없는 종목이에요.")
+        if not isinstance(xs, list):
+            err(w, "목록이어야 해요.")
+            continue
+        for x in xs:
+            if not (isinstance(x, dict) and DATE.match(str(x.get("d", ""))) and str(x.get("t", "")).strip()):
+                err(w, "d(YYYY-MM-DD)·t(한국어 한 줄)가 있어야 해요.")
+                continue
+            if x.get("kind") not in ("공식", "보도"):
+                err(w, "kind 는 '공식' 또는 '보도'예요.")
+            check_src(w, x.get("src"))
 
 
 def art_frame_counts():
@@ -214,7 +238,8 @@ def main():
         check_missions(data["d-missions"], data["d-events"], art_frame_counts())
         check_money(data["d-money"], known)
         check_earnings(data["d-earnings"], known)
-        check_product_art()
+        check_product_art(data["d-companies"])
+        check_companies(data["d-companies"], known)
     if errors:
         print("데이터 검사 실패:")
         print("\n".join(" - " + e for e in errors))
