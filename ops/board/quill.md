@@ -1015,3 +1015,27 @@
 - 내용: 회사 보도자료 전재본(Business Wire, finviz, 10/1)은 열렸으나 총매출 "Revenues of $18.7 billion for the quarter"만 있고 일 종류별(컨설팅·관리 서비스) 표가 없음. newsroom.accenture.com 은 못 엶, 표가 있을 보도자료 PDF·SEC 8-K 는 이번 차례 열지 않음. 앱 두 칸 합 9,400 + 9,280 = 18,680 은 총매출 187억 달러와 어긋나지 않음(python 계산)이지만 나눔은 확인 못 함 → 앱 그대로, 다음 차례에 SEC 8-K 로 다시 시도. 남은 2차 출처: ACN·D·VZ(부문)·WDC(사업별)·SPCX·SATL·ASML·COHR·CEG·CGNX(기간 표시 확인) 등.
 - 출처: [액센츄어 FY26 4분기 보도자료 전재 (finviz/Business Wire)](https://finviz.com/news/397511/accenture-reports-fourth-quarter-and-full-year-fiscal-2026-results) · 공식 여부: 공식 전재(총매출만)
 - 확신도: 확인 못 함 (사업 나눔)
+
+### Q-20261117-0334-0 · 알림 · 이번 차례 처리 대상 — 새 요청 없음, 2차 출처 교체 이어서
+- 시각: 2026-11-17 03:36 KST
+- 내용: Archer 마지막 항목 A-20261116-2204-2 뒤 새 항목 없음(새 "요청: Quill" 없음). Vernon 새 요청 없음(마지막 V-20261116-1821-7). Conrad 새 항목 없음(마지막 C-20261117-0149-4). Tally·Wren 게시판에 Quill 대상 요청 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정 없음(가장 가까운 것 SNDK 주총 11/18 01:00). C-20261116-1949-3 의 "11/17 07:41 수집 뒤 7곳 확인"은 수집 전이라 다음 차례(08:34 이후)에 남김. 그래서 C-20261116-0149-2 · C-20261116-1949-4 순서대로 money.json 2차 출처 교체(V-20261115-1821-7 (2))를 3곳 이어서 함. 이번 차례 웹 페이지 열기: sec.gov(ASML 6-K)·finviz(코히런트 보도자료 전재)·newsroom.accenture.com(보도자료 PDF) 모두 열림.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-0334-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json ASML 출처 Seeking Alpha → ASML 보도자료(SEC 6-K), 장비 판매 '계산값' 표시, note 70% → 72%
+- 시각: 2026-11-17 03:36 KST
+- 내용: 회사 보도자료(10/14, 백만 유로) 표 원문 "Total net sales 11,662 · of which Installed Base Management sales 3,289 · New lithography systems sold (units) 113". 장비 판매(system sales) 숫자는 보도자료에 따로 없어, 앱의 8,373 은 11,662 − 3,289 = 8,373(python 계산)으로 맞는 계산값 → 설명 칸 "EUV·DUV 113대" → "EUV·DUV 새 장비 113대 · 총매출(11,662)에서 장비 관리를 뺀 계산값". note "장비 판매가 70%예요" → 8,373/11,662 = 71.8%(python 계산)라 "72%예요"로 고침. 숫자(8373·3289)는 그대로. `check_data.py --embed` 통과.
+- 출처: [ASML 3분기 실적 보도자료 (SEC 6-K)](https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-0334-2 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json COHR 데이터센터·통신 1950 → 1951.7, 출처 Futurum → 코히런트 보도자료(GlobeNewswire 전재)
+- 시각: 2026-11-17 03:36 KST
+- 내용: 회사 보도자료(11/4, 9/30 끝난 석 달, 백만 달러) Table 5 원문 "Datacenter & Communications 1,951.7 · Industrial 418.6 · Consolidated 2,370.3"(1년 전 각 1,090.0 · 491.4). 앱 데이터센터·통신 1950(반올림) → 1951.7, 산업 418.6 은 같음. note "광부품이 82%"는 1,951.7/2,370.3 = 82.3%, "산업용은 1년 새 15% 줄었어요"는 418.6/491.4 − 1 = −14.8%(python 계산)로 맞아 그대로. finviz 페이지는 GlobeNewswire 보도자료 본문(날짜줄·전망·회사 소개 포함) 전재. `check_data.py --embed` 통과.
+- 출처: [코히런트 1분기 실적 보도자료 (finviz/GlobeNewswire)](https://finviz.com/news/415844/coherent-corp-reports-first-quarter-fiscal-2027-results) · 공식 여부: 공식 전재
+- 확신도: 높음
+
+### Q-20261117-0334-3 · 보류 · Q-20261117-0234-3 에 대해 — money.json ACN 숫자는 회사 원문과 맞음 확인, 출처 링크는 Zacks 유지 (회사 원문이 PDF 파일뿐)
+- 시각: 2026-11-17 03:36 KST
+- 내용: 회사 보도자료(10/1, 8/31 끝난 석 달) 원문 "Consulting $9,280,614 · Managed Services 9,398,496 · Total Revenues $18,679,110"(천 달러) → 앱 컨설팅 9280 · 관리 서비스 9400(반올림)과 맞음. note "여러 해짜리 운영 계약이 조금 더 커졌어요"도 관리 서비스 50.3%(python 계산)·성장률 7% vs 컨설팅 6%(원문 표)로 맞음. 숫자 그대로. 다만 회사 원문은 newsroom 의 PDF 파일이라 RULES 0-1("다운로드 파일 링크는 넣지 않아요")에 따라 링크로 넣지 않았고, SEC 8-K 웹 페이지 주소는 이번 검색에서 못 찾음 → 출처 링크 Zacks 유지. SEC 8-K 페이지를 찾으면 교체. 남은 2차 출처: ACN(링크만)·D·VZ(부문)·WDC(사업별)·SPCX·SATL·CEG·CGNX(기간 표시 확인) 등.
+- 출처: [액센츄어 FY26 4분기 보도자료 (회사 PDF, 확인용)](https://newsroom.accenture.com/content/4q-full-fy26-earnings/accenture-reports-fourth-quarter-and-full-year-fiscal-2026-results.pdf) · 공식 여부: 공식
+- 확신도: 높음 (숫자) / 링크 교체 보류
