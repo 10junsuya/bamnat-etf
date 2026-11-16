@@ -1362,7 +1362,7 @@ function trackSum(xs){
 }
 function trackMini(e){
   const S = trackSum(trackOf(e)); if(!S) return "";
-  return `<a class="why small" href="#track" data-jump="track" style="display:block;text-decoration:none;color:inherit">
+  return `<a class="why small" href="javascript:void(0)" role="button" data-jump="track" style="display:block;text-decoration:none;color:inherit">
     <span class="muted">적중 기록</span> 최근 ${S.n}번 평균 <b class="num">±${S.mae.toFixed(2)}%p</b> 차이 · 방향 ${S.hit}/${S.dn} 맞음 <span class="muted">›</span></a>`;
 }
 function trustCard(e, c){
@@ -3788,7 +3788,7 @@ document.addEventListener("click", ev=>{
   if(el.dataset.cp){ chartP[el.dataset.ck] = el.dataset.cp; const b = document.getElementById("chartBox"); if(b) b.innerHTML = chartHtml(el.dataset.ck); return; }
   if(el.dataset.map){ go("macro-map-"+el.dataset.map); return; }
   if(el.dataset.mh){ mapH = el.dataset.mh; render(); return; }
-  if(el.dataset.jump){ const t = document.getElementById(el.dataset.jump); if(t) t.scrollIntoView({behavior:"smooth", block:"start"}); return; }
+  if(el.dataset.jump){ ev.preventDefault(); const t = document.getElementById(el.dataset.jump); if(t) t.scrollIntoView({behavior:"smooth", block:"start"}); return; }  // 주소(#)를 바꾸지 않아요: 바꾸면 화면이 메인으로 나가요 (2026-11-16 대표 발견)
   if(el.dataset.lh){ const box = document.getElementById("lnk"); if(box) box.innerHTML = linksHtml(el.dataset.lk, el.dataset.lh); return; }
   if(el.dataset.ind){ indSheet(el.dataset.ind, el.dataset.from, el.dataset.prev); return; }
   if(el.dataset.holi){ holiSheet(el.dataset.holi); return; }
