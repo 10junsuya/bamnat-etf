@@ -1,4 +1,4 @@
-# 실적 카드 고치는 법 (Tally)
+# 실적 카드·실적 일정 분석 고치는 법 (Tally)
 
 회사 화면 맨 위 「실적」 카드의 원본은 `data/earnings.json` 이에요. `index.html` 은 `python3 scripts/check_data.py --embed` 로만 바뀌어요.
 
@@ -23,5 +23,17 @@
 1. `git pull --rebase`
 2. `scripts/earnings_card.py` 의 `card()` 로 고치고 `save()`
 3. `python3 scripts/check_data.py --embed` 통과
-4. `data/earnings.json`, `index.html`, `ops/board/tally.md` 를 한 커밋: `실적 카드: <회사들> (출처: <대표 URL>)`
+4. `data/earnings.json`, `data/events.json`(바꿨으면), `index.html`, `ops/board/tally.md` 를 한 커밋: `실적 카드: <회사들> (출처: <대표 URL>)`
 5. `git pull --rebase` 후 다시 `check_data.py` 확인, push (충돌 시 최대 3번)
+
+## 실적 일정 분석 (data/events.json, type "earn")
+실적 일정 페이지에서 회사를 누르면 나오는 분석이에요. 실적 카드와 **같은 차례에 함께** 고쳐요.
+
+- **발표 후:** 해당 일정에 `"done": true` 와 `card` 를 넣어요. 모양은 `2026-11-13 AMAT` 일정과 똑같이:
+  - `real: true`, `asof`: 오늘 날짜
+  - `sum`: 2문장 (예상·회사 전망과 비교해 어땠는지 + 무슨 뜻인지)
+  - `tiles`: 2~4개 `[이름, 값, 한 줄 비교, [실제, 비교 기준]]` — 마지막 숫자 쌍은 예상과 비교할 때만 (빨강=예상보다 높음, 파랑=낮음)
+  - `check`: 핵심 정리 2~3문장 · `detail`: 배경 1~2문단 · `src`: 회사 발표를 먼저
+- **발표 전:** 앱 종목(`index.html` STOCKS)인 회사의 실적 날짜가 **회사 공식 발표로 확정**되면 21일 안 일정을 새로 넣어요: `d`, `t`, `type: "earn"`, `title`("<회사> 실적 발표"), `when`(한국 시간, 예: "06:05 · 미국 장 마감 후"), `q`(분기), `watch`(볼 점 3개).
+- 날짜가 바뀌면 고치고, 보도만 있으면 `when` 끝에 " · 변동 가능성 보도".
+- 매수·매도 표현, 주가 전망은 쓰지 않아요. "예상보다 좋으면/못 미치면" 해석(`ifGood`·`ifBad`)은 쓰지 않아요.

@@ -10,8 +10,8 @@
 | Conrad | 운영 책임자: 의견 정리·결정·보고 | 6시간마다 | `ops/board/conrad.md`, `ops/minutes/`, `ops/reports/` |
 | Sterling | 감사: 팀 전체 독립 점검 | 토요일 아침 | `ops/board/sterling.md` |
 | Archer | 리서치: 변동 후보 찾기 | 1시간마다 | `ops/board/archer.md` |
-| Quill | 편집: 후보 검증 후 앱 데이터 반영 | 1시간마다 | `ops/board/quill.md`, `data/events.json`, `data/missions.json`, `data/money.json` (+ `index.html` 데이터 블록은 스크립트로만) |
-| Tally | 실적 카드: 발표가 나오면 회사 화면 「실적」 카드 갱신 | 월~토 하루 세 번 | `ops/board/tally.md`, `data/earnings.json` (+ `index.html` 데이터 블록은 스크립트로만) |
+| Quill | 편집: 후보 검증 후 앱 데이터 반영 (실적 일정의 결과 카드는 Tally) | 1시간마다 | `ops/board/quill.md`, `data/events.json`, `data/missions.json`, `data/money.json` (+ `index.html` 데이터 블록은 스크립트로만) |
+| Tally | 실적: 발표가 나오면 회사 화면 「실적」 카드와 실적 일정 분석(결과 카드)을 바로 갱신, 확정된 실적 일정 추가 | 발표 시간대 매시 23분 | `ops/board/tally.md`, `data/earnings.json`, `data/events.json`의 실적(type "earn") 일정 (+ `index.html` 데이터 블록은 스크립트로만) |
 | Vernon | 숫자 품질: 앱 숫자가 맞는지 원 출처와 대조, 자동 수집 점검 | 하루 두 번 | `ops/board/vernon.md` |
 | Keene | 화면 QA 프로그램 | 앱이 바뀔 때 | (GitHub Actions) |
 | Argus | 경비 프로그램(AI 아님): 서버·자동 수집·큰 움직임·데이터 검사 | 10분마다 (GitHub) | `ops/board/argus.md`, `ops/argus/state.json` (자동), `ops/watchlist.json` 읽기 |
@@ -90,6 +90,6 @@
 
 ## 9. 실행 시각 (한국 시간)
 - Archer: 매시 4분 · Quill: 매시 34분 · Conrad: 01:49, 07:49, 13:49, 19:49 · Sterling: 토 08:49
-- Tally: 월~토 07:43, 16:43, 22:43 · Vernon: 08:21, 18:21 · Argus: 10분마다 (GitHub, 긴급이면 실행 실패로 GitHub 알림 메일)
+- Tally: 월~토 05~09시·14~17시·20~23시 매시 23분 · Vernon: 08:21, 18:21 · Argus: 10분마다 (GitHub, 긴급이면 실행 실패로 GitHub 알림 메일)
 - 자동 수집(GitHub): 시세·기준가 06:17·07:47·13:37·18:07(평일) · 구성종목 07:41(평일) · 매크로 09:23·22:53
 - GNOMON 폴더 정리(비서): 09:17, 21:17 — 대표 컴퓨터가 켜져 있을 때만 PDF를 바탕화면 폴더에 넣어요.
