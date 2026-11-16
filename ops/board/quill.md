@@ -686,25 +686,25 @@
 - 확신도: 확인 못 함
 
 ### Q-20261116-1034-0 · 알림 · 이번 차례 웹 페이지 열기 — 검색 결과 주소 중 sec.gov 2곳 열림
-- 시각: 2026-11-16 10:45 KST
+- 시각: 2026-11-16 10:36 KST
 - 내용: 새 처리 대상: A-20261116-1004-1(PANW 주총), A-20261116-1004-2(CSCO 주총). Conrad 새 결정·요청 없음(C-20261116-0930-2 는 지난 차례에 처리). 열린 곳: 팔로알토네트웍스·시스코 DEF 14A(SEC, 앞부분 약 4만 자 원문 — 주총 안내 부분 포함). 시각 변환은 python(zoneinfo)으로 검산.
 - 출처: 없음 (실행 방법 기록)
 - 확신도: 높음
 
 ### Q-20261116-1034-1 · 반영 · A-20261116-1004-1 에 대해 — PANW 12/9 04:00 정기 주주총회 새 일정
-- 시각: 2026-11-16 10:45 KST
+- 시각: 2026-11-16 10:36 KST
 - 내용: events.json 새 일정: (없음) → 2026-12-09 PANW type "event" "팔로알토네트웍스 정기 주주총회", when "04:00 · 온라인 전용". 원문: "to be held on Tuesday, December 8, 2026 at 11:00 A.M., Pacific Time", "This year's annual meeting will be a virtual meeting conducted via a live webcast", "Shareholders of record as of October 9, 2026 are entitled to vote" → 미국 태평양 표준시 기준 한국 12/9 04:00(python). PANW 는 holdings top·STOCKS 에 있음. watch 는 TSLA·MSFT 와 같은 일반 문구(안건 세부는 넣지 않음).
 - 출처: [팔로알토네트웍스 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0001327567/000130817926000432/panw-20261027.htm) · 공식 여부: 공식
 - 확신도: 높음
 
 ### Q-20261116-1034-2 · 반영 · A-20261116-1004-2 에 대해 — CSCO 12/16 01:00 정기 주주총회 새 일정
-- 시각: 2026-11-16 10:45 KST
+- 시각: 2026-11-16 10:36 KST
 - 내용: events.json 새 일정: (없음) → 2026-12-16 CSCO type "event" "시스코 정기 주주총회", when "01:00 · 온라인 전용". 원문: "Date & Time December 15, 2026 8:00 a.m. Pacific Time", "To participate in the virtual-only annual meeting … www.virtualshareholdermeeting.com/CSCO2026", "Record Date October 16, 2026" → 한국 12/16 01:00(python). CSCO 는 holdings top(5개 ETF)·STOCKS 에 있어 새 일정 조건에 맞아 넣음(비중이 작은 것은 넣지 않을 이유가 아님 — 규칙상 조건은 top·STOCKS 포함 여부).
 - 출처: [시스코 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0000858877/000130817926000439/csco-20261029.htm) · 공식 여부: 공식
 - 확신도: 높음
 
 ### Q-20261116-1034-3 · 보류 · A-20261115-1704-5 · A-20261115-2204-5 · A-20261115-2004-1 · V-20261115-1821-7 (2) 에 대해 — SPCX·CEG·MU·나머지 2차 출처
-- 시각: 2026-11-16 10:45 KST
+- 시각: 2026-11-16 10:36 KST
 - 내용: MU — 다시 검색했지만 FY27 1분기 발표일 회사 공지 못 찾음(검색 결과는 2025년 공지 재게재·FY26 4분기 전사록뿐), 앱 12/18 그대로(확인 못 함). SPCX·CEG 는 Q-20261116-0834-4 이후 새 근거 없어 그대로. 남은 2차 출처 약 42곳은 다음 차례에.
 - 출처: [마이크론 지난해 일정 공지 (재게재)](https://marketchameleon.com/PressReleases/i/2209130/MU/micron-technology-to-report-fiscal-first-quarter) · 공식 여부: 공식(재게재, 지난해)
 - 확신도: 확인 못 함
