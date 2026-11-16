@@ -496,3 +496,23 @@
 - 시각: 2026-11-16 19:37 KST
 - 내용: (1) FRED 목표 범위(DFEDTARU)가 바뀐 날은 **회의 결정 다음 날(적용일)**이에요. 9월 회의는 9/15~16, `macro.json` fomc.last_change 는 9/17 — 틀린 게 아니라 기준이 달라요. 화면에 "결정일"로 쓸 때는 회의 날짜(연준 일정 페이지)를 써요. (2) 2026년 10월 CPI는 공식 '1년 전 대비' 숫자가 없어요(2025년 10월 값 미발표). 매체마다 추정치가 달라요(KPMG 약 4.2%, 노몬 계산 3.9%) — 분석에 쓸 땐 공식 전월 대비 +0.4%를 중심에, 연간은 누구 계산인지 밝혀요. (3) "아시아 반도체 급락"·"이란 공격" 검색에 2026년 7월·9월과 2025년 11월 기사가 섞여 나와요(같은 회사·비슷한 숫자). 기사 날짜를 먼저 보고 읽어요.
 - 확신도: 높음
+
+### A-20261116-2004-1 · 발견 · VRTX(버텍스) 신장병 치료제 '포베타시셉트' 미국 FDA 허가 결정 기한 11/30 — events.json 에 없음
+- 시각: 2026-11-16 20:04 KST
+- 내용: 버텍스 6/1 보도자료(FDA 신청 접수) 원문: "The FDA has assigned a Prescription Drug User Fee Act (PDUFA) target action date of November 30, 2026." → IgA 신장병(IgAN) 치료제 포베타시셉트(povetacicept)의 가속 승인 심사 결정 기한 **11/30(미국)**. 10/23 보도자료(3상 RAINIER 결과)도 "The PDUFA target action date is November 30, 2026.", 3분기 실적 보도자료(SEC 8-K Ex 99.1)도 같은 날짜를 적고 "later this month" 승인 가능성을 언급 — 날짜 변경 소식 없음. 지금까지 승인·기한 연장 소식은 못 찾음. 주의: 결정 기한은 "이날까지 결정"이라 시각이 없고 더 일찍 날 수도 있음 — GILD 아니토셀(A-20261116-1904-1)과 같은 방식으로 "결정 기한 · 시각 미정" 표시가 맞아 보임. 14일 안 일정(2주 뒤). 참고: holdings 상 비중 7.8%(203780 TIGER 미국나스닥바이오). 승인 2번 조건: (가) 회사 공식·SEC 주소 (나) 이번 차례 본문 열어 확인 (다) 원문 인용 — 세 가지 갖춤.
+- 출처: [버텍스 FDA 신청 접수 보도자료 6/1 (공식, 이번 차례 본문 열어 확인)](https://investors.vrtx.com/news-releases/news-release-details/vertex-announces-us-fda-acceptance-biologics-license-application) · [버텍스 RAINIER 결과 보도자료 10/23 (공식, 이번 차례 본문 열어 확인)](https://news.vrtx.com/news-releases/news-release-details/phase-3-rainier-results-supporting-best-class-potential) · [버텍스 3분기 실적 보도자료 (SEC 8-K Ex 99.1, 이번 차례 본문 열어 확인)](https://www.sec.gov/Archives/edgar/data/0000875320/000087532026000287/ex-991_q32026.htm) · 공식 여부: 공식 (회사 보도자료 · SEC 공시)
+- 확신도: 높음 (결정 기한 날짜) / 중간 (그 전에 결정 날지 — 확인 못 함)
+- 요청: Quill 확인 바람
+
+### A-20261116-2004-2 · 발견 · REGN(리제네론) 근무력증 치료제 '세므디시란' FDA 결정 기한 "2026년 11월"(날짜 비공개) — 아직 승인 소식 없음
+- 시각: 2026-11-16 20:04 KST
+- 내용: A-20261116-1904-1 (2)에서 확인 못 한 것의 후속. 리제네론 6/22 보도자료(GlobeNewswire, drugs.com 전재) 원문: "target action date in November 2026, following use of a Priority Review Voucher." → 전신 중증 근무력증(gMG) 치료제 세므디시란(cemdisiran) 결정 기한은 **11월 중(날짜 비공개)**. 회사가 정확한 날짜를 밝히지 않아 앱에 날짜로 넣을 근거는 없음. 이번 차례 검색에서 승인·거절·연장 소식은 못 찾음(drugs.com 이력 페이지도 "FDA Approved: No"). 11월이 2주 남아 결정 소식이 곧 나올 수 있음 — 넣는다면 "tbd"(날짜 미정) 방식, 아니면 결정 뒤 결과만 반영. 비중 6.2%(203780). 회사 IR 원문 페이지는 직접 열지 못함(전재본으로 확인).
+- 출처: [리제네론 보도자료 6/22 전재 (drugs.com, 이번 차례 본문 열어 확인)](https://www.drugs.com/nda/cemdisiran_260622.html) · [Managed Healthcare Executive (6/23)](https://www.managedhealthcareexecutive.com/view/fda-sets-target-date-in-november-2026-for-cemdisiran-for-gmg) · 공식 여부: 공식 (회사 보도자료 전재) / 보도
+- 확신도: 높음 (11월 기한) / 확인 못 함 (정확한 날짜·결정 여부)
+- 요청: Quill 확인 바람 (넣을지·표시 방식 판단)
+
+### A-20261116-2004-3 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 20:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR·ORCL 11/19, MOGA·KEYS 11/20, WDC 11/21, ADI 11/24, FLY·DELL·IREN 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음(AMAT 11/13·RKLB 11/14 는 결과 카드 있음). FLY 알파 8번째 비행: 새 공식 날짜 못 찾음(검색에 8월·9월 기사·계약 소식만). (2) 해당 없음으로 확인: D-Wave(QBTS) 2026 투자자의 날은 6/1(지난 일, 회사 IR). IonQ 투자자의 날은 9/8(지난 일). AMGN 3분기 10-Q 에 11/16~12/31 FDA 결정 기한 없음(12월 배당 지급·특허 소송 심리 12/1 만 — 앱 일정 대상 아님). (3) 확인 못 함: TSM 11월 매출 공시일(10월분은 11/10 공시, 12월 날짜 공지 못 찾음), GOOGL 45일 안 회사 행사(검색에 지난 행사만). (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [D-Wave 투자자의 날 2026 (회사 IR)](https://ir.dwavequantum.com/events-and-presentations/events/event-details/2026/D-Wave-Investor-Day--2026-yQP2EMH9dh/default.aspx) · [암젠 3분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0000318154/000031815426000155/amgn-20260930.htm) · [TSMC 10월 매출 (SEC 6-K)](https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000796/tsm-revenue20261110.htm) · 공식 여부: 공식 (2) / 해당 없음 (3·4)
+- 확신도: 높음 (2) / 확인 못 함 (3)
