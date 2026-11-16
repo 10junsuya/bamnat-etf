@@ -822,3 +822,15 @@
 - 내용: VZ — 회사 보도자료 PDF 는 열렸지만 전체 매출 343억 달러만 있고 개인·기업 부문 매출 표가 없음(부문 표는 따로 있는 재무 자료에 있는 것으로 보이나 검색에 공식 주소가 안 나옴) → TelecomLead 출처 그대로, 다음 차례에 SEC 8-K 부문 표를 찾으면 교체. SPCX·CEG·MU 새 근거 없어 그대로(다시 찾지 않음). 남은 2차 출처 약 30곳(D·VZ·WMT·HD·WDC·SNDK·CRM·OKTA·RBRK 등)은 다음 차례에. WMT·HD 는 이번 주 발표 뒤 새 분기로 바뀌므로 교체를 미룸.
 - 출처: [버라이즌 3분기 보도자료 (회사)](https://www.verizon.com/about/sites/default/files/verizon-3Q26-earnings-press-release.pdf) · 공식 여부: 공식(부문 숫자 없음)
 - 확신도: 확인 못 함
+
+### Q-20261116-1534-0 · 알림 · 이번 차례 처리 대상 — A-20261116-1504-1 1건
+- 시각: 2026-11-16 15:41 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261116-1504-1(KEYS 실적 콜) 1건. Vernon V-20261116-0821-5 는 확인(새 요청 없음), Conrad 새 결정·요청 없음, 실적 카드 요청 없음(넘김: Tally 대상 없음). 키사이트 IR 페이지는 이번 차례 열기 권한이 막혀(응답 시간 초과) C-20261116-0930-2 (4) 승인 2번 방식으로 처리. 2차 출처 교체(V-20261115-1821-7 (2))는 이번 차례 손대지 않음 — Q-20261116-1434-3 보류 그대로.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-1534-1 · 반영 · A-20261116-1504-1 에 대해 — KEYS 11/20 06:30 실적 콜 새 일정 + money.json note 발표 시기 바로잡기
+- 시각: 2026-11-16 15:41 KST
+- 내용: events.json 새 일정: (없음) → 2026-11-20 "키사이트 실적 발표", when "06:30 콜 · 실적 자료 공개 시각 미공지", q "2026 회계연도 4분기 (8~10월)·연간", watch 3개. 원문(Archer 인용): "November 19, 2026 01:30 PM PT" · "Q4 FY26 Keysight Technologies Inc. Earnings Conference Call" → 한국 11/20 06:30(python zoneinfo 검산). "장 마감 후 자료 공개"는 보도(rallies.ai)뿐이라 적지 않음. KEYS 는 holdings 483340 top(1.8%)·앱 STOCKS 에 있음. money.json KEYS note: "4분기 실적은 11월 말 발표예요." → "4분기(8~10월) 실적 콜은 11월 20일 06:30(한국 시간)이에요."(숫자는 그대로). 근거: Archer 인용(A-20261116-1504-1) · Quill 원문 직접 확인 못 함. 실적 일정 결과 카드는 발표 뒤 Tally 담당. `check_data.py --embed` 통과.
+- 출처: [키사이트 IR 일정 페이지](https://investor.keysight.com/investor-news-and-events/upcoming-events/default.aspx) · 공식 여부: 공식(Archer 인용)
+- 확신도: 높음 (콜 일시) / 확인 못 함 (자료 공개 시각)
