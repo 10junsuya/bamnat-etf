@@ -285,3 +285,38 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 출처: [Scout 실행 기록](https://github.com/10junsuya/gnomon/actions/workflows/scout.yml) · 공식 여부: 공식(저장소 기록)
 - 확신도: 높음
 - 요청: Conrad 검토 바람 — 대안 예: Scout를 Cloudflare 예약 작업(cron trigger)으로 옮기기, 또는 Wren 차례 시작 때 Scout를 직접 한 번 돌리기. 코드·설정 변경이라 대표 승인 필요.
+
+### W-20261117-0143-1 · 반영 · 엔비디아(NVDA)·IBM 양자-고전 공동 설계 플랫폼
+- 시각: 2026-11-17 02:00 KST
+- 내용: 엔비디아·IBM·페르미 연구소(미 에너지부)가 엔비디아 DGX 서버를 IBM 양자컴퓨터 옆에 두는 공동 설계 플랫폼을 만들기로 했다고 두 회사가 함께 발표했어요(SC26, 미국 11-16). 엔비디아가 함께 낸 오류 정정 해독 속도 주장(최대 1만3천 배)은 연구용 계산 기준이라 한 줄에서 뺐어요.
+- 출처: [엔비디아 보도자료](https://nvidianews.nvidia.com/news/nvidia-announces-collaboration-with-ibm-and-fermi-national-accelerator-laboratory-to-launch-quantum-classical-codesign-platform-plus-error-correction-breakthrough-to-advance-practical-quantum-computing) · [IBM 보도자료(PR Newswire)](https://www.prnewswire.com/news-releases/ibm-fermilab-and-nvidia-announce-plans-for-new-co-design-platform-to-accelerate-the-development-of-next-generation-modular-quantum-computers-302940668.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-0143-2 · 반영 · AMD 텐서웨이브-오픈AI 457MW 공급 계약
+- 시각: 2026-11-17 02:00 KST
+- 내용: 텐서웨이브가 오픈AI와 6년 계약을 맺고 AMD MI455X(헬리오스 랙) 기반 457MW 규모 AI 인프라를 미국 여러 곳에서 공급해요(2027년 상반기 시작). 금액은 공개되지 않았어요. AMD가 아닌 상대 회사 발표라 출처를 텐서웨이브로 밝혔어요.
+- 출처: [텐서웨이브 보도자료(Business Wire)](https://www.financialcontent.com/article/bizwire-2026-11-16-tensorwave-announces-agreement-with-openai-to-deliver-more-than-450mw-of-amd-powered-ai-infrastructure) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-0143-3 · 반영 · 테슬라(TSLA) 독일 공장 30억 유로 증설 보도
+- 시각: 2026-11-17 02:00 KST
+- 내용: 테슬라가 그륀하이데 공장에 30억 유로를 들여 사이버캡용 새 생산동을 짓기로 했다고 보도됐어요(2027년 착공·2029년 생산 계획이라는 보도). 테슬라 공식 글은 찾지 못했고 야후(통신 기사) 페이지는 열지 못해 "보도".
+- 출처: [Yahoo Finance](https://finance.yahoo.com/technology/articles/tesla-invest-3-bn-euros-144451294.html) · [Teslarati](https://www.teslarati.com/tesla-makes-e3-billion-cybercab-bet-giga-berlin/) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: 테슬라 발표·브란덴부르크 주정부 발표가 확인되면 "공식"으로 올려 주세요.
+
+### W-20261117-0143-4 · 반영 · 아마존(AMZN) 캐나다 물류센터 북미 첫 노조 단체협약
+- 시각: 2026-11-17 02:00 KST
+- 내용: BC주 노동위원회가 명령한 중재에 따라 독립 중재인이 아마존 BC주 물류센터(약 700명, 노조 Unifor)의 첫 단체협약을 정했다고 블룸버그가 보도했어요(미국 11-13). 협약 내용은 아직 공개되지 않았어요.
+- 출처: [Bloomberg](https://www.bloomberg.com/news/articles/2026-11-13/amazon-s-first-north-american-union-contract-imposed-in-canada) · [Spokesman-Review(Bloomberg)](https://www.spokesman.com/stories/2026/nov/13/amazons-first-north-american-union-contract-impose/) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261117-0143-5 · 반영 · 월마트(WMT) 이사 선임 — 캐터필러 CEO 조 크리드
+- 시각: 2026-11-17 02:00 KST
+- 내용: 캐터필러 회장 겸 CEO 조 크리드를 즉시 이사로 선임했고 감사위원회·전략기획재무위원회에 들어가요.
+- 출처: [월마트 보도자료(SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000165/pressrelease11162026.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-0143-6 · 알림 · 이번 차례
+- 시각: 2026-11-17 02:00 KST
+- 내용: Scout가 01:20 KST에 갱신돼 새 항목 253건(news 203·market 50)을 처리했어요. 건너뜀: 넷플릭스 광고 매출 전망 하향(10/21 실적 때 이야기), 마이크로소프트 아웃룩 장애 원인(이미 들어 있음), TSMC-글로벌파운드리 20억 달러 패키징 계약(발표일 확인 못 함·이전 소식으로 보임), 애플 폴더블 유리 공급사(보도 출처 불분명), 팔란티어 NHS(소문), 트럼프의 젠슨 황 복귀 발언·머스크 지지(이미 넣은 복귀 논의 흐름), 나머지는 주가 정리·목표가·종목 비교·의견·시장 보고서 광고. 01시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
