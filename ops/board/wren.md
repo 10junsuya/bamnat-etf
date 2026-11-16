@@ -441,3 +441,32 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261117-0713-2 · 알림 · 이번 차례
 - 시각: 2026-11-17 07:25 KST
 - 내용: Scout 마지막 갱신(06:39 KST) 뒤 새 항목이 없어 회사 소식은 반영할 게 없었어요(done 변화 없음). 07시대라 시장 소식 1건(11-16 미국 마감)을 위 Scout 제목(WSJ·Bloomberg)과 AP·CNN 보도로 확인해 넣었어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
+
+### W-20261117-0743-1 · 반영 · 엔비디아(NVDA)·인텔(INTC) 13F: 인텔 지분 25% 축소, 스페이스X 지분 6.3% 확대
+- 시각: 2026-11-17 07:46 KST
+- 내용: 엔비디아의 3분기 말 기준 보유 보고서(13F)에서 인텔 지분이 25% 줄어 1억 6,110만 주, 스페이스X(SPCX) 지분은 6.3% 늘어 1억 3,050만 주가 됐다고 보도됐어요. 시놉시스(-9.7%)·노키아 축소도 함께 나왔지만 시놉시스는 앱 종목이라도 한 줄에서 뺐어요. SEC 원문은 이번에 직접 확인하지 못해 "보도"로 넣었어요. NVDA·INTC 두 회사에 넣었어요.
+- 출처: [FinancialJuice](https://www.financialjuice.com/News/9854561/) · [Newsquawk](https://www.newsquawk.com/headlines/nvidia-nvda-raises-its-spacex-spcx-stake-by-63-to-1305mln-classa-shares-according-to-sec-filing) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: SEC 13F 원문(NVIDIA CORP)에서 확인되면 "공식"으로 올려 주세요.
+
+### W-20261117-0743-2 · 반영 · 알파벳(GOOGL) 일본에 사이버 보안용 최신 AI 모델 먼저 제공
+- 시각: 2026-11-17 07:46 KST
+- 내용: 구글이 일본 정부와 주요 기반시설 기업에 최신 AI 모델을 사이버 보안용으로 먼저 쓰게 하겠다고 닛케이가 보도했어요(임원 발언). 회사 공식 발표는 확인 못 해 "보도".
+- 출처: [Nikkei Asia](https://asia.nikkei.com/spotlight/cybersecurity/google-to-give-japan-early-access-to-frontier-ai-for-cybersecurity) · [Seeking Alpha](https://seekingalpha.com/news/4673297-google-will-offer-japan-early-access-to-frontier-ai-models-exec-says) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261117-0743-3 · 반영 · 래티스(LSCC) TESAT 위성 광통신 단말 속 FPGA 궤도 1년 작동
+- 시각: 2026-11-17 07:46 KST
+- 내용: TESAT 위성 광통신 단말에 들어간 래티스 FPGA가 궤도에서 1년 넘게 작동했다고 회사가 발표했어요(Business Wire, 미국 11-16 16:00 ET = 한국 11-17 06:00).
+- 출처: [래티스 보도자료](https://ir.latticesemi.com/news-releases/news-release-details/lattice-extends-space-heritage-orbit-milestone-tesat-optical) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-0743-4 · 반영 · JP모건(JPM) 체이스 장애 갱신: 사이버 공격 아닌 소프트웨어 오류
+- 시각: 2026-11-17 07:46 KST
+- 내용: W-20261117-0613-1 에 대해. 체이스가 장애는 사이버 공격 증거가 없고 시스템 전반 문제도 아니라고 밝혔고, 원인을 소프트웨어 오류로 설명했다고 보도돼 한 줄을 갱신했어요(새 항목 아님). 회사 공지 원문은 확인 못 해 그대로 "보도".
+- 출처: [The Next Web](https://thenextweb.com/news/chase-software-bug-bank-outages-zelle) · [Inc.](https://www.inc.com/moses-jeanfrancois/chase-says-outage-was-not-systemic-zelle-explains-why-other-customers-feel-it/91437726) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261117-0743-5 · 알림 · 이번 차례
+- 시각: 2026-11-17 07:46 KST
+- 내용: Scout 07:26 KST 갱신분 새 항목 89건(news 39·market 50)을 처리했어요. 건너뜀: 인플렉션 논리 큐비트 30개(9월 24일 발표 — 오래된 소식)·3분기 실적(Tally 담당), 루멘텀 인수 제안(마벨 인수 이미 들어 있음), 아마존 캐나다 노조 계약(이미 들어 있음), 테슬라 사이버트럭 생산 종료(11-06 발표, 칼럼 글), 엔비디아 젠슨 황 관련 해설, 일라이릴리-스티플 바이오 연구 협력(작은 비상장사 발표, 중요도 낮음), 아마존 배송기사 해고 주장(노조 주장만), 나머지는 주가 정리·목표가·종목 비교·의견·실적 통화 요약. 07시대 시장 소식은 짝 작업이 이미 1건(미국 11-16 마감) 넣어 더 넣지 않았어요. 호르무즈 유조선 공격(UKMTO)은 비슷한 10월 기사와 섞여 이번 날짜를 확실히 가리지 못해 넣지 않았어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
