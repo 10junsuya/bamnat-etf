@@ -453,3 +453,16 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR·ORCL 11/19, MOGA·KEYS 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음(SPCX 스타십 15번째 비행은 A-20261115-1704-5 에 이미 있음). (2) MU 12/18 06:00: 보도(reportify, 증권 매체 글 제목) "Q1 Earnings on December 17"는 미국 12/17 장 마감 후 = 한국 12/18 새벽과 맞음 — 회사 공지는 여전히 못 찾음. (3) 확인 못 함: ORCL FY27 2분기 실적 발표일(검색에 지난해 공지만), SPCX 스타십 16번째 비행 날짜(블로그·집계 사이트만), RKLB 101번째 일렉트론, FLY 알파 8번째 비행 새 공식 날짜. 이번 차례 후반 웹 검색이 여러 번 응답 없음으로 실패해 NBIS 주총·LUNR IM-3 는 확인 못 함. (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
 - 출처: [reportify 마이크론 기사 제목](https://reportify.cn/news/1199004577844957184) · 공식 여부: 보도 (2) / 해당 없음 (3·4)
 - 확신도: 중간 (2) / 확인 못 함 (3)
+
+### A-20261116-1804-1 · 발견 · AMZN(아마존) AWS 리인벤트 2026 — 11/30~12/4 라스베이거스, CEO 기조연설 한국 시간 12/2 01:30 — events.json 에 없음
+- 시각: 2026-11-16 18:04 KST
+- 내용: 아마존 클라우드(AWS) 최대 연례 행사 리인벤트. AWS 공식 FAQ 원문: "Nov. 30 – Dec. 4 in Las Vegas, NV." 공식 기조연설 페이지 원문: CEO 기조연설(맷 가먼) "Tuesday, December 1 | 8:30 AM to 10:30 AM" → 행사 장소(라스베이거스, 태평양 표준시) 기준이면 한국 시간 **12/2(수) 01:30~03:30**(python zoneinfo 변환). 단 공식 페이지에 시간대 표기는 없음 — 현지 시각으로 본 계산(보도 블로그 ecorpit 도 태평양 시간으로 표기). 그 밖의 기조연설: 개발자 11/30 19:30, 데이터·AI 12/2 08:30, 기술 혁신 12/3 08:30(모두 현지). 새 제품 발표가 몰리는 날이라 AI 반도체·클라우드 회사에도 이어지는 행사. holdings 상 AMZN 비중 최대 17.0%. type "event" 대상(C-20261116-0930-1 6번). 승인 2번 조건: (가) 공식 회사 주소 (나) 이번 차례 본문 열어 확인 (다) 원문 인용 — 날짜는 세 가지 갖춤, 시각은 시간대 표기가 없어 Quill 판단 바람(날짜만 넣고 "현지 12/1 오전" 표기도 가능).
+- 출처: [AWS 리인벤트 FAQ (공식, 이번 차례 본문 열어 확인)](https://aws.amazon.com/events/reinvent/faqs/) · [AWS 리인벤트 기조연설 일정 (공식, 이번 차례 본문 열어 확인)](https://aws.amazon.com/events/reinvent/sessions/keynotes/) · [ecorpit 기조연설 정리 (보도)](https://ecorpit.com/aws-reinvent-2026-keynotes-what-to-watch/) · 공식 여부: 공식 (날짜·현지 시각) / 보도 (시간대)
+- 확신도: 높음 (행사 날짜·현지 시각) / 중간 (한국 시간 환산 — 시간대 표기 없음)
+- 요청: Quill 확인 바람
+
+### A-20261116-1804-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 18:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR·ORCL 11/19, MOGA·KEYS 11/20, WDC 11/21, ADI 11/24, FLY·DELL·IREN 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) 해당 없음으로 확인: NBIS 2026년 정기 주주총회는 8/25(지난 일, 회사 결과 발표 있음). RKLB 발사 페이지의 "다음 발사" 칸 "The Grain Goddess Provides"(iQPS)는 날짜·발사장 표시 없음 — 같은 이름 임무는 지난 8월 92번째 비행으로 이미 끝난 것이라 페이지 표시가 낡은 것으로 보임(101번째 일렉트론 공식 날짜는 확인 못 함). (3) 확인 못 함: ORCL FY27 2분기 실적 발표일(검색에 지난해 공지만, 오라클 IR 페이지 열기 실패), MU FY27 1분기 공식 공지(IR 페이지 열기 실패), ACN FY27 1분기·FDX FY27 2분기 발표일(지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(rocketlaunch.live 도 "TBD · 2026"만), GEV 2026년 투자자 행사(2025년 12/9 행사 자료만). (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [네비우스 2026 주총 결과 (회사 뉴스룸)](https://nebius.com/newsroom/nebius-group-n-v-announces-results-of-its-annual-general-meeting-2026) · [로켓랩 발사 페이지](https://rocketlabcorp.com/missions/launches/) · [rocketlaunch.live 스타십 16번째 비행](https://www.rocketlaunch.live/launch/starship-flight-16) · 공식 여부: 공식 (2) / 보도(집계 사이트) (3)
+- 확신도: 높음 (2 NBIS) / 확인 못 함 (3)
