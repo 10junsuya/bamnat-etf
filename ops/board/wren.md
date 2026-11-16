@@ -409,3 +409,25 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261117-0613-2 · 알림 · 이번 차례
 - 시각: 2026-11-17 06:25 KST
 - 내용: Scout 05:58 KST 갱신분 새 항목 48건(news 36·market 12)을 처리했어요. 버림(확인 못 함): SK하이닉스 '10억 달러' 하락 이유 기사·협력사 지원 기사(본문 못 읽음, 검색으로 사건 확인 못 함), 애플 아이폰 듀오 얼굴 인식 잠금 추가(검색에선 차기 모델 소문만 나옴). 건너뜀: SK하이닉스 100조 원 주주환원(10월 3분기 실적 때 이야기), 릴리 칼리트릭스 인수(이미 들어 있음 — 릴리 IR 보도자료 여전히 못 찾음), 테라다인 콘퍼런스 참석, 나머지는 주가 정리·목표가·종목 비교·의견·광고성 글. 06시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
+
+### W-20261117-0643-1 · 반영 · 인사이트(INCY) 화농성 한선염 먹는 약 포보포르테이 유럽 승인
+- 시각: 2026-11-17 07:05 KST
+- 내용: 인사이트의 포보포르테이(포보르시티닙)가 중등도~중증 화농성 한선염 성인용 하루 한 번 먹는 약으로 유럽에서 승인됐다고 회사가 발표했어요(미국 11-16 장 마감 뒤). 이번 차례도 기사 페이지 읽기(WebFetch)가 권한 응답 없음으로 막혀 보도자료 제목·EMA 의약품 페이지·Investing.com 검색 결과로 확인했어요.
+- 출처: [인사이트 보도자료(Yahoo)](https://finance.yahoo.com/healthcare/articles/povofortay-povorcitinib-approved-europe-first-213000785.html) · [EMA](https://www.ema.europa.eu/en/medicines/human/EPAR/povofortay) · [Investing.com](https://www.investing.com/news/company-news/european-commission-approves-incytes-povofortay-for-hidradenitis-suppurativa-93CH-5031036) · 공식 여부: 공식
+- 확신도: 중간
+
+### W-20261117-0643-2 · 반영 · 길리어드(GILD) 에볼라 후보약 오벨데시비르 자발적 라이선스
+- 시각: 2026-11-17 07:05 KST
+- 내용: 분디부교형 에볼라 치료 후보약 오벨데시비르를 복제약 회사들에 자발적 라이선스로 내줘 공급을 넓힌다고 발표했어요(Business Wire, 미국 11-16). 라이선스 받은 회사 수(3곳)는 작은 매체 한 곳만 확인돼 한 줄에서 뺐어요.
+- 출처: [길리어드 보도자료(Business Wire 전재)](https://www.financialcontent.com/article/bizwire-2026-11-16-gilead-expands-access-to-investigational-obeldesivir-for-ebola-bundibugyo-virus-disease-through-voluntary-licensing) · 공식 여부: 공식
+- 확신도: 중간
+
+### W-20261117-0643-3 · 반영 · TTM 테크놀로지스(TTMI) 상업·항공우주방산 부문 통합 조직 개편
+- 시각: 2026-11-17 07:05 KST
+- 내용: 상업 부문과 항공우주·방산 부문을 합치는 조직 개편을 발표했어요(GlobeNewswire, 미국 11-16). 새 책임자 등 세부 내용은 본문을 못 읽어 넣지 않았어요.
+- 출처: [TTM 보도자료(GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/16/3404136/0/en/ttm-technologies-announces-organizational-re-alignment.html) · [Seeking Alpha](https://seekingalpha.com/news/4673311-ttm-technologies-combines-commercial-and-aerospace-and-defense-units) · 공식 여부: 공식
+- 확신도: 중간
+
+### W-20261117-0643-4 · 알림 · 이번 차례
+- 시각: 2026-11-17 07:05 KST
+- 내용: Scout 새 항목 55건(news 48·market 7)을 처리했어요. 버림(확인 못 함): 시스코-FAA 전국 운항 중단 연관(11-14 사건, 오래된 시스코 라우터 지목은 2차 전재로만 확인되고 FAA는 원인 미확인이라 함), 아멕스 ChatGPT 지갑 출시(공식 발표·날짜 확인 못 함), 월마트 AI 에이전트 프로필(블로그 글만). 건너뜀: 엔비디아 관련 해설·시나리오 글, 은행 온라인 장애(이미 들어 있음), 버크셔 기부(이미 들어 있음)·13F 해설, nVent SC26 전시(홍보성), 피프스서드 콘퍼런스 참석, 나머지는 주가 정리·목표가·종목 비교·의견. 06시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
