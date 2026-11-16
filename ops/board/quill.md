@@ -708,3 +708,39 @@
 - 내용: MU — 다시 검색했지만 FY27 1분기 발표일 회사 공지 못 찾음(검색 결과는 2025년 공지 재게재·FY26 4분기 전사록뿐), 앱 12/18 그대로(확인 못 함). SPCX·CEG 는 Q-20261116-0834-4 이후 새 근거 없어 그대로. 남은 2차 출처 약 42곳은 다음 차례에.
 - 출처: [마이크론 지난해 일정 공지 (재게재)](https://marketchameleon.com/PressReleases/i/2209130/MU/micron-technology-to-report-fiscal-first-quarter) · 공식 여부: 공식(재게재, 지난해)
 - 확신도: 확인 못 함
+
+### Q-20261116-1134-0 · 알림 · 이번 차례 웹 페이지 열기 — 검색 결과 주소 중 sec.gov 4곳 열림
+- 시각: 2026-11-16 11:42 KST
+- 내용: 새 처리 대상: A-20261116-1104-1~4(SNDK·LITE·WDC·FN 주총). Conrad 새 결정·요청 없음. 열린 곳: 샌디스크·루멘텀·웨스턴디지털·패브리넷 DEF 14A(SEC, 앞부분 약 4만 자 원문 — 주총 안내 부분 포함). 시각 변환은 python(zoneinfo)으로 검산(11~12월은 미국 태평양 표준시 PST). 실적 카드 요청은 이번 차례 없음(넘김 대상 없음).
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-1134-1 · 반영 · A-20261116-1104-1 에 대해 — SNDK 11/18 01:00 정기 주주총회 새 일정
+- 시각: 2026-11-16 11:42 KST
+- 내용: events.json 새 일정: (없음) → 2026-11-18 SNDK type "event" "샌디스크 정기 주주총회", when "01:00 · 온라인 전용". 원문: "Date November 17, 2026", "Meeting begins: 8:00 a.m. Pacific Time", "Our annual meeting will be a completely virtual meeting of stockholders", 기준일 "September 21, 2026" → 한국 11/18 01:00(python). SNDK 는 holdings top(0015B0·442580·456600)·STOCKS 에 있음. watch 는 다른 주총과 같은 일반 문구.
+- 출처: [샌디스크 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0002023554/000130817926000423/sndk-20261005.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-1134-2 · 반영 · A-20261116-1104-2 에 대해 — LITE 11/19 01:00 정기 주주총회 새 일정
+- 시각: 2026-11-16 11:42 KST
+- 내용: events.json 새 일정: (없음) → 2026-11-19 LITE type "event" "루멘텀 정기 주주총회", when "01:00 · 온라인 전용". 원문: "will be held virtually on Wednesday, November 18, 2026, at 8:00 a.m. Pacific Time.", "The virtual Annual Meeting can be accessed by visiting www.virtualshareholdermeeting.com/LITE2026", 기준일 "September 24, 2026" → 한국 11/19 01:00(python). 원문 앞부분에 현장 장소 없음("virtual-only" 단어 자체는 없음) — "온라인 전용"은 이 기준. LITE 는 holdings top(0173Y0 등)·STOCKS 에 있음.
+- 출처: [루멘텀 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0001633978/000130817926000420/lite2026-def14a.htm) · 공식 여부: 공식
+- 확신도: 높음 (날짜·시각) / 중간 (온라인 전용)
+
+### Q-20261116-1134-3 · 반영 · A-20261116-1104-3 에 대해 — WDC 11/21 01:00 정기 주주총회 새 일정
+- 시각: 2026-11-16 11:42 KST
+- 내용: events.json 새 일정: (없음) → 2026-11-21 WDC type "event" "웨스턴디지털 정기 주주총회", when "01:00 · 온라인 전용". 원문: "November 20, 2026", "Meeting begins: 8:00 a.m. Pacific Time", "Our annual meeting will be a completely virtual meeting of stockholders", 기준일 "September 22, 2026" → 한국 11/21 01:00(python). WDC 는 holdings top(456600, 1.3%)·STOCKS 에 있어 조건에 맞아 넣음(Q-20261116-1034-2 CSCO 와 같은 기준).
+- 출처: [웨스턴디지털 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0000106040/000162828026064909/wdc-20261005.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-1134-4 · 반영 · A-20261116-1104-4 에 대해 — FN 12/11 02:00 정기 주주총회 새 일정
+- 시각: 2026-11-16 11:42 KST
+- 내용: events.json 새 일정: (없음) → 2026-12-11 FN type "event" "패브리넷 정기 주주총회", when "02:00 · 온라인 전용". 원문: "The Annual Meeting will be held on Thursday, December 10, 2026, at 9:00 a.m. Pacific Standard Time", "There will be no physical location for shareholders to attend the Annual Meeting.", 기준일 "October 13, 2026" → 한국 12/11 02:00(python). FN 은 holdings top(0173Y0)·STOCKS 에 있음.
+- 출처: [패브리넷 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0001408710/000114036126040144/ny20081940x1_def14a.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-1134-5 · 보류 · A-20261115-1704-5 · A-20261115-2204-5 · A-20261115-2004-1 · V-20261115-1821-7 (2) 에 대해 — SPCX·CEG·MU·나머지 2차 출처
+- 시각: 2026-11-16 11:42 KST
+- 내용: MU — 다시 검색했지만 FY27 1분기 발표일 회사 공지 못 찾음(검색 결과는 FY26 4분기 보도자료·전사록·집계 사이트뿐), 앱 12/18 그대로(확인 못 함). SPCX·CEG 는 Q-20261116-0834-4 이후 새 근거 없어 그대로. 남은 2차 출처 약 42곳은 다음 차례에.
+- 출처: [마이크론 FY26 4분기 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm) · 공식 여부: 공식 (발표일 공지 아님)
+- 확신도: 확인 못 함
