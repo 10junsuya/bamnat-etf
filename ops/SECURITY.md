@@ -51,8 +51,8 @@
 ## 5. 대표님이 직접 하실 것 (설정이라 AI가 바꾸지 않아요)
 
 1. **한국투자증권 키는 노몬 전용 빈 계좌로** 받기. 지금 쓰는 투자 계좌로는 신청하지 않기.
-2. **GitHub 2단계 인증** 켜기 (Settings → Password and authentication).
-3. **Cloudflare 2단계 인증** 켜기, Cloudflare API 토큰은 "Workers 편집" 권한만.
+2. ~~**GitHub 2단계 인증** 켜기~~ — **완료 (2026-11-16, 대표 확인)**.
+3. **Cloudflare 2단계 인증** — 이메일 인증은 켜져 있음 (2026-11-16 확인). 남은 것(선택): 휴대폰 인증 앱(TOTP) 추가, Cloudflare API 토큰은 "Workers 편집" 권한만.
 4. **GitHub main 브랜치 보호**: 강제 덮어쓰기(force push)·삭제 금지 (Settings → Rules → Rulesets). AI 팀이 바로 올리는 방식은 그대로 둬도 돼요.
 5. 키가 샜다는 의심이 들면: 해당 키를 그 회사 홈페이지에서 바로 해지 → 새로 받아 GitHub Secrets에 다시 넣기.
 
