@@ -72,6 +72,34 @@ def fred_release_dates(sid, n=8):
     return [x["date"] for x in j.get("release_dates", [])]
 
 
+NEXT_SERIES = {"cpi": "CPIAUCSL", "pce": "PCEPI", "ppi": "PPIFIS", "nfp": "PAYEMS", "retail": "RSAFS", "claims": "ICSA",
+               "m2": "M2SL", "fomc": "DFEDTARU"}
+
+
+def fred_next_release(sid):
+    """이 시리즈가 실린 발표의 다음 공식 발표일(미국 날짜). FRED가 발표 기관 일정표를 그대로 받아 둬요."""
+    rid = get("https://api.stlouisfed.org/fred/series/release?" + urllib.parse.urlencode(
+        {"series_id": sid, "api_key": FRED_KEY, "file_type": "json"}))["releases"][0]["id"]
+    today = dt.datetime.now(ET).date().isoformat()
+    j = get("https://api.stlouisfed.org/fred/release/dates?" + urllib.parse.urlencode(
+        {"release_id": rid, "api_key": FRED_KEY, "file_type": "json", "sort_order": "asc", "limit": 10,
+         "realtime_start": today, "realtime_end": "9999-12-31", "include_release_dates_with_no_data": "true"}))
+    ds = [x["date"] for x in j.get("release_dates", []) if x["date"] >= today]
+    return ds[0] if ds else None
+
+
+def next_releases(ind, errors):
+    for k, sid in NEXT_SERIES.items():
+        if k not in ind:
+            continue
+        try:
+            d = fred_next_release(sid)
+            if d:
+                ind[k]["next"] = d
+        except Exception as e:  # noqa: BLE001
+            errors.append(scrub(f"다음 발표일 {k}: {type(e).__name__}: {e}")[:200])
+
+
 # 발표 후 30분 반응: 발표 시각(미국 동부 08:30) 직전 5분봉 종가 → 30분 뒤 5분봉 종가
 REACT_SYMS = [("ES=F", "pct"), ("^TNX", "pp"), ("DX-Y.NYB", "pct"), ("KRW=X", "won")]  # 앱 순서: S&P500 선물·10년물·달러 인덱스·원/달러
 REL_SERIES = {"cpi": "CPIAUCSL", "pce": "PCEPI", "ppi": "PPIFIS", "nfp": "PAYEMS", "retail": "RSAFS", "claims": "ICSA"}
@@ -281,6 +309,7 @@ def main():
             reactions(ind, errors)
         except Exception as e:  # noqa: BLE001
             errors.append(scrub(f"반응: {type(e).__name__}: {e}")[:200])
+        next_releases(ind, errors)
     out = {"generated_at_kst": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "ind": ind, "errors": errors}
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"지표 {len(ind)}개 · 오류 {len(errors)}개")

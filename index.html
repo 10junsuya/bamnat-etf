@@ -580,7 +580,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
     </div>
   </div>
 
-  <div class="banner" id="protoBanner">만드는 중이에요. 미국 시세·구성종목·매크로 지표는 실제 값이고, <b>‘샘플’</b> 표시가 있는 숫자와 예시 뉴스는 아직 실제가 아니에요.</div>
+  <div class="banner" id="protoBanner">만드는 중이에요. 시세·구성종목·매크로 지표·일정·회사 소식은 실제 값이에요. <b>‘샘플’</b> 표시가 있는 숫자(분배금 등)만 아직 실제가 아니에요.</div>
 
   <main id="view"></main>
 
@@ -689,7 +689,7 @@ const ETF_DATA = readData("d-etfs") || {groups:{}, etfs:[]};
 const ETFS = (ETF_DATA.etfs||[]).map(([code,name,group],i)=>({code, name, group, groupName:(ETF_DATA.groups[group]||{}).name||group,
   nav:NaN, close:NaN, h:[], rest:null, cash:0, prem:NaN, avgPrem:NaN, seed:3+i*2}));
 
-/* 예시 일정 (실제 일정 아님) — 날짜는 한국 시간 */
+/* 일정은 회사 공식 발표(SEC 공시·IR)로 확인한 것만 넣어요 — 날짜는 한국 시간 */
 /* 일정·실적 카드: data/events.json 이 원본이에요. scripts/embed_data.py 가 아래 JSON 블록(d-events)에 넣어요. */
 const EVENTS = readData("d-events");
 
@@ -1581,7 +1581,7 @@ function eventSheet(id){
   const isEarn = ev.type==="earn";
   const held = ETFS.filter(e=>e.h.some(([x])=>x===t));
   openSheet(`<h3 id="sheetTitle">${evTitleHtml(ev)}</h3>
-    <p class="small muted" style="margin-top:0">${ev.tbd && !ev.done ? `날짜 미정 (${m}/${dd} 가안)` : `${m}/${dd}(${wd})`} ${ev.when} · 한국 시간 · 예시 일정${ev.done?" · 발표 완료":""}</p>
+    <p class="small muted" style="margin-top:0">${ev.tbd && !ev.done ? `날짜 미정 (${m}/${dd} 가안)` : `${m}/${dd}(${wd})`} ${ev.when} · 한국 시간 · 회사 공식 발표 기준${ev.done?" · 발표 완료":""}</p>
     ${isEarn ? `<div class="bsection"><h4>발표 개요</h4><p>${josaIGa(s?s[0]:t)} ${ev.q||"지난 분기"} 성적표를 내놓는 날이에요. 매출과 주당순이익(EPS)이 시장 예상보다 높았는지, 그리고 회사가 말하는 다음 분기 전망(가이던스)을 함께 봐요.</p>
       <p class="small muted">미국 장이 끝난 뒤 발표돼서, 주가 반응은 시간외 거래와 다음 날 정규장에서 먼저 나타나요. 국내 상장 ETF에는 보통 그다음 한국 장에 반영돼요.</p></div>`
     : ev.type==="event" ? `<div class="bsection"><h4>일정 개요</h4><p>${ev.what||"주주총회 같은 회사 행사 일정이에요."}</p>
@@ -1603,7 +1603,7 @@ function eventsCard(e){
   const tick = e.h.map(([t])=>t);
   const evs = EVENTS.filter(v=>tick.includes(v.t));
   if(!evs.length) return "";
-  return `<section class="card"><h2>구성종목 일정<span class="sub">예시 일정 · 한국 시간</span></h2>
+  return `<section class="card"><h2>구성종목 일정<span class="sub">회사 공식 발표 기준 · 한국 시간</span></h2>
     ${evs.slice(0,4).map(v=>evRow(v,false)).join("")}
     <button class="more" type="button" data-go="calendar">실적·일정 전체 보기 ›</button></section>`;
 }
@@ -1667,7 +1667,7 @@ function viewCalendar(){
   const myTick = new Set(ETFS.filter(e=>stars.includes(e.code)).flatMap(e=>e.h.map(([t])=>t)));
   const dists = distEvents().filter(v => calFilter==="all" || stars.includes(v.code));
   const list = [...EVENTS.filter(v => calFilter==="all" || myTick.has(v.t)), ...dists].sort((a,b)=>a.d.localeCompare(b.d));
-  return `<section class="card"><h2>실적 발표·주요 일정<span class="sub">한국 시간 · '확인됨' 외에는 예시</span></h2>
+  return `<section class="card"><h2>실적 발표·주요 일정<span class="sub">한국 시간 · 회사 공식 발표 기준${dists.length?" · 분배금은 샘플":""}</span></h2>
     <div class="seg" role="group" aria-label="일정 범위">
       <button type="button" data-cal="all" aria-pressed="${calFilter==="all"}">전체</button>
       <button type="button" data-cal="mine" aria-pressed="${calFilter==="mine"}">관심 ETF 구성종목만</button>
@@ -1716,7 +1716,7 @@ function stockLine(x, withWhy){
   return `<button class="bline row" type="button" data-stock="${x.t}" style="padding:7px 0">
     ${logo(x.t,true)}
     <div><div><b style="font-weight:600">${x.name}</b> <span class="tiny muted">${sym(x.t)} · 비중 ${(x.w*100).toFixed(1)}%</span>${Math.abs(x.r)>=MAJOR?'<span class="major">크게 움직임</span>':""}</div>
-      ${withWhy && big ? `<div class="why">왜 ${x.r>0?"올랐나":"내렸나"}: [예시] 밤사이 나온 ${x.name} 관련 뉴스 요약이 여기에 들어가요 · <span class="tiny">출처 링크</span></div>`:""}</div>
+      ${withWhy && big && recentNews(x.t,1).length ? `<div class="why">관련 소식: ${recentNews(x.t,1)[0].t} · <span class="tiny">${newsSrc(recentNews(x.t,1)[0])}</span></div>`:""}</div>
     <div style="text-align:right"><div class="num ${cls(x.r)}" style="font-weight:600">${spct(x.r)}</div><div class="tiny muted num">기여 ${pctp(x.c)}</div></div>
   </button>`;
 }
@@ -1756,10 +1756,13 @@ function briefPanel(st){
       ${m.downs.length?`<div class="l2"><span class="down">▼</span> ${m.downs.join(", ")}</div>`:""}
       <div class="go">브리핑 읽기 ›</div></button>`; }).join("")}`;
 }
+/* 최근 소식(Wren이 공식 출처로 확인한 것)만 보여줘요. 최근 며칠 소식이 없으면 칸을 숨겨요. */
+const NEWS_DAYS = 3;
+function newsCut(){ const p = parts(new Date(now().getTime() - NEWS_DAYS*864e5), "Asia/Seoul"); return ymd(p); }
+function recentNews(t, n){ const cut = newsCut(); return (CNEWS[t]||[]).filter(x=>(x.d||"")>=cut).sort((a,b)=>(b.d+(b.tm||"")).localeCompare(a.d+(a.tm||""))).slice(0, n); }
+function newsSrc(x){ const [sn, su] = (x.src||[])[0] || ["",""]; return `${x.kind==="공식"?"공식":"보도"} · ${mdTxt(x.d)}${x.tm?" "+x.tm:""} · ${su?`<a href="${su}" target="_blank" rel="noopener noreferrer">${sn||"원문"} ›</a>`:sn}`; }
 function newsBox(x, n){
-  const items = [];
-  for(let i=0;i<n;i++) items.push(`<div class="newsbox">[예시] 밤사이 나온 ${x.name} 관련 뉴스 ${n>1?(i+1)+"의 ":""}요약이 여기에 들어가요.<div class="src">출처 · 미국 정규장 중 · 원문 링크</div></div>`);
-  return items.join("");
+  return recentNews(x.t, n).map(it=>`<div class="newsbox">${it.t}<div class="src">${newsSrc(it)}</div></div>`).join("");
 }
 function coBlock(x, code, withNews){
   const co = CO[x.t];
@@ -1812,7 +1815,7 @@ function etfBriefHtml(code){
       ${cats.map(g=>`<div class="secbar"><span>${g.k}</span><span class="track"><span class="fill" style="${g.r>=0?"left:50%":"right:50%"};width:${(Math.abs(g.r)/maxAbs*50).toFixed(1)}%;background:var(--${g.r>=0?"up":"down"})"></span></span><span class="num ${cls(g.r)}" style="text-align:right">${spct(g.r)}</span></div>`).join("")}`:""}
       <p style="margin-top:12px">원/달러 환율이 ${FX.base}원에서 ${FX.now}원이 됐어요. 원화로 바꾸면 <b class="num ${cls(c.fxC)}">${pctp(c.fxC)}</b>가 더해졌어요.</p>
       ${macroNightHtml(st, code, false)}
-      <div class="newsbox">[예시] 시장 전체 뉴스 — 밤사이 금리·물가 지표·연준 발언처럼 ${gi.title} 전체에 영향을 준 소식 요약이 여기에 들어가요.<div class="src">출처 · 원문 링크</div></div>
+      ${(MNEWS||[]).filter(x=>(x.d||"")>=newsCut()).slice(0,2).map(it=>`<div class="newsbox">${it.t}<div class="src">시장 전체 · ${newsSrc(it)}</div></div>`).join("")}
     </div>
 
     <div class="bsection"><h4>② 회사별로 하나씩</h4>
@@ -1940,7 +1943,7 @@ function howtoHtml(){
   const box = rows => `<div style="border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;background:var(--surface-2)">${rows.map(r=>`<div style="display:flex;gap:10px;padding:3px 0"><span class="muted" style="min-width:70px">${r[0]}</span><b class="num">${r[1]}</b></div>`).join("")}</div>`;
   const pmt = s => s>=0?"+"+won(s):"−"+won(-s);
   return `<h3 id="sheetTitle">보유 종목은 이렇게 넣어요</h3>
-    <div class="small muted">예시는 ${e.name}이에요. 수익금 숫자는 샘플 시세로 계산했어요.</div>
+    <div class="small muted">예시는 ${e.name}이에요. 수익금 숫자는 지금 시세로 계산한 예시예요.</div>
 
     <div class="bsection"><h4>① ETF만 추가하기</h4>
       <p>수량과 매수가를 비워두고 <b>ETF만 골라서</b> 추가하면 돼요. 아침 브리핑과 등락률(%)을 볼 수 있어요. 금액은 나오지 않아요.</p>
@@ -1994,7 +1997,7 @@ function viewMain(st){
   </div>
   <footer class="sitefoot">
     <div class="sf-brand"><b>GNOMON</b> 노몬 <span>Since 2026</span></div>
-    <div>데이터 출처 · Finnhub · FRED(세인트루이스 연준) · 한국은행 ECOS · 공공데이터포털(금융위원회) · ECB 환율 <span class="sf-note">연결 진행 중이라 지금은 일부 샘플이에요</span></div>
+    <div>데이터 출처 · Finnhub · FRED(세인트루이스 연준) · 한국은행 ECOS · 공공데이터포털(금융위원회) · ECB 환율 <span class="sf-note">‘샘플’ 표시가 있는 숫자는 아직 실제가 아니에요</span></div>
     <div>정보 제공용이며 투자 권유가 아니에요. 추정치와 해석은 실제와 다를 수 있고, 판단과 책임은 이용자에게 있어요.</div>
     <div class="sf-copy">© 2026 GNOMON</div>
   </footer>`;
@@ -2100,13 +2103,17 @@ function applyMacro(){
     if(m.now!=null){ v.now = m.now; v.chg = m.chg; v.spark = m.spark; }
     if(m.series && m.series.length) v.series = m.series;
     if(m.rel) v.rel = m.rel;
+    if(typeof m.next==="string" && /^\d{4}-\d{2}-\d{2}$/.test(m.next) && v.next){ v.next = [m.next, v.next[1], v.next[2]]; v.nextReal = true; }  // FRED 공식 일정표
     if(m.react){ v.react = m.react; v.reactReal = true; }
   }
+  // 한국은행 금통위는 한국은행 공지로 확인한 날짜예요 (2026-11-16 확인: 11/26 올해 마지막 회의)
+  if(IND.bok && IND.bok.next && IND.bok.next[0]==="2026-11-26") IND.bok.nextReal = true;
   // 발표 후 30분 반응은 실제로 계산한 것만 보여줘요 (샘플 숫자는 지움)
   for(const v of Object.values(IND)) if(!v.reactReal) v.react = null;
 }
 applyMacro();
 const asofTxt = v => v.g==="mkt" ? mdTxt(v.asof) : (v.ref || mdTxt(v.asof));
+const nextTag = v => v.nextReal ? "공식 일정" : "예정일";
 const realTag = v => v.real ? `실제 · ${asofTxt(v)} 기준 · ${v.srcSeries.split(" ")[0]}${v.rnote?` · ${v.rnote}`:""}` : "샘플 숫자";
 
 IND.vix.cc = "us"; IND.us10y.cc = "us";
@@ -2445,7 +2452,7 @@ function viewMacro(st){
     return `<button class="acard" type="button" data-go="macro-${key}">
       <div class="c">${G.keys.length}개</div><div class="t">${G.title}</div><div class="s">${G.keys.map(k=>IND[k].name).join(" · ")}</div>
       <div class="f muted">${key==="mkt" ? `원/달러 <b class="num ${cls(IND.usdkrw.chg)}">${IND.usdkrw.now}</b> · VIX <b class="num">${IND.vix.now}</b>` : (first?`다음 ${first.v.name} · ${first.r.label}`:"")}</div></button>`; };
-  return `${nx?`<section class="card" style="margin-top:14px"><div class="small muted">다음 발표 (예시 일정)</div>
+  return `${nx?`<section class="card" style="margin-top:14px"><div class="small muted">다음 발표 (${nextTag(IND[nx.k])})</div>
       <div style="font-size:20px;font-weight:700;margin-top:2px">${IND[nx.k].name} · ${nx.r.label}</div>
       <div class="small muted">한국 시간 · <span class="pt num">${dayDiff(ymd(st.k), nx.r.ymd)}일 남았어요</span></div></section>`:""}
     <div class="agrid">
@@ -2507,9 +2514,9 @@ function viewMacroGroup(key, st){
   if(key==="map" || key.startsWith("map-")) return viewMap(key.slice(4), st);
   if(key==="cal"){
     const up = nextUpcoming().filter(x=>x.r.ymd>=ymd(st.k));
-    return `<div class="back"><button class="icon-btn" type="button" data-go="macro" aria-label="매크로 지표 홈으로">‹</button><div class="title"><b>발표 일정</b><span class="tiny muted">한국 시간 · 예시 일정</span></div></div>
+    return `<div class="back"><button class="icon-btn" type="button" data-go="macro" aria-label="매크로 지표 홈으로">‹</button><div class="title"><b>발표 일정</b><span class="tiny muted">한국 시간 · '예정'은 공식 확인 전</span></div></div>
       <section class="card">${up.map(x=>`<button class="hrow row" type="button" data-ind="${x.k}" style="grid-template-columns:120px 1fr auto">
-        <span class="dd num">${x.r.label.replace(/ (새벽|오전|오후|밤) /," <br>$1 ")}</span><span class="why"><b>${x.v.name}</b><small>${x.v.org}</small></span><span class="tiny muted num">D-${dayDiff(ymd(st.k), x.r.ymd)}</span></button>`).join("")}
+        <span class="dd num">${x.r.label.replace(/ (새벽|오전|오후|밤) /," <br>$1 ")}</span><span class="why"><b>${x.v.name}</b>${x.v.nextReal?"":` <span class="tiny muted">예정</span>`}<small>${x.v.org}</small></span><span class="tiny muted num">D-${dayDiff(ymd(st.k), x.r.ymd)}</span></button>`).join("")}
       <p class="tiny muted" style="margin-top:10px">미국 지표는 미국 현지 시간에 맞춰 발표돼서, 서머타임이 끝나면 한국 시간으로 1시간 늦어져요. 시간은 자동으로 바꿔서 보여줘요.</p></section>`;
   }
   const G = IND_GROUPS[key] || IND_GROUPS[IND_GROUP_ALIAS[key]]; if(!G) return viewMacro(st);
@@ -2659,7 +2666,7 @@ function indSheet(k, from, prev){
     <div class="bhead"><div class="tiny muted">${v.ref?`${v.ref} 기준 · `:""}${v.sub}</div><div class="big num">${fv(v.last.a)}</div>
       <div class="small muted num">${v.last.f!=null?`예상 ${fv(v.last.f)} · `:""}이전 ${fv(v.last.p)}</div><div style="margin-top:6px">${zoneChip(k)}</div></div>
     ${chart}${linkPreview(k)}
-    <div class="hnext sm"><div class="small">다음 발표 (예시 일정) · <b class="num">${r.label}</b> · <span class="pt num">${dayDiff(ymd(st.k), r.ymd)}일 남음</span></div></div>
+    <div class="hnext sm"><div class="small">다음 발표 (${nextTag(v)}) · <b class="num">${r.label}</b> · <span class="pt num">${dayDiff(ymd(st.k), r.ymd)}일 남음</span></div></div>
     ${what}${zone}
     <details class="more"><summary>더 보기 <span>· 지난 결과, 해석, 시장 반응</span></summary>
       <div class="bsection"><h4>지난 발표 결과 <span class="tiny muted" style="font-weight:400">${v.real?"실제 · 예상치는 연결 전":"샘플"}</span></h4>
