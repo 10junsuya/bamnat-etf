@@ -59,7 +59,7 @@ for nm, d in (("시세·기준가·환율 (live.json)", live), ("구성종목 (h
     for e in d.get("errors", [])[:5]:
         print(f"  - {e}")
 
-print("\n## 2. 구성종목")
+print("\n## 2. 구성종목 (비중 합계 = 상위 종목 + 25위 밖 + 아시아 상장 + 현금)")
 quotes = live.get("quotes", {})
 for code, name, g in ETFS:
     v = hold.get("etfs", {}).get(code)
@@ -67,29 +67,62 @@ for code, name, g in ETFS:
         print(f"- {code} {name}: 구성종목 없음")
         continue
     miss = [i["ticker"] for i in v["top"] if i.get("ticker") and i["ticker"] not in quotes]
-    tw = sum(i["weight"] for i in v["top"])
-    flag = "" if (v["kind"] == "index" or 97 <= tw + v.get("cash_weight", 0) <= 103) else " ⚠ 비중 합계 확인"
-    print(f"- {code} {name}: {v['src']} · {v['asof']} · {v['n_total']}종목 · 표시 비중 {tw:.1f}%{flag}" + (f" · 시세 없음 {miss}" if miss else ""))
+    tw = sum(i["weight"] for i in v["top"] if i.get("ticker"))
+    tot = tw + v.get("rest_weight", 0) + v.get("asia_weight", 0) + v.get("cash_weight", 0)
+    flag = "" if (v["kind"] != "pdf" or 97 <= tot <= 103) else " ⚠ 비중 합계 확인"
+    extra = f" (상위 {tw:.1f} · 25위 밖 {v.get('rest_weight', 0):.1f} · 아시아 {v.get('asia_weight', 0):.1f} · 현금 {v.get('cash_weight', 0):.1f})" if v["kind"] == "pdf" else ""
+    print(f"- {code} {name}: {v['src']} · {v['asof']} · {v['n_total']}종목 · 비중 합계 {tot:.1f}%{extra}{flag}" + (f" · 시세 없음 {miss}" if miss else ""))
 
-print("\n## 3. 추정 오차 (예상 기준가 ÷ 실제 기준가 − 1)")
+
+def cc_adj(G, r):
+    """앱 ccF 와 같은 커버드콜 효과: cap = 하루 상한, part = 오를 때 p 만큼만"""
+    c = G.get("cc")
+    if not c:
+        return r
+    if c["type"] == "cap":
+        return min(r, c["cap"])
+    return r * c["p"] if r > 0 else r
+
+
+def close2(t, d):
+    return close(t, d) or close(t.replace("-", "").replace(".", ""), d) or (close("BRK-B", d) if t in ("BRK.B", "BRKB") else None)
+
+
+print("\n## 3. 추정 오차 (예상 기준가 ÷ 실제 기준가 − 1) — 앱 계산식과 같은 방식")
+print("  (지수형·채권형 = 같은 지수 미국 ETF 움직임, 채권형은 환헤지라 환율 빼고 · 비중형 = 1 + Σ비중×등락률, 시세 없는 종목과 25위 밖은 받은 종목 평균, 아시아 상장·현금은 밤사이 0 · 커버드콜은 옵션 효과 반영)")
 for code, name, g in ETFS:
     rows = [r for r in live.get("kr", {}).get(code, []) if r.get("nav")]
     G, v = GROUPS[g], hold.get("etfs", {}).get(code, {})
+    kind = v.get("kind") or G["kind"]
+    proxy = v.get("proxy") or G.get("proxy")
     errs = []
     for r0, r1 in zip(rows, rows[1:]):
         u0, u1, f0, f1 = prev_us(r0["d"]), prev_us(r1["d"]), fx(r0["d"]), fx(r1["d"])
         if not (f0 and f1):
             continue
-        legs = [(G["proxy"], 1.0)] if G["kind"] == "index" else [(i["ticker"], i["weight"] / 100) for i in v.get("top", [])]
-        f, ok = v.get("cash_weight", 0) / 100 if G["kind"] == "pdf" else 0.0, True
-        for t, w in legs:
-            a, b = close(t, u1), close(t, u0)
+        if kind != "pdf":
+            a, b = close2(proxy, u1), close2(proxy, u0)
             if not (a and b):
-                ok = False
-                break
-            f += w * a / b
-        if ok:
-            errs.append((r1["d"], r0["nav"] * f * f1 / f0 / r1["nav"] - 1))
+                continue
+            r = a / b - 1
+        else:
+            got, sw, mw = 0.0, 0.0, v.get("rest_weight", 0) / 100
+            for i in v.get("top", []):
+                if not i.get("ticker"):
+                    continue
+                w = i["weight"] / 100
+                a, b = close2(i["ticker"], u1), close2(i["ticker"], u0)
+                if a and b:
+                    got += w * (a / b - 1)
+                    sw += w
+                else:
+                    mw += w
+            if sw <= 0:
+                continue
+            r = got + mw * (got / sw)
+        r = cc_adj(G, r)
+        pred = r0["nav"] * (1 + r) * (1 if G.get("hedge") else f1 / f0)
+        errs.append((r1["d"], pred / r1["nav"] - 1))
     if errs:
         avg = sum(abs(e) for _, e in errs) / len(errs)
         big = [f"{d} {e*100:+.2f}%" for d, e in errs if abs(e) > 0.01]
