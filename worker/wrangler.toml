@@ -3,3 +3,5 @@ name = "gnomon-live"
 main = "src/index.js"
 compatibility_date = "2026-11-01"
 workers_dev = true
+# 한국투자증권 서버는 9443 포트를 써요. 이 설정이 있어야 그 포트로 갈 수 있어요 (2024-09-02 이후 날짜면 기본으로 켜져 있지만 분명히 적어 둬요)
+compatibility_flags = ["allow_custom_ports"]

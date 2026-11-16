@@ -607,7 +607,8 @@ const store = {
 /* ===================== 샘플 데이터 ===================== */
 const FX = { base: 1330.3, now: 1336.3, baseTime: "11/12 15:30" };
 const FUT = { nq: NaN, es: NaN, sox: NaN, semi: NaN, div: NaN, tlt: NaN };
-const FUTM = { nq: NaN, es: NaN };  /* 미국 장이 닫힌 뒤 지수 선물 움직임 (실시간 서버 /fut) */
+const FUTM = { nq: NaN, es: NaN };
+const DAYM = {};  /* 미국 주식 주간거래(한국 낮) 움직임: 한국투자증권 키가 있을 때 실시간 서버 /usday */  /* 미국 장이 닫힌 뒤 지수 선물 움직임 (실시간 서버 /fut) */
 /* 선물 반영: [어느 선물, 민감도] — 평소 이 분야가 지수보다 얼마나 크게 움직이는지 어림값 */
 const FBETA = {sp:["es",1], spcc:["es",0.95], div:["es",0.75], divcc:["es",0.7], ndx:["nq",1], ndxact:["nq",1], ndxcc:["nq",0.95], ndxotm:["nq",1],
   sox:["nq",1.6], semi:["nq",1.6], aisemi:["nq",1.7], tech:["nq",1.15], bigtech:["nq",1.2], space:["nq",1.5], spacetech:["nq",1.5], spaceisel:["nq",1.5],
@@ -931,6 +932,7 @@ const GLOSS = {
   "iNAV":"장중에 실시간으로 추정한 NAV예요. 한국거래소가 장중에 계산해서 공개해요.",
   "추정 iNAV":"이 앱이 구성종목의 지금 가격과 환율로 직접 계산한 추정 가치예요. 한국장이 닫힌 밤에도 계산해요.",
   "괴리율":"시장에서 거래되는 가격이 iNAV(추정 가치)보다 얼마나 높거나 낮은지예요. (시장가 − iNAV) ÷ iNAV. 사고파는 힘에 따라 생겨서, 구성종목·환율로 계산하는 추정에는 들어가지 않아요.",
+  "주간거래":"미국 주식은 한국 낮 시간(대략 오전 10시~오후 6시)에도 '주간거래'로 사고팔 수 있어요. 노몬은 담긴 회사의 주간거래 가격이 마지막 미국 정규장 가격보다 얼마나 움직였는지를 더해요. 거래량이 적어 정규장 가격과 다를 수 있고, 실제 기준가(NAV)는 다음 미국 종가로 정해져요.",
   "선물 반영":"미국 장이 닫혀 있을 때도 나스닥100·S&P500 지수 선물은 거래돼요. 마지막 미국 종가 뒤 선물이 움직인 만큼을, 이 ETF가 평소 지수보다 얼마나 크게 움직이는지(민감도)를 곱해 더한 추정이에요. 실제 기준가(NAV)는 다음 미국 종가로 정해져요.",
   "기여도":"그 종목이 ETF 등락을 얼마나 움직였는지예요. 비중 × 등락률로 계산하고, 단위는 %p예요.",
   "시세 반영 비중":"ETF 자산 중 담긴 회사 시세로 하나씩 계산한 비율이에요. 나머지는 같은 지수를 따르는 미국 ETF(SPY·QQQ·SOXQ) 움직임에 맞춰 채워요.",
@@ -1125,7 +1127,11 @@ function applyLive(){
   LV.quoteT = Object.values(qs).map(q=>q.t).sort().pop() || "";
   { const usOpen = usState(parts(now(),"America/New_York")).key==="regular";
     for(const k of ["nq","es"]){ const f = (LIVE.fut||{})[k];
-      FUTM[k] = !usOpen && f && !f.error && f.prev>0 && f.price>0 && f.time && (!LV.quoteT || new Date(f.time) > new Date(LV.quoteT)) ? f.price/f.prev - 1 : NaN; } }
+      FUTM[k] = !usOpen && f && !f.error && f.prev>0 && f.price>0 && f.time && (!LV.quoteT || new Date(f.time) > new Date(LV.quoteT)) ? f.price/f.prev - 1 : NaN; }
+    // 주간거래: 마지막 정규장 가격 대비 지금 주간거래 가격 (정규장이 열려 있거나, 받은 지 10분이 넘었으면 안 써요)
+    for(const t of Object.keys(DAYM)) delete DAYM[t];
+    if(!usOpen) for(const [t,v] of Object.entries(LIVE.usDay||{})){ const base = (STOCKS[t]||[])[1];
+      if(v && okn(v.p) && okn(base) && base>0 && v.t && Date.now()-new Date(v.t) < 600e3 && (!LV.quoteT || new Date(v.t) > new Date(LV.quoteT))) DAYM[t] = v.p/base - 1; } }
   FUT.es = usMove("SPY"); FUT.nq = usMove("QQQ"); FUT.sox = usMove("SOXQ"); FUT.semi = usMove("SMH"); FUT.div = usMove("SCHD"); FUT.tlt = usMove("TLT");
   // 환율
   const [bd, br] = fxAt(kr); const fx = LIVE.fx || {};
@@ -1217,6 +1223,20 @@ async function pullLive(){
       for(const [c,v] of Object.entries(j.etfs||{})){ if(v && !v.error && okn(v.price)){ LIVE.krNow[c] = v; n++; } }
       if(n){ LV.krSrc = j.source||""; changed = true; } } }
   }catch(_){}
+  // 한국 낮(주간거래 시간)에는 담긴 미국 주식의 주간거래 시세도 받아요. 서버에 한국투자증권 키가 없으면 다시 묻지 않아요
+  try{
+    const kp = parts(now(),"Asia/Seoul"), hm = kp.h*60+kp.mi, wd = kp.wd;
+    if(!LV.kisOff && wd>=1 && wd<=5 && hm>=9*60+50 && hm<=18*60+10 && usState(parts(now(),"America/New_York")).key!=="regular"){
+      const r0 = typeof route==="function" ? route() : "";
+      const want = [...new Set([...(r0.startsWith("etf-")?[r0.slice(4)]:[]), ...((holdings||[]).map(h=>h.code)), ...stars])];
+      const syms = [...new Set(ETFS.filter(e=>want.includes(e.code)).flatMap(e=>e.h.map(x=>x[0])))].filter(t=>/^[A-Z.\-]{1,8}$/.test(t)).slice(0,40);
+      if(syms.length){ const r = await fetch(`${LIVE_URL}/usday?s=${encodeURIComponent(syms.join(","))}`, tm(12000));
+        if(r.status===503) LV.kisOff = true;
+        else if(r.ok){ const j = await r.json(); let n = 0; LIVE.usDay = {...(LIVE.usDay||{})};
+          for(const [t,v] of Object.entries(j.quotes||{})){ if(v && !v.error && okn(v.price)){ LIVE.usDay[t] = {p:v.price, t:v.time}; n++; } }
+          if(n) changed = true; } }
+    }
+  }catch(_){}
   try{ const r = await fetch(`${LIVE_URL}/fut`, tm(6000)); if(r.ok){ const j = await r.json(); if(j && j.fut){ LIVE.fut = j.fut; changed = true; } } }catch(_){}
   if(changed){ applyLive(); syncFxInd(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
 }
@@ -1230,7 +1250,12 @@ function calc(e){
   if(e.rest){ restC = e.rest.w * (okn(e.rest.r) ? e.rest.r : FUT[e.rest.fut]); usd += restC; }
   // 미국 장이 닫혀 있으면 그 뒤 지수 선물 움직임을 민감도만큼 더해요 (추정)
   const usdStock = usd;
-  let futC = 0; const fb = FBETA[e.group]; if(fb && okn(FUTM[fb[0]]) && okn(usd)){ futC = fb[1]*FUTM[fb[0]]; usd = (1+usd)*(1+futC) - 1; }
+  let futC = 0, futSrc = ""; const fb = FBETA[e.group];
+  // 담긴 회사의 주간거래 시세가 주식 비중의 절반 이상 있으면 그걸 쓰고(받은 종목 평균으로 나머지를 채움), 아니면 지수 선물 × 민감도
+  { const sw = rows.reduce((a,x)=>a+x.w,0) + (e.rest ? e.rest.w : 0), dr = rows.filter(x=>okn(DAYM[x.t]) && !FLAG.stock.has(x.t)), dw = dr.reduce((a,x)=>a+x.w,0);
+    if(okn(usd) && dw > 0 && dw >= 0.5*rows.reduce((a,x)=>a+x.w,0)){ futC = dr.reduce((a,x)=>a+x.w*DAYM[x.t],0)/dw*sw; futSrc = "day"; e._dayCov = dw/sw; }
+    else if(fb && okn(FUTM[fb[0]]) && okn(usd)){ futC = fb[1]*FUTM[fb[0]]; futSrc = "fut"; } }
+  if(futC) usd = (1+usd)*(1+futC) - 1;
   let ccC = 0; if(e.cc && okn(usd)){ const a = ccF(e, usd); ccC = a - usd; usd = a; }
   let fxR = e.hedge ? 0 : FX.now/FX.base - 1; if(Math.abs(fxR) < 1e-9) fxR = 0;
   const total = fxR===0 ? usd : (1+usd)*(1+fxR) - 1;
@@ -1240,8 +1265,8 @@ function calc(e){
   const live = e.kn && /장중/.test(e.kn.state||"");
   const market = live ? e.kn.price : est*(1+e.prem);
   const inavLive = live && okn(e.kn.inav) ? e.kn.inav : NaN;
-  if(FLAG.etf.has(e.code)) return {rows, usd:NaN, restC, ccC, futC, fxC:NaN, total:NaN, est:NaN, coverage, market:NaN, inavLive:NaN, live, fxR};
-  return {rows, usd:usdStock, restC, ccC, futC: futC ? usd-ccC-usdStock : 0, fxC, total, est, coverage, market, inavLive, live, fxR};
+  if(FLAG.etf.has(e.code)) return {rows, usd:NaN, restC, ccC, futC, futSrc, fxC:NaN, total:NaN, est:NaN, coverage, market:NaN, inavLive:NaN, live, fxR};
+  return {rows, usd:usdStock, restC, ccC, futC: futC ? usd-ccC-usdStock : 0, futSrc, fxC, total, est, coverage, market, inavLive, live, fxR};
 }
 /* 실제 추정 오차: 전날 기준가 × 미국 종가 변화 × 환율 변화로 맞힌 값과, 다음 날 실제 공시 기준가의 차이 */
 function realErrs(e){
@@ -1327,6 +1352,7 @@ function heroLabel(ks){
   return ks.key==="closed" ? "한국 장 마감 후 지금까지" : "장중 · 전일 마감 iNAV 대비";
 }
 function usNote(us, e){
+  if(us.key!=="regular"){ const c0 = calc(e); if(c0.futSrc==="day") return `미국 정규장이 닫혀 있어 마지막 정규장 가격에, 한국 낮에 열리는 주간거래 가격 움직임(${spct(c0.futC)})을 더했어요. 주간거래는 거래량이 적어 정규장과 다를 수 있어요.`; }
   const fut = e.rest ? `${e.proxy}(같은 지수 미국 ETF)` : "마지막 거래 가격";
   if(us.key==="regular") return "미국 정규장 시세를 반영했어요.";
   if(us.key==="pre"||us.key==="after"){ const fb = FBETA[e.group], fm = fb ? FUTM[fb[0]] : NaN;
@@ -1453,7 +1479,9 @@ function holdingsCard(e, c){
   if(e.rest) extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 장기 국채":`나머지 ${e.rest.n}종목`}</div><div class="t">비중 ${(e.rest.w*100).toFixed(1)}% · ${e.proxy} 움직임에 맞춤</div></div><div><div class="r2 num">기여 ${pctp(c.restC)}</div></div></div>`;
   if(e.asiaW) extra += `<div class="row total"><div><div class="n">아시아 상장 ${e.asiaN.length}종목</div><div class="t">비중 ${(e.asiaW*100).toFixed(1)}% · 한국·중국·일본 낮에 거래돼서 밤사이 변화 없음</div></div><div><div class="r2 num">기여 ${pctp(0)}</div></div></div>`;
   if(e.cc) extra += `<div class="row total"><div><div class="n">콜옵션 매도 효과</div><div class="t">${e.cc.txt}</div></div><div><div class="r2 num ${cls(c.ccC)}">기여 ${pctp(c.ccC)}</div></div></div>`;
-  if(c.futC) extra += `<div class="row total"><div><div class="n">선물 반영 (추정)</div><div class="t">미국 장이 닫힌 뒤 지수 선물 움직임 × 민감도 ${(FBETA[e.group]||[0,0])[1]}배</div></div><div><div class="r2 num ${cls(c.futC)}">기여 ${pctp(c.futC)}</div></div></div>`;
+  if(c.futC) extra += c.futSrc==="day"
+    ? `<div class="row total"><div><div class="n">주간거래 반영</div><div class="t">한국 낮에 열리는 미국 주식 주간거래 가격 · 받은 종목 비중 ${Math.round((e._dayCov||0)*100)}% (나머지는 평균으로 채움) · 한국투자증권</div></div><div><div class="r2 num ${cls(c.futC)}">기여 ${pctp(c.futC)}</div></div></div>`
+    : `<div class="row total"><div><div class="n">선물 반영 (추정)</div><div class="t">미국 장이 닫힌 뒤 지수 선물 움직임 × 민감도 ${(FBETA[e.group]||[0,0])[1]}배</div></div><div><div class="r2 num ${cls(c.futC)}">기여 ${pctp(c.futC)}</div></div></div>`;
   extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 국채 합계":"미국 주식 합계"}</div></div><div><div class="r1 num ${cls(c.usd)}">${pctp(c.usd)}</div></div></div>`;
   extra += `<div class="row total"><div><div class="n">환율 효과</div><div class="t num">${e.hedge?"환헤지(H)라 환율 영향을 거의 안 받아요":`${FX.base} → ${FX.now}`}</div></div><div><div class="r1 num ${cls(c.fxC)}">${pctp(c.fxC)}</div></div></div>`;
   return `<section class="card"><h2>구성종목 ${q("기여도")}<span class="sub">총 ${total}종목 · ${e.hsrc||"구성종목"}${e.hasof?` · ${String(e.hasof).replace(/^As of /,"")}`:""}</span></h2>
@@ -1700,7 +1728,7 @@ function viewEtf(code, st){
         <div>${e.kind==="bond"?"미국 국채":"미국 주식"}<b class="num ${cls(c.usd)}">${spct(c.usd)}</b></div>
         ${e.cc?`<div>옵션 매도 영향<b class="num ${cls(c.ccC)}">${spct(c.ccC)}</b></div>`:""}
         <div>환율 효과${e.hedge?" (환헤지)":""} ${q("환율 효과")}<b class="num ${cls(c.fxC)}">${spct(c.fxC)}</b></div>
-        ${c.futC?`<div>선물 반영 ${q("선물 반영")}<b class="num ${cls(c.futC)}">${spct(c.futC)}</b></div>`:""}
+        ${c.futC?`<div>${c.futSrc==="day"?`주간거래 반영 ${q("주간거래")}`:`선물 반영 ${q("선물 반영")}`}<b class="num ${cls(c.futC)}">${spct(c.futC)}</b></div>`:""}
       </div>
       <div class="note">${usNote(st.us, e)}</div>
     </section>

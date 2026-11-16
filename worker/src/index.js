@@ -9,6 +9,8 @@
  * GET /quote?s=NVDA,AAPL,QQQ   → 미국 시세 (최대 40개)
  * GET /fx                      → 원/달러 환율 (실시간 소스가 안 되면 일 단위 기준환율 + 표시)
  * GET /kr?c=360750,133690      → 국내 ETF 장중 가격·iNAV (한국투자증권 키가 있으면 그걸로, 없으면 FunETF 공개 화면에서, 최대 8개)
+ * GET /usday?s=RKLB,ASTS        → 미국 주식 주간거래 시세 (한국 낮 시간, 한국투자증권 키가 있어야 동작, 최대 40개)
+ * GET /kis-check               → 한국투자증권 연결 점검 (키 값은 안 보여줘요)
  * GET /fut                     → 미국 지수 선물(나스닥100·S&P500) 지난 정산가 대비 움직임 (미국 장이 닫혀 있을 때 참고)
  */
 const CACHE_SEC = 20;
@@ -79,22 +81,57 @@ async function kisToken(env) {
     return j.access_token ? { token: j.access_token } : { error: "토큰 없음" };
   });
 }
+const kstNow = () => { const d = new Date(Date.now() + 9 * 3600e3); return { date: d.toISOString().slice(0, 10), clock: d.toISOString().slice(11, 19), hm: d.getUTCHours() * 60 + d.getUTCMinutes(), wd: d.getUTCDay() }; };
+const kNum = (x) => { const v = parseFloat(String(x ?? "").replace(/,/g, "")); return Number.isFinite(v) ? v : null; };
+async function kisGet(env, path, trId, params) {
+  const t = await kisToken(env);
+  if (t.error) return t;
+  const r = await fetch(`${KIS_BASE}${path}?${new URLSearchParams(params)}`, {
+    headers: { "content-type": "application/json; charset=utf-8", authorization: `Bearer ${t.token}`, appkey: env.KIS_APP_KEY, appsecret: env.KIS_APP_SECRET, tr_id: trId, custtype: "P" },
+  });
+  if (!r.ok) return { error: `HTTP ${r.status}` };
+  const j = await r.json();
+  if (j.rt_cd !== "0") return { error: j.msg1 || j.msg_cd || "실패" };
+  return j;
+}
+/* 국내 ETF: ETF 전용 현재가(가격·NAV) → 안 되면 일반 현재가 + FunETF iNAV */
 async function kisEtf(env, code) {
   return cached("kr/" + code, CACHE_SEC, async () => {
-    const t = await kisToken(env);
-    if (t.error) return t;
-    const u = `${KIS_BASE}/uapi/domestic-stock/v1/quotations/inquire-price?FID_COND_MRKT_DIV_CODE=J&FID_INPUT_ISCD=${code}`;
-    const r = await fetch(u, {
-      headers: { authorization: `Bearer ${t.token}`, appkey: env.KIS_APP_KEY, appsecret: env.KIS_APP_SECRET, tr_id: "FHKST01010100", custtype: "P" },
-    });
-    if (!r.ok) return { error: `HTTP ${r.status}` };
-    const j = await r.json();
-    const o = j.output || {};
-    if (j.rt_cd !== "0" || !o.stck_prpr) return { error: j.msg1 || "값 없음" };
-    return { price: +o.stck_prpr, change_pct: +o.prdy_ctrt, nav: o.nav ? +o.nav : null, time: new Date().toISOString() };
+    const k = kstNow();
+    const state = k.wd === 0 || k.wd === 6 ? "휴장" : k.hm < 9 * 60 ? "장전" : k.hm < 15 * 60 + 30 ? "장중" : "장마감";
+    let j = await kisGet(env, "/uapi/etfetn/v1/quotations/inquire-price", "FHPST02400000", { fid_cond_mrkt_div_code: "J", fid_input_iscd: code });
+    let o = j && j.output;
+    if (!o || !kNum(o.stck_prpr)) {
+      j = await kisGet(env, "/uapi/domestic-stock/v1/quotations/inquire-price", "FHKST01010100", { FID_COND_MRKT_DIV_CODE: "J", FID_INPUT_ISCD: code });
+      o = j && j.output;
+    }
+    if (!o || !kNum(o.stck_prpr)) return { error: (j && j.error) || "값 없음" };
+    const price = kNum(o.stck_prpr), chg = kNum(o.prdy_vrss) ?? 0;
+    let inav = kNum(o.nav), navChg = kNum(o.nav_prdy_vrss), prevNav = kNum(o.prdy_clpr_nav) ?? (inav != null && navChg != null ? inav - navChg : null);
+    let navPct = kNum(o.nav_prdy_ctrt) ?? (inav && prevNav ? (inav / prevNav - 1) * 100 : null);
+    let src = "한국투자증권";
+    if (inav == null) { const f = await funetfKr(code).catch(() => null); if (f && !f.error) { inav = f.inav; navPct = f.inav_change_pct; prevNav = f.prev_nav; src = "한국투자증권 · iNAV FunETF"; } }
+    return { price, change: chg, change_pct: kNum(o.prdy_ctrt) ?? 0, prev_close: price - chg, inav, inav_change_pct: navPct, prev_nav: prevNav,
+      date: k.date, clock: k.clock, state, source: src, time: new Date().toISOString() };
   });
 }
-
+/* 미국 주식 (한국투자증권): 거래소 찾기 → 정규장 시세, 한국 낮 시간엔 주간거래(블루오션) 시세 */
+const US_EX = ["NAS", "NYS", "AMS"], DAY_EX = { NAS: "BAQ", NYS: "BAY", AMS: "BAA" };
+async function kisUs(env, sym, day) {
+  const exKey = "kx/" + sym;
+  let ex = await cached(exKey, 86400, async () => {
+    for (const e of US_EX) { const j = await kisGet(env, "/uapi/overseas-price/v1/quotations/price", "HHDFS00000300", { AUTH: "", EXCD: e, SYMB: sym }); if (j && j.output && kNum(j.output.last)) return { ex: e }; }
+    return { error: "거래소를 못 찾았어요" };
+  });
+  if (ex.error) return ex;
+  const code = day ? DAY_EX[ex.ex] : ex.ex;
+  return cached(`ku/${code}/${sym}`, CACHE_SEC, async () => {
+    const j = await kisGet(env, "/uapi/overseas-price/v1/quotations/price", "HHDFS00000300", { AUTH: "", EXCD: code, SYMB: sym });
+    const o = j && j.output;
+    if (!o || !kNum(o.last)) return { error: (j && j.error) || "값 없음" };
+    return { price: kNum(o.last), prev: kNum(o.base), change_pct: kNum(o.rate), volume: kNum(o.tvol), ex: code, time: new Date().toISOString() };
+  });
+}
 /* ---------- 야후 파이낸스 (환율·지수 선물) ---------- */
 async function yahoo(sym) {
   return cached("y/" + sym, 60, async () => {
@@ -174,8 +211,27 @@ export default {
         const list = [...new Set((url.searchParams.get("c") || "").toUpperCase().split(",").map((x) => x.trim()).filter((x) => KRC.test(x)))].slice(0, kis ? 20 : 8);
         if (!list.length) return json({ error: "종목코드를 c=360750 처럼 적어 주세요" }, 400, 0);
         const out = {};
-        for (const c of list) out[c] = await (kis ? kisEtf(env, c) : funetfKr(c)).catch((e) => ({ error: String(e).slice(0, 80) }));
+        for (const c of list) out[c] = await (kis ? kisEtf(env, c).then((v) => (v && !v.error ? v : funetfKr(c))) : funetfKr(c)).catch((e) => ({ error: String(e).slice(0, 80) }));
         return json({ etfs: out, source: kis ? "한국투자증권" : "FunETF", time: new Date().toISOString() }, 200, 30);
+      }
+      if (url.pathname === "/usday" || url.pathname === "/usreg") {
+        if (!(env.KIS_APP_KEY && env.KIS_APP_SECRET)) return json({ error: "한국투자증권 키가 아직 없어요" }, 503, 0);
+        const list = [...new Set((url.searchParams.get("s") || "").toUpperCase().split(",").map((x) => x.trim()).filter((x) => SYM.test(x)))].slice(0, 40);
+        if (!list.length) return json({ error: "종목을 s=RKLB,ASTS 처럼 적어 주세요" }, 400, 0);
+        const out = {}, day = url.pathname === "/usday";
+        for (let i = 0; i < list.length; i += 5) {  // 초당 호출 한도를 넘지 않게 5개씩
+          await Promise.all(list.slice(i, i + 5).map(async (s) => { out[s] = await kisUs(env, s, day).catch((e) => ({ error: String(e).slice(0, 80) })); }));
+        }
+        return json({ quotes: out, session: day ? "주간거래" : "정규장", source: "한국투자증권", time: new Date().toISOString() }, 200, 30);
+      }
+      if (url.pathname === "/kis-check") {
+        if (!(env.KIS_APP_KEY && env.KIS_APP_SECRET)) return json({ ok: false, error: "한국투자증권 키가 아직 없어요" }, 200, 0);
+        const tok = await kisToken(env);
+        const etf = tok.error ? tok : await kisGet(env, "/uapi/etfetn/v1/quotations/inquire-price", "FHPST02400000", { fid_cond_mrkt_div_code: "J", fid_input_iscd: "0183J0" });
+        const us = tok.error ? tok : await kisGet(env, "/uapi/overseas-price/v1/quotations/price", "HHDFS00000300", { AUTH: "", EXCD: "NAS", SYMB: "RKLB" });
+        const usd = tok.error ? tok : await kisGet(env, "/uapi/overseas-price/v1/quotations/price", "HHDFS00000300", { AUTH: "", EXCD: "BAQ", SYMB: "RKLB" });
+        const pick = (j) => (j && j.output ? j.output : j);
+        return json({ ok: !tok.error, token: tok.error || "ok", etf: pick(etf), us: pick(us), us_day: pick(usd) }, 200, 0);
       }
       if (url.pathname === "/fut") {
         const out = {};
