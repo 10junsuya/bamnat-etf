@@ -701,6 +701,7 @@ const ETFS = (ETF_DATA.etfs||[]).map(([code,name,group],i)=>({code, name, group,
 /* 일정은 회사 공식 발표(SEC 공시·IR)로 확인한 것만 넣어요 — 날짜는 한국 시간 */
 /* 일정·실적 카드: data/events.json 이 원본이에요. scripts/embed_data.py 가 아래 JSON 블록(d-events)에 넣어요. */
 const EVENTS = readData("d-events");
+const DEV = (()=>{ try{ return new URLSearchParams(location.search).has("dev"); }catch(e){ return false; } })();
 
 const GLOSS = {
   "EPS":"주당순이익이에요. 회사가 번 순이익을 주식 수로 나눈 값으로, 주식 1주가 이익을 얼마나 냈는지 보여줘요.",
@@ -2346,14 +2347,18 @@ const LL_ETF = {
   risk:"불안이 길어지면, 작은 성장 기업이 많은 ETF가 더 크게 흔들리는 경우가 많았어요."
 };
 function myEtfList(){ const pos = myPositions(); return pos.length ? {by:"내 계좌", list:pos.map(p=>p.e)} : {by:"관심 ETF", list:ETFS.filter(e=>stars.includes(e.code))}; }
-function etfReact(v, e){ const beta = ({ndx:1.3, ndxact:1.3, ndxcc:1.2, ndxotm:1.1, spcc:0.95, divcc:0.8, sox:1.3, semi:1.3, aisemi:1.5, tech:1.3, bigtech:1.3, space:1.6, spacetech:1.6, spaceisel:1.7, spaceakros:1.5, div:0.8, tesla:1.6, optic:1.8, aipower:1.6, quantum:2.0, humanoid:1.4})[e.group] || 1; return rv(v.react,0)/100*beta + (e.hedge || !okn(rv(v.react,3)) ? 0 : v.react[3]/(okn(FX.now)?FX.now:1336)); }
+/* 지표 발표 뒤 30분 → 내 ETF 추정 (2026-11-16 대표 승인: 나스닥 계열은 나스닥100 선물 실측값을 그대로, 나머지는 S&P500 선물 × 업종 배수 가정) + 환노출이면 원/달러 변화 */
+const NQ_REL = {ndx:1, ndxact:1, ndxcc:0.92, ndxotm:0.85};  // 커버드콜은 오를 때 덜 따라가는 기존 비율(1.2·1.1 ÷ 1.3) 유지
+function etfReact(v, e){ const beta = ({ndx:1.3, ndxact:1.3, ndxcc:1.2, ndxotm:1.1, spcc:0.95, divcc:0.8, sox:1.3, semi:1.3, aisemi:1.5, tech:1.3, bigtech:1.3, space:1.6, spacetech:1.6, spaceisel:1.7, spaceakros:1.5, div:0.8, tesla:1.6, optic:1.8, aipower:1.6, quantum:2.0, humanoid:1.4})[e.group] || 1;
+  const nq = NQ_REL[e.group] && okn(rv(v.react,4)) ? rv(v.react,4)/100*NQ_REL[e.group] : NaN;
+  return (okn(nq) ? nq : rv(v.react,0)/100*beta) + (e.hedge || !okn(rv(v.react,3)) ? 0 : v.react[3]/(okn(FX.now)?FX.now:1336)); }
 function etfLinkRow(k, h){
   const v = IND[k], x = IND_X[k] || {}, me = myEtfList();
   if(!me.list.length) return "";
   let body = "";
   if(h==="ev"){
     if(!v.react) return "";
-    body = `<div class="react">${me.list.filter(e=>e.kind!=="bond").map(e=>{ const ch = etfReact(v,e); return `<div>${e.name}</div><div class="num ${cls(ch)}">${spct(ch)}</div>`; }).join("")}</div><p class="tiny muted" style="margin-top:6px">지난 발표 후 30분, 추정 가치 기준이에요.</p>`;
+    body = `<div class="react">${me.list.filter(e=>e.kind!=="bond").map(e=>{ const ch = etfReact(v,e); return `<div>${e.name}</div><div class="num ${cls(ch)}">${spct(ch)}</div>`; }).join("")}</div><p class="tiny muted" style="margin-top:6px">지난 발표 후 30분 추정 가치예요. 나스닥 계열은 나스닥100 선물 실제 반응, 나머지는 S&P500 선물 반응에 업종별 배수(가정)를 곱한 계산값이에요.</p>`;
   } else if(h==="co"){
     const S = SENS[x.sens]; if(!S) return "";
     body = `<div class="react">${me.list.map(e=>{ const [lv, why] = (S.map[e.group]||"보통").split(" · "); return `<div>${e.name}${why?`<div class="tiny muted">${why}</div>`:""}</div><div>${lv}</div>`; }).join("")}</div><p class="tiny muted" style="margin-top:6px">기준: ${S.title}</p>`;
@@ -3679,7 +3684,7 @@ function render(){
   document.getElementById("backMain").hidden = (r==="main");
   document.getElementById("clocks").hidden = (r==="main");
   document.getElementById("protoBanner").hidden = (r==="main");
-  document.getElementById("previewBox").hidden = (r==="main");
+  document.getElementById("previewBox").hidden = (r==="main") || !DEV;  // 개발용 시간 미리보기: 주소 끝에 ?dev 를 붙일 때만 (2026-11-16 대표 결정)
   document.getElementById("discLine").hidden = (r==="main");
   document.querySelector(".app > .top").classList.toggle("bare", r==="main");
   document.getElementById("brandTitle").innerHTML = r==="main" ? "" : r==="check" ? "자동 <span>점검</span>" : (inA ? "매크로 <span>지표</span>" : "밤낮 <span>ETF</span>");
