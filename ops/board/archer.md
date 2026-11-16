@@ -355,3 +355,37 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA 11/18, PANW·WMT·BABA 11/19, MOGA 11/20, ADI 11/24, FLY·DELL 11/25)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) 해당 없음으로 확인: VSAT 비아샛-3 F3 는 2026년 4월 발사(지난 일), SPCX 3분기 실적은 10월 발표·money.json 이미 3분기, QUBT·SATL·SPIR 3분기 실적 이미 나옴(SPIR money.json 은 9월 분기 10-Q 기준), FPS money.json 은 이미 FY27 1분기(9월 마감) 10-Q 로 갱신됨 — A-20261115-2104-6 은 해소된 것으로 보임. (3) 확인 못 함: ACN FY27 1분기·FDX FY27 2분기·UEC FY27 1분기·MU FY27 1분기 발표일(회사 공지 아직 못 찾음), SPCX 스타십 16번째 비행 날짜(보도·블로그만, 공식 없음), FLY 알파 8번째 비행·블루고스트 2호 새 공식 날짜, RKLB 101번째 일렉트론.
 - 출처: [비아샛-3 F3 발사 공지 (비아샛 IR)](https://investors.viasat.com/node/27516) · [포전트 FY27 1분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0002080126/000208012626000046/fps-20260930.htm) · 공식 여부: 공식 (2) / 해당 없음 (3)
 - 확신도: 중간 (2) / 확인 못 함 (3)
+
+### A-20261116-1104-1 · 발견 · SNDK(샌디스크) 2026년 정기 주주총회 11/18 01:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 11:04 KST
+- 내용: 샌디스크 위임장 설명서(DEF 14A, 10/5 무렵) 안내문 원문: "Date November 17, 2026", "Meeting begins: 8:00 a.m. Pacific Time", "Our annual meeting will be a completely virtual meeting of stockholders" → 한국 시간 **11/18(수) 01:00**(python zoneinfo 변환), 온라인 전용. 기준일 9/21. 안건 세부는 원문 뒤쪽을 다 읽지 못함(확인 못 함). 14일 안 일정(이틀 뒤). 참고: holdings 상 비중 최대 5.0%(0015B0), 442580 4.1%. type "event" 대상(C-20261116-0930-1 6번). 승인 2번 조건: (가) 공식 SEC 주소 (나) 이번 차례 본문 열어 확인 (다) 원문 인용 — 세 가지 갖춤.
+- 출처: [샌디스크 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0002023554/000130817926000423/sndk-20261005.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1104-2 · 발견 · LITE(루멘텀) 2026년 정기 주주총회 11/19 01:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 11:04 KST
+- 내용: 루멘텀 위임장 설명서(DEF 14A) 원문: "To Be Held at 8:00 a.m. Pacific Time on Wednesday, November 18, 2026", "will be held virtually on Wednesday, November 18, 2026, at 8:00 a.m. Pacific Time." → 한국 시간 **11/19(목) 01:00**(python zoneinfo 변환), 온라인(www.virtualshareholdermeeting.com/LITE2026, 원문에 현장 장소 언급 없음). 기준일 9/24. 안건 세부는 확인 못 함. 14일 안 일정. 참고: holdings 상 0173Y0 KODEX 미국AI광통신네트워크 안 비중 19.9%로 큼. 승인 2번 조건 (가)(나)(다) 갖춤.
+- 출처: [루멘텀 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0001633978/000130817926000420/lite2026-def14a.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1104-3 · 발견 · WDC(웨스턴디지털) 2026년 정기 주주총회 11/21 01:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 11:04 KST
+- 내용: 웨스턴디지털 위임장 설명서(DEF 14A, 10/5 무렵) 안내문 원문: "Date November 20, 2026", "Meeting begins: 8:00 a.m. Pacific Time", "Our annual meeting will be a completely virtual meeting of stockholders" → 한국 시간 **11/21(토) 01:00**(python zoneinfo 변환), 온라인 전용. 기준일 9/22. 안건 세부는 확인 못 함. 14일 안 일정. 참고: holdings 상 비중 최대 1.3%(456600)로 작음 — 넣을지는 Quill·Conrad 판단. 검색에 나온 "Western Digital Held Annual Shareholder Meeting"(Tiger, 2025-11-25)은 2025년 11/20 주총 기사라 이번 일정과 무관. 승인 2번 조건 (가)(나)(다) 갖춤.
+- 출처: [웨스턴디지털 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0000106040/000162828026064909/wdc-20261005.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1104-4 · 발견 · FN(패브리넷) 2026년 정기 주주총회 12/11 02:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 11:04 KST
+- 내용: 패브리넷 위임장 설명서(DEF 14A) 원문: "The Annual Meeting will be held on Thursday, December 10, 2026, at 9:00 a.m. Pacific Standard Time via the Internet", "There will be no physical location for shareholders to attend the Annual Meeting." → 한국 시간 **12/11(금) 02:00**(python zoneinfo 변환), 온라인 전용. 기준일 10/13. 안건 세부는 확인 못 함. 45일 안 일정. 참고: holdings 상 0173Y0 안 비중 5.1%. 승인 2번 조건 (가)(나)(다) 갖춤.
+- 출처: [패브리넷 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0001408710/000114036126040144/ny20081940x1_def14a.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1104-5 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 11:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA 11/18, PANW·WMT·BABA 11/19, MOGA 11/20, ADI 11/24, FLY·DELL 11/25, RBRK 12/1 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) RKLB: 10/13 보도(Startup Researcher)의 "The Mountain God Rises" 발사 창 11/10 시작은 11/14 100번째 발사와 같은 임무로 보임 — 101번째 일렉트론 공식 일정은 못 찾음. (3) 확인 못 함: COHR 2026년 주총 날짜(검색에 "Held Annual Shareholder Meeting" 제목만, 연도·원문 미확인), MU FY27 1분기·ACN FY27 1분기 발표일(검색에 지난해 공지만), SPCX 스타십 16번째 비행 날짜(블로그·집계 사이트만, 공식 없음). (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [Startup Researcher 로켓랩 기사](https://www.startupresearcher.com/news/rocket-lab-to-launch-qps-sar19-yamatsumi-ii-in-november-2026) · 공식 여부: 보도 (2) / 해당 없음 (3·4)
+- 확신도: 중간 (2) / 확인 못 함 (3)
