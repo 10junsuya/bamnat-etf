@@ -231,6 +231,28 @@ def check_safety(name, obj, path="", seen=None):
             check_safety(name, v, f"{path}[{i}]", seen)
 
 
+HANGUL = re.compile(r"[가-힣]")
+
+
+def check_directives(data):
+    """대표 지시 모음(ops/DIRECTIVES.md) 중 기계로 잡을 수 있는 것."""
+    comp = data.get("d-companies") or {}
+    # 지시 2: 영어 기사 제목을 그대로 넣지 않아요 — 소식 한 줄은 한국어여야 해요
+    items = [(f"companies.news.{t}", x) for t, xs in (comp.get("news") or {}).items() for x in xs] + \
+            [("companies.market", x) for x in (comp.get("market") or [])]
+    for w, x in items:
+        t = str(x.get("t", ""))
+        letters = [c for c in t if c.isalpha()]
+        if letters and sum(1 for c in letters if HANGUL.match(c)) / len(letters) < 0.4:
+            err(w, f"소식이 영어로 보여요(지시 모음 2번: 한국어 한 줄로 새로 써요): {t[:60]!r}")
+    # 지시 12: 가짜 자리 채움 문구를 남기지 않아요
+    app = APP.read_text(encoding="utf-8")
+    code = re.sub(r'<script type="application/json" id="[^"]+">.*?</script>', "", app, flags=re.S)
+    for bad in ("[예시]", "요약이 여기에 들어가요", "lorem ipsum"):
+        if bad in code:
+            err("index.html", f"자리 채움 문구가 남아 있어요(지시 모음 12번): {bad!r}")
+
+
 def art_frame_counts():
     s = APP.read_text(encoding="utf-8")
     i = s.find("const MISSION_ART = ")
@@ -270,6 +292,7 @@ def main():
         check_companies(data["d-companies"], known)
         for id_, f in FILES.items():
             check_safety(f, data[id_])
+        check_directives(data)
     if errors:
         print("데이터 검사 실패:")
         print("\n".join(" - " + e for e in errors))
