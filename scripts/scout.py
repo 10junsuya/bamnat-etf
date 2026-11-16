@@ -116,7 +116,7 @@ def macro_feeds(stat):
     out = []
     for name, url in MACRO_FEEDS:
         try:
-            got = [{"t": "", "title": x["title"], "url": x["link"], "pub": iso(x["pubDate"]),
+            got = [{"t": "", "title": re.sub(r"^FinancialJuice:\s*", "", x["title"]), "url": x["link"], "pub": iso(x["pubDate"]),
                     "src": (x.get("source") or name) if name == "Reuters" else name, "kind": "market"}
                    for x in rss_items(get(url)) if x["title"] and x["link"]]
             stat[name] = stat.get(name, 0) + len(got) if isinstance(stat.get(name, 0), int) else len(got)
