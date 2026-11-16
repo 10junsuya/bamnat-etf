@@ -1055,7 +1055,10 @@ async function pullLiveOnce(){
       const want = [...new Set([...(r0.startsWith("etf-")?[r0.slice(4)]:[]), ...((holdings||[]).map(h=>h.code)), ...stars])];
       const prox = Object.values(ETF_DATA.groups).map(g=>g.proxy).filter(Boolean);
       const hold = ETFS.filter(e=>want.includes(e.code)).flatMap(e=>HOLDS(e).map(x=>x[0]));
-      const syms = [...new Set([...prox, ...hold])].filter(t=>/^[A-Z.\-]{1,8}$/.test(t)).slice(0,20);
+      // 지금 보는 ETF 종목 → 지수 ETF → 보유·별표 종목 순서. 그중 아직 못 받았거나 3분 넘은 것부터 20개씩 (나머지는 다음 1분에)
+      const cand = [...new Set([...hold, ...prox])].filter(t=>/^[A-Z.\-]{1,8}$/.test(t));
+      const old = t => { const v = (LIVE.kus||{})[t]; return !v || v.s!==sess || Date.now()-new Date(v.t) > 180e3; };
+      const syms = [...cand.filter(old), ...cand.filter(t=>!old(t))].slice(0,20);
       // 서버는 한 번에 10개까지 받아요. 지수 ETF·비중 큰 종목부터 차례로 물어요
       for(let i=0;i<syms.length && !LV.kisOff;i+=10){ const r = await fetch(`${LIVE_URL}/${sess==="day"?"usday":"usreg"}?s=${encodeURIComponent(syms.slice(i,i+10).join(","))}`, tm(30000)).catch(()=>null);
         if(!r) continue;
@@ -1460,6 +1463,8 @@ function holdingsCard(e, c){
         <div class="wbar" style="width:${(x.w/maxW*100).toFixed(0)}%"></div></div></div>
       <div>${x.pending
         ? `<div class="r1 small muted">시세 확인 중</div><div class="r2 num">${e.kind==="pdf" && okn(x.c) ? `기여 약 ${pctp(x.c)}` : "나머지 줄에 포함"}</div>`
+        : LV.extSess && !x.ext && !FLAG.stock.has(x.t)
+        ? `<div class="r1 small muted">${extName()} 확인 중</div><div class="r2 num">받은 종목 평균으로 채움</div>`
         : `<div class="r1 num ${cls(x.r)}">${spct(x.r)}</div><div class="r2 num">기여 ${pctp(x.c)}</div>`}</div>
     </button>`;
   let extra = "";
