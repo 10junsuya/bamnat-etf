@@ -911,7 +911,7 @@ function applyLive(){
   // 종목 시세: 실제 값이 있는 것만, 없으면 '확인 중'
   const QK = {}; for(const k of Object.keys(qs)) QK[TK(k)] = k;  // 'BRK-B'·'MOG-A'처럼 기호가 들어간 티커도 찾게
   const usNow = usState(parts(now(),"America/New_York")).key, kus = LIVE.kus || {};
-  const fresh = v => v && v.t && Date.now()-new Date(v.t) < 900e3;  // 15분 안에 받은 값만 (서버가 미리 받아 둔 값 포함)
+  const fresh = v => v && v.t && Date.now()-new Date(v.t) < 1200e3;  // 20분 안에 받은 값만 (서버가 2분마다 비중 큰 순으로 돌며 미리 받아 둔 값 포함)
   LV.kisN = 0; LV.xN = 0; LV.xBad = 0;
   for(const t of Object.keys(STOCKS)){ const k = qs[t] ? t : QK[t]; const q = k ? qs[k] : null; let r = q ? usMove(k) : NaN, p = q ? q.p : NaN;
     // 정규장: 한국투자증권 가격이 있으면 그걸 쓰고, Finnhub(예비)와 2% 넘게 다르면 '대조 차이'로 세요

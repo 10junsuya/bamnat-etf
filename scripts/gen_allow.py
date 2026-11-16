@@ -51,7 +51,7 @@ def main():
     if len(us) < 20 or len(kr) < 5:
         sys.exit(f"종목 목록이 너무 적어요 (미국 {len(us)}, 국내 {len(kr)}). 데이터 파일을 확인하세요.")
     proxies = sorted({str(g.get("proxy")).upper() for g in etfs.get("groups", {}).values() if g.get("proxy")})
-    top = [t for t, _ in sorted(prio.items(), key=lambda kv: -kv[1]) if t in us and t not in proxies][:70]
+    top = [t for t, _ in sorted(prio.items(), key=lambda kv: -kv[1]) if t in us and t not in proxies]  # 앱 화면에 나오는 종목 전부 (비중 큰 순)
     prio_list = [t for t in proxies if t in us] + top
     out = ROOT / "worker" / "src" / "allow.js"
     out.write_text(
