@@ -2643,10 +2643,10 @@ function nextUpcoming(){
 }
 
 /* 아침 브리핑에 넣을 어젯밤 지표 (실제 발표 시각 기준) */
-/* 지난 40시간 안에 발표된 미국 지표 (발표 시각 = data/macro.json 의 rel) */
+/* 지난 한국 장 마감(15:30) 뒤 발표된 미국 지표 (발표 시각 = data/macro.json 의 rel) — 월요일엔 금요일 밤 발표까지 */
 function lastNight(){
-  const t = now().getTime();
-  return Object.keys(IND).filter(k=>IND[k].rel && t - new Date(IND[k].rel).getTime() >= 0 && t - new Date(IND[k].rel).getTime() < 40*3600e3)
+  const t = now().getTime(), from = new Date(`${LV.kr||ymd(parts(now(),"Asia/Seoul"))}T15:30:00+09:00`).getTime();
+  return Object.keys(IND).filter(k=>IND[k].rel && new Date(IND[k].rel).getTime() > from && new Date(IND[k].rel).getTime() <= t)
     .sort((a,b)=>new Date(IND[b].rel)-new Date(IND[a].rel));
 }
 const rv = (r,i) => r && okn(r[i]) ? r[i] : NaN;
@@ -2665,16 +2665,16 @@ function nightFlowHtml(x){
     ...(okn(rv(r,3)) ? [step("원/달러 환율", `${sg(r[3])}원`, cls(r[3]))] : []),
     ...me.list.filter(e=>e.kind!=="bond").map(e=>{ const ch = etfReact(v,e); return step(`${e.name} 추정`, spct(ch), cls(ch)); })
   ];
-  return `<div class="flow"><div class="small" style="font-weight:600;margin-bottom:6px">어젯밤 이렇게 이어졌어요</div>${rows.join('<div class="ar">↓</div>')}
+  return `<div class="flow"><div class="small" style="font-weight:600;margin-bottom:6px">발표 뒤 이렇게 이어졌어요</div>${rows.join('<div class="ar">↓</div>')}
     <p class="tiny muted" style="margin-top:6px">${v.name} 발표(${relTxt(v)}) 후 30분 · 실제 가격 기준, ETF 줄은 그 움직임으로 계산한 추정${me.list.length?"":" · 내 ETF를 등록하면 마지막 줄에 나와요"}</p></div>`;
 }
 function macroNightHtml(st, from, compact){
   const items = lastNight().map(k=>({k, v:IND[k]}));
-  if(!items.length) return compact ? "" : `<div class="small muted" style="margin-top:16px">어젯밤에는 발표된 미국 주요 지표가 없어요.</div>`;
+  if(!items.length) return compact ? "" : `<div class="small muted" style="margin-top:16px">지난 한국 장 마감 뒤에 발표된 미국 주요 지표는 없어요.</div>`;
   const nx = nextUpcoming().filter(x=>x.r.ymd>=ymd(st.k))[0];
-  if(compact) return `<div style="margin-top:10px"><div class="tiny muted">어젯밤 발표된 지표</div><div class="chips" style="margin-top:4px">${items.map(x=>`<button class="chip" type="button" data-ind="${x.k}" style="border:0;cursor:pointer;font-size:13px">${x.v.name} <b class="num">${fmtVal(x.v,x.v.last.a)}</b> (예상 ${fmtVal(x.v,x.v.last.f)})</button>`).join("")}</div></div>`;
+  if(compact) return `<div style="margin-top:10px"><div class="tiny muted">한국 장 마감 뒤 발표된 지표</div><div class="chips" style="margin-top:4px">${items.map(x=>`<button class="chip" type="button" data-ind="${x.k}" style="border:0;cursor:pointer;font-size:13px">${x.v.name} <b class="num">${fmtVal(x.v,x.v.last.a)}</b> (예상 ${fmtVal(x.v,x.v.last.f)})</button>`).join("")}</div></div>`;
   return `<div style="margin-top:16px">
-    <div class="small muted" style="margin-bottom:2px">어젯밤 발표된 지표</div>
+    <div class="small muted" style="margin-bottom:2px">한국 장 마감 뒤 발표된 지표</div>
     ${items.map(x=>{ const z = IND_X[x.k] ? IND_X[x.k].zones[zoneOf(IND_X[x.k], x.v.last.a)][1] : "";
       return `<button class="irow" type="button" data-ind="${x.k}"${from?` data-from="${from}"`:""} style="margin-top:8px">
       <div class="top"><span class="nm">${x.v.name}</span><span class="val num">${fmtVal(x.v,x.v.last.a)}</span></div>
@@ -3150,7 +3150,7 @@ async function drawShare(code){
   }
   y = Math.max(y+30, H-330);
   g.fillStyle="rgba(255,255,255,.06)"; g.fillRect(60, y-60, W-120, 170);
-  g.fillStyle=MUT; g.font=`500 30px ${F}`; g.fillText("어젯밤 발표된 지표", 90, y-12);
+  g.fillStyle=MUT; g.font=`500 30px ${F}`; g.fillText("한국 장 마감 뒤 발표된 지표", 90, y-12);
   g.fillStyle=INK; g.font=`600 36px ${F}`;
   g.fillText(lastNight().map(kk=>`${IND[kk].name} ${fmtVal(IND[kk],IND[kk].last.a)} (예상 ${fmtVal(IND[kk],IND[kk].last.f)})`).join("   "), 90, y+44);
   g.fillStyle=MUT; g.font=`400 26px ${F}`;
