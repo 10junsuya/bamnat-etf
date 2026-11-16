@@ -414,3 +414,16 @@
 - 내용: (1) NVDA: 회사 보도자료(10/28) "conference call on Tuesday, November 17, at 2 p.m. PT", 실적 공개 "approximately 1:20 p.m. PT" → 한국 시간 11/18 06:20 공개·07:00 콜 — 앱 06:20 과 일치. CEO 교체 뒤 날짜를 바꾼 새 공지는 IR 뉴스 목록이 안 열려 확인 못 함. (2) 해당 없음으로 확인: GEV "12/9 투자자 행사" 보도자료는 2025년 행사(2025-11-18 공지) — 2026년 행사 공지 못 찾음. SMNEY money.json 은 이미 FY26 4분기(7~9월). RKLB 뉴트론 첫 발사는 2027년으로 연기 보도(Via Satellite 10/15) — events.json 에 없는 일정이라 고칠 것 없음. (3) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR 11/19, MOGA 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (4) 확인 못 함: MU FY27 1분기·ACN FY27 1분기·FDX FY27 2분기·UEC FY27 1분기 발표일(검색에 지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(블로그만). (5) money.json 기간: 새로 지난 분기가 된 회사 없음.
 - 출처: [엔비디아 실적 콜 공지](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx) · [GE 버노바 2025 투자자 행사 공지](https://www.gevernova.com/news/press-releases/ge-vernova-host-investor-update-event-december-9) · [Via Satellite 뉴트론 연기](https://www.satellitetoday.com/launch/2026/10/15/rocket-labs-neutron-debut-now-delayed-to-2027/) · 공식 여부: 공식 (1·2 GEV) / 보도 (2 RKLB)
 - 확신도: 높음 (1 시각) / 확인 못 함 (4)
+
+### A-20261116-1504-1 · 발견 · KEYS(키사이트) 실적 콜 11/20 06:30 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 15:04 KST
+- 내용: 키사이트 IR "Upcoming Events" 페이지 원문: "November 19, 2026 01:30 PM PT" · "Q4 FY26 Keysight Technologies Inc. Earnings Conference Call" → 한국 시간 **11/20(금) 06:30 콜**(python zoneinfo 변환). 실적 자료 공개는 IR 페이지에 시각 없음, 보도(rallies.ai 10/29)는 "November 19, 2026, after the market close"(한국 시간 11/20 새벽). 14일 안 일정. 참고: money.json KEYS note 의 "4분기 실적은 11월 말 발표예요"는 11/19(미국)·11/20(한국)과 어긋남 — 발표 뒤 새 분기로 바뀔 대상이라 함께 보면 좋음. holdings 상 비중 1.8%(483340)로 작음 — 넣을지는 Quill·Conrad 판단. 승인 2번 조건: (가) 회사 IR 주소 (나) 이번 차례 본문 열어 확인 (다) 원문 인용 — 세 가지 갖춤(콜 시각 기준).
+- 출처: [키사이트 IR 일정 페이지 (이번 차례 본문 열어 확인)](https://investor.keysight.com/investor-news-and-events/upcoming-events/default.aspx) · [rallies.ai 일정 기사 (10/29)](https://rallies.ai/news/keysight-technologies-publishes-update-to-financial-calendar-b09e4c83a5835efb) · 공식 여부: 공식(콜 일시) / 보도(자료 공개 "장 마감 후")
+- 확신도: 높음 (콜 일시) / 중간 (자료 공개 시각)
+- 요청: Quill 확인 바람 (Tally: 실적 일정 type "earn" 담당)
+
+### A-20261116-1504-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 15:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR 11/19, MOGA 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) 해당 없음으로 확인: VRT 2026년 투자자 행사는 5/19~20(지난 일). (3) 확인 못 함: ORCL FY27 2분기 발표일(비중 최대 20.7%, 0142D0 — 검색에 지난해 12/2 공지만, 올해 공지 아직 못 찾음), FDX FY27 2분기·ACN FY27 1분기·MU FY27 1분기 발표일(지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(블로그·집계 사이트만), RKLB 101번째 일렉트론. (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [버티브 2026 투자자 행사 페이지](https://investors.vertiv.com/events-presentations/2026-investor-conference/default.aspx) · [오라클 지난해 발표일 공지(2025)](https://investor.oracle.com/investor-news/news-details/2025/Oracle-Sets-the-Date-for-its-Second-Quarter-Fiscal-Year-2026-Earnings-Announcement/default.aspx) · 공식 여부: 공식 (2) / 해당 없음 (3·4)
+- 확신도: 높음 (2) / 확인 못 함 (3)
