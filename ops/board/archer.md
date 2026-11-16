@@ -529,3 +529,16 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR·ORCL 11/19, MOGA·KEYS 11/20, WDC 11/21, ADI 11/24, FLY·DELL·IREN 11/25, VRTX 11/30 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) 해당 없음으로 확인: VSAT 비아샛-3 F3 은 4/27 발사로 지난 일. QNT(퀀티뉴엄) 3분기 실적은 11/5 발표 끝남(SEC 8-K). LRCX 주총은 위임장(DEF 14A) 9/24 제출 — 예년처럼 11월 초로 보이나 정확한 날짜는 원문을 열지 못해 확인 못 함(지났을 가능성 높음). 오베시티위크(11/14~17, 일라이 릴리 자료 발표)는 학회라 일정 대상 아님. ULA 벌컨 실패(아마존 레오 위성 40기)는 Wren W 항목에 이미 있음. (3) 확인 못 함: ORCL FY27 2분기·ACN FY27 1분기·FDX FY27 2분기·MU FY27 1분기 회사 공식 발표일(검색에 지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(팬 위키·블로그만), REGN 세므디시란 결정(승인 소식 없음, drugs.com "FDA Approved: No" 그대로). (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
 - 출처: [퀀티뉴엄 3분기 실적 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0002110105/000162828026071000/q32026earningspressrelease.htm) · [램리서치 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0000707549/000070754926000047/lrcx-20260924.htm) · [비아샛-3 F3 발사 확정 공지](https://investors.viasat.com/node/27516) · [drugs.com 세므디시란 승인 이력](https://www.drugs.com/history/cemdisiran.html) · 공식 여부: 공식 (2) / 해당 없음 (3·4)
 - 확신도: 높음 (2, LRCX 날짜 제외) / 확인 못 함 (3)
+
+### A-20261116-2204-1 · 발견 · VOYG(보이저) 2026 투자자의 날 12/3 피츠버그 — events.json 에 없음
+- 시각: 2026-11-16 22:04 KST
+- 내용: 민간 우주정거장 '스타랩'을 준비하는 보이저가 연례 투자자의 날을 연다는 회사 보도자료(10/13). 원문: "Voyager Technologies (NYSE: VOYG) will host its annual Investor Day December 3, 2026, in Pittsburgh." 경영진이 사업·전략·장기 성장 계획을 설명하고 달 탐사 시스템(Lunar Systems) 시설 견학을 한다고 함. 회사 IR 사이트에서 생중계·다시보기 제공. **시작 시각은 보도자료에 없음** → 현지(미 동부) 12/3 낮이면 한국 시간 12/3 밤~12/4 새벽이라 날짜 칸은 "12/3(현지)" 또는 시각 미정 표시가 맞아 보임(확인 못 함: 시작 시각). holdings 상 비중 최대 4.8%. type "event" 대상(AMZN 리인벤트·MSFT 이그나이트와 같은 모양). 승인 2번 조건: (가) 회사 IR 공식 주소 (나) 이번 차례 본문 열어 확인(웹 열기 도우미) (다) 원문 인용 — 세 가지 갖춤(시각은 원문에 없음).
+- 출처: [보이저 보도자료 PDF (회사 IR, 이번 차례 본문 열어 확인)](https://s206.q4cdn.com/740209347/files/doc_news/Voyager-To-Host-2026-Investor-Day-December-3-2026.pdf) · [Webull 전재](https://www.webull.com/news/15742775298515968) · 공식 여부: 공식
+- 확신도: 높음 (날짜·장소) / 확인 못 함 (시작 시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-2204-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 22:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK·MSFT 11/18, PANW·WMT·BABA·LITE·COHR·ORCL 11/19, MOGA·KEYS 11/20, WDC 11/21, ADI 11/24, FLY·DELL·IREN 11/25, VRTX 11/30 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) FDA 결정 기한(11/16~12/31) 목록(BiopharmaWatch 4분기 PDUFA 목록, 11/10 기준) 대조: 담긴 회사는 VRTX 11/30·GILD 12/23(둘 다 앱에 있음)과 REGN "11월"(날짜 없음, Q-20261116-2034-2 보류)뿐 — 새로 넣을 것 없음. INSM 아리케이스는 2027-01-28(45일 밖). (3) 해당 없음으로 확인: TSAT 라이트스피드 첫 발사는 CEO가 10/30 연기 언급(보도) — 앱에 없는 일정. 보이저의 11/18·11/30 증권사 콘퍼런스 참석은 일정 대상 아님. (4) 확인 못 함: ORCL FY27 2분기·ACN FY27 1분기·FDX FY27 2분기 회사 공식 발표일(검색에 지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(블로그만), RKLB 다음 일렉트론, LUNR IM-3 새 날짜. (5) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [BiopharmaWatch 4분기 PDUFA 목록](https://www.biopharmawatch.com/assets/images/blog/q4-2026-pdufa-report/BiopharmaWatch-Q4-2026-PDUFA-Dates.pdf) · [Advanced Television 텔레샛 연기 (10/30)](https://advanced-television.com/2026/10/30/telesat-ceo-lightspeed-date-has-slipped) · 공식 여부: 보도 (2·3) / 해당 없음 (4·5)
+- 확신도: 중간 (2) / 확인 못 함 (4)
