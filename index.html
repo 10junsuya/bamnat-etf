@@ -441,8 +441,8 @@ details.more summary span{font-weight:400; color:var(--muted); font-size:14px}
 .fxnow{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:12px; padding:12px 14px; border:1px solid var(--line); border-radius:12px}
 .fxnow>div{display:flex; flex-direction:column; gap:2px} .fxnow b{font-size:22px}
 .howbtn{margin-top:6px; font-size:13px; padding:5px 12px}
-.howbox{margin:8px 0 0; padding:10px 14px 10px 30px; background:var(--surface-2); border-radius:12px; font-size:14px; line-height:1.6}
-.howbox li{margin:3px 0}
+.howbox{margin:8px 0 0; padding:4px 14px; background:var(--surface-2); border-radius:12px; font-size:14px; line-height:1.6}
+.howbox .anpts{border-top:0; margin:0} .howbox .anrow:last-child{border-bottom:0}
 .agrid.tools .acard{min-height:0; padding:14px} .agrid.tools .t{font-size:16px}
 .form.calc{grid-template-columns:1fr 1fr}
 .form.calc input{font-size:16px; padding:10px 12px}
@@ -1538,7 +1538,7 @@ function eventCardSheet(ev){
     <div class="evtiles">${C.tiles.map(([k,v,sub,cmp])=>`<div><div class="k">${k}</div><div class="v num${cmp?" "+cls(cmp[0]-cmp[1]):""}">${v}</div>${sub?`<div class="s num">${sub}</div>`:""}</div>`).join("")}</div>
     ${C.tiles.some(x=>x[3]) ? `<p class="tiny muted" style="margin:6px 2px 0">빨강은 예상보다 높게, 파랑은 낮게 나온 숫자예요.</p>` : ""}
     ${missionHtml(`${t}:${ev.d}`)}
-    <div class="bsection"><h4>${ev.done ? "핵심 정리" : "관전 포인트"}</h4><ol class="evcheck">${C.check.map(c=>`<li>${c}</li>`).join("")}</ol></div>
+    <div class="bsection"><h4>${ev.done ? "핵심 정리" : "관전 포인트"}</h4>${rowsList(C.check)}</div>
     ${ev.done ? analysisHtml(C.views, ev.type==="earn" ? "시장은 이렇게 봤어요" : "이번 일, 이렇게 봤어요", "회사 발표·주가 반응·매체 해석", "", ["결과","주가 반응","업종·ETF"]) : ""}
     ${C.ifGood || C.ifBad ? `<div class="bsection"><h4>결과별 해석</h4><div class="evif">
       ${C.ifGood?`<div><b>예상보다 좋으면</b><span>${C.ifGood}</span></div>`:""}${C.ifBad?`<div><b>예상에 못 미치면</b><span>${C.ifBad}</span></div>`:""}</div>
@@ -2879,7 +2879,7 @@ function openTool(k){
   const T = TOOLS[k]; if(!T) return;
   openSheet(`<h3 id="sheetTitle">${T.t}</h3>
     <button type="button" class="btn ghost howbtn" data-howt="${k}" aria-expanded="false">사용법 보기</button>
-    <ol class="howbox" id="howBox" hidden>${HOWTO[k].map(x=>`<li>${x}</li>`).join("")}</ol>
+    <div class="howbox" id="howBox" hidden>${rowsList(HOWTO[k], HOWTO[k].map((_,i)=>`${i+1}단계`))}</div>
     <p class="tiny muted" style="margin:8px 0 4px">밑줄 친 말을 누르면 뜻이 나와요.</p>${toolBody(k)}<div class="calc-out" id="calcOut"></div>
     <p class="tiny muted" style="margin-top:14px">${k==="tax" ? "2026년 11월 기준 일반적인 규칙이에요. ISA 한도를 늘리는 정부안이 논의돼 왔지만, 지금 적용 중인 비과세 한도는 위와 같아요. 세법은 바뀔 수 있고 개인 상황마다 달라서, 실제 신고 전에는 국세청이나 세무 전문가에게 확인해 주세요." : "참고용 단순 계산이에요. 수수료와 세금은 따로 고려하지 않았어요."} 투자 권유가 아니에요.</p>`, true);
   const f = sheet.querySelector("[data-calc]"); if(f) document.getElementById("calcOut").innerHTML = CALC[f.dataset.calc](f);
