@@ -187,6 +187,11 @@ def check_companies(comp, known):
         for k in ("tag", "cat", "one"):
             if not str(c.get(k, "")).strip():
                 err(w, f"{k} 가 비어 있어요.")
+    for x in comp.get("market", []) if isinstance(comp.get("market", []), list) else []:
+        if not (isinstance(x, dict) and DATE.match(str(x.get("d", ""))) and str(x.get("t", "")).strip() and x.get("kind") in ("공식", "보도")):
+            err("companies.market", "d·t·kind('공식'/'보도')가 있어야 해요.")
+        else:
+            check_src("companies.market", x.get("src"))
     for t, xs in comp.get("news", {}).items():
         w = f"companies.news {t}"
         if t not in known:
