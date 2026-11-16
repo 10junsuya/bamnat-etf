@@ -911,7 +911,7 @@ function applyLive(){
   // 종목 시세: 실제 값이 있는 것만, 없으면 '확인 중'
   const QK = {}; for(const k of Object.keys(qs)) QK[TK(k)] = k;  // 'BRK-B'·'MOG-A'처럼 기호가 들어간 티커도 찾게
   const usNow = usState(parts(now(),"America/New_York")).key, kus = LIVE.kus || {};
-  const fresh = v => v && v.t && Date.now()-new Date(v.t) < 600e3;
+  const fresh = v => v && v.t && Date.now()-new Date(v.t) < 900e3;  // 15분 안에 받은 값만 (서버가 미리 받아 둔 값 포함)
   LV.kisN = 0; LV.xN = 0; LV.xBad = 0;
   for(const t of Object.keys(STOCKS)){ const k = qs[t] ? t : QK[t]; const q = k ? qs[k] : null; let r = q ? usMove(k) : NaN, p = q ? q.p : NaN;
     // 정규장: 한국투자증권 가격이 있으면 그걸 쓰고, Finnhub(예비)와 2% 넘게 다르면 '대조 차이'로 세요
@@ -1001,6 +1001,12 @@ async function pullLive(){
 async function pullLiveOnce(){
   const tm = ms => ({signal: (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(ms) : undefined});
   let changed = false;
+  // 0) 서버가 2분마다 미리 받아 둔 값(/snap)을 가장 먼저 한 번에 받아 바로 화면에 그려요. 그 뒤 실시간 받기로 더 새 값으로 바꿔요
+  try{ const r = await fetch(`${LIVE_URL}/snap`, tm(6000)); if(r.ok){ const j = clean(await r.json()); let n = 0;
+    LIVE.krNow = {...(LIVE.krNow||{})}; LIVE.kus = {...(LIVE.kus||{})};
+    for(const [c,v] of Object.entries(j.kr||{})){ const o = LIVE.krNow[c]; if(v && !v.error && okn(v.price) && (!o || (v.time||"") > (o.time||""))){ LIVE.krNow[c] = v; n++; } }
+    for(const [t,v] of Object.entries(j.us||{})){ const o = LIVE.kus[t]; if(v && okn(v.price) && v.s && (!o || (v.time||"") > (o.t||""))){ LIVE.kus[t] = {p:v.price, pc:v.prev, t:v.time, s:v.s}; n++; } }
+    if(n){ if(!LV.krSrc) LV.krSrc = "한국투자증권"; changed = true; applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); } } }catch(_){}
   // 국내 ETF 가격·기준가(한국투자증권)를 가장 먼저, 전부(20개씩 나눠 동시에) 받아요. 목록과 상세가 같은 숫자로 시작하게
   const krP = (async()=>{ try{
     const r0 = typeof route==="function" ? route() : "";
@@ -1011,6 +1017,9 @@ async function pullLiveOnce(){
     let all;
     if(!LV.krAll){ all = [...mine, ...rest]; LV.krAll = true; }
     else { const at = (LV.krRot||0) % Math.max(1, rest.length); all = [...mine, ...rest.slice(at, at+8)]; LV.krRot = at + 8; }
+    // 서버가 미리 받아 둔 값이 3분 안 된 것이면 다시 묻지 않아요
+    const krFresh = c => { const v = (LIVE.krNow||{})[c]; return v && v.time && Date.now()-new Date(v.time) < 180e3; };
+    all = all.filter(c => !krFresh(c));
     for(let i=0;i<all.length;i+=8){
       const j0 = await fetch(`${LIVE_URL}/kr?c=${all.slice(i,i+8).join(",")}`, tm(30000)).then(r=>r.ok?r.json():null).catch(()=>null);
       if(!j0) continue; const j = clean(j0); let n = 0; LIVE.krNow = {...(LIVE.krNow||{})};

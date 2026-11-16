@@ -53,6 +53,23 @@ jobs:
       - name: 보안 시험 (실패하면 올리지 않아요)
         run: node worker/test/security.test.mjs
 
+      - name: 저장소(KV) 준비 (없으면 만들고, 서버 설정에 연결)
+        env:
+          T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          A: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          api="https://api.cloudflare.com/client/v4/accounts/$A/storage/kv/namespaces"
+          id=$(curl -s -H "Authorization: Bearer $T" "$api?per_page=100" | jq -r '.result[]? | select(.title=="gnomon-snap") | .id' | head -1)
+          if [ -z "$id" ]; then
+            id=$(curl -s -X POST -H "Authorization: Bearer $T" -H "content-type: application/json" -d '{"title":"gnomon-snap"}' "$api" | jq -r '.result.id // empty')
+          fi
+          if [ -n "$id" ]; then
+            printf '\n[[kv_namespaces]]\nbinding = "SNAP"\nid = "%s"\n' "$id" >> worker/wrangler.toml
+            echo "저장소 연결됨"
+          else
+            echo "::warning::Cloudflare 토큰에 저장소(Workers KV) 권한이 없어요. 미리 받아 두기 없이 올려요 (ops/SECURITY.md 참고)"
+          fi
+
       - name: Cloudflare에 올리기
         id: deploy
         uses: cloudflare/wrangler-action@9acf94ace14e7dc412b076f2c5c20b8ce93c79cd # v3

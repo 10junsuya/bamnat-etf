@@ -19,14 +19,17 @@
  * GET /kis-check               → 한국투자증권 연결 점검 (성공 여부와 칸 이름만, 값·키는 안 보여줘요)
  * GET /fut                     → 미국 지수 선물(나스닥100·S&P500) 움직임
  */
-import { US as ALLOW_US, KR as ALLOW_KR } from "./allow.js";
+import { US as ALLOW_US, KR as ALLOW_KR, PRIO_US, PRIO_KR } from "./allow.js";
 
 const CACHE_SEC = 20;
 const SYM = /^[A-Z][A-Z0-9.\-]{0,9}$/;
 const KRC = /^[0-9A-Z]{6}$/;
 const MAX_URL = 1024;
 /* 주소마다 받을 수 있는 질문 칸 */
-const ROUTES = { "/": [], "/health": [], "/quote": ["s"], "/fx": [], "/kr": ["c"], "/usday": ["s"], "/usreg": ["s"], "/kis-check": [], "/fut": [] };
+const ROUTES = { "/": [], "/health": [], "/quote": ["s"], "/fx": [], "/kr": ["c"], "/usday": ["s"], "/usreg": ["s"], "/kis-check": [], "/fut": [], "/snap": [] };
+/* 이번 요청(또는 2분 일)에서 바깥으로 보낸 호출 수. Cloudflare 무료 요금제는 한 번에 50번까지라 넘기 전에 멈춰요 */
+let SUBN = 0;
+const SUB_MAX = 44;
 
 /* 앱 화면 주소만 브라우저에서 부를 수 있게 해요. ALLOW_ORIGINS(쉼표 목록)가 "*"면 모두 허용(공개 전 단계). */
 function corsOrigin(request, env) {
@@ -103,7 +106,10 @@ async function fx(env) {
 const KIS_BASE = "https://openapi.koreainvestment.com:9443";
 async function kisToken(env) {
   // 토큰은 하루 짜리예요. 한국투자증권은 "하루 1번 발급"이 원칙이라(자주 받으면 이용 제한) 23시간 동안 재사용해요.
-  return cached("kis/token", 23 * 3600, async () => {
+  // 저장소(KV)가 있으면 토큰을 하나만 두고 모든 지역 서버가 같이 써요 → 진짜로 하루 1번만 받아요
+  return cached("kis/token", env.SNAP ? 3600 : 23 * 3600, async () => {
+    if (env.SNAP) { const t = await env.SNAP.get("kis_token", "json").catch(() => null); if (t && t.token && t.exp > Date.now() + 3600e3) return { token: t.token }; }
+    SUBN++;
     const r = await fetch(`${KIS_BASE}/oauth2/tokenP`, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -111,13 +117,16 @@ async function kisToken(env) {
     });
     if (!r.ok) return ERR("토큰을 못 받았어요");
     const j = await r.json();
+    if (j.access_token && env.SNAP) await env.SNAP.put("kis_token", JSON.stringify({ token: j.access_token, exp: Date.now() + 23 * 3600e3 })).catch(() => {});
     return j.access_token ? { token: j.access_token } : { error: "토큰 없음" };
   });
 }
 /* 이 지역 서버에 이미 받아 둔 토큰이 있는지만 봐요(새로 받지 않아요) */
-async function kisTokenPeek() {
+async function kisTokenPeek(env) {
   const hit = await caches.default.match(new Request("https://cache.gnomon/kis/token"));
-  return !!hit;
+  if (hit) return true;
+  if (env && env.SNAP) { const t = await env.SNAP.get("kis_token", "json").catch(() => null); return !!(t && t.token && t.exp > Date.now()); }
+  return false;
 }
 const kstNow = () => { const d = new Date(Date.now() + 9 * 3600e3); return { date: d.toISOString().slice(0, 10), clock: d.toISOString().slice(11, 19), hm: d.getUTCHours() * 60 + d.getUTCMinutes(), wd: d.getUTCDay() }; };
 const kNum = (x) => { const v = parseFloat(String(x ?? "").replace(/,/g, "")); return Number.isFinite(v) ? v : null; };
@@ -139,6 +148,8 @@ async function kisGet(env, path, trId, params) {
   if (t.error) return t;
   // 초당 호출 한도를 넘으면(EGW00201) 잠깐 쉬었다 두 번까지 다시 물어요
   for (let tryN = 0; tryN < 3; tryN++) {
+    if (SUBN >= SUB_MAX) return ERR("이번 차례 한도");
+    SUBN++;
     const r = await fetch(`${KIS_BASE}${path}?${new URLSearchParams(params)}`, {
       headers: { "content-type": "application/json; charset=utf-8", authorization: `Bearer ${t.token}`, appkey: env.KIS_APP_KEY, appsecret: env.KIS_APP_SECRET, tr_id: trId, custtype: "P" },
     });
@@ -173,9 +184,9 @@ async function kisEtf(env, code) {
 }
 /* 미국 주식 (한국투자증권): 거래소 찾기 → 정규장 시세, 한국 낮 시간엔 주간거래(블루오션) 시세 */
 const US_EX = ["NAS", "NYS", "AMS"], DAY_EX = { NAS: "BAQ", NYS: "BAY", AMS: "BAA" };
-async function kisUs(env, sym, day) {
+async function kisUs(env, sym, day, exHint) {
   const exKey = "kx/" + sym;
-  let ex = await cached(exKey, 86400, async () => {
+  let ex = exHint ? { ex: exHint } : await cached(exKey, 86400, async () => {
     for (const e of US_EX) { const j = await kisGet(env, "/uapi/overseas-price/v1/quotations/price", "HHDFS00000300", { AUTH: "", EXCD: e, SYMB: sym }); if (j && j.output && kNum(j.output.last)) return { ex: e }; }
     return { error: "거래소를 못 찾았어요" };
   });
@@ -211,6 +222,8 @@ function krIsin(code) {
 const numOf = (x) => { const v = parseFloat(String(x).replace(/,/g, "")); return Number.isFinite(v) ? v : null; };
 async function funetfKr(code) {
   return cached("kf/" + code, 30, async () => {
+    if (SUBN >= SUB_MAX) return ERR("이번 차례 한도");
+    SUBN++;
     const r = await fetch(`https://www.funetf.co.kr/product/etf/view/${krIsin(code)}`, { headers: { "user-agent": "Mozilla/5.0 (gnomon-live)" } });
     if (!r.ok || !r.body) return fail();
     // 페이지가 커서, 필요한 윗부분(현재가·iNAV)까지만 읽고 멈춰요
@@ -283,7 +296,7 @@ async function route(path, q, env) {
     // 성공 여부와 응답 칸 이름만 보여줘요(값·키·계좌 정보 없음). 5분 동안 같은 답을 나눠 줘요.
     if (!kis) return [{ ok: false, error: "한국투자증권 키가 아직 없어요" }, 200, 0];
     // 점검 때문에 토큰을 새로 받지 않아요(하루 1번 원칙). 이 지역에 토큰이 없으면 점검을 건너뛰어요
-    if (!(await kisTokenPeek())) return [{ ok: true, token: "이 지역 토큰 없음 (점검 생략)", fields: [] }, 200, 0];
+    if (!(await kisTokenPeek(env))) return [{ ok: true, token: "이 지역 토큰 없음 (점검 생략)", fields: [] }, 200, 0];
     const v = await cached("kis/check", 300, async () => {
       const tok = await kisToken(env);
       if (tok.error) return { ok: false, token: "실패" };
@@ -295,6 +308,13 @@ async function route(path, q, env) {
     }).catch(fail);
     return [v, 200, 0];
   }
+  if (path === "/snap") {
+    // 서버가 2분마다 미리 받아 둔 국내 ETF·미국 종목 시세를 한 번에 줘요 (앱을 열자마자 바로 보이게)
+    if (!env.SNAP) return [ERR("미리 받아 둔 값이 없어요"), 503, 0];
+    const v = await env.SNAP.get("snap", "json").catch(() => null);
+    if (!v) return [ERR("미리 받아 둔 값이 없어요"), 503, 0];
+    return [{ kr: v.kr || {}, us: v.us || {}, source: "한국투자증권 (2분마다 미리 받음)", time: v.time }, 200, 30];
+  }
   if (path === "/fut") {
     const out = {};
     for (const [k, s] of [["nq", "NQ=F"], ["es", "ES=F"]]) out[k] = await yahoo(s).catch(fail);
@@ -303,13 +323,61 @@ async function route(path, q, env) {
   return null;
 }
 
+/* 지금 미국 주식이 어느 시간대인지 (휴장일은 따지지 않아요. 휴장일엔 값이 그대로라 문제없어요) */
+function usSess() {
+  const f = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+  const g = (t) => (f.find((x) => x.type === t) || {}).value;
+  const wd = g("weekday"), m = (Number(g("hour")) % 24) * 60 + Number(g("minute"));
+  const k = kstNow(), kWeek = k.wd >= 1 && k.wd <= 5;
+  const usWeek = wd !== "Sat" && wd !== "Sun";
+  if (usWeek && m >= 570 && m < 960) return "reg";
+  if (usWeek && ((m >= 240 && m < 570) || (m >= 960 && m < 1200))) return "ext";
+  if (kWeek && k.hm >= 9 * 60 + 50 && k.hm <= 18 * 60 + 10) return "day";
+  return "";
+}
+/* 2분마다: 국내 ETF 몇 개 + 미국 종목 몇 개를 차례로 받아 저장소(KV)의 한 덩어리(snap)에 이어 붙여요 */
+async function snapshotJob(env) {
+  if (!env.SNAP || !(env.KIS_APP_KEY && env.KIS_APP_SECRET) || String(env.MAINTENANCE || "0") === "1") return;
+  SUBN = 0;
+  const snap = (await env.SNAP.get("snap", "json").catch(() => null)) || {};
+  snap.kr = snap.kr || {}; snap.us = snap.us || {}; snap.ex = snap.ex || {};
+  const k = kstNow(), krOn = k.wd >= 1 && k.wd <= 5 && k.hm >= 8 * 60 + 30 && k.hm <= 20 * 60 + 30;
+  // 국내: 장 시간엔 10개씩 차례로(약 11분에 한 바퀴), 장 밖에선 오늘 값이 없는 것만
+  const krList = PRIO_KR.filter((c) => krOn || !snap.kr[c] || snap.kr[c].date !== k.date);
+  let rk = (snap.rk || 0) % Math.max(1, krList.length);
+  for (let i = 0; i < Math.min(10, krList.length) && SUBN < SUB_MAX - 6; i++) {
+    const c = krList[(rk + i) % krList.length];
+    const v = await kisEtf(env, c).catch(() => null);
+    if (v && !v.error) snap.kr[c] = v;
+  }
+  snap.rk = rk + 10;
+  // 미국: 지금 시간대(주간거래·프리/애프터·정규장)에 맞춰 우선순위 종목을 남은 한도만큼 차례로
+  const sess = usSess();
+  if (sess) {
+    let ru = (snap.ru || 0) % PRIO_US.length, n = 0;
+    while (SUBN < SUB_MAX - 2 && n < PRIO_US.length) {
+      const t = PRIO_US[(ru + n) % PRIO_US.length]; n++;
+      const v = await kisUs(env, t, sess === "day", snap.ex[t] || null).catch(() => null);
+      if (v && !v.error) { snap.us[t] = { price: v.price, prev: v.prev, time: v.time, s: sess }; if (sess !== "day" && v.ex) snap.ex[t] = v.ex; }
+    }
+    snap.ru = ru + n;
+  }
+  snap.time = new Date().toISOString();
+  await env.SNAP.put("snap", JSON.stringify(snap));
+}
+
 /* 차단 기록: 무엇이 왜 막혔는지만 남겨요(IP·질문 값 같은 개인 정보는 안 남겨요). Cloudflare 로그에서 볼 수 있어요. */
 function blocked(reason, path) {
   try { console.log(JSON.stringify({ gnomon: "blocked", reason, path: String(path).slice(0, 40) })); } catch (_) {}
 }
 
 export default {
+  async scheduled(event, env, ctx) {
+    SECRETS = [env.FINNHUB_API_KEY, env.KIS_APP_KEY, env.KIS_APP_SECRET].filter(Boolean);
+    ctx.waitUntil(snapshotJob(env).catch((e) => { try { console.log(JSON.stringify({ gnomon: "snap-fail", msg: String(e && e.message).slice(0, 80) })); } catch (_) {} }));
+  },
   async fetch(request, env, ctx) {
+    SUBN = 0;
     SECRETS = [env.FINNHUB_API_KEY, env.KIS_APP_KEY, env.KIS_APP_SECRET].filter(Boolean);
     const origin = corsOrigin(request, env);
     if (request.method === "OPTIONS") return json({}, 204, 0, origin);

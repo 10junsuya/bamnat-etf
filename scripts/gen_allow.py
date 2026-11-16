@@ -21,6 +21,7 @@ def load(name):
 
 def main():
     us, kr = set(), set()
+    prio = {}  # 미국 종목 우선순위: 여러 ETF에 걸친 비중 합 (서버가 미리 받아 둘 순서)
     hold = load("holdings.json").get("etfs", {})
     etfs = load("etfs.json")
     live = load("live.json")
@@ -32,6 +33,8 @@ def main():
         for x in e.get("top", []):
             if x.get("ticker"):
                 us.add(x["ticker"])
+                t = str(x["ticker"]).upper()
+                prio[t] = prio.get(t, 0) + float(x.get("weight") or 0)
     for g in etfs.get("groups", {}).values():
         if g.get("proxy"):
             us.add(g["proxy"])
@@ -47,12 +50,18 @@ def main():
     kr = sorted(c.upper() for c in kr if KRC.match(str(c).upper()))
     if len(us) < 20 or len(kr) < 5:
         sys.exit(f"종목 목록이 너무 적어요 (미국 {len(us)}, 국내 {len(kr)}). 데이터 파일을 확인하세요.")
+    proxies = sorted({str(g.get("proxy")).upper() for g in etfs.get("groups", {}).values() if g.get("proxy")})
+    top = [t for t, _ in sorted(prio.items(), key=lambda kv: -kv[1]) if t in us and t not in proxies][:70]
+    prio_list = [t for t in proxies if t in us] + top
     out = ROOT / "worker" / "src" / "allow.js"
     out.write_text(
         "// scripts/gen_allow.py가 만든 파일이에요. 손으로 고치지 마세요.\n"
         "// 앱이 쓰는 종목만 실시간 서버가 받아 줘요.\n"
         f"export const US = new Set({json.dumps(us)});\n"
-        f"export const KR = new Set({json.dumps(kr)});\n",
+        f"export const KR = new Set({json.dumps(kr)});\n"
+        "// 서버가 2분마다 미리 받아 두는 순서 (지수 ETF → 여러 ETF에 많이 담긴 종목)\n"
+        f"export const PRIO_US = {json.dumps(prio_list)};\n"
+        f"export const PRIO_KR = {json.dumps(kr)};\n",
         encoding="utf-8",
     )
     print(f"allow.js: 미국 {len(us)}개, 국내 {len(kr)}개")
