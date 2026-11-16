@@ -1483,6 +1483,9 @@ function exposureHtml(t){
   const head = xs.slice(0,8).map(chip).join(""), rest = xs.slice(8);
   return `<div class="chips">${head}</div>${rest.length?`<details class="sfoot" style="margin-top:4px"><summary>${rest.length}개 더 보기 ›</summary><div class="chips">${rest.map(chip).join("")}</div></details>`:""}`;
 }
+/* 일정 종류 이름: 실적·발사·착륙·행사(주주총회 등). 공식 날짜가 없는 일정은 tbd:true 로 '미정'이라 보여줘요 */
+const EVKIND = {earn:"실적", launch:"발사", land:"착륙", event:"행사"};
+const evKind = ev => EVKIND[ev.type] || "일정";
 function evRow(ev, withChips=true){
   const [y,m,d] = ev.d.split("-").map(Number);
   const wd = KDAY[new Date(Date.UTC(y,m-1,d)).getUTCDay()];
@@ -1490,10 +1493,11 @@ function evRow(ev, withChips=true){
   const open = `class="ev tap" role="button" tabindex="0" data-evt="${evid}" aria-label="${ev.title} 자세히 보기"`;
   if(ev.type==="dist") return `<div ${open}><div class="d num">${m}/${d}<small>(${wd})</small></div><span class="logo" style="background:var(--accent)" aria-hidden="true">분배</span>
     <div><div>${ev.title} <span class="evmore">›</span></div><div class="tiny muted num">${ev.when}</div></div></div>`;
-  const kind = ev.type==="earn" ? "실적" : "발사";
+  const kind = evKind(ev);
   const done = (ev.done ? ` <span class="chip">${ev.type==="earn"?"발표 완료":"완료"}</span>` : "") + (ev.card && ev.card.real ? ` <span class="chip okchip">확인됨</span>` : "");
+  const dcell = ev.tbd && !ev.done ? `<div class="d">미정<small class="num">${m}/${d} 가안</small></div>` : `<div class="d num">${m}/${d}<small>(${wd})</small></div>`;
   const sec = ev.type==="earn" ? ` · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${ev.t}&type=8-K" target="_blank" rel="noopener">SEC 공시 원문 ›</a>` : "";
-  return `<div ${open}><div class="d num">${m}/${d}<small>(${wd})</small></div>${logo(ev.t)}
+  return `<div ${open}>${dcell}${logo(ev.t)}
     <div><div><span class="evtype">${kind}</span>${ev.title}${done} <span class="evmore">›</span></div><div class="tiny muted">${ev.when}${ev.done?sec:""}</div>
     ${withChips?`<div class="chips">${exposureChips(ev.t)}</div>`:""}</div></div>`;
 }
@@ -1518,10 +1522,10 @@ function eventCardSheet(ev){
   const C = ev.card, t = ev.t, co = CO[t] || {};
   const [y,m,dd] = ev.d.split("-").map(Number); const wd = KDAY[new Date(Date.UTC(y,m-1,dd)).getUTCDay()];
   const today = ymd(parts(now(),"Asia/Seoul")); const left = dayDiff(today, ev.d);
-  const badge = ev.done ? `<span class="evbadge done">${ev.type==="earn"?"발표 완료":"완료"}</span>` : left===0 ? `<span class="evbadge">오늘</span>` : left>0 ? `<span class="evbadge">D-${left}</span>` : "";
+  const badge = ev.done ? `<span class="evbadge done">${ev.type==="earn"?"발표 완료":"완료"}</span>` : ev.tbd ? `<span class="evbadge">날짜 미정</span>` : left===0 ? `<span class="evbadge">오늘</span>` : left>0 ? `<span class="evbadge">D-${left}</span>` : "";
   const fmtAsof = C.asof ? `${+C.asof.slice(5,7)}/${+C.asof.slice(8,10)}` : "";
   openSheet(`<h3 id="sheetTitle">${evTitleHtml(ev)} ${badge}</h3>
-    <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간${ev.q?` · ${ev.q}`:""}</p>
+    <p class="small muted" style="margin-top:0">${ev.tbd && !ev.done ? `날짜 미정 (${m}/${dd} 가안)` : `${m}/${dd}(${wd})`} ${ev.when} · 한국 시간${ev.q?` · ${ev.q}`:""}</p>
     <p class="evsum">${C.sum}</p>
     <div class="evtiles">${C.tiles.map(([k,v,sub,cmp])=>`<div><div class="k">${k}</div><div class="v num${cmp?" "+cls(cmp[0]-cmp[1]):""}">${v}</div>${sub?`<div class="s num">${sub}</div>`:""}</div>`).join("")}</div>
     ${C.tiles.some(x=>x[3]) ? `<p class="tiny muted" style="margin:6px 2px 0">빨강은 예상보다 높게, 파랑은 낮게 나온 숫자예요.</p>` : ""}
@@ -1599,11 +1603,13 @@ function eventSheet(id){
   const isEarn = ev.type==="earn";
   const held = ETFS.filter(e=>e.h.some(([x])=>x===t));
   openSheet(`<h3 id="sheetTitle">${evTitleHtml(ev)}</h3>
-    <p class="small muted" style="margin-top:0">${m}/${dd}(${wd}) ${ev.when} · 한국 시간 · 예시 일정${ev.done?" · 발표 완료":""}</p>
+    <p class="small muted" style="margin-top:0">${ev.tbd && !ev.done ? `날짜 미정 (${m}/${dd} 가안)` : `${m}/${dd}(${wd})`} ${ev.when} · 한국 시간 · 예시 일정${ev.done?" · 발표 완료":""}</p>
     ${isEarn ? `<div class="bsection"><h4>발표 개요</h4><p>${josaIGa(s?s[0]:t)} ${ev.q||"지난 분기"} 성적표를 내놓는 날이에요. 매출과 주당순이익(EPS)이 시장 예상보다 높았는지, 그리고 회사가 말하는 다음 분기 전망(가이던스)을 함께 봐요.</p>
       <p class="small muted">미국 장이 끝난 뒤 발표돼서, 주가 반응은 시간외 거래와 다음 날 정규장에서 먼저 나타나요. 국내 상장 ETF에는 보통 그다음 한국 장에 반영돼요.</p></div>`
+    : ev.type==="event" ? `<div class="bsection"><h4>일정 개요</h4><p>${ev.what||"주주총회 같은 회사 행사 일정이에요."}</p>
+      <p class="small muted">행사에서 정해진 내용(안건 표결 결과 등)은 회사 공시로 확인할 수 있어요.</p></div>`
     : `<div class="bsection"><h4>일정 개요</h4><p>${ev.what||"로켓 발사 일정이에요."}</p>
-      <p class="small muted">발사 일정은 날씨나 기술 점검 때문에 자주 바뀌어요. 성공·실패나 지연 소식이 회사 주가에 영향을 줄 수 있어요.</p></div>`}
+      <p class="small muted">${ev.tbd && !ev.done ? "아직 공식 발사 날짜가 정해지지 않았어요. 날짜 칸은 가안이고, 회사가 날짜를 발표하면 바로 바꿔요." : "발사 일정은 날씨나 기술 점검 때문에 자주 바뀌어요."} 성공·실패나 지연 소식이 회사 주가에 영향을 줄 수 있어요.</p></div>`}
     ${missionHtml(id)}
     ${ev.watch ? `<div class="bsection"><h4>관전 포인트</h4><ul style="margin:0;padding-left:18px">${ev.watch.map(w=>`<li style="margin:4px 0">${w}</li>`).join("")}</ul></div>` : ""}
     ${co.one ? `<div class="bsection"><h4>회사 개요</h4><p>${co.one}</p></div>` : ""}
