@@ -2,19 +2,29 @@
 
 2026-11-15 대표(사장님) 승인. 같은 날 Vernon·Argus 가동과 ETF 20개 확대 반영(대표 승인), 같은 날 34개로 추가 확대(대표 승인 · 목록 원본은 data/etfs.json), 이어 45개로 확대(대표 승인 — 2026-11-16 Conrad 승인 대기 5번에서 확인). 이 문서를 바꾸려면 대표의 승인이 필요해요. AI는 바꾸자는 **제안**만 할 수 있어요.
 
+## 0. 시작할 때 (모든 AI)
+
+일을 시작하기 전에 두 파일을 먼저 읽어요. AI는 실행이 끝나면 기억이 사라지니, 이 두 파일이 팀이 쌓은 공부와 경험이에요.
+- `ops/LESSONS.md` — 실수 노트: 지난번에 틀렸던 것과 그 이유. 같은 실수를 되풀이하지 않아요.
+- `ops/knowledge/README.md` — 시장 공부 요약: 지금 시장의 큰 이야기(Archer가 주 3회 갱신). 해석·문구를 쓸 때 참고만 하고, 숫자는 늘 원 출처에서 다시 확인해요.
+
+새로 배운 교훈은 자기 게시판에 "교훈" 항목으로 남기고, Conrad가 아침마다 `ops/LESSONS.md`에 정리해요.
+
 ## 1. 팀
 
 | 이름 | 역할 | 간격 | 쓰는 파일 |
 |---|---|---|---|
 | 대표 | 최종 승인 | | |
-| Conrad | 운영 책임자: 의견 정리·결정·보고 | 6시간마다 | `ops/board/conrad.md`, `ops/minutes/`, `ops/reports/` |
+| Conrad | 운영 책임자: 의견 정리·결정·보고, 아침마다 교훈을 실수 노트에 정리 | 6시간마다 | `ops/board/conrad.md`, `ops/minutes/`, `ops/reports/`, `ops/LESSONS.md` |
 | Sterling | 감사: 팀 전체 독립 점검 | 토요일 아침 | `ops/board/sterling.md` |
-| Archer | 리서치: 변동 후보 찾기 | 1시간마다 | `ops/board/archer.md` |
+| Archer | 리서치: 변동 후보 찾기 + 시장 공부(싱크탱크·연준·주요 매체 분석 정리, 금요일엔 적중 기록 보고 계산 개선 제안) | 1시간마다 + 공부 주 3회 | `ops/board/archer.md`, `ops/knowledge/` |
+| Wren | 회사 소식: Scout가 모은 기사·공시를 공식 출처로 확인해 회사 화면 「최근 소식」·「주요 제품」을 한국어로 갱신 | 30분마다 (A 매시 13분 · B 매시 43분) | `ops/board/wren.md`, `ops/wren/state.json`, `data/companies.json` (+ `index.html` 데이터 블록은 스크립트로만) |
 | Quill | 편집: 후보 검증 후 앱 데이터 반영 (실적 일정의 결과 카드는 Tally) | 1시간마다 | `ops/board/quill.md`, `data/events.json`, `data/missions.json`, `data/money.json` (+ `index.html` 데이터 블록은 스크립트로만) |
 | Tally | 실적: 발표가 나오면 회사 화면 「실적」 카드와 실적 일정 분석(결과 카드)을 바로 갱신, 확정된 실적 일정 추가 | 발표 시간대 30분마다 (A 매시 23분 · B 매시 53분) | `ops/board/tally.md`, `data/earnings.json`, `data/events.json`의 실적(type "earn") 일정 (+ `index.html` 데이터 블록은 스크립트로만) |
 | Vernon | 숫자 품질: 앱 숫자가 맞는지 원 출처와 대조, 자동 수집 점검 | 하루 두 번 | `ops/board/vernon.md` |
 | Keene | 화면 QA 프로그램 | 앱이 바뀔 때 | (GitHub Actions) |
 | Argus | 경비 프로그램(AI 아님): 서버·자동 수집·큰 움직임·데이터 검사 | 10분마다 (GitHub) | `ops/board/argus.md`, `ops/argus/state.json` (자동), `ops/watchlist.json` 읽기 |
+| Scout | 소식 감지 프로그램(AI 아님): 담긴 회사의 새 기사 제목·링크와 공시를 대기 목록에 | 10분마다 (GitHub) | `ops/scout/newsq.json` (자동) |
 
 **자기 파일만 써요.** 다른 AI의 게시판 파일은 읽기만 해요.
 
@@ -95,7 +105,8 @@
 - 매달 첫째 일요일: Conrad 월간 정리
 
 ## 9. 실행 시각 (한국 시간)
-- Archer: 매시 4분 · Quill: 매시 34분 · Conrad: 01:49, 07:49, 13:49, 19:49 · Sterling: 토 08:49
+- Archer: 매시 4분, 시장 공부 월·수·금 19:37 · Quill: 매시 34분 · Wren A·B: 매시 13분·43분 · Conrad: 01:49, 07:49, 13:49, 19:49 · Sterling: 토 08:49
+- Scout: 10분마다 (GitHub) · 아침 알림: 평일 06:41 (휴대폰 알림, 저장소는 안 고침)
 - Tally A·B: 월~토 05~09시·14~17시·20~23시, 매시 23분(A)·53분(B) — 발표 뒤 1시간 안 반영 목표 · Vernon: 08:21, 18:21 · Argus: 10분마다 (GitHub, 긴급이면 실행 실패로 GitHub 알림 메일)
 - 자동 수집(GitHub): 시세·기준가 06:17·07:47·13:37·18:07(평일) · 구성종목 07:41(평일) · 매크로 09:23·22:53 · 적중 기록(data/track.json: 06:17에 오늘 예측 저장, 공시 뒤 채점 — 사람·AI가 고치지 않음)
 - GNOMON 폴더 정리(비서): 09:17, 21:17 — 대표 컴퓨터가 켜져 있을 때만 PDF를 바탕화면 폴더에 넣어요.
