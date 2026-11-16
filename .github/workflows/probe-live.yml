@@ -1,0 +1,28 @@
+name: 실시간 서버 시세 확인 (손으로 실행)
+
+# 실시간 서버가 지금 주는 미국 시세를 출처별로 비교해요. 키는 쓰지 않고 공개 주소만 불러요.
+on:
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: "확인할 미국 종목 (쉼표로)"
+        default: "AAPL,NVDA,MSFT"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: 출처별 시세
+        env:
+          S: ${{ inputs.symbols }}
+        run: |
+          U="https://gnomon-live.leejoonsoo85.workers.dev"
+          echo "== /kr"; curl -sS -m 40 "$U/kr?c=360750,0183J0"; echo
+          for p in usreg usday quote; do
+            echo "== /$p"; curl -sS -m 30 "$U/$p?s=$S"; echo
+          done
+          echo "== /fut"; curl -sS -m 20 "$U/fut"; echo
