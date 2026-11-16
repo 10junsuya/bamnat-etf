@@ -36,7 +36,9 @@ calls.length = 0;
 for (let i = 0; i < 50; i++) await go("/quote?s=AAPL,NVDA");
 await go("/quote?s=nvda,aapl");
 ok("같은 질문 51번 → 바깥 서버 호출 0번 (나눠 쓰기)", calls.length === 0);
+await go("/usreg?s=NVDA");  // 토큰을 먼저 받아 둬야 점검이 돌아요
 [st, h, b] = await go("/kis-check"); ok("kis-check: 값 없이 칸 이름만", !b.includes('"last":') && b.includes("fields"));
+{ const n0 = calls.length; store.delete("https://cache.gnomon/kis/token"); store.delete("https://cache.gnomon/kis/check"); const [, , b2] = await go("/kis-check"); ok("kis-check: 토큰 없으면 새로 안 받음", calls.length === n0 && b2.includes("점검 생략")); }
 ok("kis-check: 키 안 보임", !b.includes("KISAPPKEY") && !b.includes("KISSECRET"));
 [st, h, b] = await go("/health"); ok("health: 키 정보 안 보임", !b.includes("keys"));
 const all = calls.map(c => c.url).filter(u => u.includes("koreainvestment"));

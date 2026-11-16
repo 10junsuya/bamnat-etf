@@ -714,7 +714,7 @@ const GLOSS = {
   "추정 iNAV":"이 앱이 구성종목의 지금 가격과 환율로 직접 계산한 추정 가치예요. 한국장이 닫힌 밤에도 계산해요.",
   "괴리율":"시장에서 거래되는 가격이 iNAV(추정 가치)보다 얼마나 높거나 낮은지예요. (시장가 − iNAV) ÷ iNAV. 사고파는 힘에 따라 생겨서, 구성종목·환율로 계산하는 추정에는 들어가지 않아요.",
   "적중 기록":"노몬이 미국 장이 끝난 뒤 예측한 기준가 등락률과, 다음 날 운용사가 공시한 실제 기준가 등락률을 나란히 놓은 기록이에요. 차이(%p)가 작을수록 잘 맞은 거예요. 예측은 저장한 뒤 고치지 않아요.",
-  "주간거래":"미국 주식은 한국 낮 시간(대략 오전 10시~오후 6시)에도 '주간거래'로 사고팔 수 있어요. 노몬은 담긴 회사의 주간거래 가격이 마지막 미국 정규장 가격보다 얼마나 움직였는지를 더해요. 거래량이 적어 정규장 가격과 다를 수 있고, 실제 기준가(NAV)는 다음 미국 종가로 정해져요.",
+  "주간거래":"미국 주식은 한국 낮 시간(대략 오전 10시~오후 6시)에는 '주간거래', 저녁(대략 오후 6시~11시 30분)에는 '프리마켓'으로도 사고팔 수 있어요. 노몬은 담긴 회사의 이 가격이 마지막 미국 정규장 가격보다 얼마나 움직였는지를 한국투자증권에서 받아 더해요. 거래량이 적어 정규장 가격과 다를 수 있고, 실제 기준가(NAV)는 다음 미국 종가로 정해져요.",
   "선물 반영":"미국 장이 닫혀 있을 때도 나스닥100·S&P500 지수 선물은 거래돼요. 마지막 미국 종가 뒤 선물이 움직인 만큼을, 이 ETF가 평소 지수보다 얼마나 크게 움직이는지(민감도)를 곱해 더한 추정이에요. 실제 기준가(NAV)는 다음 미국 종가로 정해져요.",
   "기여도":"그 종목이 ETF 등락을 얼마나 움직였는지예요. 비중 × 등락률로 계산하고, 단위는 %p예요.",
   "시세 반영 비중":"ETF 자산 중 담긴 회사 시세로 하나씩 계산한 비율이에요. 나머지는 같은 지수를 따르는 미국 ETF(SPY·QQQ·SOXQ) 움직임에 맞춰 채워요.",
@@ -870,8 +870,10 @@ function usClose(t, s){ const q = (LIVE.quotes||{})[t];
   const c = (LIVE.closes||{})[s]; return c && c[t] ? c[t] : NaN; }
 LV.sessionOver = q => { const u = parts(now(),"America/New_York"); return ymd(u) > q.d || u.h >= 16; };
 /* 한국 마지막 장 마감 뒤 미국에서 움직인 만큼 */
+function usBase(t){ const q = (LIVE.quotes||{})[t]; if(!q) return NaN;
+  return q.d===LV.U ? q.p : (q.pc && prevUs(q.d)===LV.U) ? q.pc : usClose(t, LV.U); }
 function usMove(t){ const q = (LIVE.quotes||{})[t]; if(!q) return NaN;
-  const base = q.d===LV.U ? q.p : (q.pc && prevUs(q.d)===LV.U) ? q.pc : usClose(t, LV.U);
+  const base = usBase(t);
   return okn(base) && base>0 ? q.p/base - 1 : NaN; }
 function fxAt(s){ const h = (LIVE.fx||{}).hist || {}; const ks = Object.keys(h).filter(d=>d<=s).sort(); return ks.length ? [ks[ks.length-1], h[ks[ks.length-1]]] : [null, NaN]; }
 
@@ -908,17 +910,29 @@ function applyLive(){
   const qs = LIVE.quotes || {};
   // 종목 시세: 실제 값이 있는 것만, 없으면 '확인 중'
   const QK = {}; for(const k of Object.keys(qs)) QK[TK(k)] = k;  // 'BRK-B'·'MOG-A'처럼 기호가 들어간 티커도 찾게
-  for(const t of Object.keys(STOCKS)){ const k = qs[t] ? t : QK[t]; const q = k ? qs[k] : null; const r = q ? usMove(k) : NaN;
-    STOCKS[t][1] = q ? q.p : NaN; STOCKS[t][2] = r; }
+  const usNow = usState(parts(now(),"America/New_York")).key, kus = LIVE.kus || {};
+  const fresh = v => v && v.t && Date.now()-new Date(v.t) < 600e3;
+  LV.kisN = 0; LV.xN = 0; LV.xBad = 0;
+  for(const t of Object.keys(STOCKS)){ const k = qs[t] ? t : QK[t]; const q = k ? qs[k] : null; let r = q ? usMove(k) : NaN, p = q ? q.p : NaN;
+    // 정규장: 한국투자증권 가격이 있으면 그걸 쓰고, Finnhub(예비)와 2% 넘게 다르면 '대조 차이'로 세요
+    const kq = kus[t] || (k ? kus[k] : null);
+    if(usNow==="regular" && kq && kq.s==="reg" && fresh(kq)){
+      const base = q ? usBase(k) : NaN, b2 = okn(base) && base>0 ? base : kq.pc;
+      if(okn(b2) && b2>0){ p = kq.p; r = kq.p/b2 - 1; LV.kisN++;
+        if(q && Date.now()-new Date(q.t) < 300e3){ LV.xN++; if(Math.abs(kq.p/q.p-1) > 0.02) LV.xBad++; } } }
+    STOCKS[t][1] = p; STOCKS[t][2] = r; }
   LV.quoteT = Object.values(qs).map(q=>q.t).sort().pop() || "";
   { const usOpen = usState(parts(now(),"America/New_York")).key==="regular";
     for(const k of ["nq","es"]){ const f = (LIVE.fut||{})[k];
       FUTM[k] = !usOpen && f && !f.error && f.prev>0 && f.price>0 && f.time && (!LV.quoteT || new Date(f.time) > new Date(LV.quoteT)) ? f.price/f.prev - 1 : NaN; }
-    // 주간거래: 마지막 정규장 가격 대비 지금 주간거래 가격 (정규장이 열려 있거나, 받은 지 10분이 넘었으면 안 써요)
+    // 주간거래·프리마켓 (한국투자증권): 마지막 정규장 가격 대비 지금 가격 (정규장이 열려 있거나, 받은 지 10분이 넘었으면 안 써요)
+    // 애프터마켓 가격은 기준가에 안 들어가서(기준가는 정규장 종가로 정해져요) 계산에 넣지 않아요
     for(const t of Object.keys(DAYM)) delete DAYM[t];
-    if(!usOpen) for(const [t,v] of Object.entries(LIVE.usDay||{})){ const base = (STOCKS[t]||[])[1];
-      if(v && okn(v.p) && okn(base) && base>0 && v.t && Date.now()-new Date(v.t) < 600e3 && (!LV.quoteT || new Date(v.t) > new Date(LV.quoteT))) DAYM[t] = v.p/base - 1; } }
-  FUT.es = usMove("SPY"); FUT.nq = usMove("QQQ"); FUT.sox = usMove("SOXQ"); FUT.semi = usMove("SMH"); FUT.div = usMove("SCHD"); FUT.tlt = usMove("TLT");
+    LV.extSess = "";
+    if(!usOpen) for(const [t,v] of Object.entries(kus)){ const base = (STOCKS[t]||[])[1];
+      if(v && (v.s==="day"||(v.s==="ext" && usNow==="pre")) && okn(v.p) && okn(base) && base>0 && fresh(v) && (!LV.quoteT || new Date(v.t) > new Date(LV.quoteT))){ DAYM[t] = v.p/base - 1; LV.kisN++; LV.extSess = v.s; } } }
+  { const mv = t => okn((STOCKS[t]||[])[2]) ? STOCKS[t][2] : usMove(t);
+    FUT.es = mv("SPY"); FUT.nq = mv("QQQ"); FUT.sox = mv("SOXQ"); FUT.semi = mv("SMH"); FUT.div = mv("SCHD"); FUT.tlt = mv("TLT"); }
   // 환율
   const [bd, br] = fxAt(kr); const fx = LIVE.fx || {};
   FX.base = br; FX.now = okn(fx.rate) ? fx.rate : br; FX.baseTime = bd ? mdTxt(bd) : "";
@@ -974,13 +988,27 @@ function applyLive(){
 function dataStamp(){
   const t = LV.quoteT ? (()=>{ const p = parts(new Date(LV.quoteT),"America/New_York"); return `${p.m}/${p.d} ${pad(p.h)}:${pad(p.mi)} 뉴욕`; })() : "없음";
   const kc = Object.values(LIVE.krNow||{}).map(v=>v.clock).filter(Boolean).sort().pop();
-  return `미국 시세 ${t}${LV.src==="실시간"?" · 실시간 연결":""}${kc?` · 국내 시세 ${kc.slice(0,5)} ${LV.krSrc||""}`:""} · 원/달러 ${LV.fxDate?mdTxt(LV.fxDate):"없음"} ${LV.fxSrc}${LV.fxLive?"":"(하루 한 번)"} · ${mdTxt(LV.kr)} 장 마감 기준`;
+  const ks = LV.kisN ? ` · 한국투자증권 ${LV.extSess==="ext"?"프리마켓":LV.extSess==="day"?"주간거래":"정규장"}${LV.xN?` (Finnhub 대조 ${LV.xN}개${LV.xBad?`, ${LV.xBad}개 차이 큼`:" 일치"})`:""}` : "";
+  return `미국 시세 ${t}${LV.src==="실시간"?" · 실시간 연결":""}${ks}${kc?` · 국내 시세 ${kc.slice(0,5)} ${LV.krSrc||""}`:""} · 원/달러 ${LV.fxDate?mdTxt(LV.fxDate):"없음"} ${LV.fxSrc}${LV.fxLive?"":"(하루 한 번)"} · ${mdTxt(LV.kr)} 장 마감 기준`;
 }
 /* 시작 계산(applyHoldings·applyLive)은 숫자 포맷 함수들이 준비된 뒤 '상태' 바로 앞에서 해요 */
 /* 실시간 서버 → 새 숫자. 미리보기처럼 바깥 연결이 막힌 곳에서는 조용히 넘어가요. */
 async function pullLive(){
   const tm = ms => ({signal: (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(ms) : undefined});
   let changed = false;
+  // 국내 ETF 가격·기준가(한국투자증권)를 가장 먼저, 전부(20개씩 나눠 동시에) 받아요. 목록과 상세가 같은 숫자로 시작하게
+  const krP = (async()=>{ try{
+    const r0 = typeof route==="function" ? route() : "";
+    const first = r0.startsWith("etf-") ? [r0.slice(4)] : [];
+    const all = [...new Set([...first, ...((holdings||[]).map(h=>h.code)), ...stars, ...ETFS.map(e=>e.code)])].filter(c=>ETFS.some(e=>e.code===c));
+    const chunks = []; for(let i=0;i<all.length;i+=20) chunks.push(all.slice(i,i+20));
+    const res = await Promise.all(chunks.map(cs => fetch(`${LIVE_URL}/kr?c=${cs.join(",")}`, tm(15000)).then(r=>r.ok?r.json():null).catch(()=>null)));
+    let n = 0; LIVE.krNow = {...(LIVE.krNow||{})};
+    for(const j0 of res){ if(!j0) continue; const j = clean(j0);
+      for(const [c,v] of Object.entries(j.etfs||{})){ if(v && !v.error && okn(v.price)){ LIVE.krNow[c] = v; n++; } }
+      if(j.source) LV.krSrc = j.source; }
+    if(n){ changed = true; applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
+  }catch(_){} })();
   try{ const r = await fetch(LIVE_RAW+"?t="+Date.now(), tm(6000)); if(r.ok){ const j = clean(await r.json());
     if(j && j.generated_at_kst && j.generated_at_kst > (LIVE.generated_at_kst||"")){ LIVE = j; changed = true; } } }catch(_){}
   try{
@@ -1001,46 +1029,48 @@ async function pullLive(){
   }catch(_){}
   try{ const r = await fetch(`${LIVE_URL}/fx`, tm(5000)); if(r.ok){ const j = clean(await r.json());
     if(okn(j.usdkrw)){ LIVE.fx = {...(LIVE.fx||{}), rate:j.usdkrw, date:j.date || (j.time||"").slice(0,10) || (LIVE.fx||{}).date, src:j.source||"", live:!!j.live}; changed = true; } } }catch(_){}
+  // 미국 주식 시세는 한국투자증권이 주력이에요: 주간거래(한국 낮) · 프리마켓 · 정규장 · 애프터마켓. Finnhub는 예비 + 대조용
   try{
-    const r0 = typeof route==="function" ? route() : "";
-    const codes = [...new Set([...(r0.startsWith("etf-")?[r0.slice(4)]:[]), ...((holdings||[]).map(h=>h.code)), ...stars])].filter(c=>ETFS.some(e=>e.code===c)).slice(0,8);
-    if(codes.length){ const r = await fetch(`${LIVE_URL}/kr?c=${codes.join(",")}`, tm(12000)); if(r.ok){ const j = clean(await r.json()); let n = 0;
-      LIVE.krNow = {...(LIVE.krNow||{})};
-      for(const [c,v] of Object.entries(j.etfs||{})){ if(v && !v.error && okn(v.price)){ LIVE.krNow[c] = v; n++; } }
-      if(n){ LV.krSrc = j.source||""; changed = true; } } }
-  }catch(_){}
-  // 한국 낮(주간거래 시간)에는 담긴 미국 주식의 주간거래 시세도 받아요. 서버에 한국투자증권 키가 없으면 다시 묻지 않아요
-  try{
-    const kp = parts(now(),"Asia/Seoul"), hm = kp.h*60+kp.mi, wd = kp.wd;
-    if(!LV.kisOff && wd>=1 && wd<=5 && hm>=9*60+50 && hm<=18*60+10 && usState(parts(now(),"America/New_York")).key!=="regular"){
+    const kp = parts(now(),"Asia/Seoul"), hm = kp.h*60+kp.mi, wd = kp.wd, us = usState(parts(now(),"America/New_York")).key;
+    const dayWin = wd>=1 && wd<=5 && hm>=9*60+50 && hm<=18*60+10 && us!=="regular" && us!=="pre" && us!=="after";
+    const sess = dayWin ? "day" : us==="regular" ? "reg" : (us==="pre"||us==="after") ? "ext" : "";
+    if(!LV.kisOff && sess){
       const r0 = typeof route==="function" ? route() : "";
       const want = [...new Set([...(r0.startsWith("etf-")?[r0.slice(4)]:[]), ...((holdings||[]).map(h=>h.code)), ...stars])];
-      const syms = [...new Set(ETFS.filter(e=>want.includes(e.code)).flatMap(e=>HOLDS(e).map(x=>x[0])))].filter(t=>/^[A-Z.\-]{1,8}$/.test(t)).slice(0,40);
-      if(syms.length){ const r = await fetch(`${LIVE_URL}/usday?s=${encodeURIComponent(syms.join(","))}`, tm(12000));
+      const prox = Object.values(ETF_DATA.groups).map(g=>g.proxy).filter(Boolean);
+      const hold = ETFS.filter(e=>want.includes(e.code)).flatMap(e=>HOLDS(e).map(x=>x[0]));
+      const syms = [...new Set([...prox, ...hold])].filter(t=>/^[A-Z.\-]{1,8}$/.test(t)).slice(0,40);
+      if(syms.length){ const r = await fetch(`${LIVE_URL}/${sess==="day"?"usday":"usreg"}?s=${encodeURIComponent(syms.join(","))}`, tm(20000));
         if(r.status===503) LV.kisOff = true;
-        else if(r.ok){ const j = clean(await r.json()); let n = 0; LIVE.usDay = {...(LIVE.usDay||{})};
-          for(const [t,v] of Object.entries(j.quotes||{})){ if(v && !v.error && okn(v.price)){ LIVE.usDay[t] = {p:v.price, t:v.time}; n++; } }
+        else if(r.ok){ const j = clean(await r.json()); let n = 0; LIVE.kus = {...(LIVE.kus||{})};
+          for(const [t,v] of Object.entries(j.quotes||{})){ if(v && !v.error && okn(v.price)){ LIVE.kus[t] = {p:v.price, pc:v.prev, t:v.time, s:sess}; n++; } }
           if(n) changed = true; } }
     }
   }catch(_){}
   try{ const r = await fetch(`${LIVE_URL}/fut`, tm(6000)); if(r.ok){ const j = clean(await r.json()); if(j && j.fut){ LIVE.fut = j.fut; changed = true; } } }catch(_){}
+  await krP;
   if(changed){ applyLive(); syncFxInd(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
 }
 
 /* ===================== 계산 ===================== */
 function calc(e){
   const rows = e.h.map(([t,w])=>{ const s = STOCKS[t] || [t, NaN, NaN]; const bad = FLAG.stock.has(t);
-    const r = bad ? NaN : s[2]; return {t, name:s[0], price: bad ? NaN : s[1], r, w, c:w*r}; });
+    // 주간거래·프리·애프터 가격이 있으면 종목 등락에 바로 넣어요 (정규장 움직임 × 그 뒤 움직임)
+    const dm = DAYM[t], r = bad ? NaN : okn(dm) && okn(s[2]) ? (1+s[2])*(1+dm)-1 : s[2];
+    const price = bad ? NaN : okn(dm) && okn(s[1]) ? s[1]*(1+dm) : s[1];
+    return {t, name:s[0], price, r, w, c:w*r, ext: okn(dm), reg: bad ? NaN : s[2]}; });
   let usd = rows.reduce((a,x)=>a+x.c,0);
   let restC = 0;
   if(e.rest){ restC = e.rest.w * (okn(e.rest.r) ? e.rest.r : FUT[e.rest.fut]); usd += restC; }
   // 미국 장이 닫혀 있으면 그 뒤 지수 선물 움직임을 민감도만큼 더해요 (추정)
-  const usdStock = usd;
+  // 정규장 움직임만의 합 (주간거래·프리마켓 몫은 아래 '반영'으로 따로 보여줘요)
+  const usdStock = usd - rows.reduce((a,x)=>a+(x.ext && okn(x.reg) ? x.w*(x.r-x.reg) : 0),0);
   let futC = 0, futSrc = ""; const fb = FBETA[e.group];
   // 담긴 회사의 주간거래 시세가 주식 비중의 절반 이상 있으면 그걸 쓰고(받은 종목 평균으로 나머지를 채움), 아니면 지수 선물 × 민감도
   { const sw = rows.reduce((a,x)=>a+x.w,0) + (e.rest ? e.rest.w : 0), dr = rows.filter(x=>okn(DAYM[x.t]) && !FLAG.stock.has(x.t)), dw = dr.reduce((a,x)=>a+x.w,0);
-    if(okn(usd) && dw > 0 && dw >= 0.5*rows.reduce((a,x)=>a+x.w,0)){ futC = dr.reduce((a,x)=>a+x.w*DAYM[x.t],0)/dw*sw; futSrc = "day"; e._dayCov = dw/sw; }
-    else if(fb && okn(FUTM[fb[0]]) && okn(usd)){ futC = fb[1]*FUTM[fb[0]]; futSrc = "fut"; } }
+    // 받은 종목은 이미 등락에 들어 있어요 → 못 받은 몫(나머지 종목·25위 밖)만 받은 종목 평균이나 선물로 채워요
+    if(okn(usd) && dw > 0 && dw >= 0.5*rows.reduce((a,x)=>a+x.w,0)){ futC = dr.reduce((a,x)=>a+x.w*DAYM[x.t],0)/dw*(sw-dw); futSrc = "day"; e._dayCov = dw/sw; if(!futC) futC = 1e-12; }
+    else if(fb && okn(FUTM[fb[0]]) && okn(usd)){ futC = fb[1]*FUTM[fb[0]]*(sw>0 ? (sw-dw)/sw : 1); futSrc = "fut"; } }
   if(futC) usd = (1+usd)*(1+futC) - 1;
   let ccC = 0; if(e.cc && okn(usd)){ const a = ccF(e, usd); ccC = a - usd; usd = a; }
   let fxR = e.hedge ? 0 : FX.now/FX.base - 1; if(Math.abs(fxR) < 1e-9) fxR = 0;
@@ -1164,12 +1194,12 @@ function stageBar(n){
 function sessionRows(e, c, st){
   const n = predStage(st), k = st.us.key;
   const row = (name, when, state, val, note) => `<div class="row"><div><div class="n">${name}</div><div class="t">${when}${note?` · ${note}`:""}</div></div><div><div class="r2 ${state==="지금"?"pt":"muted"}">${state}</div>${val?`<div class="r1 num ${cls(val.v)}">${val.t}</div>`:""}</div></div>`;
-  const dayOn = c.futSrc==="day", futOn = c.futSrc==="fut";
+  const dayOn = c.futSrc==="day" && LV.extSess==="day", preOn = c.futSrc==="day" && LV.extSess==="ext", futOn = c.futSrc==="fut";
   return [
     row("주간거래", "한국 10:00~17:30", n===1 && !["pre","regular","after"].includes(k) ? "지금" : n>1 ? "지남" : "예정",
       dayOn ? {v:c.futC, t:spct(c.futC)} : null, dayOn ? "담긴 회사 주간거래 가격" : "한국투자증권 연결 뒤 반영"),
     row("프리마켓", "한국 18:00~23:30", k==="pre" ? "지금" : n>2 ? "지남" : "예정",
-      futOn ? {v:c.futC, t:spct(c.futC)} : null, futOn ? `지수 선물로 추정 (민감도 ${(FBETA[e.group]||[0,0])[1]}배)` : "선물이 움직이면 추정해서 반영"),
+      futOn||preOn ? {v:c.futC, t:spct(c.futC)} : null, preOn ? "담긴 회사 프리마켓 가격 · 한국투자증권" : futOn ? `지수 선물로 추정 (민감도 ${(FBETA[e.group]||[0,0])[1]}배)` : "선물이 움직이면 추정해서 반영"),
     row("정규장", "한국 23:30~06:00", k==="regular" ? "지금" : n===4 ? "끝남" : "예정",
       n>=3 ? {v:c.usd, t:spct(c.usd)} : null, "기준가를 정하는 값"),
     row("애프터마켓", "한국 06:00~09:30", k==="after" ? "지금" : "참고", null, "기준가에는 안 들어가요")].join("");
@@ -1243,7 +1273,7 @@ function heroPred(e, c, st){
           <div>${e.kind==="bond"?"미국 국채":"미국 주식"}<b class="num ${cls(c.usd)}">${spct(c.usd)}</b></div>
           ${e.cc?`<div>옵션 매도 영향<b class="num ${cls(c.ccC)}">${spct(c.ccC)}</b></div>`:""}
           <div>환율 효과${e.hedge?" (환헤지)":""} ${q("환율 효과")}<b class="num ${cls(c.fxC)}">${spct(c.fxC)}</b></div>
-          ${c.futC?`<div>${c.futSrc==="day"?`주간거래 반영 ${q("주간거래")}`:`선물 반영 ${q("선물 반영")}`}<b class="num ${cls(c.futC)}">${spct(c.futC)}</b></div>`:""}
+          ${c.futC?`<div>${c.futSrc==="day"?`${extName()} 반영 ${q("주간거래")}`:`선물 반영 ${q("선물 반영")}`}<b class="num ${cls(c.futC)}">${spct(c.futC)}</b></div>`:""}
         </div>
         <div style="text-align:left;margin-top:10px">${sessionRows(e, c, st)}</div>
         <div class="note">${usNote(st.us, e)}${okn(mp)?" 예상 가격은 종가에 예측 등락률을 곱한 값이라, 내일 괴리율이 달라지면 실제 시장가는 달라져요.":""}</div>
@@ -1251,10 +1281,13 @@ function heroPred(e, c, st){
       </details>
     </section>`;
 }
+const extName = () => LV.extSess==="ext" ? "프리마켓" : "주간거래";
 function usNote(us, e){
-  if(us.key!=="regular"){ const c0 = calc(e); if(c0.futSrc==="day") return `미국 정규장이 닫혀 있어 마지막 정규장 가격에, 한국 낮에 열리는 주간거래 가격 움직임(${spct(c0.futC)})을 더했어요. 주간거래는 거래량이 적어 정규장과 다를 수 있어요.`; }
+  if(us.key!=="regular"){ const c0 = calc(e); if(c0.futSrc==="day") return LV.extSess==="ext"
+    ? `미국 정규장이 열리기 전이라 마지막 정규장 가격에, 프리마켓 가격 움직임(${spct(c0.futC)})을 더했어요(한국투자증권). 프리마켓은 거래량이 적어 정규장과 다를 수 있어요.`
+    : `미국 정규장이 닫혀 있어 마지막 정규장 가격에, 한국 낮에 열리는 주간거래 가격 움직임(${spct(c0.futC)})을 더했어요. 주간거래는 거래량이 적어 정규장과 다를 수 있어요.`; }
   const fut = e.rest ? `${e.proxy}(같은 지수 미국 ETF)` : "마지막 거래 가격";
-  if(us.key==="regular") return "미국 정규장 시세를 반영했어요.";
+  if(us.key==="regular") return `미국 정규장 시세를 반영했어요${LV.kisN?" (한국투자증권, Finnhub로 대조)":""}.`;
   if(us.key==="pre"||us.key==="after"){ const fb = FBETA[e.group], fm = fb ? FUTM[fb[0]] : NaN;
     return `미국 정규장이 닫혀 있어 마지막 정규장 가격으로 계산했어요.${okn(fm) ? ` 그 뒤 ${fb[0]==="nq"?"나스닥100":"S&P500"} 선물 움직임(${spct(fm)})에 민감도 ${fb[1]}배를 곱해 더했어요(추정).` : " 프리·애프터마켓 움직임은 아직 넣지 않았어요."}`; }
   const tail = e.kind==="bond" ? ` 미국 장기 국채는 ${e.proxy}(같은 지수 미국 ETF) 움직임으로 계산했어요.`
@@ -1423,7 +1456,7 @@ function holdingsCard(e, c){
   if(e.asiaW) extra += `<div class="row total"><div><div class="n">아시아 상장 ${e.asiaN.length}종목</div><div class="t">비중 ${(e.asiaW*100).toFixed(1)}% · 한국·중국·일본 낮에 거래돼서 밤사이 변화 없음</div></div><div><div class="r2 num">기여 ${pctp(0)}</div></div></div>`;
   if(e.cc) extra += `<div class="row total"><div><div class="n">콜옵션 매도 효과</div><div class="t">${e.cc.txt}</div></div><div><div class="r2 num ${cls(c.ccC)}">기여 ${pctp(c.ccC)}</div></div></div>`;
   if(c.futC) extra += c.futSrc==="day"
-    ? `<div class="row total"><div><div class="n">주간거래 반영</div><div class="t">한국 낮에 열리는 미국 주식 주간거래 가격 · 받은 종목 비중 ${Math.round((e._dayCov||0)*100)}% (나머지는 평균으로 채움) · 한국투자증권</div></div><div><div class="r2 num ${cls(c.futC)}">기여 ${pctp(c.futC)}</div></div></div>`
+    ? `<div class="row total"><div><div class="n">${extName()} 반영</div><div class="t">${LV.extSess==="ext"?"미국 정규장 전 프리마켓 가격":"한국 낮에 열리는 미국 주식 주간거래 가격"} · 받은 종목 비중 ${Math.round((e._dayCov||0)*100)}% (나머지는 평균으로 채움) · 한국투자증권</div></div><div><div class="r2 num ${cls(c.futC)}">기여 ${pctp(c.futC)}</div></div></div>`
     : `<div class="row total"><div><div class="n">선물 반영 (추정)</div><div class="t">미국 장이 닫힌 뒤 지수 선물 움직임 × 민감도 ${(FBETA[e.group]||[0,0])[1]}배</div></div><div><div class="r2 num ${cls(c.futC)}">기여 ${pctp(c.futC)}</div></div></div>`;
   extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 국채 합계":"미국 주식 합계"}</div></div><div><div class="r1 num ${cls(c.usd)}">${pctp(c.usd)}</div></div></div>`;
   extra += `<div class="row total"><div><div class="n">환율 효과</div><div class="t num">${e.hedge?"환헤지(H)라 환율 영향을 거의 안 받아요":`${FX.base} → ${FX.now}`}</div></div><div><div class="r1 num ${cls(c.fxC)}">${pctp(c.fxC)}</div></div></div>`;

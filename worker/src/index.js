@@ -102,8 +102,8 @@ async function fx(env) {
 /* ---------- 한국투자증권 (KIS) ---------- */
 const KIS_BASE = "https://openapi.koreainvestment.com:9443";
 async function kisToken(env) {
-  // 토큰은 하루 짜리라 6시간 동안 재사용해요.
-  return cached("kis/token", 6 * 3600, async () => {
+  // 토큰은 하루 짜리예요. 한국투자증권은 "하루 1번 발급"이 원칙이라(자주 받으면 이용 제한) 23시간 동안 재사용해요.
+  return cached("kis/token", 23 * 3600, async () => {
     const r = await fetch(`${KIS_BASE}/oauth2/tokenP`, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -113,6 +113,11 @@ async function kisToken(env) {
     const j = await r.json();
     return j.access_token ? { token: j.access_token } : { error: "토큰 없음" };
   });
+}
+/* 이 지역 서버에 이미 받아 둔 토큰이 있는지만 봐요(새로 받지 않아요) */
+async function kisTokenPeek() {
+  const hit = await caches.default.match(new Request("https://cache.gnomon/kis/token"));
+  return !!hit;
 }
 const kstNow = () => { const d = new Date(Date.now() + 9 * 3600e3); return { date: d.toISOString().slice(0, 10), clock: d.toISOString().slice(11, 19), hm: d.getUTCHours() * 60 + d.getUTCMinutes(), wd: d.getUTCDay() }; };
 const kNum = (x) => { const v = parseFloat(String(x ?? "").replace(/,/g, "")); return Number.isFinite(v) ? v : null; };
@@ -127,17 +132,23 @@ function kisAllowed(path, trId) {
   // 이중 확인: 시세 주소(/quotations/)가 아니거나 주문·계좌 관련 글자가 있으면 무조건 거절
   return ok && path.includes("/quotations/") && !/order|trading|balance|account|acnt|ccld|psbl/i.test(path + trId);
 }
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function kisGet(env, path, trId, params) {
   if (!kisAllowed(path, trId)) { blocked("kis-not-allowed", path); return ERR("허용되지 않은 요청이에요"); }
   const t = await kisToken(env);
   if (t.error) return t;
-  const r = await fetch(`${KIS_BASE}${path}?${new URLSearchParams(params)}`, {
-    headers: { "content-type": "application/json; charset=utf-8", authorization: `Bearer ${t.token}`, appkey: env.KIS_APP_KEY, appsecret: env.KIS_APP_SECRET, tr_id: trId, custtype: "P" },
-  });
-  if (!r.ok) return fail();
-  const j = await r.json();
-  if (j.rt_cd !== "0") return ERR("한국투자증권 응답 오류");
-  return j;
+  // 초당 호출 한도를 넘으면(EGW00201) 잠깐 쉬었다 두 번까지 다시 물어요
+  for (let tryN = 0; tryN < 3; tryN++) {
+    const r = await fetch(`${KIS_BASE}${path}?${new URLSearchParams(params)}`, {
+      headers: { "content-type": "application/json; charset=utf-8", authorization: `Bearer ${t.token}`, appkey: env.KIS_APP_KEY, appsecret: env.KIS_APP_SECRET, tr_id: trId, custtype: "P" },
+    });
+    let j = null; try { j = await r.json(); } catch (_) {}
+    if (j && j.msg_cd === "EGW00201") { await sleep(1100); continue; }
+    if (!r.ok || !j) return fail();
+    if (j.rt_cd !== "0") return ERR("한국투자증권 응답 오류");
+    return j;
+  }
+  return ERR("잠시 뒤 다시");
 }
 /* 국내 ETF: ETF 전용 현재가(가격·NAV) → 안 되면 일반 현재가 + FunETF iNAV */
 async function kisEtf(env, code) {
@@ -262,14 +273,15 @@ async function route(path, q, env) {
     const list = pick(q.get("s"), SYM, ALLOW_US, 40);
     if (!list.length) return [ERR("노몬에서 쓰는 종목만 받을 수 있어요"), 400, 0];
     const out = {}, day = path === "/usday";
-    for (let i = 0; i < list.length; i += 5) {  // 초당 호출 한도를 넘지 않게 5개씩
-      await Promise.all(list.slice(i, i + 5).map(async (s) => { out[s] = await kisUs(env, s, day).catch(fail); }));
-    }
+    // 초당 호출 한도를 넘지 않게 하나씩 차례로 물어요 (거래소 찾기는 하루 한 번만)
+    for (const s of list) out[s] = await kisUs(env, s, day).catch(fail);
     return [{ quotes: out, session: day ? "주간거래" : "정규장", source: "한국투자증권", time: new Date().toISOString() }, 200, 30];
   }
   if (path === "/kis-check") {
     // 성공 여부와 응답 칸 이름만 보여줘요(값·키·계좌 정보 없음). 5분 동안 같은 답을 나눠 줘요.
     if (!kis) return [{ ok: false, error: "한국투자증권 키가 아직 없어요" }, 200, 0];
+    // 점검 때문에 토큰을 새로 받지 않아요(하루 1번 원칙). 이 지역에 토큰이 없으면 점검을 건너뛰어요
+    if (!(await kisTokenPeek())) return [{ ok: true, token: "이 지역 토큰 없음 (점검 생략)", fields: [] }, 200, 0];
     const v = await cached("kis/check", 300, async () => {
       const tok = await kisToken(env);
       if (tok.error) return { ok: false, token: "실패" };
