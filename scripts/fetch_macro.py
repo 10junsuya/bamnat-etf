@@ -1,6 +1,7 @@
 """매크로 지표 실제 값 → data/macro.json (앱에 내장)
 
-미국: FRED(세인트루이스 연준) · 한국: ECOS(한국은행). 키는 GitHub Secrets 환경변수로만 들어와요.
+미국: FRED(세인트루이스 연준) · 한국: ECOS(한국은행) · 달러 인덱스·발표 후 30분 반응: 야후 파이낸스.
+키는 GitHub Secrets 환경변수로만 들어와요.
 발표 '예상치(컨센서스)'는 무료 공식 출처가 없어서 여기서 만들지 않아요(앱에서는 '연결 전'으로 표시).
 실패한 지표는 기존 값을 지우지 않고 오류만 기록해요.
 """
@@ -45,6 +46,104 @@ def ecos(code, item, months=40):
     j = get(f"https://ecos.bok.or.kr/api/StatisticSearch/{ECOS_KEY}/json/kr/1/100/{code}/M/{start}/{now.strftime('%Y%m')}/{item}")
     rows = j.get("StatisticSearch", {}).get("row") or []
     return [(f"{r['TIME'][:4]}-{r['TIME'][4:6]}-01", float(r["DATA_VALUE"])) for r in rows if r.get("DATA_VALUE") not in (None, "")]
+
+
+ET = ZoneInfo("America/New_York")
+UA = {"User-Agent": "Mozilla/5.0 (gnomon-macro)"}
+
+
+def yahoo(sym, rng, itv, prepost=False):
+    """야후 차트: [(유닉스 시각, 종가)]"""
+    u = (f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range={rng}&interval={itv}"
+         + ("&includePrePost=true" if prepost else ""))
+    with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=30) as r:
+        res = json.loads(r.read())["chart"]["result"][0]
+    ts, cl = res.get("timestamp") or [], res["indicators"]["quote"][0].get("close") or []
+    return [(t, c) for t, c in zip(ts, cl) if c is not None]
+
+
+def fred_release_dates(sid, n=8):
+    """이 시리즈가 실린 발표의 최근 발표일(미국 날짜, 최신 → 오래된)"""
+    rid = get("https://api.stlouisfed.org/fred/series/release?" + urllib.parse.urlencode(
+        {"series_id": sid, "api_key": FRED_KEY, "file_type": "json"}))["releases"][0]["id"]
+    j = get("https://api.stlouisfed.org/fred/release/dates?" + urllib.parse.urlencode(
+        {"release_id": rid, "api_key": FRED_KEY, "file_type": "json", "sort_order": "desc", "limit": n,
+         "include_release_dates_with_no_data": "false"}))
+    return [x["date"] for x in j.get("release_dates", [])]
+
+
+# 발표 후 30분 반응: 발표 시각(미국 동부 08:30) 직전 5분봉 종가 → 30분 뒤 5분봉 종가
+REACT_SYMS = [("ES=F", "pct"), ("^TNX", "pp"), ("DX-Y.NYB", "pct"), ("KRW=X", "won")]  # 앱 순서: S&P500 선물·10년물·달러 인덱스·원/달러
+REL_SERIES = {"cpi": "CPIAUCSL", "pce": "PCEPI", "ppi": "PPIFIS", "nfp": "PAYEMS", "retail": "RSAFS", "claims": "ICSA"}
+
+
+def reactions(ind, errors):
+    bars = {}
+    for sym, _ in REACT_SYMS:
+        try:
+            bars[sym] = yahoo(sym, "60d", "5m", True)
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"반응 {sym}: {type(e).__name__}")
+            bars[sym] = []
+
+    def px(sym, t):  # t 시각 이전 마지막 5분봉 종가 (10분 넘게 비면 없음)
+        xs = [(a, c) for a, c in bars[sym] if a < t]
+        return xs[-1][1] if xs and t - xs[-1][0] <= 900 else None
+
+    now_et = dt.datetime.now(ET)
+    for k, sid in REL_SERIES.items():
+        if k not in ind:
+            continue
+        try:
+            ds = [d for d in fred_release_dates(sid) if d <= now_et.date().isoformat()]
+        except Exception as e:  # noqa: BLE001
+            errors.append(scrub(f"발표일 {k}: {type(e).__name__}: {e}")[:200])
+            continue
+        for d in ds:
+            t0 = dt.datetime.fromisoformat(d + "T08:30").replace(tzinfo=ET)
+            if t0 + dt.timedelta(minutes=35) > now_et:
+                continue  # 오늘 발표인데 아직 30분이 안 지났으면 그 전 발표
+            ind[k]["rel"] = t0.isoformat()
+            r = []
+            for sym, kind in REACT_SYMS:
+                a, b = px(sym, t0.timestamp()), px(sym, t0.timestamp() + 1800)
+                if a is None or b is None:
+                    r.append(None)
+                elif kind == "pct":
+                    r.append(round((b / a - 1) * 100, 2))
+                elif kind == "pp":
+                    r.append(round(b - a, 3))
+                else:
+                    r.append(round(b - a, 1))
+            if any(v is not None for v in r):
+                ind[k]["react"] = r
+                ind[k]["react_src"] = "야후 5분봉 (S&P500 선물 ES=F · 10년물 ^TNX · 달러 인덱스 · 원/달러)"
+            else:
+                ind[k].pop("react", None)
+            break
+
+
+def ecos_find(errors):
+    """ECOS에서 '수출입(통관)' 통계표·항목 찾기 → (표 코드, 항목 코드, 표 이름)"""
+    tabs = []
+    for a in range(1, 4001, 1000):
+        j = get(f"https://ecos.bok.or.kr/api/StatisticTableList/{ECOS_KEY}/json/kr/{a}/{a + 999}")
+        rows = j.get("StatisticTableList", {}).get("row") or []
+        tabs += rows
+        if len(rows) < 1000:
+            break
+    cand = [t for t in tabs if "수출" in t.get("STAT_NAME", "") and t.get("CYCLE") in ("M", None) and t.get("SRCH_YN") == "Y"]
+    cand.sort(key=lambda t: (("통관" not in t["STAT_NAME"]) and ("수출입" not in t["STAT_NAME"]), len(t["STAT_NAME"])))
+    print("ECOS 수출 통계표 후보:", [(t["STAT_CODE"], t["STAT_NAME"]) for t in cand[:12]])
+    for t in cand[:8]:
+        j = get(f"https://ecos.bok.or.kr/api/StatisticItemList/{ECOS_KEY}/json/kr/1/200/{t['STAT_CODE']}")
+        items = j.get("StatisticItemList", {}).get("row") or []
+        print(" ", t["STAT_CODE"], [(i.get("ITEM_CODE"), i.get("ITEM_NAME"), i.get("CYCLE"), i.get("UNIT_NAME")) for i in items[:10]])
+        for i in items:
+            nm = (i.get("ITEM_NAME") or "").replace(" ", "")
+            if i.get("CYCLE") == "M" and nm in ("수출", "수출(FOB)", "수출금액", "수출액", "수출총액") :
+                return t["STAT_CODE"], i["ITEM_CODE"], t["STAT_NAME"]
+    raise ValueError("수출 통계를 못 찾았어요")
 
 
 mon = lambda d: f"{int(d[5:7])}월"
@@ -167,15 +266,28 @@ def main():
                     "hist": [r1(v, 2) for _, v in o[-6:]], "ref": mon(o[-1][0]), "asof": o[-1][0], "src": "ECOS 722Y001"}
         run("bok", bok)
         run("kcpi", lambda: monthly("kcpi", yoy_series(ecos("901Y009", "0", 52)), 1, "ECOS 901Y009"))
+
+        def export():
+            code, item, name = ecos_find(errors)
+            x = monthly("export", yoy_series(ecos(code, item, 52)), 1, f"ECOS {code} ({name})")
+            x["note"] = (x.get("note") + " · " if x.get("note") else "") + "수출 금액 1년 전 같은 달 대비"
+            return x
+        run("export", export)
     else:
         errors.append("ECOS_API_KEY 없음")
+    run("dxy", lambda: market([(dt.datetime.fromtimestamp(t, ET).date().isoformat(), c) for t, c in yahoo("DX-Y.NYB", "3y", "1d")], 2, "ICE 달러 인덱스 (야후 DX-Y.NYB)"))
+    if FRED_KEY:
+        try:
+            reactions(ind, errors)
+        except Exception as e:  # noqa: BLE001
+            errors.append(scrub(f"반응: {type(e).__name__}: {e}")[:200])
     out = {"generated_at_kst": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "ind": ind, "errors": errors}
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"지표 {len(ind)}개 · 오류 {len(errors)}개")
     for e in errors:
         print(" -", e)
     for k, v in ind.items():
-        print(k, {x: v[x] for x in v if x != "hist"})
+        print(k, {x: v[x] for x in v if x not in ("hist", "series")})
 
 
 if __name__ == "__main__":

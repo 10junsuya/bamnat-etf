@@ -2334,6 +2334,7 @@ const IND = {
     read:"많이 오르면 물가가 다시 오를 수 있다는 걱정에 금리 인하 기대가 줄어드는 쪽으로 해석되기도 해요."}
 };/* 원/달러는 ETF 계산과 같은 값을 써요 */
 function syncFxInd(){ const v = IND.usdkrw; if(!v || !okn(FX.now)) return;
+  v.real = true; v.asof = LV.fxDate || ymd(parts(now(),"Asia/Seoul")); v.srcSeries = (LV.fxSrc||"환율").replace(/\s+/g,""); v.rnote = LV.fxLive ? "실시간" : "하루 한 번";
   const h = Object.entries((LIVE.fx||{}).hist||{}).sort((a,b)=>a[0]<b[0]?-1:1).map(x=>x[1]);
   v.now = +FX.now.toFixed(1);
   if(h.length>=2){ v.spark = h.slice(-11).map(x=>+x.toFixed(1)); v.spark[v.spark.length-1] = v.now; v.chg = +(v.now - v.spark[v.spark.length-2]).toFixed(1); }
@@ -2347,7 +2348,11 @@ function applyMacro(){
     if(m.a!=null && v.last){ v.last = {a:m.a, f:null, p:m.p}; v.hist = m.hist; if(m.ref) v.ref = m.ref; v.noCons = true; delete v.core; }
     if(m.now!=null){ v.now = m.now; v.chg = m.chg; v.spark = m.spark; }
     if(m.series && m.series.length) v.series = m.series;
+    if(m.rel) v.rel = m.rel;
+    if(m.react){ v.react = m.react; v.reactReal = true; }
   }
+  // 발표 후 30분 반응은 실제로 계산한 것만 보여줘요 (샘플 숫자는 지움)
+  for(const v of Object.values(IND)) if(!v.reactReal) v.react = null;
 }
 applyMacro();
 const asofTxt = v => v.g==="mkt" ? mdTxt(v.asof) : (v.ref || mdTxt(v.asof));
@@ -2514,7 +2519,7 @@ const LL_ETF = {
   risk:"불안이 길어지면, 작은 성장 기업이 많은 ETF가 더 크게 흔들리는 경우가 많았어요."
 };
 function myEtfList(){ const pos = myPositions(); return pos.length ? {by:"내 계좌", list:pos.map(p=>p.e)} : {by:"관심 ETF", list:ETFS.filter(e=>stars.includes(e.code))}; }
-function etfReact(v, e){ const beta = ({ndx:1.3, ndxact:1.3, ndxcc:1.2, ndxotm:1.1, spcc:0.95, divcc:0.8, sox:1.3, semi:1.3, aisemi:1.5, tech:1.3, bigtech:1.3, space:1.6, spacetech:1.6, spaceisel:1.7, spaceakros:1.5, div:0.8, tesla:1.6, optic:1.8, aipower:1.6, quantum:2.0, humanoid:1.4})[e.group] || 1; return v.react[0]/100*beta + (e.hedge ? 0 : v.react[3]/1336); }
+function etfReact(v, e){ const beta = ({ndx:1.3, ndxact:1.3, ndxcc:1.2, ndxotm:1.1, spcc:0.95, divcc:0.8, sox:1.3, semi:1.3, aisemi:1.5, tech:1.3, bigtech:1.3, space:1.6, spacetech:1.6, spaceisel:1.7, spaceakros:1.5, div:0.8, tesla:1.6, optic:1.8, aipower:1.6, quantum:2.0, humanoid:1.4})[e.group] || 1; return rv(v.react,0)/100*beta + (e.hedge || !okn(rv(v.react,3)) ? 0 : v.react[3]/(okn(FX.now)?FX.now:1336)); }
 function etfLinkRow(k, h){
   const v = IND[k], x = IND_X[k] || {}, me = myEtfList();
   if(!me.list.length) return "";
@@ -2625,6 +2630,7 @@ function histBars(ind){
   const arr = ind.hist, W=300, H=90, mx=Math.max(...arr), mn=Math.min(...arr)*0.9, bw=W/arr.length;
   return `<svg viewBox="0 0 ${W} ${H+18}" width="100%" height="${H+18}" role="img" aria-label="최근 6번 발표 결과">${arr.map((v,i)=>{ const h=(v-mn)/(mx-mn||1)*(H-20)+14; return `<rect x="${(i*bw+8).toFixed(1)}" y="${(H-h).toFixed(1)}" width="${(bw-16).toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="var(--${i===arr.length-1?"accent":"muted"})" opacity="${i===arr.length-1?1:.35}"/><text x="${(i*bw+bw/2).toFixed(1)}" y="${(H-h-4).toFixed(1)}" text-anchor="middle" font-size="11" fill="var(--muted)">${v}</text>`; }).join("")}<text x="0" y="${H+14}" font-size="11" fill="var(--muted)">6번 전</text><text x="${W}" y="${H+14}" font-size="11" fill="var(--muted)" text-anchor="end">최근</text></svg>`;
 }
+function relTxt(v){ if(!v.rel) return ""; const p = parts(new Date(v.rel),"Asia/Seoul"); return `${p.m}/${p.d} ${pad(p.h)}:${pad(p.mi)}`; }
 function surpriseText(ind){
   if(ind.last.f==null) return ind.noCons ? "시장 예상치는 아직 연결 전이에요" : "시장 예상치를 따로 내지 않는 지표예요";
   const d = ind.last.a - ind.last.f;
@@ -2636,35 +2642,44 @@ function nextUpcoming(){
   return Object.entries(IND).filter(([,v])=>v.next).map(([k,v])=>({k, v, r:releaseKst(v)})).sort((a,b)=>a.r.ymd.localeCompare(b.r.ymd));
 }
 
-/* 아침 브리핑에 넣을 어젯밤 지표 (샘플: CPI와 실업수당 청구가 어젯밤 발표됐다고 가정) */
-const LAST_NIGHT = ["cpi","claims"];
+/* 아침 브리핑에 넣을 어젯밤 지표 (실제 발표 시각 기준) */
+/* 지난 40시간 안에 발표된 미국 지표 (발표 시각 = data/macro.json 의 rel) */
+function lastNight(){
+  const t = now().getTime();
+  return Object.keys(IND).filter(k=>IND[k].rel && t - new Date(IND[k].rel).getTime() >= 0 && t - new Date(IND[k].rel).getTime() < 40*3600e3)
+    .sort((a,b)=>new Date(IND[b].rel)-new Date(IND[a].rel));
+}
+const rv = (r,i) => r && okn(r[i]) ? r[i] : NaN;
 function nightFlowHtml(x){
   if(!x) return "";
   const v = x.v, r = v.react, d = v.last.a - v.last.f;
+  if(!r) return "";
   const sg = n => (n>0?"+":"")+n;
   const step = (name, val, c) => `<div class="fl"><span>${name}</span><b class="num ${c||""}">${val}</b></div>`;
   const me = myEtfList();
   const rows = [
-    step(`${v.name} ${Math.abs(d)<1e-9?"예상과 같음":d>0?"예상보다 높음":"예상보다 낮음"}`, `${fmtVal(v,v.last.a)} (예상 ${fmtVal(v,v.last.f)})`),
-    step("미국 10년물 금리", `${sg(r[1])}%p`, cls(r[1])),
-    step("달러 인덱스", `${sg(r[2])}%`, cls(r[2])),
-    step("원/달러 환율", `${sg(r[3])}원`, cls(r[3])),
+    okn(v.last.f) ? step(`${v.name} ${Math.abs(d)<1e-9?"예상과 같음":d>0?"예상보다 높음":"예상보다 낮음"}`, `${fmtVal(v,v.last.a)} (예상 ${fmtVal(v,v.last.f)})`) : step(`${v.name} 발표`, fmtVal(v,v.last.a)),
+    ...(okn(rv(r,0)) ? [step("S&P500 선물", `${sg(r[0])}%`, cls(r[0]))] : []),
+    ...(okn(rv(r,1)) ? [step("미국 10년물 금리", `${sg(r[1])}%p`, cls(r[1]))] : []),
+    ...(okn(rv(r,2)) ? [step("달러 인덱스", `${sg(r[2])}%`, cls(r[2]))] : []),
+    ...(okn(rv(r,3)) ? [step("원/달러 환율", `${sg(r[3])}원`, cls(r[3]))] : []),
     ...me.list.filter(e=>e.kind!=="bond").map(e=>{ const ch = etfReact(v,e); return step(`${e.name} 추정`, spct(ch), cls(ch)); })
   ];
   return `<div class="flow"><div class="small" style="font-weight:600;margin-bottom:6px">어젯밤 이렇게 이어졌어요</div>${rows.join('<div class="ar">↓</div>')}
-    <p class="tiny muted" style="margin-top:6px">${v.name} 발표 후 30분 기준 · 샘플 숫자${me.list.length?"":" · 내 ETF를 등록하면 마지막 줄에 나와요"}</p></div>`;
+    <p class="tiny muted" style="margin-top:6px">${v.name} 발표(${relTxt(v)}) 후 30분 · 실제 가격 기준, ETF 줄은 그 움직임으로 계산한 추정${me.list.length?"":" · 내 ETF를 등록하면 마지막 줄에 나와요"}</p></div>`;
 }
 function macroNightHtml(st, from, compact){
-  const items = LAST_NIGHT.map(k=>({k, v:IND[k]}));
+  const items = lastNight().map(k=>({k, v:IND[k]}));
+  if(!items.length) return compact ? "" : `<div class="small muted" style="margin-top:16px">어젯밤에는 발표된 미국 주요 지표가 없어요.</div>`;
   const nx = nextUpcoming().filter(x=>x.r.ymd>=ymd(st.k))[0];
-  if(compact) return `<div style="margin-top:10px"><div class="tiny muted">어젯밤 발표된 지표 · 샘플</div><div class="chips" style="margin-top:4px">${items.map(x=>`<button class="chip" type="button" data-ind="${x.k}" style="border:0;cursor:pointer;font-size:13px">${x.v.name} <b class="num">${fmtVal(x.v,x.v.last.a)}</b> (예상 ${fmtVal(x.v,x.v.last.f)})</button>`).join("")}</div></div>`;
+  if(compact) return `<div style="margin-top:10px"><div class="tiny muted">어젯밤 발표된 지표</div><div class="chips" style="margin-top:4px">${items.map(x=>`<button class="chip" type="button" data-ind="${x.k}" style="border:0;cursor:pointer;font-size:13px">${x.v.name} <b class="num">${fmtVal(x.v,x.v.last.a)}</b> (예상 ${fmtVal(x.v,x.v.last.f)})</button>`).join("")}</div></div>`;
   return `<div style="margin-top:16px">
-    <div class="small muted" style="margin-bottom:2px">어젯밤 발표된 지표 <span class="tiny">샘플</span></div>
+    <div class="small muted" style="margin-bottom:2px">어젯밤 발표된 지표</div>
     ${items.map(x=>{ const z = IND_X[x.k] ? IND_X[x.k].zones[zoneOf(IND_X[x.k], x.v.last.a)][1] : "";
       return `<button class="irow" type="button" data-ind="${x.k}"${from?` data-from="${from}"`:""} style="margin-top:8px">
       <div class="top"><span class="nm">${x.v.name}</span><span class="val num">${fmtVal(x.v,x.v.last.a)}</span></div>
       <div class="one">${surpriseText(x.v)} · 예상 ${fmtVal(x.v,x.v.last.f)}${z?` · ‘${z}’ 구간`:""}</div>
-      <div class="meta"><span class="chip">발표 후 30분 S&amp;P500 선물 <b class="num ${cls(x.v.react[0])}">${x.v.react[0]>0?"+":""}${x.v.react[0]}%</b></span><span class="chip">원/달러 <b class="num">${x.v.react[3]>0?"+":""}${x.v.react[3]}원</b></span></div>
+      ${x.v.react ? `<div class="meta">${okn(rv(x.v.react,0))?`<span class="chip">발표 후 30분 S&amp;P500 선물 <b class="num ${cls(x.v.react[0])}">${x.v.react[0]>0?"+":""}${x.v.react[0]}%</b></span>`:""}${okn(rv(x.v.react,3))?`<span class="chip">원/달러 <b class="num">${x.v.react[3]>0?"+":""}${x.v.react[3]}원</b></span>`:""}</div>` : ""}
     </button>`; }).join("")}
     ${nightFlowHtml(items[0])}
     ${nx?`<div class="tiny muted" style="margin-top:8px">다음 발표: ${IND[nx.k].name} · ${nx.r.label}</div>`:""}
@@ -2687,7 +2702,7 @@ function viewMacro(st){
       <button class="acard wide hl" type="button" data-go="macro-map"><div class="c">우리 앱만의 기능</div><div class="t">연관성 지도</div><div class="s">지표들이 서로 어떻게 이어지는지, 무엇이 먼저 움직이는지 한눈에 봐요</div><div class="f muted">발표 반응 · 최근 동조화 · 선행·후행</div></button>
       <button class="acard wide" type="button" data-go="macro-cal"><div class="c">한국 시간</div><div class="t">발표 일정</div><div class="s">앞으로 나올 지표를 날짜순으로 모아봤어요</div><div class="f muted">서머타임 자동 반영</div></button>
     </div>
-    <p class="tiny muted" style="margin-top:14px">지표 숫자는 FRED(세인트루이스 연준)·한국은행 ECOS의 실제 값이에요. ISM·수출입·달러 인덱스, 시장 예상치, 발표 후 시장 반응은 아직 샘플이에요.</p>`;
+    <p class="tiny muted" style="margin-top:14px">지표 숫자는 FRED(세인트루이스 연준)·한국은행 ECOS·야후(달러 인덱스·원/달러)의 실제 값이에요. 발표 후 30분 반응은 야후 5분 단위 가격으로 계산해요.${(()=>{ const s = Object.values(IND).filter(v=>!v.real).map(v=>v.name); return s.length ? ` ${s.join("·")}는 아직 샘플이에요.` : ""; })()} 시장 예상치는 무료 공식 출처가 없어 넣지 않았어요.</p>`;
 }
 
 function curVal(v){ return v.g==="mkt" ? v.now : v.last.a; }
@@ -2901,8 +2916,9 @@ function indSheet(k, from, prev){
         <p style="margin-top:10px">${surpriseText(v)}.</p>${core}</div>
       <div class="bsection"><h4>보통 이렇게 해석돼요</h4><p>${v.read}</p><p class="small muted">${v.more}</p><p class="tiny muted">항상 그렇지는 않아요. 다른 지표나 그때 시장 분위기에 따라 반대로 움직이기도 해요.</p></div>
       ${IND_X[k]?`<div class="bsection"><h4>이렇게 이어져요</h4>${chainHtml(IND_X[k])}</div>`:""}
-      <div class="bsection"><h4>지난 발표 후 30분, 시장은 이렇게 움직였어요 <span class="tiny muted" style="font-weight:400">샘플</span></h4>
-        <div class="react">${names.map((n,i)=>`<div>${n}</div><div class="num ${cls(v.react[i])}">${v.react[i]>0?"+":""}${v.react[i]}${units[i]}</div>`).join("")}</div></div>
+      ${v.react ? `<div class="bsection"><h4>지난 발표 후 30분, 시장은 이렇게 움직였어요 <span class="tiny muted" style="font-weight:400">실제 · ${relTxt(v)}</span></h4>
+        <div class="react">${names.map((n,i)=>okn(rv(v.react,i))?`<div>${n}</div><div class="num ${cls(v.react[i])}">${v.react[i]>0?"+":""}${v.react[i]}${units[i]}</div>`:"").join("")}</div>
+        <p class="tiny muted" style="margin-top:6px">발표 직전 5분 가격과 30분 뒤 가격을 비교했어요 (야후 5분봉). 그 30분 동안 다른 뉴스가 같이 반영됐을 수 있어요.</p></div>` : ""}
       ${IND_X[k] && IND_X[k].watch ? `<div class="bsection"><h4>다음 발표에서 같이 볼 것</h4><ul style="margin:0;padding-left:18px">${IND_X[k].watch.map(w=>`<li style="margin:4px 0">${w}</li>`).join("")}</ul></div>` : ""}
       <p class="small" style="margin-top:16px"><a href="${v.src}" target="_blank" rel="noopener">발표 기관 원문 보기 ›</a></p>
     </details>
@@ -3136,7 +3152,7 @@ async function drawShare(code){
   g.fillStyle="rgba(255,255,255,.06)"; g.fillRect(60, y-60, W-120, 170);
   g.fillStyle=MUT; g.font=`500 30px ${F}`; g.fillText("어젯밤 발표된 지표", 90, y-12);
   g.fillStyle=INK; g.font=`600 36px ${F}`;
-  g.fillText(LAST_NIGHT.map(kk=>`${IND[kk].name} ${fmtVal(IND[kk],IND[kk].last.a)} (예상 ${fmtVal(IND[kk],IND[kk].last.f)})`).join("   "), 90, y+44);
+  g.fillText(lastNight().map(kk=>`${IND[kk].name} ${fmtVal(IND[kk],IND[kk].last.a)} (예상 ${fmtVal(IND[kk],IND[kk].last.f)})`).join("   "), 90, y+44);
   g.fillStyle=MUT; g.font=`400 26px ${F}`;
   g.fillText("추정치는 실제와 다를 수 있어요 · 투자 권유가 아니에요", 80, H-70);
   return new Promise(res=>cv.toBlob(b=>res({blob:b, url:cv.toDataURL("image/png")}), "image/png"));
