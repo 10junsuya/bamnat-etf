@@ -443,6 +443,7 @@ details.more summary span{font-weight:400; color:var(--muted); font-size:14px}
 .howbtn{margin-top:6px; font-size:13px; padding:5px 12px}
 .howbox{margin:8px 0 0; padding:4px 14px; background:var(--surface-2); border-radius:12px; font-size:14px; line-height:1.6}
 .elines .anrow{grid-template-columns:84px 1fr} .elines .anpts{margin:0}
+.watchl .anrow{grid-template-columns:84px 1fr}
 .howbox .anpts{border-top:0; margin:0} .howbox .anrow:last-child{border-bottom:0}
 .agrid.tools .acard{min-height:0; padding:14px} .agrid.tools .t{font-size:16px}
 .form.calc{grid-template-columns:1fr 1fr}
@@ -1094,12 +1095,12 @@ function calc(e){
   // 미국 장이 닫혀 있으면 그 뒤 지수 선물 움직임을 민감도만큼 더해요 (추정)
   // 정규장 움직임만의 합 (주간거래·프리마켓 몫은 아래 '반영'으로 따로 보여줘요)
   const usdStock = usd - rows.reduce((a,x)=>a+(x.ext && okn(x.reg) ? x.w*(x.r-x.reg) : 0),0);
-  let futC = 0, futSrc = ""; const fb = FBETA[e.group];
+  let futC = 0, futSrc = "", perW = 0; const fb = FBETA[e.group];
   // 담긴 회사의 주간거래 시세가 주식 비중의 절반 이상 있으면 그걸 쓰고(받은 종목 평균으로 나머지를 채움), 아니면 지수 선물 × 민감도
   { const sw = rows.reduce((a,x)=>a+x.w,0) + (e.rest ? e.rest.w : 0), dr = rows.filter(x=>okn(DAYM[x.t]) && !FLAG.stock.has(x.t)), dw = dr.reduce((a,x)=>a+x.w,0);
     // 받은 종목은 이미 등락에 들어 있어요 → 못 받은 몫(나머지 종목·25위 밖)만 받은 종목 평균이나 선물로 채워요
-    if(okn(usd) && dw > 0 && dw >= 0.5*rows.reduce((a,x)=>a+x.w,0)){ futC = dr.reduce((a,x)=>a+x.w*DAYM[x.t],0)/dw*(sw-dw); futSrc = "day"; e._dayCov = dw/sw; if(!futC) futC = 1e-12; }
-    else if(fb && okn(FUTM[fb[0]]) && okn(usd)){ futC = fb[1]*FUTM[fb[0]]*(sw>0 ? (sw-dw)/sw : 1); futSrc = "fut"; } }
+    if(okn(usd) && dw > 0 && dw >= 0.5*rows.reduce((a,x)=>a+x.w,0)){ perW = dr.reduce((a,x)=>a+x.w*DAYM[x.t],0)/dw; futC = perW*(sw-dw); futSrc = "day"; e._dayCov = dw/sw; if(!futC) futC = 1e-12; }
+    else if(fb && okn(FUTM[fb[0]]) && okn(usd)){ perW = fb[1]*FUTM[fb[0]]/(sw>0 ? sw : 1); futC = perW*(sw>0 ? sw-dw : 1); futSrc = "fut"; } }
   if(futC) usd = (1+usd)*(1+futC) - 1;
   let ccC = 0; if(e.cc && okn(usd)){ const a = ccF(e, usd); ccC = a - usd; usd = a; }
   let fxR = e.hedge ? 0 : FX.now/FX.base - 1; if(Math.abs(fxR) < 1e-9) fxR = 0;
@@ -1111,7 +1112,7 @@ function calc(e){
   const market = live ? e.kn.price : est*(1+e.prem);
   const inavLive = live && okn(e.kn.inav) ? e.kn.inav : NaN;
   if(FLAG.etf.has(e.code)) return {rows, usd:NaN, restC, ccC, futC, futSrc, fxC:NaN, total:NaN, est:NaN, coverage, market:NaN, inavLive:NaN, live, fxR};
-  return {rows, usd:usdStock, restC, ccC, futC: futC ? usd-ccC-usdStock : 0, futSrc, fxC, total, est, coverage, market, inavLive, live, fxR};
+  return {rows, usd:usdStock, restC, ccC, futC: futC ? usd-ccC-usdStock : 0, futSrc, perW, fxC, total, est, coverage, market, inavLive, live, fxR};
 }
 /* 실제 추정 오차: 전날 기준가 × 미국 종가 변화 × 환율 변화로 맞힌 값과, 다음 날 실제 공시 기준가의 차이 */
 function realErrs(e){
@@ -1476,20 +1477,27 @@ function holdingsCard(e, c){
         ? `<div class="r1 small muted">${extName()} 확인 중</div><div class="r2 num">받은 종목 평균으로 채움</div>`
         : `<div class="r1 num ${cls(x.r)}">${spct(x.r)}</div><div class="r2 num">기여 ${pctp(x.c)}</div>`}</div>
     </button>`;
-  let extra = "";
+  let extra = "", restExt = 0;
   if(e.rest){
     // 비중형: 위에 따로 보여준 '시세 확인 중' 종목은 빼고, 25위 밖 종목만 '나머지'로
     const pdf = e.kind==="pdf", rn = pdf ? (e.restN||0) : e.rest.n, rw = pdf ? (e.restW||0) : e.rest.w;
-    const rc = pdf ? (okn(e.proxyR) ? rw*e.proxyR : NaN) : c.restC;
-    if(!pdf || rn>0 || rw>0) extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 장기 국채":`나머지 ${rn}종목`}</div><div class="t">비중 ${(rw*100).toFixed(1)}% · ${e.proxy} 움직임에 맞춤${!pdf && miss.length?` (위 '시세 확인 중' ${miss.length}종목 포함)`:""}</div></div><div><div class="r2 num">기여 ${pctp(rc)}</div></div></div>`;
+    // 미국 정규장이 닫혀 있으면 이 줄에도 주간거래·프리마켓(또는 선물) 몫을 더해 보여줘요. 아래 '반영' 줄에서는 그만큼 빼요 (합계는 같아요)
+    restExt = c.futC && okn(c.perW) ? rw*c.perW : 0;
+    const rc = (pdf ? (okn(e.proxyR) ? rw*e.proxyR : NaN) : c.restC) + restExt;
+    const extTxt = restExt ? ` + ${c.futSrc==="day" ? `${extName()}(받은 종목 평균)` : "선물"} ${spct(c.perW)}` : "";
+    if(!pdf || rn>0 || rw>0) extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 장기 국채":`나머지 ${rn}종목`}</div><div class="t">비중 ${(rw*100).toFixed(1)}% · ${e.proxy} 움직임에 맞춤${extTxt}${!pdf && miss.length?` (위 '시세 확인 중' ${miss.length}종목 포함)`:""}</div></div><div><div class="r2 num">기여 ${pctp(rc)}</div></div></div>`;
     if(pdf && miss.length) extra += `<div class="tiny muted" style="margin-top:6px">'시세 확인 중' ${miss.length}종목(비중 ${(missW*100).toFixed(1)}%)은 시세를 받은 종목들의 평균 움직임으로 계산했어요. 새로 들어온 회사는 다음 시세 수집 때부터 실제 값이 들어와요.</div>`;
   }
   if(e.asiaW) extra += `<div class="row total"><div><div class="n">아시아 상장 ${e.asiaN.length}종목</div><div class="t">비중 ${(e.asiaW*100).toFixed(1)}% · 한국·중국·일본 낮에 거래돼서 밤사이 변화 없음</div></div><div><div class="r2 num">기여 ${pctp(0)}</div></div></div>`;
   if(e.cc) extra += `<div class="row total"><div><div class="n">콜옵션 매도 효과</div><div class="t">${e.cc.txt}</div></div><div><div class="r2 num ${cls(c.ccC)}">기여 ${pctp(c.ccC)}</div></div></div>`;
-  if(c.futC) extra += c.futSrc==="day"
-    ? `<div class="row total"><div><div class="n">${extName()} 반영</div><div class="t">${LV.extSess==="ext"?"미국 정규장 전 프리마켓 가격":"한국 낮에 열리는 미국 주식 주간거래 가격"} · 받은 종목 비중 ${Math.round((e._dayCov||0)*100)}% (나머지는 평균으로 채움) · 한국투자증권</div></div><div><div class="r2 num ${cls(c.futC)}">기여 ${pctp(c.futC)}</div></div></div>`
-    : `<div class="row total"><div><div class="n">선물 반영 (추정)</div><div class="t">미국 장이 닫힌 뒤 지수 선물 움직임 × 민감도 ${(FBETA[e.group]||[0,0])[1]}배</div></div><div><div class="r2 num ${cls(c.futC)}">기여 ${pctp(c.futC)}</div></div></div>`;
-  extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 국채 합계":"미국 주식 합계"}</div></div><div><div class="r1 num ${cls(c.usd)}">${pctp(c.usd)}</div></div></div>`;
+  // 위 종목 줄에는 이미 각자의 주간거래·프리마켓 움직임이 들어 있어요 → 여기엔 아직 못 받은 종목을 채운 몫만 보여줘요 (줄을 다 더하면 합계와 같아요)
+  const rowsExt = c.rows.reduce((a,x)=>a+(x.ext && okn(x.reg) ? x.w*(x.r-x.reg) : 0),0), fillC = c.futC - restExt - rowsExt;
+  if(c.futC && Math.abs(fillC) > 5e-6) extra += c.futSrc==="day"
+    ? `<div class="row total"><div><div class="n">${extName()} 확인 중 종목</div><div class="t">아직 가격을 못 받은 종목은 받은 종목 평균 ${spct(c.perW)}로 채웠어요 · 한국투자증권</div></div><div><div class="r2 num ${cls(fillC)}">기여 ${pctp(fillC)}</div></div></div>`
+    : `<div class="row total"><div><div class="n">선물 반영 (추정)</div><div class="t">미국 장이 닫힌 뒤 지수 선물 움직임 × 민감도 ${(FBETA[e.group]||[0,0])[1]}배</div></div><div><div class="r2 num ${cls(fillC)}">기여 ${pctp(fillC)}</div></div></div>`;
+  // 합계 = 위 줄들을 모두 더한 값 (정규장 + 주간거래·프리마켓 또는 선물 + 콜옵션)
+  const usAll = c.fxR===0 ? c.total : (1+c.total)/(1+c.fxR)-1;
+  extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 국채 합계":"미국 주식 합계"}</div></div><div><div class="r1 num ${cls(usAll)}">${pctp(usAll)}</div></div></div>`;
   extra += `<div class="row total"><div><div class="n">환율 효과</div><div class="t num">${e.hedge?"환헤지(H)라 환율 영향을 거의 안 받아요":`${FX.base} → ${FX.now}`}</div></div><div><div class="r1 num ${cls(c.fxC)}">${pctp(c.fxC)}</div></div></div>`;
   return `<section class="card"><h2>구성종목 ${q("기여도")}<span class="sub">총 ${total}종목 · ${e.hsrc||"구성종목"}${e.hasof?` · ${String(e.hasof).replace(/^As of /,"")}`:""}</span></h2>
     <div class="seg" role="group" aria-label="정렬">
@@ -1685,7 +1693,7 @@ function eventSheet(id){
     : `<div class="bsection"><h4>일정 개요</h4><p>${ev.what||"로켓 발사 일정이에요."}</p>
       <p class="small muted">${ev.tbd && !ev.done ? "아직 공식 발사 날짜가 정해지지 않았어요. 날짜 칸은 가안이고, 회사가 날짜를 발표하면 바로 바꿔요." : "발사 일정은 날씨나 기술 점검 때문에 자주 바뀌어요."} 성공·실패나 지연 소식이 회사 주가에 영향을 줄 수 있어요.</p></div>`}
     ${missionHtml(id)}
-    ${ev.watch ? `<div class="bsection"><h4>관전 포인트</h4>${rowsList(ev.watch)}</div>` : ""}
+    ${ev.watch ? `<div class="bsection"><h4>관전 포인트</h4>${watchList(ev.watch)}</div>` : ""}
     ${co.one ? `<div class="bsection"><h4>회사 개요</h4><p>${co.one}</p></div>` : ""}
     ${held.length ? `<div class="bsection"><h4>편입 ETF</h4><div class="chips">${exposureChips(t)}</div><p class="tiny muted">숫자는 그 ETF 안에서 이 회사가 차지하는 비중이에요. 비중이 클수록 이 일정의 영향을 더 받아요.</p></div>` : ""}
     ${isEarn && ev.done ? `<p class="small muted">결과 카드를 정리하고 있어요. 보통 발표 뒤 1시간 안에 이 자리에 붙어요.</p>` : ""}
@@ -2230,6 +2238,17 @@ const MACRO = readData("d-macro") || {};
    매크로 지표: data/views.json · 실적·회사 이벤트: data/events.json 의 card.views — ops/RULES.md 6-2 */
 const VIEWS = readData("d-views") || {};
 /* 구분선 줄 목록 (점 대신 얇은 선, 왼쪽 작은 이름표) — 2026-11-16 대표 선택 A안 */
+/* 관전 포인트 이름표: ["이름표","문장"]으로 쓴 건 그대로, "이름표: 문장"은 나눠서, 그냥 문장은 낱말로 이름표를 골라요 */
+const WATCH_LAB = [[/투표/,"주주총회"],[/사업 방향/,"경영진"],[/FDA|허가/,"허가"],[/출시/,"출시"],[/발사|궤도|화물|펼쳐/,"발사"],
+  [/RPO|백로그|수주 잔고|남은 계약/,"수주 잔고"],[/ARR|반복 매출|구독|SaaS/,"반복 매출"],[/전망|목표/,"전망"],[/수주|주문|계약/,"수주"],
+  [/매장/,"매장 매출"],[/회원/,"회원"],[/협력/,"협력"],[/투자 계획/,"투자"],[/HBM|D램|낸드/,"메모리"],[/AI|인공지능/,"AI"],
+  [/데이터센터|클라우드/,"데이터센터"],[/가격/,"가격"],[/고객|사용량/,"고객"],[/이익률/,"이익률"],[/수요|쇼핑|소비/,"수요"],[/매출/,"매출"]];
+function watchPair(x){
+  if(Array.isArray(x)) return x;
+  const m = /^([^:]{1,10}):\s*(.+)$/.exec(x); if(m) return [m[1], m[2]];
+  const hit = WATCH_LAB.find(([re])=>re.test(x)); return [hit ? hit[1] : "주목", x];
+}
+function watchList(xs){ return xs && xs.length ? `<div class="watchl">${rowsList(xs.map(watchPair))}</div>` : ""; }
 function rowsList(xs, labs){
   if(!xs || !xs.length) return "";
   return `<div class="anpts">${xs.map((x,i)=>{ const pair = Array.isArray(x), l = pair ? x[0] : labs && labs[i], t = pair ? x[1] : x; return `<div class="anrow${l?"":" nolab"}">${l?`<span class="anlab">${l}</span>`:""}<span>${t}</span></div>`; }).join("")}</div>`;
@@ -2287,7 +2306,7 @@ const INF = Infinity;
 const IND_X = {
   cpi:{min:0, max:6, zones:[[2,"목표보다 낮음","물가 걱정은 적어요. 대신 경기가 식고 있는 건 아닌지 같이 봐요."],[2.5,"목표 근처","연준 목표(2%)에 가까워요. 금리를 내릴 여유가 있는 상태로 많이 봐요."],[3.5,"목표보다 높음","물가가 덜 잡혔다는 뜻이라, 금리 인하가 천천히 갈 수 있다고 봐요."],[5,"높음","금리 인상 이야기가 다시 나올 수 있는 수준이에요."],[INF,"매우 높음","2022년에는 9%대까지 올라서 금리가 빠르게 올랐어요."]],
     chain:["CPI 발표","금리 인하 기대","미국 10년물 금리","기술주·성장주","내 나스닥·반도체 ETF"], sens:"rate",
-    watch:["근원 CPI의 전월 대비 상승률 (0.2% 이하인지 0.3% 이상인지)","주거비: CPI에서 비중이 가장 커서 전체 흐름을 좌우해요","서비스 물가: 잘 안 내려가는 물가라 연준이 특히 봐요"]},
+    watch:[["근원 CPI","전월 대비 상승률이 0.2% 이하인지, 0.3% 이상인지"],"주거비: CPI에서 비중이 가장 커서 전체 흐름을 좌우해요","서비스 물가: 잘 안 내려가는 물가라 연준이 특히 봐요"]},
   pce:{min:0, max:5, zones:[[1.8,"목표보다 낮음","물가 걱정은 적고, 경기 둔화 여부를 같이 봐요."],[2.3,"목표 근처","연준이 원하는 수준에 가까워요."],[3,"목표보다 높음","금리 인하가 천천히 갈 수 있다고 봐요."],[INF,"높음","금리 인상 가능성까지 거론될 수 있어요."]],
     chain:["PCE 발표","연준의 물가 판단","금리 기대","미국 10년물 금리","내 해외 ETF"], sens:"rate",
     watch:["근원 PCE: 연준이 실제로 목표와 비교하는 숫자예요","개인소득·소비 지출: 같이 발표돼서 소비가 버티는지 보여줘요"]},
@@ -2300,16 +2319,16 @@ const IND_X = {
     watch:["4주 평균: 한 주 숫자보다 흐름을 보기 좋아요","계속 청구건수: 실업 상태가 길어지는지 보여줘요"]},
   fomc:{min:0, max:6, zones:[[2,"완화적","돈을 푸는 쪽이라 주식에 우호적인 환경으로 많이 봐요."],[3.5,"중립 근처","경기를 밀지도 누르지도 않는 수준이에요. 연준은 이런 중립금리를 대략 3% 안팎으로 봐요."],[5,"긴축적","물가를 잡으려고 경기를 누르는 수준이에요. 성장주에 부담이 될 수 있어요."],[INF,"강한 긴축","2023~2024년 5.25~5.50%가 여기에 해당해요."]],
     chain:["금리 결정·의장 발언","미국 국채 금리","달러·원/달러 환율","내 해외 ETF (원화 기준)"], sens:"rate",
-    watch:["점도표: 위원들이 예상하는 앞으로의 금리 경로 (3·6·9·12월 회의)","의장 기자회견의 표현 변화","반대표가 몇 개 나왔는지"]},
+    watch:["점도표: 위원들이 예상하는 앞으로의 금리 경로 (3·6·9·12월 회의)",["기자회견","의장 표현이 어떻게 바뀌는지"],["반대표","몇 개 나왔는지"]]},
   ism:{min:40, max:60, zones:[[45,"뚜렷한 위축","제조업 경기가 꽤 나빠진 상태예요."],[50,"위축","제조업 경기가 줄어드는 중이에요."],[55,"확장","제조업 경기가 커지는 중이에요."],[INF,"강한 확장","제조업이 빠르게 좋아지는 중이에요."]],
     chain:["제조업 경기","반도체·경기 민감주","내 반도체 ETF"], sens:"cycle",
     watch:["신규 주문: 앞으로의 생산을 미리 보여줘요","가격 지수: 물가 압력을 일찍 보여줘요"]},
   bok:{min:0, max:4.5, zones:[[2,"완화적","돈을 푸는 쪽이에요."],[3.25,"중립 근처","경기를 밀지도 누르지도 않는 수준으로 많이 봐요."],[3.75,"긴축적","물가를 잡으려고 경기를 누르는 수준이에요. 2023~2024년 3.50%가 여기에 해당해요."],[INF,"강한 긴축","외환위기·금융위기 전후처럼 금리가 아주 높던 시기예요."]],
     chain:["한국 금리","한미 금리 차이","원/달러 환율","해외 ETF 원화 가치"], sens:"fx",
-    watch:["총재 기자회견의 앞으로 방향 힌트","금리 결정에 반대한 위원이 있었는지"]},
+    watch:[["기자회견","총재가 주는 앞으로 방향 힌트"],["반대 위원","금리 결정에 반대한 위원이 있었는지"]]},
   export:{min:-20, max:30, zones:[[0,"감소","수출이 1년 전보다 줄었어요."],[5,"소폭 증가","조금 늘었어요."],[15,"견조한 증가","탄탄하게 늘고 있어요."],[INF,"급증","크게 늘었어요. 반도체 경기가 좋을 때 자주 나와요."]],
     chain:["반도체 수출","반도체 업황 기대","반도체 ETF"], sens:"cycle",
-    watch:["반도체 수출 증가율","하루 평균 수출액: 영업일 수 차이를 빼고 비교할 수 있어요"]},
+    watch:[["반도체","수출 증가율"],"하루 평균 수출액: 영업일 수 차이를 빼고 비교할 수 있어요"]},
   us10y:{min:2, max:6, zones:[[3,"낮음","돈을 빌리는 부담이 적어서 성장주에 우호적인 환경으로 많이 봐요."],[4,"보통","크게 부담되지 않는 수준이에요."],[4.5,"높은 편","성장주(기술주)에 부담이 커지기 시작하는 구간으로 많이 봐요."],[INF,"높음","주식 전반에 부담이 된다는 해석이 많아요."]],
     chain:["10년물 금리","미래 이익의 현재 가치","기술주·성장주","내 나스닥·반도체 ETF"], sens:"rate"},
   dxy:{min:90, max:110, zones:[[95,"약한 달러","원화를 포함한 다른 통화들이 강해지기 쉬워요."],[100,"보통","평균적인 수준이에요."],[105,"강한 달러","원화가 약해지기 쉬워요."],[INF,"매우 강한 달러","세계 시장에 돈이 빠듯해지는 신호로 보기도 해요."]],
@@ -2320,18 +2339,18 @@ const IND_X = {
     chain:["원/달러 환율","해외 ETF 원화 환산","내 계좌 수익"], sens:"fx"},
   ppi:{min:-2, max:8, zones:[[0,"하락","기업이 받는 값이 1년 전보다 내려갔어요. 앞으로 소비자물가 부담이 줄 수 있어요."],[2.5,"안정","물가 압력이 크지 않은 편이에요."],[5,"높음","몇 달 뒤 소비자물가로 넘어갈 수 있다는 걱정이 나와요."],[INF,"매우 높음","2022년에는 10%를 넘었어요."]],
     chain:["PPI 발표","앞으로의 소비자물가","금리 인하 기대","미국 10년물 금리","내 해외 ETF"], sens:"rate",
-    watch:["근원 PPI: 식품·에너지를 뺀 숫자","항공료·의료비·자산운용 수수료: 연준이 보는 PCE 물가 계산에 그대로 들어가서, 전문가들은 이걸로 PCE를 미리 추정해요"]},
+    watch:["근원 PPI: 식품·에너지를 뺀 숫자",["PCE 미리 보기","항공료·의료비·자산운용 수수료: 연준이 보는 PCE 물가 계산에 그대로 들어가서, 전문가들은 이걸로 PCE를 미리 추정해요"]]},
   retail:{min:-1.5, max:2, zones:[[0,"감소","소비가 전달보다 줄었어요. 경기 둔화 신호로 봐요."],[0.3,"정체","거의 늘지 않았어요."],[0.8,"보통 증가","완만하게 늘고 있어요."],[INF,"강한 증가","소비가 강해요. 금리 인하 기대는 줄어들 수 있어요."]],
     note:"물가가 오르면 판매 금액도 같이 늘어나서, 물가 상승률을 감안해서 봐야 해요.",
     chain:["소비 흐름","경기·금리 기대","주식 전반","내 해외 ETF"], sens:"cycle",
-    watch:["컨트롤 그룹: GDP 계산에 들어가는 핵심 숫자","지난달 수정치: 크게 고쳐지는 경우가 많아요","자동차 제외 판매"]},
+    watch:["컨트롤 그룹: GDP 계산에 들어가는 핵심 숫자","지난달 수정치: 크게 고쳐지는 경우가 많아요",["핵심 판매","자동차를 뺀 판매"]]},
   m2:{min:-5, max:15, zones:[[0,"줄어드는 중","2022~2023년 금리를 빠르게 올릴 때 나타났어요. 시중에 돈이 마르는 신호로 읽혀요."],[4,"느린 증가","돈이 조심스럽게 풀리는 구간이에요."],[8,"보통","장기 평균 근처예요."],[12,"빠른 증가","돈이 빠르게 풀리고 있어요."],[INF,"매우 빠름","2020~2021년에는 20%를 넘었어요. 이후 자산 가격과 물가가 크게 올랐어요."]],
     note:"발표 날 시장 반응은 거의 없어요. 몇 달에 걸친 큰 흐름을 보는 지표예요.",
     chain:["통화량","시중 유동성","몇 달 뒤 위험자산 가격","주식 전반"],
-    watch:["기준월: 발표는 약 한 달 늦어요","연준 대차대조표(양적긴축) 흐름: 통화량에 영향을 줘요"]},
+    watch:["기준월: 발표는 약 한 달 늦어요",["대차대조표","연준 양적긴축 흐름: 통화량에 영향을 줘요"]]},
   kcpi:{min:0, max:6, zones:[[1,"목표보다 낮음","물가 걱정은 적어요. 경기가 식고 있는지 같이 봐요."],[2.5,"목표 근처","한국은행 목표(2%)에 가까워요."],[3.5,"목표보다 높음","한국은행이 금리를 내리기 어려운 쪽이에요."],[INF,"높음","2022년 7월에는 6%대까지 올랐어요."]],
     chain:["한국 물가","한국은행 금리 판단","한미 금리 차이","원/달러 환율","해외 ETF 원화 가치"], sens:"fx",
-    watch:["근원물가 (농산물·석유류 제외)","석유류·농축수산물: 환율과 날씨에 크게 흔들려요","생활물가지수: 체감 물가에 가까워요"]},
+    watch:[["근원물가","농산물·석유류를 뺀 물가"],"석유류·농축수산물: 환율과 날씨에 크게 흔들려요","생활물가지수: 체감 물가에 가까워요"]},
   us2y:{min:1, max:6, zones:[[2.5,"낮음","금리가 크게 내려갈 거라는 기대가 반영된 수준이에요."],[3.75,"보통","중립 금리 근처의 기대예요."],[4.75,"높은 편","금리가 한동안 높게 유지될 거라는 기대예요."],[INF,"높음","2023년에는 5%를 넘기도 했어요."]],
     note:`지금 미국 기준금리(상단)는 ${IND.fomc.last.a.toFixed(2)}%예요${IND.fomc.real?"":"(샘플)"}. 2년물이 이보다 낮으면 시장이 금리 인하를 예상한다는 뜻으로 많이 읽어요.`,
     chain:["물가·고용 발표","금리 인하 기대","2년물 금리","달러·원/달러","내 해외 ETF"], sens:"rate"},
@@ -2847,7 +2866,7 @@ function indSheet(k, from, prev){
       ${v.react ? `<div class="bsection"><h4>지난 발표 후 30분, 시장은 이렇게 움직였어요 <span class="tiny muted" style="font-weight:400">실제 · ${relTxt(v)}</span></h4>
         <div class="react">${names.map((n,i)=>okn(rv(v.react,i))?`<div>${n}</div><div class="num ${cls(v.react[i])}">${v.react[i]>0?"+":""}${v.react[i]}${units[i]}</div>`:"").join("")}</div>
         <p class="tiny muted" style="margin-top:6px">발표 직전 5분 가격과 30분 뒤 가격을 비교했어요 (야후 5분봉). 그 30분 동안 다른 뉴스가 같이 반영됐을 수 있어요.</p></div>` : ""}
-      ${IND_X[k] && IND_X[k].watch ? `<div class="bsection"><h4>다음 발표에서 같이 볼 것</h4>${rowsList(IND_X[k].watch)}</div>` : ""}
+      ${IND_X[k] && IND_X[k].watch ? `<div class="bsection"><h4>다음 발표에서 같이 볼 것</h4>${watchList(IND_X[k].watch)}</div>` : ""}
       <p class="small" style="margin-top:16px"><a href="${v.src}" target="_blank" rel="noopener noreferrer">발표 기관 원문 보기 ›</a></p>
     </details>
     ${disc}`, true);
