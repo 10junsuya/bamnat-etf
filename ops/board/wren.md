@@ -73,3 +73,31 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261116-1343-6 · 알림 · 다음 차례(Wren A)에 남긴 것
 - 시각: 2026-11-16 13:55 KST
 - 내용: 확인 못 해 done 에 넣지 않은 7건: 엔비디아 법무부 조사들, 알리바바 칩 규제, 비스트라 손상차손, 스노우플레이크 AI 에이전트, AMD 양자, 비자-삼성 월렛, AST 11-17 일정. 황 복귀 검토(FT, 익명 소식통)·아처-보잉(8월 일)은 건너뛰었어요.
+
+### W-20261116-1413-1 · 반영 · 비자(V) 삼성 월렛 QR 결제 시작
+- 시각: 2026-11-16 14:25 KST
+- 내용: 비자와 삼성이 삼성 월렛에서 비자 카드로 QR 결제(Scan to Pay)를 하는 기능을 아시아·태평양에 내놓았어요. 첫 시장은 호주·싱가포르, 다른 나라는 앞으로 몇 분기에 걸쳐 늘린다고 했어요. 2025-11 비자 Scan to Pay 출시와는 다른 새 발표예요(싱가포르 11-16 날짜).
+- 출처: [비자 보도자료(PR Newswire)](https://www.prnewswire.com/apac/news-releases/visa-and-samsung-bring-scan-to-pay-to-mobile-devices-across-asia-pacific-with-samsung-wallet-302939851.html) · [Money Compass 전재](https://moneycompass.com.my/visa-and-samsung-bring-scan-to-pay-to-mobile-devices-across-asia-pacific-with-samsung-wallet/) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261116-1413-2 · 반영 · 엔비디아(NVDA) 법무부의 허깅페이스 인수 문의
+- 시각: 2026-11-16 14:25 KST
+- 내용: 미 법무부가 엔비디아의 약 130억 달러 허깅페이스 인수가 AI 경쟁에 미칠 영향을 문의했다고 로이터를 인용해 블룸버그가 보도했어요(미국 10-28). 정식 조사·소환장은 아니고 "문의" 단계로 보도됐어요. Scout 항목("여러 법무부 조사" 정리 기사)은 지난 일들을 모은 글이라, 아직 앱에 없던 이 건만 넣었어요.
+- 출처: [Bloomberg](https://www.bloomberg.com/news/articles/2026-10-28/doj-inquires-about-nvidia-s-hugging-face-deal-reuters-says) · [Yahoo Finance(Bloomberg)](https://finance.yahoo.com/technology/ai/articles/doj-inquires-nvidia-hugging-face-193103860.html) · 공식 여부: 보도
+- 확신도: 높음
+
+### W-20261116-1413-3 · 반영 · AMD 양자 오류 정정 공동 플랫폼
+- 시각: 2026-11-16 14:25 KST
+- 내용: 오크리지 국립연구소(ORNL)·IBM·AMD가 양자 오류 정정 공동 설계 플랫폼을 열었어요. IBM 양자컴퓨터(120큐비트 나이트호크)와 AMD MI355X GPU·5세대 EPYC CPU를 쓴 ORNL 슈퍼컴퓨터를 묶었어요(11-05 발표).
+- 출처: [ORNL 발표](https://www.ornl.gov/news/ornl-ibm-and-amd-launch-new-co-design-platform-for-quantum-error-correction/) · [The Quantum Insider](https://thequantuminsider.com/2026/11/05/oak-ridge-national-laboratory-ibm-and-amd-launch-new-co-design-platform-for-quantum-error-correction/) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261116-1413-4 · 반영 · 스노우플레이크(SNOW) AI 에이전트 자동화 정식 출시
+- 시각: 2026-11-16 14:25 KST
+- 내용: 연례 행사 Expedition 2026(11-03)에서 AI 에이전트 CoCo·CoWork의 자동화 기능 등을 정식 출시했어요(엑셀·슬랙 연동 등은 미리보기). Scout 항목은 이 발표를 해석한 글이라 원 보도자료로 넣었어요.
+- 출처: [스노우플레이크 보도자료](https://www.snowflake.com/en/news/press-releases/expedition-2026-coco-cowork/) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261116-1413-5 · 알림 · 건너뛴 것
+- 시각: 2026-11-16 14:25 KST
+- 내용: 남아 있던 7건을 모두 done 처리했어요. 알리바바 "새 칩 규제" 글은 실제 정부 조치를 확인 못 해 버렸어요(검색에 2023년 클라우드 분사 취소 기사가 섞여 나옴 — 날짜 주의). AST 11-17 글은 Archer(A-20261116-1404-1)도 공식 일정을 못 찾아 건너뛰었어요. 비스트라 손상차손(2.69억 달러)은 3분기 보고서의 회계 항목이라 건너뛰었어요.
