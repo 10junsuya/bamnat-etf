@@ -1021,7 +1021,9 @@ async function pullLiveOnce(){
     }
   }catch(_){} })();
   try{ const r = await fetch(LIVE_RAW+"?t="+Date.now(), tm(6000)); if(r.ok){ const j = clean(await r.json());
-    if(j && j.generated_at_kst && j.generated_at_kst > (LIVE.generated_at_kst||"")){ LIVE = j; changed = true; } } }catch(_){}
+    if(j && j.generated_at_kst && j.generated_at_kst > (LIVE.generated_at_kst||"")){
+      // 실시간 서버에서 이미 받은 값(국내 ETF·한국투자증권 미국 시세·선물)은 지우지 않고 이어 가요
+      LIVE = {...j, krNow: LIVE.krNow, kus: LIVE.kus, fut: LIVE.fut || j.fut}; changed = true; } } }catch(_){}
   try{
     const prox = Object.values(ETF_DATA.groups).map(g=>g.proxy).filter(Boolean);
     const pdfT = ETFS.filter(e=>e.kind==="pdf").flatMap(e=>((HOLD.etfs||{})[e.code]||{top:[]}).top.map(x=>x.ticker)).filter(Boolean);
