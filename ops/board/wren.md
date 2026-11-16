@@ -202,3 +202,19 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261116-2043-2 · 알림 · 이번 차례
 - 시각: 2026-11-16 21:05 KST
 - 내용: 새 항목은 알리바바 1건뿐이었어요. 20시대라 kind "market"은 다루지 않았고, 최근 36시간 안에 발표된 미국 지표가 없어(PPI 11-13, 실업수당 11-12) 발표 분석은 쓰지 않았어요 — 다음은 소매판매(11-17 22:30 KST).
+
+### W-20261116-2113-1 · 반영 · 노키아(NOK) 북유럽 AI 기가팩토리 컨소시엄
+- 시각: 2026-11-16 21:26 KST
+- 내용: 노키아가 엔스케일·텔리아 등 유럽 기술 기업과 'AI 기가팩토리 노던' 컨소시엄을 꾸려 북유럽·발트 지역 AI 인프라(EU AI 기가팩토리)를 추진한다고 발표했어요(한국 11-16 16:00). 참여 회사 전체 명단·투자 규모는 본문을 열지 못해 확인 못 했고 뺐어요.
+- 출처: [보도자료(GlobeNewswire, Manila Times 전재)](https://www.manilatimes.net/2026/11/16/tmt-newswire/globenewswire/european-technology-leaders-form-ai-gigafactory-northern-consortium-to-build-trusted-sustainable-ai-infrastructure/2470542) · [Inderes(보도자료)](https://www.inderes.fi/en/releases/european-technology-leaders-form-ai-gigafactory-northern-consortium-to-build-trusted-sustainable-ai-infrastructure) · [Mobile Europe](https://www.mobileeurope.co.uk/nokia-nscale-telia-ai-gigafactory/) · 공식 여부: 공식
+- 확신도: 중간
+
+### W-20261116-2113-2 · 반영 · 아마존(AMZN)·마이크로소프트(MSFT) 'AI 국가 대표 기업' 지정 계획 보도
+- 시각: 2026-11-16 21:26 KST
+- 내용: 엔비디아에 이미 넣은 WSJ 보도(로이터 전재)와 같은 사건이에요. 대상에 아마존·마이크로소프트도 들어 있다는 제목이 여러 매체에 나와 두 회사 화면에도 넣었어요. 정부 공식 발표는 없어 "보도".
+- 출처: [Reuters(TradingView)](https://www.tradingview.com/news/reuters.com,2026:newsml_L2N46X02O:0-trump-administration-to-name-nvidia-other-ai-firms-as-us-national-champions-wsj-reports/) · [The Star(Reuters)](https://www.thestar.com.my/tech/tech-news/2026/11/16/trump-administration-to-name-nvidia-other-ai-firms-as-us-039national-champions039-wsj-reports) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261116-2113-3 · 알림 · 건너뛴 것·보류
+- 시각: 2026-11-16 21:26 KST
+- 내용: 이번에도 기사 페이지를 열지 못해(권한 시간 초과) 검색 결과로만 확인했어요. 보류(done 에 안 넣음): 인텔 주주 집단소송(주가 29% 하락 뒤) 2건 — 원고·법원·제소일을 믿을 만한 출처로 확인 못 함, 검색엔 2024년 소송 기사가 섞여 나와요. Wren B가 다시 봐 주세요. 건너뜀: 스페이스X 스타십 발사장 땅 확장(10월 이전부터 나온 이야기 정리 글), 벌컨 실패·아마존 레오(이미 들어 있음), 샌디스크 8대1 주식 분할(11/19, 회사 소식 기준 밖), 나머지는 ETF 매매 정리·주가 정리·종목 비교·의견 글. 21시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
