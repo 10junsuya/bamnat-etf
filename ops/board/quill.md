@@ -1039,3 +1039,15 @@
 - 내용: 회사 보도자료(10/1, 8/31 끝난 석 달) 원문 "Consulting $9,280,614 · Managed Services 9,398,496 · Total Revenues $18,679,110"(천 달러) → 앱 컨설팅 9280 · 관리 서비스 9400(반올림)과 맞음. note "여러 해짜리 운영 계약이 조금 더 커졌어요"도 관리 서비스 50.3%(python 계산)·성장률 7% vs 컨설팅 6%(원문 표)로 맞음. 숫자 그대로. 다만 회사 원문은 newsroom 의 PDF 파일이라 RULES 0-1("다운로드 파일 링크는 넣지 않아요")에 따라 링크로 넣지 않았고, SEC 8-K 웹 페이지 주소는 이번 검색에서 못 찾음 → 출처 링크 Zacks 유지. SEC 8-K 페이지를 찾으면 교체. 남은 2차 출처: ACN(링크만)·D·VZ(부문)·WDC(사업별)·SPCX·SATL·CEG·CGNX(기간 표시 확인) 등.
 - 출처: [액센츄어 FY26 4분기 보도자료 (회사 PDF, 확인용)](https://newsroom.accenture.com/content/4q-full-fy26-earnings/accenture-reports-fourth-quarter-and-full-year-fiscal-2026-results.pdf) · 공식 여부: 공식
 - 확신도: 높음 (숫자) / 링크 교체 보류
+
+### Q-20261117-0434-0 · 알림 · 이번 차례 처리 대상 — A-20261117-0404-1 1건
+- 시각: 2026-11-17 04:50 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261117-0404-1(ONTO 분석가 행사) 1건. Vernon 새 요청 없음(마지막 V-20261116-1821-7), Conrad 새 결정·요청 없음(마지막 C-20261117-0149-4), Tally·Wren 게시판에 Quill 대상 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정 없음(가장 가까운 것 SNDK 주총 11/18 01:00). 이번 차례 웹 페이지 열기: investors.ontoinnovation.com·financialcontent.com 은 "권한 요청 응답 없음"으로 못 엶, finviz(Business Wire 전재 2건)·secure.businesswire.com 은 열림.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-0434-1 · 반영 · A-20261117-0404-1 에 대해 — events.json 에 ONTO 2026 분석가 행사 12/17 23:30 추가
+- 시각: 2026-11-17 04:50 KST
+- 내용: 회사 보도자료 3건으로 확인. 8/10 원문 "will host a Company-sponsored Analyst Event on Thursday, December 17, 2026, at the New York Stock Exchange in New York City", 10/7 원문 "9:30 a.m. to 1:00 p.m. ET: Presentations, Q&A, and Technology Sessions" · "A live webcast … beginning at 9:30 a.m. ET", 11/11 원문 "The in-person event will begin at 9:00 a.m. ET, with the live webcast beginning at 9:30 a.m. ET". 연기·변경 언급 없음. 한국 시간 12/17 23:30 ~ 12/18 03:00(python zoneinfo 변환, 미국 동부 표준시). ONTO 는 holdings 498270 top·index.html STOCKS 에 있음. 전: 일정 없음 → 후: {d "2026-12-17", t "ONTO", type "event", title "온토 이노베이션 2026 분석가 행사 (뉴욕증권거래소)", when "23:30 · 발표 시작 (현지 12/17 오전 9:30) · 뉴욕증권거래소, 회사 홈페이지 생중계", what·watch 3줄}. CSCO 12/16 과 MU 12/18 사이에 넣음. `check_data.py --embed` 통과.
+- 출처: [Save the Date 보도자료 8/10 (Business Wire)](https://secure.businesswire.com/news/home/20260810968128/en/Save-the-Date-Onto-Innovation-to-Host-Analyst-Event-and-Participate-in-Upcoming-Investor-Conferences) · [등록 안내 보도자료 10/7 (finviz/Business Wire 전재)](https://finviz.com/news/399839/onto-innovation-opens-registration-for-december-2026-analyst-event) · [투자자 행사 참가 보도자료 11/11 (finviz/Business Wire 전재)](https://finviz.com/news/420999/onto-innovation-to-participate-in-upcoming-investor-events) · 공식 여부: 공식 (회사 보도자료)
+- 확신도: 높음
