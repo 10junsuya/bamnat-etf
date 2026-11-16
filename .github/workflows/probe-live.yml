@@ -1,20 +1,18 @@
-name: 실시간 서버 창고 확인 (손으로 실행)
+name: 실시간 서버 창고 기록 보기 (손으로 실행)
 on: workflow_dispatch
 permissions:
   contents: read
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 8
     steps:
-      - name: 창고(/snap) 상태
+      - name: 2분 일 기록 5분 동안 보기 (숫자만)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          curl -sS -m 20 "https://gnomon-live.leejoonsoo85.workers.dev/snap" | python3 -c "
-          import json,sys,datetime as d
-          j=json.load(sys.stdin); kr=j.get('kr',{}); us=j.get('us',{})
-          print('time',j.get('time'),'kr',len(kr),'us',len(us))
-          now=d.datetime.now(d.timezone.utc)
-          ages=sorted((now-d.datetime.fromisoformat(v['time'].replace('Z','+00:00'))).total_seconds()//60 for v in us.values() if v.get('time'))
-          print('us age min/median/max(min)',ages[:1],ages[len(ages)//2:len(ages)//2+1],ages[-1:])
-          print('sess',sorted({v.get('s') for v in us.values()}))
-          print('sample',{k:us[k]['price'] for k in list(us)[:5]})"
+          timeout 300 npx --yes wrangler@4 tail gnomon-live --format json > tail.txt 2>/dev/null || true
+          grep -o '"gnomon[^}]*}' tail.txt | grep -v blocked | head -20 || true
+          grep -o '"outcome":"[a-zA-Z]*"' tail.txt | sort | uniq -c || true
+          grep -o '"cpuTime":[0-9]*\|"wallTime":[0-9]*' tail.txt | head -10 || true

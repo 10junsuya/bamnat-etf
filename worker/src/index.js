@@ -339,7 +339,10 @@ function usSess() {
 async function snapshotJob(env) {
   if (!env.SNAP || !(env.KIS_APP_KEY && env.KIS_APP_SECRET) || String(env.MAINTENANCE || "0") === "1") return;
   SUBN = 0;
+  const t0 = Date.now();
   const snap = (await env.SNAP.get("snap", "json").catch(() => null)) || {};
+  const readUs = Object.keys(snap.us || {}).length, readKr = Object.keys(snap.kr || {}).length;
+  let usOk = 0, usTried = 0, krTried = 0;
   snap.kr = snap.kr || {}; snap.us = snap.us || {}; snap.ex = snap.ex || {};
   const k = kstNow(), krOn = k.wd >= 1 && k.wd <= 5 && k.hm >= 8 * 60 + 30 && k.hm <= 20 * 60 + 30;
   // 국내: 장 시간엔 10개씩 차례로(약 11분에 한 바퀴), 장 밖에선 오늘 값이 없는 것만
@@ -347,6 +350,7 @@ async function snapshotJob(env) {
   let rk = (snap.rk || 0) % Math.max(1, krList.length);
   for (let i = 0; i < Math.min(10, krList.length) && SUBN < SUB_MAX - 6; i++) {
     const c = krList[(rk + i) % krList.length];
+    krTried++;
     const v = await kisEtf(env, c).catch(() => null);
     if (v && !v.error) snap.kr[c] = v;
   }
@@ -356,14 +360,16 @@ async function snapshotJob(env) {
   if (sess) {
     let ru = (snap.ru || 0) % PRIO_US.length, n = 0;
     while (SUBN < SUB_MAX - 2 && n < PRIO_US.length) {
-      const t = PRIO_US[(ru + n) % PRIO_US.length]; n++;
+      const t = PRIO_US[(ru + n) % PRIO_US.length]; n++; usTried++;
       const v = await kisUs(env, t, sess === "day", snap.ex[t] || null).catch(() => null);
-      if (v && !v.error) { snap.us[t] = { price: v.price, prev: v.prev, time: v.time, s: sess }; if (sess !== "day" && v.ex) snap.ex[t] = v.ex; }
+      if (v && !v.error) { usOk++; snap.us[t] = { price: v.price, prev: v.prev, time: v.time, s: sess }; if (sess !== "day" && v.ex) snap.ex[t] = v.ex; }
     }
     snap.ru = ru + n;
   }
   snap.time = new Date().toISOString();
   await env.SNAP.put("snap", JSON.stringify(snap));
+  // 점검용 기록: 숫자만 (키·토큰·가격 없음)
+  try { console.log(JSON.stringify({ gnomon: "snap", readKr, readUs, krTried, usTried, usOk, us: Object.keys(snap.us).length, sub: SUBN, ms: Date.now() - t0 })); } catch (_) {}
 }
 
 /* 차단 기록: 무엇이 왜 막혔는지만 남겨요(IP·질문 값 같은 개인 정보는 안 남겨요). Cloudflare 로그에서 볼 수 있어요. */
