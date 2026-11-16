@@ -769,6 +769,13 @@
   "RDW": {"role": "우주 부품·드론", "up": [["자체 생산", "", ""]], "down": [["NASA", "", ""], ["액시엄", "", "우주정거장 태양전지판"], ["미·유럽 국방", "", "정찰 드론"]]},
   "KRMN": {"role": "미사일·로켓 부품", "up": [["자체 생산", "", ""]], "down": [["록히드 마틴", "", "THAAD"], ["RTX", "", "미사일"], ["ULA", "", "벌컨 로켓"], ["블루 오리진", "", "뉴 글렌"]]}
  },
- "news": {},
+ "news": {
+  "NVDA": [{"d": "2026-11-12", "t": "젠슨 황 CEO가 물러나고 콜레트 크레스 CFO가 임시 CEO를 맡았어요", "kind": "공식", "src": [["엔비디아 보도자료", "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/"], ["NBC News", "https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402"]]}],
+  "MRVL": [{"d": "2026-11-02", "t": "루멘텀을 전액 주식 교환으로 인수하기로 했어요(기업가치 1,150억 달러)", "kind": "공식", "src": [["마벨 보도자료", "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-i"], ["루멘텀 보도자료", "https://investor.lumentum.com/financial-news-releases/news-details/2026/Marvell-and-Lumentum-to-Combine-Creating-a-Category-Leader-in-AI-Connectivity/default.aspx"]]}],
+  "LITE": [{"d": "2026-11-02", "t": "마벨이 루멘텀을 주식 교환으로 인수하기로 했어요(1주당 마벨 4.5주)", "kind": "공식", "src": [["루멘텀 보도자료", "https://investor.lumentum.com/financial-news-releases/news-details/2026/Marvell-and-Lumentum-to-Combine-Creating-a-Category-Leader-in-AI-Connectivity/default.aspx"], ["마벨 보도자료", "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-i"]]}],
+  "META": [{"d": "2026-11-14", "t": "이탈리아 개인정보 당국이 휴대폰 사진 접근 문제로 8억500만 유로 벌금을 매겼어요", "kind": "보도", "src": [["Bloomberg", "https://www.bloomberg.com/news/articles/2026-11-14/italy-fines-meta-805-million-over-access-to-users-photos"], ["CBS News", "https://www.cbsnews.com/news/italy-fines-meta-880-million-users-photos/"]]}],
+  "SPCX": [{"d": "2026-11-15", "t": "스타십 15차 비행에서 궤도를 돈 우주선을 발사탑이 처음 잡았어요(부스터는 잃음)", "kind": "보도", "src": [["The National Desk", "https://thenationaldesk.com/news/americas-news-now/spacex-catches-starship-after-orbit-in-historic-first-as-booster-explodes-over-gulf"], ["Tech Times", "https://www.techtimes.com/articles/330764/20261115/spacex-starship-tower-catch-succeeds-after-14-orbits-booster-lost-fuel-shortfall.htm"]]}],
+  "RKLB": [{"d": "2026-11-14", "t": "일렉트론 로켓 100번째 발사에 성공했어요(iQPS 위성 탑재)", "kind": "공식", "src": [["로켓랩 보도자료", "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-hits-100-electron-launches-fastest-commercial-rocket"]]}]
+ },
  "market": []
 }
