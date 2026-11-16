@@ -139,7 +139,7 @@ def main():
             continue
         try:
             asof, items = funetf(code)
-            src = "FunETF 구성종목(PDF)"
+            src = "FunETF 구성종목 공시"
             time.sleep(1.5)
         except Exception as e:  # noqa: BLE001
             out["errors"].append(f"{code} FunETF: {type(e).__name__}: {str(e)[:120]}")
