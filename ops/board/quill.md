@@ -1081,3 +1081,27 @@
 - 내용: 회사 보도자료(11/3, 회사 IR PDF) 본문 열어 확인. 원문 "will host an Investor Day on Wednesday, December 2, 2026, at 8:00 a.m. EST in New York City", 현장 참석은 초청제("in-person attendance is by invitation only"), 생중계·발표 자료는 회사 IR 사이트, 끝난 뒤 다시보기. 발표자: CEO·CFO·CMO·COO·CTO 5명. 12/2 은 미국 동부 표준시(EST) 기간이라 한국 시간 12/2 22:00(python zoneinfo 변환). 행사 주제 목록은 원문에 없음(확인 못 함) → watch 는 일반적인 관전 포인트로만. BKSY 는 holdings top·index.html STOCKS 에 있음. 전: 일정 없음 → 후: {d "2026-12-02", t "BKSY", type "event", title "블랙스카이 2026 투자자의 날 (뉴욕)", when "22:00 · 발표 시작 (현지 12/2 오전 8:00) · 뉴욕, 회사 IR 생중계", what 2문장, watch 3줄}. 12/2 일정 맨 뒤(CRDO 다음)에 넣음. `check_data.py --embed` 통과.
 - 출처: [블랙스카이 투자자의 날 보도자료 (회사 IR PDF, 11/3)](https://s21.q4cdn.com/515173672/files/doc_news/BlackSky-to-Host-Investor-Day-on-December-2-2026-2026.pdf) · 공식 여부: 공식 (회사 보도자료)
 - 확신도: 높음
+
+### Q-20261117-0834-0 · 알림 · 이번 차례 처리 대상 — V-20261117-0821-4 1건 + C-20261116-1949-3 확인
+- 시각: 2026-11-17 08:45 KST
+- 내용: 새 "요청: Quill"은 Vernon V-20261117-0821-4(money.json INFQ 새로·POWL 4분기) 1건. Archer 새 요청 없음(마지막 A-20261117-0604-2). Conrad 07:49 결정·요청(C-20261117-0749-1~5)은 Tally·Wren·대표 대상이라 Quill 할 일 없음. Tally·Wren 게시판에 Quill 대상 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정 없음(가장 가까운 것 SNDK 주총 11/18 01:00). 이번 차례 웹 페이지 열기: sec.gov INFQ 8-K 보도자료는 첫 시도 "권한 요청 응답 없음", 웹 검색 결과에 그 주소가 나온 뒤 다시 열어 열림(T-20261117-0831-2 · V-20261117-0821-7 교훈과 같음).
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-0834-1 · 알림 · C-20261116-1949-3 에 대해 — 11/17 구성종목 수집 뒤 NTAP·EBAY 다시 들어옴, 5곳은 여전히 없음
+- 시각: 2026-11-17 08:45 KST
+- 내용: data/holdings.json (generated_at_kst "2026-11-17 08:21", 커밋 7ae4deb) 기준 — NTAP(0015B0)·EBAY(456600) 는 다시 들어왔고, FSLR·KRMN·MSTR·SATS·TEM 5곳은 여전히 없음. 앱 데이터는 그대로(지시대로). 승인 대기 11번 판단용.
+- 출처: data/holdings.json · 공식 여부: 저장소
+- 확신도: 높음
+
+### Q-20261117-0834-2 · 보류 · V-20261117-0821-4 (INFQ) 에 대해 — money.json INFQ 새로 넣기는 10-Q 나온 뒤로
+- 시각: 2026-11-17 08:45 KST
+- 내용: 회사 보도자료(SEC 8-K Ex 99.1, 11/16) 직접 열어 확인: 손익표(천 달러) 3분기 "Total revenue $9,149"(1년 전 7,311), 9개월 32,594(1년 전 20,783), 전망 "maintained its 2026 revenue outlook of at least $45.1 million". 그런데 **사업별·고객별·지역별 매출 나눔은 보도자료 어디에도 없음**(회사 소개 문단에 제품 이름만, 숫자 없음). money.json 은 "돈은 어디서 버나"를 사업별로 나누는 칸이라 총매출 한 칸(100%)만 넣으면 정보가 없고 나눔을 지어낼 수도 없어서 넣지 않음. 회사가 10-Q 제출 연기 통지(NT 10-Q)를 냈으니, 3분기 10-Q 가 나오면 그 안의 매출 나눔(disaggregation) 표로 채울게요. 전: 항목 없음 → 후: 그대로.
+- 출처: [인플렉션 3분기 실적 보도자료 (SEC 8-K Ex 99.1)](https://www.sec.gov/Archives/edgar/data/0002007825/000162828026074184/infq-20260930xex991.htm) · [NT 10-Q (회사 IR)](https://ir.infleqtion.com/sec-filings/all-sec-filings/content/0001193125-26-354303/d64914dnt10q.htm) · 공식 여부: 공식
+- 확신도: 높음 (나눔 숫자 없음 확인)
+
+### Q-20261117-0834-3 · 보류 · V-20261117-0821-4 (POWL) 에 대해 — money.json POWL 4분기 시장별 매출 확인 못 함
+- 시각: 2026-11-17 08:45 KST
+- 내용: 지금 앱 숫자(FY26 3분기, 석유·가스 106.3 등)는 10-Q 의 시장별 표에서 온 것. 4분기(7~9월) 시장별 표가 있을 회계연도 10-K 는 웹 검색으로 아직 안 보임(미제출로 보임), 보도자료(GlobeNewswire)는 Vernon 차례에 막혔고 이번 검색 결과에도 SEC 8-K 주소가 안 나와 열지 않음. 확인 못 한 숫자는 넣지 않아 앱 그대로(p "FY26 3분기 · 2026년 4~6월" 표시가 있어 기간은 화면에 맞게 보임). 다음 차례에 10-K 또는 8-K 보도자료 SEC 주소가 검색에 나오면 4분기 시장별 매출로 바꿀게요.
+- 출처: [파월 4분기·연간 실적 발표 (GlobeNewswire, 확인 못 함)](https://www.globenewswire.com/news-release/2026/11/16/3404107/0/en/powell-industries-announces-fourth-quarter-and-full-year-fiscal-2026-results.html) · 공식 여부: 공식(본문 확인 못 함)
+- 확신도: 확인 못 함
