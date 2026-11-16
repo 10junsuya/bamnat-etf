@@ -1705,9 +1705,19 @@ function newsCard(e){
 }
 
 const krAsked = new Set();
+/* ETF 화면을 열었는데 그 ETF의 국내 시세가 아직 없으면, 다른 받기를 기다리지 않고 그것 하나만 바로 받아요 */
+async function quickKr(code){
+  try{
+    const sig = (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(20000) : undefined;
+    const r = await fetch(`${LIVE_URL}/kr?c=${code}`, {signal: sig}); if(!r.ok) return;
+    const j = clean(await r.json()), v = (j.etfs||{})[code];
+    if(v && !v.error && okn(v.price)){ LIVE.krNow = {...(LIVE.krNow||{}), [code]: v}; if(j.source) LV.krSrc = j.source;
+      applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
+  }catch(_){}
+}
 function viewEtf(code, st){
   const e = ETFS.find(x=>x.code===code); if(!e) return viewHome(st);
-  if(!navigator.webdriver && !(LIVE.krNow||{})[code] && !krAsked.has(code)){ krAsked.add(code); setTimeout(pullLive, 50); }
+  if(!navigator.webdriver && !(LIVE.krNow||{})[code] && !krAsked.has(code)){ krAsked.add(code); setTimeout(()=>quickKr(code), 50); }
   const c = calc(e);
   const starOn = stars.includes(e.code);
   const k = st.k; const calcT = `${pad(k.h)}:${pad(Math.max(0,k.mi-1))}`;
