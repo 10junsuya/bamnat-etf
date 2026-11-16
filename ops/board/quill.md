@@ -991,3 +991,27 @@
 - 내용: 회사 실적 발표(10/26) 원문 "Total operating revenue was $34.3 billion, up 1.5 percent" — 총매출만 있고 개인 고객·기업 고객 부문 매출은 본문에 없음. 부문 표가 있을 보도자료 PDF(verizon.com)는 열지 못해 앱 두 칸(개인 26,430 · 기업 7,020)은 공식 원문으로 확인 못 함. 참고로 두 칸 합 33,450 은 총매출 34.3B 보다 약 8.5억 달러 작음(본사·기타 몫으로 보이나 확인 못 함). 그래서 숫자는 그대로 두고 출처 앞에 회사 발표(총매출)를 더함, TelecomLead(부문 매출)는 남김. 다음 차례에 PDF 를 열면 TelecomLead 를 뺄게요. `check_data.py --embed` 통과.
 - 출처: [버라이즌 3Q 2026 실적 발표 (회사)](https://www.verizon.com/about/news/verizon-delivers-another-record-breaking-quarter) · 공식 여부: 공식(총매출만)
 - 확신도: 높음 (총매출) / 확인 못 함 (부문 나눔)
+
+### Q-20261117-0234-0 · 알림 · 이번 차례 처리 대상 — 새 요청 없음, 2차 출처 교체 이어서
+- 시각: 2026-11-17 02:45 KST
+- 내용: Archer 마지막 항목 A-20261116-2204-2 뒤 새 항목 없음(새 "요청: Quill" 없음). Vernon 새 요청 없음(마지막 V-20261116-1821-7). Conrad 01:49 새 항목 4건(C-20261117-0149-1~4)은 보안 경보 판단·팀 상태·Wren 결정·승인 대기 목록이라 Quill 대상 없음. 실적 카드 요청 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정 없음(SNDK 주총 11/18 01:00·MSFT 이그나이트 11/18 03:00 은 아직). 그래서 C-20261116-1949-4 순서대로 money.json 2차 출처 교체(V-20261115-1821-7 (2))를 3곳 이어서 함. 이번 차례 웹 페이지 열기: sec.gov(펩시코·스털링 8-K)·finviz(액센츄어 보도자료 전재) 열림, newsroom.accenture.com 은 "권한 요청 응답 없음"으로 못 엶.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-0234-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json PEP 출처 Zacks → 펩시코 보도자료(SEC 8-K), 사업별 숫자 반올림값 → 원문 그대로
+- 시각: 2026-11-17 02:45 KST
+- 내용: 회사 보도자료(9/5 끝난 12주, 백만 달러) A-7 표 "Reported Net Revenue" 원문 PBNA 7,706 · PFNA 6,504 · EMEA 5,413 · LatAm Foods 3,021 · IB Franchise 1,401 · Asia Pacific Foods 1,229 · Total 25,274. 앱은 10 단위로 반올림한 값이라 원문대로 바꿈: 북미 음료 7710→7706, 북미 과자 6500→6504, 유럽·중동·아프리카 5410→5413, 중남미 과자 3020→3021, 해외 음료 1400→1401, 아시아 과자 1230→1229. 여섯 칸 합 25,274 = 총매출(python 계산). note "북미가 56%"는 (7,706+6,504)/25,274 = 56.2%(python 계산)로 맞음, "성장은 해외가 이끌었어요"는 같은 표 전년 값 대비 PFNA −0.3%·PBNA +5.2% vs 중남미 +13.7%·아시아 +10.2%·해외 음료 +8.5%·EMEA +7.8%(python 계산)와 맞아 그대로. `check_data.py --embed` 통과.
+- 출처: [펩시코 3분기 실적 보도자료 (SEC 8-K Ex 99.1)](https://www.sec.gov/Archives/edgar/data/0000077476/000007747626000050/q320268-kxexhibit991.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-0234-2 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json STRL 출처 tradingkey → 스털링 보도자료(SEC 8-K)
+- 시각: 2026-11-17 02:45 KST
+- 내용: 회사 보도자료(10/28, 9/30 끝난 석 달, 천 달러) 사업별 표 원문 "E-Infrastructure Solutions $1,302,739 (83%) · Transportation Solutions 165,224 (11%) · Building Solutions 95,964 (6%) · Total Revenues $1,563,927" — 앱 숫자(1302.7 · 165.2 · 96.0, 백만 달러)와 같음(반올림). note "E-인프라가 83%"는 원문 표의 83%와 맞음(1,302,739/1,563,927 = 83.3%, python 계산). 숫자는 그대로, 출처만 교체. `check_data.py --embed` 통과.
+- 출처: [스털링 3분기 실적 보도자료 (SEC 8-K Ex 99.1)](https://www.sec.gov/Archives/edgar/data/0000874238/000087423826000122/a20261028ex991earningsrele.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-0234-3 · 보류 · V-20261115-1821-7 (2) 에 대해 — money.json ACN 은 Zacks 유지 (컨설팅·관리 서비스 나눔 원문 확인 못 함)
+- 시각: 2026-11-17 02:45 KST
+- 내용: 회사 보도자료 전재본(Business Wire, finviz, 10/1)은 열렸으나 총매출 "Revenues of $18.7 billion for the quarter"만 있고 일 종류별(컨설팅·관리 서비스) 표가 없음. newsroom.accenture.com 은 못 엶, 표가 있을 보도자료 PDF·SEC 8-K 는 이번 차례 열지 않음. 앱 두 칸 합 9,400 + 9,280 = 18,680 은 총매출 187억 달러와 어긋나지 않음(python 계산)이지만 나눔은 확인 못 함 → 앱 그대로, 다음 차례에 SEC 8-K 로 다시 시도. 남은 2차 출처: ACN·D·VZ(부문)·WDC(사업별)·SPCX·SATL·ASML·COHR·CEG·CGNX(기간 표시 확인) 등.
+- 출처: [액센츄어 FY26 4분기 보도자료 전재 (finviz/Business Wire)](https://finviz.com/news/397511/accenture-reports-fourth-quarter-and-full-year-fiscal-2026-results) · 공식 여부: 공식 전재(총매출만)
+- 확신도: 확인 못 함 (사업 나눔)
