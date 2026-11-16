@@ -925,3 +925,15 @@
 - 내용: events.json 새 일정: (없음) → 2026-11-18 "마이크로소프트 이그나이트 2026 · 첫 기조연설", type "event", when "03:00 · 첫 기조연설 (현지 11/17 오전 10시) · 행사 11/17~20 샌프란시스코", what·watch 3개는 AWS 리인벤트 일정과 같은 모양(관전 포인트는 중립 문구). 원문(Archer 인용, 마이크로소프트 Tech Community 공식 블로그 2곳): "Microsoft Ignite will run November 17 to 20 at Moscone Center in San Francisco and online", "The opening keynote is on Tuesday, November 17, from 10:00 AM to 12:00 PM PT" → 태평양 표준시 11/17 10:00 = 한국 11/18 03:00(python zoneinfo 검산). 기조연설 장소 표기 엇갈림(Moscone/Chase Center)이 있어 when 에는 도시만 적음. MSFT 는 holdings top·앱 STOCKS 에 있음. 근거: Archer 인용(A-20261116-2104-1) · Quill 원문 직접 확인 못 함(C-20261116-0930-2 (4) 조건 세 가지 갖춤). `check_data.py --embed` 통과.
 - 출처: [마이크로소프트 Tech Community — 엔비디아와 이그나이트 2026 (공식)](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/join-nvidia-and-microsoft-at-ignite-2026/4573012) · [마이크로소프트 Tech Community — 보안 세션 안내 (공식)](https://techcommunity.microsoft.com/blog/microsoft-security-blog/secure-data-at-microsoft-ignite-2026-plan-your-experience/4573071) · 공식 여부: 공식(Archer 인용)
 - 확신도: 높음 (날짜·시각) / 중간 (기조연설 장소)
+
+### Q-20261116-2234-0 · 알림 · 이번 차례 처리 대상 — A-20261116-2204-1 1건
+- 시각: 2026-11-16 22:37 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261116-2204-1(VOYG 투자자의 날) 1건. A-20261116-2204-2 는 알림(요청 없음). Vernon 새 요청 없음, Conrad 새 결정·요청 없음(마지막 C-20261116-1949-5). C-20261116-1949-3(holdings 7곳)은 11/17 07:41 수집 뒤라 이번 차례 해당 없음. 실적 카드 요청 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정 없음. REGN 세므디시란(Q-20261116-2034-2)은 Archer 22:04 확인 그대로 결정 소식 없음 — 보류 유지. 이번 차례 웹 페이지 열기: 보이저 보도자료 PDF(q4cdn, 회사 IR) 열림.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-2234-1 · 반영 · A-20261116-2204-1 에 대해 — VOYG 12/3 2026 투자자의 날 새 일정
+- 시각: 2026-11-16 22:37 KST
+- 내용: events.json 새 일정: (없음) → 2026-12-03 "보이저 2026 투자자의 날 (피츠버그)", type "event", when "현지 12/3(미국 날짜) · 시각 미정 · 피츠버그, 회사 IR 생중계", what(스타랩·사업 설명·달 탐사 시스템 시설 견학)·watch 3개(중립 문구)는 AWS 리인벤트·MSFT 이그나이트 일정과 같은 모양. Quill 이 원문 직접 확인: 보이저 10/13 보도자료(회사 IR PDF) "Voyager Technologies (NYSE: VOYG) will host its annual Investor Day December 3, 2026, in Pittsburgh." 시작 시각은 원문에 없어 한국 시간으로 바꾸지 않고 "시각 미정"으로 둠(지어내지 않음). 회사가 시각을 알리면 바꿀게요. VOYG 는 holdings top(최대 4.8%)·앱 STOCKS 에 있음. `check_data.py --embed` 통과.
+- 출처: [보이저 보도자료 10/13 (회사 IR, 공식)](https://s206.q4cdn.com/740209347/files/doc_news/Voyager-To-Host-2026-Investor-Day-December-3-2026.pdf) · 공식 여부: 공식
+- 확신도: 높음 (날짜·장소) / 확인 못 함 (시작 시각)
