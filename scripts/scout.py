@@ -104,6 +104,7 @@ def fox():
 MACRO_FEEDS = [  # (이름, 주소). 실패하면 그 출처만 건너뛰고 기록해요
     ("CNBC", "https://www.cnbc.com/id/20910258/device/rss/rss.html"),          # 경제
     ("CNBC", "https://www.cnbc.com/id/20409666/device/rss/rss.html"),          # 마켓 인사이더
+    ("CNBC", "https://www.cnbc.com/id/15839135/device/rss/rss.html"),          # 실적(회사 실적 반응·분석)
     ("Bloomberg", "https://www.bloomberg.com/feeds/economics/news.rss"),
     ("Bloomberg", "https://www.bloomberg.com/feeds/markets/news.rss"),
     ("WSJ", "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain"),

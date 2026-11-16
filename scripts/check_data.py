@@ -34,32 +34,48 @@ def tickers():
     return set(re.findall(r"\b([A-Z]{1,6})\s*:\s*\[", s[i:j]))
 
 
-VIEW_SRC = {"CNBC", "Bloomberg", "Reuters", "WSJ", "FinancialJuice", "Fox Business"}
-
-
-def check_views(d):
-    """지표 발표 해설 (data/views.json): 한국어 한 줄 + 매체 + https 링크 + 날짜, 지표마다 5줄까지"""
-    if not d:
+def check_analysis(where, a):
+    """발표 분석 블록: body(분석 글, 한국어 단락 1~4개) + items(매체 해석 한 줄, 5개까지)"""
+    if not isinstance(a, dict):
+        err(where, "분석 블록은 {body, items, asof} 모양이어야 해요.")
         return
-    for k, v in (d.get("ind") or {}).items():
-        items = v.get("items") or []
-        if len(items) > 5:
-            err(f"views.{k}", "한 지표에 5줄까지만 써요.")
+    body = a.get("body") or []
+    if not isinstance(body, list) or len(body) > 4:
+        err(where, "body(분석 글)는 단락 목록이고 4단락까지예요.")
+        body = []
+    for n, b in enumerate(body):
+        if not re.search(r"[가-힣]", str(b)) or len(str(b)) > 400:
+            err(f"{where}.body[{n}]", "분석 글은 한국어로, 단락마다 400자 이하로 써요.")
+    if a.get("asof") and not DATE.match(str(a["asof"])):
+        err(where, "asof 는 YYYY-MM-DD 로 써요.")
+    items = a.get("items") or []
+    if len(items) > 5:
+        err(where, "매체 해석은 5줄까지만 써요.")
+    for n, x in enumerate(items):
+        w = f"{where}.items[{n}]"
+        t = str(x.get("t", ""))
+        if not re.search(r"[가-힣]", t) or len(t) > 90:
+            err(w, "한국어 한 줄(90자 이하)로 써야 해요. 영어 제목을 그대로 넣지 않아요.")
+        if not str(x.get("src", "")).strip():
+            err(w, "매체 이름(src)이 비어 있어요.")
+        if not URL.match(str(x.get("url", ""))):
+            err(w, "링크(url)는 https 로 시작해야 해요.")
+        if not DATE.match(str(x.get("d", ""))):
+            err(w, "날짜(d)는 YYYY-MM-DD 로 써요.")
+        if x.get("tag") not in ("보도", "공식"):
+            err(w, "tag는 '보도' 또는 '공식'이에요.")
+
+
+def check_views(d, events=None):
+    """매크로 지표 발표 분석 (data/views.json) + 실적·회사 이벤트 카드의 card.views"""
+    for k, v in ((d or {}).get("ind") or {}).items():
         if v.get("rel") and not DATE.match(str(v["rel"])[:10]):
             err(f"views.{k}", "rel(발표일)은 YYYY-MM-DD 로 시작해야 해요.")
-        for i, x in enumerate(items):
-            w = f"views.{k}[{i}]"
-            t = str(x.get("t", ""))
-            if not re.search(r"[가-힣]", t) or len(t) > 90:
-                err(w, "한국어 한 줄(90자 이하)로 써야 해요. 영어 제목을 그대로 넣지 않아요.")
-            if x.get("src") not in VIEW_SRC:
-                err(w, f"매체(src)는 {sorted(VIEW_SRC)} 중 하나여야 해요.")
-            if not URL.match(str(x.get("url", ""))):
-                err(w, "링크(url)는 https 로 시작해야 해요.")
-            if not DATE.match(str(x.get("d", ""))):
-                err(w, "날짜(d)는 YYYY-MM-DD 로 써요.")
-            if x.get("tag") not in ("보도", "공식"):
-                err(w, "tag는 '보도' 또는 '공식'이에요.")
+        check_analysis(f"views.{k}", v)
+    for e in events or []:
+        c = e.get("card") or {}
+        if "views" in c:
+            check_analysis(f"events.{e.get('t')}.{e.get('d')}.card.views", c["views"])
 
 
 def check_src(where, src):
@@ -321,7 +337,7 @@ def main():
         check_earnings(data["d-earnings"], known)
         check_product_art(data["d-companies"])
         check_companies(data["d-companies"], known)
-        check_views(data["d-views"])
+        check_views(data["d-views"], data["d-events"])
         for id_, f in FILES.items():
             check_safety(f, data[id_])
         check_directives(data)
