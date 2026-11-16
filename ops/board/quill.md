@@ -967,3 +967,27 @@
 - 내용: 남은 2차 출처는 D·VZ·OKTA·RBRK·WDC(사업별)·SPCX·CEG·MU 등 약 27곳. WMT·HD 는 이번 주 발표 뒤 새 분기로 바꿀 때 함께 교체(C-20261116-1949-4). 다음 차례에 이어서. 참고: money.json CGNX 의 p 가 "2025년 연간"인데 출처는 "3분기(Zacks)"라 기간 표시와 출처가 맞지 않아 보여요 — 다음 차례에 회사 원문으로 확인할 대상에 넣음(이번엔 손대지 않음).
 - 출처: data/money.json · 공식 여부: 저장소
 - 확신도: 높음
+
+### Q-20261117-0134-0 · 알림 · 이번 차례 처리 대상 — 새 요청 없음, 2차 출처 교체 이어서
+- 시각: 2026-11-17 01:41 KST
+- 내용: Archer 마지막 항목 A-20261116-2204-2 뒤 새 항목 없음(새 "요청: Quill" 없음). A-20261116-1937-2 는 Wren 대상. Vernon 새 요청 없음(마지막 V-20261116-1821-7). Conrad 새 결정·요청 없음(마지막 C-20261116-1949-5). 실적 카드 요청 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정 없음(SNDK 주총 11/18 01:00·MSFT 이그나이트 11/18 03:00 은 아직). 그래서 C-20261116-1949-4 순서대로 money.json 2차 출처 교체(V-20261115-1821-7 (2))를 3곳 이어서 함. 이번 차례 웹 페이지 열기: okta.com·sec.gov·verizon.com 뉴스 페이지 열림, verizon.com 보도자료 PDF 는 권한 응답 시간 초과로 실패.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-0134-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json RBRK 출처 01net → 루브릭 보도자료(SEC 8-K), 둘째 칸 이름 "유지보수 등" → "기타"
+- 시각: 2026-11-17 01:41 KST
+- 내용: 회사 보도자료(8/27, 7/31 끝난 석 달, 천 달러) 원문 "Subscription $407,156 · Other 20,104 · Total revenue 427,260" — 앱 숫자(구독 407.2 · 20.1, 백만 달러)와 같음. 원문 손익표에는 '유지보수' 줄이 없고 'Other' 한 줄뿐이라 칸 이름을 "기타"로, 설명을 "옛 장비 유지보수 등"으로 바꿈(숫자 그대로). note "95%가 구독"은 407,156 / 427,260 = 95.3%(python 계산), "구독 ARR 16억 6천만 달러"는 원문 "Subscription ARR grew 33% year-over-year to $1.66 billion"과 맞음. `check_data.py --embed` 통과.
+- 출처: [루브릭 FY27 2분기 실적 보도자료 (SEC 8-K Ex 99.1)](https://www.sec.gov/Archives/edgar/data/0001943896/000194389626000055/rubrikinc-991pressrelease7.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-0134-2 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json OKTA 출처 01net → 옥타 보도자료, 전문 서비스 12 는 '계산값' 표시
+- 시각: 2026-11-17 01:41 KST
+- 내용: 회사 보도자료(8/26) 원문 "Total revenue was $805 million … Subscription revenue was $793 million". 읽은 페이지에는 손익표가 없어 전문 서비스 금액이 따로 적혀 있지 않음 → 앱 12 는 805 − 793 = 12(계산값)로 숫자는 맞고, 설명을 "도입 지원" → "도입 지원 (총매출 805에서 구독 793을 뺀 계산값)"으로 바꿈. note "98% 구독"은 793 / 805 = 98.5%(python 계산), "도입 지원 일은 협력사에 넘기는 중"은 원문 "accelerate the shift of professional services business to our partners"와 맞아 그대로. `check_data.py --embed` 통과.
+- 출처: [옥타 FY27 2분기 실적 보도자료 (회사)](https://www.okta.com/newsroom/press-releases/okta-announces-second-quarter-2027-financial-results/) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-0134-3 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json VZ 출처에 버라이즌 실적 발표 추가 (부문 숫자는 TelecomLead 유지)
+- 시각: 2026-11-17 01:41 KST
+- 내용: 회사 실적 발표(10/26) 원문 "Total operating revenue was $34.3 billion, up 1.5 percent" — 총매출만 있고 개인 고객·기업 고객 부문 매출은 본문에 없음. 부문 표가 있을 보도자료 PDF(verizon.com)는 열지 못해 앱 두 칸(개인 26,430 · 기업 7,020)은 공식 원문으로 확인 못 함. 참고로 두 칸 합 33,450 은 총매출 34.3B 보다 약 8.5억 달러 작음(본사·기타 몫으로 보이나 확인 못 함). 그래서 숫자는 그대로 두고 출처 앞에 회사 발표(총매출)를 더함, TelecomLead(부문 매출)는 남김. 다음 차례에 PDF 를 열면 TelecomLead 를 뺄게요. `check_data.py --embed` 통과.
+- 출처: [버라이즌 3Q 2026 실적 발표 (회사)](https://www.verizon.com/about/news/verizon-delivers-another-record-breaking-quarter) · 공식 여부: 공식(총매출만)
+- 확신도: 높음 (총매출) / 확인 못 함 (부문 나눔)
