@@ -247,6 +247,9 @@ def check_directives(data):
             err(w, f"소식이 영어로 보여요(지시 모음 2번: 한국어 한 줄로 새로 써요): {t[:60]!r}")
     # 지시 12: 가짜 자리 채움 문구를 남기지 않아요
     app = APP.read_text(encoding="utf-8")
+    # 합치기(merge) 충돌 표시가 남은 채로 올라가면 앱이 깨져요
+    if re.search(r"^(<<<<<<<|>>>>>>>|=======$)", app, flags=re.M):
+        err("index.html", "합치기 충돌 표시(<<<<<<< / >>>>>>>)가 남아 있어요. 충돌을 풀고 다시 올려 주세요.")
     code = re.sub(r'<script type="application/json" id="[^"]+">.*?</script>', "", app, flags=re.S)
     for bad in ("[예시]", "요약이 여기에 들어가요", "lorem ipsum"):
         if bad in code:
