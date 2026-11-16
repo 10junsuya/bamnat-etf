@@ -7,7 +7,7 @@
 | 단계 | 누가 | 무엇을 |
 |---|---|---|
 | ① 숫자 모으기 | 자동 수집 프로그램 (GitHub) | 미국 시세·종가, 국내 기준가, 환율, 구성종목, 매크로 지표를 정해진 시각마다 받아요 |
-| ② 실시간 중계 | 실시간 서버 (Cloudflare) | 앱이 열려 있으면 1분마다 미국 시세·환율·국내 ETF 가격·지수 선물을 받아 와요 |
+| ② 실시간 중계 | 실시간 서버 (Cloudflare) | 2분마다 한국투자증권에서 국내 ETF·미국 종목 시세를 미리 받아 창고에 두고, 앱이 열려 있으면 보고 있는 ETF는 1분마다 직접 받아 와요 (10장 그림) |
 | ③ 소식 찾기 | Scout (프로그램) | 10분마다 담긴 회사의 새 기사 제목·링크와 공시를 모아요 |
 | ④ 확인하고 반영 | AI 팀 | 공식 출처로 확인한 일정·실적·소식을 앱 데이터에 한국어로 넣어요 |
 | ⑤ 점검 | Vernon · Argus · Keene · Sterling | 숫자·서버·화면·팀 전체를 따로 점검해요 |
@@ -140,7 +140,7 @@ AI는 실행이 끝나면 기억이 사라져요. 그래서 공부와 경험을 
 
 **대표님이 직접 하실 것** (보안 설정이라 AI가 바꾸지 않아요)
 
-1. 한국투자증권 키는 노몬 전용 빈 계좌로 받기
+1. 한국투자증권 키는 노몬 전용 빈 계좌로 받기 (2026-11-16 완료 · 키 만료 2027-11-16, 10월 중순 갱신)
 2. GitHub·Cloudflare 2단계 인증 켜기
 3. GitHub main 브랜치 강제 덮어쓰기·삭제 금지 켜기
 4. 키가 샜다는 의심이 들면 바로 해지하고 새로 받기
@@ -156,3 +156,131 @@ AI는 실행이 끝나면 기억이 사라져요. 그래서 공부와 경험을 
 - **방화벽(봇 차단)**: Cloudflare 방화벽은 우리 도메인(예: gnomon.kr)이 있어야 켤 수 있어요. 지금 주소에는 걸 수 없어요. 도메인과 방화벽은 앱을 공개한 뒤에 정해요.
 
 **공개 전에 꼭 할 것**: 다른 사이트 차단 켜기(우리 앱 주소만 허용), 이 작업을 안 본 쪽(예: Fable)에서 따로 보안 점검받기, 시세 데이터 공개 이용 조건 확인.
+
+## 10. 그림으로 보는 노몬 구조
+
+<style>.fig{margin:8pt 0 2pt;page-break-inside:avoid}.fig svg text{font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif}.cap{font-size:9pt;color:#6E6E73;margin:0 0 10pt;text-align:center}</style>
+
+식당에 빗대면 쉬워요. **시장**(한국투자증권 같은 데이터 출처)에서 재료(숫자)가 나오고, **주방**(Cloudflare 서버)이 재료를 받아 오고, **냉장고**(창고)에 미리 넣어 두면, **손님**(이용자 앱)이 와서 바로 꺼내 받아요. **편집부**(AI 팀)는 메뉴판과 오늘의 추천(일정·분석·뉴스)을 써서 보관함(GitHub)에 넣어요.
+
+<div class="fig"><h3>10-1. 전체 구조</h3><svg viewBox="0 0 680 380" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="40" y="55" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="120.0" y="74.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">한국투자증권</text><text x="120.0" y="94.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">ETF·미국 주식 시세</text><rect x="40" y="125" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="120.0" y="144.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">야후 파이낸스</text><text x="120.0" y="164.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">지수 선물·환율</text><rect x="40" y="195" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="120.0" y="214.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">Finnhub</text><text x="120.0" y="234.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">예비·대조용</text><rect x="240" y="20" width="220" height="230" rx="16" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="350" y="40" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">Cloudflare 서버 (주방)</text><rect x="260" y="60" width="180" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.8"/><text x="350.0" y="79.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#2C2C2A">중계 창구</text><text x="350.0" y="99.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">키 보관, 대신 물어봄</text><rect x="260" y="170" width="180" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.8"/><text x="350.0" y="189.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#2C2C2A">창고 (냉장고)</text><text x="350.0" y="209.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">2분마다 미리 저장</text><line x1="350" y1="116" x2="350" y2="168" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a1)"/><line x1="200" y1="88" x2="258" y2="88" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a1)"/><line x1="200" y1="153" x2="238" y2="153" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a1)"/><line x1="200" y1="223" x2="238" y2="223" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a1)"/><rect x="500" y="110" width="140" height="60" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="570.0" y="131.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">이용자 앱 (손님)</text><text x="570.0" y="151.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">창고부터 읽음</text><line x1="460" y1="140" x2="498" y2="140" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a1)"/><rect x="40" y="290" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="120.0" y="309.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">AI 팀</text><text x="120.0" y="329.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">일정·분석·뉴스 작성</text><rect x="260" y="290" width="180" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="350.0" y="309.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">GitHub 저장소</text><text x="350.0" y="329.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">데이터 파일 보관함</text><line x1="200" y1="318" x2="258" y2="318" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a1)"/><path d="M440 318 L570 318 L570 172" fill="none" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a1)"/></svg></div>
+
+<p class="cap">그림 1. 노몬 전체 구조 (2026-11-16 기준)</p>
+
+- **시장 (청록색):** 한국투자증권은 국내 ETF 가격·iNAV·종가와 미국 주식 가격을 줘요. 야후는 나스닥·S&P 선물과 환율을, Finnhub는 예비이자 대조용으로 미국 정규장 가격을 줘요.
+- **중계 창구:** 한국투자증권 키는 비밀번호 같은 거라 앱에 넣으면 누구나 볼 수 있어요. 그래서 키는 서버 안에만 두고, 앱 대신 서버가 물어봐요. 주문·잔고 요청은 코드에서 막아 둬서 시세만 물을 수 있어요.
+- **창고:** 2분마다 서버가 스스로 시세를 받아 넣어 둬요. 손님이 올 때마다 시장에 뛰어가지 않아도 돼요.
+- **이용자 앱:** 받은 숫자로 "내일 예상 기준가"를 앱 안에서 직접 계산해요. 서버는 재료만 나르고, 요리는 앱이 해요.
+- **AI 팀 → GitHub:** 매초 바뀌지 않는 것(실적 일정, 지표 분석, 뉴스 한 줄, 구성종목, 공시 기준가 기록)은 파일로 올려요.
+
+<div class="fig"><h3>10-2. 시세가 흐르는 길</h3><svg viewBox="0 0 680 400" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="40" y="30" width="180" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="130.0" y="49.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">한국투자증권</text><text x="130.0" y="69.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">주력 시세</text><rect x="250" y="30" width="180" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="340.0" y="49.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">야후 파이낸스</text><text x="340.0" y="69.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">선물·환율</text><rect x="460" y="30" width="180" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="550.0" y="49.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">Finnhub</text><text x="550.0" y="69.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">예비·대조</text><line x1="130" y1="86" x2="130" y2="168" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a2)"/><text x="138" y="116" text-anchor="start" font-size="12" fill="#444441">ETF 가격·iNAV</text><text x="138" y="134" text-anchor="start" font-size="12" fill="#444441">미국 주식 가격</text><line x1="340" y1="86" x2="340" y2="168" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a2)"/><text x="348" y="116" text-anchor="start" font-size="12" fill="#444441">나스닥·S&amp;P 선물</text><text x="348" y="134" text-anchor="start" font-size="12" fill="#444441">원/달러 환율</text><line x1="550" y1="86" x2="550" y2="168" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a2)"/><text x="558" y="116" text-anchor="start" font-size="12" fill="#444441">미국 종가</text><text x="558" y="134" text-anchor="start" font-size="12" fill="#444441">(대조용)</text><rect x="40" y="170" width="600" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="340.0" y="189.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">중계 창구 (Cloudflare 서버)</text><text x="340.0" y="209.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">숨긴 키로 대신 물어봄 · 주문과 잔고는 막아 둠</text><line x1="110" y1="226" x2="110" y2="298" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a2)"/><text x="118" y="256" text-anchor="start" font-size="12" fill="#444441">2분마다 저장</text><text x="118" y="274" text-anchor="start" font-size="12" fill="#444441">ETF 54·미국 241종목</text><line x1="470" y1="226" x2="470" y2="298" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a2)"/><text x="478" y="256" text-anchor="start" font-size="12" fill="#444441">열어 둔 ETF만</text><text x="478" y="274" text-anchor="start" font-size="12" fill="#444441">1분마다 직접</text><rect x="40" y="300" width="250" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.8"/><text x="165.0" y="319.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#2C2C2A">창고 (KV)</text><text x="165.0" y="339.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">최근 가격 묶음 한 덩어리</text><line x1="290" y1="328" x2="378" y2="328" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a2)"/><text x="334" y="314" text-anchor="middle" font-size="12" fill="#444441">한 번에 전부</text><rect x="380" y="300" width="260" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="510.0" y="319.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">이용자 앱</text><text x="510.0" y="339.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">열자마자 창고부터 읽음</text></svg></div>
+
+<p class="cap">그림 2. 화살표마다 오가는 숫자</p>
+
+| 화살표 | 오가는 것 | 얼마나 자주 |
+|---|---|---|
+| 한국투자증권 → 중계 창구 | 국내 ETF 54개 가격·iNAV·종가, 미국 종목 가격(주간거래·프리마켓·정규장·애프터마켓) | 2분마다 + 보고 있는 ETF는 1분마다 |
+| 야후 → 중계 창구 | 나스닥100·S&P500 선물, 원/달러 환율 | 1분마다 |
+| Finnhub → 중계 창구 | 미국 정규장 가격 (한국투자증권과 2% 넘게 다르면 "차이 큼" 표시) | 1분마다 |
+| 중계 창구 → 창고 | 받은 가격을 한 덩어리 장부로 저장 ("엔비디아 156.7달러, 받은 시각") | 2분마다 |
+| 창고 → 앱 | 장부를 통째로 한 번에 | 앱을 열 때 + 1분마다 |
+| 중계 창구 → 앱 | 지금 보고 있는 ETF와 그 종목만 직접 | 1분마다 |
+
+<div class="fig"><h3>10-3. 글·일정이 흐르는 길과 앱의 계산</h3><svg viewBox="0 0 680 500" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="40" y="30" width="250" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="165.0" y="49.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">AI 팀 (Wren·Tally 등)</text><text x="165.0" y="69.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">정해진 시간마다 일함</text><rect x="390" y="30" width="250" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="515.0" y="49.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">중계 창구·창고</text><text x="515.0" y="69.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">그림 2의 서버</text><line x1="165" y1="86" x2="165" y2="158" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a3)"/><text x="175" y="114" text-anchor="start" font-size="12" fill="#444441">실적 일정·지표 분석</text><text x="175" y="132" text-anchor="start" font-size="12" fill="#444441">뉴스 한 줄·구성종목</text><rect x="40" y="160" width="250" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.8"/><text x="165.0" y="179.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#2C2C2A">GitHub 저장소</text><text x="165.0" y="199.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">데이터 파일 보관함</text><path d="M165 216 L165 328 L213 328" fill="none" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a3)"/><text x="175" y="254" text-anchor="start" font-size="12" fill="#444441">공시 기준가 기록</text><text x="175" y="272" text-anchor="start" font-size="12" fill="#444441">일정·분석 파일</text><path d="M515 86 L515 328 L467 328" fill="none" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a3)"/><text x="505" y="180" text-anchor="end" font-size="12" fill="#444441">오늘 종가·iNAV</text><text x="505" y="198" text-anchor="end" font-size="12" fill="#444441">미국 종목 등락</text><text x="505" y="216" text-anchor="end" font-size="12" fill="#444441">선물·환율</text><rect x="215" y="300" width="250" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="340.0" y="319.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">이용자 앱 (계산)</text><text x="340.0" y="339.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">재료를 섞어 요리함</text><line x1="340" y1="356" x2="340" y2="408" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a3)"/><text x="350" y="386" text-anchor="start" font-size="12" fill="#444441">계산 결과</text><rect x="215" y="410" width="250" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/><text x="340.0" y="429.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#085041">화면</text><text x="340.0" y="449.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">종가 → 내일 예상 기준가</text></svg></div>
+
+<p class="cap">그림 3. 파일과 실시간 숫자가 만나 계산되는 곳</p>
+
+| 화살표 | 오가는 것 |
+|---|---|
+| AI 팀 → GitHub | Wren 지표 발표 분석, Tally 실적 카드, Archer 일정, 매일 아침 구성종목·공시 기준가 기록 |
+| GitHub → 앱 | 위 파일들 (앱이 1분마다 새 파일이 있는지 확인) |
+| 서버 → 앱 | 오늘 종가·iNAV, 담긴 미국 종목 등락, 선물, 환율 |
+| 앱 → 화면 | 계산 결과: "오늘 종가 → 내일 예상 기준가" |
+
+**앱이 계산하는 순서**
+
+1. **출발점:** 오늘 종가 또는 오늘 장 마감 iNAV (한국투자증권)
+2. **미국 쪽 움직임:** 담긴 종목마다 "비중 × 등락률"을 더해요. 장이 안 열렸으면 프리마켓·주간거래 가격, 그것도 모자라면 지수 선물로 추정해요.
+3. **환율 움직임:** 달러가 오르면 원화 가치도 올라요. 환헤지(H) ETF는 빼요.
+4. **결과:** 출발점 × (1 + 미국 쪽 움직임) × (1 + 환율 움직임)
+
+예시 (숫자는 설명용 · 계산값): 오늘 종가 25,150원, 미국 쪽 −0.60%, 환율 +0.10%라면 25,150 × 0.994 × 1.001 ≈ **25,024원**.
+
+<div class="fig"><h3>10-4. 앱을 열 때 일어나는 순서</h3><svg viewBox="0 0 680 250" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="40" y="40" width="125" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="102.5" y="59.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">앱 열기</text><text x="102.5" y="79.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">0초</text><rect x="198" y="40" width="125" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="260.5" y="59.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">창고 한 번 읽기</text><text x="260.5" y="79.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">약 1초</text><rect x="356" y="40" width="125" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="418.5" y="59.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">계산해서 그리기</text><text x="418.5" y="79.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">1~2초</text><rect x="514" y="40" width="125" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/><text x="576.5" y="59.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#3C3489">보는 ETF 갱신</text><text x="576.5" y="79.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">1분마다</text><line x1="165" y1="68" x2="196" y2="68" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a4)"/><line x1="323" y1="68" x2="354" y2="68" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a4)"/><line x1="481" y1="68" x2="512" y2="68" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a4)"/><rect x="198" y="150" width="283" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.8"/><text x="339.5" y="169.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="700" fill="#2C2C2A">서버: 2분마다 창고 채우기</text><text x="339.5" y="189.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">손님이 없어도 혼자 계속 돌아요</text><line x1="260" y1="148" x2="260" y2="98" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#a4)"/></svg></div>
+
+<p class="cap">그림 4. 위 줄은 손님(앱), 아래 회색은 주방(서버)이 혼자 하는 일</p>
+
+### 10-5. 시간대별로 숫자를 어디서 받나 (한국 시간, 겨울 기준)
+
+| 시간 | 국내 ETF | 미국 주식 | 예상 기준가에 쓰는 것 |
+|---|---|---|---|
+| 09:00~15:30 | 한국투자증권 실시간 가격·iNAV | 주간거래 (10:00~18:00) | 주간거래 가격, 모자라면 선물 |
+| 15:30~18:00 | 종가·장 마감 iNAV | 주간거래 | 주간거래 가격, 모자라면 선물 |
+| 18:00~23:30 | (장 마감) | 프리마켓 | 담긴 종목 프리마켓 가격, 모자라면 선물 |
+| 23:30~06:00 | (장 마감) | 정규장 (Finnhub로 대조) | 실제 정규장 등락 |
+| 06:00~09:00 | (장 마감) | 애프터마켓 (참고만) | 정규장 종가로 확정 · 애프터마켓은 안 넣어요 |
+
+미국 서머타임(3월~11월 초)에는 미국 쪽 시간이 1시간씩 앞당겨져요. 16:00~20:00 한국 시간외(애프터마켓) 가격을 받을 수 있는지는 한국투자증권에 문의 중이에요.
+
+### 10-6. 2026-11-16 연결하며 생긴 문제와 해결
+
+| 증상 | 원인 | 해결 |
+|---|---|---|
+| 숫자가 전부 0.00% | 한 번에 너무 많이 물어서 무료 한도(요청 한 번에 바깥 호출 50번)를 넘음 | 8개·10개씩 나눠 묻기 |
+| 숫자가 몇 분 뒤에야 뜸 | 새 키라 호출 한도가 낮은데, 다 받은 뒤에야 화면을 그림 | 선물 먼저, 오는 대로 바로 그리기 |
+| 받은 값이 사라짐 | 1분마다 받는 GitHub 파일이 실시간 값을 덮어씀 | 실시간 값은 그대로 이어 가기 |
+| 옛 화면 → 3분 뒤 새 화면 | 그 ETF 차례가 올 때까지 기다림 | 열면 그 ETF만 바로 받기 + 창고 |
+| Claude 옆 창에서 전부 0% | claude.ai 아티팩트는 바깥 연결이 막혀 있음 | 실시간 확인은 바탕화면 「노몬 앱.html」로 |
+| 토큰 발급 알림이 두 번 | 지역 서버마다 토큰을 따로 받음 | 창고에 토큰 하나만 두고 같이 써요 (하루 1번 원칙) |
+
+### 10-7. 키와 안전: 무엇이 어디에 있나
+
+| 무엇 | 어디에 | 없는 곳 |
+|---|---|---|
+| App Key · App Secret | GitHub Secrets → 배포 때 Cloudflare 비밀값 | 앱 파일, 공개 저장소, 채팅, 창고 |
+| 하루짜리 토큰 | Cloudflare 창고 (23시간 재사용) | 앱, 저장소 |
+| 노몬 전용 계좌 | 한국투자증권 (잔고 0원 유지 권장) | 주문 코드는 서버에서 막혀 있어요 |
+| 계좌번호 · 비밀번호 | 대표님만 | 어디에도 적지 않아요 |
+
+### 10-8. 무료 한도와 공개 때 바꿀 것
+
+| 한도 | 지금 | 그래서 |
+|---|---|---|
+| Cloudflare 요청 | 하루 10만 번 | 공개 초기는 충분해요 |
+| 요청 한 번에 바깥 호출 | 50번 | 국내 ETF 8개, 미국 10개씩 나눠 받아요 |
+| 창고 쓰기 | 하루 1,000번 | 2분마다(하루 720번)가 최선이에요 |
+| 한국투자증권 호출 | 초당 한도 있음 (새 키는 처음 며칠 더 낮음) | 창고에 모아서 이용자 수와 상관없이 일정하게 물어요 |
+| 한국투자증권 토큰 | 하루 1번 발급 원칙 | 창고에 하나만 둬요 |
+
+**공개할 때 바꿀 것**
+
+1. 앱을 바탕화면 파일에서 웹 주소로 옮기기 (Cloudflare Pages 등, 무료)
+2. Cloudflare Workers 유료(월 5달러 안팎, 올릴 때 다시 확인)로 올리기 → 창고 1분 주기, 한도 확대
+3. 실시간 연결(웹소켓): 지금 보고 있는 화면의 종목만 1초 단위로
+4. 시세를 이용자에게 보여줘도 되는지 한국투자증권 답변 확인 (2026-11-16 이메일 문의)
+5. 다른 사이트 차단 켜기 (우리 앱 주소만 허용)
+
+### 10-9. 증권사 앱과 비교
+
+| | 증권사 | 노몬 (지금) |
+|---|---|---|
+| 시세 출처 | 거래소 원본 (코스콤 전용선, 시세 공급업체) | 한국투자증권 Open API (개인용) |
+| 전달 방식 | 바뀔 때마다 밀어주기 (실시간) | 2분마다 미리 받기 + 앱이 1분마다 묻기 |
+| 이용 허락 | 거래소 정보이용계약 (유료) | 확인 중 |
+| 실시간 범위 | 화면에 보이는 종목·관심종목만 | — |
+
+### 10-10. 용어 사전
+
+| 용어 | 뜻 |
+|---|---|
+| 기준가 (NAV) | ETF 1주에 담긴 자산의 실제 가치. 하루 한 번 공시돼요 |
+| iNAV | 장중에 몇 초마다 추정해 주는 기준가 |
+| 선물 | 미래 가격을 미리 사고파는 시장. 미국 장이 닫혀 있을 때 분위기를 보여줘요 |
+| 주간거래·프리마켓·애프터마켓 | 미국 정규장 밖에서 거래되는 시간. 거래가 적어 가격이 튈 수 있어요 |
+| API | 프로그램끼리 정해진 방식으로 데이터를 주고받는 창구 |
+| 서버 | 24시간 켜져 있는 남의 컴퓨터. 노몬은 Cloudflare 것을 빌려 써요 |
+| 창고 (KV) | 서버에 붙은 작은 저장소. 이름표(키) 하나에 값 하나를 넣어요 |
+| 크론 | "2분마다", "매일 06:17"처럼 정해진 시간에 자동으로 일을 시키는 예약 |
+| 토큰 | 한국투자증권이 "이 키는 확인됐어요"라고 주는 하루짜리 입장권 |
+| 웹소켓 | 계속 열어 두는 연결. 값이 바뀌면 상대가 바로 밀어줘요 |
+| 아티팩트 | Claude 안에서 보는 미리보기 화면. 바깥 연결이 막혀 있어서 실시간 숫자는 안 들어와요 |
