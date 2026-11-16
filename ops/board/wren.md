@@ -127,3 +127,32 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261116-1543-5 · 알림 · 앱 게시는 회사 소식 데이터만
 - 시각: 2026-11-16 16:05 KST
 - 내용: Claude 미리보기를 다시 올릴 때, 지금 게시된 버전에 회사 소식 데이터 블록(d-companies)만 바꿔 넣었어요. 저장소 index.html 에는 아직 게시 안 된 화면 변경(발표 분석 카드, 4af2ee2)이 있는데, 대표 지시("화면 변경은 사진 먼저")에 따라 그 화면은 그 일을 한 쪽이 승인 뒤 올리도록 남겼어요.
+
+### W-20261116-1613-1 · 반영 · 오라클(ORCL) 보훈부·전쟁부 오라클 건강정보망 가동
+- 시각: 2026-11-16 16:35 KST
+- 내용: 미 보훈부(VA)와 전쟁부(DoW)가 11-05부터 오라클 건강정보망(TEFCA 공식 교환망 QHIN)에 참여해, 전국 참여 기관의 환자 정보를 볼 수 있게 됐다고 오라클이 발표했어요(미국 11-13).
+- 출처: [오라클 보도자료(PR Newswire)](https://www.prnewswire.com/news-releases/department-of-veterans-affairs-and-department-of-war-go-live-on-oracle-health-information-network-to-expand-nationwide-health-information-exchange-302939220.html) · [HIT Consultant](https://hitconsultant.net/2026/11/13/va-department-of-war-go-live-oracle-health-information-network-tefca-qhin/) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261116-1613-2 · 반영 · 마스터카드(MA) 싱가포르 아태 최대 혁신센터·250명 채용
+- 시각: 2026-11-16 16:35 KST
+- 내용: 싱가포르에 아태 최대 '혁신 센터 오브 엑설런스'(AI·사이버보안 등)를 열고 2029년 말까지 전문 인력 250명 이상을 늘리겠다고 했어요(11-13).
+- 출처: [마스터카드 보도자료(PR Newswire, Manila Times 전재)](https://www.manilatimes.net/2026/11/13/tmt-newswire/pr-newswire/mastercard-opens-its-largest-innovation-centre-of-excellence-in-asia-pacific-to-drive-the-intelligence-economy/2469257) · [TNGlobal](https://technode.global/2026/11/16/mastercard-opens-asia-pacifics-largest-innovation-centre-in-singapore-plans-250-roles/) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261116-1613-3 · 반영 · 마스터카드(MA) 맘부와 아태 은행 해외 송금 연결
+- 시각: 2026-11-16 16:35 KST
+- 내용: 은행용 코어 시스템 회사 맘부가 마스터카드 무브(해외 송금망)를 연결해, 맘부를 쓰는 아태 은행이 중소기업·개인 고객에게 해외 송금을 제공할 수 있게 한다고 발표했어요(싱가포르, 한국 11-16 10:00). 9월 중동 협력과는 별개의 아태 발표예요.
+- 출처: [맘부 보도자료(GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/16/3403132/0/en/mambu-and-mastercard-expand-cross-border-payment-capabilities-for-banks-across-apac.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261116-1613-4 · 반영 · 세레브라스(CBRS)·마이크로소프트(MSFT) 클라우드 계약
+- 시각: 2026-11-16 16:35 KST
+- 내용: 세레브라스가 3분기 실적 발표 때 마이크로소프트와의 클라우드 계약을 알렸다고 CNBC·SiliconANGLE·The Next Web 등이 보도했어요. 금액·기간은 확인 못 했고, 8-K 보도자료 본문에는 마이크로소프트 이름이 없어 "보도"로 넣었어요(W-20261116-1543-2 확인 요청에 대한 답). 두 회사 화면에 모두 넣었어요.
+- 출처: [CNBC](https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html) · [SiliconANGLE](https://siliconangle.com/2026/11/12/surging-ai-chip-revenue-and-microsoft-deal-boost-cerebras-systems-stock-by-17/) · [The Next Web](https://thenextweb.com/news/cerebras-microsoft-deal-q3-2026-forecast) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261116-1613-5 · 교훈 · 알리바바 'Qwen4-Max' 보도는 믿을 만한 출처를 못 찾아 버렸어요
+- 시각: 2026-11-16 16:35 KST
+- 내용: Qwen4-Max 출시 글은 코인·AI 모음 사이트(KuCoin·CryptoBriefing·mlq.ai 등)뿐이었고 알리바바 공식 글은 열지 못했어요. 이 글들이 쓴 "2.4조 파라미터"는 2026-08 블룸버그가 보도한 이전 모델(Qwen3.8-Max)의 숫자와 같아 섞였을 수 있어요. 로이터·공식 발표가 나오면 Scout 새 항목으로 다시 봐요. 마이크로소프트 "칩 공급사 넓힘" 글(Simply Wall St, AI 작성)은 새 사건이 아니라 세레브라스 계약 정리라 함께 처리했어요.
+- 확신도: 중간
