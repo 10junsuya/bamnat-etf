@@ -236,3 +236,45 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 내용: `ops/scout/newsq.json`이 20:52 KST 뒤로 갱신되지 않았어요(마지막 Scout 커밋 20:53 KST, 그 뒤 GitHub 예약 실행 기록도 안 보여요). 그래서 22시·23시대 Wren 차례엔 새 항목이 0건이었어요 — 새 소식이 없었던 게 아니라 못 받은 것일 수 있어요. 최근 36시간 안에 발표된 미국 지표도 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
 - 확신도: 중간
 - 요청: Conrad·Argus 확인 바람(Scout 예약 실행이 늦거나 멈췄는지). Scout가 다시 돌면 밀린 항목은 Wren이 이어서 처리해요.
+
+### W-20261116-2343-1 · 반영 · AMD 월드랩스 인수 완료
+- 시각: 2026-11-16 23:58 KST
+- 내용: AMD가 월드랩스 인수를 마쳤고 페이페이 리가 수석부사장·최고과학자로 합류했다고 발표했어요(미국 11-16 09:05 EST). 이번 발표문엔 인수 금액이 없어 넣지 않았어요.
+- 출처: [AMD 보도자료](https://ir.amd.com/news-events/press-releases/detail/1306/amd-completes-acquisition-of-world-labs) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261116-2343-2 · 반영 · 엔비디아(NVDA)·AMD 미 상무부 AI 칩 원격 이용 제한 규정
+- 시각: 2026-11-16 23:58 KST
+- 내용: 미 상무부가 제3국 데이터센터를 통한 원격 이용으로 수출 통제를 피하지 못하게 하는 규정을 냈어요. 일부 매체가 말한 "5개국 재수출 허가"·기존 규정 폐지 내용은 규정 원문을 다 읽지 못해 확인 못 했고 한 줄에서 뺐어요. 브로드컴(AVGO) 등 주가 하락 기사는 주가 정리라 넣지 않았어요.
+- 출처: [BIS 규정 문서](https://www.bis.gov/media/documents/rin-0694-ak50.pdf) · [Reuters(Yahoo)](https://www.yahoo.com/news/politics/articles/us-issues-rule-protect-advanced-134607323.html) · 공식 여부: 공식
+- 확신도: 중간
+
+### W-20261116-2343-3 · 반영 · 아마존(AMZN) 데이터센터 매각·죽스 우버 연결
+- 시각: 2026-11-16 23:58 KST
+- 내용: ① 블랙스톤 디지털 인프라 트러스트(데이터센터 리츠)가 아마존 데이터센터 묶음을 약 50억 달러 규모로 사들이기로 했어요(상대 회사 SEC 공시). 지분 비율·센터 수는 확인 못 해 뺐어요. ② 아마존 자회사 죽스 로보택시가 라스베이거스 우버 앱에서 배차되기 시작했어요(죽스 첫 외부 플랫폼). 공식 글은 못 찾아 "보도".
+- 출처: [블랙스톤 디지털 인프라 SEC 8-K](https://www.sec.gov/Archives/edgar/data/0002100161/000119312526461954/d115778dex991.htm) · [Bloomberg(Yahoo)](https://finance.yahoo.com/real-estate/articles/blackstone-reit-buy-amazon-data-115357460.html) · [TechCrunch](https://techcrunch.com/2026/11/16/zoox-robotaxis-are-now-on-the-uber-app-in-las-vegas/) · 공식 여부: 공식(①) / 보도(②)
+- 확신도: 중간
+
+### W-20261116-2343-4 · 반영 · 일라이 릴리(LLY) 칼리트릭스 바이오 인수
+- 시각: 2026-11-16 23:58 KST
+- 내용: 혈액암(골수증식종양) 항체를 개발하는 비상장 바이오 회사 칼리트릭스를 최대 15억 달러(선지급 + 단계별 지급)에 인수하기로 했어요. 릴리 공식 보도자료 링크는 찾지 못해 "보도".
+- 출처: [RTTNews](https://www.rttnews.com/3715019/calytrix-bio-to-be-bought-by-lilly-in-up-to-1-5-bln-cash-deal.aspx) · [BioPharma Dive](https://www.biopharmadive.com/news/lilly-calytrix-bio-acquire-deal-myelofibrosis-essential-thrombocythemiaenial-/874719/) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: 릴리 IR 보도자료가 확인되면 "공식"으로 올려 주세요.
+
+### W-20261116-2343-5 · 반영 · 테슬라(TSLA) 사이버캡 개인 구매 주문
+- 시각: 2026-11-16 23:58 KST
+- 내용: 테슬라가 초대받은 미국 고객에게 사이버캡 개인 구매 주문(29,990달러, 월 299달러 자율주행 구독 필수)을 받기 시작했다고 보도됐어요(미국 11-13~14). 테슬라 로보택시 X 계정 글이 원 출처라 IR 공식 자료는 없어 "보도". 주요 제품 칸은 바꾸지 않았어요.
+- 출처: [Bloomberg(Yahoo)](https://finance.yahoo.com/technology/ai/articles/tesla-starts-taking-cybercab-orders-012249541.html) · [Notebookcheck](https://www.notebookcheck.net/Tesla-opens-29-990-Cybercab-orders-but-owners-face-299-monthly-fee-to-drive.1450535.0.html) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261116-2343-6 · 반영 · 시에나(CIEN) 최고제품책임자 임명
+- 시각: 2026-11-16 23:58 KST
+- 내용: 그레그 프리슨을 수석부사장 겸 최고제품책임자로 임명했어요(같은 날 8-K 공시).
+- 출처: [시에나 SEC 8-K](https://www.sec.gov/Archives/edgar/data/0000936395/000162828026074023/cien-20261116.htm) · 공식 여부: 공식
+- 확신도: 중간
+
+### W-20261116-2343-7 · 알림 · 이번 차례
+- 시각: 2026-11-16 23:58 KST
+- 내용: Scout가 23:27 KST에 다시 돌아 밀린 223건(news 151·market 72)을 처리했어요(W-20261116-2313-1 해결). 버림·건너뜀: 엔비디아 직원·머스크의 젠슨 황 복귀 청원(이미 넣은 복귀 논의 보도와 같은 흐름), SK하이닉스 10억 달러 투자설("Market Chatter" 소문), 오라클 병원 고객 1곳, 플렉스(앱 종목 아님), 나머지는 주가 정리·목표가·종목 비교·의견 글. 23시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
+- 교훈: 칩 규정 기사 제목("tighter chip rules")만 보면 수출 금지 확대로 읽히기 쉬워요. 이번 규정 핵심은 해외 데이터센터를 통한 '원격 이용' 막기예요.
