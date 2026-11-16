@@ -9599,54 +9599,55 @@
   }
  },
  "POWL": {
-  "p": "3분기 · 2026년 4~6월",
-  "tag": "+9%",
+  "p": "4분기 · 2026년 7~9월",
+  "tag": "+33%",
   "rows": [
    [
     "매출",
-    "3.117억 달러 (+9%)"
+    "3.967억 달러 (+33%)"
    ],
    [
-    "상업·산업",
-    "7,630만 달러 (+54%)"
+    "순이익",
+    "8,150만 달러 (+59%) · 주당 2.23달러"
    ],
    [
-    "전력회사",
-    "8,860만 달러 (+18%)"
+    "신규 수주",
+    "7.10억 달러 (1년 전 2.71억)"
    ],
    [
-    "석유화학",
-    "1,850만 달러 (−49%)"
+    "수주 잔고",
+    "27억 달러 (+96%, 최대)"
    ]
   ],
-  "note": "전력회사·데이터센터 쪽이 늘고 석유화학 쪽은 줄었어요. 7~9월 실적은 오늘(11월 16일) 장 마감 뒤 나와요.",
+  "note": "상업·산업(데이터센터 포함) 매출이 179% 늘며 이끌었고, 석유화학은 49% 줄었어요. 회사는 다음 해 숫자 전망을 내지 않았고, 10~12월은 계절적으로 느린 분기라고 밝혔어요. 발표 전 매출 예상 3.284억 달러는 Zacks 집계예요.",
   "src": [
    [
-    "파월 3분기(SEC 10-Q)",
-    "https://www.sec.gov/Archives/edgar/data/0000080420/000008042026000107/powl-20260630.htm"
+    "파월 4분기·연간 실적 발표 (GlobeNewswire)",
+    "https://www.globenewswire.com/news-release/2026/11/16/3404107/0/en/powell-industries-announces-fourth-quarter-and-full-year-fiscal-2026-results.html"
    ],
    [
-    "발표 일정(Finviz)",
-    "https://finviz.com/news/414733/powell-industries-announces-date-and-conference-call-for-fiscal-2026-fourth-quarter-and-full-year-results"
+    "발표 전 예상 (Zacks)",
+    "https://www.tradingview.com/news/zacks:98344bd4a094b:0-powell-industries-gears-up-to-post-q4-earnings-what-s-in-the-offing/"
    ]
   ],
   "chart": {
    "cur": "usd",
-   "prev": [
-    "1년 전",
-    286.3
-   ],
    "now": [
-    "4~6월",
-    311.7
+    "7~9월",
+    396.7
    ],
-   "est": null,
+   "est": 328.4,
    "next": {
-    "label": "7~9월",
+    "label": "10~12월",
     "guide": null,
     "cons": null,
-    "when": "2026년 11월 16일 (발표 예정)"
-   }
+    "when": "2027년 2월 초 (예상)",
+    "gtext": "회사 숫자 전망 없음 · 10~12월은 계절적으로 느린 분기라고 밝혔어요"
+   },
+   "prev": [
+    "1년 전",
+    298.0
+   ]
   }
  },
  "MTZ": {

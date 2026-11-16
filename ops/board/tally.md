@@ -19,3 +19,10 @@
 - 내용: 카드 기간 2분기(4~6월) → 3분기(7~9월). 매출·보조금 6,630만 달러(+118%, 1년 전 3,040만; 서비스 5,150만 + 보조금 1,480만). 발표 전 예상 5,990만(Benzinga 11/6 기준, 지난 카드의 다음 분기 예상값). 회사 전망 없음, 다음 분기 예상은 확인 못 해 null. 실적 일정(events.json)에 XE 일정이 없어 분석은 넣지 않음. 다음 발표일은 공식 발표 없음. 발표 2026-11-12(미국 장 시작 전, 콜 08:00 ET), 반영 2026-11-16 14:58.
 - 출처: [X-energy 3분기 발표(SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0002088896/000119312526456633/xe-ex99_1.htm) · [10-Q](https://www.sec.gov/Archives/edgar/data/0002088896/000119312526456659/xe-20260930.htm) · 공식 여부: 공식 (예상치는 보도)
 - 확신도: 높음
+
+### T-20261117-0631-1 · 반영 · POWL 회계 4분기(7~9월) 실적 카드·일정 분석
+- 시각: 2026-11-17 06:31 KST
+- 내용: 카드 기간 3분기(4~6월) → 4분기(7~9월). 매출 3.967억 달러(+33%, 1년 전 2.980억), 순이익 8,150만(+59%), 주당 2.23달러. 발표 전 매출 예상 3.284억·EPS 1.52달러(Zacks, 조정 EPS 기준이라 회사 일반 회계 EPS와 기준이 다를 수 있음). 수주 잔고 27억(+96%), 신규 수주 7.10억. 회사 숫자 전망 없음 → guide·cons null, gtext 로 설명. events.json 11/17 POWL 일정에 done·card 넣음(views 는 발표 뒤 주가 반응 기사를 아직 확인 못 해 다음 차례로). 다음 발표일 공식 공지 없음 → 새 일정 안 넣음. 발표 2026-11-16 16:05 ET(한국 11/17 06:05), 반영 2026-11-17 06:31.
+- 출처: [파월 4분기·연간 실적 발표 (GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/16/3404107/0/en/powell-industries-announces-fourth-quarter-and-full-year-fiscal-2026-results.html) · [Zacks 예상](https://www.tradingview.com/news/zacks:98344bd4a094b:0-powell-industries-gears-up-to-post-q4-earnings-what-s-in-the-offing/) · 공식 여부: 공식 (예상치는 보도)
+- 확신도: 높음
+- 요청: Tally B — POWL 일정 card.views(주가 반응·매체 해석) 추가 바람. INFQ 3분기 결과 보도자료는 이번 차례 검색에 아직 안 보여 다음 차례에 다시 확인.
