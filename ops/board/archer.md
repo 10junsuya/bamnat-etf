@@ -440,3 +440,16 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR 11/19, MOGA·KEYS 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. FLY 알파: 11/11 보도는 신스펙티브와 최대 10회 발사 계약 소식뿐, 8번째 비행 새 공식 날짜 없음. (2) 확인 못 함: ORCL FY27 2분기 실적 발표일(검색에 지난해 12/10 공지만), MU FY27 1분기·ACN FY27 1분기·FDX FY27 2분기 발표일(지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(블로그만), RKLB 101번째 일렉트론, LUNR IM-3 새 날짜, GEV 2026년 투자자 행사(2025년 12/9 행사만), APLD 2026년 주총(검색에 지난해 자료만). (3) money.json 기간: 새로 지난 분기가 된 회사 없음.
 - 출처: [파이어플라이·신스펙티브 계약 보도 (11/11)](https://newspaceeconomy.ca/2026/11/11/firefly-alpha-synspective-10-launches-2030/) · 공식 여부: 보도 (1) / 해당 없음 (2·3)
 - 확신도: 중간 (1) / 확인 못 함 (2)
+
+### A-20261116-1704-1 · 발견 · IREN(아이렌) 2026년 정기 주주총회 11/25 06:30 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 17:04 KST
+- 내용: 아이렌 위임장 설명서(DEF 14A) 의장 서한 원문: "will be held virtually at 4:30pm on November 24, 2026 (ET)", 주총 공고 표: "November 24, 2026, commencing at 4:30pm (ET)", "exclusively being held virtually" → 한국 시간 **11/25(수) 06:30**(python zoneinfo 변환), 온라인 전용(www.virtualshareholdermeeting.com/IREN2026). 통지 기준일 9/28("5:00pm (ET) on September 28, 2026"), 의결권 기준 11/22 17:00(ET). 위임장 마감 11/23 23:59(ET). 안건 세부는 원문 앞부분만 읽어 확인 못 함. 14일 안 일정(9일 뒤). 참고: holdings 상 비중 최대 10.7%. type "event" 대상(C-20261116-0930-1 6번). 승인 2번 조건: (가) 공식 SEC 주소 (나) 이번 차례 본문 열어 확인 (다) 원문 인용 — 세 가지 갖춤.
+- 출처: [아이렌 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0001878848/000114036126039451/ny20078226x1_def14a.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1704-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 17:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE·COHR·ORCL 11/19, MOGA·KEYS 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음(SPCX 스타십 15번째 비행은 A-20261115-1704-5 에 이미 있음). (2) MU 12/18 06:00: 보도(reportify, 증권 매체 글 제목) "Q1 Earnings on December 17"는 미국 12/17 장 마감 후 = 한국 12/18 새벽과 맞음 — 회사 공지는 여전히 못 찾음. (3) 확인 못 함: ORCL FY27 2분기 실적 발표일(검색에 지난해 공지만), SPCX 스타십 16번째 비행 날짜(블로그·집계 사이트만), RKLB 101번째 일렉트론, FLY 알파 8번째 비행 새 공식 날짜. 이번 차례 후반 웹 검색이 여러 번 응답 없음으로 실패해 NBIS 주총·LUNR IM-3 는 확인 못 함. (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [reportify 마이크론 기사 제목](https://reportify.cn/news/1199004577844957184) · 공식 여부: 보도 (2) / 해당 없음 (3·4)
+- 확신도: 중간 (2) / 확인 못 함 (3)
