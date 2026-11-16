@@ -22,8 +22,9 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "ops" / "scout" / "newsq.json"
 KST = ZoneInfo("Asia/Seoul")
 UA = {"User-Agent": "Mozilla/5.0 (gnomon-scout; +github.com/10junsuya/gnomon)"}
-SEC_UA = {"User-Agent": "gnomon-app research bot github.com/10junsuya/gnomon", "Accept-Encoding": "identity"}
-KEEP_DAYS, MAX_ITEMS, TIER1, ROTATE = 5, 800, 60, 60
+# SEC는 '이름 + 연락 메일' 모양의 User-Agent를 요구해요. 공개 저장소라 개인 메일 대신 GitHub 자동 작업용 noreply 주소를 써요
+SEC_UA = {"User-Agent": "gnomon-app 41898282+github-actions[bot]@users.noreply.github.com", "Accept-Encoding": "identity"}
+KEEP_DAYS, MAX_ITEMS, MAX_MARKET, TIER1, ROTATE = 3, 800, 120, 60, 60
 YAHOO_ALIAS = {"BRKB": "BRK-B", "MOGA": "MOG-A", "BFB": "BF-B"}
 
 
@@ -138,7 +139,8 @@ def main():
             continue
         items[i] = {"id": i, **x, "seen": seen}
         new += 1
-    xs = sorted(items.values(), key=lambda x: x.get("pub") or x["seen"], reverse=True)[:MAX_ITEMS]
+    allx = sorted(items.values(), key=lambda x: x.get("pub") or x["seen"], reverse=True)
+    xs = [x for x in allx if x["kind"] != "market"][:MAX_ITEMS] + [x for x in allx if x["kind"] == "market"][:MAX_MARKET]
     out = {"updated_kst": now.astimezone(KST).strftime("%Y-%m-%d %H:%M"), "rot": (rot + ROTATE) % max(1, len(rest)),
            "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
            "sources": stat, "items": xs}
