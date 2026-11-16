@@ -1069,3 +1069,15 @@
 - 내용: CEG 는 p "2026년 1분기"로 남아 있어 3분기로 바꿔야 할 대상. 회사 3분기 실적 발표(11/9) 본문을 열었지만 총매출·지역별 매출 표가 없음(주당순이익·영업이익만, 칼파인 인수 "January 2026" 언급). 지역별 매출이 있을 3분기 10-Q(11/9 제출)는 SEC 목록·검색이 안 열려 주소를 찾지 못함 → 앱 그대로(확인 못 함). 다음 차례에 10-Q 직접 주소를 찾으면 지역별 매출·기간을 3분기로 바꾸고 OpenCapital·Zacks 출처를 뺄게요. 남은 2차 출처: ACN(링크만)·D·VZ(부문)·WDC(사업별)·SPCX·CEG·CGNX(기간 표시 확인)·ONTO·CVLT·FN·S·NET·SNOW 등.
 - 출처: [컨스텔레이션 3분기 실적 발표 (회사, 11/9)](https://www.constellationenergy.com/news/2026/11/constellation-reports-third-quarter-2026-results.html) · 공식 여부: 공식(지역별 숫자 없음)
 - 확신도: 확인 못 함 (3분기 지역별 매출)
+
+### Q-20261117-0634-0 · 알림 · 이번 차례 처리 대상 — A-20261117-0604-1 1건
+- 시각: 2026-11-17 06:45 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261117-0604-1(BKSY 투자자의 날) 1건. Vernon 새 요청 없음(마지막 V-20261116-1821-7), Conrad 새 결정·요청 중 Quill 대상 없음(C-20261117-0149-3 은 Wren 대상). 끝난 실적 외 일정 없음(가장 가까운 것 SNDK 주총 11/18 01:00). POWL·INFQ 실적 결과는 Tally 담당(넘김 대상 요청 없음). 이번 차례 웹 페이지 열기: 회사 IR PDF(q4cdn) 열림, Morningstar 전재는 못 엶.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-0634-1 · 반영 · A-20261117-0604-1 에 대해 — events.json 에 BKSY 2026 투자자의 날 12/2 22:00 추가
+- 시각: 2026-11-17 06:45 KST
+- 내용: 회사 보도자료(11/3, 회사 IR PDF) 본문 열어 확인. 원문 "will host an Investor Day on Wednesday, December 2, 2026, at 8:00 a.m. EST in New York City", 현장 참석은 초청제("in-person attendance is by invitation only"), 생중계·발표 자료는 회사 IR 사이트, 끝난 뒤 다시보기. 발표자: CEO·CFO·CMO·COO·CTO 5명. 12/2 은 미국 동부 표준시(EST) 기간이라 한국 시간 12/2 22:00(python zoneinfo 변환). 행사 주제 목록은 원문에 없음(확인 못 함) → watch 는 일반적인 관전 포인트로만. BKSY 는 holdings top·index.html STOCKS 에 있음. 전: 일정 없음 → 후: {d "2026-12-02", t "BKSY", type "event", title "블랙스카이 2026 투자자의 날 (뉴욕)", when "22:00 · 발표 시작 (현지 12/2 오전 8:00) · 뉴욕, 회사 IR 생중계", what 2문장, watch 3줄}. 12/2 일정 맨 뒤(CRDO 다음)에 넣음. `check_data.py --embed` 통과.
+- 출처: [블랙스카이 투자자의 날 보도자료 (회사 IR PDF, 11/3)](https://s21.q4cdn.com/515173672/files/doc_news/BlackSky-to-Host-Investor-Day-on-December-2-2026-2026.pdf) · 공식 여부: 공식 (회사 보도자료)
+- 확신도: 높음
