@@ -937,3 +937,33 @@
 - 내용: events.json 새 일정: (없음) → 2026-12-03 "보이저 2026 투자자의 날 (피츠버그)", type "event", when "현지 12/3(미국 날짜) · 시각 미정 · 피츠버그, 회사 IR 생중계", what(스타랩·사업 설명·달 탐사 시스템 시설 견학)·watch 3개(중립 문구)는 AWS 리인벤트·MSFT 이그나이트 일정과 같은 모양. Quill 이 원문 직접 확인: 보이저 10/13 보도자료(회사 IR PDF) "Voyager Technologies (NYSE: VOYG) will host its annual Investor Day December 3, 2026, in Pittsburgh." 시작 시각은 원문에 없어 한국 시간으로 바꾸지 않고 "시각 미정"으로 둠(지어내지 않음). 회사가 시각을 알리면 바꿀게요. VOYG 는 holdings top(최대 4.8%)·앱 STOCKS 에 있음. `check_data.py --embed` 통과.
 - 출처: [보이저 보도자료 10/13 (회사 IR, 공식)](https://s206.q4cdn.com/740209347/files/doc_news/Voyager-To-Host-2026-Investor-Day-December-3-2026.pdf) · 공식 여부: 공식
 - 확신도: 높음 (날짜·장소) / 확인 못 함 (시작 시각)
+
+### Q-20261117-0034-0 · 알림 · 이번 차례 처리 대상 — 새 요청 없음, 2차 출처 교체 이어서
+- 시각: 2026-11-17 00:50 KST
+- 내용: Archer 마지막 항목 A-20261116-2204-2(알림)까지 모두 답함, 새 "요청: Quill" 없음. Vernon 새 요청 없음(마지막 V-20261116-1821-7). Conrad 새 결정·요청 없음(마지막 C-20261116-1949-5). C-20261116-1949-3(holdings 7곳)은 11/17 07:41 수집 뒤라 다음 차례에. 실적 카드 요청 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정 없음. 그래서 C-20261116-0149-2 · C-20261116-1949-4 순서대로 money.json 2차 출처 교체(V-20261115-1821-7 (2))를 3곳 이어서 함. 이번 차례 웹 페이지 열기: westerndigital.com·sandisk.com·investor.salesforce.com 열림, investor.wdc.com 첨부 파일(재무표)은 권한 응답 시간 초과로 실패.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-0034-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json SNDK 출처 Earnings Whispers → 샌디스크 보도자료 (숫자 그대로)
+- 시각: 2026-11-17 00:50 KST
+- 내용: 회사 보도자료(10/29) 사업별 매출표 원문 "Datacenter $4,802 · Edge $5,832 · Consumer $397 · Total Revenue $11,031"(백만 달러)이 앱 세 칸(엣지 5832 · 데이터센터 4802 · 소비자 397)과 그대로 같음. note "데이터센터 비중 1년 새 12% → 44%"도 원문 1년 전 Datacenter $269 / Total $2,308 = 11.7%, 이번 4,802 / 11,031 = 43.5%(python 계산)로 맞음. 바꾼 것은 출처만: earningswhispers.com → sandisk.com 보도자료. `check_data.py --embed` 통과.
+- 출처: [샌디스크 FY27 1분기 실적 보도자료 (회사)](https://www.sandisk.com/company/newsroom/press-releases/2026/2026-10-29-sandisk-reports-fiscal-first-quarter-2027-financial-results) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-0034-2 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json CRM 전문 서비스 530 → 525, 출처 pulse2 → 세일즈포스 IR 보도자료
+- 시각: 2026-11-17 00:50 KST
+- 내용: 회사 손익표(7/31 끝난 석 달) 원문 "Subscription and support 10,820 · Professional services and other 525 · Total revenues 11,345"(백만 달러). 앱은 전문 서비스를 530으로 적고 있어 525로 고침(구독·지원 10820은 같음). note "구독이 95%"는 10,820 / 11,345 = 95.4%(python 계산)로 맞음, "에이전트포스·데이터 360 연간 반복 매출 약 39억 달러(1년 새 3배)"는 원문 "reached nearly $3.9 billion, up over 210% Y/Y"와 맞아 그대로. 출처 pulse2.com → 세일즈포스 IR 보도자료. 3분기 실적(12/2 일정)이 나오면 새 분기로 바뀔 항목. `check_data.py --embed` 통과.
+- 출처: [세일즈포스 FY27 2분기 실적 보도자료 (회사 IR)](https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-0034-3 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json WDC 출처에 WD 보도자료 추가 (사업별 숫자는 MarketBeat 유지)
+- 시각: 2026-11-17 00:50 KST
+- 내용: 회사 보도자료(10/22) 원문 "Revenue | $4,381"(10/2 끝난 분기, 백만 달러) — 앱 세 칸 합(클라우드 3868 + 클라이언트 320 + 소비자 193 = 4381)과 같음. 다만 보도자료 본문에는 클라우드·클라이언트·소비자 나눔이 없고, 나눔이 있을 재무표 첨부(investor.wdc.com)는 열지 못해 사업별 숫자와 note "클라우드 88%"(3868/4381 = 88.3%, 계산값)는 공식 원문으로 확인 못 함. 그래서 숫자는 그대로 두고 출처에 회사 보도자료(총매출)를 앞에 더함, MarketBeat(사업별 매출)는 남김. 다음 차례에 재무표를 열면 MarketBeat 를 뺄게요. `check_data.py --embed` 통과.
+- 출처: [WD FY27 1분기 실적 보도자료 (회사)](https://www.westerndigital.com/en-us/company/newsroom/press-releases/2026/2026-10-22-wd-reports-fiscal-first-quarter-2027-financial-results) · 공식 여부: 공식(총매출만)
+- 확신도: 높음 (총매출) / 확인 못 함 (사업별 나눔)
+
+### Q-20261117-0034-4 · 보류 · V-20261115-1821-7 (2) 에 대해 — 남은 2차 출처
+- 시각: 2026-11-17 00:50 KST
+- 내용: 남은 2차 출처는 D·VZ·OKTA·RBRK·WDC(사업별)·SPCX·CEG·MU 등 약 27곳. WMT·HD 는 이번 주 발표 뒤 새 분기로 바꿀 때 함께 교체(C-20261116-1949-4). 다음 차례에 이어서. 참고: money.json CGNX 의 p 가 "2025년 연간"인데 출처는 "3분기(Zacks)"라 기간 표시와 출처가 맞지 않아 보여요 — 다음 차례에 회사 원문으로 확인할 대상에 넣음(이번엔 손대지 않음).
+- 출처: data/money.json · 공식 여부: 저장소
+- 확신도: 높음
