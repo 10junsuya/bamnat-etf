@@ -1715,6 +1715,31 @@ function newsCard(e){
 
 const krAsked = new Set();
 /* ETF 화면을 열었는데 그 ETF의 국내 시세가 아직 없으면, 다른 받기를 기다리지 않고 그것 하나만 바로 받아요 */
+/* 지금 보고 있는 ETF만 20초마다 빠르게: 국내 가격(한국 장 시간) + 비중 큰 미국 종목 10개 (KIS). 나머지는 1분마다·서버 창고 2분마다 */
+async function fastTick(){
+  try{
+    if(navigator.webdriver || document.visibilityState==="hidden" || LV.kisOff) return;
+    const r0 = typeof route==="function" ? route() : ""; if(!r0.startsWith("etf-")) return;
+    const code = r0.slice(4), e = ETFS.find(x=>x.code===code); if(!e) return;
+    if(LV.fastBusy && Date.now()-LV.fastBusy < 30e3) return; LV.fastBusy = Date.now();
+    const sig = ms => ((typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(ms) : undefined);
+    const kp = parts(now(),"Asia/Seoul"), hm = kp.h*60+kp.mi, wd = kp.wd, us = usState(parts(now(),"America/New_York")).key;
+    let changed = false;
+    if(wd>=1 && wd<=5 && hm>=9*60 && hm<=20*60+10){
+      const r = await fetch(`${LIVE_URL}/kr?c=${code}`, {signal: sig(15000)}).catch(()=>null);
+      if(r && r.ok){ const j = clean(await r.json()), v = (j.etfs||{})[code];
+        if(v && !v.error && okn(v.price)){ LIVE.krNow = {...(LIVE.krNow||{}), [code]: v}; changed = true; } } }
+    const dayWin = wd>=1 && wd<=5 && hm>=9*60+50 && hm<=18*60+10 && us!=="regular" && us!=="pre" && us!=="after";
+    const sess = dayWin ? "day" : us==="regular" ? "reg" : (us==="pre"||us==="after") ? "ext" : "";
+    if(sess){
+      const syms = [...HOLDS(e)].sort((a,b)=>b[1]-a[1]).map(x=>x[0]).filter(t=>/^[A-Z.\-]{1,8}$/.test(t)).slice(0,10);
+      if(syms.length){ const r = await fetch(`${LIVE_URL}/${sess==="day"?"usday":"usreg"}?s=${encodeURIComponent(syms.join(","))}`, {signal: sig(20000)}).catch(()=>null);
+        if(r && r.ok){ const j = clean(await r.json()); LIVE.kus = {...(LIVE.kus||{})};
+          for(const [t,v] of Object.entries(j.quotes||{})){ if(v && !v.error && okn(v.price)){ LIVE.kus[t] = {p:v.price, pc:v.prev, t:v.time, s:sess}; changed = true; } } } }
+    }
+    if(changed){ applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
+  }catch(_){} finally { LV.fastBusy = 0; }
+}
 async function quickKr(code){
   try{
     const sig = (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(20000) : undefined;
@@ -3913,7 +3938,7 @@ document.getElementById("simSel").addEventListener("change", ev=>{ simHM = ev.ta
 render();
 setInterval(()=>{ if(!overlay.classList.contains("open")) renderTop(); }, 20000);
 /* 자동 화면 검사(Keene)는 인터넷 없이 돌아서 연결 시도를 건너뛰어요 */
-if(!navigator.webdriver){ pullLive(); setInterval(()=>{ if(document.visibilityState!=="hidden") pullLive(); }, 60000); }
+if(!navigator.webdriver){ pullLive(); setInterval(()=>{ if(document.visibilityState!=="hidden") pullLive(); }, 60000); setInterval(fastTick, 20000); }
 </script>
 </body>
 </html>
