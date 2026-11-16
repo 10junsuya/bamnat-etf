@@ -292,6 +292,64 @@
    "title": "사이버보안",
    "idx": "Indxx 사이버보안 지수",
    "sec": "바이오·보안"
+  },
+  "sph": {
+   "name": "S&P500 (환헤지)",
+   "kind": "index",
+   "proxy": "SPY",
+   "title": "미국 대형주 시장",
+   "idx": "S&P500",
+   "hedge": true,
+   "sec": "대표 지수"
+  },
+  "bigtech10h": {
+   "name": "미국 빅테크10 (환헤지)",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "미국 빅테크",
+   "idx": "NYSE 미국 빅테크 10 지수",
+   "hedge": true,
+   "sec": "빅테크·AI 인프라"
+  },
+  "aitech10": {
+   "name": "미국 AI테크 TOP10",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "AI 산업",
+   "idx": "KEDI 미국 AI테크 TOP10 지수",
+   "sec": "빅테크·AI 인프라"
+  },
+  "googchain": {
+   "name": "구글 밸류체인 액티브",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "AI 클라우드",
+   "idx": "KEDI 글로벌 AI 클라우드 지수 (운용역이 비중 조절)",
+   "sec": "빅테크·AI 인프라"
+  },
+  "aisemi3": {
+   "name": "미국 AI반도체 TOP3 플러스",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "반도체 산업",
+   "idx": "Akros 미국 AI 반도체 Top 3 플러스 지수",
+   "sec": "반도체"
+  },
+  "growthact": {
+   "name": "미국 대형성장주 액티브",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "미국 대형 성장주",
+   "idx": "CRSP 미국 대형 성장주 지수 (운용역이 비중 조절)",
+   "sec": "대표 지수"
+  },
+  "aidc4": {
+   "name": "미국 AI데이터센터 TOP4 Plus",
+   "kind": "pdf",
+   "proxy": "",
+   "title": "AI 데이터센터",
+   "idx": "Akros 미국 AI 데이터센터 TOP4 Plus 지수",
+   "sec": "빅테크·AI 인프라"
   }
  },
  "etfs": [
@@ -373,6 +431,11 @@
   [
    "402970",
    "ACE 미국배당다우존스",
+   "div"
+  ],
+  [
+   "489250",
+   "KODEX 미국배당다우존스",
    "div"
   ],
   [
@@ -519,6 +582,46 @@
    "418670",
    "TIGER 글로벌AI사이버보안",
    "cyber"
+  ],
+  [
+   "449180",
+   "KODEX 미국S&P500(H)",
+   "sph"
+  ],
+  [
+   "448290",
+   "TIGER 미국S&P500(H)",
+   "sph"
+  ],
+  [
+   "314250",
+   "KODEX 미국빅테크10(H)",
+   "bigtech10h"
+  ],
+  [
+   "485540",
+   "KODEX 미국AI테크TOP10",
+   "aitech10"
+  ],
+  [
+   "483340",
+   "ACE 구글밸류체인액티브",
+   "googchain"
+  ],
+  [
+   "0151S0",
+   "KODEX 미국AI반도체TOP3플러스",
+   "aisemi3"
+  ],
+  [
+   "0127P0",
+   "ACE 미국대형성장주액티브",
+   "growthact"
+  ],
+  [
+   "0142D0",
+   "TIGER 미국AI데이터센터TOP4Plus",
+   "aidc4"
   ]
  ],
  "sections": [
