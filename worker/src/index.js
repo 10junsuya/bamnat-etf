@@ -65,12 +65,15 @@ const ERR = (msg) => ({ error: msg });
 const fail = () => ERR("지금 받을 수 없어요");
 
 async function cached(key, ttl, fn) {
+  // 캐시 읽기·쓰기도 Cloudflare 무료 한도(요청 한 번에 바깥 호출 50번)에 들어가요. 한도 가까우면 캐시를 건너뛰어요
+  if (SUBN >= SUB_MAX - 2) return fn();
   const cache = caches.default;
   const req = new Request("https://cache.gnomon/" + key);
+  SUBN++;
   const hit = await cache.match(req);
   if (hit) return hit.json();
   const val = await fn();
-  if (val && !val.error) await cache.put(req, new Response(JSON.stringify(val), { headers: { "cache-control": `max-age=${ttl}` } }));
+  if (val && !val.error && SUBN < SUB_MAX - 1) { SUBN++; await cache.put(req, new Response(JSON.stringify(val), { headers: { "cache-control": `max-age=${ttl}` } })); }
   return val;
 }
 
@@ -104,7 +107,14 @@ async function fx(env) {
 
 /* ---------- 한국투자증권 (KIS) ---------- */
 const KIS_BASE = "https://openapi.koreainvestment.com:9443";
+let TOK = null;  // 이번 요청(또는 2분 일) 안에서는 토큰을 한 번만 찾아요
 async function kisToken(env) {
+  if (TOK && TOK.token) return TOK;
+  const t = await kisTokenLoad(env);
+  if (t && t.token) TOK = t;
+  return t;
+}
+async function kisTokenLoad(env) {
   // 토큰은 하루 짜리예요. 한국투자증권은 "하루 1번 발급"이 원칙이라(자주 받으면 이용 제한) 23시간 동안 재사용해요.
   // 저장소(KV)가 있으면 토큰을 하나만 두고 모든 지역 서버가 같이 써요 → 진짜로 하루 1번만 받아요
   return cached("kis/token", env.SNAP ? 3600 : 23 * 3600, async () => {
@@ -335,10 +345,34 @@ function usSess() {
   if (kWeek && k.hm >= 9 * 60 + 50 && k.hm <= 18 * 60 + 10) return "day";
   return "";
 }
+/* 2분 일 전용: 캐시를 거치지 않고 한국투자증권에 바로 물어요 (한 번에 바깥 호출 50번 한도를 시세에만 써요) */
+async function kisEtfDirect(env, code, k) {
+  const j = await kisGet(env, "/uapi/etfetn/v1/quotations/inquire-price", "FHPST02400000", { fid_cond_mrkt_div_code: "J", fid_input_iscd: code });
+  const o = j && j.output;
+  if (!o || !kNum(o.stck_prpr)) return ERR("값 없음");
+  const price = kNum(o.stck_prpr), chg = kNum(o.prdy_vrss) ?? 0;
+  const inav = kNum(o.nav), navChg = kNum(o.nav_prdy_vrss), prevNav = kNum(o.prdy_clpr_nav) ?? (inav != null && navChg != null ? inav - navChg : null);
+  const navPct = kNum(o.nav_prdy_ctrt) ?? (inav && prevNav ? (inav / prevNav - 1) * 100 : null);
+  const state = k.wd === 0 || k.wd === 6 ? "휴장" : k.hm < 9 * 60 ? "장전" : k.hm < 15 * 60 + 30 ? "장중" : "장마감";
+  return { price, change: chg, change_pct: kNum(o.prdy_ctrt) ?? 0, prev_close: price - chg, inav, inav_change_pct: navPct, prev_nav: prevNav,
+    date: k.date, clock: k.clock, state, source: "한국투자증권", time: new Date().toISOString() };
+}
+async function kisUsDirect(env, sym, day, exHint) {
+  let ex = exHint;
+  if (!ex) {
+    for (const e of US_EX) { const j = await kisGet(env, "/uapi/overseas-price/v1/quotations/price", "HHDFS00000300", { AUTH: "", EXCD: e, SYMB: sym }); if (j && j.output && kNum(j.output.last)) { ex = e; break; } }
+    if (!ex) return ERR("거래소를 못 찾았어요");
+  }
+  const code = day ? DAY_EX[ex] : ex;
+  const j = await kisGet(env, "/uapi/overseas-price/v1/quotations/price", "HHDFS00000300", { AUTH: "", EXCD: code, SYMB: sym });
+  const o = j && j.output;
+  if (!o || !kNum(o.last)) return ERR("값 없음");
+  return { price: kNum(o.last), prev: kNum(o.base), change_pct: kNum(o.rate), ex, time: new Date().toISOString() };
+}
 /* 2분마다: 국내 ETF 몇 개 + 미국 종목 몇 개를 차례로 받아 저장소(KV)의 한 덩어리(snap)에 이어 붙여요 */
 async function snapshotJob(env) {
   if (!env.SNAP || !(env.KIS_APP_KEY && env.KIS_APP_SECRET) || String(env.MAINTENANCE || "0") === "1") return;
-  SUBN = 0;
+  SUBN = 0; TOK = null;
   const t0 = Date.now();
   const snap = (await env.SNAP.get("snap", "json").catch(() => null)) || {};
   const readUs = Object.keys(snap.us || {}).length, readKr = Object.keys(snap.kr || {}).length;
@@ -351,7 +385,7 @@ async function snapshotJob(env) {
   for (let i = 0; i < Math.min(10, krList.length) && SUBN < SUB_MAX - 6; i++) {
     const c = krList[(rk + i) % krList.length];
     krTried++;
-    const v = await kisEtf(env, c).catch(() => null);
+    const v = await kisEtfDirect(env, c, k).catch(() => null);
     if (v && !v.error) snap.kr[c] = v;
   }
   snap.rk = rk + 10;
@@ -361,8 +395,8 @@ async function snapshotJob(env) {
     let ru = (snap.ru || 0) % PRIO_US.length, n = 0;
     while (SUBN < SUB_MAX - 2 && n < PRIO_US.length) {
       const t = PRIO_US[(ru + n) % PRIO_US.length]; n++; usTried++;
-      const v = await kisUs(env, t, sess === "day", snap.ex[t] || null).catch(() => null);
-      if (v && !v.error) { usOk++; snap.us[t] = { price: v.price, prev: v.prev, time: v.time, s: sess }; if (sess !== "day" && v.ex) snap.ex[t] = v.ex; }
+      const v = await kisUsDirect(env, t, sess === "day", snap.ex[t] || null).catch(() => null);
+      if (v && !v.error) { usOk++; snap.us[t] = { price: v.price, prev: v.prev, time: v.time, s: sess }; if (v.ex) snap.ex[t] = v.ex; }
     }
     snap.ru = ru + n;
   }
@@ -383,7 +417,7 @@ export default {
     ctx.waitUntil(snapshotJob(env).catch((e) => { try { console.log(JSON.stringify({ gnomon: "snap-fail", msg: String(e && e.message).slice(0, 80) })); } catch (_) {} }));
   },
   async fetch(request, env, ctx) {
-    SUBN = 0;
+    SUBN = 0; TOK = null;
     SECRETS = [env.FINNHUB_API_KEY, env.KIS_APP_KEY, env.KIS_APP_SECRET].filter(Boolean);
     const origin = corsOrigin(request, env);
     if (request.method === "OPTIONS") return json({}, 204, 0, origin);
