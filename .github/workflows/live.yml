@@ -2,11 +2,16 @@ name: 밤사이 계산용 숫자 받아오기
 
 on:
   workflow_dispatch:
+    inputs:
+      backfill:
+        description: "적중 기록: 지난 한 달 거꾸로 계산 넓히기"
+        type: boolean
+        default: false
   push:
     branches: [main]
-    paths: ["scripts/fetch_live.py", ".github/workflows/live.yml"]
+    paths: ["scripts/fetch_live.py", "scripts/track.py", ".github/workflows/live.yml"]
   schedule:
-    - cron: "17 21 * * 1-5"   # 한국 06:17 (미국 정규장 마감 뒤)
+    - cron: "17 21 * * 1-5"   # 한국 06:17 (미국 정규장 마감 뒤 · 오늘 예측 저장)
     - cron: "47 22 * * 1-5"   # 한국 07:47 (아침 브리핑 전)
     - cron: "37 4 * * 1-5"    # 한국 13:37 (공공데이터 기준가 올라온 뒤)
     - cron: "7 9 * * 1-5"     # 한국 18:07 (한국 장 마감·환율 반영 뒤)
@@ -31,16 +36,18 @@ jobs:
         env:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
+      - name: 적중 기록 (예측 저장·채점)
+        run: python scripts/track.py ${{ inputs.backfill && '--backfill' || '' }}
       - name: 저장
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          cp data/live.json /tmp/new.json
+          cp data/live.json /tmp/new.json; cp data/track.json /tmp/track.json
           for i in 1 2 3 4; do
             git fetch -q origin main && git reset -q --hard origin/main
-            cp /tmp/new.json data/live.json
+            cp /tmp/new.json data/live.json; cp /tmp/track.json data/track.json
             python scripts/check_data.py --embed
-            git add data/live.json index.html
+            git add data/live.json data/track.json index.html
             git diff --cached --quiet && exit 0
             git commit -q -m "밤사이 계산용 숫자 업데이트"
             git push -q && exit 0
