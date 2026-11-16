@@ -867,6 +867,9 @@ const FUT_KEY = {sp:"es", ndx:"nq", sox:"sox", semi:"semi", div:"div"};
 const PROXY_FUT = {QQQ:"nq", SPY:"es", SOXQ:"sox", SMH:"semi", SCHD:"div", TLT:"tlt"};
 /* 커버드콜: 오를 때 덜 따라가요 (part: 오를 때 p배만 / cap: 하루 상한) */
 const ccF = (e, r) => !e.cc || !okn(r) ? r : e.cc.type==="cap" ? Math.min(r, e.cc.cap) : (r>0 ? r*e.cc.p : r);
+/* 이 ETF가 실제로 담은 종목(구성종목 공시 그대로). e.h는 '시세가 있는 종목만' 남긴 계산용이라,
+   "어느 ETF에 들어 있나"·일정·검색처럼 담겼는지를 볼 때는 꼭 이걸 써요 (새 종목은 시세가 늦게 들어와요) */
+function HOLDS(e){ const hv = (HOLD.etfs||{})[e.code]; return hv && hv.top ? hv.top.filter(x=>x.ticker).map(x=>[TK(x.ticker), x.weight/100]) : (e.h||[]); }
 function applyHoldings(){
   for(const e of ETFS){
     const hv = (HOLD.etfs||{})[e.code];
@@ -999,7 +1002,7 @@ async function pullLive(){
     if(!LV.kisOff && wd>=1 && wd<=5 && hm>=9*60+50 && hm<=18*60+10 && usState(parts(now(),"America/New_York")).key!=="regular"){
       const r0 = typeof route==="function" ? route() : "";
       const want = [...new Set([...(r0.startsWith("etf-")?[r0.slice(4)]:[]), ...((holdings||[]).map(h=>h.code)), ...stars])];
-      const syms = [...new Set(ETFS.filter(e=>want.includes(e.code)).flatMap(e=>e.h.map(x=>x[0])))].filter(t=>/^[A-Z.\-]{1,8}$/.test(t)).slice(0,40);
+      const syms = [...new Set(ETFS.filter(e=>want.includes(e.code)).flatMap(e=>HOLDS(e).map(x=>x[0])))].filter(t=>/^[A-Z.\-]{1,8}$/.test(t)).slice(0,40);
       if(syms.length){ const r = await fetch(`${LIVE_URL}/usday?s=${encodeURIComponent(syms.join(","))}`, tm(12000));
         if(r.status===503) LV.kisOff = true;
         else if(r.ok){ const j = clean(await r.json()); let n = 0; LIVE.usDay = {...(LIVE.usDay||{})};
@@ -1268,7 +1271,7 @@ function searchEtfs(qs){
   for(const e of ETFS){
     const nm = e.name.toLowerCase().replace(/\s+/g,"");
     if(nm.includes(s) || e.code.toLowerCase().includes(s) || e.groupName.toLowerCase().replace(/\s+/g,"").includes(s)){ out.push({e, hit:"", w:1}); continue; }
-    const h = e.h.find(([t])=> sym(t).toLowerCase().replace(".","")===s.replace(".","") || STOCKS[t][0].toLowerCase().includes(s));
+    const h = HOLDS(e).find(([t])=> sym(t).toLowerCase().replace(".","")===s.replace(".","") || STOCKS[t][0].toLowerCase().includes(s));
     if(h) out.push({e, hit:`${STOCKS[h[0]][0]} ${(h[1]*100).toFixed(1)}% 담고 있음`, w:h[1]});
   }
   // 이름으로 찾은 ETF 먼저, 회사로 찾은 ETF는 비중 큰 순
@@ -1452,11 +1455,11 @@ function compareCard(e, st){
 }
 
 function exposureChips(t){
-  return ETFS.filter(e=>e.h.some(([x])=>x===t)).map(e=>{ const w = e.h.find(([x])=>x===t)[1];
+  return ETFS.filter(e=>HOLDS(e).some(([x])=>x===t)).map(e=>{ const w = HOLDS(e).find(([x])=>x===t)[1];
     return `<span class="chip${stars.includes(e.code)?" mine":""}">${e.name.replace(/^(TIGER|KODEX|ACE|SOL) /,"$1 ")} ${(w*100).toFixed(1)}%</span>`; }).join("");
 }
 function exposureHtml(t){
-  const xs = ETFS.filter(e=>e.h.some(([x])=>x===t)).map(e=>[e, e.h.find(([x])=>x===t)[1]]).sort((a,b)=>b[1]-a[1]);
+  const xs = ETFS.filter(e=>HOLDS(e).some(([x])=>x===t)).map(e=>[e, HOLDS(e).find(([x])=>x===t)[1]]).sort((a,b)=>b[1]-a[1]);
   if(!xs.length) return `<div class="small muted">담은 ETF가 없어요.</div>`;
   const chip = ([e,w]) => `<span class="chip${stars.includes(e.code)?" mine":""}">${e.name} ${(w*100).toFixed(1)}%</span>`;
   const head = xs.slice(0,8).map(chip).join(""), rest = xs.slice(8);
@@ -1482,7 +1485,7 @@ function evRow(ev, withChips=true){
 }
 
 function etfImpactHtml(t, move){
-  const rows = ETFS.filter(e=>e.h.some(([x])=>x===t)).map(e=>({e, w:e.h.find(([x])=>x===t)[1]})).sort((a,b)=>b.w-a.w).slice(0,4);
+  const rows = ETFS.filter(e=>HOLDS(e).some(([x])=>x===t)).map(e=>({e, w:HOLDS(e).find(([x])=>x===t)[1]})).sort((a,b)=>b.w-a.w).slice(0,4);
   if(!rows.length) return "";
   const name = STOCKS[t] ? STOCKS[t][0] : t;
   return `<div class="bsection"><h4>ETF 영향</h4>
@@ -1580,7 +1583,7 @@ function eventSheet(id){
   const s = STOCKS[t], co = CO[t] || {};
   const [y,m,dd] = d.split("-").map(Number); const wd = KDAY[new Date(Date.UTC(y,m-1,dd)).getUTCDay()];
   const isEarn = ev.type==="earn";
-  const held = ETFS.filter(e=>e.h.some(([x])=>x===t));
+  const held = ETFS.filter(e=>HOLDS(e).some(([x])=>x===t));
   openSheet(`<h3 id="sheetTitle">${evTitleHtml(ev)}</h3>
     <p class="small muted" style="margin-top:0">${ev.tbd && !ev.done ? `날짜 미정 (${m}/${dd} 가안)` : `${m}/${dd}(${wd})`} ${ev.when} · 한국 시간 · 회사 공식 발표 기준${ev.done?" · 발표 완료":""}</p>
     ${isEarn ? `<div class="bsection"><h4>발표 개요</h4><p>${josaIGa(s?s[0]:t)} ${ev.q||"지난 분기"} 성적표를 내놓는 날이에요. 매출과 주당순이익(EPS)이 시장 예상보다 높았는지, 그리고 회사가 말하는 다음 분기 전망(가이던스)을 함께 봐요.</p>
@@ -1601,7 +1604,7 @@ function eventSheet(id){
   missionStart();
 }
 function eventsCard(e){
-  const tick = e.h.map(([t])=>t);
+  const tick = HOLDS(e).map(([t])=>t);
   const evs = EVENTS.filter(v=>tick.includes(v.t));
   if(!evs.length) return "";
   return `<section class="card"><h2>구성종목 일정<span class="sub">회사 공식 발표 기준 · 한국 시간</span></h2>
@@ -1665,7 +1668,7 @@ function distEvents(){
 }
 
 function viewCalendar(){
-  const myTick = new Set(ETFS.filter(e=>stars.includes(e.code)).flatMap(e=>e.h.map(([t])=>t)));
+  const myTick = new Set(ETFS.filter(e=>stars.includes(e.code)).flatMap(e=>HOLDS(e).map(([t])=>t)));
   const dists = distEvents().filter(v => calFilter==="all" || stars.includes(v.code));
   const list = [...EVENTS.filter(v => calFilter==="all" || myTick.has(v.t)), ...dists].sort((a,b)=>a.d.localeCompare(b.d));
   return `<section class="card"><h2>실적 발표·주요 일정<span class="sub">한국 시간 · 회사 공식 발표 기준${dists.length?" · 분배금은 샘플":""}</span></h2>
@@ -1797,7 +1800,7 @@ function etfBriefHtml(code){
   const sorted = [...c.rows].sort((a,b)=>Math.abs(b.c)-Math.abs(a.c));
   const lead = sorted.filter((x,i)=> Math.abs(x.r)>=BIG || i<4);
   const others = sorted.filter(x=>!lead.includes(x));
-  const evs = EVENTS.filter(v=>e.h.some(([t])=>t===v.t) && v.d>=ymd(k)).slice(0,3);
+  const evs = EVENTS.filter(v=>HOLDS(e).some(([t])=>t===v.t) && v.d>=ymd(k)).slice(0,3);
   const err = errHist(e.seed).slice(-1)[0];
 
   return `<div class="bhead">
@@ -3404,9 +3407,9 @@ function runChecks(){
       const gap = e.close/e.nav - 1;
       if(fin(gap) && Math.abs(gap) > 0.03) add("warn","ETF",`${e.name}: 종가와 NAV 차이가 ${pctx(gap)}예요. 보통 1% 안쪽이라 값이 맞는지 확인이 필요해요.`);
       if(fin(e.prem) && Math.abs(e.prem) > 0.02) add("warn","ETF",`${e.name}: 장중 괴리율이 ${pctx(e.prem)}예요. LP가 있는 ETF는 보통 1% 안쪽이라 확인이 필요해요.`);
-      const missing = e.h.filter(([t])=>!STOCKS[t]).map(([t])=>t);
+      const missing = HOLDS(e).filter(([t])=>!STOCKS[t]).map(([t])=>t);
       if(missing.length) add("err","ETF",`${e.name}: 구성종목 ${missing.join(", ")}의 시세가 없어요.`, "etf:"+e.code);
-      const noInfo = e.h.filter(([t])=>!CO[t]).map(([t])=>t);
+      const noInfo = HOLDS(e).filter(([t])=>!CO[t]).map(([t])=>t);
       if(noInfo.length) add("warn","ETF",`${e.name}: ${noInfo.join(", ")}의 회사 소개가 없어요.`);
       const wsum = e.h.reduce((a,[,w])=>a+w,0) + (e.rest ? e.rest.w : 0) + (e.cash||0);
       if(Math.abs(wsum-1) > 0.03 && !(e.asiaW && wsum < 1.12)) add("warn","ETF",`${e.name}: 비중을 모두 더하면 ${(wsum*100).toFixed(1)}%예요. 100%에 가까워야 해요.`);
@@ -3417,7 +3420,7 @@ function runChecks(){
     });
   });
   guard("시세", ()=>{
-    const used = new Set(ETFS.flatMap(e=>e.h.map(([t])=>t)));
+    const used = new Set(ETFS.flatMap(e=>HOLDS(e).map(([t])=>t)));
     Object.entries(STOCKS).forEach(([t,[name,price,r]])=>{
       tick();
       if(!used.has(t) && !okn(price)) return;  // ETF에 안 담긴 회사는 시세가 없을 수 있어요
@@ -3500,7 +3503,7 @@ function runChecks(){
     Object.entries(IND_GROUPS).forEach(([g,v])=>{ tick(); v.keys.filter(k=>!IND[k]).forEach(k=>add("err","매크로 지표",`${v.title} 묶음에 없는 지표(${k})가 들어 있어요.`)); });
   });
   guard("일정", ()=>{
-    const held = new Set(ETFS.flatMap(e=>e.h.map(([t])=>t)));
+    const held = new Set(ETFS.flatMap(e=>HOLDS(e).map(([t])=>t)));
     EVENTS.forEach(ev=>{
       tick();
       if(!okDate(ev.d)){ add("err","일정",`${ev.title}: 날짜 형식이 잘못됐어요.`); return; }
