@@ -654,3 +654,33 @@
 - 내용: SPCX 스타십 15번째 비행 — 검색에 보도·블로그만 나오고 spacex.com 페이지는 열기 막힘, 결과 카드·일정 추가 안 함. CEG — 회사 3분기 보도자료(11/9) 전문에 지역별 매출 표·총매출 문장 없음(이익 조정표만), 앱 1분기 그대로. MU — 검색에 나온 공지 2곳 모두 2025-11-19 자 "December 17, 2025" 공지(지난해 FY26 1분기)라 FY27 1분기 회사 공지 아직 확인 못 함, 앱 12/18 그대로(출처도 확인 못 함). 남은 2차 출처 약 42곳은 다음 차례에.
 - 출처: [컨스텔레이션 3분기 보도자료](https://www.constellationenergy.com/news/2026/11/constellation-reports-third-quarter-2026-results.html) · [마이크론 지난해 일정 공지 (재게재)](https://marketchameleon.com/PressReleases/i/2209130/MU/micron-technology-to-report-fiscal-first-quarter) · 공식 여부: 공식 / 공식(재게재, 지난해)
 - 확신도: 확인 못 함
+
+### Q-20261116-0934-0 · 알림 · 이번 차례 웹 페이지 열기 — 검색 결과 주소 중 sec.gov 3곳 열림
+- 시각: 2026-11-16 09:45 KST
+- 내용: 새 처리 대상: C-20261116-0930-2(Conrad 요청 1~3), A-20261116-0904-1(MSFT 주총). 열린 곳: 테슬라 DEF 14A, 마이크로소프트 DEF 14A, ASTS 8-K Ex 99.2(모두 SEC, 앞부분 원문). C-20261116-0930-2 (4) Archer 인용 반영 방식은 이번 차례엔 쓸 일 없음(세 원문 모두 직접 열림). 시각 변환은 python(zoneinfo)으로 검산.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-0934-1 · 반영 · C-20261116-0930-2 (1) 에 대해 — ASTS 12/4 발사 일정에 "tbd": true
+- 시각: 2026-11-16 09:45 KST
+- 내용: events.json ASTS 2026-12-04: tbd (없음) → true. 날짜(d)·when·missions.json 은 그대로. 원문(11/9 발표 자료): "BlueBirds 14, 15, 16 shipped to Cape Canaveral in September 2026 awaiting SpaceX launch date confirmation" — 문서 안 12월 언급은 생산·출하뿐, 12월 발사 날짜 없음. 화면은 "미정 · 12/4 가안".
+- 출처: [ASTS 3분기 발표 자료 (SEC 8-K Ex 99.2)](https://www.sec.gov/Archives/edgar/data/0001780312/000119312526453758/asts-ex99_2.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0934-2 · 반영 · C-20261116-0930-2 (2) · A-20261116-0404-3 에 대해 — TSLA 12/4 06:00 정기 주주총회 새 일정 (Q-20261116-0434-4 보류 해제)
+- 시각: 2026-11-16 09:45 KST
+- 내용: events.json 새 일정: (없음) → 2026-12-04 TSLA type "event" "테슬라 정기 주주총회", when "06:00 · 온라인 + 텍사스 기가팩토리(현장 인원 제한)". 원문: "will be held on December 3, 2026, at 3:00 p.m. Central Time", "both virtually via the Internet … and in person for a limited number of shareholders at Tesla's Gigafactory Texas" → 미국 중부 표준시 기준 한국 12/4 06:00(python). TSLA 는 holdings top·STOCKS 에 있음. 안건 세부는 원문 뒤쪽을 못 읽어 넣지 않음(watch 는 "안건별 투표 결과"처럼 일반 문구).
+- 출처: [테슬라 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0001318605/000110465926116700/tm267596-1_def14a.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261116-0934-3 · 반영 · C-20261116-0930-2 (3) · A-20261116-0904-1 에 대해 — MSFT 12/9 01:30 정기 주주총회 새 일정
+- 시각: 2026-11-16 09:45 KST
+- 내용: events.json 새 일정: (없음) → 2026-12-09 MSFT type "event" "마이크로소프트 정기 주주총회", when "01:30 · 온라인 전용". 원문: "on December 8, 2026, beginning at 8:30 a.m. Pacific Time", "This year's meeting is a virtual shareholders meeting at virtualshareholdermeeting.com/MSFT26", 기준일 "September 30, 2026" → 미국 태평양 표준시 기준 한국 12/9 01:30(python). MSFT 는 holdings top·STOCKS 에 있음. 현장 참석 여부 문장은 원문 뒤쪽(5부)이라 확인 못 함 — "온라인 전용"은 원문 "virtual shareholders meeting" 기준.
+- 출처: [마이크로소프트 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0000789019/000119312526427849/d61756ddef14a.htm) · 공식 여부: 공식
+- 확신도: 높음 (날짜·시각) / 중간 (온라인 전용)
+
+### Q-20261116-0934-4 · 보류 · A-20261115-1704-5 · A-20261115-2204-5 · A-20261115-2004-1 · V-20261115-1821-7 (2) 에 대해 — SPCX·CEG·MU·나머지 2차 출처
+- 시각: 2026-11-16 09:45 KST
+- 내용: MU — 다시 검색했지만 FY27 1분기 발표일 회사 공지 못 찾음(검색 결과는 9월 FY26 4분기 보도자료·전사록뿐), 앱 12/18 그대로(확인 못 함). SPCX·CEG 는 Q-20261116-0834-4 이후 새 근거 없어 그대로. 남은 2차 출처 약 42곳은 다음 차례에.
+- 출처: [마이크론 FY26 4분기 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm) · 공식 여부: 공식 (발표일 공지 아님)
+- 확신도: 확인 못 함
