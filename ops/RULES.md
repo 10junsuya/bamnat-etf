@@ -11,6 +11,7 @@
 | Sterling | 감사: 팀 전체 독립 점검 | 토요일 아침 | `ops/board/sterling.md` |
 | Archer | 리서치: 변동 후보 찾기 | 1시간마다 | `ops/board/archer.md` |
 | Quill | 편집: 후보 검증 후 앱 데이터 반영 | 1시간마다 | `ops/board/quill.md`, `data/events.json`, `data/missions.json`, `data/money.json` (+ `index.html` 데이터 블록은 스크립트로만) |
+| Tally | 실적 카드: 발표가 나오면 회사 화면 「실적」 카드 갱신 | 화~토 아침 | `ops/board/tally.md`, `data/earnings.json` (+ `index.html` 데이터 블록은 스크립트로만) |
 | Vernon | 숫자 품질: 앱 숫자가 맞는지 원 출처와 대조, 자동 수집 점검 | 하루 두 번 | `ops/board/vernon.md` |
 | Keene | 화면 QA 프로그램 | 앱이 바뀔 때 | (GitHub Actions) |
 | Argus | 경비 프로그램(AI 아님): 서버·자동 수집·큰 움직임·데이터 검사 | 10분마다 (GitHub) | `ops/board/argus.md`, `ops/argus/state.json` (자동), `ops/watchlist.json` 읽기 |
@@ -40,7 +41,7 @@
 | 바로 반영 (하고 나서 보고) | 대표 승인 필요 |
 |---|---|
 | 공식 출처로 확인된 일정 변경(날짜·시간), 발사·착륙 결과, 실적 발표일 · `ops/watchlist.json`의 items(종목·기준·기한) | 화면 디자인·기능, 코드(`index.html`의 데이터 블록 밖, `worker/`, `scripts/`, `.github/`) |
-| 실적 발표 뒤 `money.json` 숫자 갱신 (공시·회사 발표 기준) | 새 회사·ETF·지표 추가/삭제 |
+| 실적 발표 뒤 `money.json`·`earnings.json`(실적 카드) 숫자 갱신 (공시·회사 발표 기준, 카드 형식은 `ops/EARNINGS.md`) | 새 회사·ETF·지표 추가/삭제 |
 | 끝난 일정의 결과 카드(공식 발표 요약) | 이 규칙 문서, AI 지시문 |
 | 오타·지난 날짜·깨진 링크 같은 기초 오류 | 앱 공개, GitHub/Cloudflare 설정, 키 |
 | 뉴스만 있을 때 "변동 가능성 보도" 표시 | 임무 단계 수·그림 변경 |
@@ -89,6 +90,6 @@
 
 ## 9. 실행 시각 (한국 시간)
 - Archer: 매시 4분 · Quill: 매시 34분 · Conrad: 01:49, 07:49, 13:49, 19:49 · Sterling: 토 08:49
-- Vernon: 08:21, 18:21 · Argus: 10분마다 (GitHub, 긴급이면 실행 실패로 GitHub 알림 메일)
+- Tally: 화~토 07:13 · Vernon: 08:21, 18:21 · Argus: 10분마다 (GitHub, 긴급이면 실행 실패로 GitHub 알림 메일)
 - 자동 수집(GitHub): 시세·기준가 06:17·07:47·13:37·18:07(평일) · 구성종목 07:41(평일) · 매크로 09:23·22:53
 - GNOMON 폴더 정리(비서): 09:17, 21:17 — 대표 컴퓨터가 켜져 있을 때만 PDF를 바탕화면 폴더에 넣어요.

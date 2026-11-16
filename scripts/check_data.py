@@ -13,7 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 APP = ROOT / "index.html"
 FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-money": "data/money.json",
-         "d-holdings": "data/holdings.json", "d-live": "data/live.json", "d-macro": "data/macro.json", "d-etfs": "data/etfs.json"}
+         "d-holdings": "data/holdings.json", "d-live": "data/live.json", "d-macro": "data/macro.json", "d-etfs": "data/etfs.json",
+         "d-earnings": "data/earnings.json"}
 OPTIONAL = {"d-holdings", "d-live", "d-macro"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 URL = re.compile(r"^https?://\S+$")
@@ -110,6 +111,45 @@ def check_money(mo, known):
         check_src(w, m.get("src"))
 
 
+CURS = {"usd", "eur", "cad", "krw", "twd", "cny"}
+
+
+def check_earnings(eq, known):
+    """실적 카드(data/earnings.json): 금액은 백만 단위, 통화는 CURS 중 하나."""
+    num = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool)
+    for t, q in eq.items():
+        w = f"earnings {t}"
+        if t not in known:
+            err(w, "앱 종목 목록에 없는 티커예요.")
+        if not str(q.get("p", "")).strip():
+            err(w, "기간(p)이 비어 있어요.")
+        rows = q.get("rows")
+        if not (isinstance(rows, list) and rows and all(isinstance(r, list) and len(r) == 2 for r in rows)):
+            err(w, "rows 는 [[\"이름\", \"값\"], ...] 형식이어야 해요.")
+        check_src(w, q.get("src"))
+        c = q.get("chart")
+        if c is None:
+            continue
+        if c.get("cur") not in CURS:
+            err(w, f"통화(cur)는 {sorted(CURS)} 중 하나여야 해요.")
+        now = c.get("now")
+        if not (isinstance(now, list) and len(now) == 2 and num(now[1]) and now[1] > 0):
+            err(w, "now 는 [\"7~9월\", 금액] 형식이어야 해요.")
+        if "prev" in c and not (isinstance(c["prev"], list) and len(c["prev"]) == 2 and num(c["prev"][1]) and c["prev"][1] > 0):
+            err(w, "prev 는 [\"1년 전\", 금액] 형식이어야 해요 (모르면 prev 를 빼요).")
+        if c.get("est") is not None and not (num(c["est"]) and c["est"] > 0):
+            err(w, "est 는 숫자나 null 이어야 해요.")
+        n = c.get("next")
+        if not isinstance(n, dict) or not str(n.get("when", "")).strip():
+            err(w, "next.when(다음 발표)이 비어 있어요.")
+            continue
+        g = n.get("guide")
+        if g is not None and not (isinstance(g, list) and len(g) == 2 and all(num(x) for x in g) and g[0] <= g[1]):
+            err(w, "next.guide 는 [낮은 값, 높은 값] 이어야 해요.")
+        if n.get("cons") is not None and not num(n["cons"]):
+            err(w, "next.cons 는 숫자나 null 이어야 해요.")
+
+
 # 특정 회사 제품을 그린 그림: 다른 회사 제품에 쓰면 틀린 그림이 나와요 (예: 스타십 자리에 뉴트론)
 BRANDED_ART = {"electron": {"RKLB"}, "neutron": {"RKLB"}, "haste": {"RKLB"}, "alpha": {"FLY"}, "blueghost": {"FLY"},
                "novac": {"LUNR"}, "bluebird": {"ASTS"}, "dove": {"PL"}, "starship": {"SPCX"}, "iphone": {"AAPL", "VZ", "GLW"},
@@ -173,6 +213,7 @@ def main():
         check_events(data["d-events"], known)
         check_missions(data["d-missions"], data["d-events"], art_frame_counts())
         check_money(data["d-money"], known)
+        check_earnings(data["d-earnings"], known)
         check_product_art()
     if errors:
         print("데이터 검사 실패:")
