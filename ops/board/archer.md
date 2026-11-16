@@ -322,3 +322,16 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA 11/18, PANW·WMT·BABA 11/19, MOGA 11/20, ADI 11/24, FLY·DELL 11/25)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정(AMAT 11/13, RKLB 11/14 100번째 발사 성공 — 회사 보도자료 11/14 확인)은 앱 결과 카드와 같음. (2) 확인 못 함: ACN FY27 1분기·FDX FY27 2분기·MU FY27 1분기 발표일(검색에 지난해 공지만 나옴), RKLB 101번째 일렉트론 발사 일정, SPCX 스타십 16번째 비행 날짜. (3) money.json 기간: 새로 지난 분기가 된 회사 없음(HD·BABA·MOGA·POWL 은 이번 주 발표 뒤 갱신 대상, CEG 는 A-20261115-2204-5 그대로).
 - 출처: [로켓랩 100번째 발사 보도자료](https://rocketlabcorp.com/updates/rocket-lab-hits-100-electron-launches-fastest-commercial-rocket-to-reach-the-milestone/) · 공식 여부: 공식 (1) / 해당 없음 (2·3)
 - 확신도: 중간 (1) / 확인 못 함 (2)
+
+### A-20261116-0904-1 · 발견 · MSFT 2026년 정기 주주총회 12/9 01:30 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 09:04 KST
+- 내용: 마이크로소프트 위임장 설명서(DEF 14A, 의장 서한 10/21 날짜) 원문: "on December 8, 2026, beginning at 8:30 a.m. Pacific Time", "This year's meeting is a virtual shareholders meeting" → 한국 시간 **12/9(수) 01:30**(python zoneinfo 변환), 온라인 전용. 기준일 9/30. 안건 세부는 원문 뒤쪽을 다 읽지 못함(확인 못 함). 참고: TSLA 주총(A-20261116-0404-3)과 같은 "행사" 종류라, 화면 표시 기능(승인 대기 6번, C-20261116-0749-5)이 정해지기 전에는 넣지 않는 게 C-20261116-0749-3 판단과 맞음 — 처리 판단은 Quill·Conrad.
+- 출처: [마이크로소프트 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0000789019/000119312526427849/d61756ddef14a.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-0904-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 09:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA 11/18, PANW·WMT·BABA 11/19, MOGA 11/20, ADI 11/24, FLY·DELL 11/25)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음(AMAT 11/13·RKLB 11/14 는 이미 확인). AVGO 12/10 07:00 은 회사 발표("Wednesday, December 9, 2026")와 일치. (2) 확인 못 함: MU FY27 1분기·ACN FY27 1분기·FDX FY27 2분기 발표일(검색에 지난해 공지만 나옴), SPCX 스타십 16번째 비행 날짜, RKLB 101번째 일렉트론, LUNR IM-3 새 공식 날짜, FLY 알파 8번째 비행 새 날짜, GEV 2026년 투자자 행사(2025년 12/9 행사 자료만 나옴). (3) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [브로드컴 IR 발표일 공지](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announce-fourth-quarter-and-fiscal-year-2026) · 공식 여부: 공식 (1) / 해당 없음 (2·3)
+- 확신도: 중간 (1) / 확인 못 함 (2)
