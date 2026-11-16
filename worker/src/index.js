@@ -262,7 +262,8 @@ async function route(path, q, env) {
   }
   if (path === "/fx") return [await fx(env).catch(fail), 200, 60];
   if (path === "/kr") {
-    const list = pick(q.get("c"), KRC, ALLOW_KR, kis ? 20 : 8);
+    // Cloudflare 무료 요금제는 한 번에 바깥 요청 50번까지예요. ETF 하나에 최대 3번(KIS 2 + FunETF 1)이라 8개씩만 받아요
+    const list = pick(q.get("c"), KRC, ALLOW_KR, 8);
     if (!list.length) { blocked("symbol", path); return [ERR("노몬에서 쓰는 ETF만 받을 수 있어요"), 400, 0]; }
     const out = {};
     for (const c of list) out[c] = await (kis ? kisEtf(env, c).then((v) => (v && !v.error ? v : funetfKr(c))) : funetfKr(c)).catch(fail);
@@ -270,7 +271,8 @@ async function route(path, q, env) {
   }
   if (path === "/usday" || path === "/usreg") {
     if (!kis) return [ERR("한국투자증권 키가 아직 없어요"), 503, 0];
-    const list = pick(q.get("s"), SYM, ALLOW_US, 40);
+    // 바깥 요청 50번 한도: 종목 하나에 최대 4번(처음 거래소 찾기 3 + 시세 1)이라 10개씩만 받아요
+    const list = pick(q.get("s"), SYM, ALLOW_US, 10);
     if (!list.length) return [ERR("노몬에서 쓰는 종목만 받을 수 있어요"), 400, 0];
     const out = {}, day = path === "/usday";
     // 초당 호출 한도를 넘지 않게 하나씩 차례로 물어요 (거래소 찾기는 하루 한 번만)

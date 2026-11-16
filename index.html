@@ -1001,8 +1001,10 @@ async function pullLive(){
     const r0 = typeof route==="function" ? route() : "";
     const first = r0.startsWith("etf-") ? [r0.slice(4)] : [];
     const all = [...new Set([...first, ...((holdings||[]).map(h=>h.code)), ...stars, ...ETFS.map(e=>e.code)])].filter(c=>ETFS.some(e=>e.code===c));
-    const chunks = []; for(let i=0;i<all.length;i+=20) chunks.push(all.slice(i,i+20));
-    const res = await Promise.all(chunks.map(cs => fetch(`${LIVE_URL}/kr?c=${cs.join(",")}`, tm(15000)).then(r=>r.ok?r.json():null).catch(()=>null)));
+    // 서버는 한 번에 8개까지 받아요. 두 묶음씩 동시에 물어요 (지금 보는 ETF가 든 첫 묶음이 가장 먼저)
+    const chunks = []; for(let i=0;i<all.length;i+=8) chunks.push(all.slice(i,i+8));
+    const one = cs => fetch(`${LIVE_URL}/kr?c=${cs.join(",")}`, tm(15000)).then(r=>r.ok?r.json():null).catch(()=>null);
+    const res = []; for(let i=0;i<chunks.length;i+=2) res.push(...await Promise.all(chunks.slice(i,i+2).map(one)));
     let n = 0; LIVE.krNow = {...(LIVE.krNow||{})};
     for(const j0 of res){ if(!j0) continue; const j = clean(j0);
       for(const [c,v] of Object.entries(j.etfs||{})){ if(v && !v.error && okn(v.price)){ LIVE.krNow[c] = v; n++; } }
@@ -1029,6 +1031,7 @@ async function pullLive(){
   }catch(_){}
   try{ const r = await fetch(`${LIVE_URL}/fx`, tm(5000)); if(r.ok){ const j = clean(await r.json());
     if(okn(j.usdkrw)){ LIVE.fx = {...(LIVE.fx||{}), rate:j.usdkrw, date:j.date || (j.time||"").slice(0,10) || (LIVE.fx||{}).date, src:j.source||"", live:!!j.live}; changed = true; } } }catch(_){}
+  try{ const r = await fetch(`${LIVE_URL}/fut`, tm(6000)); if(r.ok){ const j = clean(await r.json()); if(j && j.fut){ LIVE.fut = j.fut; changed = true; } } }catch(_){}
   // 미국 주식 시세는 한국투자증권이 주력이에요: 주간거래(한국 낮) · 프리마켓 · 정규장 · 애프터마켓. Finnhub는 예비 + 대조용
   try{
     const kp = parts(now(),"Asia/Seoul"), hm = kp.h*60+kp.mi, wd = kp.wd, us = usState(parts(now(),"America/New_York")).key;
@@ -1040,14 +1043,15 @@ async function pullLive(){
       const prox = Object.values(ETF_DATA.groups).map(g=>g.proxy).filter(Boolean);
       const hold = ETFS.filter(e=>want.includes(e.code)).flatMap(e=>HOLDS(e).map(x=>x[0]));
       const syms = [...new Set([...prox, ...hold])].filter(t=>/^[A-Z.\-]{1,8}$/.test(t)).slice(0,40);
-      if(syms.length){ const r = await fetch(`${LIVE_URL}/${sess==="day"?"usday":"usreg"}?s=${encodeURIComponent(syms.join(","))}`, tm(20000));
+      // 서버는 한 번에 10개까지 받아요. 지수 ETF·비중 큰 종목부터 차례로 물어요
+      for(let i=0;i<syms.length && !LV.kisOff;i+=10){ const r = await fetch(`${LIVE_URL}/${sess==="day"?"usday":"usreg"}?s=${encodeURIComponent(syms.slice(i,i+10).join(","))}`, tm(20000)).catch(()=>null);
+        if(!r) continue;
         if(r.status===503) LV.kisOff = true;
         else if(r.ok){ const j = clean(await r.json()); let n = 0; LIVE.kus = {...(LIVE.kus||{})};
           for(const [t,v] of Object.entries(j.quotes||{})){ if(v && !v.error && okn(v.price)){ LIVE.kus[t] = {p:v.price, pc:v.prev, t:v.time, s:sess}; n++; } }
-          if(n) changed = true; } }
+          if(n){ changed = true; applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); } } }
     }
   }catch(_){}
-  try{ const r = await fetch(`${LIVE_URL}/fut`, tm(6000)); if(r.ok){ const j = clean(await r.json()); if(j && j.fut){ LIVE.fut = j.fut; changed = true; } } }catch(_){}
   await krP;
   if(changed){ applyLive(); syncFxInd(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
 }
