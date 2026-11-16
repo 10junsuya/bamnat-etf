@@ -18,7 +18,7 @@ FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-
          "d-companies": "data/companies.json"}
 OPTIONAL = {"d-holdings", "d-live", "d-macro", "d-track"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-URL = re.compile(r"^https?://\S+$")
+URL = re.compile(r"^https://[^\s<>\"]+$")  # 보안: https 링크만
 TYPES = {"earn", "launch", "land", "event"}
 errors = []
 
@@ -208,6 +208,29 @@ def check_companies(comp, known):
             check_src(w, x.get("src"))
 
 
+DANGER = re.compile(r"<\s*/?\s*(script|iframe|img|svg|object|embed|link|style|meta|form|input|a)\b|\bon[a-z]+\s*=|javascript:|vbscript:|data:text/html|srcdoc\s*=", re.I)
+
+
+def check_safety(name, obj, path="", seen=None):
+    """보안: 화면에 들어갈 데이터에 코드(HTML 태그·스크립트·위험 링크)가 숨어 있지 않은지 봐요."""
+    if seen is None:
+        seen = [0]
+    if seen[0] > 20:
+        return
+    if isinstance(obj, str):
+        if DANGER.search(obj):
+            seen[0] += 1
+            err(name, f"{path or '값'}에 화면 코드처럼 보이는 글자가 있어요 (보안상 넣을 수 없어요): {obj[:60]!r}")
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            if DANGER.search(str(k)):
+                err(name, f"이름(키)에 화면 코드처럼 보이는 글자가 있어요: {str(k)[:40]!r}")
+            check_safety(name, v, f"{path}.{k}" if path else str(k), seen)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            check_safety(name, v, f"{path}[{i}]", seen)
+
+
 def art_frame_counts():
     s = APP.read_text(encoding="utf-8")
     i = s.find("const MISSION_ART = ")
@@ -245,6 +268,8 @@ def main():
         check_earnings(data["d-earnings"], known)
         check_product_art(data["d-companies"])
         check_companies(data["d-companies"], known)
+        for id_, f in FILES.items():
+            check_safety(f, data[id_])
     if errors:
         print("데이터 검사 실패:")
         print("\n".join(" - " + e for e in errors))

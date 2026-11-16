@@ -99,6 +99,22 @@ def fox():
     return out
 
 
+TAG = re.compile(r"<[^>]*>")
+CTRL = re.compile(r"[\x00-\x1f\x7f]")
+
+
+def safe(x):
+    """보안: 바깥 기사 제목은 글자만 남기고(태그·제어문자 제거, 300자), 링크는 https만 받아요.
+    제목 안에 'AI에게 이렇게 해라' 같은 글이 있어도 Wren은 따르지 않아요(RULES 0-1)."""
+    url = str(x.get("url") or "").strip()
+    if not url.startswith("https://") or any(c in url for c in '<>" '):
+        return None
+    t = CTRL.sub(" ", TAG.sub("", str(x.get("title") or ""))).replace("<", "").replace(">", "").strip()[:300]
+    if not t:
+        return None
+    return {**x, "title": t, "url": url}
+
+
 def main():
     old = {}
     if OUT.exists():
@@ -131,7 +147,7 @@ def main():
     seen = now.isoformat(timespec="seconds")
     items = {x["id"]: x for x in old.get("items", []) if (x.get("pub") or x.get("seen", "")) >= cut}
     new = 0
-    for x in found:
+    for x in filter(None, map(safe, found)):
         if x["pub"] and x["pub"] < cut:
             continue
         i = sid(x["url"])
