@@ -389,3 +389,16 @@
 - 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA 11/18, PANW·WMT·BABA 11/19, MOGA 11/20, ADI 11/24, FLY·DELL 11/25, RBRK 12/1 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) RKLB: 10/13 보도(Startup Researcher)의 "The Mountain God Rises" 발사 창 11/10 시작은 11/14 100번째 발사와 같은 임무로 보임 — 101번째 일렉트론 공식 일정은 못 찾음. (3) 확인 못 함: COHR 2026년 주총 날짜(검색에 "Held Annual Shareholder Meeting" 제목만, 연도·원문 미확인), MU FY27 1분기·ACN FY27 1분기 발표일(검색에 지난해 공지만), SPCX 스타십 16번째 비행 날짜(블로그·집계 사이트만, 공식 없음). (4) money.json 기간: 새로 지난 분기가 된 회사 없음.
 - 출처: [Startup Researcher 로켓랩 기사](https://www.startupresearcher.com/news/rocket-lab-to-launch-qps-sar19-yamatsumi-ii-in-november-2026) · 공식 여부: 보도 (2) / 해당 없음 (3·4)
 - 확신도: 중간 (2) / 확인 못 함 (3)
+
+### A-20261116-1204-1 · 발견 · COHR(코히런트) 2026년 정기 주주총회 11/19 02:00 (한국 시간) — events.json 에 없음
+- 시각: 2026-11-16 12:04 KST
+- 내용: A-20261116-1104-5 (3) "COHR 주총 날짜 확인 못 함"에 대해 — 코히런트 위임장 설명서(DEF 14A, 공고·의장 서한 10/9 날짜) 원문: "NOTICE OF ANNUAL MEETING OF SHAREHOLDERS TO BE HELD ON NOVEMBER 18, 2026 AT 12:00 PM ET", "The Annual Meeting is a virtual meeting at: www.virtualshareholdermeeting.com/COHR2026" → 한국 시간 **11/19(목) 02:00**(python zoneinfo 변환), 온라인 전용. 기준일 9/21("RECORD DATE: SEPTEMBER 21, 2026"). 안건 세부는 원문 뒤쪽을 다 읽지 못함(확인 못 함). 14일 안 일정(사흘 뒤). 참고: holdings 상 0173Y0 KODEX 미국AI광통신네트워크 안 비중 21.3%로 큼(0023A0 7.2%, 483320 3.2%). type "event" 대상(C-20261116-0930-1 6번). 승인 2번 조건: (가) 공식 SEC 주소 (나) 이번 차례 본문 열어 확인 (다) 원문 인용 — 세 가지 갖춤.
+- 출처: [코히런트 DEF 14A (SEC, 이번 차례 본문 앞부분 열어 확인)](https://www.sec.gov/Archives/edgar/data/0000820318/000110465926114847/tm264288-6_def14a.htm) · 공식 여부: 공식 (SEC 공시)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람
+
+### A-20261116-1204-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-16 12:04 KST
+- 내용: (1) events.json 14일 안 일정(HD·POWL·INFQ 11/17, NVDA·SNDK 11/18, PANW·WMT·BABA·LITE 11/19, MOGA 11/20, WDC 11/21, ADI 11/24, FLY·DELL 11/25 등)은 앞 항목 이후 새 변동 못 찾음. 48시간 안 끝난 일정 없음. (2) 확인 못 함: MU FY27 1분기·ACN FY27 1분기·FDX FY27 2분기 발표일(검색에 지난해 공지·집계 사이트만), SPCX 스타십 16번째 비행 날짜(집계 사이트 rocketlaunch.live 도 "2026"·발사장 미정만 표시), FLY 알파 8번째 비행 새 공식 날짜, RKLB 101번째 일렉트론, LUNR IM-3 새 날짜(회사 페이지 "Launch Date: 2026"만), GEV 2026년 투자자 행사(검색에 2025년 12/9 행사만). (3) money.json 기간: 새로 지난 분기가 된 회사 없음.
+- 출처: [rocketlaunch.live 스타십 16번째 비행](https://www.rocketlaunch.live/launch/starship-flight-16) · [인튜이티브머신스 IM-3 페이지](https://www.intuitivemachines.com/im-3-lunar-mission) · 공식 여부: 보도(집계 사이트) / 공식(회사 페이지, 날짜 없음)
+- 확신도: 확인 못 함 (2)
