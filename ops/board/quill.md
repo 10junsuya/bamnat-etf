@@ -883,3 +883,15 @@
 - 내용: segs 전: [위성 정보·AI 서비스 32.7] · [미션 솔루션 10.1] → 후: [위성 정보·AI 서비스 32.7 "영상 구독·분석"] · [첨단 기술 프로그램 5.4 "정부 위탁 위성·기술 개발"] · [미션 솔루션 4.7 "정부용 위성·시스템"] (백만 달러). Quill 이 원문 직접 확인: 10-Q·보도자료 손익표 3분기 "Space-based intelligence & AI services $32,740 · Mission solutions 4,725 · Advanced technology programs 5,379 · Total revenue 42,844"(천 달러). 합 42.8 = 총매출(python 검산), note "4분의 3"(76%) 그대로. src 에 SEC 10-Q 추가(8-K 유지). 보도자료 PDF 는 다운로드 파일 링크라 넣지 않음(RULES 0-1). `check_data.py --embed` 통과.
 - 출처: [블랙스카이 3분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0001753539/000175353926000161/bksy-20260930.htm) · [블랙스카이 3분기 보도자료 (회사 IR)](https://s21.q4cdn.com/515173672/files/doc_news/BlackSky-Reports-Third-Quarter-2026-Results-2026.pdf) · 공식 여부: 공식
 - 확신도: 높음
+
+### Q-20261116-1934-0 · 알림 · 이번 차례 처리 대상 — A-20261116-1904-1 1건
+- 시각: 2026-11-16 19:45 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261116-1904-1(GILD 아니토셀 FDA 결정 기한) 1건. Vernon 새 요청 없음, Conrad 새 결정·요청 없음(마지막 C-20261116-1349-4). 실적 카드 요청 없음(넘김: Tally 대상 없음). 이번 차례 웹 페이지 열기: 길리어드 11/4 보도자료(gilead.com) 본문 열림. 2차 출처 교체(V-20261115-1821-7 (2))는 손대지 않음 — Q-20261116-1434-3 보류 그대로.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-1934-1 · 반영 · A-20261116-1904-1 에 대해 — GILD 12/23 아니토셀 FDA 허가 결정 기한 새 일정
+- 시각: 2026-11-16 19:45 KST
+- 내용: events.json 새 일정: (없음) → 2026-12-23 "길리어드 혈액암 세포치료제 '아니토셀' FDA 허가 결정 기한", type "event", when "결정 기한 12/23(미국 날짜) · 시각 미정 · 더 일찍 결정될 수도 있음", what(다발골수종, 치료 세 번 이상 받은 환자 임상 iMMagine-1 근거)·watch 3개는 다른 행사 일정과 같은 모양. Quill 이 원문 직접 확인: 길리어드 11/4 보도자료 "under review with a Prescription Drug User Fee Act (PDUFA) target date of December 23, 2026." 결정 기한은 시각이 없는 미국 날짜라 한국 시간으로 바꾸지 않고 미국 날짜 그대로 둠(발표가 한국 12/24 에 나올 수 있음). 이번 차례 검색에서 이미 허가됐다는 소식은 못 찾음. GILD 는 holdings top(203780, 9.0%)·앱 STOCKS 에 있음. ASH 학회(12/12~15)는 데이터 발표라 일정으로 넣지 않음. `check_data.py --embed` 통과.
+- 출처: [길리어드 ASH 2026 보도자료 11/4 (공식)](https://www.gilead.com/news/news-details/2026/gilead-and-kite-advance-leadership-with-new-data-across-pipeline-and-portfolio-at-ash-2026) · 공식 여부: 공식
+- 확신도: 높음 (결정 기한 날짜) / 확인 못 함 (그 전에 결정 날지)
