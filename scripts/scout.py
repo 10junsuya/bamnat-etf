@@ -4,6 +4,8 @@ ETF에 담긴 회사들의 새 소식(기사 제목·링크)과 공시를 찾아
 - 회사별 기사: 야후 파이낸스 종목 RSS (비중 큰 회사는 매번, 나머지는 돌아가며)
 - 공시: SEC EDGAR 최신 8-K (담긴 회사 것만)
 - 시장 전체: Fox Business 시장·경제 RSS
+- 매크로·시장 매체 (2026-11-16 대표 승인, 매크로 해설 보강용): CNBC 경제·마켓, 블룸버그 경제·마켓, 월스트리트저널 마켓,
+  로이터(공개 RSS가 없어 구글 뉴스 검색 피드), 파이낸셜쥬스(무료 피드) — 모두 공개 RSS의 제목·링크만
 Wren(회사 소식 담당 AI)이 이 목록을 읽고 공식 출처로 확인한 뒤 회사 화면을 한국어로 갱신해요.
 기사 본문은 받지 않아요(제목·링크·시각·언론사만). 실패한 출처는 건너뛰고 기록만 남겨요.
 """
@@ -24,7 +26,7 @@ KST = ZoneInfo("Asia/Seoul")
 UA = {"User-Agent": "Mozilla/5.0 (gnomon-scout; +github.com/10junsuya/gnomon)"}
 # SEC는 '이름 + 연락 메일' 모양의 User-Agent를 요구해요. 공개 저장소라 개인 메일 대신 GitHub 자동 작업용 noreply 주소를 써요
 SEC_UA = {"User-Agent": "gnomon-app 41898282+github-actions[bot]@users.noreply.github.com", "Accept-Encoding": "identity"}
-KEEP_DAYS, MAX_ITEMS, MAX_MARKET, TIER1, ROTATE = 3, 800, 120, 60, 60
+KEEP_DAYS, MAX_ITEMS, MAX_MARKET, TIER1, ROTATE = 3, 800, 300, 60, 60
 YAHOO_ALIAS = {"BRKB": "BRK-B", "MOGA": "MOG-A", "BFB": "BF-B"}
 
 
@@ -99,6 +101,31 @@ def fox():
     return out
 
 
+MACRO_FEEDS = [  # (이름, 주소). 실패하면 그 출처만 건너뛰고 기록해요
+    ("CNBC", "https://www.cnbc.com/id/20910258/device/rss/rss.html"),          # 경제
+    ("CNBC", "https://www.cnbc.com/id/20409666/device/rss/rss.html"),          # 마켓 인사이더
+    ("Bloomberg", "https://www.bloomberg.com/feeds/economics/news.rss"),
+    ("Bloomberg", "https://www.bloomberg.com/feeds/markets/news.rss"),
+    ("WSJ", "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain"),
+    ("Reuters", "https://news.google.com/rss/search?q=site:reuters.com/markets+when:1d&hl=en-US&gl=US&ceid=US:en"),
+    ("FinancialJuice", "https://www.financialjuice.com/feed.ashx?xy=rss"),
+]
+
+
+def macro_feeds(stat):
+    out = []
+    for name, url in MACRO_FEEDS:
+        try:
+            got = [{"t": "", "title": x["title"], "url": x["link"], "pub": iso(x["pubDate"]),
+                    "src": (x.get("source") or name) if name == "Reuters" else name, "kind": "market"}
+                   for x in rss_items(get(url)) if x["title"] and x["link"]]
+            stat[name] = stat.get(name, 0) + len(got) if isinstance(stat.get(name, 0), int) else len(got)
+            out += got
+        except Exception as e:  # noqa: BLE001
+            stat[name] = f"실패 {type(e).__name__}"
+    return out
+
+
 TAG = re.compile(r"<[^>]*>")
 CTRL = re.compile(r"[\x00-\x1f\x7f]")
 
@@ -137,6 +164,10 @@ def main():
             err += 1
         time.sleep(0.25)
     stat["Yahoo Finance"] = f"{ok}종목 확인 · 실패 {err}"
+    mstat = {}
+    found += macro_feeds(mstat)
+    for k, v in mstat.items():
+        stat[k] = f"{v}건" if isinstance(v, int) else v
     for name, fn in (("SEC EDGAR", lambda: sec_8k(names)), ("Fox Business", fox)):
         try:
             got = fn(); found += got; stat[name] = f"{len(got)}건"
