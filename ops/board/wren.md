@@ -320,3 +320,31 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261117-0143-6 · 알림 · 이번 차례
 - 시각: 2026-11-17 02:00 KST
 - 내용: Scout가 01:20 KST에 갱신돼 새 항목 253건(news 203·market 50)을 처리했어요. 건너뜀: 넷플릭스 광고 매출 전망 하향(10/21 실적 때 이야기), 마이크로소프트 아웃룩 장애 원인(이미 들어 있음), TSMC-글로벌파운드리 20억 달러 패키징 계약(발표일 확인 못 함·이전 소식으로 보임), 애플 폴더블 유리 공급사(보도 출처 불분명), 팔란티어 NHS(소문), 트럼프의 젠슨 황 복귀 발언·머스크 지지(이미 넣은 복귀 논의 흐름), 나머지는 주가 정리·목표가·종목 비교·의견·시장 보고서 광고. 01시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
+
+### W-20261117-0243-1 · 반영 · 노스롭 그루먼(NOC) PAC-3 MSE 로켓 모터 16억 달러 주문
+- 시각: 2026-11-17 03:00 KST
+- 내용: PAC-3 MSE 요격미사일용 고체 로켓 모터·점화 안전장치 16억 달러 다년 주문을 받았다고 회사가 발표했어요(미국 11-16). 보도자료는 미 육군 PAC-3 MSE 사업이자 록히드 마틴 생산용이라고만 쓰고 발주처를 따로 밝히지 않아, 한 줄에서 발주처는 뺐어요. 8월 30억 달러 기본 합의의 연장선이에요.
+- 출처: [노스롭 그루먼 보도자료](https://investor.northropgrumman.com/news-releases/news-release-details/northrop-grumman-lands-16-billion-award-scale-pac-3-mse) · [Defence Industry Europe](https://defence-industry.eu/northrop-grumman-receives-1-6-billion-multiyear-order-for-rocket-motors-for-lockheed-martins-pac-3-mse-interceptors/) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-0243-2 · 반영 · 마벨(MRVL) 펭귄 솔루션즈와 광 연결 AI 메모리 장비
+- 시각: 2026-11-17 03:00 KST
+- 내용: 마벨의 포토닉 패브릭 메모리 모듈(HBM3e+DDR5)을 펭귄 솔루션즈 장비에 넣어 여러 서버가 메모리를 나눠 쓰게 하는 협력을 발표했어요(SC26, 미국 11-16). 첫 제품은 2027년 하반기 예정이라고 The Register가 전했어요. 주요 제품 칸은 바꾸지 않았어요.
+- 출처: [마벨·펭귄 솔루션즈 보도자료(Yahoo)](https://finance.yahoo.com/technology/ai/articles/marvell-penguin-solutions-collaborate-address-140000285.html) · [The Register](https://www.theregister.com/systems/2026/11/16/marvell-and-penguin-solutions-aim-to-end-the-rampocalypse-with-photonic-memory-fabric/5309921) · 공식 여부: 공식
+- 확신도: 중간
+
+### W-20261117-0243-3 · 반영 · 알파벳(GOOGL) 30억 달러 선불 전력 거래 참여 보도
+- 시각: 2026-11-17 03:00 KST
+- 내용: 동남부에너지공사(SEA)가 낼 선불 전력 채권 2건(총 30억 달러, 골드만삭스 주관, 애리조나 솔트리버 프로젝트 관련)에 알파벳이 자금 수령자로 이름을 올렸다고 블룸버그가 예비 채권 서류를 근거로 보도했어요. 구글·골드만은 논평을 거부해 "보도".
+- 출처: [Bloomberg](https://www.bloomberg.com/news/articles/2026-11-16/google-parent-to-take-part-in-3-billion-in-prepaid-energy-deals) · [Yahoo Finance(Bloomberg)](https://finance.yahoo.com/energy/articles/google-parent-part-3-billion-161016989.html) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261117-0243-4 · 반영 · ADM 디케이터 유지작물 공장 6천만 달러 이상 투자
+- 시각: 2026-11-17 03:00 KST
+- 내용: 일리노이주 디케이터 웨스트 유지작물 가공 공장에 6천만 달러 넘게 투자한다고 발표했어요(미국 11-16 보도자료).
+- 출처: [ADM 보도자료(Yahoo)](https://finance.yahoo.com/energy/articles/adm-announces-more-60-million-130000157.html) · [WAND TV](https://www.wandtv.com/2026/11/16/adm-invest-more-than-60-million-decatur-west-plant/) · 공식 여부: 공식
+- 확신도: 중간
+
+### W-20261117-0243-5 · 알림 · 이번 차례
+- 시각: 2026-11-17 03:00 KST
+- 내용: Scout 02:31 KST 갱신분 새 항목 134건(news 101·market 33)을 처리했어요. 건너뜀: AMD 월드랩스 인수 완료·인텔 주주 소송·테슬라 독일 공장·MS 장애 원인(이미 들어 있음), 엔비디아 밀수 조사 관련 해설 글(기존 수출 통제·조사 흐름), 코어위브 MLPerf 결과·로크웰 옴니버스 연동(홍보성·작은 제품 연동), 아스트라제네카 승인(앱 종목 아님), 움브라(비상장), 팔란티어 NHS(소문), 팔란티어 가이던스(11월 초 실적 때 이야기), 나머지는 주가 정리·목표가·종목 비교·의견·시장 보고서 광고. 02시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
