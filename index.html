@@ -680,8 +680,9 @@ const CO = COMP.co || {};
 const CNEWS = COMP.news || {}, MNEWS = COMP.market || [];
 function newsLine(x, tick){
   const sym = tick ? (tick==="BRKB"?"BRK.B":tick) : "";
+  const coName = tick ? ((STOCKS[tick]||[])[0] || "") : "";  // 티커만 있으면 어느 회사인지 알기 어려워서 회사 이름도 같이
   const [sn, su] = (x.src||[])[0] || ["",""];
-  return `<div class="news">${sym?`<span class="tag">${sym}</span>`:""}<span class="chip" style="font-size:11px;padding:1px 6px;margin-right:4px">${x.kind==="공식"?"공식":"보도"}</span>${x.t}
+  return `<div class="news">${sym?`<span class="tag">${coName && coName!==sym ? `${coName} <span class="muted" style="font-weight:500">${sym}</span>` : sym}</span>`:""}<span class="chip" style="font-size:11px;padding:1px 6px;margin-right:4px">${x.kind==="공식"?"공식":"보도"}</span>${x.t}
     <div class="tiny muted">${mdTxt(x.d)}${x.tm?" "+x.tm:""} · ${su?`<a href="${su}" target="_blank" rel="noopener noreferrer">${sn||"원문"} ›</a>`:sn}</div></div>`;
 }
 function allNews(ticks){ return ticks.flatMap(t=>(CNEWS[t]||[]).map(x=>({...x, tick:t}))).sort((a,b)=>(b.d+(b.tm||"")).localeCompare(a.d+(a.tm||""))); }
@@ -897,7 +898,8 @@ function applyLive(){
   const kr = lastKrClose(); LV.kr = kr; LV.U = prevUs(kr);
   const qs = LIVE.quotes || {};
   // 종목 시세: 실제 값이 있는 것만, 없으면 '확인 중'
-  for(const t of Object.keys(STOCKS)){ const q = qs[t] || qs[t==="BRKB"?"BRK-B":t]; const r = q ? usMove(qs[t]?t:"BRK-B") : NaN;
+  const QK = {}; for(const k of Object.keys(qs)) QK[TK(k)] = k;  // 'BRK-B'·'MOG-A'처럼 기호가 들어간 티커도 찾게
+  for(const t of Object.keys(STOCKS)){ const k = qs[t] ? t : QK[t]; const q = k ? qs[k] : null; const r = q ? usMove(k) : NaN;
     STOCKS[t][1] = q ? q.p : NaN; STOCKS[t][2] = r; }
   LV.quoteT = Object.values(qs).map(q=>q.t).sort().pop() || "";
   { const usOpen = usState(parts(now(),"America/New_York")).key==="regular";
@@ -1080,8 +1082,8 @@ const sym = t => t==="BRKB" ? "BRK.B" : t;
 function logo(t, small){
   let h=0; for(const ch of t) h=(h*31+ch.charCodeAt(0))%360;
   const txt = sym(t).replace(".","").slice(0,4);
-  const u = !navigator.webdriver && ((LIVE.logos||{})[t] || (LIVE.logos||{})[t==="BRKB"?"BRK-B":t]);
-  return `<span class="logo${small?" sm":""}" aria-hidden="true">${txt}${u?`<img src="${u}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:""}</span>`;
+  // 회사 로고 그림은 쓰지 않고 티커 글자만 보여줘요 (대표 결정 2026-11-16: 브라우저에서 그림이 깨져 보임)
+  return `<span class="logo${small?" sm":""}" aria-hidden="true">${txt}</span>`;
 }
 const q = term => `<button class="qbtn" type="button" data-term="${term}" aria-label="${term} 설명">?</button>`;
 
@@ -3433,6 +3435,20 @@ function runChecks(){
       const c = calc(e);
       if(!fin(c.total)) add("err","ETF",`${e.name}: 추정 계산 결과가 숫자가 아니에요.`, "etf:"+e.code);
       else if(Math.abs(c.total) > 0.15) add("warn","ETF",`${e.name}: 하룻밤 추정 변화가 ${pctx(c.total)}예요. 너무 커서 입력값 확인이 필요해요.`);
+    });
+  });
+  // 담긴 회사는 시세가 없어도 모든 화면에 보여야 해요 (2026-11-16: 새 회사가 구성종목·담은 ETF·검색에서 빠졌던 문제)
+  guard("화면 노출", ()=>{
+    ETFS.forEach(e=>{
+      tick();
+      const held = HOLDS(e).map(([t])=>t); if(!held.length) return;
+      const keep = showAll; showAll = true; let html = ""; try{ html = holdingsCard(e, calc(e)); } finally { showAll = keep; }  // '전체 보기'를 펼친 상태로 확인
+      const notShown = held.filter(t=>!html.includes(`data-stock="${t}"`));
+      if(notShown.length) add("err","화면 노출",`${e.name}: 구성종목 목록에 ${notShown.join(", ")}이(가) 안 보여요.`, "etf:"+e.code);
+      const notExp = held.filter(t=>!exposureHtml(t).includes(e.name));
+      if(notExp.length) add("err","화면 노출",`${e.name}: ${notExp.join(", ")} 회사 화면의 '담은 ETF'에 이 ETF가 안 보여요.`, "etf:"+e.code);
+      const notFound = held.filter(t=>!searchEtfs(sym(t)).some(x=>x.e.code===e.code));
+      if(notFound.length) add("err","화면 노출",`${e.name}: ${notFound.join(", ")}로 검색해도 이 ETF가 안 나와요.`, "etf:"+e.code);
     });
   });
   guard("시세", ()=>{

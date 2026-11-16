@@ -139,6 +139,16 @@ def backfill(closes, names, errors):
     return closes
 
 
+def yahoo_quote(t):
+    """Finnhub 무료 요금제에 없는 종목(장외 거래 ADR 등)은 야후 파이낸스 일봉으로 대신 받아요."""
+    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(t)}?range=5d&interval=1d"
+    m = json.loads(get(u))["chart"]["result"][0]["meta"]
+    p, pc, tm = m.get("regularMarketPrice"), m.get("chartPreviousClose") or m.get("previousClose"), m.get("regularMarketTime")
+    if not (p and tm):
+        return None
+    return {"c": p, "pc": pc, "dp": (p / pc - 1) * 100 if pc else None, "t": tm}
+
+
 def quotes(old, errors):
     q, closes = {}, {k: dict(v) for k, v in old.get("closes", {}).items()}
     if not FINNHUB_KEY:
@@ -153,8 +163,13 @@ def quotes(old, errors):
             errors.append(scrub(f"{t}: {type(e).__name__}: {e}")[:160])
             continue
         if not j or not j.get("c") or not j.get("t"):
-            errors.append(f"{t}: 값 없음")
-            continue
+            try:
+                j = yahoo_quote(t)
+            except Exception:  # noqa: BLE001
+                j = None
+            if not j:
+                errors.append(f"{t}: 값 없음 (Finnhub·야후 모두)")
+                continue
         ts = dt.datetime.fromtimestamp(j["t"], dt.timezone.utc).astimezone(NY)
         d = ts.date()
         q[t] = {"p": j["c"], "pc": j.get("pc"), "dp": j.get("dp"), "t": ts.isoformat(timespec="minutes"), "d": d.isoformat()}
