@@ -865,3 +865,21 @@
 - 내용: events.json 새 일정: (없음) → 2026-11-25 "아이렌 정기 주주총회", type "event", when "06:30 · 온라인 전용", 다른 주총 일정과 같은 모양. 원문(Archer 인용, DEF 14A): "will be held virtually at 4:30pm on November 24, 2026 (ET)", "exclusively being held virtually" → 한국 11/25 06:30(python zoneinfo 검산). 이번 차례 웹 검색 결과 제목에 SEC "IREN Ltd - Form DEF 14A - FY2026"(같은 주소)이 있음. IREN 은 holdings top(최대 10.7%)·앱 STOCKS 에 있음. 근거: Archer 인용(A-20261116-1704-1) · Quill 원문 직접 확인 못 함(C-20261116-0930-2 (4)). `check_data.py --embed` 통과.
 - 출처: [아이렌 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0001878848/000114036126039451/ny20078226x1_def14a.htm) · 공식 여부: 공식(Archer 인용)
 - 확신도: 높음 (날짜·시각)
+
+### Q-20261116-1834-0 · 알림 · 이번 차례 처리 대상 — A-20261116-1804-1 · V-20261116-1821-4 2건
+- 시각: 2026-11-16 18:42 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261116-1804-1(AWS 리인벤트), Vernon V-20261116-1821-4(BKSY money.json) 2건. Conrad 새 결정·요청 없음(마지막 C-20261116-1349-4, Q-20261116-1634-2 판단 대기 그대로), 실적 카드 요청 없음(넘김: Tally 대상 없음). 이번 차례 웹 페이지 열기: aws.amazon.com FAQ·기조연설 페이지와 BKSY 8-K·보도자료 PDF(q4cdn doc_earnings)는 권한 응답 시간 초과로 실패, 검색 결과 주소 중 AWS 파트너 블로그·AWS 리인벤트 첫 페이지·BKSY 10-Q(SEC)·BKSY 보도자료(q4cdn doc_news)는 열림. 2차 출처 교체(V-20261115-1821-7 (2))는 손대지 않음 — Q-20261116-1434-3 보류 그대로.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-1834-1 · 반영 · A-20261116-1804-1 에 대해 — AMZN AWS 리인벤트 2026 CEO 기조연설 12/2 01:30 새 일정
+- 시각: 2026-11-16 18:42 KST
+- 내용: events.json 새 일정: (없음) → 2026-12-02 "AWS 리인벤트 2026 · CEO 기조연설", type "event", when "01:30 · CEO 기조연설 (현지 12/1 오전 8:30) · 행사 11/30~12/4 라스베이거스", what·watch 는 다른 행사 일정과 같은 모양. Quill 이 원문 직접 확인: AWS 리인벤트 첫 페이지 "Nov. 30 – Dec. 4 in Las Vegas", AWS 파트너 블로그 "Tuesday, December 1, from 8:30 AM to 10:30 AM PT" — 시간대(PT)가 공식 글에 적혀 있어 Archer 가 남긴 시간대 문제 해결. 태평양 표준시 12/1 08:30 → 한국 12/2 01:30(python zoneinfo 검산). AMZN 은 holdings top·앱 STOCKS 에 있음. 일정 하나로 넣고 날짜는 가장 큰 발표가 나오는 CEO 기조연설 기준. `check_data.py --embed` 통과.
+- 출처: [AWS 리인벤트 (공식)](https://www.aws.amazon.com/events/reinvent/) · [AWS 파트너 블로그 리인벤트 2026 안내 (공식)](https://aws.amazon.com/blogs/apn/know-before-you-go-an-aws-partners-guide-to-reinvent-2026/) · 공식 여부: 공식
+- 확신도: 높음 (날짜·시각)
+
+### Q-20261116-1834-2 · 반영 · V-20261116-1821-4 에 대해 — money.json BKSY 매출 칸 나눔: 미션 솔루션 10.1 → 첨단 기술 프로그램 5.4 + 미션 솔루션 4.7
+- 시각: 2026-11-16 18:42 KST
+- 내용: segs 전: [위성 정보·AI 서비스 32.7] · [미션 솔루션 10.1] → 후: [위성 정보·AI 서비스 32.7 "영상 구독·분석"] · [첨단 기술 프로그램 5.4 "정부 위탁 위성·기술 개발"] · [미션 솔루션 4.7 "정부용 위성·시스템"] (백만 달러). Quill 이 원문 직접 확인: 10-Q·보도자료 손익표 3분기 "Space-based intelligence & AI services $32,740 · Mission solutions 4,725 · Advanced technology programs 5,379 · Total revenue 42,844"(천 달러). 합 42.8 = 총매출(python 검산), note "4분의 3"(76%) 그대로. src 에 SEC 10-Q 추가(8-K 유지). 보도자료 PDF 는 다운로드 파일 링크라 넣지 않음(RULES 0-1). `check_data.py --embed` 통과.
+- 출처: [블랙스카이 3분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0001753539/000175353926000161/bksy-20260930.htm) · [블랙스카이 3분기 보도자료 (회사 IR)](https://s21.q4cdn.com/515173672/files/doc_news/BlackSky-Reports-Third-Quarter-2026-Results-2026.pdf) · 공식 여부: 공식
+- 확신도: 높음
