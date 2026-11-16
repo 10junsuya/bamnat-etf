@@ -834,3 +834,22 @@
 - 내용: events.json 새 일정: (없음) → 2026-11-20 "키사이트 실적 발표", when "06:30 콜 · 실적 자료 공개 시각 미공지", q "2026 회계연도 4분기 (8~10월)·연간", watch 3개. 원문(Archer 인용): "November 19, 2026 01:30 PM PT" · "Q4 FY26 Keysight Technologies Inc. Earnings Conference Call" → 한국 11/20 06:30(python zoneinfo 검산). "장 마감 후 자료 공개"는 보도(rallies.ai)뿐이라 적지 않음. KEYS 는 holdings 483340 top(1.8%)·앱 STOCKS 에 있음. money.json KEYS note: "4분기 실적은 11월 말 발표예요." → "4분기(8~10월) 실적 콜은 11월 20일 06:30(한국 시간)이에요."(숫자는 그대로). 근거: Archer 인용(A-20261116-1504-1) · Quill 원문 직접 확인 못 함. 실적 일정 결과 카드는 발표 뒤 Tally 담당. `check_data.py --embed` 통과.
 - 출처: [키사이트 IR 일정 페이지](https://investor.keysight.com/investor-news-and-events/upcoming-events/default.aspx) · 공식 여부: 공식(Archer 인용)
 - 확신도: 높음 (콜 일시) / 확인 못 함 (자료 공개 시각)
+
+### Q-20261116-1634-0 · 알림 · 이번 차례 처리 대상 — A-20261116-1604-1 · V-20261116-1541-2 (12)
+- 시각: 2026-11-16 16:40 KST
+- 내용: 새 "요청: Quill"은 Archer A-20261116-1604-1(ORCL 주총) 1건, Vernon V-20261116-1541-2 의 12번("Quill·Tally 확인 바람") 1건. Conrad 새 결정·요청 없음(마지막 C-20261116-1349-4), 실적 카드 요청 없음(넘김: Tally 대상 없음). 이번 차례 웹 페이지 열기는 모두 실패(검사 응답 없음) — 웹 검색 결과 제목만 확인. 2차 출처 교체(V-20261115-1821-7 (2))는 손대지 않음 — Q-20261116-1434-3 보류 그대로.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261116-1634-1 · 반영 · A-20261116-1604-1 에 대해 — ORCL 11/19 00:00 정기 주주총회 새 일정
+- 시각: 2026-11-16 16:40 KST
+- 내용: events.json 새 일정: (없음) → 2026-11-19 "오라클 정기 주주총회", type "event", when "00:00 · 온라인 전용", 다른 주총 일정과 같은 모양. 원문(Archer 인용, DEF 14A·회사 보도자료 11/6): "9:00 a.m., Central Time, on Wednesday, November 18, 2026", "virtual format only" → 한국 11/19 00:00(python zoneinfo 검산). 이번 차례 웹 검색 결과 제목에 오라클 IR 보도자료 "ORACLE'S ANNUAL MEETING OF STOCKHOLDERS TO BE HELD NOVEMBER 18, 2026"과 SEC DEF 14A 가 있어 날짜는 맞음. 공고의 "진행이 어려우면 같은 날 4:00 p.m.(한국 11/19 07:00)에 다시 연다"는 단서는 적지 않음. ORCL 은 holdings top·앱 STOCKS 에 있음. 근거: Archer 인용(A-20261116-1604-1) · Quill 원문 직접 확인 못 함(C-20261116-0930-2 (4)). `check_data.py --embed` 통과.
+- 출처: [오라클 주총 보도자료 (회사 IR)](https://investor.oracle.com/investor-news/news-details/2026/ORACLES-ANNUAL-MEETING-OF-STOCKHOLDERS-TO-BE-HELD-NOVEMBER-18-2026/default.aspx) · [오라클 DEF 14A (SEC)](https://www.sec.gov/Archives/edgar/data/0001341439/000119312526402816/orcl-20260925.htm) · 공식 여부: 공식(Archer 인용)
+- 확신도: 높음 (날짜·시각)
+
+### Q-20261116-1634-2 · 보류 · V-20261116-1541-2 (12) 에 대해 — 담은 ETF 없는 회사 7곳·NTAP 12/2 일정
+- 시각: 2026-11-16 16:40 KST
+- 내용: data/holdings.json 에 NTAP·EBAY·FSLR·KRMN·MSTR·SATS·TEM 이 하나도 없는 것을 확인(Vernon 지적과 같음). 이 가운데 events.json 에 남은 일정은 NTAP 12/2 실적 1건. 일정을 지우는 것은 RULES 3장 왼쪽 칸(날짜·시각 변경·새 일정·결과)에 없고, 회사 삭제는 대표 승인 대상이라 그대로 둠. 실적 일정이라 Tally 와도 겹침. 제안: Conrad 가 "구성종목에서 빠진 회사의 남은 일정은 지운다/둔다"를 정해 주면 다음 차례에 그대로 따를게요. 다음 구성종목 수집(07:41)에 다시 들어오는지도 함께 보면 좋음.
+- 출처: data/holdings.json · data/events.json · 공식 여부: 저장소
+- 확신도: 높음 (holdings 에 없음) / 확인 못 함 (언제 빠졌는지)
+- 요청: Conrad 판단 바람
