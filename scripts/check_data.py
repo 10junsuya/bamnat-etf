@@ -35,17 +35,20 @@ def tickers():
 
 
 def check_analysis(where, a):
-    """발표 분석 블록: body(분석 글, 한국어 단락 1~4개) + items(매체 해석 한 줄, 5개까지)"""
+    """발표 분석 블록: lead(핵심 한 줄) + points(짧은 줄 3개까지) + items(매체 해석, 5개까지). 읽기 쉽게 짧게."""
     if not isinstance(a, dict):
-        err(where, "분석 블록은 {body, items, asof} 모양이어야 해요.")
+        err(where, "분석 블록은 {lead, points, items, asof} 모양이어야 해요.")
         return
-    body = a.get("body") or []
-    if not isinstance(body, list) or len(body) > 4:
-        err(where, "body(분석 글)는 단락 목록이고 4단락까지예요.")
-        body = []
-    for n, b in enumerate(body):
-        if not re.search(r"[가-힣]", str(b)) or len(str(b)) > 400:
-            err(f"{where}.body[{n}]", "분석 글은 한국어로, 단락마다 400자 이하로 써요.")
+    lead = str(a.get("lead", ""))
+    if not re.search(r"[가-힣]", lead) or len(lead) > 70:
+        err(where, "lead(핵심 한 줄)는 한국어 70자 이하로 꼭 써요.")
+    pts = a.get("points") or []
+    if not isinstance(pts, list) or len(pts) > 3:
+        err(where, "points 는 3줄까지예요.")
+        pts = []
+    for n, b in enumerate(pts):
+        if not re.search(r"[가-힣]", str(b)) or len(str(b)) > 80:
+            err(f"{where}.points[{n}]", "한 줄은 한국어 80자 이하로 짧게 써요.")
     if a.get("asof") and not DATE.match(str(a["asof"])):
         err(where, "asof 는 YYYY-MM-DD 로 써요.")
     items = a.get("items") or []
