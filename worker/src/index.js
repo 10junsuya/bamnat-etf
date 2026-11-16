@@ -143,7 +143,7 @@ async function kisGet(env, path, trId, params) {
       headers: { "content-type": "application/json; charset=utf-8", authorization: `Bearer ${t.token}`, appkey: env.KIS_APP_KEY, appsecret: env.KIS_APP_SECRET, tr_id: trId, custtype: "P" },
     });
     let j = null; try { j = await r.json(); } catch (_) {}
-    if (j && j.msg_cd === "EGW00201") { await sleep(1100); continue; }
+    if (j && j.msg_cd === "EGW00201") { await sleep(600 + tryN * 500); continue; }
     if (!r.ok || !j) return fail();
     if (j.rt_cd !== "0") return ERR("한국투자증권 응답 오류");
     return j;
