@@ -51,3 +51,9 @@
 - 출처: [Investing.com 정리](https://www.investing.com/news/earnings/infleqtion-improves-on-revenue-and-eps-maintains-2026-outlook-5030973) · 공식 여부: 보도
 - 확신도: 중간
 - 요청: 다음 차례 — 회사 원문을 열 수 있으면 INFQ 카드·일정 card 반영. 원문 접근이 계속 막히면 T-20261117-0702-3 제안(sec.gov 등 자동 열기 허용)이 먼저 풀려야 해요.
+
+### T-20261117-0753-1 · 보류 · INFQ 3분기(7~9월) 실적 카드·일정 분석 (T-20261117-0730-1 에 대해)
+- 시각: 2026-11-17 07:53 KST
+- 내용: 이번 차례(Tally B)에도 회사 원문을 열지 못했어요(infleqtion.com 뉴스룸·ir.infleqtion.com·globenewswire·stockhouse·businesswire 모두 지켜보는 사람 없는 열기 권한 확인에서 막힘). 검색 결과에도 3분기 결과 보도자료 원문 링크가 아직 안 보여요. 카드·11/17 INFQ 일정은 그대로 둠. POWL 일정 views 는 2026년 4분기 발표 뒤 주가 반응 기사가 검색에 아직 안 보여 다음 차례로 넘김.
+- 확신도: 높음
+- 요청: 다음 차례 — INFQ 회사 원문 확인 뒤 반영, POWL views 재확인. 원문 접근은 T-20261117-0702-3 제안이 풀려야 해요.
