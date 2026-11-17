@@ -1,18 +1,68 @@
 {
-"updated_kst": "2026-11-17 12:22",
-"rot": 108,
+"updated_kst": "2026-11-17 12:44",
+"rot": 168,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "30건",
+"Reuters": "32건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "f85bcc78a5d9",
+"t": "RKLB",
+"title": "Rocket Lab Hit 100 Launches Faster Than Any Other Commercially Developed Rocket. I'd Buy a Small Stake.",
+"url": "https://www.fool.com/investing/2026/11/16/rocket-lab-hit-100-launches-faster-than-any-other-commercially-developed-rocket-i-d-buy-a-small-stake/?.tsrc=rss",
+"pub": "2026-11-17T03:27:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "dd17098cccef",
+"t": "NVDA",
+"title": "BlueQubit Names Quantum Flywheel Awardees, Backed by IBM, AWS, and NVIDIA Accelerated Computing",
+"url": "https://finance.yahoo.com/technology/ai/articles/bluequbit-names-quantum-flywheel-awardees-032500624.html?.tsrc=rss",
+"pub": "2026-11-17T03:25:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "e971597f7e25",
+"t": "NVDA",
+"title": "Physical AI Leader Agile Robots Raises $500 Million Series F at $8.5 Billion Valuation to Accelerate Global Growth",
+"url": "https://finance.yahoo.com/technology/ai/articles/physical-ai-leader-agile-robots-032500785.html?.tsrc=rss",
+"pub": "2026-11-17T03:25:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "cf4402b69b56",
+"t": "TSLA",
+"title": "Cathie Wood’s $2.2 Billion Bet on Elon Musk Could Soon Become One Giant Stock",
+"url": "https://247wallst.com/investing/2026/11/16/cathie-woods-2-2-billion-bet-on-elon-musk-could-soon-become-one-giant-stock/?.tsrc=rss",
+"pub": "2026-11-17T03:23:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "dda982c90ad5",
+"t": "NVDA",
+"title": "MiTAC Computing Scales Agentic AI with Full-Stack Infrastructure at SC26",
+"url": "https://finance.yahoo.com/technology/ai/articles/mitac-computing-scales-agentic-ai-032200367.html?.tsrc=rss",
+"pub": "2026-11-17T03:22:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
+},
 {
 "id": "0583f3dc63b8",
 "t": "NVDA",
@@ -22,6 +72,46 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T03:22:56+00:00"
+},
+{
+"id": "992b8625700b",
+"t": "NVDA",
+"title": "Is NVIDIA’s Turmoil Advanced Micro Devices’ (AMD) Biggest Opening Yet?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-turmoil-advanced-micro-devices-031446562.html?.tsrc=rss",
+"pub": "2026-11-17T03:14:46+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "f4dfc976c6a5",
+"t": "UTHR",
+"title": "United Therapeutics Prepares for TYVASO Expansion After $833 Million Quarter",
+"url": "https://www.marketbeat.com/instant-alerts/event-united-therapeutics-prepares-for-tyvaso-expansion-after-833-million-quarter-2026-11-16/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-17T03:12:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "825b02b40a78",
+"t": "ASTS",
+"title": "What Is AST SpaceMobile (ASTS) Building With Its $1 Billion Japan Venture?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/ast-spacemobile-asts-building-1-031119939.html?.tsrc=rss",
+"pub": "2026-11-17T03:11:19+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "e466c7857ecf",
+"t": "TSM",
+"title": "Taiwan Semiconductor Manufacturing (NYSE:TSM) Hit A Revenue High, Is The Stock Fully Valued?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-manufacturing-nyse-tsm-030943458.html?.tsrc=rss",
+"pub": "2026-11-17T03:09:43+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:44:16+00:00"
 },
 {
 "id": "fd900f016895",
@@ -7924,94 +8014,64 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "3a15b09af3c8",
-"t": "RKLB",
-"title": "Rocket Lab Stock Could Be Headed for a Breakout. Here’s My 2027 Price Prediction",
-"url": "https://247wallst.com/investing/2026/11/16/rocket-lab-stock-could-be-headed-for-a-breakout-heres-my-2027-price-prediction/?.tsrc=rss",
-"pub": "2026-11-16T13:47:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "37413e8c9fa8",
+"t": "",
+"title": "Explosions heard in Kyiv, Ukraine: source witnesses say",
+"url": "https://www.financialjuice.com/News/9855006/Explosions-heard-in-Kyiv-Ukraine-source-witnesses-say.aspx?xy=rss",
+"pub": "2026-11-17T03:42:14+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T03:44:16+00:00"
 },
 {
-"id": "dcaf40bad43f",
-"t": "GOOGL",
-"title": "Buy 3 AI-Led Giants on Robust Fundamentals and Short-Term Price Upside",
-"url": "https://finance.yahoo.com/technology/ai/articles/buy-3-ai-led-giants-134600936.html?.tsrc=rss",
-"pub": "2026-11-16T13:46:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "a9d6c69e5808",
+"t": "",
+"title": "US officials confronted China over AI distillation at July talks, warning of possible intellectual property theft, sources say",
+"url": "https://www.financialjuice.com/News/9855005/US-officials-confronted-China-over-AI-distillation-at-July-talks-warning-of-possible-intellectual-property-theft-sources-say.aspx?xy=rss",
+"pub": "2026-11-17T03:38:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T03:44:16+00:00"
 },
 {
-"id": "6b2c8b2bd508",
-"t": "NVT",
-"title": "NVT vs. SMTC: Which AI Infrastructure Stock Is the Better Buy?",
-"url": "https://finance.yahoo.com/technology/ai/articles/nvt-vs-smtc-ai-infrastructure-134600438.html?.tsrc=rss",
-"pub": "2026-11-16T13:46:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "13f8fee86464",
+"t": "",
+"title": "China converts US AI model output into training data for local competitors as chip restrictions take effect, documents reveal",
+"url": "https://www.financialjuice.com/News/9855004/China-converts-US-AI-model-output-into-training-data-for-local-competitors-as-chip-restrictions-take-effect-documents-reveal.aspx?xy=rss",
+"pub": "2026-11-17T03:38:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T03:44:16+00:00"
 },
 {
-"id": "86cb3f2888c6",
-"t": "ORCL",
-"title": "Micheal Burry’s Massive Bets Against Palantir and Oracle Highlight Two Prominent AI Failure Modalities",
-"url": "https://247wallst.com/investing/2026/11/16/micheal-burrys-massive-bets-against-palantir-and-oracle-highlight-two-prominent-ai-failure-modalities/?.tsrc=rss",
-"pub": "2026-11-16T13:45:45+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "f484d0b58141",
+"t": "",
+"title": "China, Canada Expand Tariff Relief in Deepening Trade Thaw",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/china-canada-expand-tariff-relief-in-deepening-trade-thaw",
+"pub": "2026-11-17T03:37:43+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T03:44:16+00:00"
 },
 {
-"id": "36d5a6c8fb01",
-"t": "SPCX",
-"title": "Rocket Lab Investors Need January Neutron Tank Test Success to Move Toward $90, Not Congressional Alignment",
-"url": "https://247wallst.com/investing/2026/11/16/rocket-lab-investors-need-january-neutron-tank-test-success-to-move-toward-90-not-congressional-alignment/?.tsrc=rss",
-"pub": "2026-11-16T13:45:43+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "baec53000aba",
+"t": "",
+"title": "US Department of Commerce: Nvidia added Megaspeed to its no-sell list in June 2025",
+"url": "https://www.financialjuice.com/News/9855003/US-Department-of-Commerce-Nvidia-added-Megaspeed-to-its-no-sell-list-in-June-2025.aspx?xy=rss",
+"pub": "2026-11-17T03:37:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T03:44:16+00:00"
 },
 {
-"id": "284763701a1d",
-"t": "AVGO",
-"title": "Broadcom Management Says AI Chip Revenue to Double to $115 Billion in 2027, Giving Bulls Plenty to Cheer",
-"url": "https://247wallst.com/investing/2026/11/16/broadcom-management-says-ai-chip-revenue-to-double-to-115-billion-in-2027-giving-bulls-plenty-to-cheer/?.tsrc=rss",
-"pub": "2026-11-16T13:45:36+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "d9b1f7f5411b",
-"t": "QQQ",
-"title": "Stock Market Today: Tech Futures Sell Off; Nvidia Dives Amid Jensen Huang News (Live Coverage)",
-"url": "https://finance.yahoo.com/m/befe3344-5a22-304e-a07d-6ff7ad87bf49/stock-market-today%3A-tech.html?.tsrc=rss",
-"pub": "2026-11-16T13:45:19+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "a35052dbd2e1",
-"t": "MSFT",
-"title": "Blue Yonder Named a Finalist for Two 2026 Microsoft Partner of the Year Awards",
-"url": "https://finance.yahoo.com/technology/ai/articles/blue-yonder-named-finalist-two-134300367.html?.tsrc=rss",
-"pub": "2026-11-16T13:43:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "80bdd087a401",
-"t": "CW",
-"title": "Buy 4 Drone Technology Bigwigs to Enhance Your Portfolio Returns",
-"url": "https://finance.yahoo.com/markets/stocks/articles/buy-4-drone-technology-bigwigs-134300482.html?.tsrc=rss",
-"pub": "2026-11-16T13:43:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "2a3e9799bf81",
+"t": "",
+"title": "US Department of Commerce: Investigators sought Nvidia records on direct or indirect sales to Megaspeed in May 2025",
+"url": "https://www.financialjuice.com/News/9855002/US-Department-of-Commerce-Investigators-sought-Nvidia-records-on-direct-or-indirect-sales-to-Megaspeed-in-May-2025.aspx?xy=rss",
+"pub": "2026-11-17T03:36:39+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T03:44:16+00:00"
 },
 {
 "id": "13f5c9b2e30b",
@@ -10952,66 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "69ee614991e2",
-"t": "",
-"title": "Vance: Won't let Iran become even a 2 Year commitment - Fox News clip",
-"url": "https://www.financialjuice.com/News/9854393/Vance-Wont-let-Iran-become-even-a-2-Year-commitment---Fox-News-clip.aspx",
-"pub": "2026-11-16T19:26:53+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "18a19e80bb27",
-"t": "",
-"title": "Fed's Hammack: 2% inflation is still a reasonable goal for the Fed.",
-"url": "https://www.financialjuice.com/News/9854392/Feds-Hammack-2-inflation-is-still-a-reasonable-goal-for-the-Fed.aspx?xy=rss",
-"pub": "2026-11-16T19:23:56+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T19:25:18+00:00"
-},
-{
-"id": "53b1054c1f38",
-"t": "",
-"title": "Fed's Hammack: 2% inflation is still a reasonable goal for the Fed.",
-"url": "https://www.financialjuice.com/News/9854392/Feds-Hammack-2-inflation-is-still-a-reasonable-goal-for-the-Fed.aspx",
-"pub": "2026-11-16T19:23:56+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "02d35139f378",
-"t": "",
-"title": "Fed's Hammack: The economy can deal with more restriction. It's unclear how far Fed has to go.",
-"url": "https://www.financialjuice.com/News/9854391/Feds-Hammack-The-economy-can-deal-with-more-restriction-Its-unclear-how-far-Fed-has-to-go.aspx?xy=rss",
-"pub": "2026-11-16T19:23:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T19:25:18+00:00"
-},
-{
-"id": "91afd6f252a2",
-"t": "",
-"title": "Fed's Hammack: The economy can deal with more restriction. It's unclear how far Fed has to go.",
-"url": "https://www.financialjuice.com/News/9854391/Feds-Hammack-The-economy-can-deal-with-more-restriction-Its-unclear-how-far-Fed-has-to-go.aspx",
-"pub": "2026-11-16T19:23:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "236cf9564b5f",
-"t": "",
-"title": "Fed's Hammack: Would like to see us get to restrictive policy stance.",
-"url": "https://www.financialjuice.com/News/9854390/Feds-Hammack-Would-like-to-see-us-get-to-restrictive-policy-stance.aspx?xy=rss",
-"pub": "2026-11-16T19:23:26+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T19:25:18+00:00"
 }
 ]
 }
