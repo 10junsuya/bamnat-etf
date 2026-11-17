@@ -132,6 +132,10 @@ section.card{background:var(--surface); border:1px solid var(--line); border-rad
 .split div{background:var(--surface-2); border-radius:10px; padding:8px; font-size:13px}
 .split b{display:block; font-size:16px}
 .note{font-size:12px; color:var(--muted); margin-top:10px}
+.aftbox{margin:8px 0 4px; padding:8px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font-size:13px; display:grid; grid-template-columns:84px 1fr; gap:2px 8px}
+.aftbox .lab{font-size:11px; color:var(--muted); padding-top:2px}
+.aftbox .tiny{grid-column:2}
+.row .r2.aft{font-size:11px; margin-top:2px} .row .r2.aft.up{color:var(--up)} .row .r2.aft.down{color:var(--down)}
 .state-line{font-size:16px; font-weight:600}
 .callout{margin-top:10px; padding:10px 12px; border-radius:10px; background:var(--surface-2); font-size:13px}
 .kv{display:grid; grid-template-columns:1fr 1fr; gap:8px}
@@ -651,7 +655,7 @@ const store = {
 const FX = { base: 1330.3, now: 1336.3, baseTime: "11/12 15:30" };
 const FUT = { nq: NaN, es: NaN, sox: NaN, semi: NaN, div: NaN, tlt: NaN };
 const FUTM = { nq: NaN, es: NaN };
-const DAYM = {};  /* 미국 주식 주간거래(한국 낮) 움직임: 한국투자증권 키가 있을 때 실시간 서버 /usday */  /* 미국 장이 닫힌 뒤 지수 선물 움직임 (실시간 서버 /fut) */
+const DAYM = {};  const AFTM = {};  /* 애프터마켓 움직임: 오늘 기준가엔 안 넣고 화면에만 따로 보여줘요 (2026-11-17 대표 지시) */  /* 미국 주식 주간거래(한국 낮) 움직임: 한국투자증권 키가 있을 때 실시간 서버 /usday */  /* 미국 장이 닫힌 뒤 지수 선물 움직임 (실시간 서버 /fut) */
 /* 선물 반영: [어느 선물, 민감도] — 평소 이 분야가 지수보다 얼마나 크게 움직이는지 어림값 */
 const FBETA = {sp:["es",1], spcc:["es",0.95], div:["es",0.75], divcc:["es",0.7], ndx:["nq",1], ndxact:["nq",1], ndxcc:["nq",0.95], ndxotm:["nq",1],
   sox:["nq",1.6], semi:["nq",1.6], aisemi:["nq",1.7], tech:["nq",1.15], bigtech:["nq",1.2], space:["nq",1.5], spacetech:["nq",1.5], spaceisel:["nq",1.5],
@@ -929,6 +933,9 @@ function applyLive(){
     // 주간거래·프리마켓 (한국투자증권): 마지막 정규장 가격 대비 지금 가격 (정규장이 열려 있거나, 받은 지 10분이 넘었으면 안 써요)
     // 애프터마켓 가격은 기준가에 안 들어가서(기준가는 정규장 종가로 정해져요) 계산에 넣지 않아요
     for(const t of Object.keys(DAYM)) delete DAYM[t];
+    for(const t of Object.keys(AFTM)) delete AFTM[t];
+    if(usNow==="after") for(const [t,v] of Object.entries(kus)){ const base = (STOCKS[t]||[])[1];
+      if(v && v.s==="ext" && okn(v.p) && okn(base) && base>0 && fresh(v) && (!LV.quoteT || new Date(v.t) > new Date(LV.quoteT))) AFTM[t] = v.p/base - 1; }
     LV.extSess = "";
     if(!usOpen) for(const [t,v] of Object.entries(kus)){ const base = (STOCKS[t]||[])[1];
       if(v && (v.s==="day"||(v.s==="ext" && usNow==="pre")) && okn(v.p) && okn(base) && base>0 && fresh(v) && (!LV.quoteT || new Date(v.t) > new Date(LV.quoteT))){ DAYM[t] = v.p/base - 1; LV.kisN++; LV.extSess = v.s; } } }
@@ -1488,6 +1495,13 @@ function trustCard(e, c){
     <div class="tiny muted" style="margin-top:6px">시세 반영 비중 ${Math.round(c.coverage*100)}% · 기록 갱신 ${TRACK.updated_kst||""}</div>
   </section>`;
 }
+/* 장 마감 뒤 실적 발표(어제·오늘 새벽, 한국 시간)한 회사인가 */
+function earnAfter(t){
+  const td = ymd(parts(now(),"Asia/Seoul")), yd = isoAdd(td, -1);
+  return EVENTS.some(v=>v.type==="earn" && v.t===t && (v.d===td || v.d===yd) && /마감 후|새벽/.test(v.when||""));
+}
+/* 애프터마켓에서 눈에 띄는 움직임(±3% 이상 또는 장후 실적)만 */
+function aftNote(t){ const m = AFTM[t]; if(!okn(m)) return null; const earn = earnAfter(t); return (earn || Math.abs(m) >= 0.03) ? {m, earn} : null; }
 function holdingsCard(e, c){
   // 시세가 아직 없는 종목(새로 들어온 회사 등)도 목록에서 빼지 않고 '시세 확인 중'으로 보여줘요.
   // 계산은 비중형이면 받은 종목 평균으로, 지수형이면 같은 지수 미국 ETF 움직임으로 채워요(나머지 줄에 포함).
@@ -1509,7 +1523,7 @@ function holdingsCard(e, c){
         ? `<div class="r1 small muted">시세 확인 중</div><div class="r2 num">${e.kind==="pdf" && okn(x.c) ? `기여 약 ${pctp(x.c)}` : "나머지 줄에 포함"}</div>`
         : LV.extSess && !x.ext && !FLAG.stock.has(x.t)
         ? `<div class="r1 small muted">${extName()} 확인 중</div><div class="r2 num">받은 종목 평균으로 채움</div>`
-        : `<div class="r1 num ${cls(x.r)}">${spct(x.r)}</div><div class="r2 num">기여 ${pctp(x.c)}</div>`}</div>
+        : `<div class="r1 num ${cls(x.r)}">${spct(x.r)}</div><div class="r2 num">기여 ${pctp(x.c)}</div>${(an=>an?`<div class="r2 num aft ${cls(an.m)}">애프터 ${spct(an.m)}${an.earn?" · 실적":""}</div>`:"")(aftNote(x.t))}`}</div>
     </button>`;
   let extra = "", restExt = 0;
   if(e.rest){
@@ -1540,6 +1554,8 @@ function holdingsCard(e, c){
       <button type="button" data-sort="r" aria-pressed="${sortKey==="r"}">등락순</button>
     </div>
     ${rows.length?"":e.kind==="bond"?`<p class="small muted" style="margin:8px 2px">이 ETF는 회사 주식이 아니라 미국 장기 국채를 담아요. 같은 지수를 따르는 미국 ETF ${e.proxy} 움직임으로 계산해요.</p>`:`<p class="small muted" style="margin:8px 2px">이 ETF의 구성종목 비중은 아직 받아오지 못했어요. 지금 계산은 같은 지수를 따르는 미국 ETF ${e.proxy} 움직임으로 해요.</p>`}
+    ${(()=>{ const ns = c.rows.map(x=>({x, a:aftNote(x.t)})).filter(o=>o.a).sort((p,q)=>Math.abs(q.x.w*q.a.m)-Math.abs(p.x.w*p.a.m)).slice(0,3);
+      return ns.length ? `<div class="aftbox"><span class="lab">장후 움직임</span><span>${ns.map(o=>`${o.x.name} <b class="num ${cls(o.a.m)}">${spct(o.a.m)}</b>${o.a.earn?"(실적)":""}`).join(" · ")}</span><div class="tiny muted">애프터마켓 가격이에요. 오늘 기준가는 어젯밤 정규장 종가로 정해져서 여기엔 안 들어가고, 다음 기준가에 반영돼요.</div></div>` : ""; })()}
     ${shown.map(row).join("")}
     ${rows.length>5 ? `<button class="more" type="button" data-toggle-all>${showAll?"접기":`${rows.length}개 전체 보기`}</button>` : ""}
     <div style="margin-top:10px">${extra}</div>
