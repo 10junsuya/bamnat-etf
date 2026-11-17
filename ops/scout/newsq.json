@@ -1,18 +1,98 @@
 {
-"updated_kst": "2026-11-17 09:44",
-"rot": 162,
+"updated_kst": "2026-11-17 10:11",
+"rot": 44,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "실패 HTTPError",
+"Reuters": "28건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "6d233b9c627b",
+"t": "TSLA",
+"title": "Tesla board member Joe Gebbia: Nvidia should “reinstate” Jensen Huang to let investigation play out",
+"url": "https://finance.yahoo.com/video/tesla-board-member-joe-gebbia-010013441.html?.tsrc=rss",
+"pub": "2026-11-17T01:00:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "dab9d8af4872",
+"t": "TSAT",
+"title": "Telesat enters into standstill arrangement with GEO lenders allowing Telesat additional time to address upcoming maturities",
+"url": "https://finance.yahoo.com/markets/stocks/articles/telesat-enters-standstill-arrangement-geo-010000940.html?.tsrc=rss",
+"pub": "2026-11-17T01:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "45ef638c38ce",
+"t": "GOOGL",
+"title": "Warren Buffett's Successor, Greg Abel, Overhauled Berkshire's Portfolio for a 3rd Straight Quarter, Reducing 6 Stocks and Piling Into a Hot Tech IPO",
+"url": "https://www.fool.com/investing/2026/11/16/warren-buffett-successor-greg-abel-overhaul-berkshire-portfolio-3rd-straight-quarter-reduce-6-stocks-buy-hot-tech-ipo/?.tsrc=rss",
+"pub": "2026-11-17T00:53:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "0164158d5b98",
+"t": "MCHP",
+"title": "What Is Monolithic Power Systems No Longer Telling You?",
+"url": "https://www.trefis.com/stock/mpwr/articles/625197/what-is-monolithic-power-systems-no-longer-telling-you/2026-11-16?.tsrc=rss",
+"pub": "2026-11-17T00:46:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "1400bfc60875",
+"t": "TSM",
+"title": "Taiwan Semiconductor Booked a Record NT$587 Billion Month. The Stock Has Lost Nearly 10% in Three Days Anyway",
+"url": "https://247wallst.com/investing/2026/11/16/taiwan-semiconductor-booked-a-record-nt587-billion-month-the-stock-has-lost-nearly-10-in-three-days-anyway/?.tsrc=rss",
+"pub": "2026-11-17T00:41:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "414db5c73880",
+"t": "NBIS",
+"title": "Nebius Plans to Spend More Than $3 for Every $1 of Revenue Next Year. The Stock Has Lost 31% in Three Days",
+"url": "https://247wallst.com/investing/2026/11/16/nebius-plans-to-spend-more-than-3-for-every-1-of-revenue-next-year-the-stock-has-lost-31-in-three-days/?.tsrc=rss",
+"pub": "2026-11-17T00:40:44+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "123abcf4de2b",
+"t": "NVDA",
+"title": "Why iQIYI Stock Tanked Today",
+"url": "https://www.fool.com/investing/2026/11/16/why-iqiyi-stock-tanked-today/?.tsrc=rss",
+"pub": "2026-11-17T00:39:14+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "3036eafcd633",
+"t": "NVDA",
+"title": "Nvidia Directors Rule Out Huang’s Return as Company Prepares to Report Earnings",
+"url": "https://www.cryptoprowl.com/releases/nvidia-directors-rule-out-huangs-return-as-company-prepares-to-report-earnings-7937?.tsrc=rss",
+"pub": "2026-11-17T00:37:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
 {
 "id": "6ab0eb7f2bcf",
 "t": "NVDA",
@@ -22,6 +102,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T00:44:15+00:00"
+},
+{
+"id": "4ae38304146f",
+"t": "LLY",
+"title": "Stocks Carry Weekly Gains Into a Wall of Chart Resistance as Volatility Cools",
+"url": "https://finance.yahoo.com/markets/stocks/articles/stocks-carry-weekly-gains-wall-002300085.html?.tsrc=rss",
+"pub": "2026-11-17T00:23:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
 "id": "6fdb222bf5a8",
@@ -34,6 +124,16 @@
 "seen": "2026-11-17T00:44:15+00:00"
 },
 {
+"id": "8df97f481b07",
+"t": "NVDA",
+"title": "UiPath Stock And Other Software Picks Built For Higher AI Costs",
+"url": "https://finance.yahoo.com/technology/ai/articles/uipath-stock-other-software-picks-002100761.html?.tsrc=rss",
+"pub": "2026-11-17T00:21:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
 "id": "029ec4af4a06",
 "t": "AMZN",
 "title": "Boeing (BA) ULA Rocket Failure Halts Deployment Of 40 Broadband Satellites",
@@ -42,6 +142,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T00:44:15+00:00"
+},
+{
+"id": "703c4998599d",
+"t": "QCOM",
+"title": "What Is Qualcomm (QCOM) Gaining From Its Cockpit And SoOp Momentum?",
+"url": "https://finance.yahoo.com/technology/articles/qualcomm-qcom-gaining-cockpit-soop-001825325.html?.tsrc=rss",
+"pub": "2026-11-17T00:18:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
 "id": "83516c4311be",
@@ -314,6 +424,16 @@
 "seen": "2026-11-16T23:46:32+00:00"
 },
 {
+"id": "d7e48a4de391",
+"t": "SPCX",
+"title": "David Tepper’s Appaloosa Goes Big on SpaceX, While Slashing Alphabet Stake",
+"url": "https://finance.yahoo.com/m/f487537a-09c4-3b0f-beb6-14e5629c10ed/david-tepper%E2%80%99s-appaloosa-goes.html?.tsrc=rss",
+"pub": "2026-11-16T23:09:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
 "id": "5f7b7314513c",
 "t": "PEP",
 "title": "Celsius Holdings outlook lifted to positive by S&P as leverage falls to 1.7x",
@@ -422,6 +542,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T23:46:32+00:00"
+},
+{
+"id": "a874c14d4a89",
+"t": "AAPL",
+"title": "Here's What Berkshire Hathaway Bought and Sold in Q3",
+"url": "https://www.kiplinger.com/investing/stocks/stocks-berkshire-hathaway-bought-sold-q3-2026?.tsrc=rss",
+"pub": "2026-11-16T22:59:39+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
 "id": "c8ea0590f6ef",
@@ -7884,134 +8014,84 @@
 "seen": "2026-11-16T14:26:19+00:00"
 },
 {
-"id": "8892e4d01a55",
-"t": "HD",
-"title": "Implied Volatility Surging for Home Depot Stock Options",
-"url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-home-depot-125400244.html?.tsrc=rss",
-"pub": "2026-11-16T12:54:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "b5aeebcd6d04",
+"t": "",
+"title": "Meta tests direct messaging app in Turkiye and Thailand with integrated safeguards",
+"url": "https://www.financialjuice.com/News/9854792/Meta-tests-direct-messaging-app-in-Turkiye-and-Thailand-with-integrated-safeguards.aspx?xy=rss",
+"pub": "2026-11-17T01:04:01+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
-"id": "fe4a07b3e9e4",
-"t": "CLS",
-"title": "Flex Raises FY27 Outlook as AI Infrastructure Demand Fuels Growth",
-"url": "https://finance.yahoo.com/technology/ai/articles/flex-raises-fy27-outlook-ai-125400593.html?.tsrc=rss",
-"pub": "2026-11-16T12:54:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "f1810cb7de26",
+"t": "",
+"title": "Meta unveils Direct, a standalone messaging app by Instagram",
+"url": "https://www.financialjuice.com/News/9854791/Meta-unveils-Direct-a-standalone-messaging-app-by-Instagram.aspx?xy=rss",
+"pub": "2026-11-17T01:03:25+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
-"id": "a7b157b41706",
-"t": "ORCL",
-"title": "Salesforce vs. Oracle: Which AI Cloud Stock Is the Smarter Pick Now?",
-"url": "https://finance.yahoo.com/technology/ai/articles/salesforce-vs-oracle-ai-cloud-125300625.html?.tsrc=rss",
-"pub": "2026-11-16T12:53:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "67c40f156eb3",
+"t": "",
+"title": "Japan chief cabinet secretary Kihara: lodged strong protest with Russia, urged to prevent recurrence",
+"url": "https://www.financialjuice.com/News/9854790/Japan-chief-cabinet-secretary-Kihara-lodged-strong-protest-with-Russia-urged-to-prevent-recurrence.aspx?xy=rss",
+"pub": "2026-11-17T01:02:26+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
-"id": "52d7fb6dea14",
-"t": "INTC",
-"title": "Premarket movers: Nvidia, Intel fall; J&J gains",
-"url": "https://finance.yahoo.com/markets/stocks/articles/premarket-movers-nvidia-intel-fall-125216380.html?.tsrc=rss",
-"pub": "2026-11-16T12:52:16+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "484ce84a6771",
+"t": "",
+"title": "Japan chief cabinet secretary Kihara: two planes likely Russian breached Japanese airspace on Tuesday",
+"url": "https://www.financialjuice.com/News/9854777/Japan-chief-cabinet-secretary-Kihara-two-planes-likely-Russian-breached-Japanese-airspace-on-Tuesday.aspx?xy=rss",
+"pub": "2026-11-17T01:01:16+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
-"id": "6863a4ef5b95",
-"t": "VOO",
-"title": "Investing $500 Per Month in VOO Starting at Age 25 Could Build a Portfolio Worth Over $3 Million by Retirement",
-"url": "https://www.fool.com/investing/2026/11/16/invest-500-month-voo-starting-25-worth-3-million/?.tsrc=rss",
-"pub": "2026-11-16T12:50:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "b2b2b6f82481",
+"t": "",
+"title": "Taiwan overnight interbank rate starts at 0.805% vs previous session open",
+"url": "https://www.financialjuice.com/News/9854776/Taiwan-overnight-interbank-rate-starts-at-0805-vs-previous-session-open.aspx?xy=rss",
+"pub": "2026-11-17T01:00:58+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
-"id": "659087224499",
-"t": "JPM",
-"title": "2 Safe S&P 500 Financial Dividend Stocks Boomers Can Buy and Hold Forever",
-"url": "https://247wallst.com/investing/2026/11/16/2-safe-sp-500-financial-dividend-stocks-boomers-can-buy-and-hold-forever/?.tsrc=rss",
-"pub": "2026-11-16T12:49:51+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "966ec38e343c",
+"t": "",
+"title": "Nikkei Falls 0.9%, Dragged by Chip, Financial Stocks",
+"url": "https://www.wsj.com/finance/stocks/nikkei-falls-0-9-dragged-by-chip-financial-stocks-0445db62?mod=rss_markets_main",
+"pub": "2026-11-17T00:53:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
-"id": "1c499f672def",
-"t": "CVX",
-"title": "Shell Starts Mina West Gas Production to Boost Egypt's Supply",
-"url": "https://finance.yahoo.com/energy/articles/shell-starts-mina-west-gas-124800273.html?.tsrc=rss",
-"pub": "2026-11-16T12:48:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "ce72cee59128",
+"t": "",
+"title": "Gold Struggles to Recover as Dollar, Rates Weigh",
+"url": "https://www.wsj.com/finance/commodities-futures/gold-struggles-to-recover-as-dollar-rates-weigh-13856211?mod=rss_markets_main",
+"pub": "2026-11-17T00:47:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
-"id": "826cab294804",
-"t": "FTNT",
-"title": "Zscaler's AI Security Push: Can It Overcome Slower FY27 Growth?",
-"url": "https://finance.yahoo.com/technology/ai/articles/zscalers-ai-security-push-overcome-124800615.html?.tsrc=rss",
-"pub": "2026-11-16T12:48:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
-},
-{
-"id": "89e5e7d1b31a",
-"t": "VRT",
-"title": "Vertiv Just Raised Its Dividend 60%. Is the AI Power Play Becoming an Income Stock?",
-"url": "https://247wallst.com/investing/2026/11/16/vertiv-just-raised-its-dividend-60-is-the-ai-power-play-becoming-an-income-stock/?.tsrc=rss",
-"pub": "2026-11-16T12:47:43+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "77aacc61bbdc",
-"t": "SPCX",
-"title": "Nvidia and Anthropic Will Really Test the Stock Market. Only One Thing Is Certain.",
-"url": "https://finance.yahoo.com/m/0f3607ce-6aef-3837-bb1f-110209c2e287/nvidia-and-anthropic-will.html?.tsrc=rss",
-"pub": "2026-11-16T12:46:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "698944b5f0a3",
-"t": "COP",
-"title": "Sezzle and Kimball Electronics have been highlighted as Zacks Bull and Bear of the Day",
-"url": "https://finance.yahoo.com/markets/stocks/articles/sezzle-kimball-electronics-highlighted-zacks-124600895.html?.tsrc=rss",
-"pub": "2026-11-16T12:46:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "7af8b6a80d7e",
-"t": "LLY",
-"title": "Lilly adds to buyout streak with $1.5B purchase of startup Calytrix",
-"url": "https://www.biopharmadive.com/news/lilly-calytrix-bio-acquire-deal-myelofibrosis-essential-thrombocythemiaenial-/874719/?.tsrc=rss",
-"pub": "2026-11-16T12:44:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "33ea5a9c2721",
-"t": "VOO",
-"title": "If You Had Invested $10,000 in the Vanguard S&P 500 ETF (VOO) in 2016, Here's What You Would Have Today",
-"url": "https://www.fool.com/investing/2026/11/16/if-you-invested-10000-voo-2016-what-you-have-today/?.tsrc=rss",
-"pub": "2026-11-16T12:43:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "d78fcb218fc4",
+"t": "",
+"title": "Samuel Sekuritas Denies It Pumped Stock, Took Part in MSCI Trade",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/samuel-sekuritas-denies-it-pumped-stock-took-part-in-msci-trade",
+"pub": "2026-11-17T00:44:27+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
 "id": "0ddfe7c63c94",
@@ -8192,6 +8272,16 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-17T00:44:15+00:00"
+},
+{
+"id": "642ea59ea07a",
+"t": "",
+"title": "Tech Under Pressure Ahead of Anthropic IPO, Stock Selloff Continues",
+"url": "https://www.bloomberg.com/news/videos/2026-11-17/the-close-11-16-2026-video",
+"pub": "2026-11-17T00:17:38+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
 "id": "46a517a3bbac",
@@ -8462,6 +8552,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-17T00:02:13+00:00"
+},
+{
+"id": "cc218e05cdde",
+"t": "",
+"title": "Tonkens Agrar AG (GTK.SG) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9DamtvUkdtVFJfazc5VFF0akpMdWdpTW9XUUNwTElHRjlaX24tS3NRMk9obmNBclRLeWdfZUtlRjJiM3lYUktWRVBZM2ZDdDhidWx5bURLakh0cGhIRWotbm12d2pCT3ZnWGtB?oc=5",
+"pub": "2026-11-16T22:44:42+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
 "id": "2a857341d86b",
@@ -10074,6 +10174,16 @@
 "seen": "2026-11-16T17:31:31+00:00"
 },
 {
+"id": "30e287ee82f3",
+"t": "",
+"title": "European stocks ease as tech and miners drag - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMmtTMUtYTXIxeXB2T0RuYUpZMjBwTmpmWFVyY010TTVPbzE2akJxTEVYTjJzeTRoSlZpZDZSejM1MEhuWm0zSFQ5Mi1NX0tvVHRUX29VdHV0NkI3MUMwVUtxLTlKam1iQTZueGJ4eEZSY1c3S3diM3BSTGZoRjlGNm5kODVxS3BjcThWRjFIRzgtSzByTzFIVGV2V255RVpSZUlDbWZqZElPUQ?oc=5",
+"pub": "2026-11-16T17:28:46+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
+},
+{
 "id": "639c05697b76",
 "t": "",
 "title": "OpenAI's Altman, on AI backlash: The AI industry needs to take a very strong stance in favor of people having control of the future - Semafor Event.",
@@ -10422,6 +10532,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T16:20:07+00:00"
+},
+{
+"id": "e39fe2eeba09",
+"t": "",
+"title": "Vakrangee Limited (VAKR.NS) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1FUUEycFF0UG1YcklHZXpwQ0Vwcm5EME5MR2lnSTJOcy1kNldqM2k1dkY5eVMtRTQwSWtVU3A5ajdDYVVteWpPUW83OTRSVXFNSUVfMXRhem1LdmduU215S2FzMGpaa1FoV3ptNw?oc=5",
+"pub": "2026-11-16T16:09:11+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T01:11:08+00:00"
 },
 {
 "id": "7f28a7898ac3",
@@ -10892,126 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "9385353ff532",
-"t": "",
-"title": "Trump: Jensen Huang learned a big lesson",
-"url": "https://www.financialjuice.com/News/9853971/Trump-Jensen-Huang-learned-a-big-lesson.aspx?xy=rss",
-"pub": "2026-11-16T14:29:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "893cc48ad114",
-"t": "",
-"title": "Trump on Huang: I wouldn't mind if he were reinstated. $NVDA",
-"url": "https://www.financialjuice.com/News/9853970/Trump-on-Huang-I-wouldnt-mind-if-he-were-reinstated-NVDA.aspx?xy=rss",
-"pub": "2026-11-16T14:28:58+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "658d2a40f6f2",
-"t": "",
-"title": "Trump on meeting Xi and Putin in China: We may also meet with Kim Jong Un",
-"url": "https://www.financialjuice.com/News/9853969/Trump-on-meeting-Xi-and-Putin-in-China-We-may-also-meet-with-Kim-Jong-Un.aspx?xy=rss",
-"pub": "2026-11-16T14:27:41+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "530d4090d4cf",
-"t": "",
-"title": "Colapso de Ueno Bank pone en duda reputación de Paraguay entre inversionistas",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/colapso-de-ueno-bank-pone-en-duda-reputacion-de-paraguay-entre-inversionistas",
-"pub": "2026-11-16T14:21:57+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "912fdf5ac4fb",
-"t": "",
-"title": "Colombia’s Bond Borrowing Spree Defies Emerging-Market Slump",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/colombia-s-bond-borrowing-spree-defies-emerging-market-slump",
-"pub": "2026-11-16T14:15:55+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "ffb17b7de704",
-"t": "",
-"title": "Canada's PM Carney arrives in Shenzhen for APEC - Xinhua",
-"url": "https://www.financialjuice.com/News/9853956/Canadas-PM-Carney-arrives-in-Shenzhen-for-APEC---Xinhua.aspx?xy=rss",
-"pub": "2026-11-16T14:12:32+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "a60534832248",
-"t": "",
-"title": "NY Fed's Nordstrom: Foreign exchange markets resilient in uncertain global economy",
-"url": "https://www.financialjuice.com/News/9853955/NY-Feds-Nordstrom-Foreign-exchange-markets-resilient-in-uncertain-global-economy.aspx?xy=rss",
-"pub": "2026-11-16T14:09:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "9af25bc9a44a",
-"t": "",
-"title": "BNP Paribas on Sticky Inflation Risk",
-"url": "https://www.bloomberg.com/news/videos/2026-11-16/bnp-paribas-on-sticky-inflation-risk-video",
-"pub": "2026-11-16T14:07:34+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "100b3157cd0a",
-"t": "",
-"title": "Tesla plans to make Cybercab models at the Berlin site - Paper $TSLA",
-"url": "https://www.financialjuice.com/News/9853954/Tesla-plans-to-make-Cybercab-models-at-the-Berlin-site---Paper-TSLA.aspx?xy=rss",
-"pub": "2026-11-16T14:06:23+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "947d2dd44ecf",
-"t": "",
-"title": "Tesla on Germany's Grünheide plant: The planned factory expansion will create many new jobs across a range of sectors. Looking to recruit several hundred new staff. $TSLA",
-"url": "https://www.financialjuice.com/News/9853953/Tesla-on-Germanys-Gr%c3%bcnheide-plant-The-planned-factory-expansion-will-create-many-new-jobs-across-a-range-of-sectors-Looking-to-recruit-several-hundred-new-staff-TSLA.aspx?xy=rss",
-"pub": "2026-11-16T14:03:07+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "692984aa10ac",
-"t": "",
-"title": "Kremlin on Putin-Trump-Xi meeting: discussion is expected to have a major impact on the global situation.",
-"url": "https://www.financialjuice.com/News/9853951/Kremlin-on-Putin-Trump-Xi-meeting-discussion-is-expected-to-have-a-major-impact-on-the-global-situation.aspx?xy=rss",
-"pub": "2026-11-16T14:01:34+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "3d2eec05503c",
-"t": "",
-"title": "Kremlin on Putin-Trump-Xi meeting: we expect a joint communique to be issued, but even if there isn't one, each leader will present his own assessment of the talks",
-"url": "https://www.financialjuice.com/News/9853950/Kremlin-on-Putin-Trump-Xi-meeting-we-expect-a-joint-communique-to-be-issued-but-even-if-there-isnt-one-each-leader-will-present-his-own-assessment-of-the-talks.aspx?xy=rss",
-"pub": "2026-11-16T14:01:30+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
 }
 ]
 }
