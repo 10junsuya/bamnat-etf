@@ -90,3 +90,10 @@
 - 출처: [Yahoo Finance](https://finance.yahoo.com/markets/stocks/article/home-depot-taps-richard-mcphail-as-new-ceo-reports-q3-earnings-beat-111428412.html) · [TipRanks](https://www.tipranks.com/news/home-depot-stock-hd-falls-despite-q3-beat-amid-u-s-housing-pressure-names-new-ceo) · [CNBC](https://www.cnbc.com/2026/11/17/home-depot-hd-q3-earnings-2026.html) · 공식 여부: 보도
 - 확신도: 중간
 - 요청: 다음 차례 — 06:23 NVDA 실적 반영이 먼저. 여유 있으면 HD 주가 반응 줄을 정규장 마감 반응으로 바꾸고, INFQ views 도 아직 남아 있어요.
+
+### T-20261118-0623-1 · 반영 · NVDA FY27 3분기(8~10월) 실적 카드·일정 분석
+- 시각: 2026-11-18 06:26 KST
+- 내용: 카드 기간 FY27 2분기(5~7월) → FY27 3분기(8~10월, 10/25 마감). 회사 보도자료로 확인: 매출 1,158.44억 달러(+103%, 1년 전 570.06억 — 회사 표, 전 분기보다 +20%), 데이터센터 1,076억(+110%), 엣지 컴퓨팅 82억(+42%), 조정 총이익률 74.9%, 순이익 652.9억·주당 2.70달러, 조정 주당순이익 2.68달러, 다음 분기 매출 전망 1,300억 ±3%(1,261~1,339억, 한 주 더 포함, 중국 데이터센터 제외)·총이익률 71~72%. 발표 전 매출 예상 est 1,090억(FactSet, TheStreet 보도 — 다른 집계 1,088억~1,089.7억, note 에 범위), 다음 분기 예상 cons 1,249억(TipRanks, 집계처 미표시, asof 11/17). 11/18 NVDA 일정에 done·card 넣음(예상 비교 숫자 쌍 매출·EPS·다음 분기 전망). 앞서 있던 ifGood·ifBad 는 결과 카드로 바꾸며 빠졌어요. views 는 시간외 주가 반응 숫자를 확인하지 못해 다음 차례로(TipRanks 는 '시간외 상승'만, 퍼센트 없음 · CNBC·야후 라이브는 열리지 않음). 다음 발표일 공식 공지 없음 → 새 일정 안 넣음. 발표 2026-11-17 16:20 ET(한국 11/18 06:20), 반영 2026-11-18 06:26 KST.
+- 출처: [엔비디아 3분기 실적 발표 (GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html) · [TheStreet (FactSet 예상)](https://www.thestreet.com/latest-news/nvda-nvidia-corporation-q3-2027-earnings-stock-updates) · [TipRanks](https://www.tipranks.com/news/nvidia-stock-rises-after-earnings-smash-estimates) · 공식 여부: 공식(실적) / 보도(예상치)
+- 확신도: 높음 (실적 숫자) / 중간 (예상치는 공식 아님)
+- 요청: Tally B — NVDA 일정 card.views(시간외·다음 날 주가 반응, 반도체·나스닥·ETF 해석) 추가 바람. 임시 CEO(콜레트 크레스) 관련 사정은 회사 「최근 소식」 담당(Wren) 몫이라 카드엔 발표 속 직함만 적었어요.

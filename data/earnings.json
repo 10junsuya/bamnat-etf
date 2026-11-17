@@ -3421,66 +3421,62 @@
   }
  },
  "NVDA": {
-  "p": "FY27 2분기 · 2026년 5~7월",
-  "tag": "+106%",
+  "p": "FY27 3분기 · 2026년 8~10월",
+  "tag": "+103%",
   "rows": [
    [
     "매출",
-    "962.2억 달러 (+106%)"
+    "1,158.4억 달러 (+103%, 예상 약 1,090억)"
    ],
    [
     "데이터센터 매출",
-    "890억 달러 (+117%)"
+    "1,076억 달러 (+110%)"
    ],
    [
     "주당순이익(조정)",
-    "2.22달러 (예상 2.09달러)"
+    "2.68달러 (예상 2.48달러)"
    ],
    [
     "다음 분기 매출 전망",
-    "1,080억 달러 ±2% (중국 데이터센터 제외)"
-   ],
-   [
-    "2028 회계연도",
-    "매출 약 70% 성장 전망"
+    "1,300억 달러 ±3% (중국 데이터센터 제외)"
    ]
   ],
-  "note": "11월 17일(미국 시간)에 다음 실적을 발표해요. 발표 뒤 숫자가 바뀌어요.",
+  "note": "데이터센터(AI 칩) 매출이 전체의 약 93%를 차지하며 성장을 이끌었어요. 발표 전 매출 예상은 FactSet 기준 약 1,090억 달러(다른 집계 1,088억~1,089.7억)이고, 다음 분기 전망에는 한 주가 더 들어 있고 총이익률 전망(71~72%)은 이번 분기(74.9%)보다 낮아요.",
   "src": [
    [
-    "엔비디아 2분기 실적(Earnings Whispers)",
-    "https://www.earningswhispers.com/epsdetails/nvda"
+    "엔비디아 3분기 실적 발표 (GlobeNewswire)",
+    "https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html"
    ],
    [
-    "2분기 정리(Implicator)",
-    "https://www.implicator.ai/nvidia-70-percent-growth-forecast-margin-outlook/"
+    "발표 전 예상 (TheStreet, FactSet)",
+    "https://www.thestreet.com/latest-news/nvda-nvidia-corporation-q3-2027-earnings-stock-updates"
    ],
    [
-    "다음 발표일(엔비디아)",
-    "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
+    "다음 분기 예상 (TipRanks)",
+    "https://www.tipranks.com/news/nvidia-stock-rises-after-earnings-smash-estimates"
    ]
   ],
   "chart": {
    "cur": "usd",
+   "now": [
+    "8~10월",
+    115844
+   ],
+   "est": 109000,
+   "next": {
+    "label": "11~1월",
+    "guide": [
+     126100,
+     133900
+    ],
+    "cons": 124900,
+    "when": "2027년 2월 말 (예상)",
+    "asof": "11/17"
+   },
    "prev": [
     "1년 전",
-    46743
-   ],
-   "now": [
-    "5~7월",
-    96220
-   ],
-   "est": 91710,
-   "next": {
-    "label": "8~10월",
-    "guide": [
-     105840,
-     110160
-    ],
-    "cons": 103880,
-    "asof": "8/26",
-    "when": "2026년 11월 17일 (미국)"
-   }
+    57006
+   ]
   }
  },
  "AAPL": {
