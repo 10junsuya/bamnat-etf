@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-17 09:02",
-"rot": 42,
+"updated_kst": "2026-11-17 09:13",
+"rot": 102,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "34건",
+"Reuters": "실패 HTTPError",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "ba26ca4c2aca",
+"t": "BE",
+"title": "Fuel Cell Market Seen at $18 Billion by 2030 as Quarterly Results Diverge",
+"url": "https://finance.yahoo.com/news/fuel-cell-market-seen-18-000800746.html?.tsrc=rss",
+"pub": "2026-11-17T00:08:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
+},
+{
+"id": "41d072ba5e66",
+"t": "GOOGL",
+"title": "Brad Gerstner Says AI Is at Its ‘Google 2005’ Moment. Here’s Who He Thinks Wins",
+"url": "https://247wallst.com/investing/2026/11/16/brad-gerstner-says-ai-is-at-its-google-2005-moment-heres-who-he-thinks-wins/?.tsrc=rss",
+"pub": "2026-11-17T00:07:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
+},
+{
+"id": "2c4c599588df",
+"t": "NVDA",
+"title": "These 3 Dividend Stocks Have Crushed the Market This Year. Here’s Why They Are Still Buys",
+"url": "https://www.fool.com/investing/2026/11/16/these-3-dividend-stocks-have-crushed-the-market-this-year-here-s-why-they-are-still-buys/?.tsrc=rss",
+"pub": "2026-11-17T00:00:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
+},
+{
+"id": "a96fb5b12bbf",
+"t": "WMT",
+"title": "Kroger has a new plan to lower prices",
+"url": "https://www.thestreet.com/retail/kroger-has-a-new-plan-to-lower-prices?.tsrc=rss",
+"pub": "2026-11-17T00:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
+},
 {
 "id": "b6f9ab83d63f",
 "t": "NVDA",
@@ -94,6 +134,16 @@
 "seen": "2026-11-16T23:46:32+00:00"
 },
 {
+"id": "2cca424446dc",
+"t": "MO",
+"title": "AIR Global Shipment Recovery Drives Double-Digit Growth – Quarterly Update Report",
+"url": "https://finance.yahoo.com/markets/stocks/articles/air-global-shipment-recovery-drives-232033489.html?.tsrc=rss",
+"pub": "2026-11-16T23:20:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
+},
+{
 "id": "77ff9e182ae6",
 "t": "NVDA",
 "title": "3 Founder Led Stocks With Revenue Growth Over 32%",
@@ -144,6 +194,16 @@
 "seen": "2026-11-16T23:46:32+00:00"
 },
 {
+"id": "74d220481fb7",
+"t": "JPM",
+"title": "What to Know About the Banking Service Outages Impacting Thousands of Customers",
+"url": "https://time.com/article/2026/11/16/bank-outage-down-jpmorgan-chase-technical-issue/?.tsrc=rss",
+"pub": "2026-11-16T23:11:15+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
+},
+{
 "id": "6a1fce07272f",
 "t": "NVDA",
 "title": "Stock Market Today, Nov. 16: IREN Slides as Neocloud Weakness and Tech Sector Selling Put Pressure on Shares",
@@ -162,6 +222,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T23:46:32+00:00"
+},
+{
+"id": "5f7b7314513c",
+"t": "PEP",
+"title": "Celsius Holdings outlook lifted to positive by S&P as leverage falls to 1.7x",
+"url": "https://finance.yahoo.com/markets/stocks/articles/celsius-holdings-outlook-lifted-positive-230844964.html?.tsrc=rss",
+"pub": "2026-11-16T23:08:44+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
+},
+{
+"id": "a29683f915ca",
+"t": "CAT",
+"title": "What Has Changed In Caterpillar's Story?",
+"url": "https://www.trefis.com/stock/cat/articles/625206/what-has-changed-in-caterpillars-story/2026-11-16?.tsrc=rss",
+"pub": "2026-11-16T23:05:51+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
 },
 {
 "id": "41455e6da946",
@@ -2832,6 +2912,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T19:25:18+00:00"
+},
+{
+"id": "64e3e7548143",
+"t": "MU",
+"title": "Micron Stock: Why Strong Memory Prices May Count for Nothing",
+"url": "https://finance.yahoo.com/m/6b85e733-ffc0-3cbf-93ed-2c5633543e8e/micron-stock%3A-why-strong.html?.tsrc=rss",
+"pub": "2026-11-16T18:14:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:13:54+00:00"
 },
 {
 "id": "07ff1bd999ff",
@@ -7924,94 +8014,34 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "45d31d3fc468",
-"t": "AVGO",
-"title": "Musk: Nvidia’s Key Supply Deals Were “a Handshake With Jensen.” Now Google Is Begging for Capacity",
-"url": "https://www.tikr.com/blog/musk-nvidias-key-supply-deals-were-a-handshake-with-jensen-now-google-is-begging-for-capacity?ref=yahoofinance&tlnk=yf-261116-fmpgr6c4&.tsrc=rss",
-"pub": "2026-11-16T12:20:15+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "46a517a3bbac",
+"t": "",
+"title": "Nvidia corporation: Treasury secretary reportedly questions company’s revenue, stock falls again",
+"url": "https://www.financialjuice.com/News/9854724/Nvidia-corporation-Treasury-secretary-reportedly-questions-companys-revenue-stock-falls-again.aspx?xy=rss",
+"pub": "2026-11-17T00:11:09+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T00:13:54+00:00"
 },
 {
-"id": "6445294d9369",
-"t": "SPCX",
-"title": "The one thing that may have doomed Jensen Huang",
-"url": "https://www.axios.com/2026/11/16/nvidia-dual-class-stock#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss",
-"pub": "2026-11-16T12:20:06+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "21b6674d9494",
+"t": "",
+"title": "China’s Buyback Push Struggles to Put a Floor Under Stocks",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/china-s-buyback-push-struggles-to-put-a-floor-under-stocks",
+"pub": "2026-11-17T00:00:50+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T00:13:54+00:00"
 },
 {
-"id": "aae24a425c13",
-"t": "SPCX",
-"title": "SpaceX’s Latest Rocket Triumph Isn’t Enough to Lift the Stock",
-"url": "https://finance.yahoo.com/m/bc9db056-cd9a-35d3-ba49-f0e0f1e7148f/spacex%E2%80%99s-latest-rocket.html?.tsrc=rss",
-"pub": "2026-11-16T12:20:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "bb3ad01fb5a3",
-"t": "NBIS",
-"title": "Nebius Stock Falls 10% After Q3 Earnings: Should You Buy Now?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/nebius-stock-falls-10-q3-121900626.html?.tsrc=rss",
-"pub": "2026-11-16T12:19:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "97bb5ab978b7",
-"t": "TSM",
-"title": "Jim Cramer Says Lam Research Has Come Down Enough. It’s ‘Absolutely My Favorite’",
-"url": "https://247wallst.com/investing/2026/11/16/jim-cramer-says-lam-research-has-come-down-enough-its-absolutely-my-favorite/?.tsrc=rss",
-"pub": "2026-11-16T12:17:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "2fc6c5f33dfb",
-"t": "SNDK",
-"title": "SanDisk Has 85% Margins, a Stock Split, and Continually Surging Data Center Revenue: Bullishness is Extremely Reasonable",
-"url": "https://247wallst.com/investing/2026/11/16/sandisk-has-85-margins-a-stock-split-and-continually-surging-data-center-revenue-bullishness-is-extremely-reasonable/?.tsrc=rss",
-"pub": "2026-11-16T12:15:51+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
-},
-{
-"id": "dd2d96777233",
-"t": "MSFT",
-"title": "IREN Limited Plummets 67% in 6 Months: Two Wall Street Firms Now Expect Returns Above 400%",
-"url": "https://247wallst.com/investing/2026/11/16/iren-limited-plummets-67-in-6-months-two-wall-street-firms-now-expect-returns-above-400/?.tsrc=rss",
-"pub": "2026-11-16T12:15:27+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "87145abc5848",
-"t": "NBIS",
-"title": "CoreWeave Shed 50% Of Its Value Over 3 Months: One Noted Analyst Predicts Prices Triple, Several Others Close Behind",
-"url": "https://247wallst.com/investing/2026/11/16/coreweave-shed-50-of-its-value-over-3-months-one-noted-analyst-predicts-prices-triple-several-others-close-behind/?.tsrc=rss",
-"pub": "2026-11-16T12:15:10+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "9d6b666d5688",
-"t": "MSFT",
-"title": "‘Many jobs will disappear forever’: Bill Gates warns AI could wipe out careers within a decade. Protect your paycheck",
-"url": "https://finance.yahoo.com/technology/ai/articles/many-jobs-disappear-forever-bill-121500123.html?.tsrc=rss",
-"pub": "2026-11-16T12:15:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "bf222bfd7063",
+"t": "",
+"title": "Former BOJ Chief Kuroda Sees Chance of Rate Rising Above Neutral",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/former-boj-chief-kuroda-sees-chance-of-rate-rising-above-neutral",
+"pub": "2026-11-17T00:00:01+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T00:13:54+00:00"
 },
 {
 "id": "a2c0188d3bd0",
@@ -10979,36 +11009,6 @@
 "title": "Iran’s Foreign Minister Araghchi: We have complete trust in Pakistan - Iran's Sepah news",
 "url": "https://www.financialjuice.com/News/9853898/Irans-Foreign-Minister-Araghchi-We-have-complete-trust-in-Pakistan---Irans-Sepah-news.aspx?xy=rss",
 "pub": "2026-11-16T13:36:13+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "05354e72fa1c",
-"t": "",
-"title": "BoC Core CPI MoM Actual 0.4% (Forecast -, Previous 0.0%)",
-"url": "https://www.financialjuice.com/News/9853880/BoC-Core-CPI-MoM-Actual-04-Forecast---Previous-00.aspx?xy=rss",
-"pub": "2026-11-16T13:32:13+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "afd9282b45bf",
-"t": "",
-"title": "Canadian CPI Common Actual 2.5% (Forecast -, Previous 2.4%)",
-"url": "https://www.financialjuice.com/News/9853879/Canadian-CPI-Common-Actual-25-Forecast---Previous-24.aspx?xy=rss",
-"pub": "2026-11-16T13:32:13+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "4f189ca0862d",
-"t": "",
-"title": "BoC Core CPI YoY Actual 2.0% (Forecast -, Previous 2.2%)",
-"url": "https://www.financialjuice.com/News/9853878/BoC-Core-CPI-YoY-Actual-20-Forecast---Previous-22.aspx?xy=rss",
-"pub": "2026-11-16T13:32:12+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T14:26:19+00:00"
