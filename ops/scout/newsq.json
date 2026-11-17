@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-18 07:36",
-"rot": 29,
+"updated_kst": "2026-11-18 07:44",
+"rot": 89,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "34건",
+"Reuters": "35건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "a92cc4b7b458",
+"t": "NVDA",
+"title": "Nvidia Board Shuts Down Jensen Huang Comeback, Launches Search for New CEO",
+"url": "https://decrypt.co/383513/nvidia-board-shuts-down-jensen-huang-comeback?.tsrc=rss",
+"pub": "2026-11-17T22:39:53+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
+},
+{
+"id": "9e54f42ed43b",
+"t": "NVDA",
+"title": "Nvidia interim-CEO Colette Kress speaks on quarterly revenue hitting $116B",
+"url": "https://finance.yahoo.com/video/nvidia-interim-ceo-colette-kress-speaks-on-quarterly-revenue-hitting-116b-224125904.html?.tsrc=rss",
+"pub": "2026-11-17T22:38:46+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
+},
 {
 "id": "6e6a82dd506a",
 "t": "MSFT",
@@ -72,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T22:36:35+00:00"
+},
+{
+"id": "45bdbcb8ae13",
+"t": "NVDA",
+"title": "Every Gigawatt of GE Vernova's HA Turbines Is Expected to Generate $500 Million in Services. Here's Why That Outlasts the Boom.",
+"url": "https://www.fool.com/investing/2026/11/17/every-gigawatt-of-ge-vernovas-ha-turbines-is-expec/?.tsrc=rss",
+"pub": "2026-11-17T22:25:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
 },
 {
 "id": "182349bee019",
@@ -142,6 +172,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T22:36:35+00:00"
+},
+{
+"id": "0bbada879e52",
+"t": "NVDA",
+"title": "Nvidia posts strong earnings amid Jensen Huang exit, reported SEC probe",
+"url": "https://www.axios.com/2026/11/17/nvidia-earnings-jensen-huang-colette-kress#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss",
+"pub": "2026-11-17T22:17:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
 },
 {
 "id": "94235a08022a",
@@ -224,6 +264,16 @@
 "seen": "2026-11-17T22:14:07+00:00"
 },
 {
+"id": "53a7846c5820",
+"t": "SKHY",
+"title": "What Is SK hynix (NasdaqGS:SKHY) Really Aiming For With Its $1 Billion Chip Push?",
+"url": "https://finance.yahoo.com/technology/articles/sk-hynix-nasdaqgs-skhy-really-220914267.html?.tsrc=rss",
+"pub": "2026-11-17T22:09:14+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
+},
+{
 "id": "038346542fc2",
 "t": "AVGO",
 "title": "Dow Jones Futures Waver, Nvidia Earnings Beat After Market Breaks Lower; Target, Anthropic IPO Ahead",
@@ -232,6 +282,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T22:14:07+00:00"
+},
+{
+"id": "b38383189cc8",
+"t": "NEE",
+"title": "Virginia regulators start Dominion-NextEra merger hearing",
+"url": "https://www.pilotonline.com/2026/11/17/dominon-next-era-merger-scc-hearing-starts/?.tsrc=rss",
+"pub": "2026-11-17T22:08:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
+},
+{
+"id": "5d2855a1ae8a",
+"t": "HD",
+"title": "Jim Cramer Says Home Depot Beat but Gave a ‘Tepid’ Forecast. Why He Calls It a Rate Stock",
+"url": "https://247wallst.com/investing/2026/11/17/jim-cramer-says-home-depot-beat-but-gave-a-tepid-forecast-why-he-calls-it-a-rate-stock/?.tsrc=rss",
+"pub": "2026-11-17T22:07:36+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
 },
 {
 "id": "0e057aefe055",
@@ -272,6 +342,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T22:14:07+00:00"
+},
+{
+"id": "8142de7d221d",
+"t": "PEP",
+"title": "KFC drops Pepsi in the U.S., but not everywhere",
+"url": "https://www.thestreet.com/restaurants/kfc-pepsi-partnership-us-international?.tsrc=rss",
+"pub": "2026-11-17T22:03:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
+},
+{
+"id": "9cdd2fb7fae0",
+"t": "AAOI",
+"title": "Applied Optoelectronics falls 8% on $550 million stock offering plan",
+"url": "https://finance.yahoo.com/markets/stocks/articles/applied-optoelectronics-falls-8-550-220235084.html?.tsrc=rss",
+"pub": "2026-11-17T22:02:35+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
 },
 {
 "id": "6d29974caf6d",
@@ -462,6 +552,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T22:14:07+00:00"
+},
+{
+"id": "4a3df8cd2f65",
+"t": "LLY",
+"title": "Eli Lilly vs. Novo Nordisk: Which GLP-1 Stock Is a Better Buy for 2027?",
+"url": "https://www.fool.com/coverage/better-buy/2026/11/17/eli-lilly-vs-novo-nordisk-which-glp-1-stock-is-a-better-buy-for-2027/?.tsrc=rss",
+"pub": "2026-11-17T21:37:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
 },
 {
 "id": "ead694558817",
@@ -992,6 +1092,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T21:14:31+00:00"
+},
+{
+"id": "de483ffa1607",
+"t": "HD",
+"title": "Home Depot CFO jumps to CEO seat as housing market sags",
+"url": "https://www.cfodive.com/news/home-depot-cfo-jumps-ceo-seat-as-housing-market-flatlines/874972/?.tsrc=rss",
+"pub": "2026-11-17T20:45:18+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T22:44:09+00:00"
 },
 {
 "id": "3213630fc9ce",
@@ -7904,116 +8014,6 @@
 "seen": "2026-11-17T16:15:53+00:00"
 },
 {
-"id": "3ed24b3ae7c2",
-"t": "AMZN",
-"title": "Robotaxi Launch Might Change The Case For Investing In Uber Stock (UBER)",
-"url": "https://finance.yahoo.com/markets/stocks/articles/robotaxi-launch-might-change-case-141149645.html?.tsrc=rss",
-"pub": "2026-11-17T14:11:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:31:23+00:00"
-},
-{
-"id": "512b23ca3440",
-"t": "WDC",
-"title": "Western Digital (WDC) Just Replaced Its Loan With A $1.5 Billion Credit Line",
-"url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-wdc-just-replaced-141106157.html?.tsrc=rss",
-"pub": "2026-11-17T14:11:06+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:31:23+00:00"
-},
-{
-"id": "1cd2ab2b5c8f",
-"t": "GS",
-"title": "Goldman Sachs Doubles Bitcoin ETF Holdings",
-"url": "https://www.cryptoprowl.com/releases/goldman-sachs-doubles-bitcoin-etf-holdings-7949?.tsrc=rss",
-"pub": "2026-11-17T14:11:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
-},
-{
-"id": "819c4dd9768b",
-"t": "BABA",
-"title": "Nvidia Launches Committe on Export Controls Amid Scrutiny",
-"url": "https://finance.yahoo.com/m/9498d06d-449d-3830-9bb4-905bf68ecbc7/nvidia-launches-committe-on.html?.tsrc=rss",
-"pub": "2026-11-17T14:10:15+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
-},
-{
-"id": "f3dcc003c11f",
-"t": "CCJ",
-"title": "Will Energy Fuels' Contract Portfolio Support Higher Uranium Sales?",
-"url": "https://finance.yahoo.com/energy/articles/energy-fuels-contract-portfolio-support-141000113.html?.tsrc=rss",
-"pub": "2026-11-17T14:10:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:28:48+00:00"
-},
-{
-"id": "71e931be7bdc",
-"t": "GOOGL",
-"title": "Latin America Data Center Construction Market Outlook and Growth Forecast 2026-2031 | AI Demand and Renewable Energy Unlock 14.92% CAGR and Investment Opportunities",
-"url": "https://finance.yahoo.com/technology/articles/latin-america-data-center-construction-140900468.html?.tsrc=rss",
-"pub": "2026-11-17T14:09:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:31:23+00:00"
-},
-{
-"id": "9b471030c694",
-"t": "MSFT",
-"title": "JPMorgan, Microsoft, United, FAA service outages: What exactly is going on?",
-"url": "https://finance.yahoo.com/video/jpmorgan-microsoft-united-faa-service-outages-what-exactly-is-going-on-140732645.html?.tsrc=rss",
-"pub": "2026-11-17T14:07:32+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:17:53+00:00"
-},
-{
-"id": "a9ca4b5eb86c",
-"t": "NFLX",
-"title": "5 beaten-down U.S. large caps with fair value upside above 25%",
-"url": "https://finance.yahoo.com/markets/stocks/articles/5-beaten-down-u-large-140725570.html?.tsrc=rss",
-"pub": "2026-11-17T14:07:25+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:17:53+00:00"
-},
-{
-"id": "bb46f764138f",
-"t": "NVDA",
-"title": "GM Just Switched Stock Exchanges. Here’s Why That Matters for Investors",
-"url": "https://www.fool.com/investing/2026/11/17/gm-just-switched-stock-exchanges-here-s-why-that-matters-for-investors/?.tsrc=rss",
-"pub": "2026-11-17T14:07:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:31:23+00:00"
-},
-{
-"id": "ad7ec8e77890",
-"t": "AVGO",
-"title": "MRVL vs. AVGO: Which AI Semiconductor Stock Has an Edge Right Now?",
-"url": "https://finance.yahoo.com/technology/ai/articles/mrvl-vs-avgo-ai-semiconductor-140700576.html?.tsrc=rss",
-"pub": "2026-11-17T14:07:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:28:48+00:00"
-},
-{
-"id": "f401423c125d",
-"t": "LMT",
-"title": "Can S-92A+ Selection Strengthen Lockheed Martin's Growth?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/92a-selection-strengthen-lockheed-martins-140700227.html?.tsrc=rss",
-"pub": "2026-11-17T14:07:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:28:48+00:00"
-},
-{
 "id": "2d5188a90e19",
 "t": "",
 "title": "Putin Arrives in China for Trump, Xi Meeting",
@@ -9042,6 +9042,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T20:15:22+00:00"
+},
+{
+"id": "dbcf16cb6a19",
+"t": "",
+"title": "Stocks Dip Ahead of Nvidia Earnings",
+"url": "https://www.wsj.com/finance/stocks/nasdaq-futures-slip-as-investors-look-to-nvidia-earnings-1007fe69?mod=rss_markets_main",
+"pub": "2026-11-17T19:27:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-17T22:44:09+00:00"
 },
 {
 "id": "b087fea2d904",
@@ -11002,16 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "70a60c65497c",
-"t": "",
-"title": "Lucky Strike CEO Makes Take-Private Offer as Loan Hits Distress",
-"url": "https://www.bloomberg.com/news/articles/2026-11-17/lucky-strike-ceo-makes-take-private-offer-as-loan-hits-distress",
-"pub": "2026-11-17T15:13:07+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-17T15:28:48+00:00"
 }
 ]
 }
