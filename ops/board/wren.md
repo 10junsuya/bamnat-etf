@@ -992,3 +992,25 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261118-0713-4 · 알림 · 이번 차례
 - 시각: 2026-11-18 07:30 KST
 - 내용: Scout를 직접 돌린 뒤(07:14 KST 갱신) 새 항목 43건을 봤어요. 엔비디아 3분기 실적 기사들은 Tally 몫이라 넣지 않았어요. 건너뜀: 애플페이 장애로 코인 즉시 구매 막힘(작은 일), JP모건의 메타 AI 에이전트 차단(의견 글 제목), 컨퍼런스 참가, 실적 통화 요약(다른 회사), 종목 추천·비교·시장 요약, API 원유 재고. **쿠웨이트 폭발음·미군 기지 공습 경보(FinancialJuice, 이란 매체 인용, 21:49~21:53 UTC)** 는 믿을 만한 언론 확인을 못 해 done 에 넣지 않았어요 — 07:43 차례(07시대)가 AP·로이터 등에서 확인되면 market 에 넣어 주세요(검색엔 6월 공격 기사가 섞여 나와요, 날짜 주의). 오늘 미국 지표는 소매판매뿐이고 분석은 이미 있어 매크로 수집·분석은 하지 않았어요.
+
+### W-20261118-0743-1 · 반영 · 엔비디아(NVDA) 킨서스·SPIL 등 협력사와 기판·패키징 생산능력 확대
+- 시각: 2026-11-18 08:05 KST
+- 내용: 엔비디아 보도자료(GlobeNewswire, 11-17 17:18 ET · 한국 11-18 07:18)로 확인했어요. 킨서스와 엔비디아 전용 ABF 기판 생산능력을 3.5배 넘게 늘리는 새 계약(2027 하반기 생산 시작), SPIL과 엔비디아가 수십억 달러를 대는 여러 해 패키징 계약(2029 중반까지), 삼성전기 공급 계약 변경, 폭스콘 협력 확대를 밝혔어요. 실적 숫자·베라 루빈 출하는 Tally 몫이라 넣지 않았어요.
+- 출처: [엔비디아 보도자료(GlobeNewswire 전재)](https://www.manilatimes.net/2026/11/18/tmt-newswire/globenewswire/nvidia-expands-commitments-with-supply-chain-partners-to-support-ai-infrastructure-buildout/2472606) · [StockTitan](https://www.stocktitan.net/news/NVDA/nvidia-expands-commitments-with-supply-chain-partners-to-support-ai-s6tq7i78uj5s.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261118-0743-2 · 반영 · 엔비디아(NVDA) 의장 "젠슨 황 CEO 복귀시킬 뜻 없다" (갱신)
+- 시각: 2026-11-18 08:05 KST
+- 내용: 하비 존스 의장이 실적 발표 통화에서 이사회가 젠슨 황을 CEO로 복귀시킬 뜻이 없다고 말했어요(TechCrunch 11-17 22:42 UTC). 11-17 CNBC '복귀 검토 안 함' 보도 항목을 이 내용으로 갱신해 맨 앞으로 옮겼어요(CNBC 출처 유지). 통화 원문 링크가 없어 '보도'로 두었어요.
+- 출처: [TechCrunch](https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo/) · [KPBS(NPR)](https://www.kpbs.org/news/science-technology/2026/11/17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo) · 공식 여부: 보도
+- 확신도: 높음 · 다음 차례가 통화 녹취·회사 발표문을 찾으면 '공식'으로 바꿔 주세요
+
+### W-20261118-0743-3 · 반영 · 시장: 푸틴 중국 도착, 트럼프·시진핑과 3자 회담 예정
+- 시각: 2026-11-18 08:05 KST
+- 내용: APEC을 앞두고 푸틴이 중국 선전에 도착했고, 크렘린은 3자 회담 의제가 정해졌다고 밝혔어요. CNN·Bloomberg·Kyiv Post가 같은 내용이에요.
+- 출처: [CNN](https://www.cnn.com/2026/11/17/politics/live-news/trump-visit-china-philippines) · [Bloomberg](https://www.bloomberg.com/news/videos/2026-11-17/putin-arrives-in-china-for-trump-xi-meeting-video) · [Kyiv Post](https://www.kyivpost.com/post/90410) · 공식 여부: 보도
+- 확신도: 높음
+
+### W-20261118-0743-4 · 알림 · 이번 차례
+- 시각: 2026-11-18 08:05 KST
+- 내용: Scout를 직접 돌린 뒤(07:4x KST 갱신) 새 항목 46건을 처리했어요. 엔비디아 3분기 실적·전망·베라 루빈 출하 기사는 Tally 몫이라 넣지 않았어요. 건너뜀: 인텔 주주 소송(11-16 BBC 반영과 같은 일), KFC 펩시→코카콜라 전환(10월 소식), 어플라이드 옵토일렉트로닉스 5.5억 달러 주식 발행(자금 조달), 홈디포 새 CEO(이미 반영), 13F·종목 비교·추천·실적 해설 글, 오픈AI 새 제품(앱 종목 아님). **쿠웨이트 폭발음·공습 경보(07:13 차례 요청)**: 검색으로 AP·로이터 등 믿을 만한 확인을 못 찾았고(검색엔 3·6월 공격 기사만, 11-17 건은 Newsquawk 제목뿐) done 에 넣었어요. **도미니언-넥스트에라(NEE) 합병 버지니아 규제 청문회 시작**은 날짜 확인을 못 해 done 에 넣지 않았어요 — 다음 차례가 확인해 주세요(WTVR·Virginia Mercury 검색됨). 오늘 미국 지표는 소매판매뿐이고 분석은 이미 있어 매크로 수집·분석은 하지 않았어요.
