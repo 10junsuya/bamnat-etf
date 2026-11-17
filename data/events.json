@@ -187,6 +187,124 @@
     }
   },
   {
+    "d": "2026-11-16",
+    "t": "AMZN",
+    "type": "launch",
+    "title": "아마존 레오 위성 40기 · ULA 벌컨 발사",
+    "when": "02:40 · 미국 플로리다 케이프커내버럴 41번 발사장 (현지 11/15 낮 12:40)",
+    "what": "아마존이 스타링크와 경쟁하려고 만드는 위성 인터넷 '아마존 레오'의 위성 40기를 ULA의 대형 로켓 벌컨에 처음 실어 보내는 발사예요.",
+    "watch": [
+      "위성이 목표 궤도에 들어가는지",
+      "실패하면 원인과 벌컨 다음 비행 시기",
+      "아마존 레오 서비스 시작 일정에 영향이 있는지"
+    ],
+    "done": true,
+    "card": {
+      "real": true,
+      "asof": "2026-11-17",
+      "sum": "ULA 벌컨 로켓이 비행 10분쯤 이상(anomaly)을 일으켜, 실려 있던 아마존 레오 위성 40기를 모두 잃었어요. 아마존은 '첫 임무에는 늘 위험이 있다'며 ULA가 원인을 찾아 벌컨을 이어 갈 것으로 본다고 밝혔어요.",
+      "tiles": [
+        [
+          "발사체",
+          "ULA 벌컨",
+          "보잉·록히드마틴 합작사 · 레오 첫 벌컨 발사"
+        ],
+        [
+          "실은 것",
+          "레오 위성 40기",
+          "임무 이름 LV-01"
+        ],
+        [
+          "결과",
+          "실패",
+          "비행 10분쯤 이상 · 위성 모두 잃음"
+        ],
+        [
+          "다음 레오 발사",
+          "11/23 이후",
+          "아리안6 · 위성 36기 (아마존 발표)"
+        ]
+      ],
+      "check": [
+        [
+          "원인",
+          "ULA는 이상이 있었다는 사실만 밝히고, 자세한 내용은 확인되는 대로 알리겠다고 했어요. 원인은 아직 공개되지 않았어요."
+        ],
+        [
+          "아마존 계획",
+          "아마존은 11월 23일 이후 아리안6로 위성 36기를 쏘는 다음 발사를 그대로 안내하고 있어요."
+        ],
+        [
+          "다음 볼 것",
+          "벌컨이 언제 다시 날 수 있는지와, 연내 첫 서비스 일정이 밀리는지예요. 서비스 일정 영향은 아직 불분명하다고 보도됐어요."
+        ]
+      ],
+      "detail": [
+        "아마존 레오는 저궤도 위성 수천 기로 집과 기업에 인터넷을 주려는 사업이에요. 지금까지 약 400기를 올렸다고 아마존은 밝혀 왔고, 위성을 빨리 올리려면 여러 로켓 회사의 발사가 필요해요.",
+        "아마존은 벌컨을 레오용으로 많이 예약해 뒀어요. 그래서 이번 실패는 위성 40기 손실보다, 벌컨이 쉬는 동안 위성을 올릴 로켓이 줄어드는 점이 더 크게 거론돼요."
+      ],
+      "src": [
+        [
+          "아마존 레오 임무 소식 (아마존 공식, 11/15 실패 안내)",
+          "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates"
+        ],
+        [
+          "아마존 레오 벌컨 발사 안내 (아마존 공식)",
+          "https://www.aboutamazon.com/news/amazon-leo/amazon-leo-vulcan-satellites-launch"
+        ],
+        [
+          "Fierce Network 보도 (ULA 발표 인용)",
+          "https://www.fierce-network.com/broadband/amazon-leo-loses-40-satellites-vulcan-explosion"
+        ],
+        [
+          "Spaceflight Now 보도",
+          "https://spaceflightnow.com/2026/11/15/ula-suffers-first-total-mission-failure-with-loss-of-vulcan-rocket-carrying-40-amazon-leo-satellites/"
+        ]
+      ],
+      "views": {
+        "asof": "2026-11-17",
+        "lead": "위성 40기를 잃은 것보다, 아마존 레오의 발사 수단이 줄어든 점이 더 크게 읽혔어요.",
+        "points": [
+          [
+            "결과",
+            "벌컨이 비행 10분쯤 이상을 일으켜 레오 위성 40기를 모두 잃었어요 (ULA·아마존 발표)"
+          ],
+          [
+            "왜 중요",
+            "벌컨 다음 비행이 안 정해져, 레오 위성 배치가 늦어질 수 있다는 보도가 나왔어요"
+          ],
+          [
+            "다음 볼 것",
+            "11/23 이후 아리안6 발사와 연내 서비스 시작이 계획대로 가는지예요"
+          ]
+        ],
+        "items": [
+          {
+            "t": "아마존이 레오 위성 40기를 잃었고, 연내 서비스 시작이 밀릴지는 불분명하다고 보도",
+            "src": "Fierce Network",
+            "url": "https://www.fierce-network.com/broadband/amazon-leo-loses-40-satellites-vulcan-explosion",
+            "d": "2026-11-16",
+            "tag": "보도"
+          },
+          {
+            "t": "ULA의 첫 완전 실패로, 벌컨이 상당 기간 비행을 멈출 수 있다고 전함",
+            "src": "Spaceflight Now",
+            "url": "https://spaceflightnow.com/2026/11/15/ula-suffers-first-total-mission-failure-with-loss-of-vulcan-rocket-carrying-40-amazon-leo-satellites/",
+            "d": "2026-11-15",
+            "tag": "보도"
+          },
+          {
+            "t": "아마존이 첫 임무의 위험을 언급하며 ULA가 원인을 찾아 벌컨을 이어 갈 것으로 본다고 밝힘",
+            "src": "아마존",
+            "url": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates",
+            "d": "2026-11-15",
+            "tag": "공식"
+          }
+        ]
+      }
+    }
+  },
+  {
     "d": "2026-11-17",
     "t": "HD",
     "type": "earn",

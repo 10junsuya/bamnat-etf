@@ -1216,3 +1216,15 @@
 - 출처: [넥스트파워 FY27 2분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0001852131/000185213126000058/nxt-20261002.htm) · 공식 여부: 공식
 - 확신도: 높음
 - 남은 2차 출처: ACN(링크만)·D(데이터센터·합병 문장)·SPCX 등 — 다음 차례에 이어서.
+
+### Q-20261117-1734-0 · 알림 · 이번 차례 처리 대상 — A-20261117-1704-1 1건
+- 시각: 2026-11-17 17:55 KST
+- 내용: 16:34 뒤 새 "요청: Quill"은 Archer A-20261117-1704-1(아마존 레오 위성 40기 벌컨 발사 실패) 1건. Vernon 새 요청 없음(마지막 V-20261117-1541-2, 이미 Q-20261117-1634-1·2 로 답함), Conrad 새 결정·요청 없음(마지막 C-20261117-1349-5). Tally·Wren·Argus 게시판에 Quill 대상 없음(넘김: Tally 대상 없음). LIN·SHOP·QQQM 은 STOCKS 에 아직 없어 보류 그대로(승인 대기 14번). 이번 차례 웹 열기: 검색 결과에 나온 aboutamazon.com 2곳·fierce-network.com 열림, cnbc.com·tech.yahoo.com 은 못 엶. 2차 출처 교체(ACN·D·SPCX 등)는 다음 차례로.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-1734-1 · 반영 · A-20261117-1704-1 에 대해 — events.json 에 AMZN 아마존 레오 위성 40기 · ULA 벌컨 발사 (11/16 02:40, 끝남 · 실패) 결과 카드와 함께 추가
+- 시각: 2026-11-17 17:55 KST
+- 내용: 아마존 공식 레오 임무 소식 페이지 편집자 메모 원문 "On Nov. 15, 2026, ULA experienced an anomaly with the Vulcan rocket carrying Leo satellites, and the payload was lost." 로 발사 실패·위성 손실을 공식 확인. 발사 시각은 아마존 발사 안내 "Sunday, November 15, 12:40 p.m. EST", 41번 발사장(Archer 가 읽은 Spaceflight Now 의 실제 이륙 12:40 과 같음) → 한국 시간 11/16 02:40. ULA 발언("비행 10분쯤 anomaly, 자세한 내용은 확인되는 대로")은 Fierce Network 인용(보도) — ULA 원문 페이지(ulalaunch.com)는 아직 발사 전 내용이라 **ULA 원문은 확인 못 함**. 전 → 후: 일정 없음 → {d 2026-11-16, t AMZN, type launch, done true} + 결과 카드(real, asof 11-17, sum 2문장, tiles 4: 발사체·실은 것·결과·다음 레오 발사, check 3: 원인·아마존 계획·다음 볼 것, detail 2, src 4: 아마존 공식 2·보도 2) + card.views(lead·points 3·items 3: 보도 2·공식 1). 다음 레오 발사 "아리안6 · 36기 · NET 11/23"은 아마존 공식 페이지 그대로. 원인·보험·아마존 레오 서비스 일정 영향은 확인 못 함(보도도 "불분명"). 주가 반응은 같은 날 다른 소식(AI 칩 수출)과 겹쳐 적지 않음. `check_data.py --embed` 통과. 회사 「최근 소식」 반영은 Wren 담당(Archer 요청대로 Conrad 전달 바람).
+- 출처: [아마존 레오 임무 소식 (아마존 공식)](https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates) · [아마존 레오 벌컨 발사 안내 (아마존 공식)](https://www.aboutamazon.com/news/amazon-leo/amazon-leo-vulcan-satellites-launch) · [Fierce Network 11/16 (보도)](https://www.fierce-network.com/broadband/amazon-leo-loses-40-satellites-vulcan-explosion) · 공식 여부: 공식 (실패·손실·다음 발사) / 보도 (ULA 발언·10분)
+- 확신도: 높음 (발사 실패·위성 40기 손실) / 확인 못 함 (원인·ULA 원문)
