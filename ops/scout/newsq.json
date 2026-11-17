@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-17 13:25",
-"rot": 107,
+"updated_kst": "2026-11-17 13:44",
+"rot": 167,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "28건",
+"Reuters": "실패 HTTPError",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "185315836d60",
+"t": "NVDA",
+"title": "Asia stocks slide as U.S. tightens AI chip curbs ahead of Nvidia results",
+"url": "https://finance.yahoo.com/markets/world-indices/articles/asia-stocks-slide-u-tightens-042558888.html?.tsrc=rss",
+"pub": "2026-11-17T04:25:58+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:44:18+00:00"
+},
+{
+"id": "5e1169bbe7ac",
+"t": "COST",
+"title": "Costco Just Gained 13% in a Month. What Will It Take to Hit $1,200?",
+"url": "https://www.tikr.com/blog/costco-just-gained-13-in-a-month-what-will-it-take-to-hit-1200?ref=yahoofinance&tlnk=yf-261116-crq5m9vv&.tsrc=rss",
+"pub": "2026-11-17T04:12:57+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:44:18+00:00"
+},
+{
+"id": "12dc9d026f6d",
+"t": "NVDA",
+"title": "Anthropic IPO: What Australian Investors Need to Know",
+"url": "https://finance.yahoo.com/video/anthropic-ipo-australian-investors-know-041254002.html?.tsrc=rss",
+"pub": "2026-11-17T04:12:54+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:44:18+00:00"
+},
 {
 "id": "421561c19b52",
 "t": "NVDA",
@@ -94,6 +124,26 @@
 "seen": "2026-11-17T04:14:39+00:00"
 },
 {
+"id": "94ad00fd5c29",
+"t": "TSLA",
+"title": "Stephen King Tells Elon Musk ‘You Sound Like Trump’ After Billionaire Warns Democrats Will ‘Execute Their Plan to End Democracy in America’",
+"url": "https://finance.yahoo.com/media-advertising/articles/stephen-king-tells-elon-musk-033006336.html?.tsrc=rss",
+"pub": "2026-11-17T03:30:06+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:44:18+00:00"
+},
+{
+"id": "10724f4d4e10",
+"t": "BABA",
+"title": "China AI Stocks Sink as US Chip Curbs Hit Labs and Hyperscalers",
+"url": "https://finance.yahoo.com/technology/ai/articles/china-ai-stocks-sink-us-032800790.html?.tsrc=rss",
+"pub": "2026-11-17T03:28:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:44:18+00:00"
+},
+{
 "id": "f85bcc78a5d9",
 "t": "RKLB",
 "title": "Rocket Lab Hit 100 Launches Faster Than Any Other Commercially Developed Rocket. I'd Buy a Small Stake.",
@@ -134,6 +184,16 @@
 "seen": "2026-11-17T03:44:16+00:00"
 },
 {
+"id": "7e8cacdc4336",
+"t": "NVDA",
+"title": "Gene Munster Says Nvidia Could Be the Next Apple if Investors ‘Sleep Well at Night’",
+"url": "https://finance.yahoo.com/markets/stocks/articles/gene-munster-says-nvidia-could-032355214.html?.tsrc=rss",
+"pub": "2026-11-17T03:23:55+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:44:18+00:00"
+},
+{
 "id": "cf4402b69b56",
 "t": "TSLA",
 "title": "Cathie Wood’s $2.2 Billion Bet on Elon Musk Could Soon Become One Giant Stock",
@@ -152,6 +212,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "ffa6f27c71a5",
+"t": "NVDA",
+"title": "‘The Odds Are Almost Zero’: Scott Galloway Doesn’t See Jensen Huang Returning to Nvidia",
+"url": "https://finance.yahoo.com/markets/stocks/articles/odds-almost-zero-scott-galloway-031633134.html?.tsrc=rss",
+"pub": "2026-11-17T03:16:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:44:18+00:00"
 },
 {
 "id": "0583f3dc63b8",
@@ -1422,6 +1492,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T23:09:28+00:00"
+},
+{
+"id": "d202b3f31082",
+"t": "MU",
+"title": "‘I’m Not a SanDisk Fan. I’m a Micron Fan’: Jim Cramer Picks Sides. Why MU Stock Looks Safer Than SNDK Stock.",
+"url": "https://www.barchart.com/story/news/8863926/im-not-a-sandisk-fan-im-a-micron-fan-jim-cramer-picks-sides-why-mu-stock-looks-safer-than-sndk-stock?.tsrc=rss",
+"pub": "2026-11-16T22:25:27+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:44:18+00:00"
 },
 {
 "id": "18f275e6e6a2",
@@ -7934,84 +8014,14 @@
 "seen": "2026-11-16T17:31:31+00:00"
 },
 {
-"id": "8b5925eee657",
-"t": "VOYG",
-"title": "Voyager Successfully Tests Plume Surface Interaction Simulator",
-"url": "https://finance.yahoo.com/technology/articles/voyager-successfully-tests-plume-surface-140000951.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
-},
-{
-"id": "667f888c2985",
-"t": "NOC",
-"title": "Can DeepStrike JR3 Strengthen RTX's Precision Fires Growth?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/deepstrike-jr3-strengthen-rtxs-precision-140000509.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
-},
-{
-"id": "24fb48564bc5",
-"t": "ONTO",
-"title": "Onto Innovation Announces $400 Million Share Repurchase Program",
-"url": "https://finance.yahoo.com/markets/stocks/articles/onto-innovation-announces-400-million-140000166.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
-},
-{
-"id": "2c2267a0f80a",
-"t": "CBRS",
-"title": "CBRS Q3 Earnings Call Spotlights Capacity Delays and 2027 Growth",
-"url": "https://finance.yahoo.com/technology/ai/articles/cbrs-q3-earnings-call-spotlights-140000357.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
-},
-{
-"id": "a8b891b9f857",
-"t": "ACN",
-"title": "Most work doesn’t need the Ferrari of AI, Wharton and Accenture find, but companies may be paying for it anyway",
-"url": "https://finance.yahoo.com/technology/ai/articles/most-doesn-t-ferrari-ai-140000997.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
-},
-{
-"id": "abf210de610f",
-"t": "DELL",
-"title": "Dell Technologies Delivers the Trusted Data and AI Infrastructure Foundation Needed to Scale Agentic Enterprise AI",
-"url": "https://finance.yahoo.com/technology/ai/articles/dell-technologies-delivers-trusted-data-140000673.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
-},
-{
-"id": "7c828da48dfe",
-"t": "GOOGL",
-"title": "Netflix Lowers 2026 Ad Revenue Forecast: Time to Hold the Stock?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/netflix-lowers-2026-ad-revenue-135900499.html?.tsrc=rss",
-"pub": "2026-11-16T13:59:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "8feba5b72d3b",
-"t": "NVDA",
-"title": "Update: US Equity Futures Lower Pre-Bell as Traders Await Nvidia Results, Anthropic IPO",
-"url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-lower-pre-135602836.html?.tsrc=rss",
-"pub": "2026-11-16T13:56:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "281b5f805b57",
+"t": "",
+"title": "Russia repels drone strike on industrial zones in Ufa and Salavat: TASS quotes local officials",
+"url": "https://www.financialjuice.com/News/9855052/Russia-repels-drone-strike-on-industrial-zones-in-Ufa-and-Salavat-TASS-quotes-local-officials.aspx?xy=rss",
+"pub": "2026-11-17T04:42:13+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:44:18+00:00"
 },
 {
 "id": "95d31eb6bc0a",
@@ -11000,16 +11010,6 @@
 "url": "https://www.bloomberg.com/news/videos/2026-11-16/big-test-ahead-for-equity-appetite-nadig-video",
 "pub": "2026-11-16T19:41:36+00:00",
 "src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "0ccab451925c",
-"t": "",
-"title": "Iran’s Foreign Minister Araghchi entered Oman - Fars News",
-"url": "https://www.financialjuice.com/News/9854410/Irans-Foreign-Minister-Araghchi-entered-Oman---Fars-News.aspx?xy=rss",
-"pub": "2026-11-16T19:35:22+00:00",
-"src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T20:14:29+00:00"
 }
