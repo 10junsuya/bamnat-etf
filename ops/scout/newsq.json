@@ -1,18 +1,128 @@
 {
-"updated_kst": "2026-11-17 17:14",
-"rot": 43,
+"updated_kst": "2026-11-17 17:44",
+"rot": 103,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "32건",
+"Reuters": "31건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "98b3330b6db2",
+"t": "ASML",
+"title": "European shares slip on fresh U.S. chip curbs",
+"url": "https://finance.yahoo.com/technology/articles/european-shares-slip-fresh-u-083821310.html?.tsrc=rss",
+"pub": "2026-11-17T08:38:21+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "fc2342dd64fa",
+"t": "NVDA",
+"title": "Prediction: Anthropic Will Have a Successful IPO but Then the Stock Will Trade Like SpaceX",
+"url": "https://www.fool.com/investing/2026/11/17/prediction-anthropic-will-have-a-successful-ipo-but-then-the-stock-will-trade-like-spacex/?.tsrc=rss",
+"pub": "2026-11-17T08:37:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "5021c18c6a78",
+"t": "SPCX",
+"title": "Not SpaceX: SPX Technologies Could Be the Better Way to Profit From Increased Scrutiny Over AI Infrastructure Spending",
+"url": "https://www.fool.com/investing/2026/11/17/not-spacex-spx-technologies-could-be-the-better-way-to-profit-from-increased-scrutiny-over-ai-infrastructure-spending/?.tsrc=rss",
+"pub": "2026-11-17T08:25:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "2fab344b8e5e",
+"t": "NVDA",
+"title": "Nvidia to halt chip sales to data centers renting over half to China - report",
+"url": "https://finance.yahoo.com/technology/ai/articles/nvidia-halt-chip-sales-data-081754255.html?.tsrc=rss",
+"pub": "2026-11-17T08:17:54+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "9f884cdb2a95",
+"t": "SKHY",
+"title": "Update: Market Chatter: SK Hynix Plans $1 Billion Investment in South Korean Chip Supply Chain",
+"url": "https://finance.yahoo.com/technology/articles/market-chatter-sk-hynix-plans-081701348.html?.tsrc=rss",
+"pub": "2026-11-17T08:17:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "7a64fefb7f69",
+"t": "NVDA",
+"title": "Anthropic’s IPO Puts AI Demand In Focus — Analyst Spots China Clue In Nvidia’s 66% Share Of SemiAnalysis’ Forecast Cut",
+"url": "https://stocktwits.com/news-articles/markets/equity/anthropic-ipo-ai-demand-analyst-china-clue-nvidia-share-semianalysis-forecast-cut/cNba8cqR9W4?.tsrc=rss",
+"pub": "2026-11-17T08:12:57+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "9b95ed98da76",
+"t": "NBIS",
+"title": "Nebius Group (NBIS) Anchors A New AI Inference Scorecard",
+"url": "https://finance.yahoo.com/technology/ai/articles/nebius-group-nbis-anchors-ai-081223390.html?.tsrc=rss",
+"pub": "2026-11-17T08:12:23+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "a5d010476d2e",
+"t": "INTC",
+"title": "IREN Stock Rises Overnight As Intel Reveals Stake, Anthropic IPO Buzz Catches On",
+"url": "https://stocktwits.com/news-articles/markets/equity/iren-stock-rises-overnight-as-intel-reveals-stake-anthropic-ipo-buzz-catches-on/cNbaFxaR9W3?.tsrc=rss",
+"pub": "2026-11-17T08:06:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "324bddf836b5",
+"t": "NVDA",
+"title": "This Is What It Would Take for Me to Buy Nvidia Stock",
+"url": "https://www.fool.com/investing/2026/11/17/this-is-what-it-would-take-for-me-to-buy-nvidia-stock/?.tsrc=rss",
+"pub": "2026-11-17T08:05:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "7c757a495d24",
+"t": "SAP",
+"title": "Thomas Saueressig to Leave SAP Executive Board",
+"url": "https://finance.yahoo.com/technology/articles/thomas-saueressig-leave-sap-executive-080000015.html?.tsrc=rss",
+"pub": "2026-11-17T08:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "68f536153062",
+"t": "JPM",
+"title": "VF Corporation Participates in a Fireside Chat at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference",
+"url": "https://finance.yahoo.com/markets/stocks/articles/vf-corporation-participates-fireside-chat-080000048.html?.tsrc=rss",
+"pub": "2026-11-17T08:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
 {
 "id": "6bbdc88f4bdd",
 "t": "NVDA",
@@ -52,6 +162,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T08:14:02+00:00"
+},
+{
+"id": "367d1d621623",
+"t": "SPCX",
+"title": "Amazon Lost 40 Leo Satellites as Launch Stays “Extremely Constrained.” That Widens SpaceX’s Lead",
+"url": "https://www.tikr.com/blog/amazon-lost-40-leo-satellites-as-launch-stays-extremely-constrained-that-widens-spacexs-lead?ref=yahoofinance&tlnk=yf-261117-4rv86xjg&.tsrc=rss",
+"pub": "2026-11-17T07:50:16+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
+"id": "77b41d255645",
+"t": "GOOGL",
+"title": "Jensen’s Exit Is “Great for Anthropic,” Says Dylan Patel. Alphabet and Amazon Should See the Benefit Immediately",
+"url": "https://www.tikr.com/blog/jensens-exit-is-great-for-anthropic-says-dylan-patel-alphabet-and-amazon-should-see-the-benefit-immediately?ref=yahoofinance&tlnk=yf-261117-jjmcf257&.tsrc=rss",
+"pub": "2026-11-17T07:50:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
 "id": "960285c6366b",
@@ -164,6 +294,16 @@
 "seen": "2026-11-17T07:44:00+00:00"
 },
 {
+"id": "168f1eda1230",
+"t": "TSM",
+"title": "Zacks.com featured highlights include NVIDIA, J.M. Smucker, Taiwan Semiconductor, Corning, Lockheed and Cardinal Health",
+"url": "https://finance.yahoo.com/markets/stocks/articles/zacks-com-featured-highlights-nvidia-070800949.html?.tsrc=rss",
+"pub": "2026-11-17T07:08:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
 "id": "05d8ccc95905",
 "t": "GS",
 "title": "Goldman Sachs starts SBM Offshore at Buy, sees 25% upside on deepwater wave",
@@ -182,6 +322,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T07:44:00+00:00"
+},
+{
+"id": "89fea0a70da8",
+"t": "WMT",
+"title": "Zacks Investment Ideas feature highlights: Target and Walmart",
+"url": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-065600463.html?.tsrc=rss",
+"pub": "2026-11-17T06:56:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
 "id": "48524ec06fe5",
@@ -7864,154 +8014,74 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "a365026b1786",
-"t": "AVGO",
-"title": "A $2.3 Billion Fund Just Bought These 3 Stocks",
-"url": "https://www.tikr.com/blog/a-2-3-billion-fund-just-bought-these-3-stocks?ref=yahoofinance&tlnk=yf-261116-h6mpxc4w&.tsrc=rss",
-"pub": "2026-11-16T14:38:36+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "84398682bbe3",
+"t": "",
+"title": "Deutsche Bank Processed Large Sums Linked to Epstein: FT (Video)",
+"url": "https://www.bloomberg.com/news/videos/2026-11-17/deutsche-bank-processed-large-sums-linked-to-epstein-ft-video",
+"pub": "2026-11-17T08:44:45+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
-"id": "8cae5c9cce3e",
-"t": "SNPS",
-"title": "A $2.1 Billion Fund Just Bought These 3 Stocks",
-"url": "https://www.tikr.com/blog/a-2-1-billion-fund-just-bought-these-3-stocks?ref=yahoofinance&tlnk=yf-261116-65v6hqhh&.tsrc=rss",
-"pub": "2026-11-16T14:38:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "56616c051113",
+"t": "",
+"title": "Russia: No understanding yet on Ukraine talks continuation - IFX",
+"url": "https://www.financialjuice.com/News/9855349/Russia-No-understanding-yet-on-Ukraine-talks-continuation---IFX.aspx?xy=rss",
+"pub": "2026-11-17T08:43:56+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
-"id": "a5aa0565a092",
-"t": "KEYS",
-"title": "Can Strong Revenue Growth Boost Keysight's Q4 Earnings?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/strong-revenue-growth-boost-keysights-143600971.html?.tsrc=rss",
-"pub": "2026-11-16T14:36:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "a5a5435c2cbd",
+"t": "",
+"title": "European Stocks Fall as US Chip Curbs Ignite Fresh AI Selloff",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/european-stocks-fall-as-us-chip-curbs-ignite-fresh-ai-selloff",
+"pub": "2026-11-17T08:30:44+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
-"id": "06996500bbb9",
-"t": "IONQ",
-"title": "D-Wave Revenue Rises 21% as Quarterly Bookings Drop 19% and Losses Widen",
-"url": "https://www.tikr.com/blog/d-wave-revenue-rises-21-as-quarterly-bookings-drop-19-and-losses-widen?ref=yahoofinance&tlnk=yf-261116-fvv4gfrm&.tsrc=rss",
-"pub": "2026-11-16T14:35:37+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "c5ec7bd36b68",
+"t": "",
+"title": "Sabbagh: Space Security Requirements Have Surged",
+"url": "https://www.bloomberg.com/news/videos/2026-11-17/sabbagh-space-security-requirements-have-surged-video",
+"pub": "2026-11-17T08:28:16+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
-"id": "e321ab613c8b",
-"t": "LLY",
-"title": "J&J Stock Rallies More Than 10% in a Month: Time to Buy, Sell or Hold?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/j-j-stock-rallies-more-143500272.html?.tsrc=rss",
-"pub": "2026-11-16T14:35:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
+"id": "bd45f9278800",
+"t": "",
+"title": "Turkish Stocks Raised to Overweight at JPMorgan on Rebound Bet",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/turkish-stocks-raised-to-overweight-at-jpmorgan-on-rebound-bet",
+"pub": "2026-11-17T08:26:44+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
-"id": "94d0255104ae",
-"t": "PEP",
-"title": "PepsiCo announces progress toward deforestation-free sourcing goal",
-"url": "https://finance.yahoo.com/energy/articles/pepsico-announces-progress-toward-deforestation-143500697.html?.tsrc=rss",
-"pub": "2026-11-16T14:35:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
+"id": "8e8159e3e9d2",
+"t": "",
+"title": "European shares ease as tech stocks, Deutsche Bank slide - Reuters",
+"url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOc1Vva1dwekNvTXd6MjdZLVNNUEsxSjNHWTA3NGhtUHZsMnhDVFJVekJVbTUyQ0czc0txSnA2cVJCUnVYMkEwQ3piZGhUbmxBS0JkMFU2RGNSanB5WjRjTUlsYTlOS3RHanEtamowSlN1Q1A5MGd3dHY5LUNrTWQ1Rldfb3F1VmwxZXRkN3JSWFpWUzhVdXVjaXdJeGxySi1NU2lvcTFB?oc=5",
+"pub": "2026-11-17T08:18:26+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
-"id": "4035aa5aa6bc",
-"t": "ORCL",
-"title": "Market Chatter: Palantir Technologies Faces UK Competition for NHS Data Contract",
-"url": "https://finance.yahoo.com/healthcare/articles/market-chatter-palantir-technologies-faces-143401727.html?.tsrc=rss",
-"pub": "2026-11-16T14:34:01+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "8dc5e75c396d",
-"t": "AVGO",
-"title": "Arm Stock Could Be Worth Much More if These 3 Catalysts Materialize",
-"url": "https://247wallst.com/investing/2026/11/16/arm-stock-could-be-worth-much-more-if-these-3-catalysts-materialize/?.tsrc=rss",
-"pub": "2026-11-16T14:33:39+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "8bf1728a5809",
-"t": "INTC",
-"title": "Why Is Intel Facing a Shareholder Lawsuit Over Its PC Slowdown?",
-"url": "https://beincrypto.com/intel-shareholder-lawsuit-pc-slowdown/?.tsrc=rss",
-"pub": "2026-11-16T14:33:31+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "e56e208ebd02",
-"t": "META",
-"title": "OpenAI Debuts ChatGPT Payment Method",
-"url": "https://www.cryptoprowl.com/releases/openai-debuts-chatgpt-payment-method-7913?.tsrc=rss",
-"pub": "2026-11-16T14:33:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "6a623b002ec9",
-"t": "COHR",
-"title": "Coherent Sinks 9%, Lumentum Down 8% as AI Hardware Stocks Slide on Nvidia Leadership Turmoil",
-"url": "https://www.tikr.com/blog/coherent-sinks-9-lumentum-down-8-as-ai-hardware-stocks-slide-on-nvidia-leadership-turmoil?ref=yahoofinance&tlnk=yf-261116-cmwhr86p&.tsrc=rss",
-"pub": "2026-11-16T14:32:34+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "a09cc9ac262f",
-"t": "AMD",
-"title": "Graid Technology Extends VROC(TM) to AMD EPYC(TM) Platforms, Expanding Choice in Enterprise RAID",
-"url": "https://finance.yahoo.com/technology/articles/graid-technology-extends-vroc-tm-143200245.html?.tsrc=rss",
-"pub": "2026-11-16T14:32:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "616db5a8e026",
-"t": "MU",
-"title": "Sandisk Sinks 8%, Micron Down 6% as Memory Selloff Deepens Before Nvidia Earnings",
-"url": "https://www.tikr.com/blog/sandisk-sinks-8-micron-down-6-as-memory-selloff-deepens-before-nvidia-earnings?ref=yahoofinance&tlnk=yf-261116-fw95v9g5&.tsrc=rss",
-"pub": "2026-11-16T14:31:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "539ab2b21f63",
-"t": "AMZN",
-"title": "Amazon faces first North American union contract at Canadian warehouse",
-"url": "https://www.retail-insight-network.com/news/amazon-faces-first-north-american-union-contract/?.tsrc=rss",
-"pub": "2026-11-16T14:30:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "07191474810f",
-"t": "META",
-"title": "Meta Stock Has Fallen 3% YTD. Its Cheapest AI Model Could Change Everything.",
-"url": "https://www.barchart.com/story/news/8855657/meta-stock-has-fallen-3-ytd-its-cheapest-ai-model-could-change-everything?.tsrc=rss",
-"pub": "2026-11-16T14:30:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T20:58:36+00:00"
+"id": "55178b5201de",
+"t": "",
+"title": "Widespread Gloominess Is Already Priced: Market Analysis",
+"url": "https://www.bloomberg.com/news/videos/2026-11-17/widespread-gloominess-is-already-priced-3-minutes-mliv-video",
+"pub": "2026-11-17T08:16:34+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
 "id": "d49d45fd19d4",
@@ -8024,6 +8094,16 @@
 "seen": "2026-11-17T08:14:02+00:00"
 },
 {
+"id": "e3222135fbea",
+"t": "",
+"title": "Europe Gas Edges Higher on Middle East Tensions, Weather Outlook",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/europe-gas-edges-higher-on-middle-east-tensions-weather-outlook",
+"pub": "2026-11-17T08:08:17+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
+},
+{
 "id": "2bc3653c7e7f",
 "t": "",
 "title": "Samsung and Apple near long-term DRAM supply deal - Maeil $AAPL",
@@ -8032,6 +8112,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T08:14:02+00:00"
+},
+{
+"id": "7328c11ac061",
+"t": "",
+"title": "Australia to Investigate China Over Alleged Timber Dumping",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/australia-to-investigate-china-over-alleged-timber-dumping",
+"pub": "2026-11-17T08:03:53+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T08:44:41+00:00"
 },
 {
 "id": "4b2a3dcaa8be",
@@ -10922,96 +11012,6 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-16T21:39:56+00:00"
-},
-{
-"id": "71a69abea5f6",
-"t": "",
-"title": "CHF CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854524/CHF-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:41+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "cc2417c869d6",
-"t": "",
-"title": "CHF CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854524/CHF-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:41+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "cbe4111ec879",
-"t": "",
-"title": "NZD CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854523/NZD-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:40+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "ad636c55b768",
-"t": "",
-"title": "NZD CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854523/NZD-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:40+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "e08ac083a418",
-"t": "",
-"title": "CAD CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854522/CAD-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "e572755b99c0",
-"t": "",
-"title": "CAD CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854522/CAD-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "d744abcc6f52",
-"t": "",
-"title": "ZN CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854521/ZN-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "ac2d5ad7663e",
-"t": "",
-"title": "ZN CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854521/ZN-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "8a2eedeccacf",
-"t": "",
-"title": "ZT CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854520/ZT-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:34+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
 }
 ]
 }
