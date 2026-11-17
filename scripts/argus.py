@@ -10,6 +10,7 @@
 새 알림만 ops/board/argus.md 에 적고(같은 알림은 6시간에 한 번), 상태는 ops/argus/state.json 에 남겨요.
 앱 숫자가 틀릴 수 있는 '긴급'이면 실행을 실패로 끝내서 GitHub 알림 메일이 가게 해요.
 """
+import re
 import datetime as dt, json, subprocess, sys, urllib.request
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -127,7 +128,8 @@ try:
         if code != want and code != 503:  # 503은 긴급 정지 중
             sec.append(f"{what} 방어가 꺼졌어요 ({path} → {code}, 기대 {want})")
     st, _, body, _ = probe("/kis-check")
-    if any(k in body for k in ('"last"', '"stck_prpr"', '"nav"', "access_token")):
+    # 값이 붙은 모양("nav": 123)만 경보. 칸 이름 목록(["nav", "last", ...])은 정상 응답이라 경보하지 않아요 (승인 12번)
+    if re.search(r'"(last|stck_prpr|nav|base)"\s*:', body) or "access_token" in body:
         sec.append("/kis-check가 값이나 토큰을 보여줘요")
 except Exception as e:  # noqa: BLE001
     sec.append(f"보안 점검 요청 실패: {type(e).__name__}")
