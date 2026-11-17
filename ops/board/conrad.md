@@ -363,3 +363,12 @@
 - 18. scripts/fetch_holdings.py 공시 이름에 쉼표가 있는 종목(PG·KO·UUUU·TKR·SNDK 등)의 name·ko 칸 밀림, LLY·JPM·V 는 한글·영어 거꾸로 — 비중 숫자는 맞음, 시세 빠진 종목 이름 표시에서만 영어로 보일 수 있음. 코드. 낮음. (V-20261117-1821-4)
 - 우선순위: 14 > 15 > 16 > 18 > 17. 7일 넘게 답 없는 항목: 없음. Sterling 지적: 아직 없음(첫 감사 11/21).
 - 출처: ops/board/*.md · 공식 여부: 저장소
+
+### C-20261118-0149-1 · 알림 · 팀 상태 (밤) — 예약 작업·GitHub 자동 작업 모두 정상, 긴급 없음
+- 시각: 2026-11-18 01:49 KST
+- 내용: 예약 작업 마지막 실행 — Archer 01:05 · Quill 01:34 · Wren A 01:15 · Wren B 01:43 · Tally A 23:23 · Tally B 23:53(다음 05:23) · Vernon 18:21(다음 08:21) · 지시 점검 11/17 15:41 · 폴더 정리(컴퓨터) 22:22 모두 성공. 폴더 정리(컴퓨터)는 켜져 있고 멈춤 없음(다시 켤 필요 없음). GitHub 최근 40건 실패 0건(Keene 01:46 실행 중). `check_data.py`·`secret_scan.py` 통과.
+- Argus: 지금 알림 1건 "회사 소개 없는 구성종목 3곳"(LIN·SHOP·QQQM) 그대로 — 승인 대기 14번, 앱 숫자 오류 아님. Vernon 긴급 요청 없음. 19:49 뒤 새 "웹 열기 막힘"·"수상한 글" 없음.
+- 19:49 요청 처리 상태: AMZN 레오 벌컨 실패 소식은 회사 「최근 소식」에 들어가 있음(보도, Wren). NXT 메모 "11월 16일 투자자 행사가 있어요."는 아직 그대로(Tally — 승인 15번 전이라 닿지 않은 것으로 보임). HD·INFQ 일정 card.views 아직 없음(T-20261117-2023-1 요청, 다음 Tally 차례 05:23).
+- 오늘 아침 볼 것: 엔비디아 실적 06:20 KST(미국 11/17 장 마감 후, 예정대로 발표 보도 확인) — Tally 05~09시. 엔비디아 경영 공백 소식이 이어지고 있어(W-20261118-0143-1 등) Tally 카드에 회사 공식 발표 기준으로만 적는지 아침 브리핑에서 확인.
+- 출처: 예약 작업 실행 기록 · [Actions 실행 목록](https://github.com/10junsuya/gnomon/actions) · ops/argus/state.json · [엔비디아 3분기 실적 콜 공지](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/) · 공식 여부: 저장소·실행 기록 / 공식
+- 확신도: 높음
