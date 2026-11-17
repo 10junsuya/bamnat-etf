@@ -900,3 +900,20 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261118-0343-3 · 알림 · 이번 차례
 - 시각: 2026-11-18 03:48 KST
 - 내용: Scout를 직접 돌린 뒤(03:44 KST 갱신) 새 항목 65건(news 62·market 3)을 처리했어요. 건너뜀: 젠슨 황 복귀 입장문(01:43 반영)·크레스 보유 주식·시스코 CEO 발언, ASML '새 미국 규정'(정책 초안 단계 · 앞 차례 판단 유지), 버티브 'AI 전력 돌파구'(주가 글), 마이크로소프트 AI 투명성 이니셔티브(여러 회사 참여 선언 · 제품·계약 아님), 슈왑 웹 오류(짧게 복구 · 앱 종목 확인 안 함), 리제네론(MarketBeat 행사 요약), 앤트로픽 공모 수요(보도 정리 글), 드러켄밀러 지분·대가 펀드 매매·종목 추천·비교·시장 요약 글. 3시대라 kind "market"(애플 장애 확인·램프 투자 유치·메타 Muse 모델 예고)은 done 처리만 했어요. 유나이티드헬스(CMS 메디케어 어드밴티지 감사 확대 제안)는 CMS 원문을 못 찾아 done 에 넣지 않았어요 — 다음 차례가 CMS 발표를 확인해 주세요. 오늘 미국 지표는 소매판매뿐이고 분석은 이미 있어 매크로 수집·분석은 하지 않았어요.
+
+### W-20261118-0413-1 · 반영 · 애플(AAPL) 서비스 장애 복구 — 기존 항목 갱신
+- 시각: 2026-11-18 04:24 KST
+- 내용: 03:43 차례가 넣은 '아이클라우드·앱스토어 등 장애' 항목을 갱신했어요. PhoneArena가 모든 서비스가 다시 열렸고 장애가 3시간 넘게 이어졌다고 전했어요. 원인은 매체마다 달라요: FinancialJuice 제목은 '내부 업데이트 뒤 장애, 해킹 아님', PhoneArena가 옮긴 블룸버그 보도는 'DNS 문제'예요. 애플의 원인 발표는 직접 확인 못 해서 한 줄에 원인을 넣지 않았어요. TechCrunch(11-17 10:55 PST)는 그 시점까지 애플이 상태 페이지 외에 공식 입장을 내지 않았다고 썼어요.
+- 출처: [PhoneArena](https://www.phonearena.com/news/apple-services-icloud-down_id139180) · [TechCrunch](https://techcrunch.com/2026/11/17/apple-services-including-icloud-app-store-and-apple-music-hit-by-outage/) · [Engadget](https://www.engadget.com/2319504/icloud-and-other-apple-services-are-down-in-an-apparent-outage/) · 공식 여부: 보도
+- 확신도: 높음 (복구) / 원인은 확인 못 함 · 다음 차례가 애플 원인 발표를 찾으면 갱신해 주세요
+
+### W-20261118-0413-2 · 반영 · 유나이티드헬스(UNH) 미 CMS 메디케어 어드밴티지 감사 확대 규정안(CRUSH)
+- 시각: 2026-11-18 04:24 KST
+- 내용: 03:43 차례 요청 건. Medical Daily·Hospice News에 따르면 CMS가 11-16(ET) 부정 청구 단속 규정안 CRUSH(CMS-6098-P)를 냈어요. 메디케어 어드밴티지 위험 조정 자료 감사(RADV)를 넓혀, 의무기록으로 뒷받침되지 않는 진단에 대한 지급을 돌려받는 내용이에요(10년간 약 900억 달러 절감 추산, 의견 마감 2027-01-19). UNH 는 news 칸이 처음이라 새로 만들었어요. HHS 보도자료·CMS 설명 자료는 웹 열기 권한 확인에 막혀 직접 못 봐서 '보도'로 넣었어요.
+- 출처: [Medical Daily](https://www.medicaldaily.com/cms-crush-rule-medicare-advantage-audits-481315) · [Hospice News](https://hospicenews.com/2026/11/16/cms-seeks-to-expand-authority-with-program-integrity-proposed-rule) · 공식 여부: 보도
+- 확신도: 높음 (규정안 발표) · 다음 차례가 CMS·HHS 원문을 열면 '공식'으로 바꿔 주세요
+- 웹 열기 막힘: https://www.hhs.gov/press-room/cms-crush-rule-targets-healthcare-fraud-saves-90-billion.html · https://www.cms.gov/newsroom/fact-sheets/comprehensive-regulations-uncover-suspicious-healthcare-crush-proposed-rule-cms-6098-p (둘 다 Medical Daily 본문에 있던 주소라 검색 결과에 안 나와 확인 요구로 막힘)
+
+### W-20261118-0413-3 · 알림 · 이번 차례
+- 시각: 2026-11-18 04:24 KST
+- 내용: Scout를 직접 돌린 뒤(04:17 KST 갱신) 새 항목 57건(news 45·market 12)을 처리했어요. 건너뜀: 알파벳 '앤트로픽 1,213억 달러 약정'(11-03부터 알려진 S-1 내용 · 주가 글), TSMC·알리바바 '미국 새 칩 규정'(상무부 원격 이용 규정 — 이미 NVDA 에 반영), 테슬라 독일 공장·JP모건 CFO·엔비디아 인텔 지분(이미 반영), 리볼루션 메디슨 유럽 승인(이미 반영), 엔비디아 로봇 스타트업 안심 연락(BI 제목뿐)·세일즈포스 직원 AI 예산(내부 운영), 캐터필러 충돌 안전 기본 장착·MP 머티리얼즈 자석 판매(가치 평가 글 · 새 발표 확인 못 함), 버티브 '/U P D A T E/'(내용 없음), 대가 펀드 매매·종목 추천·비교·시장 요약 글. 4시대라 kind "market"(NSA 시스템 점검·이란 협상 등)은 done 처리만 했어요. 오늘 미국 지표는 소매판매뿐이고 분석은 이미 있어 매크로 수집·분석은 하지 않았어요.
