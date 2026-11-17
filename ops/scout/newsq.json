@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-17 21:04",
-"rot": 160,
+"updated_kst": "2026-11-17 21:16",
+"rot": 39,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
-"Yahoo Finance": "120종목 확인 · 실패 0",
+"Yahoo Finance": "116종목 확인 · 실패 4",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "31건",
+"Reuters": "35건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "6e3b9193bb92",
+"t": "NVDA",
+"title": "Nvidia Under Pressure Over China Chip Sales. Here's How The AI Giant Is Fighting Back.",
+"url": "https://www.ibtimes.com/nvidia-board-committee-china-export-controls-3809850?.tsrc=rss",
+"pub": "2026-11-17T12:05:03+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
+},
+{
+"id": "cf5267de2990",
+"t": "GOOGL",
+"title": "This Is The Biggest Financial Risk, According To Fed's Report",
+"url": "https://finance.yahoo.com/m/da30c140-0174-31ea-bbcf-1896d688d619/this-is-the-biggest-financial.html?.tsrc=rss",
+"pub": "2026-11-17T12:00:34+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
+},
 {
 "id": "6ad47c4be124",
 "t": "TSLA",
@@ -54,6 +74,16 @@
 "seen": "2026-11-17T12:04:29+00:00"
 },
 {
+"id": "6940a15b7f92",
+"t": "REGN",
+"title": "Libtayo® (cemiplimab) Approved in the European Union (EU) for Extended Dosing and Faster Infusion Times Across Skin, Lung and Cervical Cancer Indications",
+"url": "https://finance.yahoo.com/healthcare/articles/libtayo-cemiplimab-approved-european-union-120000178.html?.tsrc=rss",
+"pub": "2026-11-17T12:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
+},
+{
 "id": "40712bf490c7",
 "t": "NVDA",
 "title": "Nvidia establishes committee to oversee national security after abrupt departure of CEO Jensen Huang",
@@ -62,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T12:04:29+00:00"
+},
+{
+"id": "2bbe84d66384",
+"t": "TSLA",
+"title": "Nvidia's $800 Billion Wipeout Raises a Bigger Question for Investors",
+"url": "https://finance.yahoo.com/markets/stocks/articles/nvidias-800-billion-wipeout-raises-115710325.html?.tsrc=rss",
+"pub": "2026-11-17T11:57:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
 },
 {
 "id": "5e2f17117d31",
@@ -94,6 +134,16 @@
 "seen": "2026-11-17T12:04:29+00:00"
 },
 {
+"id": "77c32072823e",
+"t": "SPCX",
+"title": "Rocket Lab Says Adjusted EBITDA Turns Positive Within 6 Months of Neutron’s First Flight. Here’s the Date That Implies.",
+"url": "https://www.fool.com/investing/2026/11/17/rocket-lab-says-adjusted-ebitda-turns-positive-within-6-months-of-neutrons-first-flight-heres-the-date-that-implies/?.tsrc=rss",
+"pub": "2026-11-17T11:52:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
+},
+{
 "id": "0f59c8cd7c30",
 "t": "GOOGL",
 "title": "Quaise Energy Signs 50 MW Geothermal Power Purchase Agreement with Google",
@@ -102,6 +152,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T12:04:29+00:00"
+},
+{
+"id": "3e7093b9260f",
+"t": "AAPL",
+"title": "Samsung and Apple Reportedly Near Multi-Year DRAM Supply Agreement",
+"url": "https://investorshub.advfn.com/market-news/article/40198/samsung-and-apple-reportedly-near-multi-year-dram-supply-agreement?.tsrc=rss",
+"pub": "2026-11-17T11:48:55+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
 },
 {
 "id": "eedbc14b11c7",
@@ -282,6 +342,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T12:04:29+00:00"
+},
+{
+"id": "21aefa856938",
+"t": "NET",
+"title": "Cloudflare Stock At 38x Sales Faces A Margin Slide",
+"url": "https://www.trefis.com/stock/net/articles/625676/cloudflare-stock-at-38x-sales-faces-a-margin-slide/2026-11-17?.tsrc=rss",
+"pub": "2026-11-17T11:29:45+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
+},
+{
+"id": "cdccfaed9ec2",
+"t": "LMT",
+"title": "Is Lockheed Martin Stock Riskier Than It Looks?",
+"url": "https://www.trefis.com/stock/lmt/articles/625675/is-lockheed-martin-stock-riskier-than-it-looks/2026-11-17?.tsrc=rss",
+"pub": "2026-11-17T11:29:45+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
 },
 {
 "id": "60bf7d77cd8f",
@@ -712,6 +792,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T11:16:01+00:00"
+},
+{
+"id": "3d39f0f3c011",
+"t": "CRWV",
+"title": "Steve Eisman Says Slower AI Spending Could Help Big Tech and Hurt CoreWeave",
+"url": "https://finance.yahoo.com/technology/ai/articles/steve-eisman-says-slower-ai-110019432.html?.tsrc=rss",
+"pub": "2026-11-17T11:00:19+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T12:16:53+00:00"
 },
 {
 "id": "288845b77f52",
@@ -7924,94 +8014,14 @@
 "seen": "2026-11-16T20:58:36+00:00"
 },
 {
-"id": "f7091502e84c",
-"t": "NBIS",
-"title": "BofA cuts Nebius price target to $265 from $310 on capacity delays, keeps Buy",
-"url": "https://blockspace.media/insight/nebius-price-target-cut-delays/?.tsrc=rss",
-"pub": "2026-11-16T16:00:54+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "a28dcc264dd5",
-"t": "MU",
-"title": "AI Chip Stocks Extend Their Sell-Off as Monday Opens Deep in the Red",
-"url": "https://beincrypto.com/chip-stocks-260-billion-hit-650-billion-two-days/?.tsrc=rss",
-"pub": "2026-11-16T16:00:21+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
-},
-{
-"id": "982bed5c0bbf",
-"t": "KLAC",
-"title": "KLA (KLAC) Upgraded to Strong Buy: Here's What You Should Know",
-"url": "https://finance.yahoo.com/markets/stocks/articles/kla-klac-upgraded-strong-buy-160003652.html?.tsrc=rss",
-"pub": "2026-11-16T16:00:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
-},
-{
-"id": "ca7c1646b070",
-"t": "APH",
-"title": "All You Need to Know About Amphenol (APH) Rating Upgrade to Strong Buy",
-"url": "https://finance.yahoo.com/markets/stocks/articles/know-amphenol-aph-rating-upgrade-160003851.html?.tsrc=rss",
-"pub": "2026-11-16T16:00:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T19:25:18+00:00"
-},
-{
-"id": "a21180e1d35c",
-"t": "NVDA",
-"title": "Week ahead: Nvidia earnings and Anthropic IPO to set the tone on Wall Street",
-"url": "https://www.proactiveinvestors.com/companies/news/1101855/week-ahead-nvidia-earnings-and-anthropic-ipo-to-set-the-tone-on-wall-street-1101855.html?.tsrc=rss",
-"pub": "2026-11-16T16:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "9bd9ddf5992c",
-"t": "NVDA",
-"title": "NVIDIA Announces Collaboration With IBM and Fermi National Accelerator Laboratory to Launch Quantum-Classical Codesign Platform, Plus Error-Correction Breakthrough to Advance Practical Quantum Computing",
-"url": "https://finance.yahoo.com/technology/ai/articles/nvidia-announces-collaboration-ibm-fermi-160000819.html?.tsrc=rss",
-"pub": "2026-11-16T16:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "390fd236c417",
-"t": "NVDA",
-"title": "IBM, Fermilab, and NVIDIA Announce Plans for New Co-Design Platform to Accelerate the Development of Next-Generation, Modular Quantum Computers",
-"url": "https://finance.yahoo.com/technology/ai/articles/ibm-fermilab-nvidia-announce-plans-160000961.html?.tsrc=rss",
-"pub": "2026-11-16T16:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "a217e68208b1",
-"t": "NVDA",
-"title": "Altera Demonstrates an FPGA-based Quantum System Controller Reference Design in Collaboration with OQC and NVIDIA",
-"url": "https://finance.yahoo.com/technology/ai/articles/altera-demonstrates-fpga-based-quantum-160000989.html?.tsrc=rss",
-"pub": "2026-11-16T16:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "30dd26a64561",
-"t": "NVDA",
-"title": "IQM Supports NVIDIA’s Work to Make Quantum Computers Schedulable in Slurm",
-"url": "https://finance.yahoo.com/technology/ai/articles/iqm-supports-nvidia-quantum-computers-160000527.html?.tsrc=rss",
-"pub": "2026-11-16T16:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "ecd845270d73",
+"t": "",
+"title": "Swiss Pharma Employee Convicted Over $300,000 in Insider Trades",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/swiss-pharma-employee-convicted-over-300-000-in-insider-trades",
+"pub": "2026-11-17T12:02:16+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T12:16:53+00:00"
 },
 {
 "id": "dcc2c04b2a58",
@@ -8952,6 +8962,16 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-17T10:44:35+00:00"
+},
+{
+"id": "3f79cf401ec5",
+"t": "",
+"title": "Korado Bulgaria AD (0ISZ.L) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSFFhTEFUNWQyZHFWQkZOVGxiLUc1TnNVVHF4b3NORjk0azRtQTUwbmZ3U3NBODVtM1hHbEhiaHlHM1lZZS1PRGVpZXFSR3hDTDZJU0t3SnNmMFNVUUJDd3Y4OGphYUdmUjJJcG0xMFdvRGhDSHZ0cjJ3SVVXOTVLRjI4VlM0N3Jn?oc=5",
+"pub": "2026-11-17T10:28:21+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T12:16:53+00:00"
 },
 {
 "id": "bde6c297dee2",
@@ -10990,26 +11010,6 @@
 "url": "https://www.financialjuice.com/News/9855083/Finland-urges-European-leaders-to-engage-directly-with-Putin---FT.aspx?xy=rss",
 "pub": "2026-11-17T05:01:57+00:00",
 "src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T05:13:52+00:00"
-},
-{
-"id": "8c1ef7e8c246",
-"t": "",
-"title": "Here's what to expect when Disney reports earnings before the bell",
-"url": "https://www.cnbc.com/2026/11/17/disney-dis-earnings-q-2026.html",
-"pub": "2026-11-17T05:01:01+00:00",
-"src": "CNBC",
-"kind": "market",
-"seen": "2026-11-17T05:13:52+00:00"
-},
-{
-"id": "47d53645ced4",
-"t": "",
-"title": "Hungary Is Set to Hold Rates as Global Risks Support Caution",
-"url": "https://www.bloomberg.com/news/articles/2026-11-17/hungary-is-set-to-hold-rates-as-global-risks-support-caution",
-"pub": "2026-11-17T05:00:00+00:00",
-"src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-17T05:13:52+00:00"
 }
