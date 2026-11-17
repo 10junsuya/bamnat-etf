@@ -817,3 +817,19 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261118-0013-2 · 알림 · 이번 차례
 - 시각: 2026-11-18 00:33 KST
 - 내용: Scout를 직접 돌린 뒤(00:16 KST 갱신) 새 항목 121건(news 101·market 20)을 처리했어요. 건너뜀: JPM 새 CFO·홈디포 새 CEO·아이소모픽 50억 달러·엔비디아 이사회 황 복귀 검토 안 함·엔비디아 인텔 지분 축소·수출 통제 위원회(이미 반영), 백악관 중국 광통신 부품 제한(아직 규정 초안 단계의 정책 · 회사 사건 아님), 'SpaceX 등 9.85억 달러 발사 수주'(IBD 글 · 어떤 계약인지 확인 못 함 — 검색되는 9.81억 달러 NITE-STAR 계약은 7~8월 일이에요), 메리디안 스페이스(앱 종목 아님), 아마존 유류·물류 할증 확대(요금 조정), 주가 급락 이유 모음·대가 펀드 보유 변화·종목 추천·실적 미리보기 글. 0시대라 kind "market"(해먹 발언·NAHB 주택지수 25·앤트로픽 공모 주문 등)은 done 처리만 했어요. 오늘 미국 지표는 소매판매뿐이고 분석은 23:13 차례가 써서 매크로 수집·분석은 하지 않았어요.
+
+### W-20261118-0043-1 · 반영 · 듀크에너지(DUK) 노스캐롤라이나 요금 인상안·데이터센터 요금제 승인
+- 시각: 2026-11-18 01:00 KST
+- 내용: 듀크에너지가 11-17 10:10 ET(한국 11-18 00:10) 보도자료로 노스캐롤라이나 유틸리티위원회가 듀크에너지 캐롤라이나·프로그레스의 요금안을 승인했다고 밝혔어요. 2년에 걸친 인상(연평균 캐롤라이나 3.7%·프로그레스 3.4%, 2027-01-01부터)과 50MW 넘는 데이터센터용 새 요금제(전용 설비 선납 등)가 들어 있어요. 퍼센트는 웹 열기 도우미 요약 부분이라 한 줄에는 넣지 않았어요. DUK 은 news 칸이 처음이라 새로 만들었어요.
+- 출처: [듀크에너지 보도자료(PR Newswire)](https://www.prnewswire.com/news-releases/north-carolina-regulators-approve-more-cost-effective-path-to-strengthen-reliability-and-power-the-states-future-302942360.html) · [WRAL](https://www.wral.com/news/local/nc-approves-duke-energy-plan-to-extend-coal-use-add-natural-gas-november-2026/) · 공식 여부: 공식
+- 확신도: 높음 (승인) / 중간 (세부 숫자)
+
+### W-20261118-0043-2 · 반영 · 파이어플라이(FLY) QASCOM 달 궤도 항법 장비 탑재 계약
+- 시각: 2026-11-18 01:00 KST
+- 내용: 파이어플라이가 11-17 아침(ET) GlobeNewswire 보도자료로 이탈리아 우주청과 함께 QASCOM이 만든 항법 장비 COLLINS를 2028년(이르면) 블루고스트 그루이투이젠 돔 임무의 엘리트라(달 궤도선)에 싣는 상업 계약을 알렸어요. 6개월 운용, 계약 금액은 없어요. 원문 사이트는 접속 제한으로 못 열고 Investing.com·TipRanks 요약으로 확인했어요.
+- 출처: [파이어플라이 보도자료(GlobeNewswire 전재)](https://www.manilatimes.net/2026/11/17/tmt-newswire/globenewswire/firefly-aerospace-adds-qascom-as-commercial-customer-on-elytra-for-lunar-orbit-operations/2472018) · [Investing.com](https://uk.investing.com/news/stock-market-news/firefly-adds-navigation-payload-to-2028-lunar-mission-93CH-4987744) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261118-0043-3 · 알림 · 이번 차례
+- 시각: 2026-11-18 01:00 KST
+- 내용: Scout를 직접 돌린 뒤(00:4x KST 갱신) 새 항목 72건을 처리했어요. 건너뜀: 엔비디아 감독 위원회·홈디포 새 CEO·비자/마스터카드 합의 승인 연기(이미 반영), 인플렉션 3분기 실적(Tally 몫), 디즈니 배당 33% 인상(앱 종목 아님), 머크 배당, 버티브 'AI 시험실'(새 발표 확인 못 함), 마이크론 낸드 과잉 경고·펩시코 투자의견 하향(증권사 의견), 앤트로픽 매출 글·오픈AI 소송(앱 종목 아님), 대가 펀드 매매·종목 비교·실적 미리보기·시장 요약 글. 0시대라 kind "market"(해먹 발언, 케심 폭발, 피치 하이퍼스케일러 채권 등)은 done 처리만 했어요. 오늘 미국 지표는 소매판매뿐이고 분석은 이미 있어 매크로 수집·분석은 하지 않았어요.
