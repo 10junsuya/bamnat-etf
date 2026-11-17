@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-17 15:44",
-"rot": 165,
+"updated_kst": "2026-11-17 16:14",
+"rot": 44,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "26건",
+"Reuters": "실패 HTTPError",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "e7ffb5ddcd64",
+"t": "MU",
+"title": "“What Would It Take” for Investors to Finally Admit that Micron Is Poised to Win for the Long Term?",
+"url": "https://www.tikr.com/blog/what-would-it-take-for-investors-to-finally-admit-that-micron-is-poised-to-win-for-the-long-term?ref=yahoofinance&tlnk=yf-261117-rprf3fh3&.tsrc=rss",
+"pub": "2026-11-17T06:49:38+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T07:14:31+00:00"
+},
+{
+"id": "e9b8ab3616a1",
+"t": "NVDA",
+"title": "Breaking Down the US Move to Curb Remote Access to Chips",
+"url": "https://finance.yahoo.com/video/breaking-down-us-move-curb-064058022.html?.tsrc=rss",
+"pub": "2026-11-17T06:40:58+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T07:14:31+00:00"
+},
+{
+"id": "ebe21d5f3099",
+"t": "AMZN",
+"title": "Amazon Sold $5 Billion of Data Centers at a “7% Cap Rate.” That’s a Big Problem for Digital Realty and Equinix",
+"url": "https://www.tikr.com/blog/amazon-sold-5-billion-of-data-centers-at-a-7-cap-rate-thats-a-big-problem-for-digital-realty-and-equinix?ref=yahoofinance&tlnk=yf-261117-4vwrqjqw&.tsrc=rss",
+"pub": "2026-11-17T06:33:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T07:14:31+00:00"
+},
 {
 "id": "695cd6e53925",
 "t": "NVDA",
@@ -42,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T06:37:01+00:00"
+},
+{
+"id": "6a7230463fbc",
+"t": "TLS",
+"title": "3 Stocks Tied To Pentagon Audit Spending Investors May Want To Watch",
+"url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-tied-pentagon-audit-061256044.html?.tsrc=rss",
+"pub": "2026-11-17T06:12:56+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T07:14:31+00:00"
 },
 {
 "id": "2803bb96dca9",
@@ -7974,44 +8014,104 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "51c57de3d281",
-"t": "NVDA",
-"title": "Musk, Nvidia workers call for Huang return at Nvidia in petition",
-"url": "https://www.cbsnews.com/news/jensen-huang-nvidia-ceo-reinstatement-petition/?.tsrc=rss",
-"pub": "2026-11-16T14:11:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "7e183733335d",
+"t": "",
+"title": "Nvidia warns buyers of legal risk tied to China AI access - CNBC $NVDA",
+"url": "https://www.financialjuice.com/News/9855262/Nvidia-warns-buyers-of-legal-risk-tied-to-China-AI-access---CNBC-NVDA.aspx?xy=rss",
+"pub": "2026-11-17T07:11:07+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
 },
 {
-"id": "bba5446859da",
-"t": "AAPL",
-"title": "Apple (AAPL) Picks Core Foldable Glass Supplier For iPhone Duo",
-"url": "https://finance.yahoo.com/technology/articles/apple-aapl-picks-core-foldable-141052861.html?.tsrc=rss",
-"pub": "2026-11-16T14:10:52+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "02df2f6336e1",
+"t": "",
+"title": "China's Guo on US moving to curb remote access to chips: China will protect the rights and interests of firms",
+"url": "https://www.financialjuice.com/News/9855261/Chinas-Guo-on-US-moving-to-curb-remote-access-to-chips-China-will-protect-the-rights-and-interests-of-firms.aspx?xy=rss",
+"pub": "2026-11-17T07:10:40+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
 },
 {
-"id": "2242ec8c208b",
-"t": "TSLA",
-"title": "NVIDIA Falls 4% Ahead of Earnings as Elon Musk Joins Calls to Reinstate Jensen Huang; AMD Drops 6%, Taiwan Semiconductor Slides 5%",
-"url": "https://247wallst.com/investing/2026/11/16/nvidia-falls-4-ahead-of-earnings-as-elon-musk-joins-calls-to-reinstate-jensen-huang-amd-drops-6-taiwan-semiconductor-slides-5/?.tsrc=rss",
-"pub": "2026-11-16T14:10:51+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "0ffb8605f07c",
+"t": "",
+"title": "IRGC claims targeting US radar in Bahrain - Press TV",
+"url": "https://www.financialjuice.com/News/9855260/IRGC-claims-targeting-US-radar-in-Bahrain---Press-TV.aspx?xy=rss",
+"pub": "2026-11-17T07:08:35+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
 },
 {
-"id": "c13a52cc35ba",
-"t": "LMT",
-"title": "Is Lockheed Martin (LMT) Below Fair Value After Its 98% Run?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-below-fair-141015501.html?.tsrc=rss",
-"pub": "2026-11-16T14:10:15+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
+"id": "0119424843a5",
+"t": "",
+"title": "UK Average Earnings (Ex-Bonus) Actual 3.5% (Forecast 3.6%, Previous 3.7%)",
+"url": "https://www.financialjuice.com/News/9855240/UK-Average-Earnings-Ex-Bonus-Actual-35-Forecast-36-Previous-37.aspx?xy=rss",
+"pub": "2026-11-17T07:00:03+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
+},
+{
+"id": "3409e44d4ccf",
+"t": "",
+"title": "UK Unemployment Rate Actual 4.6% (Forecast 4.7%, Previous 4.7%)",
+"url": "https://www.financialjuice.com/News/9855239/UK-Unemployment-Rate-Actual-46-Forecast-47-Previous-47.aspx?xy=rss",
+"pub": "2026-11-17T07:00:03+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
+},
+{
+"id": "293756f73c7b",
+"t": "",
+"title": "UK Employment Change 3M/3M Actual 155k (Forecast 139k, Previous 102k)",
+"url": "https://www.financialjuice.com/News/9855238/UK-Employment-Change-3M3M-Actual-155k-Forecast-139k-Previous-102k.aspx?xy=rss",
+"pub": "2026-11-17T07:00:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
+},
+{
+"id": "29d2f6dda23a",
+"t": "",
+"title": "UK Average Weekly Earnings YoY Actual 3.6% (Forecast 3.5%, Previous 3.7%)",
+"url": "https://www.financialjuice.com/News/9855237/UK-Average-Weekly-Earnings-YoY-Actual-36-Forecast-35-Previous-37.aspx?xy=rss",
+"pub": "2026-11-17T07:00:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
+},
+{
+"id": "e7e95704254a",
+"t": "",
+"title": "UK Employment Change SA Actual -34k (Forecast 10k, Previous 13k)",
+"url": "https://www.financialjuice.com/News/9855236/UK-Employment-Change-SA-Actual--34k-Forecast-10k-Previous-13k.aspx?xy=rss",
+"pub": "2026-11-17T07:00:01+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
+},
+{
+"id": "df00af222c88",
+"t": "",
+"title": "UK Unemployment Change Actual 33.2k (Forecast -, Previous 30.3k)",
+"url": "https://www.financialjuice.com/News/9855235/UK-Unemployment-Change-Actual-332k-Forecast---Previous-303k.aspx?xy=rss",
+"pub": "2026-11-17T07:00:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
+},
+{
+"id": "dde3f984cceb",
+"t": "",
+"title": "European Stocks Fall as AI Worries Spread",
+"url": "https://www.bloomberg.com/news/live-blog/2026-11-17/what-s-moving-uk-markets-right-now-markets-today-mwkc7vf0",
+"pub": "2026-11-17T06:54:50+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
 },
 {
 "id": "2221e429512c",
@@ -8162,6 +8262,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T06:37:01+00:00"
+},
+{
+"id": "3a90517b31c3",
+"t": "",
+"title": "Canada Pension Funds Join Nordic Capital in €3 Billion Cary Deal",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/canada-pension-funds-cvc-capital-partners-nordic-capital-in-3-billion-cary-deal",
+"pub": "2026-11-17T06:36:33+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T07:14:31+00:00"
 },
 {
 "id": "5c7d334ca6f4",
@@ -10899,116 +11009,6 @@
 "title": "UK's PM Burnham: UK's EU options to inform decisions in next Parliament.",
 "url": "https://www.financialjuice.com/News/9854509/UKs-PM-Burnham-UKs-EU-options-to-inform-decisions-in-next-Parliament.aspx?xy=rss",
 "pub": "2026-11-16T21:24:16+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "89f03c0a0dbf",
-"t": "",
-"title": "UK's PM Burnham: UK's EU options to inform decisions in next Parliament.",
-"url": "https://www.financialjuice.com/News/9854509/UKs-PM-Burnham-UKs-EU-options-to-inform-decisions-in-next-Parliament.aspx",
-"pub": "2026-11-16T21:24:16+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "355490d41667",
-"t": "",
-"title": "Nomura Strategic Income ETF (MFIX.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA2bzQ0bHpTdDhJNTNJeXppYVk0UDlfZkMwX0MzMXVHb1FNM3JPdlJ5YWNYZmxzU2lzVVo3b1hZdnc0Yy1xQkhmZHJkQjJBWjJoZ0VZLTlwYnp1eVkz?oc=5",
-"pub": "2026-11-16T21:23:58+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T02:14:00+00:00"
-},
-{
-"id": "83b04c11e6ed",
-"t": "",
-"title": "RBNZ Flags Growing Private Credit Risks in Real Estate Finance",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/rbnz-flags-growing-private-credit-risks-in-real-estate-finance",
-"pub": "2026-11-16T21:17:24+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T21:39:56+00:00"
-},
-{
-"id": "8e11d9f57f0f",
-"t": "",
-"title": "Google launching new service in Japan that automatically detects system vulnerabilities called \"Scan for Japan\" - Nikkei. $GOOGL",
-"url": "https://www.financialjuice.com/News/9854490/Google-launching-new-service-in-Japan-that-automatically-detects-system-vulnerabilities-called-Scan-for-Japan---Nikkei-GOOGL.aspx?xy=rss",
-"pub": "2026-11-16T21:07:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "a54767816167",
-"t": "",
-"title": "Google launching new service in Japan that automatically detects system vulnerabilities called \"Scan for Japan\" - Nikkei. $GOOGL",
-"url": "https://www.financialjuice.com/News/9854490/Google-launching-new-service-in-Japan-that-automatically-detects-system-vulnerabilities-called-Scan-for-Japan---Nikkei-GOOGL.aspx",
-"pub": "2026-11-16T21:07:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "9c92a44a825c",
-"t": "",
-"title": "Anthropic Fervor, Vanguard's 'Hot Sauce,' \"ETIFs\" Emerge",
-"url": "https://www.bloomberg.com/news/videos/2026-11-16/etf-iq-11-16-2026-video",
-"pub": "2026-11-16T21:06:58+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T21:39:56+00:00"
-},
-{
-"id": "a1767ce125e7",
-"t": "",
-"title": "Braskem Creditors Shun Company’s Latest Offer, Discuss New Plan",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/braskem-creditors-shun-company-s-latest-offer-discuss-new-plan",
-"pub": "2026-11-16T21:05:34+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T21:39:56+00:00"
-},
-{
-"id": "1d17d77c4356",
-"t": "",
-"title": "UK's PM Burnham: Britain left Europe on bad terms, with bad feelings.",
-"url": "https://www.financialjuice.com/News/9854489/UKs-PM-Burnham-Britain-left-Europe-on-bad-terms-with-bad-feelings.aspx?xy=rss",
-"pub": "2026-11-16T21:05:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "44db9f27a03e",
-"t": "",
-"title": "UK's PM Burnham: Britain left Europe on bad terms, with bad feelings.",
-"url": "https://www.financialjuice.com/News/9854489/UKs-PM-Burnham-Britain-left-Europe-on-bad-terms-with-bad-feelings.aspx",
-"pub": "2026-11-16T21:05:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "38f68c06f957",
-"t": "",
-"title": "Crypto Stuck Near Multimonth Lows After Sluggish Weekend",
-"url": "https://www.wsj.com/finance/currencies/crypto-off-to-downbeat-start-this-week-after-selloff-abeb286e?mod=rss_markets_main",
-"pub": "2026-11-16T21:05:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-16T23:46:32+00:00"
-},
-{
-"id": "2cdb77bb50ff",
-"t": "",
-"title": "Google to give Japan early access to frontier AI for cybersecurity - Nikkei. $GOOGL",
-"url": "https://www.financialjuice.com/News/9854488/Google-to-give-Japan-early-access-to-frontier-AI-for-cybersecurity---Nikkei-GOOGL.aspx?xy=rss",
-"pub": "2026-11-16T21:04:57+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T22:26:27+00:00"
