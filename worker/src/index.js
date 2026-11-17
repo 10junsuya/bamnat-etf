@@ -416,7 +416,9 @@ async function snapshotJob(env) {
     }
   }
   // 국내: 장 시간엔 10개씩 차례로(약 11분에 한 바퀴), 장 밖에선 오늘 값이 없는 것만
-  const krList = PRIO_KR.filter((c) => krOn || !snap.kr[c] || snap.kr[c].date !== k.date);
+  // 자세한 값(iNAV·기준가)은 정규장(09:00~15:40)에만 돌아가며 — 그 밖엔 한 번에 받는 가격으로 충분해서 미국 종목에 한도를 더 써요
+  const krDetail = krOn && k.hm >= 9 * 60 && k.hm <= 15 * 60 + 40;
+  const krList = PRIO_KR.filter((c) => krDetail || !snap.kr[c] || snap.kr[c].date !== k.date);
   let rk = (snap.rk || 0) % Math.max(1, krList.length);
   for (let i = 0; i < Math.min(10, krList.length) && SUBN < SUB_MAX - 6; i++) {
     const c = krList[(rk + i) % krList.length];
@@ -428,13 +430,16 @@ async function snapshotJob(env) {
   // 미국: 지금 시간대(주간거래·프리/애프터·정규장)에 맞춰 우선순위 종목을 남은 한도만큼 차례로
   const sess = usSess();
   if (sess) {
-    let ru = (snap.ru || 0) % PRIO_US.length, n = 0;
-    while (SUBN < SUB_MAX - 2 && n < PRIO_US.length) {
-      const t = PRIO_US[(ru + n) % PRIO_US.length]; n++; usTried++;
+    // 비중 큰 20종목(앱 ETF 비중의 절반 이상)은 매번, 나머지는 남은 한도만큼 돌아가며
+    const TOP = PRIO_US.slice(0, 20), REST = PRIO_US.slice(20);
+    const order = [...TOP, ...Array.from({ length: REST.length }, (_, i) => REST[((snap.ru || 0) + i) % REST.length])];
+    let n = 0, nr = 0;
+    while (SUBN < SUB_MAX - 2 && n < order.length) {
+      const t = order[n]; n++; if (n > TOP.length) nr++; usTried++;
       const v = await kisUsDirect(env, t, sess === "day", snap.ex[t] || null).catch(() => null);
       if (v && !v.error) { usOk++; snap.us[t] = { price: v.price, prev: v.prev, time: v.time, s: sess }; if (v.ex) snap.ex[t] = v.ex; }
     }
-    snap.ru = ru + n;
+    snap.ru = ((snap.ru || 0) + nr) % Math.max(1, REST.length);
   }
   snap.time = new Date().toISOString();
   await env.SNAP.put("snap", JSON.stringify(snap));

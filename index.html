@@ -1021,6 +1021,37 @@ async function pullKrQuick(){
     return n;
   }catch(_){ return 0; }
 }
+/* 미국 종목 한국투자증권 시세 (주간거래·프리마켓·정규장·애프터마켓). 한국투자증권엔 해외 여러 종목을 한 번에 받는 기능이 없어서
+   보는 ETF 종목 → 지수 ETF → 보유·별표 → 모든 ETF에서 비중 큰 순서로, 2분 넘은 것부터 maxN개씩 받아요 (2026-11-17 대표 지시) */
+let US_PRIO = null;
+async function pullUsKis(maxN){
+  if(LV.usBusy && Date.now()-LV.usBusy < 60e3) return false; LV.usBusy = Date.now();
+  const tm = ms => ({signal: (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(ms) : undefined});
+  let changed = false;
+  try{
+    const kp = parts(now(),"Asia/Seoul"), hm = kp.h*60+kp.mi, wd = kp.wd, us = usState(parts(now(),"America/New_York")).key;
+    const dayWin = wd>=1 && wd<=5 && hm>=9*60+50 && hm<=18*60+10 && us!=="regular" && us!=="pre" && us!=="after";
+    const sess = dayWin ? "day" : us==="regular" ? "reg" : (us==="pre"||us==="after") ? "ext" : "";
+    if(!LV.kisOff && sess){
+      const r0 = typeof route==="function" ? route() : "";
+      const want = [...new Set([...(r0.startsWith("etf-")?[r0.slice(4)]:[]), ...((holdings||[]).map(h=>h.code)), ...stars])];
+      const prox = Object.values(ETF_DATA.groups).map(g=>g.proxy).filter(Boolean);
+      const hold = ETFS.filter(e=>want.includes(e.code)).flatMap(e=>HOLDS(e).map(x=>x[0]));
+      if(!US_PRIO){ const w = {}; for(const e of ETFS) for(const [t,x] of HOLDS(e)) w[t] = (w[t]||0) + (okn(x)?x:0); US_PRIO = Object.keys(w).sort((a,b)=>w[b]-w[a]); }
+      const cand = [...new Set([...hold, ...prox, ...US_PRIO])].filter(t=>/^[A-Z.\-]{1,8}$/.test(t));
+      const old = t => { const v = (LIVE.kus||{})[t]; return !v || v.s!==sess || Date.now()-new Date(v.t) > 120e3; };
+      const syms = cand.filter(old).slice(0, maxN);
+      // 서버는 한 번에 10개까지 받아요. 한국투자증권 초당 한도 때문에 묶음은 하나씩 차례로
+      for(let i=0;i<syms.length && !LV.kisOff;i+=10){ const r = await fetch(`${LIVE_URL}/${sess==="day"?"usday":"usreg"}?s=${encodeURIComponent(syms.slice(i,i+10).join(","))}`, tm(30000)).catch(()=>null);
+        if(!r) continue;
+        if(r.status===503) LV.kisOff = true;
+        else if(r.ok){ const j = clean(await r.json()); let n = 0; LIVE.kus = {...(LIVE.kus||{})};
+          for(const [t,v] of Object.entries(j.quotes||{})){ if(v && !v.error && okn(v.price)){ LIVE.kus[t] = {p:v.price, pc:v.prev, t:v.time, s:sess}; n++; } }
+          if(n){ changed = true; applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); } } }
+    }
+  }catch(_){} finally { LV.usBusy = 0; }
+  return changed;
+}
 async function pullLiveOnce(){
   const tm = ms => ({signal: (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(ms) : undefined});
   let changed = false;
@@ -1080,28 +1111,7 @@ async function pullLiveOnce(){
   // 선물·Finnhub·환율이 오면 한국투자증권(조금 느림)을 기다리지 않고 먼저 화면에 반영해요
   if(changed){ applyLive(); syncFxInd(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
   // 미국 주식 시세는 한국투자증권이 주력이에요: 주간거래(한국 낮) · 프리마켓 · 정규장 · 애프터마켓. Finnhub는 예비 + 대조용
-  try{
-    const kp = parts(now(),"Asia/Seoul"), hm = kp.h*60+kp.mi, wd = kp.wd, us = usState(parts(now(),"America/New_York")).key;
-    const dayWin = wd>=1 && wd<=5 && hm>=9*60+50 && hm<=18*60+10 && us!=="regular" && us!=="pre" && us!=="after";
-    const sess = dayWin ? "day" : us==="regular" ? "reg" : (us==="pre"||us==="after") ? "ext" : "";
-    if(!LV.kisOff && sess){
-      const r0 = typeof route==="function" ? route() : "";
-      const want = [...new Set([...(r0.startsWith("etf-")?[r0.slice(4)]:[]), ...((holdings||[]).map(h=>h.code)), ...stars])];
-      const prox = Object.values(ETF_DATA.groups).map(g=>g.proxy).filter(Boolean);
-      const hold = ETFS.filter(e=>want.includes(e.code)).flatMap(e=>HOLDS(e).map(x=>x[0]));
-      // 지금 보는 ETF 종목 → 지수 ETF → 보유·별표 종목 순서. 그중 아직 못 받았거나 3분 넘은 것부터 20개씩 (나머지는 다음 1분에)
-      const cand = [...new Set([...hold, ...prox])].filter(t=>/^[A-Z.\-]{1,8}$/.test(t));
-      const old = t => { const v = (LIVE.kus||{})[t]; return !v || v.s!==sess || Date.now()-new Date(v.t) > 180e3; };
-      const syms = [...cand.filter(old), ...cand.filter(t=>!old(t))].slice(0,20);
-      // 서버는 한 번에 10개까지 받아요. 지수 ETF·비중 큰 종목부터 차례로 물어요
-      for(let i=0;i<syms.length && !LV.kisOff;i+=10){ const r = await fetch(`${LIVE_URL}/${sess==="day"?"usday":"usreg"}?s=${encodeURIComponent(syms.slice(i,i+10).join(","))}`, tm(30000)).catch(()=>null);
-        if(!r) continue;
-        if(r.status===503) LV.kisOff = true;
-        else if(r.ok){ const j = clean(await r.json()); let n = 0; LIVE.kus = {...(LIVE.kus||{})};
-          for(const [t,v] of Object.entries(j.quotes||{})){ if(v && !v.error && okn(v.price)){ LIVE.kus[t] = {p:v.price, pc:v.prev, t:v.time, s:sess}; n++; } }
-          if(n){ changed = true; applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); } } }
-    }
-  }catch(_){}
+  if(await pullUsKis(40)) changed = true;
   await krP;
   if(changed){ applyLive(); syncFxInd(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
 }
@@ -3982,7 +3992,7 @@ render();
 setInterval(()=>{ if(!overlay.classList.contains("open")) renderTop(); }, 20000);
 /* 자동 화면 검사(Keene)는 인터넷 없이 돌아서 연결 시도를 건너뛰어요 */
 if(!navigator.webdriver){ pullLive(); setInterval(()=>{ if(document.visibilityState!=="hidden") pullLive(); }, 60000); setInterval(fastTick, 20000);
-  setInterval(()=>{ if(document.visibilityState==="hidden") return; const p = parts(now(),"Asia/Seoul"), hm = p.h*60+p.mi; if(p.wd>=1 && p.wd<=5 && hm>=510 && hm<=1230) pullKrQuick(); }, 30000); }
+  setInterval(()=>{ if(document.visibilityState==="hidden") return; const p = parts(now(),"Asia/Seoul"), hm = p.h*60+p.mi; if(p.wd>=1 && p.wd<=5 && hm>=510 && hm<=1230) pullKrQuick(); pullUsKis(30); }, 30000); }
 </script>
 </body>
 </html>
