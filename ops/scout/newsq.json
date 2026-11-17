@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-17 11:14",
-"rot": 46,
+"updated_kst": "2026-11-17 11:25",
+"rot": 106,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "31건",
+"Reuters": "실패 HTTPError",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "274bca8c158e",
+"t": "NVDA",
+"title": "AMD’s Nvidia Rally Fades: Michael Burry Calls AMD ‘Too Expensive As Eternal Alternative’",
+"url": "https://stocktwits.com/news-articles/markets/equity/amd-s-nvidia-rally-fades-michael-burry-calls-amd-too-expensive-as-eternal-alternative/cNbah8GR9gn?.tsrc=rss",
+"pub": "2026-11-17T02:20:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T02:25:21+00:00"
+},
+{
+"id": "1fd087a2f2d1",
+"t": "JPM",
+"title": "Why Are US Banks Reporting Outages? JPMorgan Rules Out Cyberattack, Blames Software Bug",
+"url": "https://stocktwits.com/news-articles/markets/equity/why-are-us-banks-jpmorgan-wells-fargo-down-software-bug/cNbahm7R9gV?.tsrc=rss",
+"pub": "2026-11-17T02:16:44+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T02:25:21+00:00"
+},
+{
+"id": "996eac9c1e8c",
+"t": "NVDA",
+"title": "GDS Holdings (GDS) Plunges Double Digits. Here’s What Happened",
+"url": "https://finance.yahoo.com/markets/stocks/articles/gds-holdings-gds-plunges-double-021248936.html?.tsrc=rss",
+"pub": "2026-11-17T02:12:48+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T02:25:21+00:00"
+},
 {
 "id": "d81779f5c6a1",
 "t": "NVDA",
@@ -174,6 +204,16 @@
 "seen": "2026-11-17T01:44:47+00:00"
 },
 {
+"id": "1a99a9fedc50",
+"t": "SPIR",
+"title": "Spire Global (SPIR) Stock Sees Modest Fair Value Cut After Q3 Analyst Revisions",
+"url": "https://finance.yahoo.com/markets/stocks/articles/spire-global-spir-stock-sees-010736801.html?.tsrc=rss",
+"pub": "2026-11-17T01:07:36+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T02:25:21+00:00"
+},
+{
 "id": "01769f3b55c1",
 "t": "AMAT",
 "title": "What Applied Materials Holders Saw Early",
@@ -284,6 +324,16 @@
 "seen": "2026-11-17T01:44:47+00:00"
 },
 {
+"id": "6f72d63f0b75",
+"t": "CVX",
+"title": "Why Iraq Just Fast-Tracked Chevron’s Takeover Of A 14-Billion-Barrel Supergiant",
+"url": "https://finance.yahoo.com/energy/articles/why-iraq-just-fast-tracked-010000317.html?.tsrc=rss",
+"pub": "2026-11-17T01:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T02:25:21+00:00"
+},
+{
 "id": "6a6ededb8335",
 "t": "NVDA",
 "title": "Elon Musk Wants Jensen Huang Back at Nvidia. Here’s What’s at Stake for SpaceX",
@@ -362,6 +412,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "7178f95384ac",
+"t": "CVX",
+"title": "Gavin Newsom Calls Trump ‘Wholly Owned Subsidiary of Big Oil’ as Iran Tensions Rattle Oil Markets: Says President’s ‘Head Is Stuck in Sand Soaked With Oil’",
+"url": "https://finance.yahoo.com/energy/articles/gavin-newsom-calls-trump-wholly-003005558.html?.tsrc=rss",
+"pub": "2026-11-17T00:30:05+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T02:25:21+00:00"
 },
 {
 "id": "6ab0eb7f2bcf",
@@ -2314,6 +2374,16 @@
 "seen": "2026-11-16T20:58:36+00:00"
 },
 {
+"id": "7947656b2867",
+"t": "HD",
+"title": "Ahead of Home Depot Earnings, Here's What Barchart Data Says Comes Next for HD Stock",
+"url": "https://www.barchart.com/story/news/8860961/ahead-of-home-depot-earnings-here-s-what-barchart-data-says-comes-next-for-hd-stock?.tsrc=rss",
+"pub": "2026-11-16T20:06:43+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T02:25:21+00:00"
+},
+{
 "id": "aabcf81b225b",
 "t": "AVGO",
 "title": "INTW 2X Intel ETF Tumbles 13% as Intel Drops Amid Shareholder Lawsuit and AI Chip Selloff; Taiwan Semiconductor Falls 5%",
@@ -2372,6 +2442,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T20:14:29+00:00"
+},
+{
+"id": "6945af551901",
+"t": "TSLA",
+"title": "Nearly a tenth of the S&P 500 is tied to three men with no clear successors",
+"url": "https://washingtonpost.com/technology/2026/11/16/probably-biggest-fear-elon-has-why-huangs-exit-looms-over-musk/?.tsrc=rss",
+"pub": "2026-11-16T19:53:08+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T02:25:21+00:00"
 },
 {
 "id": "03bc43a3407d",
@@ -7934,84 +8014,34 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "0d5c6e997cc1",
-"t": "CRCL",
-"title": "Bitcoin Prices Tumble and Bring Coinbase and Strategy Stocks Down With Them",
-"url": "https://finance.yahoo.com/m/54c6a8a8-bbe4-3dc0-ad84-529f51fc9a5d/bitcoin-prices-tumble-and.html?.tsrc=rss",
-"pub": "2026-11-16T13:21:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "3f0a428f108b",
+"t": "",
+"title": "US DHS chief Mullin: US homeland is secure, including its banking system - Fox interview",
+"url": "https://www.financialjuice.com/News/9854934/US-DHS-chief-Mullin-US-homeland-is-secure-including-its-banking-system---Fox-interview.aspx?xy=rss",
+"pub": "2026-11-17T02:20:16+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T02:25:21+00:00"
 },
 {
-"id": "01a702eb1083",
-"t": "NTSK",
-"title": "Perion Network (PERI) Misses Q3 Earnings and Revenue Estimates",
-"url": "https://finance.yahoo.com/markets/stocks/articles/perion-network-peri-misses-q3-132002963.html?.tsrc=rss",
-"pub": "2026-11-16T13:20:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
+"id": "b8b7e8248194",
+"t": "",
+"title": "Foreign holdings of yuan bonds in China’s interbank market reached 3.23 trillion yuan at end-October: PBOC Shanghai office",
+"url": "https://www.financialjuice.com/News/9854933/Foreign-holdings-of-yuan-bonds-in-Chinas-interbank-market-reached-323-trillion-yuan-at-end-October-PBOC-Shanghai-office.aspx?xy=rss",
+"pub": "2026-11-17T02:20:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T02:25:21+00:00"
 },
 {
-"id": "2ddd1f01d5b3",
-"t": "KEYS",
-"title": "Countdown to Keysight (KEYS) Q4 Earnings: A Look at Estimates Beyond Revenue and EPS",
-"url": "https://finance.yahoo.com/markets/stocks/articles/countdown-keysight-keys-q4-earnings-131505204.html?.tsrc=rss",
-"pub": "2026-11-16T13:15:05+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "bdc3e50fcd51",
-"t": "ONTO",
-"title": "Don't Overlook Onto Innovation (ONTO) International Revenue Trends While Assessing the Stock",
-"url": "https://finance.yahoo.com/markets/stocks/articles/dont-overlook-onto-innovation-onto-131504348.html?.tsrc=rss",
-"pub": "2026-11-16T13:15:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "0db25b4451ab",
-"t": "WMT",
-"title": "Seeking Clues to Walmart (WMT) Q3 Earnings? A Peek Into Wall Street Projections for Key Metrics",
-"url": "https://finance.yahoo.com/markets/stocks/articles/seeking-clues-walmart-wmt-q3-131504572.html?.tsrc=rss",
-"pub": "2026-11-16T13:15:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "7dde5fcb8453",
-"t": "AMAT",
-"title": "Why Applied Materials (AMAT) International Revenue Trends Deserve Your Attention",
-"url": "https://finance.yahoo.com/markets/stocks/articles/why-applied-materials-amat-international-131503981.html?.tsrc=rss",
-"pub": "2026-11-16T13:15:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "8dacc173fe0d",
-"t": "SPCX",
-"title": "Elon Musk Says SpaceX’s Recovered Starship Could Fly Again After Weeks of Refurbishment",
-"url": "https://www.benzinga.com/markets/prediction-markets/26/11/63287055/starship-reuse?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
-"pub": "2026-11-16T13:14:53+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "56c35a9fa281",
-"t": "TSLA",
-"title": "Want to Buy a Car Without a Steering Wheel? Tesla Can Help.",
-"url": "https://finance.yahoo.com/m/9a77eef7-aa66-323e-9720-d7151b4ad03a/want-to-buy-a-car-without-a.html?.tsrc=rss",
-"pub": "2026-11-16T13:10:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "ab3fd09644af",
+"t": "",
+"title": "US transportation chief Duffy: cause of United Airlines outage Monday remains unknown",
+"url": "https://www.financialjuice.com/News/9854932/US-transportation-chief-Duffy-cause-of-United-Airlines-outage-Monday-remains-unknown.aspx?xy=rss",
+"pub": "2026-11-17T02:15:35+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T02:25:21+00:00"
 },
 {
 "id": "02436b256215",
@@ -10979,36 +11009,6 @@
 "title": "Fed's Hammack: We've seen a labor market that's broadly in balance.",
 "url": "https://www.financialjuice.com/News/9854368/Feds-Hammack-Weve-seen-a-labor-market-thats-broadly-in-balance.aspx?xy=rss",
 "pub": "2026-11-16T19:15:33+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T19:25:18+00:00"
-},
-{
-"id": "7f6776bb8ec6",
-"t": "",
-"title": "Fed's Hammack: Businesses are passing things on more and protecting margins.",
-"url": "https://www.financialjuice.com/News/9854362/Feds-Hammack-Businesses-are-passing-things-on-more-and-protecting-margins.aspx?xy=rss",
-"pub": "2026-11-16T19:14:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T19:25:18+00:00"
-},
-{
-"id": "02d033affd2a",
-"t": "",
-"title": "Fed's Hammack: Businesses are passing on more price increases.",
-"url": "https://www.financialjuice.com/News/9854361/Feds-Hammack-Businesses-are-passing-on-more-price-increases.aspx?xy=rss",
-"pub": "2026-11-16T19:14:05+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T19:25:18+00:00"
-},
-{
-"id": "e33b67ba6b6f",
-"t": "",
-"title": "Fed's Hammack: I'm worried businesses are more accepting of price rises.",
-"url": "https://www.financialjuice.com/News/9854360/Feds-Hammack-Im-worried-businesses-are-more-accepting-of-price-rises.aspx?xy=rss",
-"pub": "2026-11-16T19:13:35+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T19:25:18+00:00"
