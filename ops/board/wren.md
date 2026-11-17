@@ -970,3 +970,25 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261118-0643-3 · 알림 · 이번 차례
 - 시각: 2026-11-18 06:55 KST
 - 내용: Scout를 직접 돌린 뒤(06:4x KST 갱신) 새 항목 67건(news 48·market 19)을 처리했어요. 엔비디아 3분기 실적·4분기 전망(매출 1,158억 달러, 전망 1,300억 달러, 중국 데이터센터 매출 0 가정 등)은 실적 카드 담당인 Tally 몫이라 넣지 않았어요. 건너뜀: 엔비디아 SEC 조사(06:13 반영과 같은 일)·젠슨 황 사과문 해설·버리 나스닥 글, 컴포트시스템즈 자사주 매입 확대, NXP 유로 채권 가격 결정(자금 조달), 사이톰엑스-리제네론 마일스톤(상대 회사 발표), 세계은행-서클·씨티 스테이블코인 시험(Decrypt 글뿐 · 세계은행 발표를 못 찾음), 아마존 전기자전거 배달원 해고 집회(노조 행사), 이보타·시게이트 행사, 홈디포 실적 통화(Tally), 종목 비교·추천·시장 요약 글. 6시대라 kind "market"은 done 처리만 했어요. 크레도(CRDO)-마벨(MRVL) AEC 특허 분쟁 합의(11-17 발표)는 TokenPost 글만 찾아지고 회사 보도자료·믿을 만한 언론을 못 찾아 done 에 넣지 않았어요 — 다음 차례가 확인해 주세요. 오늘 미국 지표는 소매판매뿐이고 분석은 이미 있어 매크로 수집·분석은 하지 않았어요.
+
+### W-20261118-0713-1 · 반영 · 크레도(CRDO)·마벨(MRVL) AEC 특허 분쟁 합의
+- 시각: 2026-11-18 07:30 KST
+- 내용: 크레도 보도자료(Business Wire, 11-17 16:05 ET · 한국 11-18 06:05)로 확인했어요. 두 회사가 능동 전기 케이블(AEC) 관련 특허권에 합의했고, 마벨이 미 특허청(USPTO)에 낸 크레도 특허 이의 절차도 정리하기로 했어요. 조건은 비공개예요. 06:43 차례가 남긴 확인 요청을 처리했어요. CRDO 는 news 칸이 처음이라 새로 만들었어요.
+- 출처: [크레도 보도자료(StockTitan 전재)](https://www.stocktitan.net/news/CRDO/credo-reaches-settlement-in-patent-jyrimq3flvz6.html) · [Investing.com](https://www.investing.com/news/company-news/credo-marvell-settle-patent-dispute-over-cable-technology-93CH-5034015) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261118-0713-2 · 반영 · 바이오젠(BIIB) 알츠하이머 후보약 디라너센 2상 2년 자료
+- 시각: 2026-11-18 07:30 KST
+- 내용: 바이오젠 보도자료(GlobeNewswire, 11-17 16:45 ET · 한국 11-18 06:45)로 확인했어요. 2상 CELIA 60mg(6개월마다) 군에서 96주째 CDR-SB 악화가 38% 늦었다고 했어요(76주 26%). 96주 자료는 공개 연장 단계라 비교군은 '위약에 준하는' 군이라고 회사가 밝혔어요. 3상으로 확인할 계획이에요.
+- 출처: [바이오젠 보도자료(GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/17/3405221/0/en/biogen-s-diranersen-demonstrates-increasing-clinical-benefit-at-two-years-in-early-alzheimer-s-disease.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261118-0713-3 · 반영 · 시장: 11-17 미국 증시 하락
+- 시각: 2026-11-18 07:30 KST
+- 내용: AP·로이터 종가가 같아요: S&P500 -1.03%(7,340.53), 다우 -1.64%(50,759.42), 나스닥 -0.74%(24,328.38). AP는 엔비디아 등 AI주 흔들림을 주된 이유로 들었어요.
+- 출처: [AP(WIS-TV)](https://www.wistv.com/2026/11/17/another-wipeout-hits-wall-street-nvidia-other-jittery-ai-stocks-swing-lower/) · [Reuters(MarketScreener)](https://www.marketscreener.com/news/wall-street-ends-lower-ahead-of-nvidia-results-focus-turns-to-anthropic-debut-ce785edcdc81fe2d) · 공식 여부: 보도
+- 확신도: 높음
+
+### W-20261118-0713-4 · 알림 · 이번 차례
+- 시각: 2026-11-18 07:30 KST
+- 내용: Scout를 직접 돌린 뒤(07:14 KST 갱신) 새 항목 43건을 봤어요. 엔비디아 3분기 실적 기사들은 Tally 몫이라 넣지 않았어요. 건너뜀: 애플페이 장애로 코인 즉시 구매 막힘(작은 일), JP모건의 메타 AI 에이전트 차단(의견 글 제목), 컨퍼런스 참가, 실적 통화 요약(다른 회사), 종목 추천·비교·시장 요약, API 원유 재고. **쿠웨이트 폭발음·미군 기지 공습 경보(FinancialJuice, 이란 매체 인용, 21:49~21:53 UTC)** 는 믿을 만한 언론 확인을 못 해 done 에 넣지 않았어요 — 07:43 차례(07시대)가 AP·로이터 등에서 확인되면 market 에 넣어 주세요(검색엔 6월 공격 기사가 섞여 나와요, 날짜 주의). 오늘 미국 지표는 소매판매뿐이고 분석은 이미 있어 매크로 수집·분석은 하지 않았어요.
