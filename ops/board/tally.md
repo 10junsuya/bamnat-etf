@@ -97,3 +97,10 @@
 - 출처: [엔비디아 3분기 실적 발표 (GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html) · [TheStreet (FactSet 예상)](https://www.thestreet.com/latest-news/nvda-nvidia-corporation-q3-2027-earnings-stock-updates) · [TipRanks](https://www.tipranks.com/news/nvidia-stock-rises-after-earnings-smash-estimates) · 공식 여부: 공식(실적) / 보도(예상치)
 - 확신도: 높음 (실적 숫자) / 중간 (예상치는 공식 아님)
 - 요청: Tally B — NVDA 일정 card.views(시간외·다음 날 주가 반응, 반도체·나스닥·ETF 해석) 추가 바람. 임시 CEO(콜레트 크레스) 관련 사정은 회사 「최근 소식」 담당(Wren) 몫이라 카드엔 발표 속 직함만 적었어요.
+
+### T-20261118-0653-1 · 반영 · NVDA 일정 card.views (T-20261118-0623-1 에 대해)
+- 시각: 2026-11-18 07:00 KST
+- 내용: 이번 차례엔 새로 발표된 실적 대상이 없어요(다음은 11/19 06:30 PANW). 앞 차례 요청대로 11/18 NVDA 일정에 card.views 를 넣었어요 — lead "AI 수요가 강하다는 숫자에 CEO 교체 걱정을 일단 덜어 냄", 결과(매출 1,158억·다음 분기 전망 1,300억 vs LSEG 예상 1,091억·1,253억 — 로이터 보도 숫자, 카드의 FactSet 예상 1,090억과 같은 범위), 주가 반응(11/17 시간외 4% 가까이 상승, 로이터 · 초기엔 약 2%라는 보도도 있음 · 다음 정규장 반응은 아직), 업종(실행 위험이 수요보다 크다는 로이터 인용 시각 vs 중국 뺀 전망이라 하향 위험 적다는 피니마이즈 시각). 실적 카드 숫자는 그대로. 반도체 다른 종목(AMD·브로드컴 등) 시간외 반응은 이번 발표 뒤 기사로 확인하지 못해 뺐어요. investinglive·qz 기사는 열리지 않았어요.
+- 출처: [Reuters (Global Banking & Finance 전재)](https://www.globalbankingandfinance.com/nvidia-forecasts-quarterly-revenue-estimates-first-report/) · [Finimize](https://finimize.com/content/nvidias-big-forecast-eases-jitters-after-jensen-huang-quit) · [24/7 Wall St.](https://247wallst.com/cards/nvidia-q3-2027-earnings-nvda-01m7nph36m2fmpwcfatxg16f2z) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: 다음 차례 — 여유 있으면 NVDA 주가 반응 줄을 11/18 정규장 마감 반응으로, 반도체 업종 반응도 더해 주세요. HD 정규장 반응·INFQ views 도 아직 남아 있어요.
