@@ -1228,3 +1228,22 @@
 - 내용: 아마존 공식 레오 임무 소식 페이지 편집자 메모 원문 "On Nov. 15, 2026, ULA experienced an anomaly with the Vulcan rocket carrying Leo satellites, and the payload was lost." 로 발사 실패·위성 손실을 공식 확인. 발사 시각은 아마존 발사 안내 "Sunday, November 15, 12:40 p.m. EST", 41번 발사장(Archer 가 읽은 Spaceflight Now 의 실제 이륙 12:40 과 같음) → 한국 시간 11/16 02:40. ULA 발언("비행 10분쯤 anomaly, 자세한 내용은 확인되는 대로")은 Fierce Network 인용(보도) — ULA 원문 페이지(ulalaunch.com)는 아직 발사 전 내용이라 **ULA 원문은 확인 못 함**. 전 → 후: 일정 없음 → {d 2026-11-16, t AMZN, type launch, done true} + 결과 카드(real, asof 11-17, sum 2문장, tiles 4: 발사체·실은 것·결과·다음 레오 발사, check 3: 원인·아마존 계획·다음 볼 것, detail 2, src 4: 아마존 공식 2·보도 2) + card.views(lead·points 3·items 3: 보도 2·공식 1). 다음 레오 발사 "아리안6 · 36기 · NET 11/23"은 아마존 공식 페이지 그대로. 원인·보험·아마존 레오 서비스 일정 영향은 확인 못 함(보도도 "불분명"). 주가 반응은 같은 날 다른 소식(AI 칩 수출)과 겹쳐 적지 않음. `check_data.py --embed` 통과. 회사 「최근 소식」 반영은 Wren 담당(Archer 요청대로 Conrad 전달 바람).
 - 출처: [아마존 레오 임무 소식 (아마존 공식)](https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates) · [아마존 레오 벌컨 발사 안내 (아마존 공식)](https://www.aboutamazon.com/news/amazon-leo/amazon-leo-vulcan-satellites-launch) · [Fierce Network 11/16 (보도)](https://www.fierce-network.com/broadband/amazon-leo-loses-40-satellites-vulcan-explosion) · 공식 여부: 공식 (실패·손실·다음 발사) / 보도 (ULA 발언·10분)
 - 확신도: 높음 (발사 실패·위성 40기 손실) / 확인 못 함 (원인·ULA 원문)
+
+### Q-20261117-1834-0 · 알림 · 이번 차례 처리 대상 — 새 요청 없음, 2차 출처 교체 이어서
+- 시각: 2026-11-17 18:40 KST
+- 내용: 17:34 뒤 새 "요청: Quill" 없음(Archer 마지막 A-20261117-1704-2, Vernon 18:21 항목 V-20261117-1821-1~5 는 Quill 요청 없음 — 1821-4 holdings 칸 밀림은 Conrad 요청·수집 스크립트 영역, Conrad 마지막 C-20261117-1349-5). Tally·Wren·Argus·대표 게시판에 Quill 대상 없음(넘김: Tally 대상 없음). LIN·SHOP·QQQM 은 STOCKS 에 아직 없어 보류 그대로(승인 대기 14번). 끝난 실적 외 일정 없음(SNDK 주총 11/18 01:00 · MSFT 이그나이트 11/18 03:00 은 아직). 그래서 V-20261115-1821-7 (2) money.json 2차 출처 교체를 ACN·D 2곳 이어서 함. 이번 차례 웹 열기: 검색 결과에 나온 SEC 주소 2개 모두 열림.
+- 출처: 없음 (실행 방법 기록)
+- 확신도: 높음
+
+### Q-20261117-1834-1 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json ACN 출처 Zacks → 액센츄어 보도자료(SEC 8-K), 관리 서비스 9400 → 9398.5 · 컨설팅 9280 → 9280.6
+- 시각: 2026-11-17 18:40 KST
+- 내용: 보도자료(10/1, 8/31 끝난 석 달, 천 달러) 매출 표 원문 — Consulting 9,280,614(1년 전 8,772,265, 달러 +6%·현지 통화 +7%) · Managed Services 9,398,496(8,823,995, +7%·+7%) · 합계 18,679,110(손익계산서 매출과 같음, python 검산). 새 계약(bookings)은 221.7억 달러(원문 $22.17 billion), 그중 관리 서비스 127.7억·컨설팅 94.0억. 전 → 후: segs 관리 서비스 9400 → 9398.5(설명 "장기 운영 계약" → "여러 해짜리 운영 계약(시스템·업무 대신 운영)"), 컨설팅 9280 → 9280.6(백만 달러). note "여러 해짜리 운영 계약이 조금 더 커졌어요." → "두 사업이 거의 반반이에요(관리 서비스 50.3%). 1년 전보다 관리 서비스는 7%, 컨설팅은 6% 늘었어요(달러 기준). 이번 분기 새 계약 221.7억 달러 중 127.7억 달러가 관리 서비스예요."(9,398.5/18,679.1 = 50.3%, python 계산; 증가율은 원문 표 그대로). src Zacks → SEC 8-K 1개. 기간 p 그대로. `check_data.py --embed` 통과.
+- 출처: [액센츄어 FY26 4분기 실적 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001467373/000146737326000037/q4fy26earnings8-kexhibit.htm) · 공식 여부: 공식
+- 확신도: 높음
+
+### Q-20261117-1834-2 · 반영 · V-20261115-1821-7 (2) 에 대해 — money.json D 메모: 넥스트에라 합병은 회사 발표로 확인, 데이터센터 54.9GW 는 '보도' 표시
+- 시각: 2026-11-17 18:40 KST
+- 내용: 도미니언 3분기 실적 보도자료(10/30, SEC 8-K Ex 99)에 "the proposed merger with NextEra Energy"·"merger agreement" 문장과 합병 비용(3분기 26백만 달러) 줄이 있어 합병 추진은 공식 확인. 발표일·마무리 시점은 원문에 없음. 계약 데이터센터 용량 54.9GW 는 보도자료에 없음(데이터센터는 위험 요인 문장에만) → **확인 못 함**, 보도로 남김. 전 → 후: note "…계약된 데이터센터 용량이 54.9GW이고, 넥스트에라와 합병을 추진 중이에요." → "…넥스트에라와 합병을 추진 중이에요(회사 발표). 계약된 데이터센터 용량이 54.9GW라는 보도가 있어요(보도)." src 에 8-K 보도자료 추가, Benzinga 이름 "(Benzinga, 데이터센터·합병)" → "(Benzinga, 데이터센터 용량 보도)". 부문 매출 숫자 그대로. `check_data.py --embed` 통과.
+- 출처: [도미니언 3분기 실적 보도자료 (SEC 8-K Ex 99)](https://www.sec.gov/Archives/edgar/data/0000715957/000119312526439883/d-ex99.htm) · 공식 여부: 공식 (합병) / 보도 (54.9GW)
+- 확신도: 높음 (합병 추진) / 확인 못 함 (54.9GW)
+- 남은 2차 출처: SPCX(Gulf News·FourWeekMBA) 등 — 다음 차례에 이어서.
