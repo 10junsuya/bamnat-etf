@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-17 12:14",
-"rot": 48,
+"updated_kst": "2026-11-17 12:22",
+"rot": 108,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "29건",
+"Reuters": "30건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "0583f3dc63b8",
+"t": "NVDA",
+"title": "MiTAC Computing Scales Agentic AI with Full-Stack Infrastructure at SC26",
+"url": "https://finance.yahoo.com/technology/ai/articles/mitac-computing-scales-agentic-ai-031500525.html?.tsrc=rss",
+"pub": "2026-11-17T03:15:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:22:56+00:00"
+},
 {
 "id": "fd900f016895",
 "t": "NVDA",
@@ -24,6 +34,16 @@
 "seen": "2026-11-17T03:14:31+00:00"
 },
 {
+"id": "1b1d7cd3f3f1",
+"t": "AMZN",
+"title": "Delta CEO: Most airlines touting Starlink “haven’t even started yet”",
+"url": "https://finance.yahoo.com/video/delta-ceo-most-airlines-touting-030013371.html?.tsrc=rss",
+"pub": "2026-11-17T03:00:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:22:56+00:00"
+},
+{
 "id": "34116d175364",
 "t": "SPCX",
 "title": "Jensen Huang at SpaceX? Elon Musk Calls It an ‘Honor’ as Crypto Bettors Price in the Odds",
@@ -32,6 +52,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T03:14:31+00:00"
+},
+{
+"id": "203659384788",
+"t": "WMT",
+"title": "What happens after Walmart leaves town is worse than expected",
+"url": "https://www.thestreet.com/retail/what-happens-to-the-stores-next-door-after-walmart-leaves-town-sales-and-traffic-plunge-20?.tsrc=rss",
+"pub": "2026-11-17T02:47:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:22:56+00:00"
 },
 {
 "id": "55fcc7bb7441",
@@ -142,6 +172,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T02:43:55+00:00"
+},
+{
+"id": "429737f02702",
+"t": "ACN",
+"title": "Accenture (ACN) Stock May Trade At A Discount On Fresh AI Outsourcing News",
+"url": "https://finance.yahoo.com/markets/stocks/articles/accenture-acn-stock-may-trade-020729980.html?.tsrc=rss",
+"pub": "2026-11-17T02:07:29+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:22:56+00:00"
 },
 {
 "id": "4599f7ae09a1",
@@ -2044,6 +2084,16 @@
 "seen": "2026-11-16T21:39:56+00:00"
 },
 {
+"id": "77aa8a71859c",
+"t": "CRWV",
+"title": "‘Nvidia Is an Unbelievably Important Technology Company’: CoreWeave’s Michael Intrator Is Shrugging Off Jensen Huang’s Scandal — ‘You Know We Continue to Work With Them Closely’",
+"url": "https://www.barchart.com/story/news/8862091/nvidia-is-an-unbelievably-important-technology-company-coreweaves-michael-intrator-is-shrugging-off-jensen-huangs-scandal-you-know-we-continue-to-work-with-them-closely?.tsrc=rss",
+"pub": "2026-11-16T21:07:03+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:22:56+00:00"
+},
+{
 "id": "7dd97e2ce4f2",
 "t": "NVDA",
 "title": "Why Arm Holdings Plunged Today",
@@ -2382,6 +2432,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T20:58:36+00:00"
+},
+{
+"id": "040e0b46cb58",
+"t": "JPM",
+"title": "JPMorgan Slashes IREN Target and Banks Revalue AI Stocks. Plus, Will Jensen Return to NVIDIA?",
+"url": "https://blockspace.media/podcast/jpmorgan-slashes-iren-target-and-banks-revalue-ai-stocks-plus-will-jensen-return-to-nvidia/?.tsrc=rss",
+"pub": "2026-11-16T20:31:51+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T03:22:56+00:00"
 },
 {
 "id": "0e1b69a5b2a7",
@@ -7954,66 +8014,6 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "b3f4b0a785ab",
-"t": "SPCX",
-"title": "Vulcan Rocket Mishap Hurts Amazon’s Satellite Aspirations",
-"url": "https://finance.yahoo.com/m/b32facc6-f679-3fbc-b523-f920b738fdad/vulcan-rocket-mishap-hurts.html?.tsrc=rss",
-"pub": "2026-11-16T13:42:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "8234164245cc",
-"t": "INTC",
-"title": "Shareholders sue Intel after its shares plunge nearly 29%",
-"url": "https://www.euronews.com/2026/11/16/shareholders-sue-intel-after-its-shares-plunge-nearly-29?.tsrc=rss",
-"pub": "2026-11-16T13:41:42+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "05c7b6888e21",
-"t": "AAPL",
-"title": "Wall Street’s 5 Safest Dividend Stocks Built for Any Market",
-"url": "https://247wallst.com/investing/2026/11/16/wall-streets-5-safest-dividend-stocks-built-for-any-market/?.tsrc=rss",
-"pub": "2026-11-16T13:40:18+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "514b4fdbe927",
-"t": "MO",
-"title": "Is Lamb Weston (LW) Stock Outpacing Its Consumer Staples Peers This Year?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/lamb-weston-lw-stock-outpacing-134002923.html?.tsrc=rss",
-"pub": "2026-11-16T13:40:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "52c632089ada",
-"t": "AXP",
-"title": "Hyperscale Data Reports Preliminary Q3 Revenue Growth of 84% to $44.8 Million",
-"url": "https://investorshub.advfn.com/market-news/article/40107/hyperscale-data-reports-preliminary-q3-revenue-growth-of-84-to-44-8-million?.tsrc=rss",
-"pub": "2026-11-16T13:38:47+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "f8ae056261c3",
-"t": "V",
-"title": "Beat the Market the Zacks Way: Vera Bradley, Herc, Visa in Focus",
-"url": "https://finance.yahoo.com/markets/stocks/articles/beat-market-zacks-way-vera-133800008.html?.tsrc=rss",
-"pub": "2026-11-16T13:38:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
 "id": "13f5c9b2e30b",
 "t": "",
 "title": "Chinese President Xi meets Papua New Guinea prime minister: Xinhua",
@@ -8772,6 +8772,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-17T00:44:15+00:00"
+},
+{
+"id": "f9fc83bcc23d",
+"t": "",
+"title": "Jolimark Holdings Ltd (2028.HK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1YZFFkSHNfUi1RM3VleWxjUVBacnVhNlV4QU5PZm9mOEdrTmd6ZEdNc3pFUDBOTjJ3dmJlVXRHOTI1VklIWWhpQU9Kb1J5S3N0QnpSUmhHaDNxNWVlbHlCZjZWaWNuXzRxa3NHbw?oc=5",
+"pub": "2026-11-17T00:20:03+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T03:22:56+00:00"
 },
 {
 "id": "6dd3fa6727c7",
@@ -11002,16 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T19:25:18+00:00"
-},
-{
-"id": "c64c25ff4558",
-"t": "",
-"title": "Fed's Hammack: Would like to see us get to restrictive policy stance.",
-"url": "https://www.financialjuice.com/News/9854390/Feds-Hammack-Would-like-to-see-us-get-to-restrictive-policy-stance.aspx",
-"pub": "2026-11-16T19:23:26+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
 }
 ]
 }
