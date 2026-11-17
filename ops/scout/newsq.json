@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-17 14:30",
-"rot": 106,
+"updated_kst": "2026-11-17 14:44",
+"rot": 166,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "28건",
+"Reuters": "27건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "96e226f91e96",
+"t": "NBIS",
+"title": "Situational Awareness Revives AI Portfolio After Summer Collapse — Here Are Its New Stock Bets",
+"url": "https://stocktwits.com/news-articles/markets/equity/situational-awareness-revives-ai-portfolio-after-summer-collapse-here-are-its-new-stock-bets/cNbakMGR9gx?.tsrc=rss",
+"pub": "2026-11-17T05:33:12+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:44:14+00:00"
+},
+{
+"id": "b986184eec41",
+"t": "CRCL",
+"title": "Cathie Wood's ARK Sells Solana And Ethereum Staking Funds, Buys Three Crypto Stocks Amid Bitcoin Slide",
+"url": "https://stocktwits.com/news-articles/markets/equity/cathie-wood-solana-ethereum-staking-three-crypto-stocks-bitcoin-slide/cNbakNNR9gH?.tsrc=rss",
+"pub": "2026-11-17T05:25:43+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:44:14+00:00"
+},
+{
+"id": "0c28a8491a18",
+"t": "NVDA",
+"title": "China megacap tech stocks fall as U.S. tightens curbs on AI chip access",
+"url": "https://finance.yahoo.com/technology/ai/articles/china-megacap-tech-stocks-fall-052521839.html?.tsrc=rss",
+"pub": "2026-11-17T05:25:21+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:44:14+00:00"
+},
 {
 "id": "07cfac28f799",
 "t": "NVDA",
@@ -32,6 +62,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T05:30:52+00:00"
+},
+{
+"id": "38864135165b",
+"t": "CCJ",
+"title": "Top 3 Canadian Nuclear Stocks With Earnings Growth Up To 37%",
+"url": "https://finance.yahoo.com/energy/articles/top-3-canadian-nuclear-stocks-051409478.html?.tsrc=rss",
+"pub": "2026-11-17T05:14:09+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:44:14+00:00"
 },
 {
 "id": "7729fb0396ab",
@@ -132,6 +172,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T05:13:52+00:00"
+},
+{
+"id": "78155d3312da",
+"t": "NVDA",
+"title": "Sam Altman Knows What It’s Like to Be Ousted as CEO, but Won’t Say if Jensen Huang Should Return as Nvidia Chief: ‘Heroes Have Flaws’",
+"url": "https://finance.yahoo.com/markets/stocks/articles/sam-altman-knows-ousted-ceo-043156002.html?.tsrc=rss",
+"pub": "2026-11-17T04:31:56+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:44:14+00:00"
+},
+{
+"id": "b4b22df14dd0",
+"t": "CME",
+"title": "Gold Heads for Worst Year Since 2015. Why Is It Losing to a 5% Treasury?",
+"url": "https://beincrypto.com/gold-price-treasury-yields-fed-hike/?.tsrc=rss",
+"pub": "2026-11-17T04:30:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:44:14+00:00"
 },
 {
 "id": "185315836d60",
@@ -7954,64 +8014,24 @@
 "seen": "2026-11-16T14:26:19+00:00"
 },
 {
-"id": "fb5470fbf8e1",
-"t": "GE",
-"title": "GE Aerospace Faces Cost Inflation: A Threat to Margin Growth?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/ge-aerospace-faces-cost-inflation-140400125.html?.tsrc=rss",
-"pub": "2026-11-16T14:04:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "34e556541fbe",
+"t": "",
+"title": "Russia strikes port and industrial sites in Ukraine's Mykolaiv on Monday: local official",
+"url": "https://www.financialjuice.com/News/9855125/Russia-strikes-port-and-industrial-sites-in-Ukraines-Mykolaiv-on-Monday-local-official.aspx?xy=rss",
+"pub": "2026-11-17T05:40:34+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T05:44:14+00:00"
 },
 {
-"id": "11be91dc074b",
-"t": "GOOGL",
-"title": "Healthcare struggles to scale AI past pilot stage: Google report",
-"url": "https://www.healthcaredive.com/news/healthcare-struggles-to-scale-ai-past-pilot-stage-google-report/874609/?.tsrc=rss",
-"pub": "2026-11-16T14:03:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "19381530d9f0",
-"t": "SPY",
-"title": "Pre-Markets Lower as Puzzle Pieces Sorted",
-"url": "https://finance.yahoo.com/economy/policy/articles/pre-markets-lower-puzzle-pieces-140300474.html?.tsrc=rss",
-"pub": "2026-11-16T14:03:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "ba630f739b50",
-"t": "SPCX",
-"title": "Nvidia, Sandisk, SpaceX, L3Harris, Strategy, Summit Therapeutics, and More Stocks That Explain Today’s Market",
-"url": "https://finance.yahoo.com/m/a7938ba3-f917-3e6f-b865-2195ea15d9d5/nvidia%2C-sandisk%2C-spacex%2C.html?.tsrc=rss",
-"pub": "2026-11-16T14:02:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "6a4660405e63",
-"t": "CRWV",
-"title": "Down 62% From All-Time Highs, Here’s How to Play CRWV Stock as CoreWeave Smashes Q3 Estimates",
-"url": "https://www.barchart.com/story/news/8854897/down-62-from-all-time-highs-heres-how-to-play-crwv-stock-as-coreweave-smashes-q3-estimates?.tsrc=rss",
-"pub": "2026-11-16T14:00:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "6bba4e1d3322",
-"t": "CSCO",
-"title": "Cisco Systems Had a Stellar Quarter, But CSCO Tumbled - Is It Too Cheap Here?",
-"url": "https://www.barchart.com/story/news/8854901/cisco-systems-had-a-stellar-quarter-but-csco-tumbled-is-it-too-cheap-here?.tsrc=rss",
-"pub": "2026-11-16T14:00:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T21:39:56+00:00"
+"id": "919217dfa009",
+"t": "",
+"title": "Russian-installed governor: two killed in Ukrainian assault on Crimea",
+"url": "https://www.financialjuice.com/News/9855124/Russian-installed-governor-two-killed-in-Ukrainian-assault-on-Crimea.aspx?xy=rss",
+"pub": "2026-11-17T05:37:53+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T05:44:14+00:00"
 },
 {
 "id": "cca4c40ca00a",
@@ -9784,6 +9804,16 @@
 "seen": "2026-11-17T05:13:52+00:00"
 },
 {
+"id": "af05271d434f",
+"t": "",
+"title": "Azora Therapeutics, Inc. (AZR.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBjMkNlVU80YWpVSS1MU2xIREREdmZsNFVCYkV5VmFRTUcxR1BES0QyNXZ3VFBpSFFuNWNtRzJUeUFOaUl4RnI3blptZnNaM0pEdUpNR2EzUVFLU3FzdlhxSEh1OUY3UWlrRnd2NzNQVXBPOFNMZ0tkWi04ODVvZw?oc=5",
+"pub": "2026-11-16T22:16:33+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T05:44:14+00:00"
+},
+{
 "id": "10f528219134",
 "t": "",
 "title": "Former CFPB director Chopra: no AL exemption from state licensing rules, accountability",
@@ -10982,36 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "eb71d05a1cbd",
-"t": "",
-"title": "RBNZ FSR: Higher government bond yields and still-stretched valuations, particularly among AI-related firms, leave markets vulnerable to a correction",
-"url": "https://www.financialjuice.com/News/9854430/RBNZ-FSR-Higher-government-bond-yields-and-still-stretched-valuations-particularly-among-AI-related-firms-leave-markets-vulnerable-to-a-correction.aspx?xy=rss",
-"pub": "2026-11-16T20:02:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "8f1c8f39c978",
-"t": "",
-"title": "RBNZ FSR: Higher government bond yields and still-stretched valuations, particularly among AI-related firms, leave markets vulnerable to a correction",
-"url": "https://www.financialjuice.com/News/9854430/RBNZ-FSR-Higher-government-bond-yields-and-still-stretched-valuations-particularly-among-AI-related-firms-leave-markets-vulnerable-to-a-correction.aspx",
-"pub": "2026-11-16T20:02:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "11f64fbf8061",
-"t": "",
-"title": "BlackRock Pushing For New 'ETIF' Hybrid",
-"url": "https://www.bloomberg.com/news/videos/2026-11-16/blackrock-pushing-for-new-etif-hybrid-video",
-"pub": "2026-11-16T20:01:46+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
 }
 ]
 }
