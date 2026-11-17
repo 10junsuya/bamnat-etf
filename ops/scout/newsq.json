@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-17 13:14",
-"rot": 47,
+"updated_kst": "2026-11-17 13:25",
+"rot": 107,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "29건",
+"Reuters": "28건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "421561c19b52",
+"t": "NVDA",
+"title": "Dow, S&P 500, Nasdaq Futures Mixed Ahead Of Much-Anticipated Nvidia Earnings, Anthropic IPO: SLS, BABA, JPM, OMER In Focus",
+"url": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-mixed-ahead-of-much-anticipated-nvidia-earnings-anthropic-ipo-sls-baba-jpm-omer-in-focus/cNba1SfR9gr?.tsrc=rss",
+"pub": "2026-11-17T04:06:22+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:25:02+00:00"
+},
+{
+"id": "8b154b51ac0a",
+"t": "MU",
+"title": "AMD, MU, SKHY, AVGO: Chip Stocks Ease Overnight After Selloff On New US Chip Restrictions Targeting China",
+"url": "https://stocktwits.com/news-articles/markets/equity/amd-mu-skhy-avgo-chip-stocks-ease-overnight-after-selloff-on-new-us-chip-restrictions-targeting-china/cNba10cR9gA?.tsrc=rss",
+"pub": "2026-11-17T04:04:20+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:25:02+00:00"
+},
+{
+"id": "c4211c1381eb",
+"t": "NVDA",
+"title": "Nvidia “Could Have Theoretically Lost 30% of Demand” and Still Hit Its Forecast, Says Dan Niles",
+"url": "https://www.tikr.com/blog/nvidia-could-have-theoretically-lost-30-of-demand-and-still-hit-its-forecast-says-dan-niles?ref=yahoofinance&tlnk=yf-261116-cwmh8rp2&.tsrc=rss",
+"pub": "2026-11-17T04:03:46+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:25:02+00:00"
+},
 {
 "id": "a4b0f31a6e61",
 "t": "NVDA",
@@ -22,6 +52,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "0fe617212e7a",
+"t": "GS",
+"title": "Goldman Sachs just revamped its 2027 gold target for the second time",
+"url": "https://www.thestreet.com/investing/goldman-sachs-2027-gold-forecast-cut?.tsrc=rss",
+"pub": "2026-11-17T03:47:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:25:02+00:00"
 },
 {
 "id": "b84f54b7ec00",
@@ -62,6 +102,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "9129b4f212f2",
+"t": "V",
+"title": "UQPAY Deploys Visa Payment Passkey, Advancing the Next Generation of Agentic Payment Experience",
+"url": "https://finance.yahoo.com/technology/ai/articles/uqpay-deploys-visa-payment-passkey-032700656.html?.tsrc=rss",
+"pub": "2026-11-17T03:27:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:25:02+00:00"
 },
 {
 "id": "dd17098cccef",
@@ -7964,54 +8014,44 @@
 "seen": "2026-11-16T14:26:19+00:00"
 },
 {
-"id": "89f58b1300a6",
-"t": "SNPS",
-"title": "Wall Street Analysts Believe Synopsys (SNPS) Could Rally 30.69%: Here's is How to Trade",
-"url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-believe-synopsys-135504180.html?.tsrc=rss",
-"pub": "2026-11-16T13:55:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "95d31eb6bc0a",
+"t": "",
+"title": "China's President Xi: 'we hope this supports your reunification efforts'",
+"url": "https://www.financialjuice.com/News/9855043/Chinas-President-Xi-we-hope-this-supports-your-reunification-efforts.aspx?xy=rss",
+"pub": "2026-11-17T04:19:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:25:02+00:00"
 },
 {
-"id": "c8a04ba0af2b",
-"t": "CDNS",
-"title": "Wall Street Analysts Think Cadence (CDNS) Could Surge 28.15%: Read This Before Placing a Bet",
-"url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-cadence-135503204.html?.tsrc=rss",
-"pub": "2026-11-16T13:55:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "ba4f49918c2e",
+"t": "",
+"title": "China's President Xi: Taiwan no longer active in Papua New Guinea, report to you today",
+"url": "https://www.financialjuice.com/News/9855042/Chinas-President-Xi-Taiwan-no-longer-active-in-Papua-New-Guinea-report-to-you-today.aspx?xy=rss",
+"pub": "2026-11-17T04:19:10+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:25:02+00:00"
 },
 {
-"id": "ba05a0b2f2da",
-"t": "NVDA",
-"title": "Top Healthcare Innovation Event HLTH USA 2026 Kicks Off: NYSE Content Update",
-"url": "https://finance.yahoo.com/healthcare/articles/top-healthcare-innovation-event-hlth-135500633.html?.tsrc=rss",
-"pub": "2026-11-16T13:55:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "4b69f7b141f6",
+"t": "",
+"title": "China’s President Xi: China willing to collaborate with Papua New Guinea to strengthen political trust, elevate bilateral ties",
+"url": "https://www.financialjuice.com/News/9855041/Chinas-President-Xi-China-willing-to-collaborate-with-Papua-New-Guinea-to-strengthen-political-trust-elevate-bilateral-ties.aspx?xy=rss",
+"pub": "2026-11-17T04:19:10+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:25:02+00:00"
 },
 {
-"id": "2d97bfe0984d",
-"t": "IONQ",
-"title": "Quantum X Labs Achieves 99.93% Data Recovery in Qatacomb Quantum Cybersecurity Validation Using IonQ’s Quantum Computing Infrastructure",
-"url": "https://finance.yahoo.com/technology/ai/articles/quantum-x-labs-achieves-99-135500681.html?.tsrc=rss",
-"pub": "2026-11-16T13:55:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "eceb737f1ce9",
-"t": "NOW",
-"title": "Dentsu Reports Q3 Dip, Media Returns To Positive Territory In The Americas",
-"url": "https://www.mediapost.com/publications/article/419461/dentsu-reports-q3-dip-media-returns-to-positive-t.html?.tsrc=rss",
-"pub": "2026-11-16T13:54:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "5a016a0bcecf",
+"t": "",
+"title": "African Economies to End Year With High Rates as Fed Risks Loom",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/african-economies-to-end-year-with-high-rates-as-fed-risks-loom",
+"pub": "2026-11-17T04:15:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T04:25:02+00:00"
 },
 {
 "id": "ccc113740333",
@@ -10970,46 +11010,6 @@
 "url": "https://www.financialjuice.com/News/9854410/Irans-Foreign-Minister-Araghchi-entered-Oman---Fars-News.aspx?xy=rss",
 "pub": "2026-11-16T19:35:22+00:00",
 "src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "526033a16cef",
-"t": "",
-"title": "Iran’s Foreign Minister Araghchi entered Oman - Fars News",
-"url": "https://www.financialjuice.com/News/9854410/Irans-Foreign-Minister-Araghchi-entered-Oman---Fars-News.aspx",
-"pub": "2026-11-16T19:35:22+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "e21f16dde6ac",
-"t": "",
-"title": "Virgin Media O2 Downgraded by Moody’s on Turnaround Concerns",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/virgin-media-o2-downgraded-by-moody-s-on-turnaround-concerns",
-"pub": "2026-11-16T19:34:46+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "180058376934",
-"t": "",
-"title": "Kalshi Buys Securities Firm to Expand Into Stock Trading",
-"url": "https://www.wsj.com/finance/kalshi-buys-securities-firm-to-expand-into-stock-trading-8c1ade89?mod=rss_markets_main",
-"pub": "2026-11-16T19:33:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "17c236bd0365",
-"t": "",
-"title": "Retail Investors Trying To Buy Chip Dip: Mayuranki De",
-"url": "https://www.bloomberg.com/news/videos/2026-11-16/retail-investors-trying-to-buy-chip-dip-mayuranki-de-video",
-"pub": "2026-11-16T19:32:43+00:00",
-"src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-16T20:14:29+00:00"
 }
