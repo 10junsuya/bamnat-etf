@@ -183,55 +183,59 @@
   }
  },
  "HD": {
-  "p": "2분기 · 2026년 5~7월",
-  "tag": "+5.7%",
+  "p": "3분기 · 2026년 8~10월",
+  "tag": "+4.9%",
   "rows": [
    [
     "매출",
-    "478.6억 달러 (+5.7%)"
+    "434.0억 달러 (+4.9%)"
+   ],
+   [
+    "기존 매장 매출",
+    "+2.2% (미국 +2.2%)"
+   ],
+   [
+    "조정 주당순이익",
+    "3.86달러 (1년 전 3.74달러)"
    ],
    [
     "올해 목표",
-    "매출 +2.5~4.5% · 기존 매장 0~2%"
+    "매출 약 +4.5% · 기존 매장 약 +1.4%"
    ]
   ],
-  "note": "3분기 실적은 11월 17일 발표 예정이에요.",
+  "note": "기존 매장 매출이 2.2% 늘며 매출이 예상(428.0억~428.1억 달러, LSEG·Investing.com)보다 많았어요. 분기 전망은 내지 않고 올해 전망을 매출 약 +4.5%로 새로 정했어요.",
   "src": [
    [
-    "홈디포 2분기 실적",
-    "https://corporate.homedepot.com/news/earnings/home-depot-announces-second-quarter-2026-earnings"
+    "홈디포 3분기 실적 발표",
+    "https://www.prnewswire.com/news-releases/the-home-depot-announces-third-quarter-fiscal-2026-results-updates-fiscal-2026-guidance-302941189.html"
    ],
    [
-    "2분기 분석(Beancount)",
-    "https://beancount.io/blog/2026/08/30/home-depot-q2-2026-earnings-analysis"
+    "실적·예상 비교(Investing.com)",
+    "https://ca.investing.com/news/earnings/home-depot-earnings-beat-by-002-revenue-topped-estimates-4963375"
    ],
    [
-    "2분기 콜(Nasdaq)",
-    "https://www.nasdaq.com/articles/home-depot-q2-earnings-call-highlights"
-   ],
-   [
-    "홈디포 발표 일정(FinanceCalendar)",
-    "https://www.financecalendar.com/event/hd-earnings-november-2026/"
+    "CNBC 보도(LSEG 예상)",
+    "https://www.cnbc.com/2026/11/17/home-depot-hd-q3-earnings-2026.html"
    ]
   ],
   "chart": {
    "cur": "usd",
-   "prev": [
-    "1년 전",
-    45280
-   ],
    "now": [
-    "5~7월",
-    47860
+    "8~10월",
+    43398
    ],
-   "est": null,
+   "est": 42800,
    "next": {
-    "label": "8~10월",
+    "label": "11~1월",
     "guide": null,
     "cons": null,
-    "when": "2026년 11월 17일 (예상)",
-    "gtext": "분기 전망은 안 내요 — 올해 매출 2.5~4.5% 성장"
-   }
+    "when": "2027년 2월 말 (예상)",
+    "gtext": "분기 전망은 안 내요 — 올해 매출 약 +4.5%, 기존 매장 약 +1.4%"
+   },
+   "prev": [
+    "1년 전",
+    41352
+   ]
   }
  },
  "CVX": {

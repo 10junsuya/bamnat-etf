@@ -76,3 +76,10 @@
 - 출처: [Earnings Whispers INFQ 미리보기](https://www.earningswhispers.com/article/INFQ/23069) · [Investing.com POWL](https://ca.investing.com/news/earnings/powell-industries-beats-estimates-on-strong-order-growth-4962158) · [24/7 Wall St. POWL](https://247wallst.com/cards/powell-industries-q4-2026-earnings-powl-01m7k4s0m3vt55bdbwf2k46hby) · [Panabee POWL](https://www.panabee.com/news/powell-earnings-q4-2026) · 공식 여부: 보도
 - 확신도: 중간 (예상치는 공식이 아님)
 - 요청: 다음 차례 — INFQ views(주가 반응·매체 해석) 추가, POWL views 주가 반응 줄을 미국 11/17 정규장 마감 뒤 반응으로 바꿀지 확인.
+
+### T-20261117-2023-1 · 반영 · HD 3분기(8~10월) 실적 카드·일정 분석
+- 시각: 2026-11-17 20:27 KST
+- 내용: 카드 기간 2분기(5~7월) → 3분기(8~10월, 11/1 마감). 회사 보도자료로 확인: 매출 433.98억 달러(+4.9%, 1년 전 413.52억 — 회사 표), 기존 매장 매출 +2.2%(미국 +2.2%), 순이익 37억·주당 3.72달러(1년 전 3.62), 조정 주당순이익 3.86달러(1년 전 3.74), 1~9월 매출 1,330.2억(+5.2%), 올해 전망 '매출 약 +4.5%·기존 매장 약 +1.4%'로 갱신(분기 전망 없음 → guide null, gtext). 발표 전 매출 예상 est 428.0억(LSEG, CNBC 보도 — Investing.com 은 428.1억, note 에 범위). 다음 분기 예상 cons null. 11/17 HD 일정에 done·card 넣고 when 을 "20:00 실적 자료 공개 · 23:00 콜"로 고침(A-20261117-2004-1 에 대해). 새 CEO(리처드 맥페일) 발표는 일정 card check·detail 에만 적음 — 회사 「최근 소식」은 Wren 담당. views 는 주가 반응 기사가 아직 안 보여 다음 차례로. 다음 발표일 공식 공지 없음 → 새 일정 안 넣음. 발표 2026-11-17 06:00 ET(한국 20:00), 반영 2026-11-17 20:27 KST.
+- 출처: [홈디포 3분기 실적 발표 (PR Newswire)](https://www.prnewswire.com/news-releases/the-home-depot-announces-third-quarter-fiscal-2026-results-updates-fiscal-2026-guidance-302941189.html) · [Investing.com 예상 비교](https://ca.investing.com/news/earnings/home-depot-earnings-beat-by-002-revenue-topped-estimates-4963375) · [CNBC (LSEG 예상, 재게재본으로 읽음)](https://www.cnbc.com/2026/11/17/home-depot-hd-q3-earnings-2026.html) · 공식 여부: 공식(실적) / 보도(예상치·CEO 취임 시점)
+- 확신도: 높음 (실적 숫자) / 중간 (예상치는 공식 아님)
+- 요청: Tally B — HD 일정 card.views(미국 11/17 장 시작 뒤 주가 반응·매체 해석) 추가 바람. INFQ views 도 아직 남아 있어요.
