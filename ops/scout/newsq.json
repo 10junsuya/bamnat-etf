@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-17 16:44",
-"rot": 104,
+"updated_kst": "2026-11-17 16:58",
+"rot": 164,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "실패 HTTPError",
+"Reuters": "25건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "9c0227031b2e",
+"t": "AAPL",
+"title": "Apple faces French trial over alleged planned obsolescence of iPhones: source",
+"url": "https://finance.yahoo.com/technology/articles/apple-faces-french-trial-over-074746257.html?.tsrc=rss",
+"pub": "2026-11-17T07:47:46+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T07:58:50+00:00"
+},
+{
+"id": "9f80f3c91c8b",
+"t": "SPCX",
+"title": "Why Catching SpaceX Is Getting Harder: Analyst Calls AST’s 2-Year Rocket Plan ‘Totally Unrealistic’, Rocket Lab Is Still Building One",
+"url": "https://stocktwits.com/news-articles/markets/equity/why-catching-spacex-harder-analyst-ast-2-year-rocket-plan-totally-unrealistic-rocketlab-still-building/cNbanf9R9W5?.tsrc=rss",
+"pub": "2026-11-17T07:45:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T07:58:50+00:00"
+},
 {
 "id": "b5e404e5f17f",
 "t": "NVDA",
@@ -52,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T07:44:00+00:00"
+},
+{
+"id": "ecaa3c6c4206",
+"t": "INSM",
+"title": "Insmed Sees BRINSUPRI Reaching $7 Billion in Peak Sales, Expects Cash-Flow Positive Year Ahead",
+"url": "https://www.marketbeat.com/instant-alerts/event-insmed-sees-brinsupri-reaching-7-billion-in-peak-sales-expects-cash-flow-positive-year-ahead-2026-11-17/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-17T07:12:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T07:58:50+00:00"
 },
 {
 "id": "8541a4aaddef",
@@ -962,6 +992,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T02:14:00+00:00"
+},
+{
+"id": "e9cf068c40c8",
+"t": "META",
+"title": "Shopify Just Dropped 13% in a Month While Taking “Nearly Half” of US E-Commerce Growth",
+"url": "https://www.tikr.com/blog/shopify-just-dropped-13-in-a-month-while-taking-nearly-half-of-us-e-commerce-growth?ref=yahoofinance&tlnk=yf-261117-f7fg78pg&.tsrc=rss",
+"pub": "2026-11-17T01:47:30+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T07:58:50+00:00"
 },
 {
 "id": "cf996e917a3e",
@@ -7974,46 +8014,6 @@
 "seen": "2026-11-16T18:25:24+00:00"
 },
 {
-"id": "5dab9ee9250c",
-"t": "SPCX",
-"title": "XRP Price Struggles Below $1: Anthropic IPO and Nvidia Earnings Could Trigger Another 33% Drop",
-"url": "https://99bitcoins.com/news/altcoins/xrp-price-prediction-floor-anthropic-ipo/?.tsrc=rss",
-"pub": "2026-11-16T14:22:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "b237ca06feb0",
-"t": "INTC",
-"title": "How Much Could a 62-Year-Old Save Moving $900,000 of Intel Stock Out of a 401(k) With the NUA Rule?",
-"url": "https://247wallst.com/investing/2026/11/16/how-much-could-a-62-year-old-save-moving-900000-of-intel-stock-out-of-a-401k-with-the-nua-rule/?.tsrc=rss",
-"pub": "2026-11-16T14:22:32+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "74003d327ce2",
-"t": "SPCX",
-"title": "Is Apple Losing Its Memory?",
-"url": "https://www.fool.com/investing/2026/11/16/is-apple-losing-its-memory/?.tsrc=rss",
-"pub": "2026-11-16T14:20:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "722ae5338f3f",
-"t": "NVDA",
-"title": "Bitcoin Tumbles Ahead Of Anthropic IPO. Is It Paralleling Its SpaceX Sell Off?",
-"url": "https://finance.yahoo.com/m/c9185eb8-fa45-3450-8259-46ab95138cc2/bitcoin-tumbles-ahead-of.html?.tsrc=rss",
-"pub": "2026-11-16T14:19:56+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
 "id": "1d3087d7a8e7",
 "t": "",
 "title": "UK’s Latest Jobs Report Is a Mixed Bag With Wage Growth Slowing, Payrolls Cut",
@@ -8032,6 +8032,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T07:44:00+00:00"
+},
+{
+"id": "b458749d579b",
+"t": "",
+"title": "Blood pressure drug recalled nationwide over possible metal contamination",
+"url": "https://www.foxbusiness.com/economy/blood-pressure-drug-recalled-nationwide-over-possible-metal-contamination",
+"pub": "2026-11-17T07:37:08+00:00",
+"src": "Fox Business",
+"kind": "market",
+"seen": "2026-11-17T07:58:50+00:00"
 },
 {
 "id": "aea11d06e459",
@@ -8202,6 +8212,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-17T07:44:00+00:00"
+},
+{
+"id": "97cc6591bc82",
+"t": "",
+"title": "Malaysia Airlines parent says focus is on own growth, sidesteps AirAsia questions - Reuters",
+"url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNWXZtVzVQTlVWd0haM2Yzd3NuNkNpbGt1WEI0eUQ3QVg0V3oxNC1uNkw0VlY1TUpJZGlrMEd1em5XSjVRZVdqQjdJODVNVV9TMlBzcFQzZUp2NGU4Ny1BZGNhYmUwLVBqanBDTmNpb1NCWGhiWGRxSkFRa3BNcWVzanhLQU5uOFAxc0s1LVdnbGhoYkhkcFJaaG93SldkY0xsX3VXcktXbGVHQlRHcHd3UGtNZzNSMjMxOFJOX0h2ak54X3RlMzRaS2pUM3lMUQ?oc=5",
+"pub": "2026-11-17T06:46:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T07:58:50+00:00"
 },
 {
 "id": "2221e429512c",
@@ -10494,6 +10514,16 @@
 "seen": "2026-11-16T22:26:27+00:00"
 },
 {
+"id": "cd5106737af6",
+"t": "",
+"title": "U.S. Stocks Extend Slide on Nvidia, China Fears",
+"url": "https://www.wsj.com/finance/stocks/u-s-stocks-extend-slide-on-nvidia-china-fears-ea169587?mod=rss_markets_main",
+"pub": "2026-11-16T22:06:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-17T07:58:50+00:00"
+},
+{
 "id": "018b3812e80a",
 "t": "",
 "title": "Pizza Hut Sells $1 Billion of Bonds Tied to Franchise Agreements",
@@ -10982,36 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "daf8b1f5b853",
-"t": "",
-"title": "ES CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854517/ES-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "d617efcad984",
-"t": "",
-"title": "WTI CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854516/WTI-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "60d2111790e4",
-"t": "",
-"title": "WTI CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854516/WTI-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
 }
 ]
 }
