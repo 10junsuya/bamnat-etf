@@ -276,14 +276,25 @@ def main():
             x["a"], x["p"] = x["hist"][-1], x["hist"][-2]  # 직전 회의 때 금리
             return x
         run("fomc", fomc)
-        run("us10y", lambda: market(fred("DGS10", 800), 2, "FRED DGS10"))
-        run("us2y", lambda: market(fred("DGS2", 800), 2, "FRED DGS2"))
+        # FRED는 하루 늦게 올라와요 → 공식 기록(FRED) 뒤에 그 뒤 날짜는 야후 값을 이어 붙여 거의 실시간으로 (2026-11-17 대표 승인)
+        def fresh(sid, ysym, dec, src):
+            o = fred(sid, 800)
+            try:
+                y = [(dt.datetime.fromtimestamp(t, ET).date().isoformat(), c) for t, c in yahoo(ysym, "1mo", "1d")]
+            except Exception:  # noqa: BLE001 — 야후가 안 되면 FRED 값만 (오류로 치지 않아요)
+                y = []
+            last = o[-1][0] if o else ""
+            add = [(d, v) for d, v in y if d > last]
+            x = market(o + add, dec, src + (f" · {add[0][0][5:]}부터 야후 {ysym}" if add else ""))
+            return x
+        run("us10y", lambda: fresh("DGS10", "^TNX", 2, "FRED DGS10"))
+        run("us2y", lambda: fresh("DGS2", "2YY=F", 2, "FRED DGS2"))
         def spread():
-            a, b = dict(fred("DGS10", 800)), dict(fred("DGS2", 800))
-            return market([(d, a[d] - b[d]) for d in sorted(a) if d in b], 2, "FRED DGS10−DGS2")
+            a, b = dict(ind["us10y"]["series"]), dict(ind["us2y"]["series"])
+            return market([(d, a[d] - b[d]) for d in sorted(a) if d in b], 2, "10년물 − 2년물 (위 두 값)")
         run("spread", spread)
-        run("vix", lambda: market(fred("VIXCLS", 800), 1, "FRED VIXCLS (CBOE)"))
-        run("wti", lambda: market(fred("DCOILWTICO", 800), 1, "FRED DCOILWTICO (EIA)"))
+        run("vix", lambda: fresh("VIXCLS", "^VIX", 1, "FRED VIXCLS (CBOE)"))
+        run("wti", lambda: fresh("DCOILWTICO", "CL=F", 1, "FRED DCOILWTICO (EIA)"))
     else:
         errors.append("FRED_API_KEY 없음")
     if ECOS_KEY:
