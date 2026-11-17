@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-17 14:44",
-"rot": 166,
+"updated_kst": "2026-11-17 15:15",
+"rot": 45,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "27건",
+"Reuters": "31건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "2803bb96dca9",
+"t": "NVDA",
+"title": "ASUS Ramps Up NVIDIA Vera Rubin NVL72 Shipments in Q4 Amid Strong Demand, Showcasing AI Factory Reference Architecture at SC26",
+"url": "https://finance.yahoo.com/technology/ai/articles/asus-ramps-nvidia-vera-rubin-060800264.html?.tsrc=rss",
+"pub": "2026-11-17T06:08:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T06:15:28+00:00"
+},
+{
+"id": "4195f69f2b41",
+"t": "NVDA",
+"title": "Watch these Chinese chip stocks as U.S. tightens access to Nvidia hardware",
+"url": "https://finance.yahoo.com/technology/ai/articles/watch-chinese-chip-stocks-u-060032967.html?.tsrc=rss",
+"pub": "2026-11-17T06:00:32+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T06:15:28+00:00"
+},
+{
+"id": "80e396b41b79",
+"t": "RTX",
+"title": "RTX's Collins Aerospace breaks ground on new propeller MRO facility in India",
+"url": "https://finance.yahoo.com/technology/articles/rtxs-collins-aerospace-breaks-ground-060000502.html?.tsrc=rss",
+"pub": "2026-11-17T06:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T06:15:28+00:00"
+},
+{
+"id": "9ecc70e0817b",
+"t": "NVDA",
+"title": "Why GXO Thinks a Recession Could Actually Help It",
+"url": "https://www.fool.com/investing/2026/11/17/why-gxo-thinks-a-recession-could-actually-help-it/?.tsrc=rss",
+"pub": "2026-11-17T05:50:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T06:15:28+00:00"
+},
 {
 "id": "96e226f91e96",
 "t": "NBIS",
@@ -2332,6 +2372,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T23:09:28+00:00"
+},
+{
+"id": "ba630f739b50",
+"t": "INTC",
+"title": "Nvidia, Sandisk, SpaceX, L3Harris, Strategy, Tyson, and More Stocks That Explain Today’s Market",
+"url": "https://finance.yahoo.com/m/a7938ba3-f917-3e6f-b865-2195ea15d9d5/nvidia%2C-sandisk%2C-spacex%2C.html?.tsrc=rss",
+"pub": "2026-11-16T21:26:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T06:15:28+00:00"
 },
 {
 "id": "de4ed1e14186",
@@ -7964,54 +8014,94 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "f04f8d4849a7",
-"t": "AMD",
-"title": "AMD Completes Acquisition of World Labs",
-"url": "https://finance.yahoo.com/technology/ai/articles/amd-completes-acquisition-world-labs-140500929.html?.tsrc=rss",
-"pub": "2026-11-16T14:05:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "250a2b9eeac2",
+"t": "",
+"title": "Griffiths: Seeing Confidence Return to Mideast Travel",
+"url": "https://www.bloomberg.com/news/videos/2026-11-17/griffiths-seeing-confidence-return-to-mideast-travel-video",
+"pub": "2026-11-17T06:11:41+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
 },
 {
-"id": "40e710fa9ee7",
-"t": "TSLA",
-"title": "Tesla Sells Cybercabs To The Public. It Might Be Because Of A Bet With A YouTuber.",
-"url": "https://finance.yahoo.com/m/40779e8f-2539-3b70-a13d-63c13ba203c1/tesla-sells-cybercabs-to-the.html?.tsrc=rss",
-"pub": "2026-11-16T14:04:54+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "1389770229ec",
+"t": "",
+"title": "China Stock Bull Sees Up to 15% Upside on Earnings, Valuation",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/china-stock-bull-ubs-sees-upside-msci-china-index-earnings-valuation",
+"pub": "2026-11-17T06:06:52+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
 },
 {
-"id": "1f7100044a06",
-"t": "AMZN",
-"title": "Amazon's AWS Strikes $5B Data Center Deal With Blackstone Digital — A Look At Some Key Highlights",
-"url": "https://stocktwits.com/news-articles/markets/equity/amazon-s-aws-strikes-5-b-data-center-deal-with-blackstone-digital-a-look-at-some-key-highlights/cNb7pf4R9gb?.tsrc=rss",
-"pub": "2026-11-16T14:04:35+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "5483751743c0",
+"t": "",
+"title": "China finance ministry: both sides greet moves by Bank of Canada and People’s Bank of China to enact local currency swap deal",
+"url": "https://www.financialjuice.com/News/9855155/China-finance-ministry-both-sides-greet-moves-by-Bank-of-Canada-and-Peoples-Bank-of-China-to-enact-local-currency-swap-deal.aspx?xy=rss",
+"pub": "2026-11-17T05:53:06+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
 },
 {
-"id": "9d83c200094a",
-"t": "CME",
-"title": "Silver prices today, Monday, November 16, 2026: Lowest open price in over a year",
-"url": "https://finance.yahoo.com/personal-finance/investing/article/silver-prices-today-monday-november-16-2026-lowest-open-price-in-over-a-year-140403715.html?.tsrc=rss",
-"pub": "2026-11-16T14:04:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "d65a85ec7dd7",
+"t": "",
+"title": "Jp Morgan upgrades MSCI UAE index to overweight from neutral",
+"url": "https://www.financialjuice.com/News/9855154/Jp-Morgan-upgrades-MSCI-UAE-index-to-overweight-from-neutral.aspx?xy=rss",
+"pub": "2026-11-17T05:52:50+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
 },
 {
-"id": "802945da354e",
-"t": "NVDA",
-"title": "RMX to Deploy NVIDIA H200 GPU Systems at Its Austin Office",
-"url": "https://finance.yahoo.com/technology/ai/articles/rmx-deploy-nvidia-h200-gpu-140400517.html?.tsrc=rss",
-"pub": "2026-11-16T14:04:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "1c702286fc99",
+"t": "",
+"title": "China finance ministry: China, Canada welcome qualified Canadian firms to issue panda bonds on Chinese exchange",
+"url": "https://www.financialjuice.com/News/9855153/China-finance-ministry-China-Canada-welcome-qualified-Canadian-firms-to-issue-panda-bonds-on-Chinese-exchange.aspx?xy=rss",
+"pub": "2026-11-17T05:52:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
+},
+{
+"id": "75e0be3551b8",
+"t": "",
+"title": "China finance ministry: China, Canada welcome recent strides in trade talks, including further extension of pertinent arrangements",
+"url": "https://www.financialjuice.com/News/9855152/China-finance-ministry-China-Canada-welcome-recent-strides-in-trade-talks-including-further-extension-of-pertinent-arrangements.aspx?xy=rss",
+"pub": "2026-11-17T05:51:42+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
+},
+{
+"id": "29d5ec60aefb",
+"t": "",
+"title": "China finance ministry: China and Canada target meaningful mutually beneficial trade results before leaders' meeting at APEC - statement",
+"url": "https://www.financialjuice.com/News/9855151/China-finance-ministry-China-and-Canada-target-meaningful-mutually-beneficial-trade-results-before-leaders-meeting-at-APEC---statement.aspx?xy=rss",
+"pub": "2026-11-17T05:51:33+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
+},
+{
+"id": "29baf5ccc145",
+"t": "",
+"title": "Train and car traffic on Crimean bridge halted: Russian transport ministry",
+"url": "https://www.financialjuice.com/News/9855150/Train-and-car-traffic-on-Crimean-bridge-halted-Russian-transport-ministry.aspx?xy=rss",
+"pub": "2026-11-17T05:51:25+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
+},
+{
+"id": "739c72c7a0e2",
+"t": "",
+"title": "India civil aviation minister: jet fuel demand to increase to 14.2 million tons a year by 2030 from 9 million now",
+"url": "https://www.financialjuice.com/News/9855149/India-civil-aviation-minister-jet-fuel-demand-to-increase-to-142-million-tons-a-year-by-2030-from-9-million-now.aspx?xy=rss",
+"pub": "2026-11-17T05:48:10+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
 },
 {
 "id": "34e556541fbe",
@@ -8022,6 +8112,26 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T05:44:14+00:00"
+},
+{
+"id": "216182b5dff3",
+"t": "",
+"title": "NBIM, GIC, BlackRock Said to Invest in Bajaj Finance Share Sale",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/nbim-gic-blackrock-fmr-capital-icici-hdfc-invest-bajaj-finance-share-sale",
+"pub": "2026-11-17T05:39:32+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
+},
+{
+"id": "1d39a17f816a",
+"t": "",
+"title": "Malaysia Inks Deal With France to Develop Critical Minerals",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/malaysia-deal-france-to-develop-critical-minerals-europe-mining",
+"pub": "2026-11-17T05:38:30+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T06:15:28+00:00"
 },
 {
 "id": "919217dfa009",
@@ -10902,116 +11012,6 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-16T20:58:36+00:00"
-},
-{
-"id": "3bc0907720e1",
-"t": "",
-"title": "Goldman Forecasts Gold to Take Two Years to Recapture All-Time Highs",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/goldman-forecasts-gold-to-take-two-years-to-recapture-all-time-highs",
-"pub": "2026-11-16T20:15:45+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T20:58:36+00:00"
-},
-{
-"id": "3c41e3524371",
-"t": "",
-"title": "Active Delivering Alpha In Bond Fund: Vanguard's Righi",
-"url": "https://www.bloomberg.com/news/videos/2026-11-16/active-delivering-alpha-in-bond-fund-vanguard-s-righi-video",
-"pub": "2026-11-16T20:07:16+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "475b29dc2de5",
-"t": "",
-"title": "Financial stocks slide as online banking outages reported at several large US banks",
-"url": "https://www.foxbusiness.com/markets/financial-stocks-slide-online-banking-outages-reported-several-large-us-banks",
-"pub": "2026-11-16T20:06:00+00:00",
-"src": "Fox Business",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "8559f1a825f4",
-"t": "",
-"title": "RBNZ FSR: Global financial stability risks have continued to increase, raising the chance of a significant shock affecting New Zealand",
-"url": "https://www.financialjuice.com/News/9854437/RBNZ-FSR-Global-financial-stability-risks-have-continued-to-increase-raising-the-chance-of-a-significant-shock-affecting-New-Zealand.aspx?xy=rss",
-"pub": "2026-11-16T20:03:28+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "0877fcf29c3e",
-"t": "",
-"title": "RBNZ FSR: Global financial stability risks have continued to increase, raising the chance of a significant shock affecting New Zealand",
-"url": "https://www.financialjuice.com/News/9854437/RBNZ-FSR-Global-financial-stability-risks-have-continued-to-increase-raising-the-chance-of-a-significant-shock-affecting-New-Zealand.aspx",
-"pub": "2026-11-16T20:03:28+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "fb3127b898d2",
-"t": "",
-"title": "RBNZ FSR: Deposit takers well placed to manage financial risks",
-"url": "https://www.financialjuice.com/News/9854436/RBNZ-FSR-Deposit-takers-well-placed-to-manage-financial-risks.aspx?xy=rss",
-"pub": "2026-11-16T20:03:15+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "33acfcd3eb6b",
-"t": "",
-"title": "RBNZ FSR: Deposit takers well placed to manage financial risks",
-"url": "https://www.financialjuice.com/News/9854436/RBNZ-FSR-Deposit-takers-well-placed-to-manage-financial-risks.aspx",
-"pub": "2026-11-16T20:03:15+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "8296dba9eec7",
-"t": "",
-"title": "Reserve Bank of NZ FSR: Domestic financial stress has generally eased from its peak last year but remains uneven.",
-"url": "https://www.financialjuice.com/News/9854434/Reserve-Bank-of-NZ-FSR-Domestic-financial-stress-has-generally-eased-from-its-peak-last-year-but-remains-uneven.aspx?xy=rss",
-"pub": "2026-11-16T20:02:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "9739b16a397e",
-"t": "",
-"title": "Reserve Bank of NZ FSR: Domestic financial stress has generally eased from its peak last year but remains uneven.",
-"url": "https://www.financialjuice.com/News/9854434/Reserve-Bank-of-NZ-FSR-Domestic-financial-stress-has-generally-eased-from-its-peak-last-year-but-remains-uneven.aspx",
-"pub": "2026-11-16T20:02:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "090342c6dd5d",
-"t": "",
-"title": "RBNZ FSR: Sectors reliant on discretionary spending face challenges.",
-"url": "https://www.financialjuice.com/News/9854433/RBNZ-FSR-Sectors-reliant-on-discretionary-spending-face-challenges.aspx?xy=rss",
-"pub": "2026-11-16T20:02:37+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "33f698c7b8d9",
-"t": "",
-"title": "RBNZ FSR: Sectors reliant on discretionary spending face challenges.",
-"url": "https://www.financialjuice.com/News/9854433/RBNZ-FSR-Sectors-reliant-on-discretionary-spending-face-challenges.aspx",
-"pub": "2026-11-16T20:02:37+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
 }
 ]
 }
