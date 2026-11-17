@@ -1,18 +1,68 @@
 {
-"updated_kst": "2026-11-17 14:13",
-"rot": 46,
+"updated_kst": "2026-11-17 14:30",
+"rot": 106,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "31건",
+"Reuters": "28건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "07cfac28f799",
+"t": "NVDA",
+"title": "U.S. Commerce Dept, DOJ say they investigated Nvidia partner Megaspeed in 2024",
+"url": "https://finance.yahoo.com/technology/ai/articles/u-commerce-dept-doj-investigated-051834040.html?.tsrc=rss",
+"pub": "2026-11-17T05:18:34+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:30:52+00:00"
+},
+{
+"id": "8b8a84d36ddd",
+"t": "NVDA",
+"title": "Tech elite lament Jensen Huang's fall, celebrate his AI leadership",
+"url": "https://finance.yahoo.com/technology/ai/articles/tech-elite-lament-jensen-huangs-051650955.html?.tsrc=rss",
+"pub": "2026-11-17T05:16:50+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:30:52+00:00"
+},
+{
+"id": "7729fb0396ab",
+"t": "AMD",
+"title": "AMD Stock Gets A New EPYC Launch And Quantum Computing Push",
+"url": "https://finance.yahoo.com/markets/stocks/articles/amd-stock-gets-epyc-launch-051204297.html?.tsrc=rss",
+"pub": "2026-11-17T05:12:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:30:52+00:00"
+},
+{
+"id": "6b1120276d22",
+"t": "CRWV",
+"title": "What Is CoreWeave (CRWV) Signaling With Insurers Offering Unlimited AI Debt?",
+"url": "https://finance.yahoo.com/technology/ai/articles/coreweave-crwv-signaling-insurers-offering-051144929.html?.tsrc=rss",
+"pub": "2026-11-17T05:11:44+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:30:52+00:00"
+},
+{
+"id": "10d9fc538fbc",
+"t": "NVDA",
+"title": "Nvidia faces alarming revenue questions before earnings",
+"url": "https://www.thestreet.com/investing/nvidia-faces-alarming-revenue-questions-before-earnings?.tsrc=rss",
+"pub": "2026-11-17T05:03:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:30:52+00:00"
+},
 {
 "id": "67db5316042f",
 "t": "TSLA",
@@ -42,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T05:13:52+00:00"
+},
+{
+"id": "72d8f8680891",
+"t": "NVDA",
+"title": "New images emerge of suspected spy linked to Nvidia’s ex-boss",
+"url": "https://www.cnn.com/2026/11/16/business/video/ebof-will-ripley-alice-huang-affair-nvidia-jensen-huang-hnk-digvid?cid=external-feeds_iluminar_yahoo&.tsrc=rss",
+"pub": "2026-11-17T04:41:51+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:30:52+00:00"
 },
 {
 "id": "706625ae0b8d",
@@ -1532,6 +1592,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T23:09:28+00:00"
+},
+{
+"id": "451a4d721c19",
+"t": "SKHY",
+"title": "A $1 Billion Reason Why SKHY Stock Is in Focus Today",
+"url": "https://www.barchart.com/story/news/8864035/a-1-billion-reason-why-skhy-stock-is-in-focus-today?.tsrc=rss",
+"pub": "2026-11-16T22:28:41+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T05:30:52+00:00"
 },
 {
 "id": "e5557d7a7b32",
@@ -7944,74 +8014,14 @@
 "seen": "2026-11-16T21:39:56+00:00"
 },
 {
-"id": "53f5fe83ba54",
-"t": "TSLA",
-"title": "unspun Appoints Chuck Shehadi as Chief Executive Officer",
-"url": "https://finance.yahoo.com/technology/articles/unspun-appoints-chuck-shehadi-chief-140000509.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "a17446136cdd",
-"t": "CIEN",
-"title": "Ciena Appoints Greg Friesen as Executive Vice President and Chief Product Officer",
-"url": "https://finance.yahoo.com/technology/articles/ciena-appoints-greg-friesen-executive-140000132.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "7652457f18c3",
-"t": "NVDA",
-"title": "Buy Nvidia stock or wait? A guide to making the call on any stock.",
-"url": "https://finance.yahoo.com/personal-finance/investing/article/buy-nvidia-stock-or-wait-a-guide-to-making-the-call-on-any-stock-140000333.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "d0140afffdba",
-"t": "NVDA",
-"title": "Meet the 31-Year-Old Short Seller Who Called Out Jensen Huang’s ‘China Problem’ in May",
-"url": "https://www.entrepreneur.com/business-news/meet-the-31-year-old-short-seller-who-called-out-jensen-huangs-china-problem-in-may?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "fc026fe3b78f",
-"t": "NVDA",
-"title": "New Research Challenges GPU Utilization as Measure of Inference Infrastructure",
-"url": "https://finance.yahoo.com/technology/ai/articles/research-challenges-gpu-utilization-measure-140000946.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "f459d0ae006a",
-"t": "NOC",
-"title": "P-1 AI Appoints Retired Brig. Gen. Matt Isler as General Manager for Aerospace and Defense",
-"url": "https://finance.yahoo.com/technology/ai/articles/p-1-ai-appoints-retired-140000415.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "e5cf5dcf98de",
-"t": "AMD",
-"title": "TensorWave Announces Agreement with OpenAI to Deliver More Than 450MW of AMD Powered AI Infrastructure",
-"url": "https://finance.yahoo.com/technology/ai/articles/tensorwave-announces-agreement-openai-deliver-140000669.html?.tsrc=rss",
-"pub": "2026-11-16T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "cca4c40ca00a",
+"t": "",
+"title": "Aluminum Squeeze Intensifies With Traders Scrambling for Metal",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/aluminum-squeeze-intensifies-lme-traders-scrambling-for-metal",
+"pub": "2026-11-17T05:24:17+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T05:30:52+00:00"
 },
 {
 "id": "18c019f76475",
@@ -11000,16 +11010,6 @@
 "url": "https://www.bloomberg.com/news/videos/2026-11-16/blackrock-pushing-for-new-etif-hybrid-video",
 "pub": "2026-11-16T20:01:46+00:00",
 "src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "82db09102d24",
-"t": "",
-"title": "RBNZ Financial Stability Report: Financial system remains resilient as global risks increase.",
-"url": "https://www.financialjuice.com/News/9854427/RBNZ-Financial-Stability-Report-Financial-system-remains-resilient-as-global-risks-increase.aspx?xy=rss",
-"pub": "2026-11-16T20:01:44+00:00",
-"src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T20:14:29+00:00"
 }
