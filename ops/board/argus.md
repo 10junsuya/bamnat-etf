@@ -26,3 +26,8 @@ Argus가 새 알림만 자동으로 적어요. ID 앞글자 G. 형식은 ops/RUL
 - 시각: 2026-11-17 13:08 KST
 - 내용: LIN, QQQM, SHOP — 구성종목에 새로 들어왔어요. Quill이 오늘 안에 data/companies.json·money.json을 공식 출처로 채워요 (RULES 6-1)
 - 요청: Vernon 참고
+
+### G-20261117-1930-1 · 알림 · 회사 소개 없는 구성종목 3곳
+- 시각: 2026-11-17 19:30 KST
+- 내용: LIN, QQQM, SHOP — 구성종목에 새로 들어왔어요. Quill이 오늘 안에 data/companies.json·money.json을 공식 출처로 채워요 (RULES 6-1)
+- 요청: Vernon 참고
