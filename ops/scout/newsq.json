@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-17 10:11",
-"rot": 44,
+"updated_kst": "2026-11-17 10:14",
+"rot": 104,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "28건",
+"Reuters": "30건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "5d6000c67d4d",
+"t": "NVDA",
+"title": "This Is a Huge Week for the Stock Market: Nvidia Earnings, Fed Minutes, and Anthropic’s IPO",
+"url": "https://www.fool.com/investing/2026/11/16/this-is-a-huge-week-for-the-stock-market-nvidia-earnings-fed-minutes-and-anthropic-s-ipo/?.tsrc=rss",
+"pub": "2026-11-17T01:10:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
+},
+{
+"id": "3c4164082b68",
+"t": "AVGO",
+"title": "Why Broadcom Stock Got Mashed on Monday",
+"url": "https://www.fool.com/investing/2026/11/16/why-broadcom-stock-got-mashed-on-monday/?.tsrc=rss",
+"pub": "2026-11-17T01:04:03+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
+},
+{
+"id": "c819e5b108d8",
+"t": "NVDA",
+"title": "Wall Street futures muted as Nvidia earnings loom amid AI jitters",
+"url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-futures-muted-nvidia-010312790.html?.tsrc=rss",
+"pub": "2026-11-17T01:03:12+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
+},
+{
+"id": "95be016dc6ce",
+"t": "CVX",
+"title": "Chevron and Texaco give drivers a reason to skip Costco gas",
+"url": "https://www.thestreet.com/retail/chevron-texaco-offers-thanksgiving-gas-deal-to-rival-costco?.tsrc=rss",
+"pub": "2026-11-17T01:03:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
+},
 {
 "id": "6d233b9c627b",
 "t": "TSLA",
@@ -32,6 +72,36 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "5d5d20c9f965",
+"t": "MA",
+"title": "Mastercard enables debit cardholders to get paid as easily as they pay",
+"url": "https://finance.yahoo.com/small-business/articles/mastercard-enables-debit-cardholders-paid-010000294.html?.tsrc=rss",
+"pub": "2026-11-17T01:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
+},
+{
+"id": "afe091470434",
+"t": "MA",
+"title": "Mastercard Enables Debit Cardholders to Get Paid as Easily as They Pay",
+"url": "https://finance.yahoo.com/small-business/articles/mastercard-enables-debit-cardholders-paid-010000340.html?.tsrc=rss",
+"pub": "2026-11-17T01:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
+},
+{
+"id": "6a6ededb8335",
+"t": "NVDA",
+"title": "Elon Musk Wants Jensen Huang Back at Nvidia. Here’s What’s at Stake for SpaceX",
+"url": "https://www.fool.com/investing/2026/11/16/elon-musk-wants-jensen-huang-back-at-nvidia-here-s-what-s-at-stake-for-spacex/?.tsrc=rss",
+"pub": "2026-11-17T00:59:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
 },
 {
 "id": "45ef638c38ce",
@@ -172,6 +242,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T00:44:15+00:00"
+},
+{
+"id": "01ff677d4f70",
+"t": "GS",
+"title": "Capstone Energy+ Q2 Earnings Call Highlights",
+"url": "https://www.marketbeat.com/instant-alerts/transcript-capstone-energy-q2-earnings-call-highlights-2026-11-16/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-17T00:14:49+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
 },
 {
 "id": "6bcef2db5685",
@@ -542,6 +622,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T23:46:32+00:00"
+},
+{
+"id": "2d1d6866522b",
+"t": "HD",
+"title": "Retail Earnings: WMT, TGT, HD Set to Report This Week",
+"url": "https://finance.yahoo.com/markets/stocks/articles/retail-earnings-wmt-tgt-hd-230000690.html?.tsrc=rss",
+"pub": "2026-11-16T23:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
 },
 {
 "id": "a874c14d4a89",
@@ -2934,6 +3024,16 @@
 "seen": "2026-11-17T00:44:15+00:00"
 },
 {
+"id": "14a57b33d542",
+"t": "KO",
+"title": "Unusual Call Option Activity in Coca-Cola - Is KO Stock Undervalued or Overvalued?",
+"url": "https://www.barchart.com/story/news/8859763/unusual-call-option-activity-in-coca-cola-is-ko-stock-undervalued-or-overvalued?.tsrc=rss",
+"pub": "2026-11-16T18:30:03+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
+},
+{
 "id": "12ab1b567549",
 "t": "FDX",
 "title": "FedEx expands capacity at southern China air hub",
@@ -4722,6 +4822,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T16:20:07+00:00"
+},
+{
+"id": "77aacc61bbdc",
+"t": "HD",
+"title": "Nvidia and Anthropic Will Really Test the Stock Market. Only One Thing Is Certain.",
+"url": "https://finance.yahoo.com/m/0f3607ce-6aef-3837-bb1f-110209c2e287/nvidia-and-anthropic-will.html?.tsrc=rss",
+"pub": "2026-11-16T16:05:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T01:14:40+00:00"
 },
 {
 "id": "6faa0b4b13f9",
@@ -7904,114 +8014,14 @@
 "seen": "2026-11-16T14:26:19+00:00"
 },
 {
-"id": "6fa754c82c4a",
-"t": "PWR",
-"title": "Powerfleet Appoints Eddie Capel and John Strosahl to Board of Directors",
-"url": "https://finance.yahoo.com/technology/ai/articles/powerfleet-appoints-eddie-capel-john-130000858.html?.tsrc=rss",
-"pub": "2026-11-16T13:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "b9d117602439",
-"t": "PLTR",
-"title": "Digimarc Announces Board Refreshment to Build on Strategic Transformation and Support Next Phase of Growth",
-"url": "https://finance.yahoo.com/markets/stocks/articles/digimarc-announces-board-refreshment-build-130000164.html?.tsrc=rss",
-"pub": "2026-11-16T13:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "0a158f2078b6",
-"t": "IBM",
-"title": "Buy, Hold or Sell Everpure Stock Before Q3 Earnings Release?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/buy-hold-sell-everpure-stock-130000855.html?.tsrc=rss",
-"pub": "2026-11-16T13:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "fc66ef2f1af5",
-"t": "AMKR",
-"title": "Amkor Technology to Present at Upcoming Conferences",
-"url": "https://finance.yahoo.com/technology/articles/amkor-technology-present-upcoming-conferences-130000394.html?.tsrc=rss",
-"pub": "2026-11-16T13:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "81d4ea7cb960",
-"t": "CAT",
-"title": "Walmart Names Joe Creed to Board of Directors",
-"url": "https://finance.yahoo.com/markets/stocks/articles/walmart-names-joe-creed-board-130000387.html?.tsrc=rss",
-"pub": "2026-11-16T13:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "265f392697db",
-"t": "ADM",
-"title": "ADM Announces More Than $60 Million in Investments at Decatur Oilseed Facility",
-"url": "https://finance.yahoo.com/energy/articles/adm-announces-more-60-million-130000157.html?.tsrc=rss",
-"pub": "2026-11-16T13:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
-},
-{
-"id": "e635a4f8a764",
-"t": "STM",
-"title": "STMicroelectronics Announces Status of Common Share Repurchase Program",
-"url": "https://finance.yahoo.com/markets/stocks/articles/stmicroelectronics-announces-status-common-share-130000610.html?.tsrc=rss",
-"pub": "2026-11-16T13:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
-},
-{
-"id": "27fef36ac6e2",
-"t": "MRNA",
-"title": "Dr. Robert Langer, Co-Founder of Moderna, Joins PolarityBio’s Board of Directors",
-"url": "https://finance.yahoo.com/healthcare/articles/dr-robert-langer-co-founder-130000926.html?.tsrc=rss",
-"pub": "2026-11-16T13:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
-},
-{
-"id": "9abea97a7cca",
-"t": "GOOGL",
-"title": "Anthropic IPO Could See ‘Large Pop’ And Steady Price Climb, Says Cleo Capital’s Sarah Kunst – ‘But They Aren't Immune To Burst Bubbles’",
-"url": "https://stocktwits.com/news-articles/markets/equity/anthropic-ipo-could-see-large-pop-and-steady-price-climb-says-cleo-capital-s-sarah-kunst-but-they-aren-t-immune-to-burst-bubbles/cNb7FSBR9XD?.tsrc=rss",
-"pub": "2026-11-16T12:57:46+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "cbe56c4b90f0",
-"t": "WMT",
-"title": "Walmart Expands Price Rollbacks: Can WMT Sustain Share Gains?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/walmart-expands-price-rollbacks-wmt-125700662.html?.tsrc=rss",
-"pub": "2026-11-16T12:57:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "2561db440b54",
-"t": "AMD",
-"title": "Can Edge AI Replace Intel’s Shrinking PC Business?",
-"url": "https://247wallst.com/investing/2026/11/16/can-edge-ai-replace-intels-shrinking-pc-business/?.tsrc=rss",
-"pub": "2026-11-16T12:54:35+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "e44d2f741a77",
+"t": "",
+"title": "New Zealand Sees Best Quarterly Population Gain in Two Years",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/new-zealand-sees-best-quarterly-population-gain-in-two-years",
+"pub": "2026-11-17T01:09:46+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T01:14:40+00:00"
 },
 {
 "id": "b5aeebcd6d04",
@@ -8092,6 +8102,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-17T01:11:08+00:00"
+},
+{
+"id": "c1e5edac8890",
+"t": "",
+"title": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means",
+"url": "https://www.cnbc.com/2026/11/16/kevin-warsh-fed-ai-jobs-productivity-interest-rateshtml.html",
+"pub": "2026-11-17T00:42:33+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-17T01:14:40+00:00"
 },
 {
 "id": "0ddfe7c63c94",
@@ -10989,26 +11009,6 @@
 "title": "MOO Imbalance",
 "url": "https://www.financialjuice.com/News/9853978/MOO-Imbalance.aspx?xy=rss",
 "pub": "2026-11-16T14:30:35+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "06a57f73de2d",
-"t": "",
-"title": "Trump: I don't want to insult China just before we get there.",
-"url": "https://www.financialjuice.com/News/9853973/Trump-I-dont-want-to-insult-China-just-before-we-get-there.aspx?xy=rss",
-"pub": "2026-11-16T14:30:13+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T16:20:07+00:00"
-},
-{
-"id": "4303979750d0",
-"t": "",
-"title": "Trump: Huang wasn't allowed to sell the Blackwell chip",
-"url": "https://www.financialjuice.com/News/9853972/Trump-Huang-wasnt-allowed-to-sell-the-Blackwell-chip.aspx?xy=rss",
-"pub": "2026-11-16T14:29:59+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T16:20:07+00:00"
