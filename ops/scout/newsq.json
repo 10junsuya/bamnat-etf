@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-18 08:14",
-"rot": 149,
+"updated_kst": "2026-11-18 08:32",
+"rot": 30,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "37건",
+"Reuters": "29건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "4725fe962278",
+"t": "NVDA",
+"title": "Nvidia earnings special coverage: \"The street wants to believe in Nvidia after Jensen\"",
+"url": "https://finance.yahoo.com/video/nvidia-earnings-special-coverage-the-street-wants-to-believe-in-nvidia-after-jensen-233044562.html?.tsrc=rss",
+"pub": "2026-11-17T23:30:44+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
+"id": "50cdb0e27c3f",
+"t": "MSFT",
+"title": "Baseten Brings High-Performance Inference for Open Models to Microsoft Foundry",
+"url": "https://finance.yahoo.com/technology/ai/articles/baseten-brings-high-performance-inference-231500946.html?.tsrc=rss",
+"pub": "2026-11-17T23:15:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
 {
 "id": "b243bbdeae8a",
 "t": "NVDA",
@@ -54,6 +74,26 @@
 "seen": "2026-11-17T23:14:18+00:00"
 },
 {
+"id": "5cd482f801dd",
+"t": "NVDA",
+"title": "Nvidia says its open-source AI strategy remains intact after Jensen Huang’s exit",
+"url": "https://finance.yahoo.com/technology/ai/articles/nvidia-says-open-source-ai-230435010.html?.tsrc=rss",
+"pub": "2026-11-17T23:04:35+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
+"id": "8fe98d507e02",
+"t": "SPCX",
+"title": "SpaceX Stock Adds $54 Billion Amid Viral AI in Space Discussions",
+"url": "https://beincrypto.com/spacex-stock-adds-54-billion-ai-space/?.tsrc=rss",
+"pub": "2026-11-17T23:02:23+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
 "id": "32bb59ec3d90",
 "t": "AVGO",
 "title": "Dow Jones Futures Rise, Techs Jump As Nvidia Beats, Says This On Jensen Huang; Target, Anthropic IPO Ahead",
@@ -74,6 +114,26 @@
 "seen": "2026-11-17T23:14:18+00:00"
 },
 {
+"id": "bddc69379a6d",
+"t": "CEG",
+"title": "Constellation Energy Has Faded Since Last December: Why BMO Sees 23% Upside",
+"url": "https://www.tikr.com/blog/constellation-energy-has-faded-since-last-december-why-bmo-sees-23-upside?ref=yahoofinance&tlnk=yf-261117-r8jpfmp6&.tsrc=rss",
+"pub": "2026-11-17T22:56:41+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
+"id": "7f195607d6dd",
+"t": "NVDA",
+"title": "Nvidia Interim CEO: \"We've Got This\"",
+"url": "https://finance.yahoo.com/m/2b4995b7-ec0f-3e30-9856-53de268b63bd/nvidia-interim-ceo%3A-%22we%27ve.html?.tsrc=rss",
+"pub": "2026-11-17T22:56:30+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
 "id": "263223baa65f",
 "t": "FIX",
 "title": "Comfort Systems USA stock gains on expanded buyback program",
@@ -82,6 +142,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T23:14:18+00:00"
+},
+{
+"id": "c7945d9be37d",
+"t": "CRWD",
+"title": "Cantor Fitzgerald Raises Its CrowdStrike Target to $275. Is It Still Too Low?",
+"url": "https://www.tikr.com/blog/cantor-fitzgerald-raises-its-crowdstrike-target-to-275-is-it-still-too-low?ref=yahoofinance&tlnk=yf-261117-rvwf378m&.tsrc=rss",
+"pub": "2026-11-17T22:55:11+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
 },
 {
 "id": "d203f5b0aab4",
@@ -134,6 +204,16 @@
 "seen": "2026-11-17T23:14:18+00:00"
 },
 {
+"id": "99555234ea3c",
+"t": "CRWD",
+"title": "Palo Alto Networks Fell Nearly 30% From Its Highs. Now It Has to Deliver 33% Growth",
+"url": "https://www.tikr.com/blog/palo-alto-networks-fell-nearly-30-from-its-highs-now-it-has-to-deliver-33-growth?ref=yahoofinance&tlnk=yf-261117-c64p4pfm&.tsrc=rss",
+"pub": "2026-11-17T22:51:07+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
 "id": "06a7868a8b5a",
 "t": "NVDA",
 "title": "Why Evolution Metals & Technologies Stock Bumped Higher Today",
@@ -162,6 +242,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T23:14:18+00:00"
+},
+{
+"id": "264074cd6aa5",
+"t": "AAPL",
+"title": "National Security Outage Is Just One Reason for Today’s Software Stock Selloff",
+"url": "https://finance.yahoo.com/m/87274442-810a-3ca3-a85b-4660398273da/national-security-outage-is.html?.tsrc=rss",
+"pub": "2026-11-17T22:47:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
 },
 {
 "id": "faa9e7753d41",
@@ -322,6 +412,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T22:36:35+00:00"
+},
+{
+"id": "f9391609ba54",
+"t": "MSFT",
+"title": "A Third Outage Strikes, This Time at Chase, Big Banks. The Stocks Are Falling.",
+"url": "https://finance.yahoo.com/m/8966c28b-5797-3a88-8c32-01d28a7b29a1/a-third-outage-strikes%2C-this.html?.tsrc=rss",
+"pub": "2026-11-17T22:23:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
 },
 {
 "id": "ce03fcaf0ecf",
@@ -634,6 +734,16 @@
 "seen": "2026-11-17T22:14:07+00:00"
 },
 {
+"id": "88c934393701",
+"t": "GOOGL",
+"title": "Risks Loom Over Nvidia’s Fast-Growing Data Center Segment",
+"url": "https://finance.yahoo.com/m/83f1cc3d-b0e5-3317-8b68-71f036f8d0d0/risks-loom-over-nvidia%E2%80%99s.html?.tsrc=rss",
+"pub": "2026-11-17T21:55:39+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
 "id": "c729f90b1f8c",
 "t": "NVDA",
 "title": "Nauticus Robotics, Inc. Q3 2026 Earnings Call Summary",
@@ -684,6 +794,16 @@
 "seen": "2026-11-17T22:14:07+00:00"
 },
 {
+"id": "6211299a4665",
+"t": "AVGO",
+"title": "Earnings Boost Other Chip and AI Stocks",
+"url": "https://finance.yahoo.com/m/8b12a732-4329-3c3e-95c3-e04f416a7ffa/earnings-boost-other-chip-and.html?.tsrc=rss",
+"pub": "2026-11-17T21:52:55+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
 "id": "6f512820e103",
 "t": "NVDA",
 "title": "Palatin Technologies, Inc. Q1 2027 Earnings Call Summary",
@@ -714,6 +834,16 @@
 "seen": "2026-11-17T22:14:07+00:00"
 },
 {
+"id": "149651a63818",
+"t": "OKTA",
+"title": "Okta (OKTA) Dips More Than Broader Market: What You Should Know",
+"url": "https://finance.yahoo.com/markets/stocks/articles/okta-okta-dips-more-broader-215002964.html?.tsrc=rss",
+"pub": "2026-11-17T21:50:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
 "id": "8edb54e119b1",
 "t": "MRVL",
 "title": "Marvell Technology (MRVL) Gains As Market Dips: What You Should Know",
@@ -732,6 +862,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T23:14:18+00:00"
+},
+{
+"id": "9bdf6247b6f0",
+"t": "ZS",
+"title": "Why Zscaler (ZS) Dipped More Than Broader Market Today",
+"url": "https://finance.yahoo.com/markets/stocks/articles/why-zscaler-zs-dipped-more-214503229.html?.tsrc=rss",
+"pub": "2026-11-17T21:45:03+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T23:32:45+00:00"
 },
 {
 "id": "4c2ce94be50a",
@@ -7874,144 +8014,24 @@
 "seen": "2026-11-17T15:16:54+00:00"
 },
 {
-"id": "bdc0dff9a971",
-"t": "NVDA",
-"title": "Red Cat Plunges 34% After Revenue Miss, Pulled Guidance and Needham Target Cut; Ondas and AeroVironment Dip",
-"url": "https://247wallst.com/investing/2026/11/17/red-cat-plunges-34-after-revenue-miss-pulled-guidance-and-needham-target-cut-ondas-and-aerovironment-dip/?.tsrc=rss",
-"pub": "2026-11-17T14:17:53+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:31:23+00:00"
+"id": "5cdd9b891018",
+"t": "",
+"title": "Baseten: Microsoft foundry launches public preview, general availability expected early 2027",
+"url": "https://www.financialjuice.com/News/9856671/Baseten-Microsoft-foundry-launches-public-preview-general-availability-expected-early-2027.aspx?xy=rss",
+"pub": "2026-11-17T23:15:54+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T23:32:45+00:00"
 },
 {
-"id": "3835cd980c56",
-"t": "NVDA",
-"title": "Coherent Jumps 8%, Applied Optoelectronics Climbs 7% as U.S. Pushes Ahead With Curbs on Chinese Optical Gear; Lumentum Gains 4%",
-"url": "https://247wallst.com/investing/2026/11/17/coherent-jumps-8-applied-optoelectronics-climbs-7-as-u-s-pushes-ahead-with-curbs-on-chinese-optical-gear-lumentum-gains-4/?.tsrc=rss",
-"pub": "2026-11-17T14:17:51+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:31:23+00:00"
-},
-{
-"id": "4f3c7f88a35e",
-"t": "NVDA",
-"title": "Nvidia Earnings: Will Results, Guidance Calm Investors Amid Turmoil? (Live Coverage)",
-"url": "https://finance.yahoo.com/m/ef40b1a2-2bff-390f-b0d5-c281b4d503ef/nvidia-earnings%3A-will.html?.tsrc=rss",
-"pub": "2026-11-17T14:17:30+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:31:23+00:00"
-},
-{
-"id": "a060e80cb907",
-"t": "NVDA",
-"title": "Exchange-Traded Funds, Equity Futures Mixed Pre-Bell Tuesday as Investors Await Nvidia Earnings",
-"url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-141622060.html?.tsrc=rss",
-"pub": "2026-11-17T14:16:22+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:31:23+00:00"
-},
-{
-"id": "ac78d904bbfc",
-"t": "PG",
-"title": "Forget SCHD: 4 Dividend Stocks Retirees Should Own Instead",
-"url": "https://247wallst.com/investing/etf/2026/11/17/forget-schd-4-dividend-stocks-retirees-should-own-instead/?.tsrc=rss",
-"pub": "2026-11-17T14:15:50+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
-},
-{
-"id": "2398a9346d1a",
-"t": "JPM",
-"title": "Franklin Doubles Down on ETFs: Can It Reach $200B AUM by FY29?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/franklin-doubles-down-etfs-reach-141500980.html?.tsrc=rss",
-"pub": "2026-11-17T14:15:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
-},
-{
-"id": "b974cd05a42a",
-"t": "NVDA",
-"title": "US Stock Futures Mixed as Nasdaq Looks to Recover While Dow Faces Pressure From Home Depot: Dow Jones, S&P, Wall Street",
-"url": "https://investorshub.advfn.com/market-news/article/40216/us-stock-futures-mixed-as-nasdaq-looks-to-recover-while-dow-faces-pressure-from-home-depot-dow-jones-sp-wall-street?.tsrc=rss",
-"pub": "2026-11-17T14:14:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
-},
-{
-"id": "d9636f936d2f",
-"t": "HD",
-"title": "Home Depot beats third-quarter estimates as it names new chief executive",
-"url": "https://www.proactiveinvestors.com/companies/news/1101931/home-depot-beats-third-quarter-estimates-as-it-names-new-chief-executive-1101931.html?.tsrc=rss",
-"pub": "2026-11-17T14:14:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
-},
-{
-"id": "4eb6bc82569c",
-"t": "AVGO",
-"title": "Can Qualcomm Stock Jump 40%?",
-"url": "https://www.trefis.com/stock/qcom/articles/625730/can-qualcomm-stock-jump-40/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:13:44+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
-},
-{
-"id": "73e4d5099ee2",
-"t": "GOOGL",
-"title": "Can Subscriptions Lift Snap Stock Nearly 50%?",
-"url": "https://www.trefis.com/stock/snap/articles/625731/can-subscriptions-lift-snap-stock-nearly-50/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:13:44+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
-},
-{
-"id": "fa006ff954d0",
-"t": "NVDA",
-"title": "Can Regeneron Stock Hit $1,400?",
-"url": "https://www.trefis.com/stock/regn/articles/625709/can-regeneron-stock-hit-1400/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:13:44+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
-},
-{
-"id": "946bbc1a4ab1",
-"t": "CEG",
-"title": "Why Did Constellation Energy Stock Jump Over 10%?",
-"url": "https://www.trefis.com/stock/ceg/articles/625688/why-did-constellation-energy-stock-jump-over-10/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:13:43+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
-},
-{
-"id": "71dad9211eca",
-"t": "AVGO",
-"title": "Why Is Everybody Paying A Premium For AMD Stock?",
-"url": "https://www.trefis.com/stock/amd/articles/625705/why-is-everybody-paying-a-premium-for-amd-stock/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:13:43+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
-},
-{
-"id": "5a76cb4a9d4e",
-"t": "VZ",
-"title": "What Could Lift T-Mobile Stock?",
-"url": "https://www.trefis.com/stock/tmus/articles/625698/what-could-lift-t-mobile-stock/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:13:43+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
+"id": "584ed33728a8",
+"t": "",
+"title": "Baseten introduces high-performance inference for open models to Microsoft Foundry",
+"url": "https://www.financialjuice.com/News/9856669/Baseten-introduces-high-performance-inference-for-open-models-to-Microsoft-Foundry.aspx?xy=rss",
+"pub": "2026-11-17T23:15:04+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T23:32:45+00:00"
 },
 {
 "id": "177ad47cf5e8",
@@ -8022,6 +8042,26 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T23:14:18+00:00"
+},
+{
+"id": "53b65bc66ee9",
+"t": "",
+"title": "Latest Oil Market News and Analysis for Nov. 18",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/latest-oil-market-news-and-analysis-for-nov-18",
+"pub": "2026-11-17T23:01:33+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T23:32:45+00:00"
+},
+{
+"id": "fac179cd813e",
+"t": "",
+"title": "Fidelity Says Even at 6% Treasuries Fail to Be ‘Massively Cheap’",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/fidelity-says-even-at-6-treasuries-fail-to-be-massively-cheap",
+"pub": "2026-11-17T23:00:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T23:32:45+00:00"
 },
 {
 "id": "6dd3fa6727c7",
@@ -8482,6 +8522,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-17T21:14:31+00:00"
+},
+{
+"id": "33ad3cd156b8",
+"t": "",
+"title": "Acco Group Holdings Ltd (ACCL.O) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GR1FHSTd5eVBDMi1kRFBUS0hNWVVCc3BFNUJlbTRNTWZOd3dHa1ZwMGxqME9Ya21Rdm9OLWlvSUozWXRUd1d6TDQxdW5IczNPdFMwaFVPMjY2emRhaGRNajlQTXRRZFJMejMw?oc=5",
+"pub": "2026-11-17T20:40:09+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T23:32:45+00:00"
 },
 {
 "id": "78c55fd01ac7",
@@ -10960,56 +11010,6 @@
 "url": "https://www.financialjuice.com/News/9856043/Feds-Hammack-Inflation-moving-in-the-wrong-direction.aspx?xy=rss",
 "pub": "2026-11-17T15:23:57+00:00",
 "src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T15:28:48+00:00"
-},
-{
-"id": "6c8bb9df6d80",
-"t": "",
-"title": "Fed's Hammack: Inflation moving in the wrong direction",
-"url": "https://www.financialjuice.com/News/9856043/Feds-Hammack-Inflation-moving-in-the-wrong-direction.aspx",
-"pub": "2026-11-17T15:23:57+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "da024af8d02c",
-"t": "",
-"title": "Fed's Hammack: Expectations for growth and the Fed are driving yields up",
-"url": "https://www.financialjuice.com/News/9856042/Feds-Hammack-Expectations-for-growth-and-the-Fed-are-driving-yields-up.aspx?xy=rss",
-"pub": "2026-11-17T15:23:49+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T15:28:48+00:00"
-},
-{
-"id": "1c9308a25262",
-"t": "",
-"title": "Fed's Hammack: Expectations for growth and the Fed are driving yields up",
-"url": "https://www.financialjuice.com/News/9856042/Feds-Hammack-Expectations-for-growth-and-the-Fed-are-driving-yields-up.aspx",
-"pub": "2026-11-17T15:23:49+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "4e486aad1c0b",
-"t": "",
-"title": "Nuclear Thriller Puts Spotlight on French Presidential Campaign",
-"url": "https://www.bloomberg.com/news/articles/2026-11-17/nuclear-thriller-puts-spotlight-on-french-presidential-campaign",
-"pub": "2026-11-17T15:23:02+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-17T16:15:53+00:00"
-},
-{
-"id": "fa71898c41b7",
-"t": "",
-"title": "Hammack Says Fed Should Set High Bar for Market Interventions",
-"url": "https://www.bloomberg.com/news/videos/2026-11-17/hammack-says-fed-should-set-high-bar-for-interventions-video",
-"pub": "2026-11-17T15:21:01+00:00",
-"src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-17T15:28:48+00:00"
 }
