@@ -26,7 +26,7 @@ const SYM = /^[A-Z][A-Z0-9.\-]{0,9}$/;
 const KRC = /^[0-9A-Z]{6}$/;
 const MAX_URL = 1024;
 /* 주소마다 받을 수 있는 질문 칸 */
-const ROUTES = { "/": [], "/health": [], "/quote": ["s"], "/fx": [], "/kr": ["c"], "/usday": ["s"], "/usreg": ["s"], "/kis-check": [], "/fut": [], "/snap": [] };
+const ROUTES = { "/": [], "/health": [], "/quote": ["s"], "/fx": [], "/kr": ["c"], "/krm": ["c"], "/usday": ["s"], "/usreg": ["s"], "/kis-check": [], "/fut": [], "/snap": [] };
 /* 이번 요청(또는 2분 일)에서 바깥으로 보낸 호출 수. Cloudflare 무료 요금제는 한 번에 50번까지라 넘기 전에 멈춰요 */
 let SUBN = 0;
 const SUB_MAX = 44;
@@ -144,6 +144,7 @@ const kNum = (x) => { const v = parseFloat(String(x ?? "").replace(/,/g, "")); r
 const KIS_READ_ONLY = Object.freeze({
   "/uapi/etfetn/v1/quotations/inquire-price": ["FHPST02400000"],
   "/uapi/domestic-stock/v1/quotations/inquire-price": ["FHKST01010100"],
+  "/uapi/domestic-stock/v1/quotations/intstock-multprice": ["FHKST11300006"],
   "/uapi/overseas-price/v1/quotations/price": ["HHDFS00000300"],
 });
 function kisAllowed(path, trId) {
@@ -191,6 +192,25 @@ async function kisEtf(env, code) {
     return { price, change: chg, change_pct: kNum(o.prdy_ctrt) ?? 0, prev_close: price - chg, inav, inav_change_pct: navPct, prev_nav: prevNav,
       date: k.date, clock: k.clock, state, source: src, time: new Date().toISOString() };
   });
+}
+/* 국내 여러 종목 한 번에 (관심종목 멀티 시세, 한 번에 30개까지): 지금 가격·등락만. iNAV·기준가는 kisEtf 가 돌아가며 받아요 (2026-11-17 대표 승인) */
+async function kisMulti(env, codes) {
+  const k = kstNow(), out = {};
+  const state = k.wd === 0 || k.wd === 6 ? "휴장" : k.hm < 9 * 60 ? "장전" : k.hm < 15 * 60 + 30 ? "장중" : "장마감";
+  for (let i = 0; i < codes.length; i += 30) {
+    const part = codes.slice(i, i + 30), params = {};
+    part.forEach((c, n) => { params[`FID_COND_MRKT_DIV_CODE_${n + 1}`] = "J"; params[`FID_INPUT_ISCD_${n + 1}`] = c; });
+    const j = await kisGet(env, "/uapi/domestic-stock/v1/quotations/intstock-multprice", "FHKST11300006", params);
+    const rows = j && Array.isArray(j.output) ? j.output : [];
+    for (const o of rows) {
+      const c = String(o.inter_shrn_iscd || "").trim().toUpperCase(), price = kNum(o.inter2_prpr), prev = kNum(o.inter2_prdy_clpr);
+      if (!part.includes(c) || !price) continue;
+      const pc = prev && prev > 0 ? prev : null;
+      out[c] = { price, change: pc ? price - pc : null, change_pct: pc ? (price / pc - 1) * 100 : null, prev_close: pc,
+        date: k.date, clock: k.clock, state, source: "한국투자증권", quick: true, time: new Date().toISOString() };
+    }
+  }
+  return out;
 }
 /* 미국 주식 (한국투자증권): 거래소 찾기 → 정규장 시세, 한국 낮 시간엔 주간거래(블루오션) 시세 */
 const US_EX = ["NAS", "NYS", "AMS"], DAY_EX = { NAS: "BAQ", NYS: "BAY", AMS: "BAA" };
@@ -292,6 +312,14 @@ async function route(path, q, env) {
     for (const c of list) out[c] = await (kis ? kisEtf(env, c).then((v) => (v && !v.error ? v : funetfKr(c))) : funetfKr(c)).catch(fail);
     return [{ etfs: out, source: kis ? "한국투자증권" : "FunETF", time: new Date().toISOString() }, 200, 30];
   }
+  if (path === "/krm") {
+    // 54개 ETF 지금 가격을 요청 2번(30개씩)으로 받아요. 15초 동안은 같은 답을 나눠 써요
+    if (!kis) return [ERR("한국투자증권 키가 아직 없어요"), 503, 0];
+    const list = pick(q.get("c"), KRC, ALLOW_KR, 60);
+    if (!list.length) { blocked("symbol", path); return [ERR("노몬에서 쓰는 ETF만 받을 수 있어요"), 400, 0]; }
+    const v = await cached("krm/" + list.join(","), 15, async () => ({ etfs: await kisMulti(env, list), source: "한국투자증권", time: new Date().toISOString() })).catch(fail);
+    return [v, 200, 15];
+  }
   if (path === "/usday" || path === "/usreg") {
     if (!kis) return [ERR("한국투자증권 키가 아직 없어요"), 503, 0];
     // 바깥 요청 50번 한도: 종목 하나에 최대 4번(처음 거래소 찾기 3 + 시세 1)이라 10개씩만 받아요
@@ -379,6 +407,14 @@ async function snapshotJob(env) {
   let usOk = 0, usTried = 0, krTried = 0;
   snap.kr = snap.kr || {}; snap.us = snap.us || {}; snap.ex = snap.ex || {};
   const k = kstNow(), krOn = k.wd >= 1 && k.wd <= 5 && k.hm >= 8 * 60 + 30 && k.hm <= 20 * 60 + 30;
+  // 국내 지금 가격: 장 시간엔 매번 54개 전부를 한 번에(요청 2번) — 자세한 값(iNAV·기준가)은 아래에서 돌아가며
+  if (krOn) {
+    const mq = await kisMulti(env, PRIO_KR).catch(() => ({}));
+    for (const [c, v] of Object.entries(mq)) {
+      const o = snap.kr[c];
+      snap.kr[c] = o && o.date === v.date ? { ...o, price: v.price, change: v.change ?? o.change, change_pct: v.change_pct ?? o.change_pct, prev_close: v.prev_close ?? o.prev_close, clock: v.clock, state: v.state, time: v.time, ft: o.ft || (o.quick ? undefined : o.time) } : v;
+    }
+  }
   // 국내: 장 시간엔 10개씩 차례로(약 11분에 한 바퀴), 장 밖에선 오늘 값이 없는 것만
   const krList = PRIO_KR.filter((c) => krOn || !snap.kr[c] || snap.kr[c].date !== k.date);
   let rk = (snap.rk || 0) % Math.max(1, krList.length);

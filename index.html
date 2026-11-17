@@ -999,6 +999,28 @@ async function pullLive(){
   if(LV.pulling && Date.now()-LV.pulling < 120e3) return; LV.pulling = Date.now();
   try{ await pullLiveOnce(); } finally { LV.pulling = 0; }
 }
+/* 54개 ETF 지금 가격 한 번에(/krm, 요청 2번). 이미 받은 iNAV·기준가는 그대로 두고 가격·등락만 새로 바꿔요 (2026-11-17 대표 승인) */
+const krDetailT = v => v ? (v.ft || (v.quick ? "" : v.time) || "") : "";
+function mergeKrQuick(src){
+  let n = 0; LIVE.krNow = {...(LIVE.krNow||{})};
+  for(const [c,v] of Object.entries(src||{})){
+    if(!v || v.error || !okn(v.price)) continue;
+    const o = LIVE.krNow[c];
+    if(o && (o.time||"") >= (v.time||"")) continue;
+    LIVE.krNow[c] = o && o.date===v.date ? {...o, price:v.price, change: okn(v.change)?v.change:o.change, change_pct: okn(v.change_pct)?v.change_pct:o.change_pct,
+      prev_close: okn(v.prev_close)?v.prev_close:o.prev_close, clock:v.clock, state:v.state, time:v.time, quick:false, ft: krDetailT(o)} : v;
+    n++;
+  }
+  return n;
+}
+async function pullKrQuick(){
+  try{
+    const r = await fetch(`${LIVE_URL}/krm?c=${ETFS.map(e=>e.code).join(",")}`, (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? {signal: AbortSignal.timeout(8000)} : undefined);
+    if(!r.ok) return 0; const j = clean(await r.json()); const n = mergeKrQuick(j.etfs);
+    if(n){ if(!LV.krSrc) LV.krSrc = "한국투자증권"; applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); }
+    return n;
+  }catch(_){ return 0; }
+}
 async function pullLiveOnce(){
   const tm = ms => ({signal: (typeof AbortSignal!=="undefined" && AbortSignal.timeout) ? AbortSignal.timeout(ms) : undefined});
   let changed = false;
@@ -1008,6 +1030,8 @@ async function pullLiveOnce(){
     for(const [c,v] of Object.entries(j.kr||{})){ const o = LIVE.krNow[c]; if(v && !v.error && okn(v.price) && (!o || (v.time||"") > (o.time||""))){ LIVE.krNow[c] = v; n++; } }
     for(const [t,v] of Object.entries(j.us||{})){ const o = LIVE.kus[t]; if(v && okn(v.price) && v.s && (!o || (v.time||"") > (o.t||""))){ LIVE.kus[t] = {p:v.price, pc:v.prev, t:v.time, s:v.s}; n++; } }
     if(n){ if(!LV.krSrc) LV.krSrc = "한국투자증권"; changed = true; applyLive(); if(typeof render==="function" && !overlay.classList.contains("open")) render(); } } }catch(_){}
+  // 0-1) 54개 ETF 지금 가격을 한 번에 (요청 2번)
+  if(await pullKrQuick()) changed = true;
   // 국내 ETF 가격·기준가(한국투자증권)를 가장 먼저, 전부(20개씩 나눠 동시에) 받아요. 목록과 상세가 같은 숫자로 시작하게
   const krP = (async()=>{ try{
     const r0 = typeof route==="function" ? route() : "";
@@ -1019,7 +1043,7 @@ async function pullLiveOnce(){
     if(!LV.krAll){ all = [...mine, ...rest]; LV.krAll = true; }
     else { const at = (LV.krRot||0) % Math.max(1, rest.length); all = [...mine, ...rest.slice(at, at+8)]; LV.krRot = at + 8; }
     // 서버가 미리 받아 둔 값이 3분 안 된 것이면 다시 묻지 않아요
-    const krFresh = c => { const v = (LIVE.krNow||{})[c]; return v && v.time && Date.now()-new Date(v.time) < 180e3; };
+    const krFresh = c => { const t = krDetailT((LIVE.krNow||{})[c]); return t && Date.now()-new Date(t) < 180e3; };
     all = all.filter(c => !krFresh(c));
     for(let i=0;i<all.length;i+=8){
       const j0 = await fetch(`${LIVE_URL}/kr?c=${all.slice(i,i+8).join(",")}`, tm(30000)).then(r=>r.ok?r.json():null).catch(()=>null);
@@ -3957,7 +3981,8 @@ document.getElementById("simSel").addEventListener("change", ev=>{ simHM = ev.ta
 render();
 setInterval(()=>{ if(!overlay.classList.contains("open")) renderTop(); }, 20000);
 /* 자동 화면 검사(Keene)는 인터넷 없이 돌아서 연결 시도를 건너뛰어요 */
-if(!navigator.webdriver){ pullLive(); setInterval(()=>{ if(document.visibilityState!=="hidden") pullLive(); }, 60000); setInterval(fastTick, 20000); }
+if(!navigator.webdriver){ pullLive(); setInterval(()=>{ if(document.visibilityState!=="hidden") pullLive(); }, 60000); setInterval(fastTick, 20000);
+  setInterval(()=>{ if(document.visibilityState==="hidden") return; const p = parts(now(),"Asia/Seoul"), hm = p.h*60+p.mi; if(p.wd>=1 && p.wd<=5 && hm>=510 && hm<=1230) pullKrQuick(); }, 30000); }
 </script>
 </body>
 </html>
