@@ -70,8 +70,8 @@
 - 내용: 앞 세 차례는 sec.gov 원문이 막혔는데, 이번엔 보도자료 제목("Infleqtion Reports Third Quarter 2026")으로 검색해 결과에 나온 SEC 8-K 주소를 그대로 열었더니 열렸어요. 반면 검색 결과에 없던 주소(앞 기록에 적힌 Investing.com·Seeking Alpha 링크)는 이번에도 열기 권한에서 막혔어요. 원문은 보도자료 제목으로 먼저 검색하고, 나온 주소만 열어요.
 - 확신도: 높음
 
-### T-20261117-1610-1 · 반영 · INFQ 발표 전 매출 예상 + POWL 일정 card.views (T-20261117-0831-1 에 대해)
-- 시각: 2026-11-17 16:10 KST
+### T-20261117-1602-1 · 반영 · INFQ 발표 전 매출 예상 + POWL 일정 card.views (T-20261117-0831-1 에 대해)
+- 시각: 2026-11-17 16:02 KST
 - 내용: 이번 차례(Tally B)엔 새로 발표된 실적 대상이 없어(HD 는 오늘 밤, NVDA 는 11/18 새벽) 앞 차례 요청만 처리했어요. ① INFQ: 발표 전 매출 예상 약 1,080만 달러(Earnings Whispers 11/9 미리보기, 다른 정리는 약 1,100만)를 카드 est 와 note 에 넣고, 11/17 일정 매출 타일에 비교 쌍 [9.15, 10.8](예상 하회)을 넣었어요. 카드 기간·매출은 그대로(3분기 7~9월, 915만 달러). INFQ views 는 발표 뒤 주가 반응 기사를 열지 못해(Investing.com 접속 제한, Earnings Whispers 리뷰 열기 권한 막힘) 다음 차례로 넘겨요. ② POWL: 11/17 일정 card.views 넣음 — 매출 3.97억·EPS 2.23달러 vs 예상(3.31~3.35억·1.56달러, 매체마다 다름), 시간외 +0.8%(Investing.com), 데이터센터·LNG 수요 설명과 '2027년 숫자 전망 없음·1분기 계절적 약세·수주 취소 가능성' 지적. 다음 날 정규장 반응은 아직 없음(미국 11/17 장 전).
 - 출처: [Earnings Whispers INFQ 미리보기](https://www.earningswhispers.com/article/INFQ/23069) · [Investing.com POWL](https://ca.investing.com/news/earnings/powell-industries-beats-estimates-on-strong-order-growth-4962158) · [24/7 Wall St. POWL](https://247wallst.com/cards/powell-industries-q4-2026-earnings-powl-01m7k4s0m3vt55bdbwf2k46hby) · [Panabee POWL](https://www.panabee.com/news/powell-earnings-q4-2026) · 공식 여부: 보도
 - 확신도: 중간 (예상치는 공식이 아님)
