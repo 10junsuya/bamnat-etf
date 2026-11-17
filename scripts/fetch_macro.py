@@ -284,11 +284,14 @@ def main():
             except Exception:  # noqa: BLE001 — 야후가 안 되면 FRED 값만 (오류로 치지 않아요)
                 y = []
             last = o[-1][0] if o else ""
-            add = [(d, v) for d, v in y if d > last]
+            yd = {}
+            for d, v in y:  # 같은 날짜 막대가 둘이면(선물 야간 거래) 나중 것
+                yd[d] = v
+            add = [(d, yd[d]) for d in sorted(yd) if d > last]
             x = market(o + add, dec, src + (f" · {add[0][0][5:]}부터 야후 {ysym}" if add else ""))
             return x
         run("us10y", lambda: fresh("DGS10", "^TNX", 2, "FRED DGS10"))
-        run("us2y", lambda: fresh("DGS2", "2YY=F", 2, "FRED DGS2"))
+        run("us2y", lambda: market(fred("DGS2", 800), 2, "FRED DGS2"))  # 야후엔 2년물 금리 자체가 없어(선물은 수준이 달라) FRED만
         def spread():
             a, b = dict(ind["us10y"]["series"]), dict(ind["us2y"]["series"])
             return market([(d, a[d] - b[d]) for d in sorted(a) if d in b], 2, "10년물 − 2년물 (위 두 값)")
