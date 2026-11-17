@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-17 12:44",
-"rot": 168,
+"updated_kst": "2026-11-17 13:14",
+"rot": 47,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "32건",
+"Reuters": "29건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "a4b0f31a6e61",
+"t": "NVDA",
+"title": "Asian shares decline following stocks tumbled on Wall Street",
+"url": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-decline-following-stocks-040148315.html?.tsrc=rss",
+"pub": "2026-11-17T04:01:48+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "b84f54b7ec00",
+"t": "SPCX",
+"title": "SPCX Stock Dethrones Intel As Nvidia’s Biggest Holding — Druckenmiller Buys In And Tepper Ups His Stake Over 1,600%",
+"url": "https://stocktwits.com/news-articles/markets/equity/spcx-stock-dethrones-intel-nvidia-biggest-holding-druckenmiller-buys-in-tepper-ups-stake/cNba0UWR9gq?.tsrc=rss",
+"pub": "2026-11-17T03:45:50+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "665048594e11",
+"t": "NVDA",
+"title": "Nvidia's Biggest Jensen Huang Problem Was Hiding in Plain Sight",
+"url": "https://www.fool.com/investing/2026/11/16/nvidia-s-biggest-jensen-huang-problem-was-hiding-in-plain-sight/?.tsrc=rss",
+"pub": "2026-11-17T03:44:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "dd1edfa59481",
+"t": "NVDA",
+"title": "Bessent Says Nvidia Needs A “Dramatic Shakeup,” As A Singapore Firm Reportedly Moved At Least $7.5 Billion Of Nvidia Chips To China.",
+"url": "https://247wallst.com/investing/2026/11/16/bessent-says-nvidia-needs-a-dramatic-shakeup-as-a-singapore-firm-reportedly-moved-at-least-7-5-billion-of-nvidia-chips-to-china/?.tsrc=rss",
+"pub": "2026-11-17T03:43:42+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:14:39+00:00"
+},
 {
 "id": "f85bcc78a5d9",
 "t": "RKLB",
@@ -102,6 +142,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "ec9596e9c7d2",
+"t": "MA",
+"title": "Mastercard (MA) Rolls Out App Payments, APAC Transfers And AI Travel Tests",
+"url": "https://finance.yahoo.com/technology/ai/articles/mastercard-ma-rolls-app-payments-031010545.html?.tsrc=rss",
+"pub": "2026-11-17T03:10:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
 "id": "e466c7857ecf",
@@ -1852,6 +1902,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T00:02:13+00:00"
+},
+{
+"id": "3a07fbd2c30b",
+"t": "AMZN",
+"title": "Robert Pattinson Is the New 007. That’s Bad News for Skydance Stock and Good News for the Film Industry.",
+"url": "https://www.barchart.com/story/news/8862900/robert-pattinson-is-the-new-007-thats-bad-news-for-skydance-stock-and-good-news-for-the-film-industry?.tsrc=rss",
+"pub": "2026-11-16T21:43:31+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
 "id": "43ae7ed23362",
@@ -7954,64 +8014,114 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "bdeaa58c1e4a",
-"t": "NVDA",
-"title": "Nvidia Shares Fall 3.5% Premarket as Leadership Uncertainty Overshadows Upcoming Earnings",
-"url": "https://investorshub.advfn.com/market-news/article/40118/nvidia-shares-fall-3-5-premarket-as-leadership-uncertainty-overshadows-upcoming-earnings?.tsrc=rss",
-"pub": "2026-11-16T13:53:34+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "ccc113740333",
+"t": "",
+"title": "Mongolia president steps down pending probe: official Montsame news agency",
+"url": "https://www.financialjuice.com/News/9855037/Mongolia-president-steps-down-pending-probe-official-Montsame-news-agency.aspx?xy=rss",
+"pub": "2026-11-17T04:14:13+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
-"id": "a7cb5b9ac58b",
-"t": "PANW",
-"title": "Palo Alto Networks to Report Q1 Earnings: Buy, Sell or Hold the Stock?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-report-q1-135100352.html?.tsrc=rss",
-"pub": "2026-11-16T13:51:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T17:31:31+00:00"
+"id": "1de798e2a584",
+"t": "",
+"title": "Around 800 drones headed toward Moscow overnight: Moscow mayor quoted by TASS",
+"url": "https://www.financialjuice.com/News/9855036/Around-800-drones-headed-toward-Moscow-overnight-Moscow-mayor-quoted-by-TASS.aspx?xy=rss",
+"pub": "2026-11-17T04:13:36+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
-"id": "e8537e480c49",
-"t": "LLY",
-"title": "Eli Lilly to Acquire Calytrix Bio for Up to $1.5 Billion to Expand Blood Cancer Portfolio",
-"url": "https://investorshub.advfn.com/market-news/article/40114/eli-lilly-to-acquire-calytrix-bio-for-up-to-1-5-billion-to-expand-blood-cancer-portfolio?.tsrc=rss",
-"pub": "2026-11-16T13:50:18+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "eaeda27fa1ef",
+"t": "",
+"title": "Anthropic IPO: What Australian Investors Need to Know",
+"url": "https://www.bloomberg.com/news/videos/2026-11-17/anthropic-ipo-what-australian-investors-need-to-know-video",
+"pub": "2026-11-17T04:10:08+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
-"id": "386cf312786c",
-"t": "RTX",
-"title": "Can Howmet Maintain Margin Momentum Amid Cost Pressures?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/howmet-maintain-margin-momentum-amid-134900975.html?.tsrc=rss",
-"pub": "2026-11-16T13:49:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
+"id": "f4e980942dd2",
+"t": "",
+"title": "Chemtrade Logistics Income Fund: National Bank of Canada lifts target price to C$23 from C$22.5",
+"url": "https://www.financialjuice.com/News/9855035/Chemtrade-Logistics-Income-Fund-National-Bank-of-Canada-lifts-target-price-to-C23-from-C225.aspx?xy=rss",
+"pub": "2026-11-17T04:07:26+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
-"id": "d06f7334a7d4",
-"t": "META",
-"title": "Meta Plunged After Earnings in 2025 Too. Here’s What Buyers Got a Year Later",
-"url": "https://247wallst.com/investing/2026/11/16/meta-plunged-after-earnings-in-2025-too-heres-what-buyers-got-a-year-later/?.tsrc=rss",
-"pub": "2026-11-16T13:48:35+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "02df9e3a9c26",
+"t": "",
+"title": "Canada PM office: tariff relief covers $116 million in frozen pork cuts exports and $285 million in fish and seafood shipments",
+"url": "https://www.financialjuice.com/News/9855034/Canada-PM-office-tariff-relief-covers-116-million-in-frozen-pork-cuts-exports-and-285-million-in-fish-and-seafood-shipments.aspx?xy=rss",
+"pub": "2026-11-17T04:06:08+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
-"id": "c5669012f3d0",
-"t": "SPCX",
-"title": "Anthropic IPO: Should You Buy ANT Stock?",
-"url": "https://www.kiplinger.com/investing/ipos/anthropic-ipo-should-you-buy-ant-stock?.tsrc=rss",
-"pub": "2026-11-16T13:47:27+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "a16e14df9f3e",
+"t": "",
+"title": "Canada PM office: steps to offer extra tariff relief for about C$400 million in exports to China",
+"url": "https://www.financialjuice.com/News/9855033/Canada-PM-office-steps-to-offer-extra-tariff-relief-for-about-C400-million-in-exports-to-China.aspx?xy=rss",
+"pub": "2026-11-17T04:05:15+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "7d4af34ee08e",
+"t": "",
+"title": "Canada PM Office: Canada agrees to prolong existing remission measures on certain Chinese steel and aluminium products by two years, expiring end of 2026",
+"url": "https://www.financialjuice.com/News/9855032/Canada-PM-Office-Canada-agrees-to-prolong-existing-remission-measures-on-certain-Chinese-steel-and-aluminium-products-by-two-years-expiring-end-of-2026.aspx?xy=rss",
+"pub": "2026-11-17T04:04:57+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "a4bc7991641b",
+"t": "",
+"title": "Canada PM office: announces extension, expansion of preliminary joint arrangement on addressing bilateral economic, trade issues between Canada and China",
+"url": "https://www.financialjuice.com/News/9855031/Canada-PM-office-announces-extension-expansion-of-preliminary-joint-arrangement-on-addressing-bilateral-economic-trade-issues-between-Canada-and-China.aspx?xy=rss",
+"pub": "2026-11-17T04:03:53+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "5100353ead72",
+"t": "",
+"title": "Taiwan defense ministry: After flying through airspace east of Taiwan, the aircraft left the zone south of eastern county Taitung",
+"url": "https://www.financialjuice.com/News/9855030/Taiwan-defense-ministry-After-flying-through-airspace-east-of-Taiwan-the-aircraft-left-the-zone-south-of-eastern-county-Taitung.aspx?xy=rss",
+"pub": "2026-11-17T04:03:05+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "0963a8972bf2",
+"t": "",
+"title": "Taiwan defence ministry: early Tuesday morning detected two Russian military planes entering Taiwan’s air defence identification zone from northeast Taiwan",
+"url": "https://www.financialjuice.com/News/9855029/Taiwan-defence-ministry-early-Tuesday-morning-detected-two-Russian-military-planes-entering-Taiwans-air-defence-identification-zone-from-northeast-Taiwan.aspx?xy=rss",
+"pub": "2026-11-17T04:02:18+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
+},
+{
+"id": "f7645294118f",
+"t": "",
+"title": "Subway in Kyiv, Ukraine damaged in overnight strike: city officials",
+"url": "https://www.financialjuice.com/News/9855012/Subway-in-Kyiv-Ukraine-damaged-in-overnight-strike-city-officials.aspx?xy=rss",
+"pub": "2026-11-17T03:49:35+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
 "id": "37413e8c9fa8",
@@ -8072,6 +8182,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T03:44:16+00:00"
+},
+{
+"id": "8d0b3ca37049",
+"t": "",
+"title": "Barclays Says Forced Retail Liquidation Behind Taiwan Stock Rout",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/barclays-says-forced-retail-liquidation-behind-taiwan-stock-rout",
+"pub": "2026-11-17T03:17:04+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
 "id": "13f5c9b2e30b",
@@ -8172,6 +8292,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T03:14:31+00:00"
+},
+{
+"id": "2ab07ba96dd5",
+"t": "",
+"title": "Principal Growth ETF (PGRW.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBYaU5EZkU3QVRTNTU1REhoTUg5R3pZdUFKbUttam9rOWwwLWlSNkljeTZOUlYzb0psbDYxOTVTUzVuRlpmT3JESUszd2JUV0JZeG82RzBpMWRUVlhIMWVWVEtYOA?oc=5",
+"pub": "2026-11-17T02:58:10+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T04:14:39+00:00"
 },
 {
 "id": "d6ccd227208c",
@@ -10880,136 +11010,6 @@
 "url": "https://www.bloomberg.com/news/videos/2026-11-16/retail-investors-trying-to-buy-chip-dip-mayuranki-de-video",
 "pub": "2026-11-16T19:32:43+00:00",
 "src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "29123e360978",
-"t": "",
-"title": "NYMEX Nat Gas Dec. futures settle at $3.1220/MMBTU",
-"url": "https://www.financialjuice.com/News/9854398/NYMEX-Nat-Gas-Dec-futures-settle-at-31220MMBTU.aspx?xy=rss",
-"pub": "2026-11-16T19:31:43+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "c08885ff5cb0",
-"t": "",
-"title": "NYMEX Nat Gas Dec. futures settle at $3.1220/MMBTU",
-"url": "https://www.financialjuice.com/News/9854398/NYMEX-Nat-Gas-Dec-futures-settle-at-31220MMBTU.aspx",
-"pub": "2026-11-16T19:31:43+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "d099d023cf7a",
-"t": "",
-"title": "NYMEX gasoline Dec. futures settle at $2.5379 a gallon",
-"url": "https://www.financialjuice.com/News/9854397/NYMEX-gasoline-Dec-futures-settle-at-25379-a-gallon.aspx?xy=rss",
-"pub": "2026-11-16T19:31:09+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "6a0180173346",
-"t": "",
-"title": "NYMEX gasoline Dec. futures settle at $2.5379 a gallon",
-"url": "https://www.financialjuice.com/News/9854397/NYMEX-gasoline-Dec-futures-settle-at-25379-a-gallon.aspx",
-"pub": "2026-11-16T19:31:09+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "b2643d374ee3",
-"t": "",
-"title": "NYMEX diesel Dec. futures settle at $4.0818 a gallon",
-"url": "https://www.financialjuice.com/News/9854396/NYMEX-diesel-Dec-futures-settle-at-40818-a-gallon.aspx?xy=rss",
-"pub": "2026-11-16T19:31:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "bceb8e25d036",
-"t": "",
-"title": "NYMEX diesel Dec. futures settle at $4.0818 a gallon",
-"url": "https://www.financialjuice.com/News/9854396/NYMEX-diesel-Dec-futures-settle-at-40818-a-gallon.aspx",
-"pub": "2026-11-16T19:31:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "61d1776e8be5",
-"t": "",
-"title": "NYMEX WTI crude Dec. futures settle at $85.72 a barrel, down $2.84, 3.21%",
-"url": "https://www.financialjuice.com/News/9854395/NYMEX-WTI-crude-Dec-futures-settle-at-8572-a-barrel-down-284-321.aspx?xy=rss",
-"pub": "2026-11-16T19:30:50+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "ee2bf79bf7c5",
-"t": "",
-"title": "NYMEX WTI crude Dec. futures settle at $85.72 a barrel, down $2.84, 3.21%",
-"url": "https://www.financialjuice.com/News/9854395/NYMEX-WTI-crude-Dec-futures-settle-at-8572-a-barrel-down-284-321.aspx",
-"pub": "2026-11-16T19:30:50+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "380f26cf0a4d",
-"t": "",
-"title": "Gold Futures Settle at New 52-Week Low",
-"url": "https://www.wsj.com/finance/commodities-futures/gold-ticks-up-but-prices-stay-weak-94c91bd2?mod=rss_markets_main",
-"pub": "2026-11-16T19:30:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-17T02:14:00+00:00"
-},
-{
-"id": "861aceac92c3",
-"t": "",
-"title": "Fed's Hammack: I do like idea of successive rate increases to help bring inflation down.",
-"url": "https://www.financialjuice.com/News/9854394/Feds-Hammack-I-do-like-idea-of-successive-rate-increases-to-help-bring-inflation-down.aspx?xy=rss",
-"pub": "2026-11-16T19:27:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "01efa9699cd8",
-"t": "",
-"title": "Fed's Hammack: I do like idea of successive rate increases to help bring inflation down.",
-"url": "https://www.financialjuice.com/News/9854394/Feds-Hammack-I-do-like-idea-of-successive-rate-increases-to-help-bring-inflation-down.aspx",
-"pub": "2026-11-16T19:27:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "f2d492f603f7",
-"t": "",
-"title": "Fed’s Hammack Prefers Small Hikes, Sees Risk of Bigger Moves",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/fed-s-hammack-reiterates-preference-for-small-incremental-hikes",
-"pub": "2026-11-16T19:26:58+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T20:14:29+00:00"
-},
-{
-"id": "18380ec88c1c",
-"t": "",
-"title": "Vance: Won't let Iran become even a 2 Year commitment - Fox News clip",
-"url": "https://www.financialjuice.com/News/9854393/Vance-Wont-let-Iran-become-even-a-2-Year-commitment---Fox-News-clip.aspx?xy=rss",
-"pub": "2026-11-16T19:26:53+00:00",
-"src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T20:14:29+00:00"
 }
