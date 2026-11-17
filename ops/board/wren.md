@@ -487,3 +487,20 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 ### W-20261117-0813-3 · 알림 · 이번 차례
 - 시각: 2026-11-17 08:30 KST
 - 내용: Scout 08:09 KST 갱신분 새 항목 60건(news 43·market 17)을 처리했어요. 건너뜀: 메타-네보야 전기트럭 25대(작은 협력), JP모건 매출채권 플랫폼 개선(작은 제품 소식), 비자 AI 결제 위협 경고(보고서), 파월 인더스트리 4분기 실적(Tally 담당), 상무부 대중 칩 규정·은행 접속 장애(이미 들어 있음), 홈디포 캐나다 정정 공고, 버크셔·버리 13F 해설, 젠슨 황 관련 해설, 나머지는 주가 정리·목표가·종목 비교·의견. 08시대라 kind "market"은 done 처리만 했어요. 제안: 엔비디아 「주요 제품」에 루빈 HPC(2028)·DGX 스파크 HPC 개발 키트를 넣을지 검토 바람(새 항목 추가라 이번엔 하지 않았어요). 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
+
+### W-20261117-0913-1 · 반영 · 바이오젠(BIIB) 레켐비 5년 장기 연구 결과(CTAD 2026)
+- 시각: 2026-11-17 09:30 KST
+- 내용: 에자이·바이오젠이 Clarity AD 장기 연장 연구(5년 연속 투약 351명)에서 CDR-SB 악화가 자연 경과 비교군(ADNI)보다 2.05점 적었다고 CTAD 2026에서 발표했어요(미국 11-16 18:00 ET = 한국 11-17 08:00). 새 안전성 문제는 없었다고 밝혔어요. 바이오젠의 첫 소식 항목이에요. 검색 결과에 2024년 CTAD 보도자료가 섞여 나와 날짜를 먼저 확인했어요.
+- 출처: [에자이·바이오젠 보도자료(GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/16/3404222/0/en/new-five-year-lecanemab-data-from-clarity-ad-study-long-term-extension-presented-at-ctad-2026.html) · [PR Newswire](https://www.prnewswire.com/news-releases/new-five-year-lecanemab-data-from-clarity-ad-study-long-term-extension-presented-at-ctad-2026-302941089.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-0913-2 · 반영 · 버크셔(BRKB) 3분기 13F: 뱅크오브아메리카·캐피털원 축소, 델타 확대
+- 시각: 2026-11-17 09:30 KST
+- 내용: 버크셔의 3분기 말 보유 보고서(13F)에서 뱅크오브아메리카·캐피털원 지분이 줄고 델타 항공 지분이 늘었다고 CNBC·로이터가 보도했어요(레나 확대·벤딩 스푼스 신규는 한 줄에서 뺐어요). SEC 원문은 직접 확인 못 해 "보도".
+- 출처: [CNBC](https://www.cnbc.com/2026/11/16/berkshire-hathaway-raised-its-stake-in-delta-air-in-the-third-quarter.html) · [Reuters(US News 전재)](https://money.usnews.com/investing/news/articles/2026-11-16/berkshire-lowers-bank-of-america-capital-one-stakes-adds-to-delta) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: SEC 13F 원문(BERKSHIRE HATHAWAY INC)에서 확인되면 "공식"으로 올려 주세요.
+
+### W-20261117-0913-3 · 알림 · 이번 차례
+- 시각: 2026-11-17 09:30 KST
+- 내용: Scout를 직접 돌린 뒤(09:13 KST 갱신) 새 항목 73건(news 49·market 24)을 처리했어요. 건너뜀: 재무장관의 엔비디아 매출 의문 제기(11-16 재무장관 요구 항목과 같은 사건 — 법률사무소 광고성 글), 젠슨 황 가족 신탁 이전(3월 일), 젠슨 황 복귀·브로드컴 해설, 은행 장애·FAA 정전 해설(이미 들어 있음), HSBC 데이터센터 대출 매각(앱 회사 사건 아님), 웨스턴디지털 콘퍼런스 참석, 아브셀레라·크로거·셀시어스(앱 종목 아님), 나머지는 주가 정리·목표가·종목 비교·의견. 09시대라 kind "market"은 done 처리만 했어요. 최근 36시간 안 미국 지표 발표가 없어 발표 분석은 쓰지 않았어요(다음은 소매판매 11-17 22:30 KST).
