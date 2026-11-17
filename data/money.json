@@ -1546,24 +1546,20 @@
   "segs": [
    [
     "개인 고객",
-    26430,
-    "휴대폰·집 인터넷"
+    26432,
+    "휴대폰·집 인터넷(모바일·광랜·고정 무선)"
    ],
    [
     "기업 고객",
-    7020,
+    7023,
     "기업 통신"
    ]
   ],
-  "note": "개인 고객이 4분의 3이에요.",
+  "note": "개인 고객이 전체 매출(343.1억)의 77%예요. 두 부문 합과 전체의 차이 858은 보도자료에 나눔이 없어 넣지 않았어요(계산값).",
   "src": [
    [
-    "버라이즌 3분기 실적 발표 (회사, 총매출)",
-    "https://www.verizon.com/about/news/verizon-delivers-another-record-breaking-quarter"
-   ],
-   [
-    "버라이즌 3분기 실적 (TelecomLead)",
-    "https://telecomlead.com/5g/verizon-q3-2026-results-revenue-hits-34-3-billion-fiber-subscribers-jump-44-capex-at-16-16-5-billion-128387?amp=1"
+    "버라이즌 3분기 실적 보도자료 (SEC 8-K)",
+    "https://www.sec.gov/Archives/edgar/data/0000732712/000073271226000049/a2026q3exhibit99.htm"
    ]
   ]
  },
@@ -3781,20 +3777,20 @@
     "전기·가스"
    ],
    [
-    "계약 발전 등",
-    285,
-    "밀스톤 원전 등(전체에서 뺀 대략치)"
+    "계약 발전",
+    337,
+    "밀스톤 원전 등 계약 판매"
    ]
   ],
-  "note": "버지니아가 75%예요. 계약된 데이터센터 용량이 54.9GW예요. 넥스트에라와 합병을 추진 중이에요.",
+  "note": "버지니아가 전체 매출(56.2억)의 75%예요. 부문 숫자에는 부문 간 거래가 들어 있어 합이 전체보다 조금 커요. 계약된 데이터센터 용량이 54.9GW이고, 넥스트에라와 합병을 추진 중이에요.",
   "src": [
    [
-    "도미니언 3분기(Benzinga)",
-    "https://www.benzinga.com/node/62745619"
+    "도미니언 3분기 10-Q (SEC, 부문 매출)",
+    "https://www.sec.gov/Archives/edgar/data/0000715957/000119312526440697/d-20260930.htm"
    ],
    [
-    "전체 매출(Quartr)",
-    "https://quartr.com/events/dominion-energy-d-q3-2026_3PWHl4Bo"
+    "도미니언 3분기(Benzinga, 데이터센터·합병)",
+    "https://www.benzinga.com/node/62745619"
    ]
   ]
  },
