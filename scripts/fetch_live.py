@@ -159,16 +159,21 @@ def quotes(old, errors):
         time.sleep(1.05)  # 무료 한도: 1분에 60번
         try:
             j = json.loads(get("https://finnhub.io/api/v1/quote?" + urllib.parse.urlencode({"symbol": t, "token": FINNHUB_KEY})))
-        except Exception as e:  # noqa: BLE001
+        except Exception as e:  # noqa: BLE001 — 순간 연결 끊김이면 야후로, 그것도 안 되면 지난 값 유지 (2026-11-17)
             errors.append(scrub(f"{t}: {type(e).__name__}: {e}")[:160])
-            continue
+            j = None
         if not j or not j.get("c") or not j.get("t"):
             try:
                 j = yahoo_quote(t)
             except Exception:  # noqa: BLE001
                 j = None
             if not j:
-                errors.append(f"{t}: 값 없음 (Finnhub·야후 모두)")
+                prev = (old.get("quotes") or {}).get(t)
+                if prev:
+                    q[t] = {**prev, "stale": True}  # 지난 값 그대로(화면이 비지 않게). 다음 수집에서 새 값으로 바뀌어요
+                    errors.append(f"{t}: 이번엔 못 받아 지난 값 유지 ({prev.get('d')})")
+                else:
+                    errors.append(f"{t}: 값 없음 (Finnhub·야후 모두)")
                 continue
         ts = dt.datetime.fromtimestamp(j["t"], dt.timezone.utc).astimezone(NY)
         d = ts.date()
