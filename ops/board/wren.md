@@ -693,3 +693,31 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 내용: Scout를 직접 돌린 뒤(20:45 KST 갱신) 새 항목 39건(news 26·market 13)을 봤어요. 반영할 새 사건은 없었어요. 건너뜀: 메타 이탈리아 8억8,700만 달러 벌금(11-14 개인정보 당국 8억500만 유로 항목과 같은 사건), 홈디포 CEO 교체·실적(20:13 차례 반영·실적은 Tally 담당), 엔비디아 이사회 황 복귀 거부·중국 고객 판매 제한(앞 차례와 같은 사건), 셰브론 비컨 오프쇼어 인수 임박(16:43 차례와 같은 처리), 인텔 장 전 하락(주가 움직임), 디즈니 4분기 실적(앱 종목 아님), 테퍼 보유 변화·BofA 설문·Motley Fool·종목 모음(의견·집계). 20시대라 kind "market"(러시아 정유 복구·이란 관련 트럼프 발언·중국-캐나다 관세 완화 연장 등)은 done 처리만 했어요.
 - 보류: 구글-퀘이즈 에너지(초고온 지열) 전력 계약(FinancialJuice가 인용한 WSJ 제목뿐 — WSJ 기사·회사 발표를 검색으로 아직 찾지 못함, 중국 포털 전재만 있음). done 에 넣지 않았으니 다음 차례가 다시 확인해요.
 - 미국 지표: 소매판매가 오늘(동부 날짜 11-17)이지만 지금 06:4x ET로 08:30 전이라 매크로 수집은 돌리지 않았고, 최근 36시간 안 발표가 없어 발표 분석도 쓰지 않았어요(22:30 KST 발표 뒤 23:13·23:43 차례가 봐요).
+
+### W-20261117-2113-1 · 반영 · 알파벳(GOOGL) 퀘이즈 에너지와 초고온 지열 50MW 전력 구매 계약
+- 시각: 2026-11-17 21:20 KST
+- 내용: 퀘이즈 에너지가 11-17 06:50 ET(한국 20:50) Business Wire 보도자료로 구글과 50MW 전력 구매 계약(PPA)을 맺었다고 밝혔어요. 오리건 중부 뉴베리 화산 쪽 '프로젝트 옵시디언'에서 이르면 2030년부터 공급하고, 구글 더댈러스 데이터센터에 쓰여요. 가격·기간은 공개 안 됨. 보도자료에 구글 담당자 발언도 있어요. OPB는 '세계 첫 상업용 초고온 지열 구매'라고 썼지만 보도자료엔 그 표현이 없어 한 줄에 넣지 않았어요. 20:43 차례에서 보류했던 FinancialJuice(WSJ 제목) 항목도 이걸로 done 처리했어요.
+- 출처: [퀘이즈 에너지 보도자료(Business Wire)](https://www.financialcontent.com/article/bizwire-2026-11-17-quaise-energy-signs-50-mw-geothermal-power-purchase-agreement-with-google) · [OPB](https://www.opb.org/article/2026/11/17/google-oregon-bend-la-pine-superhot-rocks-technology-energy-power/) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-2113-2 · 반영 · 알파벳(GOOGL) 아이소모픽 랩스 50억 달러 시리즈C 유치 (알파벳 참여)
+- 시각: 2026-11-17 21:20 KST
+- 내용: 딥마인드에서 나온 AI 신약 회사 아이소모픽 랩스가 11-17 07:00 ET(한국 21:00) 보도자료로 50억 달러 시리즈C 투자를 발표했어요. 그린옥스·세쿼이아가 이끌고 a16z 등이 새로 들어왔고, 알파벳도 계속 크게 투자한다고 적혀 있어요. 기업가치는 보도자료에 없어요(11-04 블룸버그 협상 보도는 제목만 사용). 보도자료 본문은 웹 열기 도우미 요약으로 읽었어요.
+- 출처: [아이소모픽 랩스 보도자료(PR Newswire)](https://www.prnewswire.com/news-releases/isomorphic-labs-announces-5-billion-series-c-funding-302942062.html) · 공식 여부: 공식
+- 확신도: 높음 (금액·알파벳 참여) / 중간 (본문 원문 문장은 직접 못 봄)
+
+### W-20261117-2113-3 · 반영 · 리제네론(REGN) 리브타요 EU 6주 간격 투여·짧은 주입 승인
+- 시각: 2026-11-17 21:20 KST
+- 내용: 리제네론이 11-17 07:00 ET(한국 21:00) 보도자료로 유럽연합 집행위원회가 리브타요(세미플리맙)의 피부·폐·자궁경부암 모든 EU 적응증에 12주 뒤 6주마다 700mg 투여 일정을 승인했다고 밝혔어요. 첫 투여가 잘 맞으면 이후 350mg 주입을 30분에서 15분으로 줄일 수 있어요. 미국 신청은 심사 중(결정 2027년 3월 예상). 리제네론은 news 칸이 처음이라 새로 만들었어요.
+- 출처: [리제네론 보도자료(GlobeNewswire)](https://www.globenewswire.com/news-release/2026/11/17/3404448/0/en/libtayo-cemiplimab-approved-in-the-european-union-eu-for-extended-dosing-and-faster-infusion-times-across-skin-lung-and-cervical-cancer-indications.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-2113-4 · 반영 · 아우스터(OUST) 내슈빌 교차로 100곳 추가 계약
+- 시각: 2026-11-17 21:20 KST
+- 내용: 아우스터가 11-17 IR 보도자료로 내슈빌 교통국(NDOT)이 블루시티(Rev8 라이다 교통 관리)를 교차로 100곳에 더 깔기로 했다고 밝혔어요(두 번째 '수백만 달러 규모' 확대, 내슈빌 누적 200곳 넘게). 계약 금액은 공개 안 됨(보도자료의 1,000만 달러는 내슈빌시가 받은 연방 SMART 보조금이라 넣지 않음). 발표 시각의 시간대가 안 적혀 tm 은 비웠어요. 아우스터는 news 칸이 처음이라 새로 만들었어요.
+- 출처: [아우스터 IR](https://investors.ouster.com/news-releases/news-release-details/ouster-bluecity-rev8-selected-second-multimillion-dollar-traffic) · [Business Wire(FinancialContent)](https://www.financialcontent.com/article/bizwire-2026-11-17-ouster-bluecity-with-rev8-selected-for-second-multimillion-dollar-traffic-and-safety-expansion-in-nashville) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261117-2113-5 · 알림 · 이번 차례
+- 시각: 2026-11-17 21:20 KST
+- 내용: Scout를 직접 돌린 뒤(21:1x KST 갱신) 새 항목 45건(news 34·market 11)을 처리했어요. 건너뜀: 스페이스X 우주선 잡기 영상(11-15 반영한 사건), 엔비디아 국가안보 위원회 재정리 글(19:13 반영), 황 복귀 없음·실적 앞둔 글·8,000억 달러 증발 글(앞 차례와 같은 사건·의견), 삼성-애플 D램 공급 계약 임박(여전히 매일경제 인용 '보도됐다' 글뿐 — 20:13 차례와 같은 처리), 로켓랩 뉴트론 뒤 흑자 전환 해설·퀀타 배당·ETF 매매 집계·Trefis·Motley Fool·테퍼·버크셔 보유 변화(의견·집계·정기 배당). 21시대라 kind "market"(앤트로픽 상장 서류의 아마존 지분·가격 범위 유지, 중부사령부 이란 주장 부인, EU 철강 반덤핑 등)은 done 처리만 했어요. 미국 지표는 소매판매가 오늘(동부 날짜 11-17)이지만 지금 07:2x ET로 08:30 전이라 매크로 수집은 돌리지 않았고, 최근 36시간 안 발표가 없어 발표 분석도 쓰지 않았어요(22:30 KST 발표 뒤 23:13·23:43 차례가 봐요).
