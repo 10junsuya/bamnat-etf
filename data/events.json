@@ -273,7 +273,48 @@
           "발표 전 예상 (Zacks)",
           "https://www.tradingview.com/news/zacks:98344bd4a094b:0-powell-industries-gears-up-to-post-q4-earnings-what-s-in-the-offing/"
         ]
-      ]
+      ],
+      "views": {
+        "asof": "2026-11-17",
+        "lead": "매출·이익이 예상을 크게 넘었지만, 시간외 주가 반응은 작았어요.",
+        "points": [
+          [
+            "결과",
+            "매출 3.97억 달러·주당순이익 2.23달러로, 예상(3.3억 달러 안팎·1.5달러대)을 크게 넘었어요"
+          ],
+          [
+            "주가 반응",
+            "발표 직후 시간외에선 0.8% 오르는 데 그쳤다고 보도됐어요 (다음 날 정규장 반응은 아직)"
+          ],
+          [
+            "업종·ETF",
+            "데이터센터·LNG 전력 설비 수요가 이어진다는 회사 설명과, 내년 숫자 전망이 없다는 지적이 함께 나왔어요"
+          ]
+        ],
+        "items": [
+          {
+            "t": "예상을 넘은 실적과 수주 증가를 전하며 시간외 0.8% 상승이라고 보도",
+            "src": "Investing.com",
+            "url": "https://ca.investing.com/news/earnings/powell-industries-beats-estimates-on-strong-order-growth-4962158",
+            "d": "2026-11-16",
+            "tag": "보도"
+          },
+          {
+            "t": "수주 잔고가 두 배가 됐지만, 내년 숫자 전망이 없고 다음 분기는 계절적으로 약하다고 짚음",
+            "src": "24/7 Wall St.",
+            "url": "https://247wallst.com/cards/powell-industries-q4-2026-earnings-powl-01m7k4s0m3vt55bdbwf2k46hby",
+            "d": "2026-11-16",
+            "tag": "보도"
+          },
+          {
+            "t": "수주 잔고는 취소될 수 있고, 석유화학·경전철 매출은 줄었다는 점을 주의할 점으로 꼽음",
+            "src": "Panabee",
+            "url": "https://www.panabee.com/news/powell-earnings-q4-2026",
+            "d": "2026-11-16",
+            "tag": "보도"
+          }
+        ]
+      }
     }
   },
   {
@@ -297,7 +338,11 @@
         [
           "매출",
           "915만 달러",
-          "1년 전 731만 달러보다 +25%"
+          "예상 약 1,080만 달러 하회 · 1년 전 731만 달러보다 +25%",
+          [
+            9.15,
+            10.8
+          ]
         ],
         [
           "1~9월 매출",
@@ -341,6 +386,10 @@
         [
           "인플렉션 3분기 실적 발표 (야후 파이낸스 게재)",
           "https://finance.yahoo.com/technology/ai/articles/infleqtion-reports-third-quarter-2026-210500294.html"
+        ],
+        [
+          "발표 전 예상치 (Earnings Whispers)",
+          "https://www.earningswhispers.com/article/INFQ/23069"
         ]
       ]
     }
