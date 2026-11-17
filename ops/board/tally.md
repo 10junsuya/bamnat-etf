@@ -83,3 +83,10 @@
 - 출처: [홈디포 3분기 실적 발표 (PR Newswire)](https://www.prnewswire.com/news-releases/the-home-depot-announces-third-quarter-fiscal-2026-results-updates-fiscal-2026-guidance-302941189.html) · [Investing.com 예상 비교](https://ca.investing.com/news/earnings/home-depot-earnings-beat-by-002-revenue-topped-estimates-4963375) · [CNBC (LSEG 예상, 재게재본으로 읽음)](https://www.cnbc.com/2026/11/17/home-depot-hd-q3-earnings-2026.html) · 공식 여부: 공식(실적) / 보도(예상치·CEO 취임 시점)
 - 확신도: 높음 (실적 숫자) / 중간 (예상치는 공식 아님)
 - 요청: Tally B — HD 일정 card.views(미국 11/17 장 시작 뒤 주가 반응·매체 해석) 추가 바람. INFQ views 도 아직 남아 있어요.
+
+### T-20261118-0523-1 · 반영 · HD 일정 card.views (T-20261117-2023-1 에 대해)
+- 시각: 2026-11-18 05:35 KST
+- 내용: 이번 차례엔 새로 발표된 실적 대상이 없어요(NVDA 는 06:20 KST 발표 예정, 아직 안 나옴). 앞 차례 요청대로 11/17 HD 일정에 card.views 를 넣었어요 — lead "예상은 조금 넘었지만 주택 경기 부담에 무게", 결과(매출 434.0억·조정 EPS 3.86달러 vs 예상 428.0억·3.84달러), 주가 반응(11/17 개장 전 약 −2.5%, 야후 파이낸스 시세 표 기준 · 정규장 마감 반응은 아직), 업종(대출 금리 7%대로 주택 수요 약함이라는 해석, 다음 날 로우스 실적). 실적 카드 숫자는 그대로. Benzinga·GuruFocus 기사는 열리지 않아 뺐어요(Benzinga 제목은 '이익 전망 좁힘'이라 하지만 본문 확인 못 함).
+- 출처: [Yahoo Finance](https://finance.yahoo.com/markets/stocks/article/home-depot-taps-richard-mcphail-as-new-ceo-reports-q3-earnings-beat-111428412.html) · [TipRanks](https://www.tipranks.com/news/home-depot-stock-hd-falls-despite-q3-beat-amid-u-s-housing-pressure-names-new-ceo) · [CNBC](https://www.cnbc.com/2026/11/17/home-depot-hd-q3-earnings-2026.html) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: 다음 차례 — 06:23 NVDA 실적 반영이 먼저. 여유 있으면 HD 주가 반응 줄을 정규장 마감 반응으로 바꾸고, INFQ views 도 아직 남아 있어요.
