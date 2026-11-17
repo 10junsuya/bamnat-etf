@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-17 17:59",
-"rot": 163,
+"updated_kst": "2026-11-17 18:14",
+"rot": 42,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "33건",
+"Reuters": "31건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "6763a5e523e6",
+"t": "ORCL",
+"title": "Is Cerebras Stock Still a Buy After Its Microsoft Deal?",
+"url": "https://www.fool.com/investing/2026/11/17/is-cerebras-stock-still-a-buy-after-its-microsoft-deal/?.tsrc=rss",
+"pub": "2026-11-17T09:01:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T09:14:08+00:00"
+},
 {
 "id": "98b3330b6db2",
 "t": "ASML",
@@ -722,6 +732,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T05:44:14+00:00"
+},
+{
+"id": "e7bf7af2f9cd",
+"t": "AVGO",
+"title": "Trump’s Tighter Chip Rules Sink AMD and Broadcom, Not Just Nvidia",
+"url": "https://www.tikr.com/blog/trumps-tighter-chip-rules-sink-amd-and-broadcom-not-just-nvidia?ref=yahoofinance&tlnk=yf-261117-w7qg8gw5&.tsrc=rss",
+"pub": "2026-11-17T04:28:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T09:14:08+00:00"
 },
 {
 "id": "185315836d60",
@@ -7994,24 +8014,84 @@
 "seen": "2026-11-16T16:20:07+00:00"
 },
 {
-"id": "2ad8eee6b684",
-"t": "HD",
-"title": "Disney Is the Cheaper Stock, but Home Depot Pays the Bigger Dividend. Which Is Better for Retirees?",
-"url": "https://247wallst.com/investing/2026/11/16/disney-is-the-cheaper-stock-but-home-depot-pays-the-bigger-dividend-which-is-better-for-retirees/?.tsrc=rss",
-"pub": "2026-11-16T14:42:45+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
+"id": "a9023b545f43",
+"t": "",
+"title": "Ukmto: crew currently missing, damage evaluation unknown at this time",
+"url": "https://www.financialjuice.com/News/9855401/Ukmto-crew-currently-missing-damage-evaluation-unknown-at-this-time.aspx?xy=rss",
+"pub": "2026-11-17T09:13:13+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T09:14:08+00:00"
 },
 {
-"id": "6dbb7b977471",
-"t": "AVGO",
-"title": "Can Credo Stock Double From Here?",
-"url": "https://www.trefis.com/stock/crdo/articles/625294/can-credo-stock-double-from-here/2026-11-16?.tsrc=rss",
-"pub": "2026-11-16T14:41:14+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T16:20:07+00:00"
+"id": "5d41558306b2",
+"t": "",
+"title": "UKMTO: strike led to fire onboard",
+"url": "https://www.financialjuice.com/News/9855400/UKMTO-strike-led-to-fire-onboard.aspx?xy=rss",
+"pub": "2026-11-17T09:12:56+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T09:14:08+00:00"
+},
+{
+"id": "1d7b2f7f233c",
+"t": "",
+"title": "UKMTO: maritime security agency reports vessel 7 nm north of Oman’s Khasab hit by second strike",
+"url": "https://www.financialjuice.com/News/9855399/UKMTO-maritime-security-agency-reports-vessel-7-nm-north-of-Omans-Khasab-hit-by-second-strike.aspx?xy=rss",
+"pub": "2026-11-17T09:12:31+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T09:14:08+00:00"
+},
+{
+"id": "042f2e4543bc",
+"t": "",
+"title": "Italian HICP Final YoY Actual 5.6% (Forecast 5.6%, Previous 5.6%)",
+"url": "https://www.financialjuice.com/News/9855383/Italian-HICP-Final-YoY-Actual-56-Forecast-56-Previous-56.aspx?xy=rss",
+"pub": "2026-11-17T09:00:50+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T09:14:08+00:00"
+},
+{
+"id": "c02687a1073f",
+"t": "",
+"title": "Italian CPI YoY Final Actual 5.5% (Forecast 5.4%, Previous 5.4%)",
+"url": "https://www.financialjuice.com/News/9855382/Italian-CPI-YoY-Final-Actual-55-Forecast-54-Previous-54.aspx?xy=rss",
+"pub": "2026-11-17T09:00:50+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T09:14:08+00:00"
+},
+{
+"id": "e4a1e42f9abc",
+"t": "",
+"title": "Italian CPI MoM Final Actual 1% (Forecast 0.9%, Previous 0.9%)",
+"url": "https://www.financialjuice.com/News/9855381/Italian-CPI-MoM-Final-Actual-1-Forecast-09-Previous-09.aspx?xy=rss",
+"pub": "2026-11-17T09:00:50+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T09:14:08+00:00"
+},
+{
+"id": "8e305ad67e39",
+"t": "",
+"title": "Italian HICP Final MoM Actual 1.2% (Forecast 1.2%, Previous 1.2%)",
+"url": "https://www.financialjuice.com/News/9855380/Italian-HICP-Final-MoM-Actual-12-Forecast-12-Previous-12.aspx?xy=rss",
+"pub": "2026-11-17T09:00:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-17T09:14:08+00:00"
+},
+{
+"id": "1940757d674f",
+"t": "",
+"title": "Turkey Fund Assets Shrink by $54 Billion Amid Manipulation Probe",
+"url": "https://www.bloomberg.com/news/articles/2026-11-17/turkey-fund-assets-shrink-by-54-billion-amid-manipulation-probe",
+"pub": "2026-11-17T08:58:50+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T09:14:08+00:00"
 },
 {
 "id": "22ad8adc935a",
@@ -10929,86 +11009,6 @@
 "title": "UKMTO: Received report of incident 7nm north of Oman's Khasab.",
 "url": "https://www.financialjuice.com/News/9854544/UKMTO-Received-report-of-incident-7nm-north-of-Omans-Khasab.aspx?xy=rss",
 "pub": "2026-11-16T21:34:44+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "9e3f3b090adc",
-"t": "",
-"title": "UKMTO: Received report of incident 7nm north of Oman's Khasab.",
-"url": "https://www.financialjuice.com/News/9854544/UKMTO-Received-report-of-incident-7nm-north-of-Omans-Khasab.aspx",
-"pub": "2026-11-16T21:34:44+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "6cd2ceaafe48",
-"t": "",
-"title": "USD CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854530/USD-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "9c0a1b7925e9",
-"t": "",
-"title": "USD CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854530/USD-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "421ec78cde71",
-"t": "",
-"title": "EUR CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854529/EUR-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:49+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "15357bdd8744",
-"t": "",
-"title": "EUR CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854529/EUR-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:49+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "c8eb77222724",
-"t": "",
-"title": "AUD CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854528/AUD-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T22:26:27+00:00"
-},
-{
-"id": "4792b4147757",
-"t": "",
-"title": "AUD CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854528/AUD-CFTC-Positions-Week-of-November-10th---FJElite.aspx",
-"pub": "2026-11-16T21:31:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T01:44:47+00:00"
-},
-{
-"id": "f0e728fccbfd",
-"t": "",
-"title": "JPY CFTC Positions Week of November 10th - FJElite",
-"url": "https://www.financialjuice.com/News/9854526/JPY-CFTC-Positions-Week-of-November-10th---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T21:31:45+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T22:26:27+00:00"
