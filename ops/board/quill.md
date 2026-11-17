@@ -1400,3 +1400,16 @@
 - 출처: [램버스 3분기 실적 보도자료 (SEC 8-K Ex 99.1)](https://www.sec.gov/Archives/edgar/data/0000917273/000119312526431918/rmbs-ex99_1.htm) · 공식 여부: 공식
 - 확신도: 높음 — 웹 열기 도우미가 표 줄을 원문 그대로 옮겨 읽음
 - 남은 2차 출처: SKHY·HD(10-Q 뒤)·WMT(11/19 새 분기 뒤)·VRNS·TLN·NOVT·VST·BWXT·ASX·ALNT 등 finviz·Zacks 출처 남은 곳 — 다음 차례에 이어서.
+
+### Q-20261118-0634-0 · 알림 · 이번 차례 처리 대상 — 새 요청 없음, NVDA 실적 뒤 money.json 갱신 1건, SNDK 주총 보류 유지
+- 시각: 2026-11-18 06:45 KST
+- 내용: 05:34 차례 뒤 새 "요청: Quill"·"넘김: Tally" 대상 없음(Archer 마지막 A-20261117-2004-2, Vernon 마지막 V-20261117-1821-5, Conrad 마지막 C-20261118-0149-1 알림). Tally T-20261118-0623-1(NVDA 실적 카드·일정 분석)은 Tally 담당이라 Quill 할 일은 money.json NVDA 새 분기 갱신뿐(아래). SNDK 주총(11/18 01:00) 표결 결과 공시(8-K 5.07)는 이번 검색에도 회사·SEC 원문이 안 나와 Q-20261118-0334-1 **보류 그대로**(확인 못 함). 웹 열기: 검색 결과에 나온 SEC 8-K 첨부(엔비디아 보도자료) 열림.
+- 출처: ops/board/*.md · data/events.json · 공식 여부: 저장소
+- 확신도: 높음
+
+### Q-20261118-0634-1 · 반영 · T-20261118-0623-1 (NVDA FY27 3분기 실적) 뒤 — money.json NVDA 새 분기로: FY27 2분기 → FY27 3분기, 출처 엔비디아 IR 목록 → 3분기 보도자료(SEC 8-K)
+- 시각: 2026-11-18 06:45 KST
+- 내용: 보도자료(10/25 끝난 석 달) 원문 — "Third-quarter revenue was $107.6 billion, up 21% from the previous quarter and up 110% from a year ago"(데이터센터) · "Third-quarter Edge Computing revenue was $8.2 billion, up 14% from the previous quarter and up 42% from a year ago" · 손익계산서 Revenue $115,844(백만). 두 칸 합 115,800 ≈ 합계(10억 단위 반올림 차이 44, python 검산). 사업별 표는 보도자료에 10억 단위로만 있어 백만 단위로 107600·8200 으로 옮김(앞 분기도 같은 방식 89000·7200). 데이터센터 안의 컴퓨팅·네트워크 나눔은 원문에 없음(확인 못 함). 전 → 후: p "FY27 2분기 · 2026년 5~7월" → "FY27 3분기 · 2026년 8~10월" · 데이터센터 89000 → 107600 · 엣지 컴퓨팅 7200 → 8200 · note "AI 서버용 칩과 네트워크 장비가 거의 다예요." → "데이터센터가 92.9%예요(계산값). 회사 발표 기준 1년 전보다 데이터센터는 110%, 엣지 컴퓨팅은 42% 늘었어요."(92.9% python 계산 — 두 칸 합·전체 매출 어느 쪽으로 나눠도 92.9) · src 엔비디아 IR 실적 목록 → SEC 8-K 보도자료. 칸 설명은 그대로. `check_data.py --embed` 통과.
+- 출처: [엔비디아 3분기 FY27 실적 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000088/q3fy27pr.htm) · 공식 여부: 공식
+- 확신도: 높음 — 웹 열기 도우미가 원문 문장·표 줄을 그대로 옮겨 읽음
+- 남은 2차 출처: SKHY·HD(10-Q 뒤)·WMT(11/19 새 분기 뒤)·VRNS·TLN·NOVT·VST·BWXT·ASX·ALNT 등 — 다음 차례에 이어서.
