@@ -829,7 +829,7 @@ function usState(p){
   if(m>=240 && m<570) return {key:"pre", label:"프리마켓"};
   if(m>=570 && m<end) return {key:"regular", label:"정규장"};
   if(m>=end && m<1200) return {key:"after", label:"애프터마켓"};
-  return {key:"closed", label:"휴장"};
+  return {key:"closed", label:"장 마감"};
 }
 function untilUsOpen(p){
   const nowM = p.h*60+p.mi;
@@ -1737,7 +1737,7 @@ function eventSheet(id){
   openSheet(`<h3 id="sheetTitle">${evTitleHtml(ev)}</h3>
     <p class="small muted" style="margin-top:0">${ev.tbd && !ev.done ? `날짜 미정 (${m}/${dd} 가안)` : `${m}/${dd}(${wd})`} ${ev.when} · 한국 시간 · 회사 공식 발표 기준${ev.done?" · 발표 완료":""}</p>
     ${isEarn ? `<div class="bsection"><h4>발표 개요</h4><p>${josaIGa(s?s[0]:t)} ${ev.q||"지난 분기"} 성적표를 내놓는 날이에요. 매출과 주당순이익(EPS)이 시장 예상보다 높았는지, 그리고 회사가 말하는 다음 분기 전망(가이던스)을 함께 봐요.</p>
-      <p class="small muted">미국 장이 끝난 뒤 발표돼서, 주가 반응은 시간외 거래와 다음 날 정규장에서 먼저 나타나요. 국내 상장 ETF에는 보통 그다음 한국 장에 반영돼요.</p></div>`
+      <p class="small muted">실적 발표 뒤 주가 반응은 미국 시간외 거래(프리마켓·애프터마켓)와 이어지는 정규장에서 먼저 나타나요. 국내 상장 ETF에는 보통 그다음 한국 장에 반영돼요.</p></div>`
     : ev.type==="event" ? `<div class="bsection"><h4>일정 개요</h4><p>${ev.what||"주주총회 같은 회사 행사 일정이에요."}</p>
       <p class="small muted">행사에서 정해진 내용(안건 표결 결과 등)은 회사 공시로 확인할 수 있어요.</p></div>`
     : `<div class="bsection"><h4>일정 개요</h4><p>${ev.what||"로켓 발사 일정이에요."}</p>
