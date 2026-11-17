@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-17 08:46",
-"rot": 160,
+"updated_kst": "2026-11-17 09:02",
+"rot": 42,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "실패 HTTPError",
+"Reuters": "34건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "b6f9ab83d63f",
+"t": "NVDA",
+"title": "Hive Digital CEO says its five-year-old Nvidia GPUs still produce cash flow",
+"url": "https://www.thestreet.com/crypto/innovation/hive-digital-ceo-says-its-five-year-old-nvidia-gpus-still-produce-cash-flow?.tsrc=rss",
+"pub": "2026-11-16T23:51:49+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:02:13+00:00"
+},
+{
+"id": "7d7be6f83205",
+"t": "NVDA",
+"title": "Why Navitas Semiconductor Stock Sank by 12% on Monday",
+"url": "https://www.fool.com/investing/2026/11/16/why-navitas-semiconductor-stock-sank-by-12-on-monday/?.tsrc=rss",
+"pub": "2026-11-16T23:48:38+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:02:13+00:00"
+},
 {
 "id": "899a08e163cd",
 "t": "GOOGL",
@@ -104,6 +124,16 @@
 "seen": "2026-11-16T23:46:32+00:00"
 },
 {
+"id": "e4faf770a9d8",
+"t": "NVDA",
+"title": "Stocks, Gold, and Asia Bleed $2.2 Trillion: Top 5 Factors That Triggered the Crash",
+"url": "https://beincrypto.com/market-bloodbath-2-trillion-5-factors/?.tsrc=rss",
+"pub": "2026-11-16T23:15:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:02:13+00:00"
+},
+{
 "id": "7c32c6d0c9eb",
 "t": "AVGO",
 "title": "Broadcom Is “the Best Play” on Nvidia’s CEO Exit, One Investor Argues. The Reason Is China",
@@ -132,6 +162,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T23:46:32+00:00"
+},
+{
+"id": "41455e6da946",
+"t": "WDC",
+"title": "WD to Participate in Upcoming Investor Conferences",
+"url": "https://finance.yahoo.com/technology/ai/articles/wd-participate-upcoming-investor-conferences-230400402.html?.tsrc=rss",
+"pub": "2026-11-16T23:04:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
 "id": "f96c46e47225",
@@ -462,6 +502,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T22:26:27+00:00"
+},
+{
+"id": "6b0d6aae3afb",
+"t": "LMT",
+"title": "How Did Lockheed Stock Leave Northrop Behind?",
+"url": "https://www.trefis.com/stock/noc/articles/625260/how-did-lockheed-stock-leave-northrop-behind/2026-11-16?.tsrc=rss",
+"pub": "2026-11-16T22:12:12+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
 "id": "f45020064a98",
@@ -864,6 +914,16 @@
 "seen": "2026-11-16T23:46:32+00:00"
 },
 {
+"id": "7c03b780fb2c",
+"t": "CRWD",
+"title": "CrowdStrike Holdings (CRWD) Stock Moves -1.50%: What You Should Know",
+"url": "https://finance.yahoo.com/markets/stocks/articles/crowdstrike-holdings-crwd-stock-moves-214502779.html?.tsrc=rss",
+"pub": "2026-11-16T21:45:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:02:13+00:00"
+},
+{
 "id": "43ae7ed23362",
 "t": "AMD",
 "title": "Is AMD Stock Still a Buy After Its Post-Earnings Jump?",
@@ -1242,6 +1302,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-16T23:09:28+00:00"
+},
+{
+"id": "19b3a246e79d",
+"t": "WDC",
+"title": "Top Stock Picks for Week of November 16, 2026",
+"url": "https://finance.yahoo.com/markets/stocks/articles/top-stock-picks-week-november-210400054.html?.tsrc=rss",
+"pub": "2026-11-16T21:04:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
 "id": "0f35cf269ebd",
@@ -7944,74 +8014,44 @@
 "seen": "2026-11-16T14:26:19+00:00"
 },
 {
-"id": "619980e20aa4",
-"t": "VRTX",
-"title": "Vertex Pharmaceuticals Prepares for Key Kidney Drug Decision as Pipeline Readouts Loom",
-"url": "https://www.marketbeat.com/instant-alerts/event-vertex-pharmaceuticals-prepares-for-key-kidney-drug-decision-as-pipeline-readouts-loom-2026-11-16/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
-"pub": "2026-11-16T12:12:30+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "a2c0188d3bd0",
+"t": "",
+"title": "Shamrock’s Lasalle: Different Ways To Invest in Sports",
+"url": "https://www.bloomberg.com/news/videos/2026-11-16/shamrock-s-lasalle-different-ways-to-invest-in-sports-video",
+"pub": "2026-11-16T23:50:28+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
-"id": "6f7d3cca1476",
-"t": "SPCX",
-"title": "Nvidia, Intel, Sandisk, SpaceX, Strategy, and More Stocks That Explain Today’s Market",
-"url": "https://finance.yahoo.com/m/a7938ba3-f917-3e6f-b865-2195ea15d9d5/nvidia%2C-intel%2C-sandisk%2C.html?.tsrc=rss",
-"pub": "2026-11-16T12:11:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "1e3bbe1de913",
+"t": "",
+"title": "Alzheimer's Will Be a \"Treatable Condition,\" Says David Cameron",
+"url": "https://www.bloomberg.com/news/videos/2026-11-16/alzheimer-s-will-be-treatable-says-david-cameron-video",
+"pub": "2026-11-16T23:48:29+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
-"id": "71b88a9163f3",
-"t": "AMAT",
-"title": "Can Onto Innovation Sustain Its Growth Momentum in 2027?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/onto-innovation-sustain-growth-momentum-120900022.html?.tsrc=rss",
-"pub": "2026-11-16T12:09:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
+"id": "b0725a58acbc",
+"t": "",
+"title": "AirAsia, Malaysia Airports in $122 Million Debt Repayment Talks",
+"url": "https://www.bloomberg.com/news/articles/2026-11-16/airasia-malaysia-airports-in-122-million-debt-repayment-talks",
+"pub": "2026-11-16T23:41:15+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
-"id": "2c0232afd747",
-"t": "SPCX",
-"title": "Only Elon Musk Can Get Jensen Huang His Job Back",
-"url": "https://247wallst.com/investing/2026/11/16/only-elon-musk-can-get-jensen-huang-his-job-back/?.tsrc=rss",
-"pub": "2026-11-16T12:05:18+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "64e3e7548143",
-"t": "MU",
-"title": "Micron Stock: Why Strong Memory Prices May Count for Nothing",
-"url": "https://finance.yahoo.com/m/6b85e733-ffc0-3cbf-93ed-2c5633543e8e/micron-stock%3A-why-strong.html?.tsrc=rss",
-"pub": "2026-11-16T12:01:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "d28543b7dbd2",
-"t": "AMZN",
-"title": "Blackstone Digital Infrastructure Trust Reports Third-Quarter 2026 Results",
-"url": "https://finance.yahoo.com/real-estate/articles/blackstone-digital-infrastructure-trust-reports-120100973.html?.tsrc=rss",
-"pub": "2026-11-16T12:01:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "11f0f6fb35ca",
-"t": "HD",
-"title": "Option Volatility and Earnings Report For Nov 16-20",
-"url": "https://www.barchart.com/story/news/8851973/option-volatility-and-earnings-report-for-nov-16-20?.tsrc=rss",
-"pub": "2026-11-16T12:00:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-16T18:25:24+00:00"
+"id": "b8c0fba98179",
+"t": "",
+"title": "CVC plans to pull out of near-€3 billion IRCA deal, FT says - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSUN3Q3BxSEx3cW10c25DTTczUHhPaHdGd3FIcTJ5c1ZFSzhvNUpNc2JfUGFLNnJIS2h1N09YaGJ0SjByYndKYVQyY0RFb19tZDUwNUU5cldJWlRGY1RPR0VXaTdpcWZwMi1ZRlpzanpyMDRrakFrUHVVbFpSMmk1Yld4MlFzSVpKbkdya2oxaW1HaUhfZXFyaWRZdkozRmNmWGY4?oc=5",
+"pub": "2026-11-16T23:32:56+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
 "id": "85b2322d1862",
@@ -8032,6 +8072,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-16T23:46:32+00:00"
+},
+{
+"id": "2d0821049747",
+"t": "",
+"title": "Taiwan stock exchange says it will take stabilisation measures if needed - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQLWNOaXUyMGFnd195ZlFQc1lYOWN2bGtSaVhCLWlDc3NhRHgtM0RVQ2l3ci04alJlQ3lzTFFYUW1Nc3NoQm8zdV92cEdkNTlGVHVXVF9GSmJNRHN0ZWpYOWFFWFdDcXFxdjF1VzY0c0wtRy1kdUZ3dkx2NU9TUEhSTWN5UFQ5dWhTUFFNcmdIQTFfRGtQTlhDSDhaNW8wNmFNZTd0MGlfT3hxOW1na2hQRVFmYllXQmxzbFZhSHYtaVQ?oc=5",
+"pub": "2026-11-16T23:20:18+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
 "id": "d9be71c436e1",
@@ -8182,6 +8232,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T23:09:28+00:00"
+},
+{
+"id": "7032642bf2af",
+"t": "",
+"title": "ProShares Short S&P500 ETF (SH.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBoTGUwYzMteWxOdk5QbHBHYUhXN0hJd0c4aURlVFA4M2g0NENLcXYxSXpIcGZyTVJMM2lUTVBnTmlGVmlEMFVwRFdCSGVMUmhyUlZtM3hB?oc=5",
+"pub": "2026-11-16T22:46:18+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
 "id": "2a857341d86b",
@@ -9374,6 +9434,16 @@
 "seen": "2026-11-16T19:25:18+00:00"
 },
 {
+"id": "e34bd66437d5",
+"t": "",
+"title": "Tecnicas Reunidas SA (TNISY.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZVERKdzRSNkVJYUdrcGFXcGR1VUE1VVg1MzBzOFNUTGRTcVBKVmZGMGlIdmRZTkFJLU0tc3IzX2dQcmhFd0NtSGpFaktreFBfd0xNbnR4dEVmSi05bFRENHkyY01JVVBYUDBxbDBR?oc=5",
+"pub": "2026-11-16T19:19:32+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
+},
+{
 "id": "8df226459262",
 "t": "",
 "title": "Iran’s Foreign Minister Araghchi departs Islamabad for Muscat - Tasnim",
@@ -9572,6 +9642,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-16T19:25:18+00:00"
+},
+{
+"id": "c925b4a3fc46",
+"t": "",
+"title": "SouthPoint Bancshares Inc (SOUB.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1wSmYydGc3bFg5YjBJdlNYTXBvUk8xdERLRC1QRW9kc2VYNjVNQjFfdUZZSFlaZHppYWNnYzIzZ0ZpRERCc1BSbWFOQ3hVYmFpQXIxQl9QMEtvM1ZNc0V0NjViSUs2c1RCV0lBWA?oc=5",
+"pub": "2026-11-16T18:59:44+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
 "id": "8e76e8d92c41",
@@ -9784,6 +9864,16 @@
 "seen": "2026-11-16T17:31:31+00:00"
 },
 {
+"id": "2f4512146dac",
+"t": "",
+"title": "Nitches Inc (NICH.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOE1wU2huTTRwTzZXOTkwcjF4dlZleG55cU1mNVZUNTNINUtzYW80U2ZLZGJuV0RwTFFidlUzWGRmZllhTUZHOUNOVkxIUkItcWNLaXdEc3RXQUNaVFNMQUxqemNMdDAxWWNyaFRmWGRTekpxWXBWNHY1Sm9RWTlOMDVZUWg?oc=5",
+"pub": "2026-11-16T17:26:15+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
+},
+{
 "id": "6efbeba0956e",
 "t": "",
 "title": "OpenAI CEO: The industry will be fine after news of Huang’s departure - Semafor Event.",
@@ -9802,6 +9892,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-16T17:31:31+00:00"
+},
+{
+"id": "b8d43264ccda",
+"t": "",
+"title": "NIP Group Inc (NIPG.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE85S0Q0ZktQbWtRZk9SWW0tSVlMUFpweWN1WTV4SW9fS2tTMGJjQjhudGxMdjJlTFlrYXFHc3ZEZGJUenBZUzlvV3VFc3dtdlp5QUVIT08xeGNzZXRpTGxTR1libHkxQ0s0NjVNeQ?oc=5",
+"pub": "2026-11-16T17:22:07+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
 },
 {
 "id": "fd0f8e8f7ac2",
@@ -10844,6 +10944,16 @@
 "seen": "2026-11-16T14:26:19+00:00"
 },
 {
+"id": "b34ea667095a",
+"t": "",
+"title": "Jay Ushin Ltd (JAYY.BO) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMzBzaHRnWVoxdGJQU21lUmgxd3AtdC1BRm1PM2czRVFhYlczSXNhcV90dWtBYkVOQUZfQlRSTmxMa2RZYUpZalpPSHkzZUZnQUtQTllGdHA5T19NRzlkQjJzXzA2TlF0NFRpbHlUaWxlRUUzRV9qa2Q3NndKOEZmVA?oc=5",
+"pub": "2026-11-16T13:47:48+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-17T00:02:13+00:00"
+},
+{
 "id": "aac12e8047a3",
 "t": "",
 "title": "US Transport Secretary Duffy: Working with Lumen, AT&T, and Verizon on architecture $T $VZ",
@@ -10902,116 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "d6eb836b542b",
-"t": "",
-"title": "Canadian Core CPI MoM Actual 0.1% (Forecast -, Previous 0.1%)",
-"url": "https://www.financialjuice.com/News/9853877/Canadian-Core-CPI-MoM-Actual-01-Forecast---Previous-01.aspx?xy=rss",
-"pub": "2026-11-16T13:32:12+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "3c6ac1974fe9",
-"t": "",
-"title": "Citigroup: Risk Sentiment Remains Soft as Markets Await Fed and Geopolitical Catalysts - FJElite",
-"url": "https://www.financialjuice.com/News/9853884/Citigroup-Risk-Sentiment-Remains-Soft-as-Markets-Await-Fed-and-Geopolitical-Catalysts---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T13:31:12+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "3182216bb746",
-"t": "",
-"title": "Canadian CPI YoY Actual 3.1% (Forecast 3.2%, Previous 3.1%)",
-"url": "https://www.financialjuice.com/News/9853876/Canadian-CPI-YoY-Actual-31-Forecast-32-Previous-31.aspx?xy=rss",
-"pub": "2026-11-16T13:30:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "ca93c4174116",
-"t": "",
-"title": "Canadian CPI MoM Actual 0.2% (Forecast 0.3%, Previous 0.1%)",
-"url": "https://www.financialjuice.com/News/9853875/Canadian-CPI-MoM-Actual-02-Forecast-03-Previous-01.aspx?xy=rss",
-"pub": "2026-11-16T13:30:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "31de2da2ba00",
-"t": "",
-"title": "Canadian CPI Trim Actual 1.8% (Forecast 1.9%, Previous 1.8%)",
-"url": "https://www.financialjuice.com/News/9853874/Canadian-CPI-Trim-Actual-18-Forecast-19-Previous-18.aspx?xy=rss",
-"pub": "2026-11-16T13:30:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "07c9e50d04a3",
-"t": "",
-"title": "Canadian CPI Median Actual 2% (Forecast 2%, Previous 1.9%)",
-"url": "https://www.financialjuice.com/News/9853873/Canadian-CPI-Median-Actual-2-Forecast-2-Previous-19.aspx?xy=rss",
-"pub": "2026-11-16T13:30:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "8908f147eca0",
-"t": "",
-"title": "Canadian Dollar Lowest Since 2025 on 3.1% Inflation Print",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/canada-inflation-holds-steady-at-3-1-in-october",
-"pub": "2026-11-16T13:30:01+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "544cfb65bd3d",
-"t": "",
-"title": "NY Fed Manufacturing Actual 7.8 (Forecast 18, Previous 25.50)",
-"url": "https://www.financialjuice.com/News/9853872/NY-Fed-Manufacturing-Actual-78-Forecast-18-Previous-2550.aspx?xy=rss",
-"pub": "2026-11-16T13:30:00+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "d649644bd412",
-"t": "",
-"title": "Crédit Agricole: USD Rally Supported by Rates and Risk Aversion, but Upside May Be Limited - FJElite",
-"url": "https://www.financialjuice.com/News/9853871/Cr%c3%a9dit-Agricole-USD-Rally-Supported-by-Rates-and-Risk-Aversion-but-Upside-May-Be-Limited---FJElite.aspx?xy=rss",
-"pub": "2026-11-16T13:28:37+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "e19b95059064",
-"t": "",
-"title": "Giant Aluminum Squeeze Is Stress Test for LME’s Anti-Abuse Rules",
-"url": "https://www.bloomberg.com/news/articles/2026-11-16/giant-aluminum-squeeze-is-stress-test-for-lme-s-anti-abuse-rules",
-"pub": "2026-11-16T13:26:38+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-16T14:26:19+00:00"
-},
-{
-"id": "673eef09d952",
-"t": "",
-"title": "Nomura Japan Equity ETF (NJPN.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBVMXNDRkF1RktJT3RHNXVseUt5Qk1rZUkzN2FyNXo5anRoTjJLREttNFpHNVI0cXpOTnZQWXNrM0xwWmRCZFBiUnBBdFVkaW13MURvWUdqNkQySVppc0JYcklkWnhTb2lfZFVKRw?oc=5",
-"pub": "2026-11-16T13:26:32+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-16T17:31:31+00:00"
 }
 ]
 }
