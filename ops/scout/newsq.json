@@ -1,18 +1,128 @@
 {
-"updated_kst": "2026-11-18 12:14",
-"rot": 93,
+"updated_kst": "2026-11-18 12:42",
+"rot": 153,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "34건",
+"Reuters": "39건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "7b24587d2f65",
+"t": "AVGO",
+"title": "Broadcom vs. Micron Technology: Which Tech Stock Is the Better Buy for 2027?",
+"url": "https://www.fool.com/coverage/better-buy/2026/11/17/broadcom-vs-micron-technology-which-tech-stock-is-the-better-buy-for-2027/?.tsrc=rss",
+"pub": "2026-11-18T03:30:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "61daf89ffc75",
+"t": "NVDA",
+"title": "Asia tech shares turn mixed after Nvidia beat as China chip curbs cloud optimism",
+"url": "https://finance.yahoo.com/technology/articles/asia-tech-shares-turn-mixed-032547363.html?.tsrc=rss",
+"pub": "2026-11-18T03:25:47+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "52f529a35bda",
+"t": "TSLA",
+"title": "“Of Course,” Musk Says When Told Tesla’s $1.6 Trillion Already Prices In Moderate Cybercab Success.",
+"url": "https://www.tikr.com/blog/of-course-musk-says-when-told-teslas-1-6-trillion-already-prices-in-moderate-cybercab-success?ref=yahoofinance&tlnk=yf-261117-g8r23qw9&.tsrc=rss",
+"pub": "2026-11-18T03:18:57+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "58743b83a28f",
+"t": "SPCX",
+"title": "SpaceX CFO Sees No ‘Magic Wand’ For Anthropic’s Data Center Plans — And GTA 6 Is Stealing Some Of Its IPO Thunder",
+"url": "https://stocktwits.com/news-articles/markets/equity/spacex-no-magic-wand-anthropic-data-center-plans-gta-6-stealing-ipo-thunder/cNbXFXiR9hn?.tsrc=rss",
+"pub": "2026-11-18T03:18:23+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "5f2ea7339f4f",
+"t": "NVDA",
+"title": "Nvidia’s former sales chief had ties to customers in chip scandal- The Information",
+"url": "https://finance.yahoo.com/technology/articles/nvidia-former-sales-chief-had-031425596.html?.tsrc=rss",
+"pub": "2026-11-18T03:14:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "7d1235f75943",
+"t": "NVDA",
+"title": "Nvidia Stock And 3 AI Semiconductor Picks For The Next Chip Demand Wave",
+"url": "https://finance.yahoo.com/technology/ai/articles/nvidia-stock-3-ai-semiconductor-031423325.html?.tsrc=rss",
+"pub": "2026-11-18T03:14:23+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "40d26c1c4cc4",
+"t": "VRTX",
+"title": "Vertex Pharmaceuticals (VRTX) Could Be 11% Undervalued On Late Stage Pipeline Focus",
+"url": "https://finance.yahoo.com/healthcare/articles/vertex-pharmaceuticals-vrtx-could-11-031256640.html?.tsrc=rss",
+"pub": "2026-11-18T03:12:56+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "942d70ed070f",
+"t": "TSM",
+"title": "Taiwan Semiconductor Manufacturing (NYSE:TSM) Shares Tumble As Customer Shock Clouds AI Outlook",
+"url": "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-manufacturing-nyse-tsm-031120579.html?.tsrc=rss",
+"pub": "2026-11-18T03:11:20+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "be95d5775870",
+"t": "CRM",
+"title": "CRM Stock Faces Worst Week Since April: Fresh Layoffs Reportedly Surface Across Salesforce Teams",
+"url": "https://stocktwits.com/news-articles/markets/equity/crm-stock-faces-worst-week-since-april-fresh-layoffs-reportedly-surface-across-salesforce-teams/cNbXF3yR9hV?.tsrc=rss",
+"pub": "2026-11-18T03:10:48+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "363d694f72bb",
+"t": "AMD",
+"title": "What Does Hewlett Packard Enterprise (HPE) Gaining A Top 14 AI Supercomputer Mean?",
+"url": "https://finance.yahoo.com/technology/ai/articles/does-hewlett-packard-enterprise-hpe-030945349.html?.tsrc=rss",
+"pub": "2026-11-18T03:09:45+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "96629cc6eb9b",
+"t": "SPCX",
+"title": "A Rocket Failure Just Cost Amazon 40 Internet Satellites. It's Good News for SpaceX, but I'd Still Want a Lower Stock Price.",
+"url": "https://www.fool.com/investing/2026/11/17/a-rocket-failure-just-cost-amazon-40-internet-satellites-it-s-good-news-for-spacex-but-i-d-still-want-a-lower-stock-price/?.tsrc=rss",
+"pub": "2026-11-18T03:06:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
 {
 "id": "c03afe797021",
 "t": "NVDA",
@@ -104,6 +214,16 @@
 "seen": "2026-11-18T02:45:11+00:00"
 },
 {
+"id": "1112aff9bb7d",
+"t": "AMZN",
+"title": "Uber Riders in Vegas Can Now Get Driverless Zoox Robotaxi",
+"url": "https://finance.yahoo.com/technology/articles/uber-riders-vegas-now-driverless-023011406.html?.tsrc=rss",
+"pub": "2026-11-18T02:30:11+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
 "id": "547c286b25ef",
 "t": "MSFT",
 "title": "Microsoft Stock Hits Seven-Week Low: Is a Bigger Drop Coming?",
@@ -134,6 +254,16 @@
 "seen": "2026-11-18T02:45:11+00:00"
 },
 {
+"id": "21531db1f7ef",
+"t": "CRM",
+"title": "Salesforce starts fresh round of job cuts, Business Insider reports",
+"url": "https://finance.yahoo.com/technology/articles/salesforce-starts-fresh-round-job-021011575.html?.tsrc=rss",
+"pub": "2026-11-18T02:10:11+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
 "id": "9aa929863469",
 "t": "NVDA",
 "title": "Jeff Bezos Warns Outsider CEO Replacing Jensen Huang Faces ‘Vanishingly Small Chance of Succeeding’ at Nvidia: ‘Too Complicated’",
@@ -152,6 +282,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T02:15:10+00:00"
+},
+{
+"id": "c3e9be447414",
+"t": "MP",
+"title": "In 45 Days Defense Giants Must Prove Their Magnets Are China-Free",
+"url": "https://finance.yahoo.com/energy/articles/45-days-defense-giants-must-020000027.html?.tsrc=rss",
+"pub": "2026-11-18T02:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
 "id": "84fefd68cce6",
@@ -1914,6 +2054,16 @@
 "seen": "2026-11-17T22:14:07+00:00"
 },
 {
+"id": "819ce6c1116a",
+"t": "SPCX",
+"title": "SpaceX, Rivals Win $985 Million In Launch Awards. Cathie Wood, David Tepper Shift Space Holdings.",
+"url": "https://finance.yahoo.com/m/0f8296b1-cd8f-3b1e-b4d0-f94bc09e49cc/spacex%2C-rivals-win-%24985.html?.tsrc=rss",
+"pub": "2026-11-17T21:29:30+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
 "id": "78544352c3f6",
 "t": "NVDA",
 "title": "The Numbers Are Out",
@@ -1962,6 +2112,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T21:34:04+00:00"
+},
+{
+"id": "02f8573cccd6",
+"t": "MSFT",
+"title": "What It Will Take for Cerebras Stock to Stage a Real Revival After Q3 Earnings Rally",
+"url": "https://www.barchart.com/story/news/8884311/what-it-will-take-for-cerebras-stock-to-stage-a-real-revival-after-q3-earnings-rally?.tsrc=rss",
+"pub": "2026-11-17T21:22:34+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "ff2016b238f8",
+"t": "MU",
+"title": "Micron Stock Is Down 41%, but the $35 Billion Buyback Could Change the Game. Here's How.",
+"url": "https://www.barchart.com/story/news/8884280/micron-stock-is-down-41-but-the-35-billion-buyback-could-change-the-game-here-s-how?.tsrc=rss",
+"pub": "2026-11-17T21:20:41+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
 "id": "319f1dbdf10c",
@@ -2182,6 +2352,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T21:44:07+00:00"
+},
+{
+"id": "038a43795710",
+"t": "DIA",
+"title": "The Dow Tests Its 200-Day Moving Average Ahead of Nvidia Earnings. 5 More Levels to Watch for the Blue-Chip Benchmark.",
+"url": "https://www.barchart.com/story/news/8883934/the-dow-tests-its-200-day-moving-average-ahead-of-nvidia-earnings-5-more-levels-to-watch-for-the-blue-chip-benchmark?.tsrc=rss",
+"pub": "2026-11-17T21:05:15+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
 "id": "d2a8a7504038",
@@ -7834,184 +8014,244 @@
 "seen": "2026-11-17T15:28:48+00:00"
 },
 {
-"id": "476c73e93829",
-"t": "SPCX",
-"title": "How Anthropic's valuation holds up to $2T expectation days away from IPO",
-"url": "https://finance.yahoo.com/video/how-anthropics-valuation-holds-up-to-2t-expectation-days-away-from-ipo-145939859.html?.tsrc=rss",
-"pub": "2026-11-17T14:59:39+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "137f9b8a2721",
+"t": "",
+"title": "Xi to South Korean President: China prepared to uphold stability and smooth functioning of global industrial and supply chains with South Korea - pool report",
+"url": "https://www.financialjuice.com/News/9857059/Xi-to-South-Korean-President-China-prepared-to-uphold-stability-and-smooth-functioning-of-global-industrial-and-supply-chains-with-South-Korea---pool-report.aspx?xy=rss",
+"pub": "2026-11-18T03:42:34+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "1e889e2f01ab",
-"t": "AMZN",
-"title": "Retail ETFs in Focus as Countdown to 2026 Black Friday Sales Begins",
-"url": "https://finance.yahoo.com/markets/stocks/articles/retail-etfs-focus-countdown-2026-145900387.html?.tsrc=rss",
-"pub": "2026-11-17T14:59:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "9360b91f30bc",
+"t": "",
+"title": "Democratic challenger Mary Peltola defeats Republican incumbent Dan Sullivan in Alaska US Senate race: AP projects",
+"url": "https://www.financialjuice.com/News/9857058/Democratic-challenger-Mary-Peltola-defeats-Republican-incumbent-Dan-Sullivan-in-Alaska-US-Senate-race-AP-projects.aspx?xy=rss",
+"pub": "2026-11-18T03:41:08+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "d47fdc797e17",
-"t": "CBRS",
-"title": "An $18 Billion Fund Dumps These 2 Stocks",
-"url": "https://www.tikr.com/blog/an-18-billion-fund-dumps-these-2-stocks?ref=yahoofinance&tlnk=yf-261117-2f6w45v4&.tsrc=rss",
-"pub": "2026-11-17T14:58:30+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:43:48+00:00"
+"id": "9ffffcfdd765",
+"t": "",
+"title": "Russia's Putin at APEC CEO summit: anticipates significant gain from Trump, Xi meeting",
+"url": "https://www.financialjuice.com/News/9857057/Russias-Putin-at-APEC-CEO-summit-anticipates-significant-gain-from-Trump-Xi-meeting.aspx?xy=rss",
+"pub": "2026-11-18T03:41:06+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "535d239c8307",
-"t": "LLY",
-"title": "AstraZeneca Stock Up 12% in a Month: Time to Buy, Sell or Hold?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/astrazeneca-stock-12-month-time-145800081.html?.tsrc=rss",
-"pub": "2026-11-17T14:58:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
+"id": "4118da06e52f",
+"t": "",
+"title": "Russia's Putin at APEC CEO Summit: partnership over isolation vital, APEC enables constructive dialogue",
+"url": "https://www.financialjuice.com/News/9857056/Russias-Putin-at-APEC-CEO-Summit-partnership-over-isolation-vital-APEC-enables-constructive-dialogue.aspx?xy=rss",
+"pub": "2026-11-18T03:39:52+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "753f75601b3f",
-"t": "NVDA",
-"title": "Stocks slip ahead of Nvidia earnings, Home Depot shares slide: AlphaCheck",
-"url": "https://finance.yahoo.com/markets/article/copy-copy-tech-rises-coreweave-results-reignite-ai-trade-alphacheck-145755423.html?.tsrc=rss",
-"pub": "2026-11-17T14:57:55+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "cb946158aca9",
+"t": "",
+"title": "Russia's Putin at APEC CEO summit: Russia is broadening eastern logistics to enhance cooperation with APEC",
+"url": "https://www.financialjuice.com/News/9857055/Russias-Putin-at-APEC-CEO-summit-Russia-is-broadening-eastern-logistics-to-enhance-cooperation-with-APEC.aspx?xy=rss",
+"pub": "2026-11-18T03:39:13+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "2a60494b6d1f",
-"t": "INTC",
-"title": "George Soros Is Betting Big on Intel",
-"url": "https://www.tikr.com/blog/george-soros-is-betting-big-on-intel?ref=yahoofinance&tlnk=yf-261117-q52hfjq3&.tsrc=rss",
-"pub": "2026-11-17T14:57:54+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "74265ca2c5ec",
+"t": "",
+"title": "China finance ministry offers 3-month bills at 1.1061% yield: traders",
+"url": "https://www.financialjuice.com/News/9857054/China-finance-ministry-offers-3-month-bills-at-11061-yield-traders.aspx?xy=rss",
+"pub": "2026-11-18T03:39:13+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "296e22ffacc9",
-"t": "ORCL",
-"title": "Michael Burry Closed His Oracle Puts, but Oracle Is Still Down 38% This Year. What Will It Take to Get ORCL Stock Back to $200?",
-"url": "https://247wallst.com/investing/2026/11/17/michael-burry-closed-his-oracle-puts-but-oracle-is-still-down-38-this-year-what-will-it-take-to-get-orcl-stock-back-to-200/?.tsrc=rss",
-"pub": "2026-11-17T14:57:33+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "9a2dc952db90",
+"t": "",
+"title": "I at APEC CEO summit: artificial barriers raise costs, Europe impacted by sanctions on Russia",
+"url": "https://www.financialjuice.com/News/9857053/I-at-APEC-CEO-summit-artificial-barriers-raise-costs-Europe-impacted-by-sanctions-on-Russia.aspx?xy=rss",
+"pub": "2026-11-18T03:39:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "cf6ad6fb4ad0",
-"t": "META",
-"title": "Viant's AI Dive With Waymark, 'Attention' With TVision",
-"url": "https://www.mediapost.com/publications/article/419467/viants-ai-dive-with-waymark-attention-with-tvi.html?.tsrc=rss",
-"pub": "2026-11-17T14:57:27+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "eca609a31bbb",
+"t": "",
+"title": "Russia's Putin at APEC CEO summit: APEC a key partner for Russia, ready to broaden cooperation",
+"url": "https://www.financialjuice.com/News/9857052/Russias-Putin-at-APEC-CEO-summit-APEC-a-key-partner-for-Russia-ready-to-broaden-cooperation.aspx?xy=rss",
+"pub": "2026-11-18T03:39:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "bf5fc0bb07ec",
-"t": "NVDA",
-"title": "Nvidia Stock Dips Ahead Of Earnings: Will Results Calm Investors Amid Turmoil? (Live Coverage)",
-"url": "https://finance.yahoo.com/m/ef40b1a2-2bff-390f-b0d5-c281b4d503ef/nvidia-stock-dips-ahead-of.html?.tsrc=rss",
-"pub": "2026-11-17T14:57:22+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "f586d8240626",
+"t": "",
+"title": "China finance ministry auctions 7-year special treasury bonds at 1.40% yield: traders",
+"url": "https://www.financialjuice.com/News/9857051/China-finance-ministry-auctions-7-year-special-treasury-bonds-at-140-yield-traders.aspx?xy=rss",
+"pub": "2026-11-18T03:39:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "70c15182c0c4",
-"t": "STRL",
-"title": "Bet on These 5 Low-Leverage Stocks as NVIDIA Crisis Drags Market",
-"url": "https://finance.yahoo.com/markets/stocks/articles/bet-5-low-leverage-stocks-145500952.html?.tsrc=rss",
-"pub": "2026-11-17T14:55:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
+"id": "ae316cc3d626",
+"t": "",
+"title": "Russia’s Putin at APEC CEO summit: Russia ready to broaden food, fertilizer export markets",
+"url": "https://www.financialjuice.com/News/9857050/Russias-Putin-at-APEC-CEO-summit-Russia-ready-to-broaden-food-fertilizer-export-markets.aspx?xy=rss",
+"pub": "2026-11-18T03:39:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "973fb176a6fc",
-"t": "HD",
-"title": "Home Depot's Best Comp of the Year Arrives With a Thinner Margin",
-"url": "https://finance.yahoo.com/markets/stocks/articles/home-depots-best-comp-arrives-145500197.html?.tsrc=rss",
-"pub": "2026-11-17T14:55:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
+"id": "416dded2abe2",
+"t": "",
+"title": "Russia's Putin at APEC CEO summit: US dollar share in Russian trade has dropped sharply",
+"url": "https://www.financialjuice.com/News/9857049/Russias-Putin-at-APEC-CEO-summit-US-dollar-share-in-Russian-trade-has-dropped-sharply.aspx?xy=rss",
+"pub": "2026-11-18T03:35:38+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "a752eded805b",
-"t": "COST",
-"title": "Costco Hot Dog or Nvidia GPUs? Midera Earnings Top Wall Street Estimates.",
-"url": "https://finance.yahoo.com/m/a396bd11-6b53-378b-9d92-7f5ec57e2735/costco-hot-dog-or-nvidia.html?.tsrc=rss",
-"pub": "2026-11-17T14:55:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T22:14:07+00:00"
+"id": "8dfd48b0416d",
+"t": "",
+"title": "At APEC CEO Summit, Russia is ready to broaden food and fertilizer export markets",
+"url": "https://www.financialjuice.com/News/9857048/At-APEC-CEO-Summit-Russia-is-ready-to-broaden-food-and-fertilizer-export-markets.aspx?xy=rss",
+"pub": "2026-11-18T03:35:38+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "7aa0d3058a9e",
-"t": "AMZN",
-"title": "Dan Loeb Dumps These 3 Stocks",
-"url": "https://www.tikr.com/blog/dan-loeb-dumps-these-3-stocks?ref=yahoofinance&tlnk=yf-261117-c9jx9mqv&.tsrc=rss",
-"pub": "2026-11-17T14:54:21+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "1dccf91d8b12",
+"t": "",
+"title": "At APEC CEO summit: Russia broadening eastern logistics to enhance cooperation with APEC",
+"url": "https://www.financialjuice.com/News/9857047/At-APEC-CEO-summit-Russia-broadening-eastern-logistics-to-enhance-cooperation-with-APEC.aspx?xy=rss",
+"pub": "2026-11-18T03:34:03+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "de0b8256702b",
-"t": "LLY",
-"title": "Cathie Wood and 9 Other Big Funds Bought Eli Lilly Last Quarter, While 18 Sold. Who’s Right?",
-"url": "https://www.tikr.com/blog/cathie-wood-and-9-other-big-funds-bought-eli-lilly-last-quarter-while-18-sold-whos-right?ref=yahoofinance&tlnk=yf-261117-rfg89qcm&.tsrc=rss",
-"pub": "2026-11-17T14:53:51+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:43:48+00:00"
+"id": "6cd3a379e6e6",
+"t": "",
+"title": "At APEC CEO summit: former hegemonies attempt to stifle other countries' growth",
+"url": "https://www.financialjuice.com/News/9857046/At-APEC-CEO-summit-former-hegemonies-attempt-to-stifle-other-countries-growth.aspx?xy=rss",
+"pub": "2026-11-18T03:32:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "0fd1ab22c081",
-"t": "SPCX",
-"title": "SpaceX Debt for AI Chips to Hit Market as Soon as This Week",
-"url": "https://finance.yahoo.com/technology/ai/articles/spacex-debt-ai-chips-hit-145310043.html?.tsrc=rss",
-"pub": "2026-11-17T14:53:10+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "1e5421a0d099",
+"t": "",
+"title": "At APEC CEO summit: APEC a key partner for Russia, says 'we are ready to expand cooperation'",
+"url": "https://www.financialjuice.com/News/9857045/At-APEC-CEO-summit-APEC-a-key-partner-for-Russia-says-we-are-ready-to-expand-cooperation.aspx?xy=rss",
+"pub": "2026-11-18T03:32:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "482630eaabc9",
-"t": "NVDA",
-"title": "Trump’s Nvidia Stake Grew to as Much as $62 Million Before the Scandal Broke",
-"url": "https://247wallst.com/investing/2026/11/17/trumps-nvidia-stake-grew-to-as-much-as-62-million-before-the-scandal-broke/?.tsrc=rss",
-"pub": "2026-11-17T14:53:01+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "9a465240f9e6",
+"t": "",
+"title": "At APEC CEO summit: US dollar share in Russian trade plunges sharply",
+"url": "https://www.financialjuice.com/News/9857043/At-APEC-CEO-summit-US-dollar-share-in-Russian-trade-plunges-sharply.aspx?xy=rss",
+"pub": "2026-11-18T03:30:33+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "a07186029229",
-"t": "GILD",
-"title": "Allogeneic Cell Therapy - Global Strategic Business Report 2026: Capitalize on 27.7% CAGR to Capture $2.4B by 2032 with Allogene, Gilead Sciences, Atara and Nkarta",
-"url": "https://finance.yahoo.com/healthcare/articles/allogeneic-cell-therapy-global-strategic-145300885.html?.tsrc=rss",
-"pub": "2026-11-17T14:53:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "d8fc7c92fc77",
+"t": "",
+"title": "Russia's Putin at APEC CEO summit: former hegemonies attempt to suppress development of other countries",
+"url": "https://www.financialjuice.com/News/9857041/Russias-Putin-at-APEC-CEO-summit-former-hegemonies-attempt-to-suppress-development-of-other-countries.aspx?xy=rss",
+"pub": "2026-11-18T03:28:51+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
-"id": "be4cd309a760",
-"t": "GOOGL",
-"title": "Coherent Rises 3% as Trump Presses Ahead With Chinese Optics Ban Despite Big Tech Lobbying",
-"url": "https://www.tikr.com/blog/coherent-rises-3-as-trump-presses-ahead-with-chinese-optics-ban-despite-big-tech-lobbying?ref=yahoofinance&tlnk=yf-261117-jmvfcr2f&.tsrc=rss",
-"pub": "2026-11-17T14:52:28+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "828896d31afa",
+"t": "",
+"title": "Russia's Putin at APEC CEO summit: artificial barriers raise costs, Europe is suffering",
+"url": "https://www.financialjuice.com/News/9857040/Russias-Putin-at-APEC-CEO-summit-artificial-barriers-raise-costs-Europe-is-suffering.aspx?xy=rss",
+"pub": "2026-11-18T03:28:42+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "3d09ac8c319e",
+"t": "",
+"title": "Taiwan presidential office on upcoming China-US-Russia meeting: Taiwan’s stance remains consistent to bolster self-defense and strive to maintain the status quo",
+"url": "https://www.financialjuice.com/News/9857039/Taiwan-presidential-office-on-upcoming-China-US-Russia-meeting-Taiwans-stance-remains-consistent-to-bolster-self-defense-and-strive-to-maintain-the-status-quo.aspx?xy=rss",
+"pub": "2026-11-18T03:20:59+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "c2f7fbaa3a1b",
+"t": "",
+"title": "Taiwan presidential office: Taiwan closely engaged with US, fully aware of developments ahead of China-US-Russia meeting",
+"url": "https://www.financialjuice.com/News/9857038/Taiwan-presidential-office-Taiwan-closely-engaged-with-US-fully-aware-of-developments-ahead-of-China-US-Russia-meeting.aspx?xy=rss",
+"pub": "2026-11-18T03:20:37+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "bb10a89b2573",
+"t": "",
+"title": "Taiwan presidential office: Taiwan welcomes efforts to manage risks of authoritarian expansion and enhance regional security ahead of China-US-Russia meeting",
+"url": "https://www.financialjuice.com/News/9857037/Taiwan-presidential-office-Taiwan-welcomes-efforts-to-manage-risks-of-authoritarian-expansion-and-enhance-regional-security-ahead-of-China-US-Russia-meeting.aspx?xy=rss",
+"pub": "2026-11-18T03:20:22+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "359ea50c8f87",
+"t": "",
+"title": "Democratic challenger Mary Peltola defeats Republican incumbent Dan Sullivan in Alaska US Senate race: CNN projects",
+"url": "https://www.financialjuice.com/News/9857036/Democratic-challenger-Mary-Peltola-defeats-Republican-incumbent-Dan-Sullivan-in-Alaska-US-Senate-race-CNN-projects.aspx?xy=rss",
+"pub": "2026-11-18T03:17:18+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "e8ac151d83ff",
+"t": "",
+"title": "Democratic challenger Mary Peltola defeats Republican incumbent Dan Sullivan in Alaska US Senate race: Decision Desk HQ",
+"url": "https://www.financialjuice.com/News/9857025/Democratic-challenger-Mary-Peltola-defeats-Republican-incumbent-Dan-Sullivan-in-Alaska-US-Senate-race-Decision-Desk-HQ.aspx?xy=rss",
+"pub": "2026-11-18T03:16:44+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
+"id": "5442c44eeb4b",
+"t": "",
+"title": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI",
+"url": "https://www.cnbc.com/2026/11/17/jensen-huang-may-be-gone-nvidia-shows-its-still-at-the-center-of-ai-.html",
+"pub": "2026-11-18T03:15:00+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
 "id": "4af9012865d5",
@@ -10344,6 +10584,16 @@
 "seen": "2026-11-17T20:15:22+00:00"
 },
 {
+"id": "6735d84535a3",
+"t": "",
+"title": "SemiLEDs Corp (LEDS.ZY) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0yQWZHaDAtc09vWFBGZi1RZ2NvRFNpclpQY01SU0M5YWx1ZW1Xc1NaT0lldE5UT1FzaW8ydGQ3SEFoZm1zeklpaEVEYWlEVldnZkpjTDJaSncxTHNXSURBV3B0aHhHa25YREVSOA?oc=5",
+"pub": "2026-11-17T19:47:59+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
+},
+{
 "id": "245a0e5fe12d",
 "t": "",
 "title": "Canadian dollar holds near 19-month low as greenback consolidates recent gains - Reuters",
@@ -10512,6 +10762,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T20:15:22+00:00"
+},
+{
+"id": "b20433202387",
+"t": "",
+"title": "Nexstar Media Group Inc (NXST.F) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB6ZFMwZUZ2NEExcWRmbEMzZmNtMXZNMmV5RHZHSGQyMUVOUU1zZEJkMUdkNHc3NkZaTWxZRkxFRzlYY0VuOUdHUFZ2Wkw1M3ZwWmI2cGVqWV9wTTllSG1LRjl4WDZuM0FXWWNF?oc=5",
+"pub": "2026-11-17T19:38:26+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T03:42:22+00:00"
 },
 {
 "id": "93eb89739c91",
@@ -10752,266 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "6c67ae274d77",
-"t": "",
-"title": "NYMEX WTI crude Dec. futures settle at $86.01 a barrel, up 29 cents, 0.34%",
-"url": "https://www.financialjuice.com/News/9856370/NYMEX-WTI-crude-Dec-futures-settle-at-8601-a-barrel-up-29-cents-034.aspx?xy=rss",
-"pub": "2026-11-17T19:30:54+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "6d3bef512b49",
-"t": "",
-"title": "Fed's Williams: Tariffs are mostly behind us.",
-"url": "https://www.financialjuice.com/News/9856369/Feds-Williams-Tariffs-are-mostly-behind-us.aspx",
-"pub": "2026-11-17T19:30:45+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "274ed00d3e7f",
-"t": "",
-"title": "Fed's Williams: Tariffs are mostly behind us.",
-"url": "https://www.financialjuice.com/News/9856369/Feds-Williams-Tariffs-are-mostly-behind-us.aspx?xy=rss",
-"pub": "2026-11-17T19:30:45+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "9f724293f491",
-"t": "",
-"title": "ChargePanel AB (publ) (CHARGE.ST) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZzR2RE1Nblhka004Ni1RMzZrODI0UlpISlNZT2V1S3VoXzViVWNteThXS1RZVm9GMldQb01iOHFYbkxCVkVjRjZoYzFfancwNTM2RC1FVDVxQWprbWJ1cjdESHNGWXpiT24ybWxDem44UWFtcndqaXAzVGtqSm1nTHNVOFBvS1E?oc=5",
-"pub": "2026-11-17T19:30:39+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T23:44:11+00:00"
-},
-{
-"id": "3e56014ebf2a",
-"t": "",
-"title": "Iress Ltd (IRE.AX) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAyVFBiYlUzMjU3TEcyN3dCN3JsWmQ5R3JLaWV3ejRWRWRsUUpkbExxeXFJRTc4c3AzdnNQR1E4VzNnU1p0M3pDZkQ4cnZEWUdyRklSUHJSMUFCSUdfanhCTndTdXByeVpLR0Uw?oc=5",
-"pub": "2026-11-17T19:30:39+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T01:13:55+00:00"
-},
-{
-"id": "62174b5b439c",
-"t": "",
-"title": "US reacted to Iran's targeting of US personnel and assets - Axios",
-"url": "https://www.financialjuice.com/News/9856363/US-reacted-to-Irans-targeting-of-US-personnel-and-assets---Axios.aspx",
-"pub": "2026-11-17T19:29:42+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "ad0218e10b72",
-"t": "",
-"title": "US reacted to Iran's targeting of US personnel and assets - Axios",
-"url": "https://www.financialjuice.com/News/9856363/US-reacted-to-Irans-targeting-of-US-personnel-and-assets---Axios.aspx?xy=rss",
-"pub": "2026-11-17T19:29:42+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "5f1d2cecfb7c",
-"t": "",
-"title": "StealthGas Inc (GASS.ZY) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBIOWhYNXYwNzgwOFBsejlPMEQyNHZpRlMtdHpiNzZoZExyOENKNXByd1dXZkhYMktoZXJtNHBNeDBJc1FpQ2oxTHdGeF82T05MT0h5bGxlUFluanI1bGYwc2k3Y0FjNDVGZlhaVw?oc=5",
-"pub": "2026-11-17T19:29:21+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "e6d47b488718",
-"t": "",
-"title": "US Official: Strike at Qeshm was in self-defense - Axios",
-"url": "https://www.financialjuice.com/News/9856362/US-Official-Strike-at-Qeshm-was-in-self-defense---Axios.aspx",
-"pub": "2026-11-17T19:28:48+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "bc5cd6583769",
-"t": "",
-"title": "US Official: Strike at Qeshm was in self-defense - Axios",
-"url": "https://www.financialjuice.com/News/9856362/US-Official-Strike-at-Qeshm-was-in-self-defense---Axios.aspx?xy=rss",
-"pub": "2026-11-17T19:28:48+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "e03a394bd76f",
-"t": "",
-"title": "ACI Worldwide, Inc. (ACIW.O) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1fUEw2cUhLdmoxNUtlR0Qwd2h5ODZxU3E3RG9hVTNWLXlxMUpwcHN3WDU2MjEyZm5GR3h1c0FTemQyLW40dHhBWkVxTmR3Wm81Um04QVNtVnNONE9CZEdXZWZqU1V3Z0ZwdHpR?oc=5",
-"pub": "2026-11-17T19:28:19+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T23:14:18+00:00"
-},
-{
-"id": "731a3296f816",
-"t": "",
-"title": "Google: Aren’t currently seeing evidence of a broad Gmail service disruption. $GOOGL",
-"url": "https://www.financialjuice.com/News/9856361/Google-Arent-currently-seeing-evidence-of-a-broad-Gmail-service-disruption-GOOGL.aspx",
-"pub": "2026-11-17T19:28:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "fe53fff236fb",
-"t": "",
-"title": "Google: Aren’t currently seeing evidence of a broad Gmail service disruption. $GOOGL",
-"url": "https://www.financialjuice.com/News/9856361/Google-Arent-currently-seeing-evidence-of-a-broad-Gmail-service-disruption-GOOGL.aspx?xy=rss",
-"pub": "2026-11-17T19:28:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "ba477e066657",
-"t": "",
-"title": "Midas Minerals Ltd (MM1.AX) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBtcnlQdTFDcFF5QUVKMHBDUFRTdDh4cDdMVW9rU1VBaVA2aTJ1LTFzdXkydEJTQ0NCYjZkWExxMlpLdEFTVDgwLWpkMmVIRDJ3LXRNMzJZMmNGb3hsZ05kZzVBckxhSktOSkNV?oc=5",
-"pub": "2026-11-17T19:27:26+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "b1e006295013",
-"t": "",
-"title": "Fed's Williams: I don't think the situation calls for dramatic policy action.",
-"url": "https://www.financialjuice.com/News/9856359/Feds-Williams-I-dont-think-the-situation-calls-for-dramatic-policy-action.aspx",
-"pub": "2026-11-17T19:27:05+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "e41ec00db192",
-"t": "",
-"title": "Fed's Williams: I don't think the situation calls for dramatic policy action.",
-"url": "https://www.financialjuice.com/News/9856359/Feds-Williams-I-dont-think-the-situation-calls-for-dramatic-policy-action.aspx?xy=rss",
-"pub": "2026-11-17T19:27:05+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "dbcf16cb6a19",
-"t": "",
-"title": "Stocks Dip Ahead of Nvidia Earnings",
-"url": "https://www.wsj.com/finance/stocks/nasdaq-futures-slip-as-investors-look-to-nvidia-earnings-1007fe69?mod=rss_markets_main",
-"pub": "2026-11-17T19:27:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-17T22:44:09+00:00"
-},
-{
-"id": "b087fea2d904",
-"t": "",
-"title": "Fed's Williams: Tariffs and energy shock still affecting inflation readings.",
-"url": "https://www.financialjuice.com/News/9856358/Feds-Williams-Tariffs-and-energy-shock-still-affecting-inflation-readings.aspx",
-"pub": "2026-11-17T19:26:39+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "16379eae4ba1",
-"t": "",
-"title": "Fed's Williams: Tariffs and energy shock still affecting inflation readings.",
-"url": "https://www.financialjuice.com/News/9856358/Feds-Williams-Tariffs-and-energy-shock-still-affecting-inflation-readings.aspx?xy=rss",
-"pub": "2026-11-17T19:26:39+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "06908d4e2ea8",
-"t": "",
-"title": "Fed's Williams: Economy is resilient, labor market solid.",
-"url": "https://www.financialjuice.com/News/9856357/Feds-Williams-Economy-is-resilient-labor-market-solid.aspx",
-"pub": "2026-11-17T19:26:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "79e1359e4923",
-"t": "",
-"title": "Fed's Williams: Economy is resilient, labor market solid.",
-"url": "https://www.financialjuice.com/News/9856357/Feds-Williams-Economy-is-resilient-labor-market-solid.aspx?xy=rss",
-"pub": "2026-11-17T19:26:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "3902d0d7ec65",
-"t": "",
-"title": "Windward Bio AG (WWB.OQ) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZZGMxMzFNSUU5azFiY0ZOSk1WMVY3SXRhTnBMSG5oMUdwS0JQOG95NFJOYms4QUtueDhwQ19QSHJIT0tSWlBvRHdhbkFHMlZ3dnJHTUNlRHZrVnY2RDJRQmhpaF9yWnlULVVqeQ?oc=5",
-"pub": "2026-11-17T19:26:14+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T21:14:31+00:00"
-},
-{
-"id": "66a93dab27d3",
-"t": "",
-"title": "Fed's Williams: I'm seeing signs of shocks spilling over into broader inflation data.",
-"url": "https://www.financialjuice.com/News/9856356/Feds-Williams-Im-seeing-signs-of-shocks-spilling-over-into-broader-inflation-data.aspx",
-"pub": "2026-11-17T19:26:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "a20b751248a0",
-"t": "",
-"title": "Fed's Williams: I'm seeing signs of shocks spilling over into broader inflation data.",
-"url": "https://www.financialjuice.com/News/9856356/Feds-Williams-Im-seeing-signs-of-shocks-spilling-over-into-broader-inflation-data.aspx?xy=rss",
-"pub": "2026-11-17T19:26:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "c62996b59085",
-"t": "",
-"title": "Fed's Williams: Inflation is stubbornly high.",
-"url": "https://www.financialjuice.com/News/9856355/Feds-Williams-Inflation-is-stubbornly-high.aspx",
-"pub": "2026-11-17T19:25:48+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "db15262f466e",
-"t": "",
-"title": "Fed's Williams: Inflation is stubbornly high.",
-"url": "https://www.financialjuice.com/News/9856355/Feds-Williams-Inflation-is-stubbornly-high.aspx?xy=rss",
-"pub": "2026-11-17T19:25:48+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
 }
 ]
 }
