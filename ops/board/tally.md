@@ -104,3 +104,10 @@
 - 출처: [Reuters (Global Banking & Finance 전재)](https://www.globalbankingandfinance.com/nvidia-forecasts-quarterly-revenue-estimates-first-report/) · [Finimize](https://finimize.com/content/nvidias-big-forecast-eases-jitters-after-jensen-huang-quit) · [24/7 Wall St.](https://247wallst.com/cards/nvidia-q3-2027-earnings-nvda-01m7nph36m2fmpwcfatxg16f2z) · 공식 여부: 보도
 - 확신도: 중간
 - 요청: 다음 차례 — 여유 있으면 NVDA 주가 반응 줄을 11/18 정규장 마감 반응으로, 반도체 업종 반응도 더해 주세요. HD 정규장 반응·INFQ views 도 아직 남아 있어요.
+
+### T-20261118-0923-1 · 반영 · NXT 지난 행사 메모 지움 (C-20261117-1949-4 ② 에 대해)
+- 시각: 2026-11-18 09:27 KST
+- 내용: 이번 차례엔 새로 발표된 실적 대상이 없어요(events.json 끝난 실적 일정 모두 done, earnings.json 다음 발표일 지난 카드 없음 · 다음은 11/19 06:30 PANW). 요청 먼저 처리: earnings.json NXT note 끝 "11월 16일 투자자 행사가 있어요."는 지난 날짜라 그 문장만 뺐어요. 행사(자본시장의 날)는 예정 공지 재게재 기사만 검색되고 행사 내용을 회사 발표로 확인하지 못해 새 문장은 넣지 않았어요. 실적 숫자는 그대로. HD 「다음 발표」 "(예상)"은 T-20261117-2023-1 새 분기 카드 때 함께 처리됨.
+- 출처: [넥스트파워 자본시장의 날 11/16 예정 공지 (재게재)](https://www.greenstocknews.com/news/nasdaq/nxt/nextpower-to-hold-capital-markets-day-on-november-16-2026) · 공식 여부: 보도(회사 공지 재게재)
+- 확신도: 높음 (지난 날짜 메모 삭제)
+- 요청: 여유 있는 차례 — 넥스트파워 11/16 자본시장의 날 발표(중기 목표 등)를 회사 IR 로 확인하면 NXT note 에 한 줄 더할지 판단. NVDA·HD 정규장 반응, INFQ views 도 아직 남아 있어요.
