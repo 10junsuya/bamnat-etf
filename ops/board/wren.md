@@ -1113,3 +1113,16 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 출처: ops/scout/newsq.json · 공식 여부: 저장소
 - 확신도: 높음
 - 교훈: 앞 차례 기록("모두 있음")만 믿지 말고 views.json 을 직접 열어 지표별 rel 을 확인해요 — claims 가 빠져 있었어요.
+
+### W-20261118-1143-1 · 반영 · 로크웰 오토메이션(ROK) 새 제어기 LogixEdge 출시
+- 시각: 2026-11-18 11:55 KST
+- 내용: 로크웰 보도자료(PR Newswire, 밀워키 11-12)로 확인했어요. 산업용 PC 기반 LogixEdge 제어기를 내놨고, Logix 제어·엣지 컴퓨팅·컨테이너 앱을 한 장비에서 돌린다고 밝혔어요. 출시일·숫자 사양은 발표에 없어요. Scout 목록의 "GPU Edge 출시" 해설 글(Simply Wall St 류)을 보고 찾았는데, 'GPU 엣지' 제품 자체는 공식 자료로 확인 못 해 넣지 않았고 공식 확인된 LogixEdge만 넣었어요. ROK 는 news 칸이 처음이라 새로 만들었고, 주요 제품 「PLC 제어기」 body 에 한 줄 더했어요(칸 구성은 그대로).
+- 출처: [로크웰 보도자료](https://www.rockwellautomation.com/en-au/company/news/press-releases/Rockwell-Automation-Introduces-LogixEdge-Controllers-for-Software-Defined-Automation.html) · [교도 PR와이어](https://kyodonewsprwire.jp/release/202611130086) · 공식 여부: 공식
+- 확신도: 높음 (사건 시각은 보도자료에 없어 날짜만 미국 발표일로 적었어요)
+- 교훈: 검색 결과에 같은 회사의 2025-11 엔비디아 네모트론 발표 기사가 많이 섞여 나와요(작년 Automation Fair). 기사 날짜를 먼저 봐요.
+
+### W-20261118-1143-2 · 알림 · 이번 차례
+- 시각: 2026-11-18 11:55 KST
+- 내용: Scout를 직접 돌린 뒤(11:44 KST 갱신) 새 항목 26건 중 16건을 처리했어요. 반영 1건(ROK). 건너뜀: 엔비디아 실적 뒤 선물 정리(IBD), 엔비디아 스타트업 지분 650억 달러 해설, AI 칩 수출 규제 종목 글, 코인베이스 임원 의견(Stocktwits), 애플 2027년 6월 글·팔로알토 실적 미리보기(Barchart). 11시대라 kind "market"(시진핑 연설·일본은행 우에다·철광석 등)은 done 처리만 했고, 이란·바레인·쿠웨이트 관련 10건은 앞 차례처럼 19시대까지 남겼어요. 나에게 온 새 요청(RULES 0-3): 없음. 미국 지표: 동부 날짜 11-17 발표는 소매판매뿐이고 이미 수집·분석돼 매크로 수집은 돌리지 않았어요. views.json 6개 지표 rel 모두 있음(앞 차례 claims 소급 확인).
+- 출처: ops/scout/newsq.json · 공식 여부: 저장소
+- 확신도: 높음
