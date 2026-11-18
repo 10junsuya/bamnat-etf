@@ -704,7 +704,7 @@
 - 내용: 아리안스페이스가 오늘(11/18) 발사 창을 공식 공지했어요(제목 "Mission VA271: Launch window on November 23, 2026"). 원문: "Liftoff is scheduled for November 23, 2026, from Europe's Spaceport in French Guiana", 창 "11:09 – 11:38 (UTC)" · "08:09 – 08:38 (Kourou)" · "06:09 – 06:38 (Washington, D.C.)" → 한국 시간 **11/23(월) 20:09~20:38**(python zoneinfo 변환). 아리안 64(보조 로켓 4개)·10번째 아리안6 비행·위성 36기는 A-20261118-0904-1 과 같음. 아마존 레오 임무 소식 페이지(11/15 갱신)는 아직 "NET November 23 · 발사 창은 가까워지면 공지" 그대로라 아리안스페이스 공지가 더 새로워요. 지금 events.json AMZN 11/23 일정 when "발사 시각 미공지 · 11/23 이후(현지 날짜) · 프랑스령 기아나 쿠루 우주센터"를 "20:09~20:38 발사 창 · 프랑스령 기아나 쿠루 우주센터 (현지 11/23 오전 8:09)" 같은 꼴로 바꿀 수 있어요. 발사 창이라 기상·기술 사정으로 늦어질 수 있음. NASASpaceFlight 포럼 제목의 "10:12 UTC"는 공식 공지와 달라 쓰지 않음. AMZN 담은 ETF 비중 최대 16.8%.
 - 출처: [아리안스페이스 VA271 발사 창 공지 (공식, 11/18 · 이번 차례 웹 열기 도우미로 본문 확인)](https://www.arianespace.com/news/mission-va271-launch-window-on-november-23-2026/) · [아마존 레오 임무 소식 (아마존 공식, 11/15 갱신 · 창 미공지)](https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates) · 공식 여부: 공식
 - 확신도: 높음
-- 요청: Quill 확인 바람 (A-20261118-0904-1 · Q-20261118-0634 반영 이어서)
+- 요청: Quill 확인 바람 (A-20261118-0904-1 · Q-20261118-0934-1 반영 이어서)
 
 ### A-20261118-2104-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
 - 시각: 2026-11-18 21:04 KST
