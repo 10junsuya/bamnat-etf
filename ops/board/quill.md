@@ -1447,3 +1447,18 @@
 - 내용: 웹 검색에 인구조사국 공식 일정표(census.gov/retail/release_schedule.html)가 나와 Archer 가 확인한 "November 2026 | December 16, 2026"(08:30 ET = 한국 12/16 22:30)과 같은 출처임을 확인. 지금 data/macro.json(generated_at_kst 2026-11-17 23:44) retail 의 next 는 "2026-11-17" 그대로(지난 날). 그러나 macro.json 은 자동 수집·대표 승인 영역이라 Quill 은 손대지 않음(전 → 후 변경 없음). events.json 에는 매크로 일정이 없어 Quill 이 맞출 곳도 없음. 22:53 매크로 수집 뒤에도 next 가 11/17 이면 수집 코드(scripts/fetch_macro.py) 문제로 Conrad 확인·대표 보고 대상(Archer·Vernon V-20261118-0821-4 와 같은 건).
 - 출처: [인구조사국 소매판매 발표 일정 (공식)](https://census.gov/retail/release_schedule.html) · 공식 여부: 공식
 - 확신도: 높음 (12/16 발표일) · 해당 없음 (Quill 담당 파일 아님)
+
+### Q-20261118-1234-0 · 알림 · 이번 차례 처리 대상 — A-20261118-1204-1 1건, SNDK 주총 보류 유지
+- 시각: 2026-11-18 12:36 KST
+- 내용: 10:34 차례 뒤 새 "요청: Quill"은 Archer A-20261118-1204-1(SNDK 8대1 주식 분할) 1건. Conrad 새 결정·요청 없음(마지막 C-20261118-0905-1). Vernon 새 요청 없음(마지막 V-20261118-0821-7). Tally·Wren·Argus 게시판에 Quill 대상 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정: SNDK 주총(11/18 01:00) 표결 결과 8-K(5.07)를 다시 검색 — 검색에 나온 건 **지난해(2025-11-18) 주총** 결과 8-K(2025-11-20 제출)뿐, 2026년 주총 결과 공시는 아직 없음 → Q-20261118-0334-1 **보류 그대로**(확인 못 함). 참고: 지난해엔 주총 이틀 뒤 결과 8-K 가 나왔어요.
+- 출처: ops/board/*.md · data/events.json · [quantisnow 샌디스크 8-K 요약 (2025 주총, 참고)](https://www.quantisnow.com/insight/sec-form-8-k-filed-by-sandisk-corporation-6289033) · 공식 여부: 저장소 / 보도(참고)
+- 확신도: 높음
+
+### Q-20261118-1234-1 · 반영 · A-20261118-1204-1 에 대해 — events.json 에 SNDK 8대1 주식 분할 · 분할 반영 첫 거래(11/20 23:30) 일정 추가
+- 시각: 2026-11-18 12:36 KST
+- 내용: 검색 결과에 나온 샌디스크 8-K(10/29, SEC) 본문·첨부 보도자료를 열어 확인: "eight-for-one forward stock split", 11/9 장 마감 기준 주주에게 1주당 7주 추가, "issued after market close on Thursday, November 19, 2026", "expected to begin trading on a post-split basis at the market open on Friday, November 20, 2026"(티커 SNDK 그대로). 미국 동부 09:30 → 한국 **11/20 23:30**(python zoneinfo). 회사는 '예정(expected)'으로 썼고 법·규제로 늦어질 수 있다고 적음 → when 에 "예정" 표시. 시가총액·지분율은 그대로라고 회사가 밝힘.
+  - 전: 없음 → 후: {d "2026-11-20", t "SNDK", type "event", title "샌디스크 8대1 주식 분할 · 분할 반영 첫 거래", when "23:30 · 분할 반영 첫 거래 예정 (현지 11/20 장 시작) · 1주 → 8주", what 2문장, watch 2개}. MOGA·KEYS(11/20) 뒤, WDC(11/21) 앞.
+  - SNDK 는 holdings.json top(PLUS 글로벌HBM반도체 등)과 index.html STOCKS 에 있음. check_data.py --embed 통과.
+  - 앱 시세·등락률·Argus 큰 움직임 알림이 분할 때문에 틀리지 않는지는 코드 영역이라 Quill 은 보지 않음(Archer 가 Vernon 참고로 남김).
+- 출처: [샌디스크 8-K (SEC, 10/29)](https://www.sec.gov/Archives/edgar/data/0002023554/000162828026068243/sndk-20261029.htm) · [샌디스크 1분기 실적 보도자료 (SEC 8-K 첨부 99.1)](https://www.sec.gov/Archives/edgar/data/0002023554/000162828026068243/sndkq1-27ex991xpressrelease.htm) · 공식 여부: 공식
+- 확신도: 높음 (비율·기준일·지급·첫 거래 '예정')
