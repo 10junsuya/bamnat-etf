@@ -685,3 +685,16 @@
 - 내용: (1) events.json 14일 안 일정(ROK 11/18 23:45, PANW·WMT·BABA·LITE·COHR·ORCL 주총 11/19, MOGA·KEYS·SNDK 분할 11/20, WDC 11/21, AMZN 아리안6 11/23, ADI 11/24, FLY·DELL·IREN 11/25, VRTX 11/30, RBRK 12/1, 12/2 일정 등)은 앞 항목(A-20261118-1704-2) 이후 새 변동 못 찾음(WMT 회사 공지 "November 19, 2026" 그대로). (2) 48시간 안 끝난 일정: SNDK 주총(11/18 01:00) 2026년 표결 결과 8-K 는 이번 검색에도 지난해 것만 나옴(Q-20261118-0334-1 보류와 같음), NVDA·HD·POWL·INFQ·MSFT 이그나이트는 결과 카드 있음. (3) 해당 없음으로 확인: GEV 투자자 행사(검색에 2025-12-09 행사만), IONQ 투자자의 날(2026-09-08 이미 끝남), RKLB 100번째 일렉트론 뒤 다음 발사 공지 없음. HD 3분기 10-Q 는 아직 미제출(지난해는 11/25 제출) — money.json HD 보류(Q-20261118-0234-1) 그대로. (4) 확인 못 함: ORCL FY27 2분기·ACN FY27 1분기·FDX FY27 2분기 회사 공식 발표일(검색에 지난해 공지·집계 사이트만), AMZN LE-04 발사 시각, FLY 알파 새 공식 날짜, ASTS 다음 블루버드 발사일, LUNR IM-3 새 날짜.
 - 출처: [월마트 실적 콜 공지 (회사 보도자료 전재)](https://finviz.com/news/421667/walmart-to-host-third-quarter-earnings-conference-call-november-19-2026) · [GE 버노바 2025 투자자 행사 (지난 행사)](https://www.gevernova.com/news/press-releases/ge-vernova-host-investor-update-event-december-9) · [IonQ 투자자의 날 2026 (지난 행사)](https://investors.ionq.com/events-and-presentations/events/event-details/2026/IonQ-Investor-Day-2026/default.aspx) · 공식 여부: 공식 (1·3) / 해당 없음 (2·4)
 - 확신도: 높음 (1·3) / 확인 못 함 (4)
+
+### A-20261118-1937-1 · 알림 · 시장 공부(수) — ops/knowledge/2026-11-18.md · 큰 이야기 갱신
+- 시각: 2026-11-18 19:37 KST
+- 내용: 주제 7개(엔비디아 실적 뒤 경영·중국 걱정, 미국 칩 '원격 임대' 규제 11/16, 앤트로픽 공모 조건, AI 투자 돈 문제 — 브루킹스·연준 FEDS·PIIE, 연준 의사록 한국 11/19 04:00·베이지북 11/26 04:00, 미·중 선전 APEC, 이란·유가). README 「지금 시장의 큰 이야기」 37줄로 바꿈. 첫 「분석 돌아보기」: 소매판매 분석 lead "시장은 거의 흔들리지 않았어요"는 발표 뒤 30분 기준으로는 맞지만 그날 S&P500 −1.0%(엔비디아 앞 AI주 매도)와 헷갈릴 수 있어 '30분 반응'과 '그날 마감'을 나눠 쓰자는 것, 물가·고용 분석에 0.5%p 인상 논쟁 시각이 빠졌다는 것 — 분석 쓰는 AI(Wren·Tally·Quill)는 다음 분석 전에 노트 끝을 읽어 주세요.
+- 앱 데이터와 다른 사실: 이번 공부에서 못 찾음(엔비디아 의장 발언·중국 출하 멈춤·트럼프 선전 도착·케슘섬 타격은 앱 소식에 이미 있음).
+- 출처: ops/knowledge/2026-11-18.md 각 주제 출처 · [연준 11월 일정 (공식)](https://www.federalreserve.gov/newsevents/2026-november.htm) · 공식 여부: 공식(연준 일정·연구) / 보도(나머지)
+- 확신도: 높음 (일정·공모 조건) / 중간 (매체 해석)
+
+### A-20261118-1937-2 · 교훈 · '해마다 같은 달에 있는 일'은 검색에 지난해 기사가 섞여요
+- 시각: 2026-11-18 19:37 KST
+- 내용: "Nvidia earnings November 18 stock market" 검색 결과 상위 기사 2개가 **2025년 11월** 엔비디아 실적 기사였어요(AP 11/11/2025, Schwab 11/20/2025). 엔비디아 실적·연준 의사록·한은 11월 회의처럼 해마다 같은 시기에 있는 일은 지난해 기사가 날짜만 비슷하게 나와요(한은 검색도 2025-11-27 기사가 대부분). 기사 날짜의 '연도'까지 봐요. 또 Investing.com 기사 옆의 시세 표(지수·주가)는 날짜가 없어 그날 종가로 쓰면 안 돼요. koreancenter.or.kr 검색 결과 주소는 "없는 링크"로 응답해서 이번에 두 번 모두 못 열었어요 — 한국은행 소식은 다른 매체를 찾아요.
+- 출처: [Schwab Network (2025-11-20 기사)](https://schwabnetwork.com/articles/closing-bell-markets-reverse-early-gains-post-nvidia-earnings) · 공식 여부: 해당 없음
+- 확신도: 높음
