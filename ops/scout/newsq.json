@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-18 10:44",
-"rot": 32,
+"updated_kst": "2026-11-18 10:52",
+"rot": 92,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "31건",
+"Reuters": "36건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -1754,6 +1754,16 @@
 "seen": "2026-11-17T21:44:07+00:00"
 },
 {
+"id": "4fa4563b24f4",
+"t": "UNH",
+"title": "Optum’s CEO still works weekends as a pediatrician. What he sees ‘should not happen in America, but it does every single day’",
+"url": "https://finance.yahoo.com/healthcare/articles/optum-ceo-still-works-weekends-212751856.html?.tsrc=rss",
+"pub": "2026-11-17T21:27:51+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:52:43+00:00"
+},
+{
 "id": "edc847bb750d",
 "t": "NVDA",
 "title": "Nvidia’s First Report Without Jensen Huang: $115.8 Billion in Revenue, a $130 Billion Forecast, and the Stock Is Up 2.3% After Hours",
@@ -3122,6 +3132,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T19:48:11+00:00"
+},
+{
+"id": "e212916729a0",
+"t": "DELL",
+"title": "GF Securities Just Slashed Its Price Target on Dell Stock. Here's Why.",
+"url": "https://www.barchart.com/story/news/8882367/gf-securities-just-slashed-its-price-target-on-dell-stock-here-s-why?.tsrc=rss",
+"pub": "2026-11-17T19:13:48+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:52:43+00:00"
 },
 {
 "id": "2ef1f60fb118",
@@ -7994,24 +8014,24 @@
 "seen": "2026-11-17T15:16:54+00:00"
 },
 {
-"id": "72bda3f16de4",
-"t": "AVGO",
-"title": "Cathie Wood and 14 Other Big Funds Bought Broadcom. It’s 33% Below Its High. Bargain or Trap?",
-"url": "https://www.tikr.com/blog/cathie-wood-and-14-other-big-funds-bought-broadcom-its-33-below-its-high-bargain-or-trap?ref=yahoofinance&tlnk=yf-261117-8p27hg4c&.tsrc=rss",
-"pub": "2026-11-17T14:41:59+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "f8ffc82bdd80",
+"t": "",
+"title": "Asian Equities Mixed as Investors Parse Nvidia’s Results, Guidance",
+"url": "https://www.wsj.com/finance/asian-equities-mixed-as-investors-parse-nvidias-results-guidance-7041c3ea?mod=rss_markets_main",
+"pub": "2026-11-18T01:51:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-18T01:52:43+00:00"
 },
 {
-"id": "23ea172bdf80",
-"t": "ORCL",
-"title": "What Would Higher Interest Rates Do To CoreWeave Stock?",
-"url": "https://www.trefis.com/stock/crwv/articles/625748/what-would-higher-interest-rates-do-to-coreweave-stock/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:52+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T20:15:22+00:00"
+"id": "ec48c0cb9240",
+"t": "",
+"title": "Cobalt’s Outlook Darkens as Memory Chip Costs Hit Gadgets Demand",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/cobalt-s-outlook-darkens-as-memory-chip-costs-hit-gadgets-demand",
+"pub": "2026-11-18T01:36:38+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T01:52:43+00:00"
 },
 {
 "id": "c641d2eb86a0",
@@ -8022,6 +8042,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-18T01:44:07+00:00"
+},
+{
+"id": "bb06cdb1ab32",
+"t": "",
+"title": "Quant Trader Graviton Expands Office Space in India, Singapore",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/quant-trader-graviton-expands-office-space-in-india-singapore",
+"pub": "2026-11-18T01:30:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T01:52:43+00:00"
 },
 {
 "id": "8b047b7ce734",
@@ -9974,6 +10004,16 @@
 "seen": "2026-11-17T20:15:22+00:00"
 },
 {
+"id": "2e5d3b88f823",
+"t": "",
+"title": "Corporate-Card Startup Ramp Raising Funds at $70 Billion Valuation",
+"url": "https://www.wsj.com/finance/corporate-card-startup-ramp-raising-funds-at-70-billion-valuation-631b071a?mod=rss_markets_main",
+"pub": "2026-11-17T20:00:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-18T01:52:43+00:00"
+},
+{
 "id": "4569df265c3e",
 "t": "",
 "title": "Barclays Sees 2027 Muni Bond Supply Reaching Up to $600 Billion",
@@ -10814,6 +10854,16 @@
 "seen": "2026-11-18T01:13:55+00:00"
 },
 {
+"id": "db85d3d63df2",
+"t": "",
+"title": "NextEra Energy, Inc. (NEE.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9LV0ZhZTFGYktVeTZvVUNCLXowNkZ5dnZuNGNCZ2c0cmJpend0TG4teElETTdIWEVOelRCTmFTa3VYcnNIX0stWVliTEpGa0p6SklDMFI1d25VT3NtZlMxY1BsSEdyTnloekE?oc=5",
+"pub": "2026-11-17T19:15:32+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T01:52:43+00:00"
+},
+{
 "id": "1f73159a8725",
 "t": "",
 "title": "Apple working to get systems online as soon as possible. $AAPL",
@@ -10962,56 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-17T23:14:18+00:00"
-},
-{
-"id": "ce72cee59128",
-"t": "",
-"title": "Gold Futures Inch Higher As U.S. Yields, Dollar Slip",
-"url": "https://www.wsj.com/finance/commodities-futures/gold-struggles-to-recover-as-dollar-rates-weigh-13856211?mod=rss_markets_main",
-"pub": "2026-11-17T19:07:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-17T19:16:12+00:00"
-},
-{
-"id": "cac30aa4ae84",
-"t": "",
-"title": "Edison SpA (EDNn.MI) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41WTBBb212MHFZUGpXTmlSa3BKaUV4WHZXSUgyTmszMkJxLWJ4Q3c4emkzTGNrNUl0eU54VjdWVWVScFdUNF9leGk0TlI5TXRQYlIwVGtIc1FqZTZ1amJ5ZmFtR2kteFpIaVF2Zg?oc=5",
-"pub": "2026-11-17T19:05:14+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "a413b895ddd2",
-"t": "",
-"title": "Costly legal battle to play out after incident in New Orleans port left cruise ship capsized",
-"url": "https://www.foxbusiness.com/economy/legal-battle-play-out-after-incident-new-orleans-port-left-cruise-ship-capsized",
-"pub": "2026-11-17T19:03:11+00:00",
-"src": "Fox Business",
-"kind": "market",
-"seen": "2026-11-17T19:16:12+00:00"
-},
-{
-"id": "0b03546d2965",
-"t": "",
-"title": "A senior source tells Al Arabiya: The diplomatic track between the US and Iran has not seen a breakthrough so far.",
-"url": "https://www.financialjuice.com/News/9856325/A-senior-source-tells-Al-Arabiya-The-diplomatic-track-between-the-US-and-Iran-has-not-seen-a-breakthrough-so-far.aspx?xy=rss",
-"pub": "2026-11-17T19:02:39+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:16:12+00:00"
-},
-{
-"id": "8abc98dc5737",
-"t": "",
-"title": "A senior source tells Al Arabiya: The diplomatic track between the US and Iran has not seen a breakthrough so far.",
-"url": "https://www.financialjuice.com/News/9856325/A-senior-source-tells-Al-Arabiya-The-diplomatic-track-between-the-US-and-Iran-has-not-seen-a-breakthrough-so-far.aspx",
-"pub": "2026-11-17T19:02:39+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
 }
 ]
 }
