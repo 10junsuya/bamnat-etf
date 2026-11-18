@@ -1350,30 +1350,30 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 확신도: 높음
 
 ### W-20261119-0013-1 · 반영 · GOOGL 캘리포니아 차량국(DMV), 웨이모 고속도로 무인 운행 금지 → 웨이모 모든 지역 고속도로 운행 중단 (보도)
-- 시각: 2026-11-19 00:35 KST
+- 시각: 2026-11-19 00:18 KST
 - 내용: DMV가 공사 구간 진입(US-101 버링게임, 3대)·고속도로 순찰차 옆 추월 시도(I-280) 등을 들어 웨이모의 고속도로 무인 운행이 '공공 안전에 임박한 위험'이라며 일반 도로로만 제한했어요. 웨이모는 캘리포니아 밖 운영 지역에서도 고속도로 운행을 잠시 멈췄다고 밝혔어요. 명령 날짜는 매체마다 달라요(TechCrunch: 11-11 내리고 11-17 공개 / SF Standard: 11-17) — 그래서 소식 날짜는 보도 시점(한국 11-18)으로 넣었어요. DMV 원문 링크는 못 찾아 '보도'로 넣었어요.
 - 출처: [TechCrunch](https://techcrunch.com/2026/11/17/waymo-suspends-freeway-rides-nationwide-after-california-dmv-order/) · [SF Standard](https://sfstandard.com/2026/11/17/california-dmv-bans-waymo-from-freeways/) · [U.S. News(AP)](https://www.usnews.com/news/us/articles/2026-11-17/california-bans-waymo-autonomous-vehicles-from-state-freeways-saying-they-pose-an-imminent-hazard) · 공식 여부: 보도
 - 확신도: 높음
 
 ### W-20261119-0013-2 · 반영 · ON 시냅틱스 주주총회, 온세미의 인수(합병) 안건 통과 (공식)
-- 시각: 2026-11-19 00:35 KST
+- 시각: 2026-11-19 00:18 KST
 - 내용: 시냅틱스 8-K(11-17 특별 주주총회): 합병 안건 찬성 31,209,141주·반대 510,842주로 통과. 남은 조건(규제 승인)·마무리 시점은 이번에 원문으로 확인 못 해 넣지 않았어요. ON 「최근 소식」 첫 항목이에요.
 - 출처: [시냅틱스 8-K(SEC)](https://www.sec.gov/Archives/edgar/data/0000817720/000081772026000111/syna-20261117.htm) · [시냅틱스 보도자료(GlobeNewswire 전재)](https://www.manilatimes.net/2026/11/18/tmt-newswire/globenewswire/synaptics-stockholders-approve-merger-with-onsemi/2473339) · 공식 여부: 공식
 - 확신도: 높음
 
 ### W-20261119-0013-3 · 반영 · SPCX X·xAI, 남아공 경쟁위원회와 언론사 지원 합의·약속 (보도)
-- 시각: 2026-11-19 00:35 KST
+- 시각: 2026-11-19 00:18 KST
 - 내용: 남아공 경쟁위원회가 11-18 언론·디지털 플랫폼 시장 조사(MDPMI) 처분을 X는 고쳐 합의, xAI는 자발적 약속으로 바꿨고 두 회사는 이의 제기를 거뒀어요. X는 2년간 언론사 수익화 지원 프로그램·워크숍, xAI는 2년간 그록 설정·robots.txt 교육. 돈 지급 약속은 없어요(TechCentral). 경쟁위원회 원문 링크는 못 찾아 '보도'.
 - 출처: [TechCentral](https://techcentral.co.za/x-xai-competition-commission-media-inquiry-settlement/288518/) · [Bloomberg(제목)](https://www.bloomberg.com/news/articles/2026-11-18/elon-musk-s-x-reaches-deal-in-south-african-media-antitrust-case) · 공식 여부: 보도
 - 확신도: 중간
 
 ### W-20261119-0013-4 · 교훈 · 같은 제목처럼 보여도 새 사건일 수 있어요 (웨이모)
-- 시각: 2026-11-19 00:35 KST
+- 시각: 2026-11-19 00:18 KST
 - 내용: 앞 두 차례(W-…-2313-2·2343-1)가 '웨이모 운행 중단' 글을 "5~6월 고속도로 중단의 재탕"으로 보고 건너뛰었는데, 실제로는 11-17 DMV 금지 명령이라는 새 사건이었어요. 5월에도 비슷한 일이 있어 검색에 옛 기사가 먼저 나왔어요. → 예전에 비슷한 일이 있었던 회사는 검색어에 이번 달·기관명(DMV 등)을 넣어 한 번 더 찾아봐요.
 - 확신도: 높음
 
 ### W-20261119-0013-5 · 알림 · 이번 차례
-- 시각: 2026-11-19 00:35 KST
+- 시각: 2026-11-19 00:18 KST
 - 내용: Scout를 직접 돌린 뒤(00:15 KST 갱신) 새 항목 117건(news 97·market 20)을 모두 처리했어요. 반영 3건(GOOGL·ON·SPCX). 건너뜀: '은행이 고객 파일 1,500만 건 유출로 트럼프 세금 정보 노출' 글(블룸버그 제목 · Scout가 JPM 으로 묶었지만 어느 은행인지 확인 못 함 — JP모건 사건이라는 근거 없음), 미국이 중국 AI 쓰는 기업 '이름 공개' 검토(검토 단계 보도), 버라이즌-보쉬 모터스포츠·마스텍 피지컬 AI·코스트코 최대 주유소(작은 일), 엔비디아 실적·통화 해설·CEO 관련 의견 글(실적은 Tally 몫), 앤트로픽 상장 해설, 시장조사 보고서 광고성 글, 종목 추천·비교·시장 요약 글. 00시대라 kind "market"(미국 미결 주택 판매 −4.7%·영란은행 베일리·중-한 FTA 2단계 협상 등)은 done 처리만 했어요. 나에게 온 새 요청(RULES 0-3): 최근 24시간 없음. 미국 지표: 오늘(동부 11-18) 발표 예정 추적 지표 없음 — 매크로 수집은 돌리지 않았어요(views.json rel 6개 모두 macro.json 과 같음, 다음은 11-19 실업수당 청구).
 - 출처: ops/scout/newsq.json · 공식 여부: 저장소
 - 확신도: 높음
