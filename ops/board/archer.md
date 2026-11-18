@@ -698,3 +698,16 @@
 - 내용: "Nvidia earnings November 18 stock market" 검색 결과 상위 기사 2개가 **2025년 11월** 엔비디아 실적 기사였어요(AP 11/11/2025, Schwab 11/20/2025). 엔비디아 실적·연준 의사록·한은 11월 회의처럼 해마다 같은 시기에 있는 일은 지난해 기사가 날짜만 비슷하게 나와요(한은 검색도 2025-11-27 기사가 대부분). 기사 날짜의 '연도'까지 봐요. 또 Investing.com 기사 옆의 시세 표(지수·주가)는 날짜가 없어 그날 종가로 쓰면 안 돼요. koreancenter.or.kr 검색 결과 주소는 "없는 링크"로 응답해서 이번에 두 번 모두 못 열었어요 — 한국은행 소식은 다른 매체를 찾아요.
 - 출처: [Schwab Network (2025-11-20 기사)](https://schwabnetwork.com/articles/closing-bell-markets-reverse-early-gains-post-nvidia-earnings) · 공식 여부: 해당 없음
 - 확신도: 높음
+
+### A-20261118-2104-1 · 발견 · AMZN(아마존) 레오 LE-04 아리안6(VA271) 발사 창 공지 — 한국 시간 11/23(월) 20:09~20:38 · 앱 when 은 아직 "발사 시각 미공지 · 11/23 이후"
+- 시각: 2026-11-18 21:04 KST
+- 내용: 아리안스페이스가 오늘(11/18) 발사 창을 공식 공지했어요(제목 "Mission VA271: Launch window on November 23, 2026"). 원문: "Liftoff is scheduled for November 23, 2026, from Europe's Spaceport in French Guiana", 창 "11:09 – 11:38 (UTC)" · "08:09 – 08:38 (Kourou)" · "06:09 – 06:38 (Washington, D.C.)" → 한국 시간 **11/23(월) 20:09~20:38**(python zoneinfo 변환). 아리안 64(보조 로켓 4개)·10번째 아리안6 비행·위성 36기는 A-20261118-0904-1 과 같음. 아마존 레오 임무 소식 페이지(11/15 갱신)는 아직 "NET November 23 · 발사 창은 가까워지면 공지" 그대로라 아리안스페이스 공지가 더 새로워요. 지금 events.json AMZN 11/23 일정 when "발사 시각 미공지 · 11/23 이후(현지 날짜) · 프랑스령 기아나 쿠루 우주센터"를 "20:09~20:38 발사 창 · 프랑스령 기아나 쿠루 우주센터 (현지 11/23 오전 8:09)" 같은 꼴로 바꿀 수 있어요. 발사 창이라 기상·기술 사정으로 늦어질 수 있음. NASASpaceFlight 포럼 제목의 "10:12 UTC"는 공식 공지와 달라 쓰지 않음. AMZN 담은 ETF 비중 최대 16.8%.
+- 출처: [아리안스페이스 VA271 발사 창 공지 (공식, 11/18 · 이번 차례 웹 열기 도우미로 본문 확인)](https://www.arianespace.com/news/mission-va271-launch-window-on-november-23-2026/) · [아마존 레오 임무 소식 (아마존 공식, 11/15 갱신 · 창 미공지)](https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates) · 공식 여부: 공식
+- 확신도: 높음
+- 요청: Quill 확인 바람 (A-20261118-0904-1 · Q-20261118-0634 반영 이어서)
+
+### A-20261118-2104-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-18 21:04 KST
+- 내용: (1) events.json 14일 안 일정(ROK 11/18 23:45, PANW·WMT·BABA·LITE·COHR·ORCL 주총 11/19, MOGA·KEYS·SNDK 분할 11/20, WDC 11/21, ADI 11/24, FLY·DELL·IREN 11/25, VRTX 11/30, RBRK 12/1, 12/2 일정 등)은 AMZN LE-04(위 항목) 말고 앞 항목(A-20261118-1904-2) 이후 새 변동 못 찾음. VRTX 포베타시셉트는 아직 승인 소식 없음(11/30 기한 그대로, 11/12 Biotech Today 보도자료 목록도 "November 30, 2026"). KEYS when("실적 자료 공개 시각 미공지")은 A-20261118-1704-1 이 아직 반영 전 — 새로 적지 않음. (2) 48시간 안 끝난 일정: SNDK 주총(11/18 01:00) 2026년 표결 결과 8-K 는 이번 검색에도 지난해 것만(Q-20261118-0334-1 보류와 같음). ROK 투자자 회의는 오늘 23:45 시작이라 아직 전. (3) 해당 없음으로 확인: BWXT 투자자의 날은 9/29 지난 일(Business Wire), ASML 투자자의 날은 검색에 2024년 행사만, 11/12 Biotech Today 목록의 12월 FDA 기한 중 우리 회사는 VRTX·GILD·VTRS 뿐(모두 앞서 적음). (4) 확인 못 함: FLY 알파 8번째 비행(블록 II) 공식 날짜 — 검색에 5월·8월 기사만, ORCL FY27 2분기 발표일 회사 공지(검색에 FY27 1분기·지난해 2분기 공지만), SPCX 스타십 16번째 비행 공식 날짜, RKLB 101번째 일렉트론. (5) money.json 기간: 새로 지난 분기가 된 회사 없음(POWL 은 Q-20261118-1934-1 로 반영됨).
+- 출처: [11/12 Biotech Today FDA 기한 목록 (PR Newswire, finviz 전재)](https://finviz.com/news/421542/a-run-of-fda-target-dates-fills-the-biotech-calendar-from-late-november-to-year-end) · [BWXT 투자자의 날 (Business Wire, 지난 행사)](https://secure.businesswire.com/news/home/20260929039912/en/BWX-Technologies-Hosting-Investor-Day) · [파이어플라이 블록 II (FLYING, 5/6 기사)](https://www.flyingmag.com/firefly-debut-upgraded-rocket-next-test-flight/) · 공식 여부: 공식 (1·3 회사 보도자료) / 해당 없음 (2·4)
+- 확신도: 높음 (1·3) / 확인 못 함 (4)
