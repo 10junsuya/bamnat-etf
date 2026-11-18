@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-18 14:44",
-"rot": 95,
+"updated_kst": "2026-11-18 14:50",
+"rot": 155,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "33건",
+"Reuters": "32건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "88717332e47a",
+"t": "INTC",
+"title": "TRUSTA Debuts at SuperComputing 2026 with Upgraded AI Scaler Toolkit",
+"url": "https://finance.yahoo.com/technology/ai/articles/trusta-debuts-supercomputing-2026-upgraded-054600847.html?.tsrc=rss",
+"pub": "2026-11-18T05:46:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:50:08+00:00"
+},
 {
 "id": "564f9f158b08",
 "t": "NVDA",
@@ -52,6 +62,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T05:44:16+00:00"
+},
+{
+"id": "7c89a59d64bb",
+"t": "BRKB",
+"title": "Berkshire Hathaway (BRK.B) Reveals New Stake And Nearly Doubles One Holding",
+"url": "https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-brk-b-reveals-052028795.html?.tsrc=rss",
+"pub": "2026-11-18T05:20:28+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:50:08+00:00"
 },
 {
 "id": "5dcdea35ca31",
@@ -202,6 +222,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T05:14:02+00:00"
+},
+{
+"id": "f710d895a07d",
+"t": "CME",
+"title": "CME Group (CME) Stock Looks Fully Valued After Its 69% Run",
+"url": "https://finance.yahoo.com/markets/stocks/articles/cme-group-cme-stock-looks-043356312.html?.tsrc=rss",
+"pub": "2026-11-18T04:33:56+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:50:08+00:00"
 },
 {
 "id": "1e1ccbc8ade5",
@@ -7982,36 +8012,6 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T15:43:48+00:00"
-},
-{
-"id": "0c1db528de8a",
-"t": "PG",
-"title": "Can PG's Health Care Segment Extend Its Sales Momentum Ahead?",
-"url": "https://finance.yahoo.com/healthcare/articles/pgs-health-care-segment-extend-152500050.html?.tsrc=rss",
-"pub": "2026-11-17T15:25:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
-},
-{
-"id": "d8539bc88c9b",
-"t": "NVDA",
-"title": "Stock Market Today: Dow Dips As Retail Sales Do This; Oil Plays Rise But The Software Sector Lags (Live Coverage)",
-"url": "https://finance.yahoo.com/m/0c9330f2-68c3-38ef-9244-7dbdfd0853b7/stock-market-today%3A-dow-dips.html?.tsrc=rss",
-"pub": "2026-11-17T15:24:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:43:48+00:00"
-},
-{
-"id": "246a8e30e3c6",
-"t": "NVDA",
-"title": "Why analysts are calling Nvidia's stock valuation 'draconian'",
-"url": "https://finance.yahoo.com/video/why-analysts-are-calling-nvidias-stock-valuation-draconian-152229262.html?.tsrc=rss",
-"pub": "2026-11-17T15:22:29+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:28:48+00:00"
 },
 {
 "id": "3ab31123e720",
