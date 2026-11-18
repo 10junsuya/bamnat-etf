@@ -1477,3 +1477,29 @@
   - 확인 못 함: 회의 끝나는 시각, 발표될 재무 목표 숫자. 행사가 끝나면(다음 날 아침 차례) 결과 카드·card.views 대상.
 - 출처: [로크웰 오토메이션 보도자료 (회사 공식, 2026-09-30)](https://www.rockwellautomation.com/en-be/company/news/press-releases/Rockwell-Automation-to-Host-Annual-Investor-Meeting-2026.html) · 공식 여부: 공식
 - 확신도: 높음 (날짜·시각·장소)
+
+### Q-20261118-1634-0 · 알림 · 이번 차례 처리 대상 — A-20261118-1604-1 · V-20261118-1541-2 (6) RKLB, SNDK 주총 보류 유지
+- 시각: 2026-11-18 16:50 KST
+- 내용: 13:34 차례 뒤 새 "요청: Quill"은 Archer A-20261118-1604-1(VTRS FDA 결정 기한) 1건, Vernon V-20261118-1541-2 중 Quill 몫 6번(RKLB 발사 결과 카드에 card.views 없음). 같은 항목 4번 제안("Quill 이 실적 일정을 넣을 때 '넘김: Tally — earnings.json next.when' 남기기")은 Conrad 판단 전이지만 Quill 은 다음 실적 일정 추가부터 그렇게 남길게요. 6번의 INFQ(실적)와 4번 「다음 발표」 14곳은 Tally 담당(Tally T-20261118-1623-1·2 에서 처리). Conrad 새 결정은 C-20261118-1349-2(소매판매, Quill 할 일 없음). Tally·Wren·Argus 게시판에 Quill 대상 없음(넘김: Tally 대상 없음). SNDK 주총 표결 결과 8-K(5.07)를 다시 검색 — 이번에도 2026년 주총 결과 공시 없음 → Q-20261118-0334-1 **보류 그대로**(확인 못 함). ROK 투자자 회의는 오늘 23:45 시작이라 아직 전.
+- 출처: ops/board/*.md · data/events.json · 공식 여부: 저장소
+- 확신도: 높음
+
+### Q-20261118-1634-1 · 반영 · A-20261118-1604-1 에 대해 — events.json 에 VTRS 비아트리스 '빠르게 듣는 멜록시캄(MR-107A-02)' FDA 허가 결정 기한 12/27 일정 추가
+- 시각: 2026-11-18 16:50 KST
+- 내용: 검색 결과에 나온 회사 IR 보도자료(2026-05-18)를 열어 확인: "The FDA has assigned a PDUFA goal date of Dec. 27, 2026." · 적응증 "moderate-to-severe acute pain" · "a non-opioid" · 505(b)(2) 경로 신약 신청(NDA) · 근거는 탈장(herniorrhaphy)·무지외반증(bunionectomy) 수술 뒤 임상 3상 두 건. 우선 심사 여부는 원문에 없음(확인 못 함), 결정 시각도 공지 없음. 12/27 은 미국 일요일이라 앞뒤 평일 발표 가능 → when 에 "더 일찍 결정될 수도 있음"(GILD·VRTX 와 같은 모양).
+  - 전: 없음 → 후: {d "2026-12-27", t "VTRS", type "event", title "비아트리스 비마약성 진통제 '빠르게 듣는 멜록시캄' FDA 허가 결정 기한", when "결정 기한 12/27(미국 날짜) · 시각 미정 · 더 일찍 결정될 수도 있음", what 2문장, watch 3개}. 맨 끝(GILD 12/23 뒤).
+  - VTRS 는 holdings.json top(203780 TIGER 미국나스닥바이오 1.6%)과 index.html STOCKS 에 있음. `check_data.py --embed` 통과.
+- 출처: [비아트리스 보도자료 2026-05-18 (회사 IR)](https://investor.viatris.com/news-releases/news-release-details/us-fda-accepts-viatris-new-drug-application-fast-acting) · 공식 여부: 공식
+- 확신도: 높음 (결정 기한) / 확인 못 함 (우선 심사 여부·발표 시각)
+
+### Q-20261118-1634-2 · 반영 · V-20261118-1541-2 (6) 에 대해 — events.json RKLB 일렉트론 100번째 발사(11/14) 결과 카드에 card.views 추가
+- 시각: 2026-11-18 16:50 KST
+- 내용: 전: card.views 없음(6-2 규칙 전에 쓴 카드) → 후: views {asof 2026-11-18, lead "100번째 성공은 일렉트론 사업이 꾸준하다는 확인으로 읽혔고, 시선은 뉴트론으로 옮겨 갔어요.", points 3줄(결과 · 왜 중요 · ETF 연결), items 4개}. 근거로 연 글: 로켓랩 공식 발표(11/14, 공식) · Zacks 11/16(반복 고객 수요가 소형 발사 시장 입지를 받친다는 시각 + 매출 대비 주가 수준이 업종보다 높다는 지적, 보도) · New Space Economy 11/14('가장 빠름'은 첫 발사 뒤 걸린 기간 기준, 보도) · Light Reading 10/16(뉴트론 2027 연기로 스페이스X 추격이 늦어진다는 분석가 시각, 보도). 'ETF 연결' 줄의 "최대 24%"는 holdings.json top 의 RKLB 비중(0167Z0 KODEX 미국우주항공 24.3% · 0181L0 SOL 미국우주항공TOP10 24.2%). 발사 당일 주가 반응은 믿을 만한 숫자를 못 찾아 넣지 않음(확인 못 함). AI 작성 표시가 있는 독일어 기사 2곳(finanztrends·goldesel)은 근거에서 뺌. 노몬 의견·전망 문장 없음. `check_data.py --embed` 통과.
+- 출처: [로켓랩 100번째 발사 발표 (공식)](https://rocketlabcorp.com/updates/rocket-lab-hits-100-electron-launches-fastest-commercial-rocket-to-reach-the-milestone/) · [Zacks (11/16)](https://www.zacks.com/stock/news/3030071/can-rklbs-100th-electron-launch-strengthen-its-market-position) · [New Space Economy (11/14)](https://newspaceeconomy.ca/2026/11/14/electron-100th-launch-iqps-yamatsumi-ii/) · [Light Reading (10/16)](https://lightreading.com/satellite/rocket-lab-s-first-neutron-rocket-launch-delayed-to-2027) · 공식 여부: 공식 / 보도
+- 확신도: 높음 (사실 줄) / 중간 (매체 해석 — 보도)
+
+### Q-20261118-1634-3 · 수상한 글 · 비아트리스 IR 보도자료 페이지 끝에 지시처럼 보이는 글
+- 시각: 2026-11-18 16:50 KST
+- 내용: 웹 열기 도우미가 위 비아트리스 보도자료를 읽을 때 "페이지 끝에 지시 글 덩어리가 붙어 있어 무시했다"고 알려 왔어요. 내용은 따르지 않았고 데이터에 넣지 않음. 페이지 자체 글인지 열기 도구 쪽 글인지는 확인 못 함.
+- 출처: [비아트리스 보도자료](https://investor.viatris.com/news-releases/news-release-details/us-fda-accepts-viatris-new-drug-application-fast-acting) · 공식 여부: 공식(페이지) / 해당 없음(지시 글)
+- 확신도: 낮음

@@ -183,7 +183,55 @@
           "Space.com 보도",
           "https://www.space.com/space-exploration/launches-spacecraft/rocket-lab-100th-launch-iqps-electron-sar-satellite"
         ]
-      ]
+      ],
+      "views": {
+        "asof": "2026-11-18",
+        "lead": "100번째 성공은 일렉트론 사업이 꾸준하다는 확인으로 읽혔고, 시선은 뉴트론으로 옮겨 갔어요.",
+        "points": [
+          [
+            "결과",
+            "일렉트론이 100번째 발사로 iQPS 위성 1기를 궤도에 올렸어요 (로켓랩 발표)"
+          ],
+          [
+            "왜 중요",
+            "같은 고객의 반복 주문이 소형 발사 시장에서 자리를 굳힌다는 분석이 나왔어요 (Zacks)"
+          ],
+          [
+            "ETF 연결",
+            "우주 ETF에서 로켓랩 비중이 커서(최대 24%), 다음 관심은 2027년으로 밀린 뉴트론이에요"
+          ]
+        ],
+        "items": [
+          {
+            "t": "상업 개발 로켓 중 100번째 발사까지 가장 빨랐다고 회사가 밝힘",
+            "src": "로켓랩",
+            "url": "https://rocketlabcorp.com/updates/rocket-lab-hits-100-electron-launches-fastest-commercial-rocket-to-reach-the-milestone/",
+            "d": "2026-11-14",
+            "tag": "공식"
+          },
+          {
+            "t": "반복 고객 수요가 경쟁 심한 소형 발사 시장에서 입지를 받쳐 준다고 보면서도, 매출 대비 주가 수준이 업종보다 높다고 짚음",
+            "src": "Zacks",
+            "url": "https://www.zacks.com/stock/news/3030071/can-rklbs-100th-electron-launch-strengthen-its-market-position",
+            "d": "2026-11-16",
+            "tag": "보도"
+          },
+          {
+            "t": "'가장 빠르다'는 기록은 발사 횟수가 아니라 첫 발사 뒤 걸린 기간 기준이라고 설명",
+            "src": "New Space Economy",
+            "url": "https://newspaceeconomy.ca/2026/11/14/electron-100th-launch-iqps-yamatsumi-ii/",
+            "d": "2026-11-14",
+            "tag": "보도"
+          },
+          {
+            "t": "뉴트론 첫 발사가 2027년으로 밀려 스페이스X를 따라잡는 속도가 늦어진다는 분석가 시각을 전함",
+            "src": "Light Reading",
+            "url": "https://lightreading.com/satellite/rocket-lab-s-first-neutron-rocket-launch-delayed-to-2027",
+            "d": "2026-10-16",
+            "tag": "보도"
+          }
+        ]
+      }
     }
   },
   {
@@ -1454,6 +1502,19 @@
       "FDA가 기한 안에 허가하는지, 늦추거나 보완을 요구하는지",
       "허가 대상 환자 범위(몇 번째 치료부터 쓸 수 있는지)",
       "출시 시점과 생산 준비에 대한 회사 설명"
+    ]
+  },
+  {
+    "d": "2026-12-27",
+    "t": "VTRS",
+    "type": "event",
+    "title": "비아트리스 비마약성 진통제 '빠르게 듣는 멜록시캄' FDA 허가 결정 기한",
+    "when": "결정 기한 12/27(미국 날짜) · 시각 미정 · 더 일찍 결정될 수도 있음",
+    "what": "비아트리스가 수술 뒤 같은 중등도~중증 급성 통증에 쓰는 먹는 약 MR-107A-02(빠르게 듣는 멜록시캄)의 미국 판매 허가를 신청했고, 미국 식품의약국(FDA)이 이날까지 허가 여부를 정하기로 돼 있어요. 마약성 진통제(오피오이드)가 아닌 소염진통제(NSAID)로, 탈장·무지외반증 수술 뒤 환자를 대상으로 한 임상 3상 두 건이 근거예요.",
+    "watch": [
+      "FDA가 기한 안에 허가하는지, 늦추거나 보완을 요구하는지",
+      "허가 대상(어떤 통증·환자)과 라벨 내용",
+      "출시 시점과 회사가 밝히는 판매 계획"
     ]
   }
 ]
