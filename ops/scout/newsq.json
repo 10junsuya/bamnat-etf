@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-18 19:32",
-"rot": 40,
+"updated_kst": "2026-11-18 19:44",
+"rot": 100,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "37건",
+"Reuters": "39건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "3ac4eee3aa03",
+"t": "GOOGL",
+"title": "Google signs PPA to buy 50MW geothermal power from Quaise Energy",
+"url": "https://www.energymonitor.ai/news/google-signs-ppa-50mw-quaise-energy/?.tsrc=rss",
+"pub": "2026-11-18T10:27:59+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T10:44:02+00:00"
+},
+{
+"id": "b8851cac2a5e",
+"t": "NVDA",
+"title": "How Much Was Jensen Huang Worth to Nvidia? More Than $6.7 Trillion, According to One Wall Street Analyst.",
+"url": "https://www.fool.com/investing/2026/11/18/how-much-jensen-huang-worth-to-nvidia-more-than-6-trillion-wall-street-analyst/?.tsrc=rss",
+"pub": "2026-11-18T10:26:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T10:44:02+00:00"
+},
+{
+"id": "d68da3d8250f",
+"t": "SPCX",
+"title": "Could SpaceX Actually Climb 465%? Or Is Raymond James Totally Wrong?",
+"url": "https://www.tikr.com/blog/could-spacex-actually-climb-465-or-is-raymond-james-totally-wrong?ref=yahoofinance&tlnk=yf-261118-w6235h35&.tsrc=rss",
+"pub": "2026-11-18T10:22:05+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T10:44:02+00:00"
+},
 {
 "id": "b845e62f45f9",
 "t": "NVDA",
@@ -34,6 +64,16 @@
 "seen": "2026-11-18T10:32:34+00:00"
 },
 {
+"id": "ccbea37de23b",
+"t": "NVDA",
+"title": "US Stock Futures Rise as Nvidia Raises Revenue Forecast and Anthropic IPO Draws Investor Attention: Dow Jones, S&P, Nasdaq, Wall Street",
+"url": "https://investorshub.advfn.com/market-news/article/40250/us-stock-futures-rise-as-nvidia-raises-revenue-forecast-and-anthropic-ipo-draws-investor-attention-dow-jones-sp-nasdaq-wall-street?.tsrc=rss",
+"pub": "2026-11-18T10:20:27+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T10:44:02+00:00"
+},
+{
 "id": "c24268d0fd18",
 "t": "NVDA",
 "title": "Down Over 60% From Its High, Is Intel's Stock a Good Buy Right Now?",
@@ -52,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T10:32:34+00:00"
+},
+{
+"id": "1bd7a335df56",
+"t": "RKLB",
+"title": "Is Rocket Lab (RKLB) Fully Priced Following Its 100th Electron Mission?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-fully-priced-101425430.html?.tsrc=rss",
+"pub": "2026-11-18T10:14:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T10:44:02+00:00"
 },
 {
 "id": "f6314f902d15",
@@ -144,6 +194,16 @@
 "seen": "2026-11-18T10:14:41+00:00"
 },
 {
+"id": "0f7de9f67a6b",
+"t": "TSM",
+"title": "Investor Stanley Druckenmiller Is in “Capital Preservation” Mode. What Did He Sell?",
+"url": "https://beincrypto.com/druckenmiller-13f-tsmc-seagate-ai-storage/?.tsrc=rss",
+"pub": "2026-11-18T10:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T10:44:02+00:00"
+},
+{
 "id": "f96f5da28966",
 "t": "SPCX",
 "title": "Should You Really Buy Anthropic Stock At the IPO? History Has a Clear Answer for Investors.",
@@ -222,6 +282,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T10:14:41+00:00"
+},
+{
+"id": "617148ab3b4f",
+"t": "HD",
+"title": "Zacks Investment Ideas feature highlights: Home Depot and Lowe's",
+"url": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-093700469.html?.tsrc=rss",
+"pub": "2026-11-18T09:37:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T10:44:02+00:00"
 },
 {
 "id": "bae50469f2ea",
@@ -7944,74 +8014,34 @@
 "seen": "2026-11-17T16:34:22+00:00"
 },
 {
-"id": "949fb0b25b26",
-"t": "HD",
-"title": "Home Depot’s New CEO Isn’t the Only Surprise. Why the Stock Is Falling.",
-"url": "https://finance.yahoo.com/m/da823947-8b3a-3b4b-b995-3851907203e2/home-depot%E2%80%99s-new-ceo-isn%E2%80%99t.html?.tsrc=rss",
-"pub": "2026-11-17T16:30:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
+"id": "d8c38c2ff8ba",
+"t": "",
+"title": "Trump is meeting with the Mexican President and the Canadian PM - White House Official",
+"url": "https://www.financialjuice.com/News/9857613/Trump-is-meeting-with-the-Mexican-President-and-the-Canadian-PM---White-House-Official.aspx?xy=rss",
+"pub": "2026-11-18T10:41:22+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T10:44:02+00:00"
 },
 {
-"id": "7c6a9a6dc7f3",
-"t": "NVDA",
-"title": "$500 Isn’t Too Small to Matter. Here’s Exactly Where I’d Put It.",
-"url": "https://www.fool.com/investing/2026/11/17/500-isn-t-too-small-to-matter-here-s-exactly-where-i-d-put-it/?.tsrc=rss",
-"pub": "2026-11-17T16:29:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
+"id": "8d8c3c1f2b50",
+"t": "",
+"title": "Kremlin: Putin and Trump may discuss putin's visit to G-20 - Tass",
+"url": "https://www.financialjuice.com/News/9857612/Kremlin-Putin-and-Trump-may-discuss-putins-visit-to-G-20---Tass.aspx?xy=rss",
+"pub": "2026-11-18T10:40:59+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T10:44:02+00:00"
 },
 {
-"id": "99ef93ade73e",
-"t": "SPCX",
-"title": "Nvidia, Intel, Salesforce, SpaceX, Anthropic, Sandisk, Home Depot, and More That Explain Today’s Market",
-"url": "https://finance.yahoo.com/m/5d4c8ff4-57bc-3350-b217-681441a4f8b3/nvidia%2C-intel%2C-salesforce%2C.html?.tsrc=rss",
-"pub": "2026-11-17T16:29:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:34:22+00:00"
-},
-{
-"id": "9641eea05f26",
-"t": "JPM",
-"title": "Market Chatter: JPMorgan-Led Banks Cut Borrowing Costs on $2.85 Billion Debt Deal for CCC Intelligent Solutions Acquisition",
-"url": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-jpmorgan-led-banks-162731193.html?.tsrc=rss",
-"pub": "2026-11-17T16:27:31+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T17:14:01+00:00"
-},
-{
-"id": "d1d18474b457",
-"t": "TSLA",
-"title": "What far cheaper AI compute in space could mean for Elon Musk",
-"url": "https://finance.yahoo.com/video/what-far-cheaper-ai-compute-in-space-could-mean-for-elon-musk-162707073.html?.tsrc=rss",
-"pub": "2026-11-17T16:27:07+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:34:22+00:00"
-},
-{
-"id": "9c9a4f5f348b",
-"t": "HD",
-"title": "How Many Shares of Home Depot or Lowe’s Pay $1,000 a Month in Dividends?",
-"url": "https://www.tikr.com/blog/how-many-shares-of-home-depot-or-lowes-pay-1000-a-month-in-dividends?ref=yahoofinancedividend&tlnk=yf-261117-3jxfh2g4&.tsrc=rss",
-"pub": "2026-11-17T16:26:58+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
-},
-{
-"id": "d5fbebe46438",
-"t": "NVDA",
-"title": "QuantumScape Trades Near $3 With No Revenue. Here’s What $5,000 Could Be Worth if Its Battery Ships in 2029.",
-"url": "https://www.fool.com/investing/2026/11/17/quantumscape-trades-near-3-with-no-revenue-heres-what-5000-could-be-worth-if-its-battery-ships-in-2029/?.tsrc=rss",
-"pub": "2026-11-17T16:25:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
+"id": "3d4742dd71c2",
+"t": "",
+"title": "Kremlin: It's unlikely Putin and Trump will have time for fully-fledged negotiations at APEC, but they will talk - TASS",
+"url": "https://www.financialjuice.com/News/9857611/Kremlin-Its-unlikely-Putin-and-Trump-will-have-time-for-fully-fledged-negotiations-at-APEC-but-they-will-talk---TASS.aspx?xy=rss",
+"pub": "2026-11-18T10:40:34+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T10:44:02+00:00"
 },
 {
 "id": "895a1357204f",
@@ -10982,36 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T00:14:24+00:00"
-},
-{
-"id": "363131fcecba",
-"t": "",
-"title": "Japan Oct imports rise 21.6% year/year: Ministry of Finance (poll 25.8%)",
-"url": "https://www.financialjuice.com/News/9856714/Japan-Oct-imports-rise-216-yearyear-Ministry-of-Finance-poll-258.aspx?xy=rss",
-"pub": "2026-11-17T23:50:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:14:24+00:00"
-},
-{
-"id": "12eb669ba896",
-"t": "",
-"title": "Japan's October exports to Asia rise 22% year on year: MoF",
-"url": "https://www.financialjuice.com/News/9856716/Japans-October-exports-to-Asia-rise-22-year-on-year-MoF.aspx",
-"pub": "2026-11-17T23:50:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "38158c9880f8",
-"t": "",
-"title": "Japan October exports to EU up 22.1% year/year: MOF",
-"url": "https://www.financialjuice.com/News/9856715/Japan-October-exports-to-EU-up-221-yearyear-MOF.aspx",
-"pub": "2026-11-17T23:50:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
 }
 ]
 }
