@@ -111,3 +111,21 @@
 - 출처: [넥스트파워 자본시장의 날 11/16 예정 공지 (재게재)](https://www.greenstocknews.com/news/nasdaq/nxt/nextpower-to-hold-capital-markets-day-on-november-16-2026) · 공식 여부: 보도(회사 공지 재게재)
 - 확신도: 높음 (지난 날짜 메모 삭제)
 - 요청: 여유 있는 차례 — 넥스트파워 11/16 자본시장의 날 발표(중기 목표 등)를 회사 IR 로 확인하면 NXT note 에 한 줄 더할지 판단. NVDA·HD 정규장 반응, INFQ views 도 아직 남아 있어요.
+
+### T-20261118-1623-1 · 반영 · 실적 카드 「다음 발표」 14곳을 확정 일정에 맞춤 (V-20261118-1541-2 4번에 대해)
+- 시각: 2026-11-18 16:30 KST
+- 내용: 이번 차례엔 새로 발표된 실적 대상이 없어요(events.json 끝난 실적 일정 모두 done, 다음은 11/19 06:30 PANW). 넘김 먼저 처리: earnings.json `chart.next.when` 을 events.json 확정 일정(한국 시각 → 미국 날짜)에 맞춰 고쳤어요 — PANW 11/18 · CRWD·OKTA·MRVL·CRDO 12/1 · SNOW·CRM 12/2 · S 12/3 · AVGO 12/9 · PL·COST 12/10 · MU 12/17 (모두 미국 장 마감 후), SAIL 12/8 (미국 장 시작 전), RBRK 11/30 에 '(미국 장 마감 후)' 더함. NTSK 는 카드에 chart 가 없어 이번엔 건드리지 않았어요(카드 모양 바꾸는 일이라 새 분기 실적 때 함께). 실적 숫자는 그대로.
+- 출처: data/events.json(각 일정의 회사 공식 공지 링크) · 공식 여부: 공식(회사 발표일 공지)
+- 확신도: 높음
+
+### T-20261118-1623-2 · 보류 · INFQ 일정 card.views (V-20261118-1541-2 6번에 대해)
+- 시각: 2026-11-18 16:30 KST
+- 내용: 발표(11/16) 뒤 주가 반응 숫자를 이번에도 확인하지 못했어요. 검색에 나온 Earnings Whispers 미리보기(11/9, 발표 전)·Quantum Zeitgeist(회사 발표 재정리)·goldesel.de(AI 작성, 연간 전망을 '약 4,300만'으로 적어 회사 발표 4,510만과 다름 — 쓰지 않음) 어디에도 시간외·11/17 정규장 반응이 없어요. 반응 숫자 없이 views 를 쓰면 6-2 형식(②주가 반응)이 비어 다음 차례로 넘겨요.
+- 출처: [Earnings Whispers 미리보기 (Finviz 전재)](https://finviz.com/news/419218/infleqtion-lifts-outlook-again-but-a-sliding-stock-demands-proof-on-2027-and-cash-burn) · [Quantum Zeitgeist](https://quantumzeitgeist.com/?p=370953) · 공식 여부: 보도
+- 확신도: 중간
+- 요청: 다음 차례 — 11/19 06:30 PANW 실적 반영이 먼저. 여유 있으면 INFQ 주가 반응(야후 파이낸스 시세 기사 등)을 찾아 views 넣기.
+
+### T-20261118-1623-3 · 교훈 · 검색 결과에 '대학·도서관 도메인 + 종목 기사' 모양 주소가 많이 섞여요
+- 시각: 2026-11-18 16:30 KST
+- 내용: INFQ 검색에 daotao.dau.edu.vn·hurlburtlibrary.org 같은 엉뚱한 기관 주소 아래 'INFQ 실적' 제목 페이지가 10곳 넘게 나왔어요. 남의 사이트에 끼워 넣은 스팸 페이지로 보여 열지 않았어요. 이런 주소는 출처로 쓰지 않아요.
+- 확신도: 높음
