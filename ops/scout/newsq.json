@@ -1,18 +1,88 @@
 {
-"updated_kst": "2026-11-18 09:27",
-"rot": 31,
+"updated_kst": "2026-11-18 09:44",
+"rot": 91,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "28건",
+"Reuters": "26건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "2fe1921ce729",
+"t": "NVDA",
+"title": "U.S. stock futures jump as Nvidia earnings revive AI optimism",
+"url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-jump-nvidia-003224965.html?.tsrc=rss",
+"pub": "2026-11-18T00:32:24+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
+},
+{
+"id": "217cadebad6b",
+"t": "NVDA",
+"title": "Chevron Says AI Has Already Captured Over $100 Million in Value. Here's Where It Might Find an Even Bigger Payoff.",
+"url": "https://www.fool.com/investing/2026/11/17/chevron-says-ai-has-already-captured-over-usd100-million-in-value-here-s-where-it-might-find-an-even-bigger-payoff/?.tsrc=rss",
+"pub": "2026-11-18T00:25:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
+},
+{
+"id": "e9c535ee194a",
+"t": "HD",
+"title": "Home Depot (HD) Q3 Results Meet Growth But Margins Constrain Upside",
+"url": "https://finance.yahoo.com/markets/stocks/articles/home-depot-hd-q3-results-001937621.html?.tsrc=rss",
+"pub": "2026-11-18T00:19:37+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
+},
+{
+"id": "8541bcec3764",
+"t": "NVDA",
+"title": "Amazon.com (AMZN) Set For White House AI National Champion Status",
+"url": "https://finance.yahoo.com/technology/ai/articles/amazon-com-amzn-set-white-001935047.html?.tsrc=rss",
+"pub": "2026-11-18T00:19:35+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
+},
+{
+"id": "5ca1545be39d",
+"t": "MU",
+"title": "Micron Technology (MU) Keeps DRAM Price Fixing Lawsuit Alive After Judge Rejection",
+"url": "https://finance.yahoo.com/markets/stocks/articles/micron-technology-mu-keeps-dram-001843894.html?.tsrc=rss",
+"pub": "2026-11-18T00:18:43+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
+},
+{
+"id": "63f26a198177",
+"t": "NVDA",
+"title": "Nvidia promises that revenue will keep soaring — for now",
+"url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-promises-revenue-keep-soaring-001650903.html?.tsrc=rss",
+"pub": "2026-11-18T00:16:50+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
+},
+{
+"id": "171bbb4ad0fa",
+"t": "CVX",
+"title": "Chevron (CVX) Nears $5 Billion Gulf Deal And Iraq Oilfield Takeover",
+"url": "https://finance.yahoo.com/energy/articles/chevron-cvx-nears-5-billion-001620087.html?.tsrc=rss",
+"pub": "2026-11-18T00:16:20+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
+},
 {
 "id": "32ed7a463a95",
 "t": "SPCX",
@@ -204,6 +274,16 @@
 "seen": "2026-11-17T23:44:11+00:00"
 },
 {
+"id": "61e0b4ba3b86",
+"t": "KO",
+"title": "Coca-Cola (KO) Named a 2027 Best Idea by TD Cowen",
+"url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-ko-named-2027-232431419.html?.tsrc=rss",
+"pub": "2026-11-17T23:24:31+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
+},
+{
 "id": "495012c0f97a",
 "t": "TSLA",
 "title": "3 Founder Led Stocks With Revenue Growth Up To 20%",
@@ -232,6 +312,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T00:14:24+00:00"
+},
+{
+"id": "1308975c075e",
+"t": "UNH",
+"title": "UnitedHealth (UNH) vs. Humana (HUM): Buy the Dip?",
+"url": "https://finance.yahoo.com/healthcare/articles/unitedhealth-unh-vs-humana-hum-232100909.html?.tsrc=rss",
+"pub": "2026-11-17T23:21:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
 "id": "d43d8365fb71",
@@ -7924,94 +8014,94 @@
 "seen": "2026-11-17T15:16:54+00:00"
 },
 {
-"id": "5f1af4f7d3d8",
-"t": "FCX",
-"title": "What Explains Freeport-McMoRan Stock's Nearly 7% Drop?",
-"url": "https://www.trefis.com/stock/fcx/articles/625809/why-did-freeport-mcmoran-stock-fall-nearly-7/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "121a3e190870",
+"t": "",
+"title": "Anthropic backers Sequoia Capital, Iconiq and others plan to acquire billions in shares in anthropic's IPO",
+"url": "https://www.financialjuice.com/News/9856775/Anthropic-backers-Sequoia-Capital-Iconiq-and-others-plan-to-acquire-billions-in-shares-in-anthropics-IPO.aspx?xy=rss",
+"pub": "2026-11-18T00:39:19+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
-"id": "5d19b40e9991",
-"t": "CIEN",
-"title": "Why Did Arista Networks Stock Lose 5%?",
-"url": "https://www.trefis.com/stock/anet/articles/625838/why-did-arista-networks-stock-fall-5/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "94952faec68f",
+"t": "",
+"title": "Former Nvidia CEO Jensen Huang agrees to testify before Senate banking panel - Politico",
+"url": "https://www.financialjuice.com/News/9856774/Former-Nvidia-CEO-Jensen-Huang-agrees-to-testify-before-Senate-banking-panel---Politico.aspx?xy=rss",
+"pub": "2026-11-18T00:39:19+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
-"id": "6ead3c6bb893",
-"t": "AMZN",
-"title": "Why Did Take-Two Stock Fall 6% Before GTA VI?",
-"url": "https://www.trefis.com/stock/ttwo/articles/625817/why-did-take-two-stock-fall-6-before-gta-vi/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "156202907837",
+"t": "",
+"title": "Nikkei Rises 1.0%, Led by Chip, AI Stocks",
+"url": "https://www.wsj.com/finance/stocks/nikkei-rises-1-0-led-by-chip-ai-stocks-b486ab61?mod=rss_markets_main",
+"pub": "2026-11-18T00:34:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
-"id": "3780f66818e0",
-"t": "CME",
-"title": "What Sent Coinbase Stock Down 6%?",
-"url": "https://www.trefis.com/stock/coin/articles/625810/why-did-coinbase-stock-fall-6-on-monday/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "a8f807b24d7e",
+"t": "",
+"title": "Australia Q3 wage price index rises 3.5% y/y, seasonally adjusted (Poll 3.3%)",
+"url": "https://www.financialjuice.com/News/9856758/Australia-Q3-wage-price-index-rises-35-yy-seasonally-adjusted-Poll-33.aspx?xy=rss",
+"pub": "2026-11-18T00:30:04+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
-"id": "219cfdafc0d0",
-"t": "CAT",
-"title": "CAT Standardizes Construction Equipment Safety: Will It Set It Apart?",
-"url": "https://finance.yahoo.com/technology/articles/cat-standardizes-construction-equipment-safety-144000969.html?.tsrc=rss",
-"pub": "2026-11-17T14:40:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "44671ae588e0",
+"t": "",
+"title": "Australia Q3 wage price index rises 1.1% quarter on quarter, seasonally adjusted (Poll: 0.9%)",
+"url": "https://www.financialjuice.com/News/9856757/Australia-Q3-wage-price-index-rises-11-quarter-on-quarter-seasonally-adjusted-Poll-09.aspx?xy=rss",
+"pub": "2026-11-18T00:30:04+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
-"id": "823ffb175d3a",
-"t": "NVDA",
-"title": "Widespread outages hit consumers, Nvidia fallout continues, Pattinson named new James Bond",
-"url": "https://finance.yahoo.com/video/widespread-outages-hit-consumers-nvidia-fallout-continues-pattinson-named-new-james-bond-143945867.html?.tsrc=rss",
-"pub": "2026-11-17T14:39:45+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
+"id": "61beeb4d99be",
+"t": "",
+"title": "Australian Wage Price Index YoY  Actual 3.5% (Forecast 3.4%, Previous 3.2%)",
+"url": "https://www.financialjuice.com/News/9856756/Australian-Wage-Price-Index-YoY%09-Actual-35-Forecast-34-Previous-32.aspx?xy=rss",
+"pub": "2026-11-18T00:30:01+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
-"id": "285262d66c64",
-"t": "MSFT",
-"title": "The Stock Market Reaches the Lull in the Horror Film",
-"url": "https://finance.yahoo.com/m/624943c2-a9b5-3834-8bb4-529e9f16a786/the-stock-market-reaches-the.html?.tsrc=rss",
-"pub": "2026-11-17T14:39:17+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "950fb78d0c70",
+"t": "",
+"title": "Australian Wage Price Index QoQ Actual 1.1% (Forecast 1%, Previous 0.8%)",
+"url": "https://www.financialjuice.com/News/9856755/Australian-Wage-Price-Index-QoQ-Actual-11-Forecast-1-Previous-08.aspx?xy=rss",
+"pub": "2026-11-18T00:30:01+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
-"id": "5f9f5066250d",
-"t": "VRT",
-"title": "Data Centre HVAC Markets and Competition Analysis Report 2026-2030 | Capitalize on 9.2% CAGR and $6 Billion in Revenue Growth with Schneider Electric, Daikin, Vertiv and LG",
-"url": "https://finance.yahoo.com/technology/articles/data-centre-hvac-markets-competition-143900849.html?.tsrc=rss",
-"pub": "2026-11-17T14:39:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T14:44:17+00:00"
+"id": "a295f9dfb722",
+"t": "",
+"title": "China PBOC likely to fix yuan midpoint at 6.6654 per dollar: Estimate",
+"url": "https://www.financialjuice.com/News/9856754/China-PBOC-likely-to-fix-yuan-midpoint-at-66654-per-dollar-Estimate.aspx?xy=rss",
+"pub": "2026-11-18T00:28:47+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
-"id": "76a11d81036b",
-"t": "AAPL",
-"title": "Nvidia’s Board Reportedly Isn’t Considering Bringing Jensen Huang Back",
-"url": "https://247wallst.com/investing/2026/11/17/nvidias-board-reportedly-isnt-considering-bringing-jensen-huang-back/?.tsrc=rss",
-"pub": "2026-11-17T14:38:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "b80e70fd210f",
+"t": "",
+"title": "Japan exports set record in October on strong chip-related demand - Reuters",
+"url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZlhvQnNySnJ2WXBNLXQxVHlpN181RVZpRk1JamR3N2pCNmpoRDBTeTFHUjlvSjhVV05WMm1KMVk4c3B0LUxhUkdKeE9tczI3dzF6QmtGNmtXTGhYNVktZjh2cEtQb09uR1VQdzktMXlkanNtTVFRdGd5MzFBdVNzR3FaVUsxbTI3UVpRemFPd2VDdFZsNl96Z1p4Ym5mUHl1RHhNUFJ3Mlh2STFs?oc=5",
+"pub": "2026-11-18T00:28:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
 },
 {
 "id": "3bd8766decbd",
@@ -10624,6 +10714,16 @@
 "seen": "2026-11-17T19:44:54+00:00"
 },
 {
+"id": "3aeadc5b30cd",
+"t": "",
+"title": "Eduformaction SA (ALEFA.PA) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPYUZhRWpQYnc0VThWeURqOFpLbDB6QUVXNXkzZ0JKREdXYkFNdTJkTnhKZkw0T0NJMnY2RElNT2hVdHlnMmJyVnV3RVdzRnlxUmhMU0FIRkl6WFVRdTVQZmt5a21JY2xEN3Y2ZzlDb2ptenNmRzFJbXFNbEZKNTNFdjBn?oc=5",
+"pub": "2026-11-17T18:20:31+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T00:44:16+00:00"
+},
+{
 "id": "6ea2989d25f8",
 "t": "",
 "title": "Microsoft aims for cheaper, specialized AI models - Axios. $MSFT",
@@ -10909,106 +11009,6 @@
 "title": "NVIDIA hires Heidrick & Struggles in their hunt for a new CEO - WSJ. $NVDA",
 "url": "https://www.financialjuice.com/News/9856205/NVIDIA-hires-Heidrick--Struggles-in-their-hunt-for-a-new-CEO---WSJ-NVDA.aspx",
 "pub": "2026-11-17T17:20:37+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "2e88d9d1f61d",
-"t": "",
-"title": "Amazon CEO Jassy on NVIDIA fallout: I don’t think it has an impact on Amazon - Semafor Event. $AMZN $NVDA",
-"url": "https://www.financialjuice.com/News/9856202/Amazon-CEO-Jassy-on-NVIDIA-fallout-I-dont-think-it-has-an-impact-on-Amazon---Semafor-Event-AMZN-NVDA.aspx?xy=rss",
-"pub": "2026-11-17T17:17:12+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T17:43:18+00:00"
-},
-{
-"id": "e50bdbbf1135",
-"t": "",
-"title": "Amazon CEO Jassy on NVIDIA fallout: I don’t think it has an impact on Amazon - Semafor Event. $AMZN $NVDA",
-"url": "https://www.financialjuice.com/News/9856202/Amazon-CEO-Jassy-on-NVIDIA-fallout-I-dont-think-it-has-an-impact-on-Amazon---Semafor-Event-AMZN-NVDA.aspx",
-"pub": "2026-11-17T17:17:12+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "35fb66719b61",
-"t": "",
-"title": "Kalshi to Halt Bets That Are Based on Trump’s Remarks",
-"url": "https://www.wsj.com/politics/policy/kalshi-to-halt-bets-that-are-based-on-trumps-remarks-71bbc94b?mod=rss_markets_main",
-"pub": "2026-11-17T17:13:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-17T17:43:18+00:00"
-},
-{
-"id": "a674e5f0e5cc",
-"t": "",
-"title": "Stan Druckenmiller Says He’s Short Copper, Neutral on Stocks",
-"url": "https://www.bloomberg.com/news/articles/2026-11-17/stan-druckenmiller-says-he-s-short-copper-neutral-on-equities",
-"pub": "2026-11-17T17:12:42+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-17T21:14:31+00:00"
-},
-{
-"id": "230244e9e683",
-"t": "",
-"title": "Mark Walter’s Largest Insurer Reports Sales Plunge Amid US Probe",
-"url": "https://www.bloomberg.com/news/articles/2026-11-17/mark-walter-s-largest-insurer-reports-sales-plunge-amid-us-probe",
-"pub": "2026-11-17T17:11:07+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-17T17:43:18+00:00"
-},
-{
-"id": "7f1923d978e0",
-"t": "",
-"title": "NVIDIA stopped disclosing Singapore sales last year - FT. $NVDA",
-"url": "https://www.financialjuice.com/News/9856184/NVIDIA-stopped-disclosing-Singapore-sales-last-year---FT-NVDA.aspx?xy=rss",
-"pub": "2026-11-17T17:08:09+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T17:14:01+00:00"
-},
-{
-"id": "a0b2bc2aa51f",
-"t": "",
-"title": "NVIDIA stopped disclosing Singapore sales last year - FT. $NVDA",
-"url": "https://www.financialjuice.com/News/9856184/NVIDIA-stopped-disclosing-Singapore-sales-last-year---FT-NVDA.aspx",
-"pub": "2026-11-17T17:08:09+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "aa38bba20179",
-"t": "",
-"title": "Bank of America Says US Rates Will Rise ‘Until Activity Cools’",
-"url": "https://www.bloomberg.com/news/articles/2026-11-17/bank-of-america-says-us-rates-will-rise-until-activity-cools",
-"pub": "2026-11-17T17:05:38+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-17T17:43:18+00:00"
-},
-{
-"id": "685d9dd08111",
-"t": "",
-"title": "Google is rolling out a set of advanced features, starting in the US. $GOOGL",
-"url": "https://www.financialjuice.com/News/9856182/Google-is-rolling-out-a-set-of-advanced-features-starting-in-the-US-GOOGL.aspx?xy=rss",
-"pub": "2026-11-17T17:05:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T17:14:01+00:00"
-},
-{
-"id": "fc9e4303faa5",
-"t": "",
-"title": "Google is rolling out a set of advanced features, starting in the US. $GOOGL",
-"url": "https://www.financialjuice.com/News/9856182/Google-is-rolling-out-a-set-of-advanced-features-starting-in-the-US-GOOGL.aspx",
-"pub": "2026-11-17T17:05:04+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T19:44:54+00:00"
