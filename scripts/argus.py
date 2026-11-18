@@ -111,7 +111,14 @@ def probe(path, method="GET"):
 
 
 sec = []
-try:
+
+
+def _is_timeout(e):
+    import socket  # noqa: PLC0415
+    return isinstance(e, (TimeoutError, socket.timeout)) or (isinstance(e, urllib.error.URLError) and isinstance(getattr(e, "reason", None), (TimeoutError, socket.timeout))) or "timed out" in str(e)
+
+
+def security_probes():
     st, hd, body, sec_t = probe("/health")
     hl = {k.lower(): v for k, v in hd.items()}
     if '"lockdown":true' in body.replace(" ", ""):
@@ -131,8 +138,26 @@ try:
     # 값이 붙은 모양("nav": 123)만 경보. 칸 이름 목록(["nav", "last", ...])은 정상 응답이라 경보하지 않아요 (승인 12번)
     if re.search(r'"(last|stck_prpr|nav|base)"\s*:', body) or "access_token" in body:
         sec.append("/kis-check가 값이나 토큰을 보여줘요")
-except Exception as e:  # noqa: BLE001
-    sec.append(f"보안 점검 요청 실패: {type(e).__name__}")
+
+
+# 서버가 한 번 늦게 답한 것(시간 초과)은 보안 경보와 나눠요 (2026-11-18 승인 19번): 30초 뒤 한 번 더, 두 번 연속이면 긴급
+for attempt in (1, 2):
+    sec_try = len(sec)
+    try:
+        security_probes()
+        break
+    except Exception as e:  # noqa: BLE001
+        del sec[sec_try:]
+        if _is_timeout(e):
+            if attempt == 1:
+                _t.sleep(30)
+                continue
+            alerts.append(("slow:timeout2", True, "실시간 서버가 응답하지 않아요", "보안 점검 요청이 두 번 연속 시간 초과(20초)예요. Cloudflare 장애나 공격일 수 있어요 — 앱 숫자가 멈췄는지 확인해요"))
+        else:
+            sec.append(f"보안 점검 요청 실패: {type(e).__name__}")
+        break
+if attempt == 2 and not any(a[0] == "slow:timeout2" for a in alerts):
+    alerts.append(("slow:timeout1", False, "실시간 서버가 느려요", "보안 점검 요청이 한 번 시간 초과됐다가 30초 뒤엔 정상이었어요(긴급 아님)"))
 # 저장소에 키·개인정보
 r = subprocess.run([sys.executable, str(ROOT / "scripts/secret_scan.py")], capture_output=True, text=True)
 if r.returncode != 0:

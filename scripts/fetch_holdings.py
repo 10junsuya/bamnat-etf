@@ -71,8 +71,15 @@ def funetf(code):
             if w is not None and len(other) < 25:
                 other.append(cells[:4])  # 종목코드가 없는 줄(옵션·채권·해외 주식 등) — 확인용으로 남겨요
             continue
-        nm = m.group(1).split("/")[-1].strip()
-        ko = m.group(1).split("/")[0].strip() if "/" in m.group(1) else ""
+        # 이름 칸: "한글/영어", "영어/한글", "COCA-COLA CO/THE" 처럼 순서·모양이 섞여 와요 (2026-11-18 승인 18번)
+        parts = [p.strip() for p in m.group(1).split("/") if p.strip()]
+        ko = next((p for p in parts if re.search(r"[가-힣]", p)), "")
+        en = [p for p in parts if not re.search(r"[가-힣]", p)]
+        if len(en) > 1 and en[-1].upper() == "THE":
+            en = [en[-1] + " " + en[0]] + en[1:-1]
+        if len(en) > 1 and (re.fullmatch(r"[A-Z]{2}", en[-1]) or en[-1].upper() in ("CANADA", "BERMUDA", "NETHERLANDS", "IRELAND", "JERSEY", "LUXEMBOURG", "SWITZERLAND", "UK", "CAYMAN ISLANDS")):
+            en = en[:-1]  # "Sandisk Corp/DE", "Energy Fuels Inc/Canada" — 뒤에 붙은 설립지 표기는 빼요
+        nm = " / ".join(en).replace("_", " ") if en else (ko or m.group(1).strip())
         tk = next((t for k, t in NAME_FIX.items() if k in nm.upper()), m.group(2).replace(".", "-").replace("/", "-"))
         items.append({"ticker": tk, "name": nm, "ko": ko, "weight": w})
     d = re.search(r"구성종목[^<]{0,40}?(20\d{2}[.\-/]\d{1,2}[.\-/]\d{1,2})", page)

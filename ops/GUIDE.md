@@ -269,6 +269,13 @@ AI는 실행이 끝나면 기억이 사라져요. 그래서 공부와 경험을 
 | 이용 허락 | 거래소 정보이용계약 (유료) | 확인 중 |
 | 실시간 범위 | 화면에 보이는 종목·관심종목만 | — |
 
+### 10-11. 새 ETF 넣는 순서 (2026-11-18 정리, 승인 14번)
+1. `data/etfs.json` 에 그룹(groups)과 ETF([코드, 이름, 그룹])를 넣어요. 커버드콜이면 `cc`(참여율과 설명), 환헤지면 `hedge: true`.
+2. `python3 scripts/check_data.py --embed` → 구성종목 수집(`gh workflow run holdings.yml`).
+3. **새로 들어온 구성종목을 `index.html` 의 STOCKS 에 한글 이름으로 추가**해요(빠지면 회사 카드를 못 채우고 Argus 가 계속 알려요). ETF 를 담는 경우(QQQM 등)는 회사 카드 분야를 '다른 ETF'로.
+4. `python3 scripts/gen_allow.py` 로 실시간 서버 허용 목록을 다시 만들고 push(서버 자동 배포).
+5. 시세 수집(`gh workflow run live.yml`) 뒤 앱 점검 오류 0 확인 → Quill 에게 새 회사 카드 요청.
+
 ### 10-10. 용어 사전
 
 | 용어 | 뜻 |
