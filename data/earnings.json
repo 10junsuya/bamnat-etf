@@ -586,58 +586,61 @@
   }
  },
  "PANW": {
-  "p": "4분기 · 2026년 5~7월",
-  "tag": "RPO 212억 달러",
+  "p": "1분기 · 2026년 8~10월",
+  "tag": "+39%",
   "rows": [
    [
+    "매출",
+    "34.5억 달러 (+39%)"
+   ],
+   [
+    "차세대 보안 ARR",
+    "97.3억 달러 (+66%)"
+   ],
+   [
     "남은 계약(RPO)",
-    "212억 달러 (+34%)"
+    "210억 달러 (+35%)"
    ],
    [
-    "내년 목표",
-    "매출 141억~142억 · NGS ARR 110.75억~111.75억 달러"
-   ],
-   [
-    "장기 목표",
-    "2030 회계연도 NGS ARR 200억 달러"
+    "이익",
+    "조정 주당 1.05달러 (1년 전 0.93) · 회계 기준 0.57달러"
    ]
   ],
-  "note": "",
+  "note": "구독형 보안 매출이 크게 늘며 성장을 이끌었고, 회사는 올해 매출 전망을 145.2억~145.7억 달러로 올렸어요(석 달 전 141억~142억). 발표 전 예상은 매출 33.1억·조정 주당 0.97달러(야후 파이낸스 집계, TheStreet·TipRanks 보도)였고, 회계 기준 영업이익은 9,600만 달러로 1년 전(3.09억)보다 줄었어요(순이익은 일회성 세금 효과로 늘었어요).",
   "src": [
    [
-    "팔로알토 네트웍스 IR",
-    "https://investors.paloaltonetworks.com"
+    "팔로알토 네트웍스 1분기 실적 발표 (PR Newswire)",
+    "https://www.prnewswire.com/news-releases/palo-alto-networks-reports-fiscal-first-quarter-2027-financial-results-302944393.html"
    ],
    [
-    "팔로알토 4분기(Earnings Whispers)",
-    "https://www.earningswhispers.com/d/PANW"
+    "발표 전 예상 (TheStreet)",
+    "https://www.thestreet.com/latest-news/palo-alto-networks-panw-q1-2027-earnings-call-stock-updates"
    ],
    [
-    "전망 대 예상(Stocktwits)",
-    "https://stocktwits.com/news-articles/markets/equity/panw-stock-in-focus-palo-alto-networks-tops-q4-estimates-issues-upbeat-fy27-guidance/cZsoxeoRJMM"
+    "예상 비교 (TipRanks)",
+    "https://www.tipranks.com/news/palo-alto-networks-stock-panw-jumps-7-as-financial-results-top-estimates"
    ]
   ],
   "chart": {
    "cur": "usd",
+   "now": [
+    "8~10월",
+    3445
+   ],
+   "est": 3310,
+   "next": {
+    "label": "11~1월",
+    "guide": [
+     3530,
+     3550
+    ],
+    "cons": null,
+    "when": "2027년 2월 중순 (예상)"
+   },
    "prev": [
     "1년 전",
-    2536
-   ],
-   "now": [
-    "5~7월",
-    3410
-   ],
-   "est": 3350,
-   "next": {
-    "label": "8~10월",
-    "guide": [
-     3300,
-     3310
-    ],
-    "cons": 3220,
-    "asof": "9/1",
-    "when": "2026년 11월 18일 (미국 장 마감 후)"
-   }
+    2474
+   ]
   }
  },
  "CRWD": {

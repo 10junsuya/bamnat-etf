@@ -129,3 +129,10 @@
 - 시각: 2026-11-18 16:30 KST
 - 내용: INFQ 검색에 daotao.dau.edu.vn·hurlburtlibrary.org 같은 엉뚱한 기관 주소 아래 'INFQ 실적' 제목 페이지가 10곳 넘게 나왔어요. 남의 사이트에 끼워 넣은 스팸 페이지로 보여 열지 않았어요. 이런 주소는 출처로 쓰지 않아요.
 - 확신도: 높음
+
+### T-20261119-0623-1 · 반영 · PANW FY27 1분기(8~10월) 실적 카드·일정 분석
+- 시각: 2026-11-19 06:27 KST
+- 내용: 카드 기간 4분기(5~7월) → 1분기(8~10월, 10/31 마감). 회사 보도자료로 확인: 매출 34.4억 달러(+39%, 표 기준 34.45억 · 1년 전 24.74억), 차세대 보안 ARR 97.3억(+66%), RPO 210억(+35%), 조정 주당순이익 1.05달러(1년 전 0.93), 회계 기준 0.57달러(순이익 4.82억 — 일회성 세금 효과), 회계 기준 영업이익 9,600만(1년 전 3.09억). 다음 분기 매출 전망 35.30억~35.50억, 올해 전망 145.2억~145.7억으로 올림(석 달 전 141억~142억). 어플라이드 컴퓨트 인수 계획 발표(조건은 카드에 안 넣음 — 제목 보도만 봄). 발표 전 예상 est 33.1억·조정 EPS 0.97달러(야후 파이낸스 집계, TheStreet 미리보기 · TipRanks 같은 숫자 — 회사 전망 상단 33.1억과도 같음). 다음 분기 예상 cons 는 찾지 못해 null. 11/19 PANW 일정에 done·card 넣고 when 을 "06:05 실적 발표 · 06:30 웹캐스트"로 고침. 다음 발표일 공식 공지 없음 → 새 일정 안 넣음, next.when "2027년 2월 중순 (예상)". views 는 다음 차례로(TipRanks '발표 뒤 7% 상승' 한 건뿐 — 시간외인지 본문에 명시 없음). 발표 2026-11-18 16:05 ET(한국 11/19 06:05), 반영 2026-11-19 06:27 KST.
+- 출처: [팔로알토 네트웍스 1분기 실적 발표 (PR Newswire)](https://www.prnewswire.com/news-releases/palo-alto-networks-reports-fiscal-first-quarter-2027-financial-results-302944393.html) · [TheStreet 미리보기](https://www.thestreet.com/latest-news/palo-alto-networks-panw-q1-2027-earnings-call-stock-updates) · [TipRanks](https://www.tipranks.com/news/palo-alto-networks-stock-panw-jumps-7-as-financial-results-top-estimates) · 공식 여부: 공식(실적) / 보도(예상치)
+- 확신도: 높음 (실적 숫자) / 중간 (예상치는 공식 아님 · 매출 34.45억·1년 전 24.74억은 표에서 읽은 값, 본문 34.4억·+39% 와 맞음)
+- 요청: Tally B — PANW 일정 card.views(시간외·11/19 정규장 반응, 사이버 보안 업종·ETF 해석) 추가 바람. 이번 시간대엔 다른 대상 없음(WMT·BABA 는 한국 21:00).
