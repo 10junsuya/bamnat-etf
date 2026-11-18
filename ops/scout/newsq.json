@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-18 11:15",
-"rot": 152,
+"updated_kst": "2026-11-18 11:44",
+"rot": 33,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "33건",
+"Reuters": "36건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "f24924b1f83a",
+"t": "AVGO",
+"title": "Dow Jones Futures Rise After Nvidia Beats, Says This On Jensen Huang; Target, Anthropic IPO Ahead",
+"url": "https://finance.yahoo.com/m/3b22ed8c-00c3-32f8-89f5-91bc21ccb366/dow-jones-futures-rise-after.html?.tsrc=rss",
+"pub": "2026-11-18T02:36:35+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T02:44:16+00:00"
+},
+{
+"id": "a3ac5bcbc210",
+"t": "TSLA",
+"title": "Coinbase Exec Says AI IPOs Pulling Money From Bitcoin Is ‘A Reasonable Argument’ As Anthropic Debut Nears",
+"url": "https://stocktwits.com/news-articles/markets/cryptocurrency/coinbase-exec-says-ai-ip-os-pulling-money-from-bitcoin-is-a-reasonable-argument-as-anthropic-debut-nears/cNbXV7cR9hl?.tsrc=rss",
+"pub": "2026-11-18T02:36:16+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T02:44:16+00:00"
+},
+{
+"id": "1063113db506",
+"t": "NVDA",
+"title": "3 U.S. AI Chip Stocks Facing Export Rules Investors Should Watch",
+"url": "https://finance.yahoo.com/technology/ai/articles/3-u-ai-chip-stocks-021457283.html?.tsrc=rss",
+"pub": "2026-11-18T02:14:57+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T02:44:16+00:00"
+},
+{
+"id": "e0af142557e9",
+"t": "NVDA",
+"title": "Will GPU Edge Launch Change Rockwell Automation's (ROK) Narrative",
+"url": "https://finance.yahoo.com/technology/ai/articles/gpu-edge-launch-change-rockwell-021124213.html?.tsrc=rss",
+"pub": "2026-11-18T02:11:24+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T02:44:16+00:00"
+},
 {
 "id": "3159f7a31216",
 "t": "NVDA",
@@ -42,6 +82,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T02:15:10+00:00"
+},
+{
+"id": "f37b403c50b8",
+"t": "NVDA",
+"title": "Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future  deals in doubt",
+"url": "https://finance.yahoo.com/technology/ai/articles/nvidia-startup-stakes-ballooned-65b-014421727.html?.tsrc=rss",
+"pub": "2026-11-18T01:44:21+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
 "id": "9f1ef8c0a86c",
@@ -2524,6 +2574,16 @@
 "seen": "2026-11-17T20:38:30+00:00"
 },
 {
+"id": "2ed0670ac0de",
+"t": "GOOGL",
+"title": "Dear Apple Stock Fans, Mark Your Calendars for June 2027",
+"url": "https://www.barchart.com/story/news/8883195/dear-apple-stock-fans-mark-your-calendars-for-june-2027?.tsrc=rss",
+"pub": "2026-11-17T20:17:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T02:44:16+00:00"
+},
+{
 "id": "b55e2b17a615",
 "t": "ZS",
 "title": "Can Zscaler’s Margins Offset Slower Revenue Growth?",
@@ -2712,6 +2772,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T20:38:30+00:00"
+},
+{
+"id": "89a5476b369e",
+"t": "PANW",
+"title": "Ahead of Palo Alto Networks Earnings, Here's What Barchart Data Says Comes Next for PANW Stock",
+"url": "https://www.barchart.com/story/news/8882982/ahead-of-palo-alto-networks-earnings-here-s-what-barchart-data-says-comes-next-for-panw-stock?.tsrc=rss",
+"pub": "2026-11-17T20:00:29+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
 "id": "3853b295697d",
@@ -7944,74 +8014,84 @@
 "seen": "2026-11-17T15:16:54+00:00"
 },
 {
-"id": "a90f067e5ba1",
-"t": "MU",
-"title": "5 Best Blue Chip Stocks to Buy and Hold for 3 Years",
-"url": "https://finance.yahoo.com/markets/stocks/articles/5-best-blue-chip-stocks-144831704.html?.tsrc=rss",
-"pub": "2026-11-17T14:48:31+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "e34a82663440",
+"t": "",
+"title": "Rupee Forwards Turn More Bullish Than Currency Forecasters",
+"url": "https://www.bloomberg.com/news/newsletters/2026-11-18/rupee-forwards-turn-more-bullish-than-currency-forecasters",
+"pub": "2026-11-18T02:30:55+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
-"id": "ec6238d99d5b",
-"t": "ORCL",
-"title": "David Tepper and 33 Other Funds Bought Software Stocks. CoreWeave Is Down 43% Since. Time to Buy?",
-"url": "https://www.tikr.com/blog/david-tepper-and-33-other-funds-bought-software-stocks-coreweave-is-down-43-since-time-to-buy?ref=yahoofinance&tlnk=yf-261117-r3fmq2wq&.tsrc=rss",
-"pub": "2026-11-17T14:48:19+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "3c44031a77df",
+"t": "",
+"title": "Iron Ore Likely to Find a Floor Near $80, Chinese Analysts Say",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/iron-ore-likely-to-find-a-floor-near-80-chinese-analysts-say",
+"pub": "2026-11-18T02:30:04+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
-"id": "db0e6f55b6e4",
-"t": "PG",
-"title": "Charlie Bilello Calls Leveraged Single-Stock ETFs ‘One of the Worst Financial Innovations’",
-"url": "https://247wallst.com/investing/2026/11/17/charlie-bilello-calls-leveraged-single-stock-etfs-one-of-the-worst-financial-innovations/?.tsrc=rss",
-"pub": "2026-11-17T14:47:57+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:43:48+00:00"
+"id": "58965b4bbbda",
+"t": "",
+"title": "BOJ’s Ueda Says Food Sales Tax Cut Likely to Help Spur Growth",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/boj-s-ueda-says-food-sales-tax-cut-likely-to-help-spur-growth",
+"pub": "2026-11-18T02:26:44+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
-"id": "0855a5523eb0",
-"t": "META",
-"title": "George Soros, Cathie Wood and 18 Other Big Funds Sold Snowflake, While 23 Bought. Who’s Right?",
-"url": "https://www.tikr.com/blog/george-soros-cathie-wood-and-18-other-big-funds-sold-snowflake-while-23-bought-whos-right?ref=yahoofinance&tlnk=yf-261117-w3cm883x&.tsrc=rss",
-"pub": "2026-11-17T14:47:47+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "fbd8c646b257",
+"t": "",
+"title": "Xi Warns Against ‘Rampant’ Protectionism Ahead of Trump Talks",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/xi-warns-against-rampant-protectionism-ahead-of-trump-talks",
+"pub": "2026-11-18T02:25:09+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
-"id": "2d7a5fff0981",
-"t": "AMZN",
-"title": "Robert Pattinson is the next James Bond: A closer look at Amazon MGM's decision",
-"url": "https://finance.yahoo.com/video/robert-pattinson-is-the-next-james-bond-a-closer-look-at-amazon-mgms-decision-144718415.html?.tsrc=rss",
-"pub": "2026-11-17T14:47:18+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "74135b63251c",
+"t": "",
+"title": "Stats NZ Corrects Producer Price Data Back to March 2021",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/stats-nz-corrects-producer-price-data-back-to-march-2021",
+"pub": "2026-11-18T02:20:14+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
-"id": "b1a2f4c95c4c",
-"t": "NVDA",
-"title": "Disney Beats, Hikes Its Dividend, Snaps Its Streaming Profit Out Of Existence",
-"url": "https://app.moby.co/home/news/news-disney-beats-hikes-its-dividend-snaps-its-streaming-profit-out-of-existence?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
-"pub": "2026-11-17T14:47:11+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "eaa452604649",
+"t": "",
+"title": "China's President Xi: country increases import of quality goods, services",
+"url": "https://www.financialjuice.com/News/9856962/Chinas-President-Xi-country-increases-import-of-quality-goods-services.aspx?xy=rss",
+"pub": "2026-11-18T02:17:16+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
-"id": "c7869bc76b67",
-"t": "NVDA",
-"title": "Prediction: Dec. 9 Will Mark a Turning Point for the S&P 500",
-"url": "https://www.fool.com/investing/2026/11/17/prediction-dec-9-will-mark-a-turning-point-for-the-s-and-p-500/?.tsrc=rss",
-"pub": "2026-11-17T14:47:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "7e6573295a51",
+"t": "",
+"title": "China's President Xi: China accelerating creation of open market",
+"url": "https://www.financialjuice.com/News/9856961/Chinas-President-Xi-China-accelerating-creation-of-open-market.aspx?xy=rss",
+"pub": "2026-11-18T02:16:58+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
+},
+{
+"id": "68ac7cc99fdb",
+"t": "",
+"title": "Japanese Restaurant Skylark Eyes More M&A After Ramen Chain Deal",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/japanese-restaurant-skylark-eyes-more-m-a-after-ramen-chain-deal",
+"pub": "2026-11-18T02:15:01+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
 },
 {
 "id": "0372d310a5c7",
@@ -10354,6 +10434,16 @@
 "seen": "2026-11-17T21:44:07+00:00"
 },
 {
+"id": "bbc2f7023611",
+"t": "",
+"title": "Redeia Corporacion SA (RE21.MU) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5jOV8wM1NpU0lrLUUtRHgzM1dMbzMtWGJhLUJGV3lxdmxMV01LT0dsRThfUVJHWlU4Y2luNTdDWk50WUkwTllwaFl3QTdVdWpxaG5KMXhrenoxUEE4TlZWTTdXUlRRZnp6bUJWTg?oc=5",
+"pub": "2026-11-17T19:36:28+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T02:44:16+00:00"
+},
+{
 "id": "10e90465921a",
 "t": "",
 "title": "Fed's Williams: I don't yet see financial stability risk from AI",
@@ -10922,96 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-18T01:13:55+00:00"
-},
-{
-"id": "5c1cb7e4c0ea",
-"t": "",
-"title": "Gabriel Holding A/S (1GH.D) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQd2Y0SWN0YnAwM0hmeGtOS2NVRDJFV2laaXkzRzU3RDl0RGI3LTFmcTh4bnhMVDZVUHpVVXpzRWY4WHh4T2NmbWtJSTN5UjBfZDRMVXhWMXc1YUFwTU5tc1c1U0dyM2lteUdNM2tNcC1MVExONkVxUmpmV1lEZmNmQkg3T3VIVXM?oc=5",
-"pub": "2026-11-17T19:22:56+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T21:14:31+00:00"
-},
-{
-"id": "0c91dc23e6b7",
-"t": "",
-"title": "Apple: iCloud account & sign in issue has been resolved. $AAPL",
-"url": "https://www.financialjuice.com/News/9856351/Apple-iCloud-account--sign-in-issue-has-been-resolved-AAPL.aspx",
-"pub": "2026-11-17T19:18:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "ded0b3deef38",
-"t": "",
-"title": "Apple: iCloud account & sign in issue has been resolved. $AAPL",
-"url": "https://www.financialjuice.com/News/9856351/Apple-iCloud-account--sign-in-issue-has-been-resolved-AAPL.aspx?xy=rss",
-"pub": "2026-11-17T19:18:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "5792d592a1dd",
-"t": "",
-"title": "Iran seriously pursuing diplomatic end to impasse - ISNA",
-"url": "https://www.financialjuice.com/News/9856350/Iran-seriously-pursuing-diplomatic-end-to-impasse---ISNA.aspx",
-"pub": "2026-11-17T19:17:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "fc6fd6c4c556",
-"t": "",
-"title": "Iran seriously pursuing diplomatic end to impasse - ISNA",
-"url": "https://www.financialjuice.com/News/9856350/Iran-seriously-pursuing-diplomatic-end-to-impasse---ISNA.aspx?xy=rss",
-"pub": "2026-11-17T19:17:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "4bd5ceb1abde",
-"t": "",
-"title": "Lottomatica Group SpA (LTMC.MI) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5BTXdsamNGSTBwRkREWGMwY21CMjdzbzBfWF96Y2JQZC1lUkVUTFljU2FpVldmMjRkWi1KcVJvQzhYV1Q1aDllQ21DcURBMHJmLTZJOTByRjd2MDlyQ1pobWJDRG80Q3o2SXdkTg?oc=5",
-"pub": "2026-11-17T19:16:38+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T01:13:55+00:00"
-},
-{
-"id": "db85d3d63df2",
-"t": "",
-"title": "NextEra Energy, Inc. (NEE.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9LV0ZhZTFGYktVeTZvVUNCLXowNkZ5dnZuNGNCZ2c0cmJpend0TG4teElETTdIWEVOelRCTmFTa3VYcnNIX0stWVliTEpGa0p6SklDMFI1d25VT3NtZlMxY1BsSEdyTnloekE?oc=5",
-"pub": "2026-11-17T19:15:32+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T01:52:43+00:00"
-},
-{
-"id": "1f73159a8725",
-"t": "",
-"title": "Apple working to get systems online as soon as possible. $AAPL",
-"url": "https://www.financialjuice.com/News/9856333/Apple-working-to-get-systems-online-as-soon-as-possible-AAPL.aspx?xy=rss",
-"pub": "2026-11-17T19:14:48+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:16:12+00:00"
-},
-{
-"id": "4533e07e532f",
-"t": "",
-"title": "Apple working to get systems online as soon as possible. $AAPL",
-"url": "https://www.financialjuice.com/News/9856333/Apple-working-to-get-systems-online-as-soon-as-possible-AAPL.aspx",
-"pub": "2026-11-17T19:14:48+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
 }
 ]
 }
