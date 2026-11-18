@@ -1,18 +1,88 @@
 {
-"updated_kst": "2026-11-18 09:44",
-"rot": 91,
+"updated_kst": "2026-11-18 10:13",
+"rot": 151,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "26건",
+"Reuters": "33건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "83a38d68e22e",
+"t": "AVGO",
+"title": "Nvidia earnings spark after-hours rally in chipmakers, neocloud stocks",
+"url": "https://finance.yahoo.com/technology/articles/nvidia-earnings-spark-hours-rally-010526744.html?.tsrc=rss",
+"pub": "2026-11-18T01:05:26+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "121185559473",
+"t": "NVDA",
+"title": "Nvidia Has a $118 Billion Promise Tucked Inside Its Blowout Quarter. Here's What It Means for the Stock",
+"url": "https://www.fool.com/investing/2026/11/17/nvidia-has-a-usd118-billion-promise-tucked-inside-its-blowout-quarter-here-s-what-it-means-for-the-stock/?.tsrc=rss",
+"pub": "2026-11-18T01:00:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "a0f833b8eaa0",
+"t": "NVDA",
+"title": "AI-linked tokens tumble as doubts emerge over tech boom",
+"url": "https://www.thestreet.com/crypto/markets/ai-linked-tokens-tumble-as-doubts-emerge-over-tech-boom?.tsrc=rss",
+"pub": "2026-11-18T00:55:58+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "ae4c61f2d784",
+"t": "NVDA",
+"title": "Review & Preview: Bad Time for a Selloff",
+"url": "https://finance.yahoo.com/m/09235625-48aa-3cd5-9f49-db1550a67866/review-%26-preview%3A-bad-time.html?.tsrc=rss",
+"pub": "2026-11-18T00:55:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "c919eef4edcb",
+"t": "NVDA",
+"title": "Nvidia Tops Forecasts In First Report Without Jensen Huang, But Gets Choosier About Backing Data Centers",
+"url": "https://www.bisnow.com/news/national/data-center-capital-markets/nvidia-tops-forecasts-in-first-report-without-jensen-huang-but-gets-choosier-about-backing-data-centers?.tsrc=rss",
+"pub": "2026-11-18T00:53:24+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "65ccbb4af434",
+"t": "NVDA",
+"title": "The Nasdaq-100 Is Down More Than 10% From Its High, but the Broad Market Is Down Far Less. Here's How Gaps Like This Have Ended Since 1986.",
+"url": "https://www.fool.com/investing/2026/11/17/the-nasdaq-100-is-down-more-than-10-from-its-high-but-the-broad-market-is-down-far-less-here-s-how-gaps-like-this-have-ended-since-1986/?.tsrc=rss",
+"pub": "2026-11-18T00:43:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "f389db7af14f",
+"t": "NVDA",
+"title": "Good News: \"Trumpflation\" Might Go Away Soon. Here's What This Means for Stocks.",
+"url": "https://www.fool.com/investing/2026/11/17/good-news-trumpflation-might-go-away-soon-here-s-what-this-means-for-stocks/?.tsrc=rss",
+"pub": "2026-11-18T00:41:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
 {
 "id": "2fe1921ce729",
 "t": "NVDA",
@@ -32,6 +102,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T00:44:16+00:00"
+},
+{
+"id": "3c5e942452e7",
+"t": "NVDA",
+"title": "Nvidia says it won't bring back Jensen Huang",
+"url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-says-wont-bring-back-002426239.html?.tsrc=rss",
+"pub": "2026-11-18T00:24:26+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
 "id": "e9c535ee194a",
@@ -84,6 +164,26 @@
 "seen": "2026-11-18T00:44:16+00:00"
 },
 {
+"id": "fa3cac3c0ab9",
+"t": "CRM",
+"title": "What Salesforce Investors Missed Before The Fall",
+"url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-investors-missed-fall-001539127.html?.tsrc=rss",
+"pub": "2026-11-18T00:15:39+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "20c2349308cd",
+"t": "COST",
+"title": "Costco (COST) Stock Fair Value Edges Higher As AI Rollout Expands And Lawsuits Emerge",
+"url": "https://finance.yahoo.com/markets/stocks/articles/costco-cost-stock-fair-value-001518698.html?.tsrc=rss",
+"pub": "2026-11-18T00:15:18+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
 "id": "32ed7a463a95",
 "t": "SPCX",
 "title": "SpaceX To Self-Fund Majority Of Compute Expansion, CFO Says, As Bond Sale For AI Chips Reportedly Nears",
@@ -132,6 +232,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T00:27:41+00:00"
+},
+{
+"id": "dd637757c305",
+"t": "META",
+"title": "Non-Tech Stocks Can Still Deliver Huge Gains",
+"url": "https://finance.yahoo.com/markets/stocks/articles/non-tech-stocks-still-deliver-235200453.html?.tsrc=rss",
+"pub": "2026-11-17T23:52:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
 "id": "d58a214a8822",
@@ -232,6 +342,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T23:32:45+00:00"
+},
+{
+"id": "661d9b5c33b6",
+"t": "JPM",
+"title": "America's AI Boom Has a Hidden Cost — Top Economist Warns Inflation Is Rising, Capital Is Being Sucked Away, and the Rest of the Economy Is Falling Behind",
+"url": "https://finance.yahoo.com/economy/policy/articles/americas-ai-boom-hidden-cost-233027907.html?.tsrc=rss",
+"pub": "2026-11-17T23:30:27+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
 "id": "91024502b2db",
@@ -3512,6 +3632,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-17T19:48:11+00:00"
+},
+{
+"id": "41efcce1b8b7",
+"t": "CAT",
+"title": "Buy This Anti-AI Stock at New 52-Week Lows for Long-Term Value Creation",
+"url": "https://www.barchart.com/story/news/8882020/buy-this-anti-ai-stock-at-new-52-week-lows-for-long-term-value-creation?.tsrc=rss",
+"pub": "2026-11-17T18:43:11+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
 "id": "ccd9743265ba",
@@ -7884,134 +8014,184 @@
 "seen": "2026-11-17T20:15:22+00:00"
 },
 {
-"id": "ba0fbfd3401c",
-"t": "MU",
-"title": "Should You Buy SanDisk Stock After Its 50% Slide?",
-"url": "https://www.trefis.com/stock/sndk/articles/625742/should-you-buy-sandisk-stock-after-its-50-slide/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:50+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T20:38:30+00:00"
+"id": "2713396fa241",
+"t": "",
+"title": "US Secretary of State Rubio: no imminent threat to US homeland from Iran",
+"url": "https://www.financialjuice.com/News/9856808/US-Secretary-of-State-Rubio-no-imminent-threat-to-US-homeland-from-Iran.aspx?xy=rss",
+"pub": "2026-11-18T01:14:13+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "b518e7b4992e",
-"t": "DELL",
-"title": "What Are Apple Investors Betting On?",
-"url": "https://www.trefis.com/stock/aapl/articles/625738/what-are-apple-investors-betting-on/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:50+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T20:44:03+00:00"
+"id": "90877f2f5b0a",
+"t": "",
+"title": "BoJ Governor Ueda: impact of food sales tax on economy and core inflation is highly uncertain now",
+"url": "https://www.financialjuice.com/News/9856805/BoJ-Governor-Ueda-impact-of-food-sales-tax-on-economy-and-core-inflation-is-highly-uncertain-now.aspx?xy=rss",
+"pub": "2026-11-18T01:13:22+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "300974d068ec",
-"t": "MU",
-"title": "Why Is Micron Stock Down Nearly 8%?",
-"url": "https://www.trefis.com/stock/mu/articles/625793/why-did-micron-stock-fall-nearly-8/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "8e6a507269a3",
+"t": "",
+"title": "How Everyday Investors Are Playing the Nvidia Drama",
+"url": "https://www.wsj.com/finance/stocks/how-everyday-investors-are-playing-the-nvidia-drama-2cb23012?mod=rss_markets_main",
+"pub": "2026-11-18T01:12:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "eba9d5296c03",
-"t": "MU",
-"title": "Why Did Intel Stock Lose 7%?",
-"url": "https://www.trefis.com/stock/intc/articles/625805/why-did-intel-stock-fall-7/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "47348f4af115",
+"t": "",
+"title": "BoJ Governor Ueda: effect of food consumption tax reduction likely to remain limited",
+"url": "https://www.financialjuice.com/News/9856804/BoJ-Governor-Ueda-effect-of-food-consumption-tax-reduction-likely-to-remain-limited.aspx?xy=rss",
+"pub": "2026-11-18T01:10:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "1170e919f41e",
-"t": "AVGO",
-"title": "What Is Behind AMD Stock's Nearly 6% Slide?",
-"url": "https://www.trefis.com/stock/amd/articles/625816/why-did-amd-stock-fall-nearly-6/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "7ca5b2a7a5fd",
+"t": "",
+"title": "US Secretary of State Rubio: no proof these incidents involve hostile actors",
+"url": "https://www.financialjuice.com/News/9856803/US-Secretary-of-State-Rubio-no-proof-these-incidents-involve-hostile-actors.aspx?xy=rss",
+"pub": "2026-11-18T01:08:36+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "c5e98222ed10",
-"t": "AVGO",
-"title": "Why Is Astera Labs Stock Falling Again?",
-"url": "https://www.trefis.com/stock/alab/articles/625789/why-is-astera-labs-stock-falling-again/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "4ba1ca11cf57",
+"t": "",
+"title": "BoJ Governor Ueda: financial conditions still accommodative",
+"url": "https://www.financialjuice.com/News/9856802/BoJ-Governor-Ueda-financial-conditions-still-accommodative.aspx?xy=rss",
+"pub": "2026-11-18T01:07:57+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "7ee61a49468b",
-"t": "AVGO",
-"title": "What Sent Marvell Stock Down Over 7%?",
-"url": "https://www.trefis.com/stock/mrvl/articles/625792/why-did-marvell-stock-fall-over-7/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "eb23e47b8991",
+"t": "",
+"title": "BoJ Governor Ueda: will keep raising policy rate based on economic, price, financial trends",
+"url": "https://www.financialjuice.com/News/9856801/BoJ-Governor-Ueda-will-keep-raising-policy-rate-based-on-economic-price-financial-trends.aspx?xy=rss",
+"pub": "2026-11-18T01:07:37+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "f5379149a041",
-"t": "AAPL",
-"title": "What Triggered Dell Stock's 7% Drop?",
-"url": "https://www.trefis.com/stock/dell/articles/625803/why-did-dell-stock-fall-7/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "8b3d09b4d8b7",
+"t": "",
+"title": "US Secretary of State Rubio: no proof outages are linked",
+"url": "https://www.financialjuice.com/News/9856800/US-Secretary-of-State-Rubio-no-proof-outages-are-linked.aspx?xy=rss",
+"pub": "2026-11-18T01:07:33+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "4d4e4cec5e30",
-"t": "MSFT",
-"title": "Roblox Stock Fell Nearly 8%. What Happened?",
-"url": "https://www.trefis.com/stock/rblx/articles/625794/why-did-roblox-stock-fall-nearly-8/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "e890984a00fd",
+"t": "",
+"title": "BoJ Governor Ueda: crucial to ensure inflation stays near 2%",
+"url": "https://www.financialjuice.com/News/9856799/BoJ-Governor-Ueda-crucial-to-ensure-inflation-stays-near-2.aspx?xy=rss",
+"pub": "2026-11-18T01:07:10+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "2ac1b07cbed8",
-"t": "VRT",
-"title": "What Moved Vertiv Stock Nearly 7% Lower?",
-"url": "https://www.trefis.com/stock/vrt/articles/625807/why-did-vertiv-stock-fall-nearly-7/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "95fdf62b26a0",
+"t": "",
+"title": "Nvidia's Colette Kress tells Cramer: Employees and customers are not going anywhere",
+"url": "https://www.cnbc.com/2026/11/17/nvidias-colette-kress-tells-cramer-customers-and-employees-are-not-going-anywhere.html",
+"pub": "2026-11-18T01:02:38+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "3edbeb2aadc1",
-"t": "INTC",
-"title": "What Is Behind Joby Aviation Stock's 7% Slide?",
-"url": "https://www.trefis.com/stock/joby/articles/625797/why-did-joby-aviation-stock-fall-7/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "22457b4a84bd",
+"t": "",
+"title": "Bahrain’s defense force: Iran persists in systematic hostile approach with attacks targeting the kingdom",
+"url": "https://www.financialjuice.com/News/9856793/Bahrains-defense-force-Iran-persists-in-systematic-hostile-approach-with-attacks-targeting-the-kingdom.aspx?xy=rss",
+"pub": "2026-11-18T01:01:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "8edeb2e867cb",
-"t": "INTC",
-"title": "Lam Research Stock Fell Nearly 7%. What Happened?",
-"url": "https://www.trefis.com/stock/lrcx/articles/625813/why-did-lam-research-stock-fall-nearly-7/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "6b5a2774e429",
+"t": "",
+"title": "Taiwan stocks gain over 2%",
+"url": "https://www.financialjuice.com/News/9856792/Taiwan-stocks-gain-over-2.aspx?xy=rss",
+"pub": "2026-11-18T01:01:10+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
-"id": "e2a84ad1b434",
-"t": "AMAT",
-"title": "Why Is Applied Materials Stock Down Over 5%?",
-"url": "https://www.trefis.com/stock/amat/articles/625811/why-did-applied-materials-stock-fall-over-5/2026-11-17?.tsrc=rss",
-"pub": "2026-11-17T14:40:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "405251365df5",
+"t": "",
+"title": "Taiwan overnight interbank rate begins at 0.805% (unchanged from prior session open)",
+"url": "https://www.financialjuice.com/News/9856791/Taiwan-overnight-interbank-rate-begins-at-0805-unchanged-from-prior-session-open.aspx?xy=rss",
+"pub": "2026-11-18T01:01:10+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "e9ab6056561e",
+"t": "",
+"title": "Bahrain's defence force: air defences blocked multiple Iranian attacks on Wednesday",
+"url": "https://www.financialjuice.com/News/9856790/Bahrains-defence-force-air-defences-blocked-multiple-Iranian-attacks-on-Wednesday.aspx?xy=rss",
+"pub": "2026-11-18T01:01:08+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "af8379ec7e75",
+"t": "",
+"title": "Oil Edges Lower as Supply Surplus Prospects Offset Mideast Tensions",
+"url": "https://www.wsj.com/finance/commodities-futures/oil-edges-lower-as-supply-surplus-prospects-offset-mideast-tensions-cc9879f2?mod=rss_markets_main",
+"pub": "2026-11-18T00:55:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "e1790cc43a2f",
+"t": "",
+"title": "Bahrain's interior ministry issues another warning of possible threat - post on X",
+"url": "https://www.financialjuice.com/News/9856786/Bahrains-interior-ministry-issues-another-warning-of-possible-threat---post-on-X.aspx?xy=rss",
+"pub": "2026-11-18T00:50:44+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "256cb66c2fca",
+"t": "",
+"title": "Australia’s Wage Gains Quicken, Reinforcing Inflation Challenge",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/australia-s-wage-gains-quicken-reinforcing-inflation-challenge",
+"pub": "2026-11-18T00:43:17+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
+"id": "ae87ea534701",
+"t": "",
+"title": "MDA Space Ltd. (MDA.TO) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1sMlVxQ0E2NVZDVWV3Z3d6WG9iZnlQZjh3aXNIS0ZydmhVRDJKZi1fS0ZOUUEwb1dGVlJnclFiS2lOXzd3OG9HRmhMc0NfLS1WaHY2dVg3SmZuWW5DX0E?oc=5",
+"pub": "2026-11-18T00:41:03+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
 "id": "121a3e190870",
@@ -8032,6 +8212,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T00:44:16+00:00"
+},
+{
+"id": "9a77f81df1e3",
+"t": "",
+"title": "David Jones to Cut 1,500 Jobs in Survival Fight, Union Says",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/david-jones-to-cut-1-500-jobs-in-fight-to-survive-union-says",
+"pub": "2026-11-18T00:37:39+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
 "id": "156202907837",
@@ -9564,6 +9754,16 @@
 "seen": "2026-11-17T21:44:07+00:00"
 },
 {
+"id": "4fe88cd8eb27",
+"t": "",
+"title": "Medinice SA (ICEP.WA) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5ka3RhbHdFbU42V0RTaDh0ZlNKbXJDYW5qd1RIQldOV1lSSVJqRThNdjJ4dm1YUUx2aDJqeGg3SVg2ZXA2TmhzSE1zLWllQTR0bGxzU3hNMXNFUncxSk1QUFhZaXUxRWgwRnBrekZyNA?oc=5",
+"pub": "2026-11-17T20:20:23+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
 "id": "282d956c1bee",
 "t": "",
 "title": "B3 to Add Brazil Stocks Listed Abroad to Aid Ailing Local Market",
@@ -9572,6 +9772,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-17T20:38:30+00:00"
+},
+{
+"id": "dc621d01ed65",
+"t": "",
+"title": "Neurothera Labs Inc (NTLX.V) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9taWd5dWNGS1dQYUhhaVNZRzBsV0gycVM4SG1WMjhXbi1wc0JtcWIzaWxEX2xhcUtsa2EzX3dndk9JNHB4Z2NTQVZNSEQ2RkhvUVY4b0JlbE5QMjZRc3E1WGVpUWlxaERCVy13?oc=5",
+"pub": "2026-11-17T20:06:59+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
 "id": "55cab1350c91",
@@ -10074,6 +10284,16 @@
 "seen": "2026-11-17T23:44:11+00:00"
 },
 {
+"id": "3e56014ebf2a",
+"t": "",
+"title": "Iress Ltd (IRE.AX) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAyVFBiYlUzMjU3TEcyN3dCN3JsWmQ5R3JLaWV3ejRWRWRsUUpkbExxeXFJRTc4c3AzdnNQR1E4VzNnU1p0M3pDZkQ4cnZEWUdyRklSUHJSMUFCSUdfanhCTndTdXByeVpLR0Uw?oc=5",
+"pub": "2026-11-17T19:30:39+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
 "id": "62174b5b439c",
 "t": "",
 "title": "US reacted to Iran's targeting of US personnel and assets - Axios",
@@ -10364,6 +10584,16 @@
 "seen": "2026-11-17T21:14:31+00:00"
 },
 {
+"id": "e3b8f7bda410",
+"t": "",
+"title": "Digital 9 Infrastructure PLC (DGI9.L) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5nYlZOSHRRaDN5bGFhMUJrTDdXaW52VlJpbGJ3OGVqUVJRbTZqVFlkaXlvU3Ayd3dlUW5TTjR4endiVW14aURFX2RxdzVtbmd5alA3akp1YlVEUHFDTjZJUlRXbS1OUXlGYmlB?oc=5",
+"pub": "2026-11-17T19:23:10+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
 "id": "5c1cb7e4c0ea",
 "t": "",
 "title": "Gabriel Holding A/S (1GH.D) | Stock Price & Latest News - Reuters",
@@ -10412,6 +10642,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T20:15:22+00:00"
+},
+{
+"id": "4bd5ceb1abde",
+"t": "",
+"title": "Lottomatica Group SpA (LTMC.MI) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5BTXdsamNGSTBwRkREWGMwY21CMjdzbzBfWF96Y2JQZC1lUkVUTFljU2FpVldmMjRkWi1KcVJvQzhYV1Q1aDllQ21DcURBMHJmLTZJOTByRjd2MDlyQ1pobWJDRG80Q3o2SXdkTg?oc=5",
+"pub": "2026-11-17T19:16:38+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
 },
 {
 "id": "1f73159a8725",
@@ -10614,6 +10854,16 @@
 "seen": "2026-11-17T19:44:54+00:00"
 },
 {
+"id": "2e1a8c67d2d1",
+"t": "",
+"title": "Video Display Corp (VIDE.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9vSmZxYUNJR1JPWEZpTmx4ajN1SHRkYzd6YV9Dc25TLW5tVGFmcVFnSkw1eWJKVkRLRktoMnBIZjBIRElDdVRhS29WdHVuVkxxSzJmdDlaU0R2azZIUlJOaXUtdDlmRGZPTzNxRWpBbw?oc=5",
+"pub": "2026-11-17T18:58:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T01:13:55+00:00"
+},
+{
 "id": "3b1cb1733afe",
 "t": "",
 "title": "Huntington Bancshares Inc (HBANZ.OQ) | Stock Price & Latest News - Reuters",
@@ -10759,256 +11009,6 @@
 "title": "Microsoft: Voice AI MAI Realtime 1 outperforms GPT Realtime 2.1 on public benchmarks and Microsoft product evaluations. $MSFT",
 "url": "https://www.financialjuice.com/News/9856260/Microsoft-Voice-AI-MAI-Realtime-1-outperforms-GPT-Realtime-21-on-public-benchmarks-and-Microsoft-product-evaluations-MSFT.aspx",
 "pub": "2026-11-17T18:10:57+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "e9ad212736b5",
-"t": "",
-"title": "OpenAI releasing GPT-6.2 Astra & GPT-6.2 Sol",
-"url": "https://www.financialjuice.com/News/9856259/OpenAI-releasing-GPT-62-Astra--GPT-62-Sol.aspx?xy=rss",
-"pub": "2026-11-17T18:07:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T18:13:59+00:00"
-},
-{
-"id": "ed0d12036bb9",
-"t": "",
-"title": "OpenAI releasing GPT-6.2 Astra & GPT-6.2 Sol",
-"url": "https://www.financialjuice.com/News/9856259/OpenAI-releasing-GPT-62-Astra--GPT-62-Sol.aspx",
-"pub": "2026-11-17T18:07:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "9648ead15a7d",
-"t": "",
-"title": "Salesforce and Microsoft announce Copilotforce, bringing Salesforce customer context and sales workflows to Microsoft Copilot; Informatica announces expanded collaboration with Microsoft at Microsoft Ignite 2026, $MSFT $CRM",
-"url": "https://www.financialjuice.com/News/9856258/Salesforce-and-Microsoft-announce-Copilotforce-bringing-Salesforce-customer-context-and-sales-workflows-to-Microsoft-Copilot-Informatica-announces-expanded-collaboration-with-Microsoft-at-Microsoft-Ignite-2026-MSFT-CRM.aspx?xy=rss",
-"pub": "2026-11-17T18:07:23+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T18:13:59+00:00"
-},
-{
-"id": "33eac49f5196",
-"t": "",
-"title": "Salesforce and Microsoft announce Copilotforce, bringing Salesforce customer context and sales workflows to Microsoft Copilot; Informatica announces expanded collaboration with Microsoft at Microsoft Ignite 2026, $MSFT $CRM",
-"url": "https://www.financialjuice.com/News/9856258/Salesforce-and-Microsoft-announce-Copilotforce-bringing-Salesforce-customer-context-and-sales-workflows-to-Microsoft-Copilot-Informatica-announces-expanded-collaboration-with-Microsoft-at-Microsoft-Ignite-2026-MSFT-CRM.aspx",
-"pub": "2026-11-17T18:07:23+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "7b144eb237a7",
-"t": "",
-"title": "Meta Muse is available in Australia on iOS, Android, and Muse AI, a Mac app, and coming soon to AI glasses. $META",
-"url": "https://www.financialjuice.com/News/9856244/Meta-Muse-is-available-in-Australia-on-iOS-Android-and-Muse-AI-a-Mac-app-and-coming-soon-to-AI-glasses-META.aspx?xy=rss",
-"pub": "2026-11-17T18:02:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T18:13:59+00:00"
-},
-{
-"id": "a5eb42be0317",
-"t": "",
-"title": "Meta Muse is available in Australia on iOS, Android, and Muse AI, a Mac app, and coming soon to AI glasses. $META",
-"url": "https://www.financialjuice.com/News/9856244/Meta-Muse-is-available-in-Australia-on-iOS-Android-and-Muse-AI-a-Mac-app-and-coming-soon-to-AI-glasses-META.aspx",
-"pub": "2026-11-17T18:02:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "277074b58c65",
-"t": "",
-"title": "Putin arrives in Shenzhen for APEC Economic Leaders' Meeting - Xinhua.",
-"url": "https://www.financialjuice.com/News/9856242/Putin-arrives-in-Shenzhen-for-APEC-Economic-Leaders-Meeting---Xinhua.aspx?xy=rss",
-"pub": "2026-11-17T17:58:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T18:13:59+00:00"
-},
-{
-"id": "c69d40bc5724",
-"t": "",
-"title": "Putin arrives in Shenzhen for APEC Economic Leaders' Meeting - Xinhua.",
-"url": "https://www.financialjuice.com/News/9856242/Putin-arrives-in-Shenzhen-for-APEC-Economic-Leaders-Meeting---Xinhua.aspx",
-"pub": "2026-11-17T17:58:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "3e11b18a8469",
-"t": "",
-"title": "Equinor detects an ongoing cyberattack against certain IT systems. Reports no data theft or impact on operations from the cyberattack.",
-"url": "https://www.financialjuice.com/News/9856241/Equinor-detects-an-ongoing-cyberattack-against-certain-IT-systems-Reports-no-data-theft-or-impact-on-operations-from-the-cyberattack.aspx?xy=rss",
-"pub": "2026-11-17T17:57:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T18:13:59+00:00"
-},
-{
-"id": "850a4c602dbf",
-"t": "",
-"title": "Equinor detects an ongoing cyberattack against certain IT systems. Reports no data theft or impact on operations from the cyberattack.",
-"url": "https://www.financialjuice.com/News/9856241/Equinor-detects-an-ongoing-cyberattack-against-certain-IT-systems-Reports-no-data-theft-or-impact-on-operations-from-the-cyberattack.aspx",
-"pub": "2026-11-17T17:57:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "f19e5a4b8e6d",
-"t": "",
-"title": "U.S. Treasury, Eurozone Bond Yields Edge Lower",
-"url": "https://www.wsj.com/economy/central-banking/u-s-treasury-eurozone-bond-yields-edge-lower-as-fresh-drivers-are-sought-746b3b6d?mod=rss_markets_main",
-"pub": "2026-11-17T17:56:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-17T18:13:59+00:00"
-},
-{
-"id": "2127b4f55279",
-"t": "",
-"title": "Disney Profit Beats With Marvel Films Powering Streaming",
-"url": "https://www.bloomberg.com/news/videos/2026-11-17/disney-profit-beats-with-marvel-films-powering-streaming-video",
-"pub": "2026-11-17T17:53:29+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-17T18:13:59+00:00"
-},
-{
-"id": "1c5bd9a09670",
-"t": "",
-"title": "PTL Ltd (ZYN.OQ) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE90X0d1cEdfOFZyUUU4SUNzV3ZpVFZENkVlRE56U3ZSZHpPNDZSa0F5a25uNWtBeDZTN3dZSk54ZTJFQ1VGX2JORlNMb1pCdkVlb0hQZUVFaGlTdjFVSGNvTFp3UlZhdHZsbGp6Sw?oc=5",
-"pub": "2026-11-17T17:51:09+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T21:34:04+00:00"
-},
-{
-"id": "f006ce8d28d6",
-"t": "",
-"title": "Yemen's Houthis targeted another section of the Saudi East-West pipeline with three drones - Statement.",
-"url": "https://www.financialjuice.com/News/9856218/Yemens-Houthis-targeted-another-section-of-the-Saudi-East-West-pipeline-with-three-drones---Statement.aspx?xy=rss",
-"pub": "2026-11-17T17:44:14+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T17:44:46+00:00"
-},
-{
-"id": "ca4b6e8c498f",
-"t": "",
-"title": "Yemen's Houthis targeted another section of the Saudi East-West pipeline with three drones - Statement.",
-"url": "https://www.financialjuice.com/News/9856218/Yemens-Houthis-targeted-another-section-of-the-Saudi-East-West-pipeline-with-three-drones---Statement.aspx",
-"pub": "2026-11-17T17:44:14+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "eb5c1271a972",
-"t": "",
-"title": "Yemen's Houthis targeted the Saudi East-West pipeline with two drones in the Riyadh area - Statement.",
-"url": "https://www.financialjuice.com/News/9856217/Yemens-Houthis-targeted-the-Saudi-East-West-pipeline-with-two-drones-in-the-Riyadh-area---Statement.aspx?xy=rss",
-"pub": "2026-11-17T17:41:20+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T17:43:18+00:00"
-},
-{
-"id": "f7f21fc83744",
-"t": "",
-"title": "Yemen's Houthis targeted the Saudi East-West pipeline with two drones in the Riyadh area - Statement.",
-"url": "https://www.financialjuice.com/News/9856217/Yemens-Houthis-targeted-the-Saudi-East-West-pipeline-with-two-drones-in-the-Riyadh-area---Statement.aspx",
-"pub": "2026-11-17T17:41:20+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "3a56a16ae91e",
-"t": "",
-"title": "Users report some Apple services are having problems - Downdetector. $AAPL",
-"url": "https://www.financialjuice.com/News/9856216/Users-report-some-Apple-services-are-having-problems---Downdetector-AAPL.aspx?xy=rss",
-"pub": "2026-11-17T17:38:48+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T17:43:18+00:00"
-},
-{
-"id": "9f56ba53c285",
-"t": "",
-"title": "Users report some Apple services are having problems - Downdetector. $AAPL",
-"url": "https://www.financialjuice.com/News/9856216/Users-report-some-Apple-services-are-having-problems---Downdetector-AAPL.aspx",
-"pub": "2026-11-17T17:38:48+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "ebdba03e5ae2",
-"t": "",
-"title": "Amazon CEO Jassy, on not opening Amazon .com to AI agents: It just has to be a good customer experience, which it hasn’t been to date - Semafor Event. $AMZN",
-"url": "https://www.financialjuice.com/News/9856207/Amazon-CEO-Jassy-on-not-opening-Amazon-com-to-AI-agents-It-just-has-to-be-a-good-customer-experience-which-it-hasnt-been-to-date---Semafor-Event-AMZN.aspx?xy=rss",
-"pub": "2026-11-17T17:27:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T17:43:18+00:00"
-},
-{
-"id": "a2129a6f78fd",
-"t": "",
-"title": "Amazon CEO Jassy, on not opening Amazon .com to AI agents: It just has to be a good customer experience, which it hasn’t been to date - Semafor Event. $AMZN",
-"url": "https://www.financialjuice.com/News/9856207/Amazon-CEO-Jassy-on-not-opening-Amazon-com-to-AI-agents-It-just-has-to-be-a-good-customer-experience-which-it-hasnt-been-to-date---Semafor-Event-AMZN.aspx",
-"pub": "2026-11-17T17:27:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "aeb9180570b6",
-"t": "",
-"title": "Energy & Utilities Roundup: Market Talk",
-"url": "https://www.wsj.com/finance/investing/energy-utilities-roundup-market-talk-554ef0f3?mod=rss_markets_main",
-"pub": "2026-11-17T17:27:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-17T19:48:11+00:00"
-},
-{
-"id": "5227f0482eee",
-"t": "",
-"title": "Oncolys Biopharma Inc (4588.T) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5rOXhXSkZsSTBjbGFiZEw4Y0xNVUhxbTd0LUU4QzJPc0ExRzZEZHpSMTZwUkwzWTN2UkNic2dFd1FuVlRvcWtoNU9ULUZjczhWN1k0dm52QTFMNmJHN19oMjlLQ1d2VEk3eV9N?oc=5",
-"pub": "2026-11-17T17:21:15+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T22:36:35+00:00"
-},
-{
-"id": "c03a0104d713",
-"t": "",
-"title": "NVIDIA hires Heidrick & Struggles in their hunt for a new CEO - WSJ. $NVDA",
-"url": "https://www.financialjuice.com/News/9856205/NVIDIA-hires-Heidrick--Struggles-in-their-hunt-for-a-new-CEO---WSJ-NVDA.aspx?xy=rss",
-"pub": "2026-11-17T17:20:37+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T17:43:18+00:00"
-},
-{
-"id": "d3012a41b027",
-"t": "",
-"title": "NVIDIA hires Heidrick & Struggles in their hunt for a new CEO - WSJ. $NVDA",
-"url": "https://www.financialjuice.com/News/9856205/NVIDIA-hires-Heidrick--Struggles-in-their-hunt-for-a-new-CEO---WSJ-NVDA.aspx",
-"pub": "2026-11-17T17:20:37+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T19:44:54+00:00"
