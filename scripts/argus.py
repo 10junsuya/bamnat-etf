@@ -54,6 +54,16 @@ if now.weekday() < 5:
             a = 999
         if a > lim:
             alerts.append((f"stale:{f}", f == "live.json", f"자동 수집이 멈춘 듯해요: {f}", f"마지막으로 받은 지 {a:.0f}시간 (기준 {lim}시간)"))
+    # 분배금(SEIBro, 평일 저녁 1번): 주말을 넘겨도 80시간이면 충분. 실패가 많으면 사이트 구조가 바뀐 것일 수 있어요
+    try:
+        _d = json.loads((ROOT / "data/dist.json").read_text(encoding="utf-8"))
+        _a = age_h(_d.get("updated_kst"))
+        if _a > 80:
+            alerts.append(("stale:dist.json", False, "분배금 수집이 멈춘 듯해요: dist.json", f"마지막으로 받은 지 {_a:.0f}시간 (기준 80시간) · SEIBro 화면이 바뀌었는지 확인"))
+        if (_d.get("fail") or 0) >= 10:
+            alerts.append(("dist:fail", False, "분배금 수집 실패가 많아요", f"59개 중 {_d.get('fail')}개 실패 · 이전 기록을 그대로 쓰는 중"))
+    except (OSError, ValueError):
+        pass
 
 # 3. 큰 움직임 (미국 정규장 + 장 마감 후 2시간)
 ny = dt.datetime.now(NY)

@@ -590,7 +590,7 @@ footer select{border:1px solid var(--line); background:var(--surface); border-ra
     </div>
   </div>
 
-  <div class="banner" id="protoBanner">만드는 중이에요. 시세·구성종목·매크로 지표·일정·회사 소식은 실제 값이에요. <b>‘샘플’</b> 표시가 있는 숫자(분배금 등)만 아직 실제가 아니에요.</div>
+  <div class="banner" id="protoBanner">만드는 중이에요. 시세·구성종목·매크로 지표·일정·회사 소식은 실제 값이에요. <b>‘샘플’</b> 표시가 있는 숫자(연관성 지도 등)만 아직 실제가 아니에요.</div>
 
   <main id="view"></main>
 
@@ -734,26 +734,40 @@ const GLOSS = {
   "프리·애프터마켓":"미국 정규장(09:30~16:00, 동부 시간) 앞뒤에 열리는 시간외 거래예요. 거래가 적어서 가격이 크게 움직일 수 있어요."
 };
 
-/* ===================== 분배금 (샘플) =====================
-   rec = 지급 기준일, pay = 지급 예정일. 모든 숫자·날짜는 샘플 */
-const DIST = {
-  "360750":{freq:"분기", hist:[["2026-01-30",64],["2026-04-30",66],["2026-07-31",65],["2026-10-30",70]], next:{rec:"2027-01-29", pay:"2027-02-03"}},
-  "379800":{freq:"분기", hist:[["2026-01-30",57],["2026-04-30",58],["2026-07-31",58],["2026-10-30",61]], next:{rec:"2027-01-29", pay:"2027-02-03"}},
-  "360200":{freq:"분기", hist:[["2026-01-30",58],["2026-04-30",60],["2026-07-31",59],["2026-10-30",62]], next:{rec:"2027-01-29", pay:"2027-02-03"}},
-  "133690":{freq:"분기", hist:[["2026-01-30",230],["2026-04-30",241],["2026-07-31",236],["2026-10-30",250]], next:{rec:"2027-01-29", pay:"2027-02-03"}},
-  "379810":{freq:"분기", hist:[["2026-01-30",34],["2026-04-30",36],["2026-07-31",35],["2026-10-30",38]], next:{rec:"2027-01-29", pay:"2027-02-03"}},
-  "381180":{freq:"연 1회", hist:[["2026-04-30",185]], next:{rec:"2027-04-30", pay:"2027-05-06"}},
-  "0181L0":{freq:"미정", hist:[], next:null}
-};
+/* ===================== 분배금 =====================
+   data/dist.json: 한국예탁결제원 SEIBro 분배금지급현황 (평일 저녁 자동 수집, 2026-11-18 대표 승인).
+   hist = [기준일, 지급일, 주당분배금, 구분]. 다음 기준일은 공지 전이면 지난 기록 주기로 어림한다 */
+const DISTD = readData("d-dist") || {};
+const DIST = DISTD.etfs || {};
 function isKrxBizDay(ds){ const [y,m,d] = ds.split("-").map(Number); const wd = new Date(Date.UTC(y,m-1,d)).getUTCDay(); return wd!==0 && wd!==6 && !KRX_HOL.some(h=>h[0]===ds); }
 function bizDaysBefore(ds, n){ let [y,m,d] = ds.split("-").map(Number); let dt = new Date(Date.UTC(y,m-1,d)); let c = 0;
   while(c<n){ dt.setUTCDate(dt.getUTCDate()-1); const s2 = `${dt.getUTCFullYear()}-${String(dt.getUTCMonth()+1).padStart(2,"0")}-${String(dt.getUTCDate()).padStart(2,"0")}`; if(isKrxBizDay(s2)) c++; }
   return `${dt.getUTCFullYear()}-${String(dt.getUTCMonth()+1).padStart(2,"0")}-${String(dt.getUTCDate()).padStart(2,"0")}`; }
+function lastBizOfMonth(y, m){ let d = new Date(Date.UTC(y, m, 0)); for(let i=0;i<10;i++){ const ds = d.toISOString().slice(0,10); if(isKrxBizDay(ds)) return ds; d.setUTCDate(d.getUTCDate()-1); } return d.toISOString().slice(0,10); }
+function bizOnOrBefore(y, m, day){ const dim = new Date(Date.UTC(y, m, 0)).getUTCDate(); let d = new Date(Date.UTC(y, m-1, Math.min(day, dim))); for(let i=0;i<10;i++){ const ds = d.toISOString().slice(0,10); if(isKrxBizDay(ds)) return ds; d.setUTCDate(d.getUTCDate()-1); } return d.toISOString().slice(0,10); }
 function distInfo(e){
-  const D = DIST[e.code]; if(!D) return null;
-  const last = D.hist.length ? D.hist[D.hist.length-1] : null;
-  const yearSum = D.hist.slice(-4).reduce((a,h)=>a+h[1],0);
-  return {...D, last, yearSum, yieldPct: yearSum ? yearSum/e.close : null, lastBuy: D.next ? bizDaysBefore(D.next.rec, 2) : null};
+  const R = DIST[e.code]; if(!R) return null;
+  const today = new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
+  const all = (R.hist||[]).filter(h=>h[3]==="이익").map(h=>[h[0], h[2], h[1]]);
+  const hist = all.filter(h=>h[0] <= today);
+  const ahead = all.filter(h=>h[0] > today);
+  const yearAgo = new Date(Date.now()+9*3600e3-365*864e5).toISOString().slice(0,10);
+  const yr = hist.filter(h=>h[0] > yearAgo);
+  const n = yr.length;
+  const freq = n>=10 ? "매월" : n>=3 ? "분기" : n===2 ? "반기" : n===1 ? "연 1회" : hist.length ? "최근 1년 없음" : "기록 없음";
+  const step = {"매월":1, "분기":3, "반기":6, "연 1회":12}[freq] || 0;
+  const last = hist.length ? hist[hist.length-1] : null;
+  const yearSum = yr.reduce((a,h)=>a+h[1],0);
+  let next = null;
+  if(ahead.length) next = {rec: ahead[0][0], pay: ahead[0][2] || null, est:false, amt: ahead[0][1]};
+  else if(last && step){
+    const days = hist.slice(-3).map(h=>+h[0].slice(8,10)); const endM = days.filter(d=>d>=25).length >= days.length/2;
+    const midDay = Math.max(...(days.filter(d=>d<25).concat([15])));
+    let [y,m] = last[0].split("-").map(Number); let rec = null;
+    for(let k=0;k<4 && (!rec || rec <= today);k++){ m += step; while(m>12){ m-=12; y++; } rec = endM ? lastBizOfMonth(y,m) : bizOnOrBefore(y,m,midDay); }
+    next = {rec, pay:null, est:true};
+  }
+  return {code:e.code, freq, hist, last, yearSum, yieldPct: (()=>{ const px = okn(e.close) ? e.close : e.nav; return yearSum && okn(px) && px>0 ? yearSum/px : null; })(), next, lastBuy: next ? bizDaysBefore(next.rec, 2) : null, ok:R.ok};
 }
 
 /* ===================== 휴장일 · 서머타임 =====================
@@ -1729,13 +1743,14 @@ function eventSheet(id){
     const e = ETFS.find(x=>x.code===id.slice(5)); if(!e) return;
     const D = distInfo(e); if(!D) return;
     openSheet(`<h3 id="sheetTitle">${e.name} 분배금</h3>
-      <p class="small muted" style="margin-top:0">${D.freq} 지급 · 예시 일정</p>
-      <div class="kv"><div><div class="k">다음 기준일</div><div class="v num">${D.next ? fmtD(D.next.rec) : "미정"}</div></div>
-        <div><div class="k">지급 예정일</div><div class="v num">${D.next ? fmtD(D.next.pay) : "미정"}</div></div>
-        <div><div class="k">받으려면 이날까지 매수</div><div class="v num">${D.lastBuy ? fmtD(D.lastBuy) : "—"}</div></div>
+      <p class="small muted" style="margin-top:0">${D.freq} · ${D.next && D.next.est ? "다음 기준일은 지난 주기로 본 어림이에요" : "운용사 공지 기준"}</p>
+      <div class="kv"><div><div class="k">다음 기준일${D.next && D.next.est ? " (어림)" : ""}</div><div class="v num">${D.next ? fmtD(D.next.rec) : "미정"}</div></div>
+        <div><div class="k">지급 예정일</div><div class="v num">${D.next && D.next.pay ? fmtD(D.next.pay) : "운용사 공지 전"}</div></div>
+        <div><div class="k">이날까지 산 주식이 대상</div><div class="v num">${D.lastBuy ? fmtD(D.lastBuy) : "—"}</div></div>
         <div><div class="k">최근 분배금</div><div class="v num">${D.last ? won(D.last[1]) : "—"}</div></div></div>
       <div class="bsection"><h4>분배 기준일이 뭐예요?</h4><p>${GLOSS["분배 기준일"] || "이날 ETF를 가지고 있는 사람이 분배금을 받아요. 결제가 2영업일 걸려서, 기준일 2영업일 전까지 사야 해요."}</p>
-        <p class="small muted">분배금이 나가면 그만큼 ETF 가격(NAV)이 내려가요. 받은 돈만큼 값이 빠지는 거라 공짜 이익은 아니에요.</p></div>
+        <p class="small muted">분배금이 나가면 그만큼 ETF 가격(NAV)이 내려가요. 받은 돈만큼 값이 빠지는 거라 공짜 이익은 아니에요.</p>
+        <p class="tiny muted">출처: 한국예탁결제원 SEIBro 분배금지급현황${D.ok ? ` · ${D.ok} 확인` : ""}</p></div>
       <button class="more" type="button" data-go="etf-${e.code}">${e.name} 화면으로 ›</button>`, true);
     return;
   }
@@ -1843,31 +1858,33 @@ function viewEtf(code, st){
 
 function distCard(e, st){
   const D = distInfo(e); if(!D) return "";
-  if(!D.last) return `<section class="card"><h2>분배금 ${q("분배금")}</h2><div class="small muted">아직 분배금을 준 기록이 없어요. 운용사가 분배를 정하면 여기에 보여드려요.</div></section>`;
-  const mx = Math.max(...D.hist.map(h=>h[1]));
+  if(!D.last) return `<section class="card"><h2>분배금 ${q("분배금")}</h2><div class="small muted">최근 3년 동안 분배금을 준 기록이 없어요. 운용사가 분배를 정하면 여기에 보여드려요.</div><div class="tiny muted" style="margin-top:6px">출처: 한국예탁결제원 SEIBro${D.ok ? ` · ${D.ok} 확인` : ""}</div></section>`;
+  const bars = D.hist.slice(-12);
+  const mx = Math.max(...bars.map(h=>h[1]), 1);
   const today = ymd(st.k);
-  return `<section class="card"><h2>분배금 ${q("분배금")}<span class="sub">${D.freq} · 샘플</span></h2>
+  return `<section class="card"><h2>분배금 ${q("분배금")}<span class="sub">${D.freq} · 주당 · 세전</span></h2>
     <div class="kv">
       <div><div class="k">최근 분배금</div><div class="v num">${won(D.last[1])}</div><div class="tiny muted num">${fmtD(D.last[0])} 기준</div></div>
-      <div><div class="k">최근 1년 합계</div><div class="v num">${won(D.yearSum)}</div>${okn(D.yieldPct)?`<div class="tiny muted num">종가 대비 연 ${(D.yieldPct*100).toFixed(2)}%</div>`:""}</div>
+      <div><div class="k">최근 1년 합계</div><div class="v num">${won(D.yearSum)}</div>${okn(D.yieldPct)?`<div class="tiny muted num">최근 종가 대비 연 ${(D.yieldPct*100).toFixed(2)}% (계산값)</div>`:""}</div>
     </div>
     ${D.next?`<div class="callout" style="margin-top:10px">
-      <div>다음 기준일 <b class="num">${D.next.rec.slice(0,4)}년 ${fmtD(D.next.rec)}</b> <span class="tiny muted">예시 · </span><span class="tiny pt">${dayDiff(today, D.next.rec)}일 남음</span></div>
-      <div style="margin-top:4px">분배금을 받을 수 있는 마지막 매수일 <b class="num">${fmtD(D.lastBuy)}</b> ${q("분배 기준일")}</div>
-      <div class="tiny muted" style="margin-top:4px">지급 예정 ${fmtD(D.next.pay)} · 일반 계좌는 보통 15.4% 세금을 떼고 받아요</div>
+      <div>다음 기준일 <b class="num">${D.next.rec.slice(0,4)}년 ${fmtD(D.next.rec)}</b> <span class="tiny muted">${D.next.est ? "어림(지난 주기 기준) · " : "운용사 공지 · "}</span><span class="tiny pt">${dayDiff(today, D.next.rec)}일 남음</span></div>
+      <div style="margin-top:4px">기준일 대상이 되는 마지막 매수일 <b class="num">${fmtD(D.lastBuy)}</b> ${q("분배 기준일")}</div>
+      <div class="tiny muted" style="margin-top:4px">${D.next.pay ? `지급 예정 ${fmtD(D.next.pay)}${D.next.amt!=null ? ` · 주당 ${won(D.next.amt)}` : ""}` : "금액·지급일은 운용사가 기준일 무렵 공지해요"} · 일반 계좌는 보통 15.4% 세금을 떼고 받아요</div>
     </div>`:""}
-    <div style="display:flex;gap:8px;align-items:flex-end;height:80px;margin-top:14px">${D.hist.map(h=>`<div style="flex:1;text-align:center"><div class="tiny num muted">${h[1]}</div><div style="height:${Math.round(h[1]/mx*48)}px;background:var(--accent);opacity:.7;border-radius:4px 4px 0 0"></div><div class="tiny muted num">${+h[0].slice(5,7)}월</div></div>`).join("")}</div>
+    <div style="display:flex;gap:8px;align-items:flex-end;height:80px;margin-top:14px">${bars.map(h=>`<div style="flex:1;min-width:0;text-align:center"><div class="tiny num muted">${h[1]}</div><div style="height:${Math.round(h[1]/mx*48)}px;background:var(--accent);opacity:.7;border-radius:4px 4px 0 0"></div><div class="tiny muted num" style="font-size:10px;white-space:nowrap">${+h[0].slice(5,7)}월</div></div>`).join("")}</div>
+    <div class="tiny muted" style="margin-top:6px">${bars.length ? `${bars[0][0].slice(0,4)}년 ${+bars[0][0].slice(5,7)}월 ~ ${bars[bars.length-1][0].slice(0,4)}년 ${+bars[bars.length-1][0].slice(5,7)}월 · ` : ""}최근 ${bars.length}번 · 출처: 한국예탁결제원 SEIBro${D.ok ? ` · ${D.ok} 확인` : ""}</div>
   </section>`;
 }
 function distEvents(){
-  return ETFS.map(e=>({e, D:distInfo(e)})).filter(x=>x.D && x.D.next).map(x=>({d:x.D.next.rec, type:"dist", code:x.e.code, title:`${x.e.name} 분배금 기준일`, when:`${fmtD(x.D.lastBuy)}까지 사야 받아요 · 최근 ${won(x.D.last[1])}`}));
+  return ETFS.map(e=>({e, D:distInfo(e)})).filter(x=>x.D && x.D.next).map(x=>({d:x.D.next.rec, type:"dist", code:x.e.code, title:`${x.e.name} 분배금 기준일`, when:`${x.D.next.est ? "어림 · " : ""}${fmtD(x.D.lastBuy)}까지 산 주식이 대상${x.D.last ? ` · 최근 ${won(x.D.last[1])}` : ""}`}));
 }
 
 function viewCalendar(){
   const myTick = new Set(ETFS.filter(e=>stars.includes(e.code)).flatMap(e=>HOLDS(e).map(([t])=>t)));
   const dists = distEvents().filter(v => calFilter==="all" || stars.includes(v.code));
   const list = [...EVENTS.filter(v => calFilter==="all" || myTick.has(v.t)), ...dists].sort((a,b)=>a.d.localeCompare(b.d));
-  return `<section class="card"><h2>실적 발표·주요 일정<span class="sub">한국 시간 · 회사 공식 발표 기준${dists.length?" · 분배금은 샘플":""}</span></h2>
+  return `<section class="card"><h2>실적 발표·주요 일정<span class="sub">한국 시간 · 회사 공식 발표 기준${dists.length?" · 분배금 기준일은 공지 전이면 어림":""}</span></h2>
     <div class="seg" role="group" aria-label="일정 범위">
       <button type="button" data-cal="all" aria-pressed="${calFilter==="all"}">전체</button>
       <button type="button" data-cal="mine" aria-pressed="${calFilter==="mine"}">관심 ETF 구성종목만</button>
@@ -2070,10 +2087,10 @@ function storageOk(){ try{ localStorage.setItem("__t","1"); localStorage.removeI
 function myDistCard(pos, st){
   const rows = pos.map(p=>({p, D:distInfo(p.e)})).filter(x=>x.D && x.D.next && x.D.last);
   if(!rows.length) return "";
-  return `<section class="card"><h2>다가오는 분배금<span class="sub">샘플 · 최근 분배금 기준 추정</span></h2>
+  return `<section class="card"><h2>다가오는 분배금<span class="sub">최근 분배금 기준 어림</span></h2>
     ${rows.map(({p,D})=>{ const gross = p.qty ? D.last[1]*p.qty : null; return `<div style="padding:10px 0;border-top:1px solid var(--line)">
       <div style="display:flex;gap:10px;align-items:baseline"><b>${p.e.name}</b>${gross!==null?`<span class="num" style="margin-left:auto;font-weight:700">약 ${won(gross*0.846)}</span>`:""}</div>
-      <div class="small muted num">기준일 ${fmtD(D.next.rec)} · ${fmtD(D.lastBuy)}까지 보유 · 지급 ${fmtD(D.next.pay)}</div>
+      <div class="small muted num">기준일 ${fmtD(D.next.rec)}${D.next.est?" (어림)":""} · ${fmtD(D.lastBuy)}까지 보유 · ${D.next.pay ? `지급 ${fmtD(D.next.pay)}` : "지급일 공지 전"}</div>
       ${gross!==null?`<div class="tiny muted num">세전 ${won(gross)} (${p.qty}주 × ${won(D.last[1])}) · 15.4% 뗀 금액</div>`:`<div class="tiny muted">수량을 넣으면 받을 금액도 계산해요</div>`}
     </div>`; }).join("")}
     <div class="note">다음 분배금은 운용사가 정해서 공지해요. 여기 금액은 지난번 분배금으로 계산한 대략적인 값이에요.</div>
@@ -3774,16 +3791,13 @@ function runChecks(){
       if(!ev.done && ev.d < today) add("warn","일정",`${ev.title}: 지난 일정(${ev.d})인데 '완료' 표시가 없어요.`);
       if(!held.has(ev.t)) add("warn","일정",`${ev.title}: ${ev.t}는 어떤 ETF에도 들어 있지 않아요.`);
     });
+    if(!DISTD.etfs) add("warn","분배금","분배금 자료(data/dist.json)가 아직 없어요.");
+    else if(DISTD.updated_kst && (Date.now()+9*3600e3 - Date.parse(DISTD.updated_kst.replace(" ","T")+":00Z")) > 4*864e5) add("warn","분배금",`분배금 자료가 ${DISTD.updated_kst} 이후 안 바뀌었어요.`);
     Object.entries(DIST).forEach(([code,d])=>{
       tick();
       const e = ETFS.find(x=>x.code===code); const nm = e ? e.name : code;
       if(!e) add("warn","분배금",`분배금 정보에 없는 ETF(${code})가 있어요.`);
-      d.hist.forEach(([dt,amt])=>{ if(!okDate(dt) || !(amt>=0)) add("err","분배금",`${nm}: 지난 분배금 기록(${dt})이 잘못됐어요.`); });
-      if(d.next){
-        if(!okDate(d.next.rec) || !okDate(d.next.pay)) add("err","분배금",`${nm}: 다음 분배 날짜 형식이 잘못됐어요.`);
-        else { if(d.next.rec < today) add("warn","분배금",`${nm}: 다음 기준일(${d.next.rec})이 이미 지났어요.`);
-               if(d.next.pay <= d.next.rec) add("err","분배금",`${nm}: 지급일이 기준일보다 빨라요.`); }
-      }
+      (d.hist||[]).forEach(h=>{ if(!okDate(h[0]) || !(h[2]>=0)) add("err","분배금",`${nm}: 분배금 기록(${h[0]})이 잘못됐어요.`); else if(h[1] && h[1] < h[0]) add("err","분배금",`${nm}: 지급일이 기준일보다 빨라요.`); });
     });
   });
   guard("휴장일", ()=>{
@@ -3829,7 +3843,7 @@ function viewCheck(){
   </section>
   ${Object.entries(groups).map(([a,list])=>`<section class="card"><h3 style="margin:0 0 8px">${a} <span class="small muted" style="font-weight:400">${list.length}건</span></h3>
     ${list.map(x=>`<div class="chk-row"><span class="chk-lv ${x.lv}">${x.lv==="err"?"오류":"주의"}</span><span>${x.msg}</span></div>`).join("")}</section>`).join("")}
-  <p class="tiny muted" style="margin:8px 4px 0">‘샘플’ 표시가 있는 숫자(분배금 등)는 실제와 다를 수 있어요. 점검은 앱을 열 때마다 지금 데이터로 다시 돌아가요.</p>`;
+  <p class="tiny muted" style="margin:8px 4px 0">‘샘플’ 표시가 있는 숫자(연관성 지도 등)는 실제와 다를 수 있어요. 점검은 앱을 열 때마다 지금 데이터로 다시 돌아가요.</p>`;
 }
 
 /* ===================== 라우팅 ===================== */
