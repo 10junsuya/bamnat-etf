@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-18 13:45",
-"rot": 154,
+"updated_kst": "2026-11-18 14:14",
+"rot": 35,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "34건",
+"Reuters": "31건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "2f845af54813",
+"t": "NVDA",
+"title": "Nvidia's $335 billion earnings gamble has a hidden risk",
+"url": "https://www.thestreet.com/investing/nvidia-335-billion-gamble-after-earnings-report?.tsrc=rss",
+"pub": "2026-11-18T05:03:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:14:02+00:00"
+},
+{
+"id": "5c966a47fbc0",
+"t": "MSFT",
+"title": "Salesforce (CRM) Gets Hammered as Traders Hit Sell Button",
+"url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-crm-gets-hammered-traders-045611127.html?.tsrc=rss",
+"pub": "2026-11-18T04:56:11+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:14:02+00:00"
+},
 {
 "id": "906bb74f1b51",
 "t": "NVDA",
@@ -22,6 +42,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T04:45:10+00:00"
+},
+{
+"id": "7432aef9862a",
+"t": "ASTS",
+"title": "Firefly: 3 Key Takeaways for Long-Term Investors",
+"url": "https://www.fool.com/earnings/takeaways/2026/11/17/firefly-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+"pub": "2026-11-18T04:39:28+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:14:02+00:00"
 },
 {
 "id": "992b2abf37af",
@@ -34,6 +64,26 @@
 "seen": "2026-11-18T04:45:10+00:00"
 },
 {
+"id": "52a1a8368b45",
+"t": "ZS",
+"title": "Zscaler (ZS) Just Made Its AI Security Push More Complete",
+"url": "https://finance.yahoo.com/technology/ai/articles/zscaler-zs-just-made-ai-043504903.html?.tsrc=rss",
+"pub": "2026-11-18T04:35:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:14:02+00:00"
+},
+{
+"id": "63c98810021b",
+"t": "ISRG",
+"title": "Intuitive Surgical (ISRG) Stock May Be Near Fair Value Despite 22% Revenue Growth",
+"url": "https://finance.yahoo.com/markets/stocks/articles/intuitive-surgical-isrg-stock-may-043437616.html?.tsrc=rss",
+"pub": "2026-11-18T04:34:37+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:14:02+00:00"
+},
+{
 "id": "1e1ccbc8ade5",
 "t": "AMZN",
 "title": "Peter Thiel makes new $161 million ETF bet, dethroning Amazon stock",
@@ -42,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T04:45:10+00:00"
+},
+{
+"id": "c932d4f8e0fd",
+"t": "JOBY",
+"title": "What Is Joby Aviation (JOBY) Gaining From Its Expanded Air Force Backing?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/joby-aviation-joby-gaining-expanded-043122388.html?.tsrc=rss",
+"pub": "2026-11-18T04:31:22+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:14:02+00:00"
 },
 {
 "id": "c6407183e90f",
@@ -62,6 +122,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T04:45:10+00:00"
+},
+{
+"id": "4ed9ca203c06",
+"t": "GLW",
+"title": "Eaton vs. Corning: Which Industrials Stock Is a Better Buy for 2027?",
+"url": "https://www.fool.com/coverage/better-buy/2026/11/17/eaton-vs-corning-which-industrials-stock-is-a-better-buy-for-2027/?.tsrc=rss",
+"pub": "2026-11-18T04:21:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T05:14:02+00:00"
 },
 {
 "id": "9a39e93d7e8f",
@@ -7944,74 +8014,14 @@
 "seen": "2026-11-17T15:16:54+00:00"
 },
 {
-"id": "eda118b3ab18",
-"t": "BRKB",
-"title": "Warren Buffett Dumped Every Airline Stock in 2020. Berkshire Now Owns $5.6 Billion of One",
-"url": "https://247wallst.com/investing/2026/11/17/warren-buffett-dumped-every-airline-stock-in-2020-berkshire-now-owns-5-6-billion-of-one/?.tsrc=rss",
-"pub": "2026-11-17T15:07:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
-},
-{
-"id": "8df1e1d91bb0",
-"t": "CVX",
-"title": "Here's Why BP's Partial Aker BP Stake Sale Is a Timely Move",
-"url": "https://finance.yahoo.com/energy/articles/heres-why-bps-partial-aker-150700719.html?.tsrc=rss",
-"pub": "2026-11-17T15:07:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
-},
-{
-"id": "efb637e48d80",
-"t": "GOOGL",
-"title": "Hinojosa: Abbott Started “the Data Center Madness.” Cipher Digital Lost 21% the Next Day",
-"url": "https://www.tikr.com/blog/hinojosa-abbott-started-the-data-center-madness-cipher-digital-lost-21-the-next-day?ref=yahoofinance&tlnk=yf-261117-q9qxw4v3&.tsrc=rss",
-"pub": "2026-11-17T15:05:38+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:43:48+00:00"
-},
-{
-"id": "ea634b6a3018",
-"t": "NVDA",
-"title": "Apple Is Now the World’s Largest Company. Time to Buy the Stock?",
-"url": "https://www.fool.com/investing/2026/11/17/apple-is-now-the-worlds-largest-company-time-to-buy-the-stock/?.tsrc=rss",
-"pub": "2026-11-17T15:05:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:28:48+00:00"
-},
-{
-"id": "df28f687eabf",
-"t": "GOOGL",
-"title": "Lumentum, Corning and other optical-related stocks jump on Chinese import restrictions",
-"url": "https://finance.yahoo.com/markets/stocks/article/optical-related-stocks-surge-on-import-restrictions-of-chinese-data-center-equipment-150444937.html?.tsrc=rss",
-"pub": "2026-11-17T15:04:44+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
-},
-{
-"id": "33da83cfe7d0",
-"t": "PWR",
-"title": "Quanta Services (PWR) is Positioned to Benefit from AI Data Center Expansion and Surging Electricity Demand",
-"url": "https://finance.yahoo.com/technology/ai/articles/quanta-services-pwr-positioned-benefit-150431315.html?.tsrc=rss",
-"pub": "2026-11-17T15:04:31+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
-},
-{
-"id": "77b2c1596a4b",
-"t": "GOOGL",
-"title": "White House Pushes Ahead With Chinese Data-Center Equipment Restrictions",
-"url": "https://finance.yahoo.com/technology/articles/white-house-pushes-ahead-chinese-150415463.html?.tsrc=rss",
-"pub": "2026-11-17T15:04:15+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:16:54+00:00"
+"id": "5296b6f36502",
+"t": "",
+"title": "Target is set to report earnings before the bell. Here's what to expect",
+"url": "https://www.cnbc.com/2026/11/18/target-tgt-q3-2026-earnings.html",
+"pub": "2026-11-18T05:01:01+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-18T05:14:02+00:00"
 },
 {
 "id": "876bf7fb77cc",
@@ -8072,6 +8082,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T04:45:10+00:00"
+},
+{
+"id": "f5e4767865d7",
+"t": "",
+"title": "Nvidia Says It Can Thrive Without Jensen Huang",
+"url": "https://www.bloomberg.com/news/videos/2026-11-18/the-asia-trade-11-18-2026-video",
+"pub": "2026-11-18T04:21:09+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T05:14:02+00:00"
 },
 {
 "id": "ebc9f4e67991",
@@ -10989,26 +11009,6 @@
 "title": "Explosion of the third offending vessel in the Strait of Hormuz - Tasnim News",
 "url": "https://www.financialjuice.com/News/9856384/Explosion-of-the-third-offending-vessel-in-the-Strait-of-Hormuz---Tasnim-News.aspx",
 "pub": "2026-11-17T19:41:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
-},
-{
-"id": "7184e3d97193",
-"t": "",
-"title": "Explosion of the third offending vessel in the Strait of Hormuz - Tasnim News",
-"url": "https://www.financialjuice.com/News/9856384/Explosion-of-the-third-offending-vessel-in-the-Strait-of-Hormuz---Tasnim-News.aspx?xy=rss",
-"pub": "2026-11-17T19:41:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "0d4ec9b99161",
-"t": "",
-"title": "Fed's Williams: Cyber security issues continue to be an area of worry.",
-"url": "https://www.financialjuice.com/News/9856383/Feds-Williams-Cyber-security-issues-continue-to-be-an-area-of-worry.aspx",
-"pub": "2026-11-17T19:41:07+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T19:44:54+00:00"
