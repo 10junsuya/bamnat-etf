@@ -1527,3 +1527,22 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 내용: Scout를 직접 돌린 뒤(06:44 KST 갱신) 새 항목 55건(news 28·market 27)을 모두 처리했어요. 반영 3건(PANW·GOOGL·QCOM). 건너뜀: 팔로알토 실적 기사들(Tally 몫), 루멘텀 '중국 수입 규제' 해설(11월 초 보도된 미국의 중국 광부품 규제 이야기 · 해설 글), 일라이 릴리 '인수 320억 달러 넘어' 블룸버그 영상(새 사건 아님 · 칼리트릭스 이미 반영), 마이크로소프트 이그나이트 애저 정리(앞 차례에서 처리), 엔비디아 인텔 지분 25% 축소(11-17 이미 반영)·네오클라우드 지분(같은 13F 공시 정리), 엔비디아 의장 발언 해설·래피드7 주식 보상·머스크 스카이댄스 투자, 종목 추천·비교·시장 요약 글. 06시대 시작분이라 kind "market"(앤트로픽 공모가 83달러·카시카리 발언·S&P 7월 뒤 최저 등)은 done 처리만 했어요 — 앤트로픽 공모가는 다음 07·19시대 차례가 확인해 주세요. 나에게 온 새 요청(RULES 0-3): 최근 24시간 없음. 미국 지표: 오늘(동부 11-18) 발표 예정 지표 없음 — 매크로 수집 안 돌림(다음은 11-19 실업수당).
 - 출처: ops/scout/newsq.json · 공식 여부: 저장소
 - 확신도: 높음
+
+### W-20261119-0713-1 · 반영 · STM STM32 매출 2025→2028년 두 배 목표 (보도)
+- 시각: 2026-11-19 07:28 KST
+- 내용: ST마이크로가 미국 11-18(수) STM32 마이크로컨트롤러 매출을 2025년부터 2028년까지 두 배로 늘리고, 범용 마이크로컨트롤러 시장 점유율을 23%에서 25~30%로 올리겠다는 목표를 밝혔다고 Seeking Alpha가 보도했어요(기사는 investors.st.com 자료를 근거로 듦). ST 보도자료 원문은 검색에 나오지 않아(newsroom 검색 결과는 2024-11 재무 모델 발표) '보도'. 점유율은 한 줄에 넣지 않았어요. 「주요 제품」 STM32 칸은 실적 숫자 기준이라 바꾸지 않았어요.
+- 출처: [Seeking Alpha](https://seekingalpha.com/news/4674272-stmicro-targets-to-double-stm32-revenue-between-2025-and-2028) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261119-0713-2 · 반영 · 시장 2건 — 미국 증시 마감(연준 인상 전망), 앤트로픽 공모가 83달러 (보도)
+- 시각: 2026-11-19 07:28 KST
+- 내용: (1) 미국 11-18 마감 다우 -1.1%(-561포인트), S&P500 -0.2%, 나스닥 +0.4%(야후 파이낸스 시세 기준). 월러 이사의 '12월 0.5%p 가능' 발언과 연준 의사록에 더 큰 인상 전망이 커졌다는 해석(investingLive · 야후)을 함께 적었어요. 엔비디아는 실적 뒤에도 5일째 하락(-2.7%) — 회사 소식·실적은 넣지 않음. (2) 앤트로픽 공모가 83달러(희망 범위 70~78달러 위) — CNBC·Reuters 모두 '소식통' 보도라 '보도'. CNBC 본문은 열리지 않아 제목·Reuters 제목·야후 본문으로 확인. 앱 종목이 아니라 「시장」에만.
+- 출처: [Yahoo Finance](https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-18-dow-sp-500-nasdaq-nvidia-earnings-anthropic-ipo-143530588.html) · [investingLive](https://investinglive.com/news/investinglive-americas-fx-news-wrap-18-nov-waller-fed-minutes-put-a-bigger-december-hike-in-play/) · [CNBC](https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html) · [Reuters(MarketScreener)](https://www.marketscreener.com/news/anthropic-prices-blockbuster-ipo-at-83-a-share-source-says-ce785edddc80f624) · 공식 여부: 보도
+- 확신도: 중간
+- 웹 열기 막힘: https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html (검색 결과 주소였지만 실패)
+
+### W-20261119-0713-3 · 알림 · 이번 차례
+- 시각: 2026-11-19 07:28 KST
+- 내용: Scout를 직접 돌린 뒤(07:14 KST 갱신) 새 항목 76건(news 51·market 25)을 모두 처리했어요. 반영 3건(STM · 시장 2). 건너뜀: AST 스페이스모바일 새 주식 발행 등록(자금 조달 · 앞 차례 AAOI 판단과 같음), 마이크론 CTO·사장 '2027년 메모리 공급 더 빠듯'·'중국 HBM 뒤처짐'(발언), 유나이티드헬스 CMS 감사·메디케어 어드밴티지 주가(11-17 이미 반영 · 주가 글), 아폴로 스페이스X GPU 400억 달러(11-17 이미 반영된 부채 조달 흐름 · 영상 해설), 델 12월 콘퍼런스·펩시코 배당(작은 일), 엔비디아 '평소대로' WSJ·러키 발언·오픈 모델(의견·해설), 팔로알토 인수(06:43 이미 반영), 홈디포·타깃·월마트 실적 해설(Tally 몫), 실적 통화 요약·종목 추천·비교·시장 요약 글. market 나머지(호르무즈 유조선 피격(UKMTO)·후티 미사일·무디스 미국 평가·일본은행 설문·한러 정상 등)는 done 처리. 나에게 온 새 요청(RULES 0-3): 최근 24시간 없음. 미국 지표: 오늘(동부 11-18) 발표 예정 지표 없음 — 매크로 수집 안 돌림(views.json rel 6개 모두 macro.json 과 같음, 다음은 11-19 실업수당).
+- 출처: ops/scout/newsq.json · 공식 여부: 저장소
+- 확신도: 높음
