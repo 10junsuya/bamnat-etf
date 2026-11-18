@@ -15,8 +15,9 @@ APP = ROOT / "index.html"
 FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-money": "data/money.json",
          "d-holdings": "data/holdings.json", "d-live": "data/live.json", "d-macro": "data/macro.json", "d-etfs": "data/etfs.json",
          "d-earnings": "data/earnings.json", "d-track": "data/track.json",
-         "d-companies": "data/companies.json", "d-views": "data/views.json"}
-OPTIONAL = {"d-holdings", "d-live", "d-macro", "d-track", "d-views"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
+         "d-companies": "data/companies.json", "d-views": "data/views.json",
+         "d-dist": "data/dist.json"}
+OPTIONAL = {"d-holdings", "d-live", "d-macro", "d-track", "d-views", "d-dist"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 URL = re.compile(r"^https://[^\s<>\"]+$")  # 보안: https 링크만
 TYPES = {"earn", "launch", "land", "event"}
@@ -325,6 +326,22 @@ def block(id_, obj):
     return f'<script type="application/json" id="{id_}">{txt}</script>'
 
 
+def check_dist(d):
+    """분배금(data/dist.json, SEIBro 자동 수집): 날짜·금액 모양만 본다."""
+    if not d:
+        return
+    for code, v in (d.get("etfs") or {}).items():
+        for h in v.get("hist", []):
+            if not (isinstance(h, list) and len(h) == 4 and isinstance(h[0], str) and DATE.match(h[0])):
+                err("data/dist.json", f"{code}: 기록 모양이 잘못됐어요 {h}"); continue
+            if h[1] is not None and not (isinstance(h[1], str) and DATE.match(h[1]) and h[1] >= h[0]):
+                err("data/dist.json", f"{code}: 지급일({h[1]})이 기준일({h[0]})보다 빨라요")
+            if not isinstance(h[2], (int, float)) or h[2] < 0 or h[2] > 100000:
+                err("data/dist.json", f"{code}: 주당분배금({h[2]})이 이상해요")
+            if h[3] not in ("이익", "청산"):
+                err("data/dist.json", f"{code}: 구분({h[3]})이 이상해요")
+
+
 def main():
     embed = "--embed" in sys.argv
     data = {}
@@ -345,6 +362,7 @@ def main():
         check_product_art(data["d-companies"])
         check_companies(data["d-companies"], known)
         check_views(data["d-views"], data["d-events"])
+        check_dist(data["d-dist"])
         for id_, f in FILES.items():
             check_safety(f, data[id_])
         check_directives(data)

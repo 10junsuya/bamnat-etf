@@ -1,0 +1,43 @@
+name: ETF 분배금 받아오기
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/fetch_dist.py", ".github/workflows/dist.yml"]
+  schedule:
+    - cron: "17 9 * * 1-5"   # 한국 시간 평일 18:17 (그날 공지된 분배 반영)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-writer
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/fetch_dist.py
+      - name: 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp data/dist.json /tmp/new.json
+          for i in 1 2 3 4; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp /tmp/new.json data/dist.json
+            python scripts/check_data.py --embed
+            git add data/dist.json index.html
+            git diff --cached --quiet && exit 0
+            git commit -q -m "ETF 분배금 업데이트"
+            git push -q && exit 0
+            sleep $((i*7))
+          done
+          exit 1
