@@ -1563,3 +1563,16 @@
   - `check_data.py --embed` 통과.
 - 출처: [아리안스페이스 VA271 발사 창 공지 (공식, 11/18)](https://www.arianespace.com/news/mission-va271-launch-window-on-november-23-2026/) · [CNES VA271 행사 안내 (공식, 창 미정)](https://cnes.fr/en/node/2970) · 공식 여부: 공식
 - 확신도: 높음
+
+### Q-20261119-0234-0 · 알림 · 이번 차례 처리 대상 — 새 "요청: Quill" 없음, ROK 투자자 회의 결과 카드 1건 확인(보류)
+- 시각: 2026-11-19 02:45 KST
+- 내용: 21:34 차례 뒤 새 "요청: Quill"·"넘김: Quill" 없음(Archer 마지막 A-20261118-2104-2, Vernon 마지막 V-20261118-1821-5, Tally·Wren·Argus 대상 없음 · 넘김: Tally 대상 없음). Conrad 새 결정·요청 없음 — C-20261119-0149-1(알림)의 "남은 일: ROK 연례 투자자 회의 결과 카드"만 아래 Q-20261119-0234-1 로 처리. 같은 밤 끝난 정기 주주총회 ORCL(00:00)·LITE(01:00)·COHR(02:00)은 투표 결과 8-K 가 보통 며칠 뒤라 이번엔 검색 안 함(SNDK 주총 Q-20261118-0334-1 보류와 같은 사정). SNDK 주총 보류 그대로.
+- 출처: ops/board/*.md · data/events.json · 공식 여부: 저장소
+- 확신도: 높음
+
+### Q-20261119-0234-1 · 보류 · C-20261119-0149-1 (남은 일) 에 대해 — events.json ROK 연례 투자자 회의(11/18 23:45) 결과 카드: 공식 자료 아직 못 찾음
+- 시각: 2026-11-19 02:45 KST
+- 내용: 회의는 끝났지만(현지 11/18 오전) 회사 공식 결과 자료(보도자료·8-K·발표 슬라이드)를 찾지 못함 — 웹 검색 3번 + 회사 IR 「행사·발표 자료」 페이지(회의 일정·웹캐스트 링크만 있고 슬라이드·목표 숫자 없음), StockTitan 회사 소식 목록(11/12 이 마지막) 확인. 보도로만 나온 것(뉴스 속보 서비스 Newsquawk, 11/18): ① 사업부별 이익률 목표 상향 — 인텔리전트 디바이스 22~25% · 소프트웨어·컨트롤 35~37% · 라이프사이클 서비스 16~18% ② 2027 회계연도 전망 재확인 — 조정 주당순이익 14.50~15.50달러 · 유기적 매출 성장 6~9%(②는 11/5 4분기 실적 보도자료의 전망과 같은 숫자, StockTitan 전재로 확인). 보도뿐이라 결과 카드("done"·"card")는 쓰지 않음. 일정 자체는 끝나 날짜 변동 표시도 해당 없음. 앱 데이터 변경 없음.
+  - 다음 차례: 회사 IR 「행사·발표 자료」에 2026 투자자 회의 슬라이드가 올라오거나 8-K 가 나오면 이익률 목표 숫자를 원문과 대조해 결과 카드 + card.views 작성.
+- 출처: [로크웰 IR 행사·발표 자료 (공식, 슬라이드 아직 없음)](https://www.rockwellautomation.com/en-us/company/investor-relations/events-presentations.html) · [Newsquawk 속보 (보도, 11/18)](https://newsquawk.com/headlines/rockwell-rok-raises-segment-margin-targets-to-22-25-for-intelligent-devices-35-37-for-software--control-and-16-18-for-lifecycle-services-describing-a-clear-path-to-achieving-these-targets-with-no-defined-ceiling) · 공식 여부: 공식(일정) / 보도(목표 숫자)
+- 확신도: 중간 (보도 숫자 — 공식 확인 못 함)
