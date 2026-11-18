@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-18 12:42",
-"rot": 153,
+"updated_kst": "2026-11-18 12:44",
+"rot": 34,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "39건",
+"Reuters": "33건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -192,6 +192,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T03:14:07+00:00"
+},
+{
+"id": "91a6e192146e",
+"t": "MRNA",
+"title": "SLS Joins MRNA And ANL In Biotech’s Top 3 This Year — Here’s How A Late-2025 Bet Could Grow 10x From Here",
+"url": "https://stocktwits.com/news-articles/markets/equity/sls-mrna-anl-biotech-top-3-this-year-how-late-2025-bet-grow-10x/cNbXVXXR9hm?.tsrc=rss",
+"pub": "2026-11-18T02:41:30+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T03:44:10+00:00"
 },
 {
 "id": "f24924b1f83a",
@@ -8004,16 +8014,6 @@
 "seen": "2026-11-17T20:15:22+00:00"
 },
 {
-"id": "b384af7b3215",
-"t": "SPCX",
-"title": "David Tepper Is Betting Big on Micron",
-"url": "https://www.tikr.com/blog/david-tepper-is-betting-big-on-micron?ref=yahoofinance&tlnk=yf-261117-377r9c4r&.tsrc=rss",
-"pub": "2026-11-17T14:59:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T15:28:48+00:00"
-},
-{
 "id": "137f9b8a2721",
 "t": "",
 "title": "Xi to South Korean President: China prepared to uphold stability and smooth functioning of global industrial and supply chains with South Korea - pool report",
@@ -10604,6 +10604,16 @@
 "seen": "2026-11-17T20:15:22+00:00"
 },
 {
+"id": "112bf41fb7d9",
+"t": "",
+"title": "Mabuhay Holdings Corp (MHC.PS) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5yeUpoYUk1RC1MNHpWNEdpUUVwc2dNd3JHNjRjQVVyZzJqT3BLVmxucmw1dngzNTU2NldMeXlMclBMSFB3RXhkWkVyamZ5dnRORGNyT1hUQXAwZlZnUTdBY2VRMDEySkdkNnE4?oc=5",
+"pub": "2026-11-17T19:47:43+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T03:44:10+00:00"
+},
+{
 "id": "8267f1304330",
 "t": "",
 "title": "Tema Oncology ETF (CANC.O) | Stock Price & Latest News - Reuters",
@@ -10612,6 +10622,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-17T20:38:30+00:00"
+},
+{
+"id": "a6e5ff103404",
+"t": "",
+"title": "Magnolia Oil & Gas Corp (MGY) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5VNlAyc1pxWVBxdDJSRWVxMlYyRG11dEgtZ21UM0d3Y0ZaSXlyRFZsTUJCTWhlWm94Ti1tcE5KVi1hekNSMy1aelh4c3lVTS0yR3c1X1ZSV05yS1lrR2VKVF9kQmxRZ2M?oc=5",
+"pub": "2026-11-17T19:46:03+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T03:44:10+00:00"
 },
 {
 "id": "aea1eb350e95",
@@ -10992,26 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-17T20:15:22+00:00"
-},
-{
-"id": "5c9b907f35f7",
-"t": "",
-"title": "ProShares Ultra High Yield (UJB.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1yTTdQdlI5elR5Um1hTmZtT2RJeV9oNnFWNk1GMmM3R0dVR2pjT1hFU1drWXZtQWVUR3dPUTJkdzZGb2NKb1RsMkxwc3dkRVhqX1NUT2JzNA?oc=5",
-"pub": "2026-11-17T19:30:55+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-17T21:34:04+00:00"
-},
-{
-"id": "801d81c39b34",
-"t": "",
-"title": "NYMEX WTI crude Dec. futures settle at $86.01 a barrel, up 29 cents, 0.34%",
-"url": "https://www.financialjuice.com/News/9856370/NYMEX-WTI-crude-Dec-futures-settle-at-8601-a-barrel-up-29-cents-034.aspx",
-"pub": "2026-11-17T19:30:54+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T19:44:54+00:00"
 }
 ]
 }
