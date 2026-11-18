@@ -1040,3 +1040,21 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 내용: Scout를 직접 돌린 뒤(09:14 KST 갱신) 새 항목 51건을 처리했고 새로 반영할 회사 소식은 없어요. 건너뜀: '엔비디아 중국 포기' 글(해석 기사 — 검색된 'China data center 매출 0' 내용은 2026-05 실적 통화 기사였어요), 젠슨 황 복귀 없음(07:43 반영과 같은 일)·실적 해설(Tally 몫), 바이오젠 루푸스 임상 '결과 준비'(결과 아직 없음), 종목 비교·추천·목표가·13F 글. 09시대라 kind "market"은 done 처리만 했어요. **C-20261117-1949-4 1번(AMZN 레오 벌컨 실패 '공식' 갱신)**: 아마존 공식 페이지 두 곳(LV-01 발사 안내·임무 소식)을 열어 보니 발사 목표일(11-15)만 있고 실패·위성 손실 문구는 없었어요 → '보도' 그대로 두었어요. 오늘 동부 날짜(11-17) 미국 지표는 소매판매뿐이고 이미 수집·분석돼 매크로 수집은 돌리지 않았어요.
 - 출처: [아마존 LV-01 발사 안내](https://www.aboutamazon.com/news/amazon-leo/amazon-leo-vulcan-satellites-launch) · ops/scout/newsq.json · 공식 여부: 공식 / 저장소
 - 확신도: 높음
+
+### W-20261118-0943-1 · 반영 · 셰브런(CVX) 이라크 웨스트쿠르나-2 유전 계약 조건 합의
+- 시각: 2026-11-18 09:50 KST
+- 내용: 이라크 석유부 장관이 셰브런과 웨스트쿠르나-2 유전 계약 조건에 합의했고 연내 서명을 목표로 한다고 밝혔어요(이라크 국영 INA 통신이 전한 석유부 성명, World Oil 11-03). 오늘 Scout 목록의 정리 기사(멕시코만·이라크 거래)로 앱에 빠진 것을 알았어요. 석유부 원문을 직접 열지 못해 '보도'로 두었어요. 2월 예비 합의(1년 독점 협상권)는 Interfax 로 확인했어요.
+- 출처: [World Oil](https://www.worldoil.com/news/2026/11/3/iraq-says-terms-agreed-with-chevron-on-west-qurna-2-contract-signing-targeted-before-year-end/) · [Interfax(2월 예비 합의)](https://interfax.com/newsroom/top-stories/116296/) · 공식 여부: 보도
+- 확신도: 높음
+
+### W-20261118-0943-2 · 반영 · 지표 「이번 발표 분석」 소급: 10월 PPI (RULES 6-2 대표 승인 15번)
+- 시각: 2026-11-18 09:50 KST
+- 내용: 비어 있던 PPI(10월분, 11-13 발표)를 한 번 소급해 data/views.json ind.ppi 에 썼어요(lead 끝 "(지난 발표 · 나중에 정리)"). 공식: 최종 수요 전월 대비 +0.3%, 1년 전 대비 +6.5%(2022-11 이후 최대, data/macro.json 6.5 와 같음), 상품 +0.5%·서비스 +0.2%(BLS). 예상 +0.4%(다우존스 집계, TheStreet·StockTitan·PYMNTS 같음). 시장: 장 초반 올랐다가 엔비디아 CEO 사임 충격에 S&P500 −0.40%·나스닥 −0.91% 마감, 12월 0.25%p 인상 예상 유지(TheStreet, CME 페드워치 0.5%p 확률 10% 넘음). 시각: LPL 로치(0.25%p, PCE 항목 일부 하락)·노스라이트 자카렐리(나아졌지만 높음) vs 굴스비 총재(할 일 남음). 주의: 야후 라이브 블로그 안에서도 '예상보다 낮음/뜨거움'이 섞여 있어 다우존스 예상치를 기준으로 썼어요. BLS 링크는 현재 발표 페이지(ppi.nr0.htm)라 12-15 다음 발표 때 새 분석으로 바뀌어요. 남은 소급: 고용(11-06)·PCE(10-29) — 실업수당은 11-19 새 발표가 곧 나와 그때 새로 써요.
+- 출처: [BLS PPI](https://www.bls.gov/news.release/ppi.nr0.htm) · [TheStreet](https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-13-2026) · [PYMNTS](https://www.pymnts.com/economy/2026/12-month-wholesale-inflation-reaches-4-year-high-despite-october-slowdown/) · [Yahoo Finance](https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html) · 공식 여부: 공식 / 보도
+- 확신도: 높음
+
+### W-20261118-0943-3 · 알림 · 이번 차례
+- 시각: 2026-11-18 09:50 KST
+- 내용: Scout를 직접 돌린 뒤(09:44 KST 갱신) 새 항목 82건 중 76건을 처리했어요. 건너뜀: 마이크론 D램 담합 소송 '기각 신청 거부'(fourweekmba·코인 사이트·블로그뿐 — 믿을 만한 언론 못 찾음, LESSONS 11-16과 같은 경우), 아마존 'AI 국가 대표 기업'(11-16 WSJ 보도와 같은 일), 스페이스X CFO '컴퓨팅 확장 대부분 자체 자금'(Stocktwits 글뿐, 11-17 블룸버그 부채 항목의 후속 발언), 홈디포 실적 해설(Tally 몫), 엔비디아 실적·크레스 임시 CEO CNBC 인터뷰 발언(Tally 몫·발언), 프리포트 인도네시아 채권 가격 결정(자금 조달), 종목 추천·비교·목표가·시장 요약. 9시대라 kind "market"은 done 처리만 했어요. **done 에 넣지 않고 남긴 것**: ① '젠슨 황, 상원 은행위 증언에 동의'(FinancialJuice가 Politico 인용, 11-18 00:39 UTC) — Politico 원문을 검색에서 못 찾았고 TokenPost 는 출처 없이 같은 제목뿐, 로이터·LBC(11-12~13)는 스콧 위원장이 12-03 자진 출석을 '요청'했다는 데까지예요 → 다음 차례가 Politico·로이터·CNBC로 확인되면 NVDA 에 '보도'로 넣어 주세요. ② 쿠웨이트 드론 공격·바레인 경보(FinancialJuice) — 앞 차례들처럼 market 시간대(19시대)까지 남겨 뒀어요. 미국 지표: 동부 날짜 11-17 발표는 소매판매뿐이고 이미 수집·분석돼 매크로 수집은 돌리지 않았어요.
+- 출처: ops/scout/newsq.json · [Reuters(Yahoo) 11-13 상원 요청](https://www.yahoo.com/news/politics/articles/us-senate-banking-committee-chair-001522643.html) · 공식 여부: 저장소 / 보도
+- 확신도: 높음
