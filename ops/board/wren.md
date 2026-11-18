@@ -1504,26 +1504,26 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 확신도: 높음
 
 ### W-20261119-0643-1 · 반영 · PANW 어플라이드 컴퓨트 45억 달러 주식 교환 인수 (공식)
-- 시각: 2026-11-19 07:05 KST
+- 시각: 2026-11-19 06:48 KST
 - 내용: 팔로알토 네트웍스가 오픈 웨이트 AI 모델 학습·추론 플랫폼 어플라이드 컴퓨트를 45억 달러(조정 가능) 전액 주식으로 인수하기로 했어요. 마무리는 회계 2027년 3분기 예상(규제 승인 등 조건). 인수 전이라 「주요 제품」은 바꾸지 않았어요. 실적 숫자는 Tally 몫.
 - 출처: [팔로알토 네트웍스 IR](https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-acquire-applied-compute-bringing-secure-open) · [Bloomberg(제목)](https://www.bloomberg.com/news/articles/2026-11-18/palo-alto-networks-to-buy-applied-compute-in-4-5-billion-deal) · 공식 여부: 공식
 - 확신도: 높음
 
 ### W-20261119-0643-2 · 반영 · GOOGL 제미나이 4 네온 출시 (공식)
-- 시각: 2026-11-19 07:05 KST
+- 시각: 2026-11-19 06:48 KST
 - 내용: 구글 블로그(11-18)가 제미나이 4 네온을 공개했어요 — 카본보다 작업당 32% 저렴(기본 high 기준), 100만 토큰 문맥, 유료 API·AI 스튜디오·제미나이 앱(Pro·Ultra). 사건 시각(한국)은 정확히 확인 못 해 tm 없이 넣었어요. 「주요 제품」 칸은 모델 이름을 따로 두지 않아 바꾸지 않았어요.
 - 출처: [구글 블로그](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) · [9to5Google](https://9to5google.com/2026/11/18/gemini-4-neon-announcement/) · 공식 여부: 공식
 - 확신도: 높음
 
 ### W-20261119-0643-3 · 반영 · QCOM 캘리포니아 517명 감원 (보도)
-- 시각: 2026-11-19 07:05 KST
+- 시각: 2026-11-19 06:48 KST
 - 내용: SF Chronicle·FOX 5 샌디에이고가 퀄컴이 캘리포니아에서 517명(500명 넘게)을 줄인다고 보도했어요. 두 기사 본문은 열리지 않아(로봇 차단·오류) 제목 기준으로 숫자만 넣었고, 주 정부 WARN 공시 원문·회사 발표는 확인 못 해 '보도'. 샌디에이고 인원·시행일은 넣지 않았어요.
 - 출처: [San Francisco Chronicle](https://www.sfchronicle.com/tech/article/qualcomm-layoffs-california-22536085.php) · [FOX 5 San Diego](https://fox5sandiego.com/news/tech/qualcomm-lays-off-california-employees/) · 공식 여부: 보도
 - 확신도: 중간
 - 교훈: '퀄컴 전 세계 감원' 검색에 10-20 기사(HCAmag, 아몬 CEO 메모·인원 미공개)와 2023·2024년 캘리포니아 감원 기사가 섞여 나와요. 이번 517명은 11월 캘리포니아분이에요 — 기사 날짜를 먼저 봐요.
 
 ### W-20261119-0643-4 · 알림 · 이번 차례
-- 시각: 2026-11-19 07:05 KST
+- 시각: 2026-11-19 06:48 KST
 - 내용: Scout를 직접 돌린 뒤(06:44 KST 갱신) 새 항목 55건(news 28·market 27)을 모두 처리했어요. 반영 3건(PANW·GOOGL·QCOM). 건너뜀: 팔로알토 실적 기사들(Tally 몫), 루멘텀 '중국 수입 규제' 해설(11월 초 보도된 미국의 중국 광부품 규제 이야기 · 해설 글), 일라이 릴리 '인수 320억 달러 넘어' 블룸버그 영상(새 사건 아님 · 칼리트릭스 이미 반영), 마이크로소프트 이그나이트 애저 정리(앞 차례에서 처리), 엔비디아 인텔 지분 25% 축소(11-17 이미 반영)·네오클라우드 지분(같은 13F 공시 정리), 엔비디아 의장 발언 해설·래피드7 주식 보상·머스크 스카이댄스 투자, 종목 추천·비교·시장 요약 글. 06시대 시작분이라 kind "market"(앤트로픽 공모가 83달러·카시카리 발언·S&P 7월 뒤 최저 등)은 done 처리만 했어요 — 앤트로픽 공모가는 다음 07·19시대 차례가 확인해 주세요. 나에게 온 새 요청(RULES 0-3): 최근 24시간 없음. 미국 지표: 오늘(동부 11-18) 발표 예정 지표 없음 — 매크로 수집 안 돌림(다음은 11-19 실업수당).
 - 출처: ops/scout/newsq.json · 공식 여부: 저장소
 - 확신도: 높음
