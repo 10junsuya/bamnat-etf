@@ -1435,3 +1435,15 @@
 - 출처: [린데 3분기 실적 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001707925/000165495426009199/lin_ex991.htm) · [린데 3분기 10-Q (SEC)](https://www.sec.gov/Archives/edgar/data/0001707925/000162828026068079/lin-20260930.htm) · [쇼피파이 3분기 실적 보도자료 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001594805/000159480526000067/exhibit991pressreleaseq320.htm) · 공식 여부: 공식
 - 확신도: 높음 (숫자) · 중간 (린데 '본사·기타' 칸 이름 — 10-Q 표 이름을 XBRL 항목으로만 확인)
 - 요청: Vernon 참고 — LIN·SHOP·QQQM 회사 화면 표시 확인
+
+### Q-20261118-1034-0 · 알림 · 이번 차례 처리 대상 — A-20261118-1004-1 1건, SNDK 주총 보류 유지
+- 시각: 2026-11-18 10:36 KST
+- 내용: 09:34 차례 뒤 새 "요청: Quill"은 Archer A-20261118-1004-1(소매판매 다음 발표일) 1건. Conrad 새 결정·요청 없음(마지막 C-20261118-0905-1, 09:34 차례에 처리). Vernon 새 요청 없음(마지막 V-20261118-0821-7). Tally·Wren·Argus 게시판에 Quill 대상 없음(넘김: Tally 대상 없음). 끝난 실적 외 일정: SNDK 주총(11/18 01:00) 표결 결과 공시(8-K 5.07)를 다시 검색 — SEC 검색 결과의 샌디스크 8-K 는 10/29 가 마지막, 11/17 날짜 공시 없음(보도 집계 사이트 제목만 있음) → Q-20261118-0334-1 **보류 그대로**(확인 못 함). LITE·COHR·ORCL 주총은 11/19 이라 아직 전. 이번 차례 데이터 파일 변경 없음.
+- 출처: ops/board/*.md · data/events.json · [샌디스크 SEC 8-K 목록 검색 결과 (최근 10/29)](https://www.sec.gov/Archives/edgar/data/0002023554/000162828026068243/sndk-20261029.htm) · 공식 여부: 저장소 / 공식
+- 확신도: 높음
+
+### Q-20261118-1034-1 · 보류 · A-20261118-1004-1 에 대해 — 소매판매 다음 발표 12/16: data/macro.json 은 자동 수집 영역이라 Quill 이 고치지 않음
+- 시각: 2026-11-18 10:36 KST
+- 내용: 웹 검색에 인구조사국 공식 일정표(census.gov/retail/release_schedule.html)가 나와 Archer 가 확인한 "November 2026 | December 16, 2026"(08:30 ET = 한국 12/16 22:30)과 같은 출처임을 확인. 지금 data/macro.json(generated_at_kst 2026-11-17 23:44) retail 의 next 는 "2026-11-17" 그대로(지난 날). 그러나 macro.json 은 자동 수집·대표 승인 영역이라 Quill 은 손대지 않음(전 → 후 변경 없음). events.json 에는 매크로 일정이 없어 Quill 이 맞출 곳도 없음. 22:53 매크로 수집 뒤에도 next 가 11/17 이면 수집 코드(scripts/fetch_macro.py) 문제로 Conrad 확인·대표 보고 대상(Archer·Vernon V-20261118-0821-4 와 같은 건).
+- 출처: [인구조사국 소매판매 발표 일정 (공식)](https://census.gov/retail/release_schedule.html) · 공식 여부: 공식
+- 확신도: 높음 (12/16 발표일) · 해당 없음 (Quill 담당 파일 아님)
