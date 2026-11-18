@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-18 17:20",
-"rot": 38,
+"updated_kst": "2026-11-18 17:43",
+"rot": 98,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "33건",
+"Reuters": "37건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "ebeebe3e719f",
+"t": "AMGN",
+"title": "SLS And IBRX Share 3 Institutional Backers With Big Pharma Giants — As Stanley Druckenmiller Makes Bold Prediction: ‘We’re Gonna Beat Cancer’",
+"url": "https://stocktwits.com/news-articles/markets/equity/sls-ibrx-share-backers-big-pharma-stanley-druckenmiller-bold-caner-prediction/cNbXvphR9LP?.tsrc=rss",
+"pub": "2026-11-18T08:31:57+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
+},
+{
+"id": "b5042e59953e",
+"t": "SPCX",
+"title": "Bitcoin Could Rebound After Anthropic IPO, Just Like It Did After SpaceX Listing, Says Michaël van de Poppe",
+"url": "https://stocktwits.com/news-articles/markets/cryptocurrency/bitcoin-could-rebound-after-anthropic-ipo-just-like-it-did-after-space-x-listing-says-michael-van-de-poppe/cNbXvFKR9LT?.tsrc=rss",
+"pub": "2026-11-18T08:29:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
+},
+{
+"id": "cab847024b3b",
+"t": "NVDA",
+"title": "The Stock Market Is Flashing a Warning Sign Seen Only Once Before. History Is Clear About What Comes Next.",
+"url": "https://www.fool.com/investing/2026/11/18/the-stock-market-is-flashing-a-warning-sign-seen-only-once-before-history-is-clear-about-what-comes-next/?.tsrc=rss",
+"pub": "2026-11-18T08:20:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
+},
+{
+"id": "32a78908d97b",
+"t": "MU",
+"title": "Top Growth Stocks To Watch In November 2026",
+"url": "https://finance.yahoo.com/markets/stocks/articles/top-growth-stocks-watch-november-081401343.html?.tsrc=rss",
+"pub": "2026-11-18T08:14:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
+},
 {
 "id": "fe8acc99f457",
 "t": "GS",
@@ -72,6 +112,36 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T07:44:24+00:00"
+},
+{
+"id": "5708e422fea7",
+"t": "NVDA",
+"title": "Can Nvidia Maintain Its Washington Influence Without Jensen Huang? Colette Kress Dismisses ‘Blue Wave’ Fears",
+"url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-maintain-washington-influence-without-073310102.html?.tsrc=rss",
+"pub": "2026-11-18T07:33:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
+},
+{
+"id": "79691fdd64a4",
+"t": "MA",
+"title": "Mastercard enables smartphone payment acceptance for debit cardholders",
+"url": "https://www.electronicpaymentsinternational.com/news/mastercard-accept-debit-cardholders/?.tsrc=rss",
+"pub": "2026-11-18T07:31:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
+},
+{
+"id": "c8267c179813",
+"t": "CVX",
+"title": "Western Australia Wins Battle Over Federal Gas Reservation Scheme",
+"url": "https://finance.yahoo.com/energy/articles/western-australia-wins-battle-over-073000074.html?.tsrc=rss",
+"pub": "2026-11-18T07:30:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
 },
 {
 "id": "a48e56710f9c",
@@ -1074,6 +1144,16 @@
 "seen": "2026-11-18T03:14:07+00:00"
 },
 {
+"id": "6786bc675e2e",
+"t": "NBIS",
+"title": "MARA Sinks 13% in a Week as Bitcoin Falls Below $70,000. Its AI Leases Could “Move Into Next Year”",
+"url": "https://www.tikr.com/blog/mara-sinks-13-in-a-week-as-bitcoin-falls-below-70000-its-ai-leases-could-move-into-next-year?ref=yahoofinance&tlnk=yf-261118-934jmqg2&.tsrc=rss",
+"pub": "2026-11-18T02:52:44+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
+},
+{
 "id": "7692465f55b0",
 "t": "QQQ",
 "title": "The Nasdaq-100 Is Doing Something It Did Only in 2000 and 2018. Here’s What Happened Next Both Times",
@@ -1082,6 +1162,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T03:14:07+00:00"
+},
+{
+"id": "f87c1e24e557",
+"t": "RKLB",
+"title": "AST SpaceMobile Sinks 18% in a Week to a 52-Week Low. Jim Cramer: “A Very Hard Stock to Own”",
+"url": "https://www.tikr.com/blog/ast-spacemobile-sinks-18-in-a-week-to-a-52-week-low-jim-cramer-a-very-hard-stock-to-own?ref=yahoofinance&tlnk=yf-261118-gxf52qg9&.tsrc=rss",
+"pub": "2026-11-18T02:50:55+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:43:56+00:00"
 },
 {
 "id": "5cefe24879b4",
@@ -7924,94 +8014,44 @@
 "seen": "2026-11-17T16:15:53+00:00"
 },
 {
-"id": "55dc8c2a7f76",
-"t": "TSLA",
-"title": "Brad Gerstner Dumps These 3 Stocks",
-"url": "https://www.tikr.com/blog/brad-gerstner-dumps-these-3-stocks?ref=yahoofinance&tlnk=yf-261117-79fc3fv5&.tsrc=rss",
-"pub": "2026-11-17T15:58:09+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "a3fe532d9374",
+"t": "",
+"title": "Xi-Trump-Putin Trilateral: A Great Power Stitch-Up?",
+"url": "https://www.bloomberg.com/news/videos/2026-11-18/xi-trump-putin-trilateral-a-great-power-stitch-up-video",
+"pub": "2026-11-18T08:41:13+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T08:43:56+00:00"
 },
 {
-"id": "5a72206a2a67",
-"t": "NET",
-"title": "Cathie Wood, Ken Fisher and 10 Other Big Funds Bought Cloudflare, While 9 Sold. Who’s Right?",
-"url": "https://www.tikr.com/blog/cathie-wood-ken-fisher-and-10-other-big-funds-bought-cloudflare-while-9-sold-whos-right?ref=yahoofinance&tlnk=yf-261117-89787fjr&.tsrc=rss",
-"pub": "2026-11-17T15:56:13+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:34:22+00:00"
+"id": "272b19c31f5d",
+"t": "",
+"title": "Metal Prices In Free Fall Flash Warning: Market Analysis",
+"url": "https://www.bloomberg.com/news/videos/2026-11-18/metal-prices-in-free-fall-flash-warning-3-minutes-mliv-video",
+"pub": "2026-11-18T08:34:01+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T08:43:56+00:00"
 },
 {
-"id": "e184ed62a592",
-"t": "COP",
-"title": "Two Days Left to Register: Houston CIOs and CISOs to Address AI, Cybersecurity and the New Leadership Mandate at HMG Strategy Summit",
-"url": "https://finance.yahoo.com/technology/ai/articles/two-days-left-register-houston-155600853.html?.tsrc=rss",
-"pub": "2026-11-17T15:56:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
+"id": "942902e8343e",
+"t": "",
+"title": "European shares muted as tech offsets mining weakness - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORlptTzhheWlBZ29NN29WRGtSZHdWZlZjeGJPV0VDYTRDdXZDVjdiNm1rRDJSMTkzNVY0RGNMT2xhZ3plZFV3YmlUZGVFdkZwdFdqVEdMX2pPWEx5Yi00dkRGRWNXNDBRV096aF84M0V3UERxdEtPN1NsX19aZnBpVFROQWtydW96d2FBbGZPejZLdUJHM2YxNmhzRDNBc1hYbjhr?oc=5",
+"pub": "2026-11-18T08:25:43+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T08:43:56+00:00"
 },
 {
-"id": "4518c160e331",
-"t": "CAT",
-"title": "Caterpillar Stock: Analyst Estimates & Ratings",
-"url": "https://www.barchart.com/story/news/8878929/caterpillar-stock-analyst-estimates-ratings?.tsrc=rss",
-"pub": "2026-11-17T15:54:36+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T22:14:07+00:00"
-},
-{
-"id": "31bc113c5373",
-"t": "GOOGL",
-"title": "Fed Chair Kevin Warsh Outlined 3 Possible Futures for AI Yesterday. One Could Be Devastating for Stocks",
-"url": "https://247wallst.com/investing/2026/11/17/fed-chair-kevin-warsh-outlined-3-possible-futures-for-ai-yesterday-one-could-be-devastating-for-stocks/?.tsrc=rss",
-"pub": "2026-11-17T15:54:15+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
-},
-{
-"id": "2f3e020c1481",
-"t": "HD",
-"title": "Disney Up on Adjusted EPS Beat; Home Depot Down on Guidance | Stock Movers",
-"url": "https://finance.yahoo.com/video/disney-adjusted-eps-beat-home-155400636.html?.tsrc=rss",
-"pub": "2026-11-17T15:54:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:44:02+00:00"
-},
-{
-"id": "c6777c788668",
-"t": "CRM",
-"title": "CRM support and resistance levels as stock hits oversold territory",
-"url": "https://finance.yahoo.com/markets/stocks/articles/crm-support-resistance-levels-stock-155348085.html?.tsrc=rss",
-"pub": "2026-11-17T15:53:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
-},
-{
-"id": "4caaee6921a6",
-"t": "NVDA",
-"title": "Why Nike Stock Popped Today",
-"url": "https://www.fool.com/investing/2026/11/17/why-nike-stock-popped-today/?.tsrc=rss",
-"pub": "2026-11-17T15:53:47+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
-},
-{
-"id": "f392711f72cd",
-"t": "NVDA",
-"title": "SoftBank Had 64% of Its U.S. Stock Portfolio in Intel. It Has Since Halved",
-"url": "https://247wallst.com/investing/2026/11/17/softbank-had-64-of-its-u-s-stock-portfolio-in-intel-it-has-since-halved/?.tsrc=rss",
-"pub": "2026-11-17T15:52:05+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "6b745228541a",
+"t": "",
+"title": "Trump to arrive in Shenzhen - State media",
+"url": "https://www.financialjuice.com/News/9857394/Trump-to-arrive-in-Shenzhen---State-media.aspx?xy=rss",
+"pub": "2026-11-18T08:22:14+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T08:43:56+00:00"
 },
 {
 "id": "91860f206e5a",
@@ -8114,6 +8154,16 @@
 "seen": "2026-11-18T08:14:01+00:00"
 },
 {
+"id": "e1e54f309439",
+"t": "",
+"title": "Recruiter Hays expects first-half profit above market expectations - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQWcxZ3BjSUUwbWlpc1Jjem84UzF5ejZKOHdHZzhwN0FEVmZUTUdJc29YMU5pei1oSUxGb3IybjB0MUd3OGJlV2YzSkVXd0RLLTFhTC16N0VSWWR2QlNBdmY3UTlJNDFJeUc1SUlUc1dCSnkzM05BcWFiV2s2SEFwSzlKV0pLZk8xZzFkYlBCLUpOTEJjT0ZPX0QzVlZmNFVwQVhYdUhwbmhTaGFoeU12dDlUb0ZRMzEw?oc=5",
+"pub": "2026-11-18T07:59:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T08:43:56+00:00"
+},
+{
 "id": "66f0830d632c",
 "t": "",
 "title": "France Fin. Min. Lescure: 2027 growth forecast of 1% at risk of being cut",
@@ -8122,6 +8172,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T08:14:01+00:00"
+},
+{
+"id": "36a77c858cbb",
+"t": "",
+"title": "UK's Jet2 first-half profit drops 18% as fares decline - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcmJ5TXg5aC0wM09qLWcyZjFxYXlZN0ZoWmFTWHhMTEdBV3ZUa044VTNkT1ppN0NUYnZobWVnRVpBVTZ6bHB2S0k2dlFqaUp2OGh6WnhZUDZUbF8yR0xGT0ZEcDQxNXpZdDEybU5USzF2OXFQVWFzUFgzOURMX1E0Qkp6V3NjbFNkdm9MejFxaHNZcURiSTJQSzJwNWdpOTZXYUE?oc=5",
+"pub": "2026-11-18T07:52:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T08:43:56+00:00"
 },
 {
 "id": "49cf892e5e20",
@@ -10949,66 +11009,6 @@
 "title": "US API Gasoline Stock Change Actual 5.1M (Forecast -, Previous 2.7M)",
 "url": "https://www.financialjuice.com/News/9856567/US-API-Gasoline-Stock-Change-Actual-51M-Forecast---Previous-27M.aspx",
 "pub": "2026-11-17T21:45:54+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "0fcdf1a6b58c",
-"t": "",
-"title": "US API Distillate Stock Change Actual 0.351M (Forecast -, Previous -8M)",
-"url": "https://www.financialjuice.com/News/9856566/US-API-Distillate-Stock-Change-Actual-0351M-Forecast---Previous--8M.aspx?xy=rss",
-"pub": "2026-11-17T21:45:45+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T22:14:07+00:00"
-},
-{
-"id": "719494b09dba",
-"t": "",
-"title": "US API Distillate Stock Change Actual 0.351M (Forecast -, Previous -8M)",
-"url": "https://www.financialjuice.com/News/9856566/US-API-Distillate-Stock-Change-Actual-0351M-Forecast---Previous--8M.aspx",
-"pub": "2026-11-17T21:45:45+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "66340526efa4",
-"t": "",
-"title": "US API Cushing Stock Change Actual -1.7M (Forecast -, Previous 5.1M)",
-"url": "https://www.financialjuice.com/News/9856565/US-API-Cushing-Stock-Change-Actual--17M-Forecast---Previous-51M.aspx?xy=rss",
-"pub": "2026-11-17T21:45:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T22:14:07+00:00"
-},
-{
-"id": "1d6825cfb165",
-"t": "",
-"title": "US API Cushing Stock Change Actual -1.7M (Forecast -, Previous 5.1M)",
-"url": "https://www.financialjuice.com/News/9856565/US-API-Cushing-Stock-Change-Actual--17M-Forecast---Previous-51M.aspx",
-"pub": "2026-11-17T21:45:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "c39c239c323d",
-"t": "",
-"title": "US API Crude Stock Change Actual 5.3M (Forecast -0.50M, Previous -9.8M)",
-"url": "https://www.financialjuice.com/News/9856552/US-API-Crude-Stock-Change-Actual-53M-Forecast--050M-Previous--98M.aspx?xy=rss",
-"pub": "2026-11-17T21:45:20+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T22:14:07+00:00"
-},
-{
-"id": "cac5d0638eaf",
-"t": "",
-"title": "US API Crude Stock Change Actual 5.3M (Forecast -0.50M, Previous -9.8M)",
-"url": "https://www.financialjuice.com/News/9856552/US-API-Crude-Stock-Change-Actual-53M-Forecast--050M-Previous--98M.aspx",
-"pub": "2026-11-17T21:45:20+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T00:27:41+00:00"
