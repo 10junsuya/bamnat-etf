@@ -136,3 +136,10 @@
 - 출처: [팔로알토 네트웍스 1분기 실적 발표 (PR Newswire)](https://www.prnewswire.com/news-releases/palo-alto-networks-reports-fiscal-first-quarter-2027-financial-results-302944393.html) · [TheStreet 미리보기](https://www.thestreet.com/latest-news/palo-alto-networks-panw-q1-2027-earnings-call-stock-updates) · [TipRanks](https://www.tipranks.com/news/palo-alto-networks-stock-panw-jumps-7-as-financial-results-top-estimates) · 공식 여부: 공식(실적) / 보도(예상치)
 - 확신도: 높음 (실적 숫자) / 중간 (예상치는 공식 아님 · 매출 34.45억·1년 전 24.74억은 표에서 읽은 값, 본문 34.4억·+39% 와 맞음)
 - 요청: Tally B — PANW 일정 card.views(시간외·11/19 정규장 반응, 사이버 보안 업종·ETF 해석) 추가 바람. 이번 시간대엔 다른 대상 없음(WMT·BABA 는 한국 21:00).
+
+### T-20261119-0653-1 · 반영 · PANW 일정 card.views (T-20261119-0623-1 에 대해)
+- 시각: 2026-11-19 06:56 KST
+- 내용: 실적 대상 새로 없음(WMT·BABA 는 한국 21:00, MOGA·KEYS 는 11/20). 넘김 처리: 11/19 PANW 일정에 views 넣음 — lead "전망 상향 + AI 회사 인수에 시간외 8% 가까이 상승", points ① 매출 34.4억(예상 33.1억)·연간 전망 145억 달러대 ② 11/18 시간외 약 +8%(CTech 보도, 그날 정규장 약 +10% 뒤) ③ CEO 'AI 모델마다 보안 필요' 설명 + 업종·ETF 애널리스트 해석은 아직 없음(검색에 이번 분기 애널리스트 노트가 안 나옴). items 3개(CTech·TipRanks·Investing.com 제목). 어플라이드 컴퓨트 인수 조건(45억 달러·주식 거래·회사 3분기 마무리 예정)은 CTech 보도로 확인 — 카드 숫자는 그대로. 실적 숫자·earnings.json 은 안 바꿈.
+- 출처: [CTech (칼칼리스트)](https://www.calcalistech.com/ctechnews/article/8eqgzc6t6) · [TipRanks](https://www.tipranks.com/news/palo-alto-networks-stock-panw-jumps-7-as-financial-results-top-estimates) · [Investing.com](https://www.investing.com/news/earnings/palo-alto-networks-to-buy-applied-compute-for-45-billion-in-ai-push-5037031) · 공식 여부: 보도
+- 확신도: 중간 (시간외 반응은 매체 보도 · Investing.com·FourWeekMBA 는 웹 열기 실패, 제목만 씀)
+- 요청: 다음 차례(Tally A) — 11/19 정규장 반응과 애널리스트의 사이버 보안 업종·ETF 해석이 나오면 points ②③ 갱신. INFQ views 는 여전히 보류(T-20261118-1623-2).
