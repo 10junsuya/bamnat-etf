@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-19 07:43",
-"rot": 52,
+"updated_kst": "2026-11-19 07:44",
+"rot": 112,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "50건",
+"Reuters": "49건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "940967a8bb22",
+"t": "NVDA",
+"title": "It’s Official: Anthropic Prices Its IPO at $83 a Share. Here’s What We Know (and What We Don’t)",
+"url": "https://www.fool.com/investing/2026/11/18/it-s-official-anthropic-prices-its-ipo-at-usd83-a-share-here-s-what-we-know-and-what-we-don-t/?.tsrc=rss",
+"pub": "2026-11-18T22:37:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T22:44:55+00:00"
+},
 {
 "id": "0b87da51b15c",
 "t": "HD",
@@ -44,6 +54,16 @@
 "seen": "2026-11-18T22:43:29+00:00"
 },
 {
+"id": "9c714ecb4c92",
+"t": "IBM",
+"title": "Can Accenture Stock Jump 30%?",
+"url": "https://www.trefis.com/stock/acn/articles/626175/can-accenture-stock-jump-30-3/2026-11-18?.tsrc=rss",
+"pub": "2026-11-18T22:27:09+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T22:44:55+00:00"
+},
+{
 "id": "9ff854226c7d",
 "t": "NVDA",
 "title": "I Listened to MP Materials' Earnings Call. Here's the 1 Thing That Stuck With Me.",
@@ -72,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T22:43:29+00:00"
+},
+{
+"id": "45cbce39fda3",
+"t": "JPM",
+"title": "Popular carmaker taps JPMorgan for agent payments",
+"url": "https://www.thestreet.com/crypto/innovation/popular-carmaker-taps-jpmorgan-for-agent-payments?.tsrc=rss",
+"pub": "2026-11-18T22:21:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T22:44:55+00:00"
 },
 {
 "id": "daaa070517f2",
@@ -6234,6 +6264,16 @@
 "seen": "2026-11-18T15:58:40+00:00"
 },
 {
+"id": "27cb286e6a8b",
+"t": "CIEN",
+"title": "This Wildly Volatile AI Stock Is Down 80% From Its Peak—and Flashing Warning Signals",
+"url": "https://finance.yahoo.com/m/9b5f7994-7659-3b7b-8dc5-5fca85c6de96/this-wildly-volatile-ai-stock.html?.tsrc=rss",
+"pub": "2026-11-18T15:18:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T22:44:55+00:00"
+},
+{
 "id": "918d57f1fa7c",
 "t": "UNH",
 "title": "CVS Health Raised Its 2026 Outlook 3 Times, but Not Its Dividend",
@@ -7974,46 +8014,6 @@
 "seen": "2026-11-18T14:17:52+00:00"
 },
 {
-"id": "f2cc92497d74",
-"t": "NVDA",
-"title": "Introducing Cognizant® Patient Hub Operations: AI-enabled patient access offering designed to shorten the path from prescription to therapy",
-"url": "https://finance.yahoo.com/healthcare/articles/introducing-cognizant-patient-hub-operations-140000249.html?.tsrc=rss",
-"pub": "2026-11-18T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:17:52+00:00"
-},
-{
-"id": "78dd00f1dad4",
-"t": "AAPL",
-"title": "Sezzle Anywhere Launches in Canada, Bringing BNPL Everywhere Visa Is Accepted",
-"url": "https://finance.yahoo.com/small-business/articles/sezzle-anywhere-launches-canada-bringing-140000922.html?.tsrc=rss",
-"pub": "2026-11-18T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:17:52+00:00"
-},
-{
-"id": "d8c8d09c2063",
-"t": "MSFT",
-"title": "Check Point Scales Its SASE Platform on Microsoft Azure for Global Enterprise Deployment",
-"url": "https://finance.yahoo.com/technology/ai/articles/check-point-scales-sase-platform-140000411.html?.tsrc=rss",
-"pub": "2026-11-18T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:17:52+00:00"
-},
-{
-"id": "447ec3947c38",
-"t": "MSFT",
-"title": "BCG and Microsoft Expand Collaboration with New Model for AI-Powered Business Reimagination",
-"url": "https://finance.yahoo.com/technology/ai/articles/bcg-microsoft-expand-collaboration-model-140000600.html?.tsrc=rss",
-"pub": "2026-11-18T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:17:52+00:00"
-},
-{
 "id": "aedc02a846a5",
 "t": "",
 "title": "Opinion | Congrats on Your Anthropic Shares",
@@ -8334,6 +8334,16 @@
 "seen": "2026-11-18T22:14:53+00:00"
 },
 {
+"id": "0c0704d030a9",
+"t": "",
+"title": "U.S. Natural Gas Futures Post Strong Gains",
+"url": "https://www.wsj.com/finance/commodities-futures/u-s-natural-gas-futures-gain-on-more-supportive-weather-245b9223?mod=rss_markets_main",
+"pub": "2026-11-18T21:51:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-18T22:44:55+00:00"
+},
+{
 "id": "5c8c246d0128",
 "t": "",
 "title": "Farm Group Says Ex-CEO Misused Funds for Vacation Home and Plane",
@@ -8442,6 +8452,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T21:44:34+00:00"
+},
+{
+"id": "3bd8766decbd",
+"t": "",
+"title": "Treasury Yields Mixed Amid Hawkish Fedspeak",
+"url": "https://www.wsj.com/finance/jgbs-edge-lower-ahead-of-20-year-auction-91707090?mod=rss_markets_main",
+"pub": "2026-11-18T21:34:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-18T22:44:55+00:00"
 },
 {
 "id": "efe92c5dd316",
@@ -10394,6 +10414,16 @@
 "seen": "2026-11-18T15:44:08+00:00"
 },
 {
+"id": "04652dda10ff",
+"t": "",
+"title": "LQRCF.PQ - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBHN1duSmZYWmpURk41VkVqNkVMYlhIUUVNZmdXYWpzUENkNUM1cDlaci1kUUpnN1d6ZkFJS0xWWV9xT1JhQkxNWVcxT1NMaHdwV0tEWmc4dkZsZEtPR1lycTVZcU5ITVl5M05TUGxyVFVDNlhQRVhSdGFB?oc=5",
+"pub": "2026-11-18T15:40:15+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T22:44:55+00:00"
+},
+{
 "id": "2f1e926cf122",
 "t": "",
 "title": "BoE's Bailey: BoE is building a team specialising in the economics of AI",
@@ -10542,6 +10572,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T15:44:08+00:00"
+},
+{
+"id": "77802fa85786",
+"t": "",
+"title": "TripAdvisor, Inc. (TTRIP.MI) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03Y2RzeFUzY0xYNUo4dkQ3azZTR0ZYTXdud1pxTkNjV1A1OHJ4dkFXeF9xV21lYVcyNnBURUppTzFqbVJTS2p3cERCRmxZaWoxWnU0VDdiNGl0Q0gwYTM3UEp6WWhXanlZWDVqcG5oMHlGcGFN?oc=5",
+"pub": "2026-11-18T15:29:17+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-18T22:44:55+00:00"
 },
 {
 "id": "f663779a08c5",
@@ -10970,46 +11010,6 @@
 "url": "https://www.financialjuice.com/News/9857982/UBS-cuts-Home-Depot-target-price-to-417-from-420.aspx?xy=rss",
 "pub": "2026-11-18T14:26:13+00:00",
 "src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T14:44:05+00:00"
-},
-{
-"id": "cdfb73b31567",
-"t": "",
-"title": "UBS cuts NVIDIA target price to $220 from $240.",
-"url": "https://www.financialjuice.com/News/9857981/UBS-cuts-NVIDIA-target-price-to-220-from-240.aspx?xy=rss",
-"pub": "2026-11-18T14:25:33+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T14:44:05+00:00"
-},
-{
-"id": "8daae63564dd",
-"t": "",
-"title": "Puck Reporter on X: Vice President Vance cancelled his appearance at The New York Times Dealbook Summit, just minutes before it started, per source.",
-"url": "https://www.financialjuice.com/News/9857980/Puck-Reporter-on-X-Vice-President-Vance-cancelled-his-appearance-at-The-New-York-Times-Dealbook-Summit-just-minutes-before-it-started-per-source.aspx?xy=rss",
-"pub": "2026-11-18T14:23:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T14:44:05+00:00"
-},
-{
-"id": "cc54ea91b2dd",
-"t": "",
-"title": "AI Debt Boom Shows Underwriting Worsened ‘Awful Lot’, Polus Says",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/ai-debt-boom-shows-underwriting-worsened-awful-lot-says-polus",
-"pub": "2026-11-18T14:20:08+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T15:44:08+00:00"
-},
-{
-"id": "fe1a1035bde1",
-"t": "",
-"title": "Once the Regional Laggard in Sustainable Debt, Mexico Now Leads",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/once-the-regional-laggard-in-sustainable-debt-mexico-now-leads",
-"pub": "2026-11-18T14:19:16+00:00",
-"src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-18T14:44:05+00:00"
 }
