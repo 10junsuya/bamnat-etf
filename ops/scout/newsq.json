@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-18 16:44",
-"rot": 97,
+"updated_kst": "2026-11-18 17:14",
+"rot": 157,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "32건",
+"Reuters": "31건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "fe8acc99f457",
+"t": "GS",
+"title": "Payhawk raises $280M at a $2B valuation as it evolves into the global Finance OS for the AI era",
+"url": "https://finance.yahoo.com/technology/ai/articles/payhawk-raises-280m-2b-valuation-080000438.html?.tsrc=rss",
+"pub": "2026-11-18T08:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
+},
+{
+"id": "783161b81618",
+"t": "NVDA",
+"title": "Anthropic Is Likely to Price Above $78 a Share After a 1,200% Revenue Surge",
+"url": "https://www.fool.com/investing/2026/11/18/anthropic-is-likely-to-price-above-78-a-share-after-a-1200-revenue-surge/?.tsrc=rss",
+"pub": "2026-11-18T07:51:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
+},
+{
+"id": "5af9eed50e4c",
+"t": "NVDA",
+"title": "The $1.1 Trillion Market GXO Has Barely Tapped",
+"url": "https://www.fool.com/investing/2026/11/18/the-usd1-1-trillion-market-gxo-has-barely-tapped/?.tsrc=rss",
+"pub": "2026-11-18T07:50:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
+},
+{
+"id": "73201e704f2e",
+"t": "COST",
+"title": "Mizuho names this retail stock a Top Pick ahead of Q3 earnings",
+"url": "https://finance.yahoo.com/markets/stocks/articles/mizuho-names-retail-stock-top-074143492.html?.tsrc=rss",
+"pub": "2026-11-18T07:41:43+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
+},
 {
 "id": "cb111ce54156",
 "t": "CVX",
@@ -32,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T07:44:24+00:00"
+},
+{
+"id": "22813240af77",
+"t": "NTAP",
+"title": "Seagate plunged 22% in a month: Value play or cyclical trap?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/seagate-plunged-22-month-value-072359166.html?.tsrc=rss",
+"pub": "2026-11-18T07:23:59+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
 "id": "2cec66bf307a",
@@ -142,6 +192,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T07:16:30+00:00"
+},
+{
+"id": "9af67113db55",
+"t": "AMZN",
+"title": "Kevin O’Leary Warns Anthropic IPO Investors To ‘Understand’ What They’re Betting On: ‘May Not Make Money Until 2030’",
+"url": "https://finance.yahoo.com/markets/stocks/articles/kevin-o-leary-warns-anthropic-064430752.html?.tsrc=rss",
+"pub": "2026-11-18T06:44:30+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
 "id": "f26a2bf0f83a",
@@ -994,6 +1054,16 @@
 "seen": "2026-11-18T03:14:07+00:00"
 },
 {
+"id": "5cefe24879b4",
+"t": "GEV",
+"title": "NuScale Sinks 22% in a Week to a 52-Week Low as Canada’s First SMR Runs Late. Is the Selling Overdone?",
+"url": "https://www.tikr.com/blog/nuscale-sinks-22-in-a-week-to-a-52-week-low-as-canadas-first-smr-runs-late-is-the-selling-overdone?ref=yahoofinance&tlnk=yf-261118-85vfgjpv&.tsrc=rss",
+"pub": "2026-11-18T02:48:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
+},
+{
 "id": "e5dcf1440e3a",
 "t": "NVDA",
 "title": "Nvidia Signals AI Financing Flywheel Will Continue, But ‘Disciplined’: Analyst Calls Neoclouds Its ‘Biggest Sustained Bet’ As NBIS, IREN, MRVL Rally",
@@ -1002,6 +1072,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T03:14:07+00:00"
+},
+{
+"id": "3c725e234f96",
+"t": "MU",
+"title": "SK hynix Just Hit a New 52-Week Low, Down 38% From Its September High. Still “Ridiculously Cheap”?",
+"url": "https://www.tikr.com/blog/sk-hynix-just-hit-a-new-52-week-low-down-38-from-its-september-high-still-ridiculously-cheap?ref=yahoofinance&tlnk=yf-261118-jh3pvjw5&.tsrc=rss",
+"pub": "2026-11-18T02:46:52+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
 "id": "f1436decd5dd",
@@ -1204,6 +1284,26 @@
 "seen": "2026-11-18T01:44:07+00:00"
 },
 {
+"id": "e00eb67b3555",
+"t": "COST",
+"title": "Costco Is Up 22% in a Year. Mizuho Sees Another 4%",
+"url": "https://www.tikr.com/blog/costco-is-up-22-in-a-year-mizuho-sees-another-4?ref=yahoofinance&tlnk=yf-261118-3hc7jp9f&.tsrc=rss",
+"pub": "2026-11-18T01:15:18+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
+},
+{
+"id": "e65014f8514f",
+"t": "GOOGL",
+"title": "Nvidia Bought Into Anthropic Near $350 Billion. Gerstner Sees It Pricing at $1.4, $1.5 Trillion",
+"url": "https://www.tikr.com/blog/nvidia-bought-into-anthropic-near-350-billion-gerstner-sees-it-pricing-at-1-4-1-5-trillion?ref=yahoofinance&tlnk=yf-261118-8vqx9r76&.tsrc=rss",
+"pub": "2026-11-18T01:14:44+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
+},
+{
 "id": "78011a5dee03",
 "t": "NVDA",
 "title": "NVIDIA Q3 Earnings Call Highlights",
@@ -1232,6 +1332,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T01:44:07+00:00"
+},
+{
+"id": "98689e0c68ff",
+"t": "SPCX",
+"title": "Shots Fired: Musk Says SpaceX Assumes “Zero Sales to OpenAI.” AMD Can’t Say the Same",
+"url": "https://www.tikr.com/blog/shots-fired-musk-says-spacex-assumes-zero-sales-to-openai-amd-cant-say-the-same?ref=yahoofinance&tlnk=yf-261118-95q7hr6v&.tsrc=rss",
+"pub": "2026-11-18T01:09:50+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
 "id": "d95946de422f",
@@ -7904,114 +8014,104 @@
 "seen": "2026-11-17T16:15:53+00:00"
 },
 {
-"id": "908065cb8bee",
-"t": "MU",
-"title": "Oxide Integrates Micron Data Center Memory and Storage into Its Second-Generation Cloud Computer",
-"url": "https://finance.yahoo.com/technology/articles/oxide-integrates-micron-data-center-155000162.html?.tsrc=rss",
-"pub": "2026-11-17T15:50:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "3ac1c6eb78b2",
+"t": "",
+"title": "China's Xi tells Putin: China and Russia should deepen cooperation - CCTV",
+"url": "https://www.financialjuice.com/News/9857379/Chinas-Xi-tells-Putin-China-and-Russia-should-deepen-cooperation---CCTV.aspx?xy=rss",
+"pub": "2026-11-18T08:13:58+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "0698bcc76eb0",
-"t": "TTMI",
-"title": "TTMI's AI Capacity Expansion Accelerates: Will Revenue Growth Follow?",
-"url": "https://finance.yahoo.com/technology/ai/articles/ttmis-ai-capacity-expansion-accelerates-155000719.html?.tsrc=rss",
-"pub": "2026-11-17T15:50:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T17:14:01+00:00"
+"id": "3eeb7bf4d340",
+"t": "",
+"title": "Japan to tighten rules on foreign lobbyists - Nikkei",
+"url": "https://www.financialjuice.com/News/9857378/Japan-to-tighten-rules-on-foreign-lobbyists---Nikkei.aspx?xy=rss",
+"pub": "2026-11-18T08:10:28+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "daa416d67fbd",
-"t": "CRM",
-"title": "Salesforce Sinks 9% as Software Slides Before Anthropic IPO: Investor Warns AI Companies Seek to “Destroy Salesforce Entirely”",
-"url": "https://www.tikr.com/blog/salesforce-sinks-9-as-software-slides-before-anthropic-ipo-investor-warns-ai-companies-seek-to-destroy-salesforce-entirely?ref=yahoofinance&tlnk=yf-261117-575cc98r&.tsrc=rss",
-"pub": "2026-11-17T15:49:28+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "dc8e46ad8c79",
+"t": "",
+"title": "Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk",
+"url": "https://www.cnbc.com/2026/11/18/nvidia-us-ai-chip-export-controls-data-centers-.html",
+"pub": "2026-11-18T08:09:43+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "9e8882f94aa2",
-"t": "JPM",
-"title": "Hong Kong, Swift and Major Banks Test Blockchain-Based Cross-Border Payments",
-"url": "https://www.cryptoprowl.com/releases/hong-kong-swift-and-major-banks-test-blockchain-based-cross-border-payments-7951?.tsrc=rss",
-"pub": "2026-11-17T15:49:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "5170220824ca",
+"t": "",
+"title": "South African Inflation Heats Up on Eve of Interest Rate Verdict",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/south-african-inflation-heats-up-on-eve-of-interest-rate-verdict",
+"pub": "2026-11-18T08:03:18+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "6c748add2300",
-"t": "NVDA",
-"title": "Gold Falls Below $4,000: Is Now the Time to Invest in This Gold-Backed ETF?",
-"url": "https://www.fool.com/investing/2026/11/17/gold-falls-below-4-000-is-now-the-time-to-invest-in-this-gold-backed-etf/?.tsrc=rss",
-"pub": "2026-11-17T15:48:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "637759afd714",
+"t": "",
+"title": "Currency Strength Chart: Strongest: JPY, USD, EUR, CHF, CAD, AUD, EUR, GBP - Weakest",
+"url": "https://www.financialjuice.com/News/9857360/%09Currency-Strength-Chart-Strongest-JPY-USD-EUR-CHF-CAD-AUD-EUR-GBP---Weakest.aspx?xy=rss",
+"pub": "2026-11-18T08:00:56+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "38597989d6f2",
-"t": "NVDA",
-"title": "There's 'no difference' between buying Anthropic's IPO and Amazon's IPO: Kevin O'Leary",
-"url": "https://finance.yahoo.com/video/theres-no-difference-between-buying-anthropics-ipo-and-amazons-ipo-kevin-oleary-154709340.html?.tsrc=rss",
-"pub": "2026-11-17T15:47:09+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "fb265262ad7c",
+"t": "",
+"title": "UK Energy Bills Seen Rising 26%, Biggest Hike Since 2022",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/uk-energy-bills-seen-rising-26-biggest-hike-since-2022",
+"pub": "2026-11-18T08:00:23+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "dea74a6a2f93",
-"t": "ISRG",
-"title": "Ecolab Launches Integrated Cooling Platform to Tap AI Growth",
-"url": "https://finance.yahoo.com/technology/ai/articles/ecolab-launches-integrated-cooling-platform-154700031.html?.tsrc=rss",
-"pub": "2026-11-17T15:47:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T17:14:01+00:00"
+"id": "e6ee09f241ad",
+"t": "",
+"title": "South Korea's Lee: APEC countries should work together on a stable supply of critical minerals and energy",
+"url": "https://www.financialjuice.com/News/9857357/South-Koreas-Lee-APEC-countries-should-work-together-on-a-stable-supply-of-critical-minerals-and-energy.aspx?xy=rss",
+"pub": "2026-11-18T08:00:18+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "bfe63b28b180",
-"t": "MSFT",
-"title": "6 Big Funds Sold Palo Alto Networks Last Quarter. Should You Follow Them Before Earnings?",
-"url": "https://www.tikr.com/blog/6-big-funds-sold-palo-alto-networks-last-quarter-should-you-follow-them-before-earnings?ref=yahoofinance&tlnk=yf-261117-6c9xjwqj&.tsrc=rss",
-"pub": "2026-11-17T15:46:51+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "66f0830d632c",
+"t": "",
+"title": "France Fin. Min. Lescure: 2027 growth forecast of 1% at risk of being cut",
+"url": "https://www.financialjuice.com/News/9857356/France-Fin-Min-Lescure-2027-growth-forecast-of-1-at-risk-of-being-cut.aspx?xy=rss",
+"pub": "2026-11-18T07:52:04+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "90e411f1dfc6",
-"t": "TSM",
-"title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Pulled Back Amid Broader AI Buildout Correction",
-"url": "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-manufacturing-company-limited-154649598.html?.tsrc=rss",
-"pub": "2026-11-17T15:46:49+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "49cf892e5e20",
+"t": "",
+"title": "France Fin. Min. Lescure: 2027 budget will need bigger effort than planned",
+"url": "https://www.financialjuice.com/News/9857355/France-Fin-Min-Lescure-2027-budget-will-need-bigger-effort-than-planned.aspx?xy=rss",
+"pub": "2026-11-18T07:51:17+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
-"id": "aef6750daef2",
-"t": "SPCX",
-"title": "SpaceX Data Center Push Meets Texas, Arizona Politics",
-"url": "https://www.credaily.com/briefs/spacex-data-center-push-meets-texas-arizona-politics/?.tsrc=rss",
-"pub": "2026-11-17T15:46:36+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
-},
-{
-"id": "8de436cc12f6",
-"t": "AMZN",
-"title": "Amazon Makes Major Grocery Move With Meals Priced Under $8",
-"url": "https://finance.yahoo.com/small-business/articles/amazon-makes-major-grocery-move-154635030.html?.tsrc=rss",
-"pub": "2026-11-17T15:46:35+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-17T16:15:53+00:00"
+"id": "3b145f9d2ffb",
+"t": "",
+"title": "UK Inflation Print at Fastest in a Year Comes With Few Surprises",
+"url": "https://www.bloomberg.com/news/newsletters/2026-11-18/uk-inflation-print-at-fastest-in-a-year-comes-with-few-surprises",
+"pub": "2026-11-18T07:50:32+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
 "id": "eff48a7e7437",
@@ -8062,6 +8162,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-18T07:44:24+00:00"
+},
+{
+"id": "ccd5c2fcc9ab",
+"t": "",
+"title": "Top Swedish Law Firm Vinge Sees Pickup in Private Equity Deals",
+"url": "https://www.bloomberg.com/news/articles/2026-11-18/top-swedish-law-firm-vinge-sees-pickup-in-private-equity-deals",
+"pub": "2026-11-18T07:15:01+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-18T08:14:01+00:00"
 },
 {
 "id": "59b483915ef4",
@@ -10899,116 +11009,6 @@
 "title": "NVIDIA's reported commitments surge to $518 billion. $NVDA",
 "url": "https://www.financialjuice.com/News/9856546/NVIDIAs-reported-commitments-surge-to-518-billion-NVDA.aspx",
 "pub": "2026-11-17T21:30:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "7a81ce690431",
-"t": "",
-"title": "Nvidia sees 4Q Rev $130 bln plus or minus 3%. $NVDA",
-"url": "https://www.financialjuice.com/News/9856544/Nvidia-sees-4Q-Rev-130-bln-plus-or-minus-3-NVDA.aspx?xy=rss",
-"pub": "2026-11-17T21:28:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T21:34:04+00:00"
-},
-{
-"id": "c1517fa2d238",
-"t": "",
-"title": "Nvidia sees 4Q Rev $130 bln plus or minus 3%. $NVDA",
-"url": "https://www.financialjuice.com/News/9856544/Nvidia-sees-4Q-Rev-130-bln-plus-or-minus-3-NVDA.aspx",
-"pub": "2026-11-17T21:28:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "192a061c9fb3",
-"t": "",
-"title": "Nvidia releases quarterly earnings after Jensen Huang's resignation as CEO",
-"url": "https://www.foxbusiness.com/markets/nvidia-releases-quarterly-earnings-after-jensen-huangs-resignation-ceo",
-"pub": "2026-11-17T21:27:53+00:00",
-"src": "Fox Business",
-"kind": "market",
-"seen": "2026-11-17T21:34:04+00:00"
-},
-{
-"id": "d67355d51d50",
-"t": "",
-"title": "NVIDIA: Vera Rubin added nearly $20 bln in revenue Q/Q, with strong and diverse contributions across both hyperscale and ACIE. $NVDA",
-"url": "https://www.financialjuice.com/News/9856543/NVIDIA-Vera-Rubin-added-nearly-20-bln-in-revenue-QQ-with-strong-and-diverse-contributions-across-both-hyperscale-and-ACIE-NVDA.aspx?xy=rss",
-"pub": "2026-11-17T21:27:37+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T21:34:04+00:00"
-},
-{
-"id": "eb66764bc868",
-"t": "",
-"title": "NVIDIA: Vera Rubin added nearly $20 bln in revenue Q/Q, with strong and diverse contributions across both hyperscale and ACIE. $NVDA",
-"url": "https://www.financialjuice.com/News/9856543/NVIDIA-Vera-Rubin-added-nearly-20-bln-in-revenue-QQ-with-strong-and-diverse-contributions-across-both-hyperscale-and-ACIE-NVDA.aspx",
-"pub": "2026-11-17T21:27:37+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "b5cdd10795e1",
-"t": "",
-"title": "Nvidia NeoCloud agreements total $32 bln. $NVDA",
-"url": "https://www.financialjuice.com/News/9856542/Nvidia-NeoCloud-agreements-total-32-bln-NVDA.aspx?xy=rss",
-"pub": "2026-11-17T21:27:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T21:34:04+00:00"
-},
-{
-"id": "37ffe7475190",
-"t": "",
-"title": "Nvidia NeoCloud agreements total $32 bln. $NVDA",
-"url": "https://www.financialjuice.com/News/9856542/Nvidia-NeoCloud-agreements-total-32-bln-NVDA.aspx",
-"pub": "2026-11-17T21:27:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "ebb559248351",
-"t": "",
-"title": "Nvidia expecting no data center revenue from China. $NVDA",
-"url": "https://www.financialjuice.com/News/9856541/Nvidia-expecting-no-data-center-revenue-from-China-NVDA.aspx?xy=rss",
-"pub": "2026-11-17T21:26:35+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T21:34:04+00:00"
-},
-{
-"id": "1debe74600a9",
-"t": "",
-"title": "Nvidia expecting no data center revenue from China. $NVDA",
-"url": "https://www.financialjuice.com/News/9856541/Nvidia-expecting-no-data-center-revenue-from-China-NVDA.aspx",
-"pub": "2026-11-17T21:26:35+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T00:27:41+00:00"
-},
-{
-"id": "46f0b2ab0509",
-"t": "",
-"title": "Nvidia plan to utilize remaining authorization through FY2028. $NVDA",
-"url": "https://www.financialjuice.com/News/9856540/Nvidia-plan-to-utilize-remaining-authorization-through-FY2028-NVDA.aspx?xy=rss",
-"pub": "2026-11-17T21:26:22+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-17T21:34:04+00:00"
-},
-{
-"id": "7ab47d0e5df3",
-"t": "",
-"title": "Nvidia plan to utilize remaining authorization through FY2028. $NVDA",
-"url": "https://www.financialjuice.com/News/9856540/Nvidia-plan-to-utilize-remaining-authorization-through-FY2028-NVDA.aspx",
-"pub": "2026-11-17T21:26:22+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T00:27:41+00:00"
