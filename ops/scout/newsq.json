@@ -1,18 +1,68 @@
 {
-"updated_kst": "2026-11-19 13:49",
-"rot": 178,
+"updated_kst": "2026-11-19 14:14",
+"rot": 59,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "42건",
+"Reuters": "44건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "f8b6ae560948",
+"t": "NVDA",
+"title": "Asia stocks slide as Taiwan drops 4%, AI jitters blunt Anthropic IPO optimism",
+"url": "https://finance.yahoo.com/markets/world-indices/articles/asia-stocks-slide-taiwan-drops-050553675.html?.tsrc=rss",
+"pub": "2026-11-19T05:05:53+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
+},
+{
+"id": "3abfb917e218",
+"t": "PANW",
+"title": "Palo Alto Networks Inc (PANW) Q1 2027 Earnings Call Highlights: Revenue Surges 39% as AI ...",
+"url": "https://finance.yahoo.com/technology/ai/articles/palo-alto-networks-inc-panw-050050394.html?.tsrc=rss",
+"pub": "2026-11-19T05:00:50+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
+},
+{
+"id": "db1607fa01b0",
+"t": "NVDA",
+"title": "Asian stocks are mixed and US futures climb ahead of Anthropic's blockbuster IPO",
+"url": "https://finance.yahoo.com/markets/stocks/articles/asian-stocks-mixed-us-futures-050038678.html?.tsrc=rss",
+"pub": "2026-11-19T05:00:38+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
+},
+{
+"id": "ae4ad3e05c2e",
+"t": "NVDA",
+"title": "Wall St’s $500 bln pledge to Nvidia yet to be mobilized, WSJ reports",
+"url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-500-bln-pledge-044504722.html?.tsrc=rss",
+"pub": "2026-11-19T04:45:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
+},
+{
+"id": "99a6ee8b0ebf",
+"t": "MU",
+"title": "Micron (MU) Stock May Be 16% Undervalued Following Fresh AI Supply News",
+"url": "https://finance.yahoo.com/markets/stocks/articles/micron-mu-stock-may-16-043421943.html?.tsrc=rss",
+"pub": "2026-11-19T04:34:21+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
+},
 {
 "id": "b7cea3764ce9",
 "t": "NVDA",
@@ -22,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "f15766a1aa65",
+"t": "NVDA",
+"title": "Fallout from former Nvidia CEO’s downfall hangs over US-China relations",
+"url": "https://www.cnn.com/2026/11/18/business/video/timeline-jensen-huang-nvidia-revelations-hnk-digvid?cid=external-feeds_iluminar_yahoo&.tsrc=rss",
+"pub": "2026-11-19T04:17:21+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
 "id": "62f3b6a0eb10",
@@ -152,6 +212,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T04:14:14+00:00"
+},
+{
+"id": "34c2b60fdbe3",
+"t": "NVDA",
+"title": "Grant Cardone Called Jensen Huang 'Shameful' — 4 Days Later He Told Nvidia Employees 'You Know Better Than the Board' After a $600 Billion Wipeout",
+"url": "https://finance.yahoo.com/markets/stocks/articles/grant-cardone-called-jensen-huang-034515675.html?.tsrc=rss",
+"pub": "2026-11-19T03:45:15+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
 "id": "68d29212dcd4",
@@ -484,6 +554,16 @@
 "seen": "2026-11-19T02:44:30+00:00"
 },
 {
+"id": "002638f02b0b",
+"t": "AAPL",
+"title": "A glossary to help understand what happens in an initial public offering",
+"url": "https://finance.yahoo.com/markets/stocks/articles/glossary-help-understand-happens-initial-020950912.html?.tsrc=rss",
+"pub": "2026-11-19T02:09:50+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
+},
+{
 "id": "dc3346737686",
 "t": "NVDA",
 "title": "Wall Street futures climb ahead of Anthropic’s $1.5 trillion mega IPO",
@@ -612,6 +692,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T01:44:52+00:00"
+},
+{
+"id": "b9c6899c26ff",
+"t": "SPCX",
+"title": "Anthropic set to begin trading after pricing its stock at $83 per share in biggest IPO on record",
+"url": "https://finance.yahoo.com/technology/ai/articles/anthropic-set-begin-trading-pricing-011538935.html?.tsrc=rss",
+"pub": "2026-11-19T01:15:38+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
 "id": "47a4907f4c1f",
@@ -7924,94 +8014,64 @@
 "seen": "2026-11-18T16:15:44+00:00"
 },
 {
-"id": "0f9f798535c3",
-"t": "LMT",
-"title": "Aerostat Systems - Global Strategic Business Report 2026: Capitalize on a $33.5 Billion Market by 2032 as Lockheed Martin, L3Harris, RTX, and Israel Aerospace Industries Accelerate Competition",
-"url": "https://finance.yahoo.com/technology/articles/aerostat-systems-global-strategic-business-152600119.html?.tsrc=rss",
-"pub": "2026-11-18T15:26:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "75a1b162f5e2",
+"t": "",
+"title": "JBIC chair: seeks larger Japanese role in selecting projects under $550 billion U.S. initiative",
+"url": "https://www.financialjuice.com/News/9859273/JBIC-chair-seeks-larger-Japanese-role-in-selecting-projects-under-550-billion-US-initiative.aspx?xy=rss",
+"pub": "2026-11-19T05:05:03+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
-"id": "e176ae3fffec",
-"t": "TSLA",
-"title": "Should You Buy the Worst-Performing Magnificent Seven Stock of 2026 Before 2027?",
-"url": "https://www.fool.com/investing/2026/11/18/should-you-buy-the-worst-performing-magnificent-seven-stock-of-2026-before-2027/?.tsrc=rss",
-"pub": "2026-11-18T15:25:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "ccbb4f95381b",
+"t": "",
+"title": "Putin tells Trump: pleased to meet him - RIA",
+"url": "https://www.financialjuice.com/News/9859272/Putin-tells-Trump-pleased-to-meet-him---RIA.aspx?xy=rss",
+"pub": "2026-11-19T05:04:52+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
-"id": "1b5d8d5e586e",
-"t": "NVDA",
-"title": "How Nvidia’s (NVDA) Planned $10 Billion Anthropic Investment Deepens Its AI Ties",
-"url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-planned-10-billion-152453901.html?.tsrc=rss",
-"pub": "2026-11-18T15:24:53+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "51c5886a825b",
+"t": "",
+"title": "Walmart is set to report earnings before the bell. Here's what to expect",
+"url": "https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html",
+"pub": "2026-11-19T05:01:01+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
-"id": "88386ed61973",
-"t": "MO",
-"title": "Altria or Bristol Myers Squibb: The One Dividend Stock I’d Hold for the Next 20 Years",
-"url": "https://www.tikr.com/blog/altria-or-bristol-myers-squibb-the-one-dividend-stock-id-hold-for-the-next-20-years?ref=yahoofinancedividend&tlnk=yf-261118-r5x59r6j&.tsrc=rss",
-"pub": "2026-11-18T15:23:52+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "3c2129ec727f",
+"t": "",
+"title": "Trump meeting with Russia's Putin at APEC wraps up: pool report",
+"url": "https://www.financialjuice.com/News/9859244/Trump-meeting-with-Russias-Putin-at-APEC-wraps-up-pool-report.aspx?xy=rss",
+"pub": "2026-11-19T05:00:38+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
-"id": "37f4afaa3a75",
-"t": "UNH",
-"title": "George Soros and 26 Other Big Funds Sold UnitedHealth Last Quarter, While 12 Bought. Who’s Right?",
-"url": "https://www.tikr.com/blog/george-soros-and-26-other-big-funds-sold-unitedhealth-last-quarter-while-12-bought-whos-right?ref=yahoofinance&tlnk=yf-261118-gf6wr732&.tsrc=rss",
-"pub": "2026-11-18T15:23:24+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "2071f147c858",
+"t": "",
+"title": "Is China Winning the Artificial Intelligence Race That Matters?",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/is-china-winning-the-artificial-intelligence-race-that-matters",
+"pub": "2026-11-19T05:00:05+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
-"id": "d854116e051e",
-"t": "AVGO",
-"title": "How Broadcom’s (AVGO) Anthropic Equipment Leases Link AI Growth to Financing",
-"url": "https://finance.yahoo.com/technology/ai/articles/broadcom-avgo-anthropic-equipment-leases-152302941.html?.tsrc=rss",
-"pub": "2026-11-18T15:23:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
-},
-{
-"id": "db342119c3f6",
-"t": "MSFT",
-"title": "Microsoft Makes Its AI Case After Global Outage and Anthropic Challenge",
-"url": "https://finance.yahoo.com/m/63642b52-4749-3965-bc0a-807276946b06/microsoft-makes-its-ai-case.html?.tsrc=rss",
-"pub": "2026-11-18T15:23:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:43:52+00:00"
-},
-{
-"id": "f1484024e1e7",
-"t": "BABA",
-"title": "5 Big Funds Bought Alibaba Last Quarter. Is It a Buy Before Earnings?",
-"url": "https://www.tikr.com/blog/alibaba-stock-funds-buying-before-earnings?ref=yahoofinance&tlnk=yf-261118-qjjm7qr6&.tsrc=rss",
-"pub": "2026-11-18T15:22:53+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
-},
-{
-"id": "480afa42c828",
-"t": "SKHY",
-"title": "George Soros and 12 Other Big Funds Sold ServiceNow Last Quarter, While 25 Bought. Who’s Right?",
-"url": "https://www.tikr.com/blog/george-soros-and-12-other-big-funds-sold-servicenow-last-quarter-while-25-bought-whos-right?ref=yahoofinance&tlnk=yf-261118-4jq3h84q&.tsrc=rss",
-"pub": "2026-11-18T15:22:22+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "4e0b5e8dec9c",
+"t": "",
+"title": "Anthropic Shares Indicated More Than 20% Higher on Gray Markets",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-shares-indicated-more-than-20-higher-on-gray-markets",
+"pub": "2026-11-19T05:00:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
 "id": "f890c8f3f727",
@@ -8812,6 +8872,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-19T02:44:30+00:00"
+},
+{
+"id": "0d4aad362bf0",
+"t": "",
+"title": "Critical Metals Corp (9O2.F) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPS0NjaFpGdGQ4RkZpZVZqVHAwM21ONGVoaFdqVjZNbG5LSW1uSXBnN09pMDJxaW81QXpQZFZnTUlYQ25saEhHLVhneXlVQVBzUFFrMkR2V3Nta29hdU5EQWE4VU1tT29uS3g3eldvTlVuVnlsNWRvR1dacmZUN3BYbGpB?oc=5",
+"pub": "2026-11-19T02:24:07+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T05:14:02+00:00"
 },
 {
 "id": "46a97c071305",
@@ -10942,76 +11012,6 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "660e5768dfaa",
-"t": "",
-"title": "Microsoft CEO Nadella: rediscovering that software engineering remains vibrant and will flourish",
-"url": "https://www.financialjuice.com/News/9858696/Microsoft-CEO-Nadella-rediscovering-that-software-engineering-remains-vibrant-and-will-flourish.aspx?xy=rss",
-"pub": "2026-11-18T22:33:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "b6e4031acaaf",
-"t": "",
-"title": "Microsoft CEO Nadella: Agents will have guidelines to conduct commerce",
-"url": "https://www.financialjuice.com/News/9858695/Microsoft-CEO-Nadella-Agents-will-have-guidelines-to-conduct-commerce.aspx?xy=rss",
-"pub": "2026-11-18T22:33:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "7805a977b1c1",
-"t": "",
-"title": "Microsoft CEO Nadella: rediscovering that software engineering remains vibrant and will flourish",
-"url": "https://www.financialjuice.com/News/9858696/Microsoft-CEO-Nadella-rediscovering-that-software-engineering-remains-vibrant-and-will-flourish.aspx",
-"pub": "2026-11-18T22:33:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "805266a47265",
-"t": "",
-"title": "Microsoft CEO Nadella: Agents will have guidelines to conduct commerce",
-"url": "https://www.financialjuice.com/News/9858695/Microsoft-CEO-Nadella-Agents-will-have-guidelines-to-conduct-commerce.aspx",
-"pub": "2026-11-18T22:33:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "eb7a7c5908a1",
-"t": "",
-"title": "Weil Gotshal’s Bankruptcy Team Heading to Skadden",
-"url": "https://www.wsj.com/business/weil-gotshals-bankruptcy-team-heading-to-skadden-feb22b3b?mod=rss_markets_main",
-"pub": "2026-11-18T22:31:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "1ec5aac37abf",
-"t": "",
-"title": "Microsoft CEO Nadella: rediscovering the software engineering core",
-"url": "https://www.financialjuice.com/News/9858673/Microsoft-CEO-Nadella-rediscovering-the-software-engineering-core.aspx?xy=rss",
-"pub": "2026-11-18T22:26:59+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "12bfa4da869b",
-"t": "",
-"title": "Microsoft CEO Nadella: rediscovering the software engineering core",
-"url": "https://www.financialjuice.com/News/9858673/Microsoft-CEO-Nadella-rediscovering-the-software-engineering-core.aspx",
-"pub": "2026-11-18T22:26:59+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
 }
 ]
 }
