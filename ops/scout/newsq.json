@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-19 11:44",
-"rot": 116,
+"updated_kst": "2026-11-19 11:52",
+"rot": 176,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "43건",
+"Reuters": "45건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -114,6 +114,16 @@
 "seen": "2026-11-19T02:44:30+00:00"
 },
 {
+"id": "6e30d74bc704",
+"t": "INFQ",
+"title": "Infleqtion (INFQ) Stock Fair Value Falls As Analysts Reassess Commercialization Risks",
+"url": "https://finance.yahoo.com/markets/stocks/articles/infleqtion-infq-stock-fair-value-021210452.html?.tsrc=rss",
+"pub": "2026-11-19T02:12:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:52:00+00:00"
+},
+{
 "id": "f8916dca48bd",
 "t": "VST",
 "title": "Vistra (VST) Could Be 23% Undervalued After Fresh Guidance And Earnings",
@@ -182,6 +192,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "f534fabae8cb",
+"t": "SPCX",
+"title": "Elon Musk Says Nvidia Made a ‘Mistake’ by Parting Ways With  Jensen Huang: Calls Ex-CEO ‘Michael Jordan Perhaps at His Peak Level’",
+"url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-says-nvidia-made-014213735.html?.tsrc=rss",
+"pub": "2026-11-19T01:42:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
 "id": "de14434cc39e",
@@ -282,6 +302,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T02:44:30+00:00"
+},
+{
+"id": "e7f54781efc9",
+"t": "CME",
+"title": "Gold Falls Towards $3,700. Schiff Says Fed Risks Financial Crisis in Inflation Fight",
+"url": "https://beincrypto.com/gold-14-month-low-schiff-fed/?.tsrc=rss",
+"pub": "2026-11-19T01:05:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
 "id": "461c0ed9b944",
@@ -1584,6 +1614,16 @@
 "seen": "2026-11-18T22:14:53+00:00"
 },
 {
+"id": "094015dd7506",
+"t": "SPY",
+"title": "S&P 500 Breaks Critical Support: Is a Bigger Stock Market Crash Coming?",
+"url": "https://beincrypto.com/sp-500-loses-200-day-average/?.tsrc=rss",
+"pub": "2026-11-18T21:56:43+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:52:00+00:00"
+},
+{
 "id": "d3be496df7ff",
 "t": "NVDA",
 "title": "Global-e Online Ltd. Q3 2026 Earnings Call Summary",
@@ -2574,6 +2614,16 @@
 "seen": "2026-11-18T20:54:03+00:00"
 },
 {
+"id": "84e1893c3060",
+"t": "CRM",
+"title": "‘The Software Bears Are Dead Wrong,’ Says Marc Benioff. Why ServiceNow Stock Looks Like the Better Buy Than Salesforce.",
+"url": "https://www.barchart.com/story/news/8903761/the-software-bears-are-dead-wrong-says-marc-benioff-why-servicenow-stock-looks-like-the-better-buy-than-salesforce?.tsrc=rss",
+"pub": "2026-11-18T20:23:39+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:52:00+00:00"
+},
+{
 "id": "afd6d427b810",
 "t": "AMZN",
 "title": "Generac Jolted After Nvidia Earnings. Why It’s a Top S&P 500 Stock Today.",
@@ -2812,6 +2862,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T19:58:05+00:00"
+},
+{
+"id": "d76de76d47be",
+"t": "CRCL",
+"title": "Binance Wins Court Order to Recover 45% of Its Stolen Funds",
+"url": "https://beincrypto.com/binance-court-order-frozen-hack-crypto/?.tsrc=rss",
+"pub": "2026-11-18T19:52:37+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
 "id": "8d83287bb033",
@@ -3512,6 +3572,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T20:15:31+00:00"
+},
+{
+"id": "539c25028d12",
+"t": "GEV",
+"title": "BrightAI Announces $97 Million Investment to Scale Physical AI Across the World’s Essential Services",
+"url": "https://finance.yahoo.com/technology/ai/articles/brightai-announces-97-million-investment-150000194.html?.tsrc=rss",
+"pub": "2026-11-18T19:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
 "id": "b3a430848b7c",
@@ -7944,74 +8014,64 @@
 "seen": "2026-11-18T15:44:08+00:00"
 },
 {
-"id": "4b090df2aaff",
-"t": "ORCL",
-"title": "Artificial Intelligence (AI) in Reverse Logistics Market Report 2026 | Capitalize on AI Returns and Circular Commerce Through 2030 with Microsoft, IBM, Oracle, SAP and Honeywell",
-"url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-reverse-logistics-150500944.html?.tsrc=rss",
-"pub": "2026-11-18T15:05:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "c8abc7cbfac9",
+"t": "",
+"title": "Putin: invites all regional partners to use Russia's transport network, some already utilizing it",
+"url": "https://www.financialjuice.com/News/9859126/Putin-invites-all-regional-partners-to-use-Russias-transport-network-some-already-utilizing-it.aspx?xy=rss",
+"pub": "2026-11-19T02:51:52+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
-"id": "189cfc9fcc88",
-"t": "GOOGL",
-"title": "Microsoft Price Prediction: Analysts’ Target Clears the 52-Week High",
-"url": "https://247wallst.com/investing/2026/11/18/microsoft-price-prediction-analysts-target-clears-the-52-week-high/?.tsrc=rss",
-"pub": "2026-11-18T15:04:18+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "617954f967cb",
+"t": "",
+"title": "Saudi civil defense issues warning of possible threat in As-Sulayyil governorate in Riyadh region",
+"url": "https://www.financialjuice.com/News/9859125/Saudi-civil-defense-issues-warning-of-possible-threat-in-As-Sulayyil-governorate-in-Riyadh-region.aspx?xy=rss",
+"pub": "2026-11-19T02:51:06+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
-"id": "3ab4114b04a3",
-"t": "ORCL",
-"title": "Global Asset Tracking Artificial Intelligence (AI) Market Report 2026 | Capture 18.9% CAGR as Verizon, Cisco, Oracle, and Zebra Scale IoT, Edge AI, and Digital Twins to 2030",
-"url": "https://finance.yahoo.com/technology/ai/articles/global-asset-tracking-artificial-intelligence-150400124.html?.tsrc=rss",
-"pub": "2026-11-18T15:04:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "ed1ffe4a2865",
+"t": "",
+"title": "Saudi civil defense issues warning of potential hazard in Wadi Al-Dawasir, Riyadh region",
+"url": "https://www.financialjuice.com/News/9859124/Saudi-civil-defense-issues-warning-of-potential-hazard-in-Wadi-Al-Dawasir-Riyadh-region.aspx?xy=rss",
+"pub": "2026-11-19T02:50:16+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
-"id": "0a3d560033bb",
-"t": "MSFT",
-"title": "Esker Redefines the Source-to-Pay Experience with Microsoft Copilot",
-"url": "https://finance.yahoo.com/technology/ai/articles/esker-redefines-source-pay-experience-150400697.html?.tsrc=rss",
-"pub": "2026-11-18T15:04:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "e6751e8a786f",
+"t": "",
+"title": "Russia's Putin at APEC: Russia supports regional energy stability, partners can always rely on Moscow",
+"url": "https://www.financialjuice.com/News/9859123/Russias-Putin-at-APEC-Russia-supports-regional-energy-stability-partners-can-always-rely-on-Moscow.aspx?xy=rss",
+"pub": "2026-11-19T02:50:16+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
-"id": "6be945c7f6c6",
-"t": "NBIS",
-"title": "Nvidia’s Strong Earnings Let It Dodge the Jensen Huang Question, for Now",
-"url": "https://finance.yahoo.com/m/5718b86b-6ce6-3b91-9ca3-32db15372111/nvidia%E2%80%99s-strong-earnings-let.html?.tsrc=rss",
-"pub": "2026-11-18T15:04:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:43:52+00:00"
+"id": "63a06e16d1a8",
+"t": "",
+"title": "At APEC: Russia boosts regional energy security, partners can always rely on Moscow",
+"url": "https://www.financialjuice.com/News/9859122/At-APEC-Russia-boosts-regional-energy-security-partners-can-always-rely-on-Moscow.aspx?xy=rss",
+"pub": "2026-11-19T02:49:59+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
-"id": "857fdece59a3",
-"t": "NVDA",
-"title": "Target betting big on the holidays after a surprisingly strong quarter",
-"url": "https://finance.yahoo.com/video/target-betting-big-on-the-holidays-after-a-surprisingly-strong-quarter-150328476.html?.tsrc=rss",
-"pub": "2026-11-18T15:03:28+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
-},
-{
-"id": "482189bc48eb",
-"t": "ROK",
-"title": "Is Eaton A Better Data Center Play Than Rockwell?",
-"url": "https://www.trefis.com/stock/rok/articles/626133/is-eaton-a-better-data-center-play-than-rockwell/2026-11-18?.tsrc=rss",
-"pub": "2026-11-18T15:03:28+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "e0a647bddb43",
+"t": "",
+"title": "Russia's Putin at APEC: Russia backs final communique",
+"url": "https://www.financialjuice.com/News/9859121/Russias-Putin-at-APEC-Russia-backs-final-communique.aspx?xy=rss",
+"pub": "2026-11-19T02:48:01+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
 "id": "230dbdfaa742",
@@ -9744,6 +9804,16 @@
 "seen": "2026-11-19T01:58:01+00:00"
 },
 {
+"id": "4a4d1d1182f7",
+"t": "",
+"title": "Sonoro Energy Ltd (SNVFF.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9DNlNIR05NS0FObGxtR25SNVVuVTl3ZHM2YkxlVlVKNXRibWR1TUNZSUFob1dvazdrUmRiUldoSHZlN3FkblM0MjR1bjR1bWRqQkpqYnBHRzVzWWkzbzkwTkgtS2NXM2JBSm9OVVNn?oc=5",
+"pub": "2026-11-18T22:55:06+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T02:52:00+00:00"
+},
+{
 "id": "11a090ea47f1",
 "t": "",
 "title": "Former SEC Chair Gary Gensler Warns Anthropic’s Cash Flow Poses Big Risk To AI Economy",
@@ -9792,6 +9862,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T00:43:43+00:00"
+},
+{
+"id": "f357ee03334b",
+"t": "",
+"title": "Themis Medicare Ltd (THEM.BO) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9OT3ZNSmc0SFhUNjREdWFFZTNLM2tfZ2l4S0ozcm5NaFM0V285ZkluS1BOdUtGZzRFVVB4NTFfU2pDNExpYkdSVDN2bEJBZzdKTnBvUTc5SFQwcEpaeTQtMmt1WWhZejZhdkc0bw?oc=5",
+"pub": "2026-11-18T22:52:29+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T02:52:00+00:00"
 },
 {
 "id": "2b07a89a7412",
@@ -10932,86 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T21:14:22+00:00"
-},
-{
-"id": "2b38aa367f0b",
-"t": "",
-"title": "US TIC Long-Term Transactions Actual 155.3B (Forecast -, Previous 279.2B ,Revision 285.0B)",
-"url": "https://www.financialjuice.com/News/9858554/US-TIC-Long-Term-Transactions-Actual-1553B-Forecast---Previous-2792B-Revision-2850B.aspx",
-"pub": "2026-11-18T21:02:13+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "5f96e781eea4",
-"t": "",
-"title": "KGI Securities (Thailand) PCL (LPGOLD13x.BK) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1SeldKOEFjbVFSNWNNZ3BIaGNQcllhekdrRjVWc3R3eEJpMmk2RWlvMThPWWVueTU0SXQxc0tkTkRlYWJzWGJ1bVJOMzhwY2J6a3FkUGNiaHB2bmsyamNvb1V6M0hnM3g2MzBKNzB0dVpMcjYzbWg5SERB?oc=5",
-"pub": "2026-11-18T20:59:55+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T23:14:48+00:00"
-},
-{
-"id": "d4a5b84946a8",
-"t": "",
-"title": "Trump has raised the cases of Youlin Chen and Min Zin to China’s President Xi - ABC.",
-"url": "https://www.financialjuice.com/News/9858553/Trump-has-raised-the-cases-of-Youlin-Chen-and-Min-Zin-to-Chinas-President-Xi---ABC.aspx?xy=rss",
-"pub": "2026-11-18T20:58:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T21:14:22+00:00"
-},
-{
-"id": "1b2f9913f855",
-"t": "",
-"title": "Trump has raised the cases of Youlin Chen and Min Zin to China’s President Xi - ABC.",
-"url": "https://www.financialjuice.com/News/9858553/Trump-has-raised-the-cases-of-Youlin-Chen-and-Min-Zin-to-Chinas-President-Xi---ABC.aspx",
-"pub": "2026-11-18T20:58:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "d50c30baf7b6",
-"t": "",
-"title": "US weighs new penalties on China over jailed Americans - ABC.",
-"url": "https://www.financialjuice.com/News/9858551/US-weighs-new-penalties-on-China-over-jailed-Americans---ABC.aspx?xy=rss",
-"pub": "2026-11-18T20:57:16+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T21:14:22+00:00"
-},
-{
-"id": "14a9b5ea87a4",
-"t": "",
-"title": "US weighs new penalties on China over jailed Americans - ABC.",
-"url": "https://www.financialjuice.com/News/9858551/US-weighs-new-penalties-on-China-over-jailed-Americans---ABC.aspx",
-"pub": "2026-11-18T20:57:16+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "9e97f665a1cb",
-"t": "",
-"title": "MOC Imbalance",
-"url": "https://www.financialjuice.com/News/9858550/MOC-Imbalance.aspx?xy=rss",
-"pub": "2026-11-18T20:50:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T20:54:03+00:00"
-},
-{
-"id": "58408d88b381",
-"t": "",
-"title": "MOC Imbalance",
-"url": "https://www.financialjuice.com/News/9858550/MOC-Imbalance.aspx",
-"pub": "2026-11-18T20:50:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
 }
 ]
 }
