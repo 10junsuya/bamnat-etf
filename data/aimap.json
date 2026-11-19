@@ -1,0 +1,843 @@
+{
+ "updated_kst": "2026-11-19",
+ "note": "AI 국가 프로젝트가 AI 생태계 8개 층 중 어디에 들어가는지. 근거는 회사 발표·정부 문서·보도로 표시.",
+ "layers": [
+  [
+   "pol",
+   "정책",
+   "정책·규제"
+  ],
+  [
+   "money",
+   "자금",
+   "돈 (투자·금융)"
+  ],
+  [
+   "power",
+   "전력",
+   "전력"
+  ],
+  [
+   "dc",
+   "센터",
+   "데이터센터"
+  ],
+  [
+   "chip",
+   "칩",
+   "칩·메모리"
+  ],
+  [
+   "cloud",
+   "운영",
+   "클라우드·운영"
+  ],
+  [
+   "model",
+   "모델",
+   "AI 모델"
+  ],
+  [
+   "use",
+   "활용",
+   "활용"
+  ]
+ ],
+ "projects": [
+  {
+   "id": "sgus",
+   "r": "미국",
+   "n": "스타게이트 (미국)",
+   "d": "2025.1",
+   "st": "진행 · 애빌린 8개 동 중 4개 가동 (Epoch AI 추정, 2026.10)",
+   "L": {
+    "pol": {
+     "t": "백악관에서 발표",
+     "ev": "회사 발표",
+     "co": []
+    },
+    "money": {
+     "t": "소프트뱅크 재무·OpenAI 운영 책임, 최대 {5,000억 달러} 목표",
+     "ev": "회사 발표",
+     "co": [
+      "소프트뱅크",
+      "OpenAI",
+      "오라클",
+      "MGX"
+     ]
+    },
+    "power": {
+     "t": "밀람 부지 SB 에너지, 뉴멕시코 부지 연료전지",
+     "ev": "보도",
+     "co": [
+      "SB 에너지",
+      "블룸 에너지"
+     ]
+    },
+    "dc": {
+     "t": "애빌린 크루소, 섀클퍼드 밴티지, 뉴멕시코 STACK, 미시간 릴레이티드",
+     "ev": "보도",
+     "co": [
+      "크루소",
+      "밴티지",
+      "STACK",
+      "릴레이티드 디지털"
+     ]
+    },
+    "chip": {
+     "t": "초기 기술 파트너",
+     "ev": "회사 발표",
+     "co": [
+      "엔비디아",
+      "Arm"
+     ]
+    },
+    "cloud": {
+     "t": "부지 대부분 하드웨어는 오라클, 밀람·오하이오는 소프트뱅크 보유",
+     "ev": "보도",
+     "co": [
+      "오라클",
+      "소프트뱅크"
+     ]
+    },
+    "model": {
+     "t": "GPT-5.5를 애빌린에서 학습",
+     "ev": "회사 발표",
+     "co": [
+      "OpenAI"
+     ]
+    }
+   },
+   "src": [
+    [
+     "TechCrunch · 스타게이트 발표",
+     "https://techcrunch.com/2025/01/21/openai-teams-up-with-softbank-and-oracle-on-50b-data-center-project"
+    ],
+    [
+     "Epoch AI · 미국 부지 현황",
+     "https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand"
+    ],
+    [
+     "OpenAI · 컴퓨팅 인프라",
+     "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age/"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "aap",
+   "r": "미국",
+   "n": "AI 행동계획",
+   "d": "2025.7",
+   "st": "정책 · 행정명령 3개",
+   "L": {
+    "pol": {
+     "t": "3대 축: 혁신·인프라·외교안보",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "power": {
+     "t": "데이터센터·에너지 인허가 가속",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "dc": {
+     "t": "연방 부지 활용, 환경 심사 간소화",
+     "ev": "보도",
+     "co": []
+    },
+    "chip": {
+     "t": "미국 AI 기술 묶음 수출 장려, 수출 통제 강화",
+     "ev": "보도",
+     "co": []
+    },
+    "model": {
+     "t": "연방 정부 AI 조달 기준",
+     "ev": "정부 문서",
+     "co": []
+    }
+   },
+   "src": [
+    [
+     "Hunton · 행동계획과 행정명령",
+     "https://www.hunton.com/privacy-and-cybersecurity-law-blog/trump-administration-issues-ai-action-plan-and-ai-executive-orders"
+    ],
+    [
+     "Jones Day · 행정명령 정리",
+     "https://www.jonesday.com/en/insights/2025/08/white-house-issues-executive-orders-on-ai-action-plan"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "gen",
+   "r": "미국",
+   "n": "제네시스 미션",
+   "d": "2025.11",
+   "st": "정책 · 행정명령",
+   "L": {
+    "pol": {
+     "t": "에너지부가 수행",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "dc": {
+     "t": "국립연구소 고성능 컴퓨팅이 바탕",
+     "ev": "보도",
+     "co": []
+    },
+    "model": {
+     "t": "연방 과학 데이터로 과학용 AI 모델",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "use": {
+     "t": "단백질 구조부터 핵융합까지 연구 가속",
+     "ev": "보도",
+     "co": []
+    }
+   },
+   "src": [
+    [
+     "백악관 · 행정명령 원문",
+     "https://www.whitehouse.gov/presidential-actions/2025/11/launching-the-genesis-mission/"
+    ],
+    [
+     "Nextgov · 제네시스 미션",
+     "https://www.nextgov.com/artificial-intelligence/2025/11/white-house-launches-genesis-mission-spur-ai-federal-assets/409777"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "ohio",
+   "r": "미국",
+   "n": "오하이오 PORTS 캠퍼스",
+   "d": "2026.3",
+   "st": "계획",
+   "L": {
+    "pol": {
+     "t": "상무부·에너지부, 옛 우라늄 농축 부지 재개발",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "money": {
+     "t": "일본 투자 {333억 달러} (미일 무역 합의)",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "power": {
+     "t": "발전 {10GW} (가스 9.2GW) + 송전망",
+     "ev": "정부 문서",
+     "co": [
+      "SB 에너지",
+      "AEP 오하이오"
+     ]
+    },
+    "dc": {
+     "t": "{10GW} 데이터센터 캠퍼스",
+     "ev": "정부 문서",
+     "co": [
+      "소프트뱅크"
+     ]
+    }
+   },
+   "src": [
+    [
+     "AP · 오하이오 10GW 발표",
+     "https://wtop.com/national/2026/03/trump-officials-announce-10-gigawatt-data-center-gas-plants-for-former-ohio-uranium-site/"
+    ],
+    [
+     "MeriTalk · 에너지부·상무부 협력",
+     "https://www.meritalk.com/?p=206102"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "intel",
+   "r": "미국",
+   "n": "칩법 → 인텔 지분",
+   "d": "2025.8",
+   "st": "완료",
+   "L": {
+    "pol": {
+     "t": "보조금을 지분으로 전환",
+     "ev": "보도",
+     "co": []
+    },
+    "money": {
+     "t": "{89억 달러} → 지분 9.9%",
+     "ev": "회사 발표",
+     "co": [
+      "인텔"
+     ]
+    },
+    "chip": {
+     "t": "미국 내 반도체 제조",
+     "ev": "보도",
+     "co": [
+      "인텔"
+     ]
+    }
+   },
+   "src": [
+    [
+     "Engadget · 인텔 지분",
+     "https://www.engadget.com/big-tech/the-us-government-is-taking-a-10-percent-stake-in-intel-205047622.html"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "uae",
+   "r": "중동",
+   "n": "스타게이트 UAE",
+   "d": "2025.5",
+   "st": "착공 · 첫 200MW 2026 목표",
+   "L": {
+    "pol": {
+     "t": "5GW 미국–UAE AI 캠퍼스 안",
+     "ev": "회사 발표",
+     "co": []
+    },
+    "money": {
+     "t": "소프트뱅크 참여",
+     "ev": "회사 발표",
+     "co": [
+      "소프트뱅크"
+     ]
+    },
+    "power": {
+     "t": "원자력·태양광·가스",
+     "ev": "보도",
+     "co": []
+    },
+    "dc": {
+     "t": "G42(카즈나)가 {1GW} 건설",
+     "ev": "회사 발표",
+     "co": [
+      "G42"
+     ]
+    },
+    "chip": {
+     "t": "GB300 시스템 공급",
+     "ev": "회사 발표",
+     "co": [
+      "엔비디아"
+     ]
+    },
+    "cloud": {
+     "t": "OpenAI·오라클 운영, 시스코 네트워크·보안",
+     "ev": "회사 발표",
+     "co": [
+      "OpenAI",
+      "오라클",
+      "시스코"
+     ]
+    }
+   },
+   "src": [
+    [
+     "Intelligent CIO · 발표",
+     "https://www.intelligentcio.com/me/2025/05/23/g42-openai-oracle-nvidia-softbank-cisco-launch-stargate-uae-from-uae-us-ai-campus-in-abu-dhabi/"
+    ],
+    [
+     "Gulf News · 공사 진행",
+     "https://gulfnews.com/business/markets/stargate-uae-first-phase-of-200mw-to-complete-by-2026-1.500310364"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "humain",
+   "r": "중동",
+   "n": "사우디 휴메인",
+   "d": "2025.5",
+   "st": "진행",
+   "L": {
+    "money": {
+     "t": "사우디 국부펀드(PIF) 자회사",
+     "ev": "보도",
+     "co": [
+      "휴메인"
+     ]
+    },
+    "dc": {
+     "t": "엔비디아용 500MW, AMD용 500MW 계획",
+     "ev": "보도",
+     "co": [
+      "휴메인"
+     ]
+    },
+    "chip": {
+     "t": "엔비디아 GB300 18,000개, AMD와 {100억 달러} 공동 투자",
+     "ev": "보도",
+     "co": [
+      "엔비디아",
+      "AMD"
+     ]
+    },
+    "cloud": {
+     "t": "AWS와 AI 존 50억 달러 이상, 시스코 협력",
+     "ev": "보도",
+     "co": [
+      "아마존 AWS",
+      "시스코"
+     ]
+    },
+    "model": {
+     "t": "아랍어 언어 모델 개발",
+     "ev": "보도",
+     "co": [
+      "휴메인"
+     ]
+    }
+   },
+   "src": [
+    [
+     "The Batch · 중동 AI 거래",
+     "https://www.deeplearning.ai/the-batch/nvidia-amd-amazon-and-others-strike-deals-with-saudi-arabias-humain-and-g42-in-the-uae/"
+    ],
+    [
+     "DCD · 휴메인 GB300",
+     "https://www.datacenterdynamics.com/en/news/saudi-arabian-ai-venture-humain-buys-18000-nvidia-gb300-chips-several-hundred-thousand-more-on-the-way/"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "nor",
+   "r": "유럽",
+   "n": "스타게이트 노르웨이",
+   "d": "2025.7",
+   "st": "주인 바뀜 · 2026.4",
+   "w": 1,
+   "L": {
+    "power": {
+     "t": "수력 재생에너지",
+     "ev": "보도",
+     "co": []
+    },
+    "dc": {
+     "t": "나르비크 230MW",
+     "ev": "회사 발표",
+     "co": [
+      "Nscale",
+      "Aker"
+     ]
+    },
+    "chip": {
+     "t": "엔비디아 GPU",
+     "ev": "회사 발표",
+     "co": [
+      "엔비디아"
+     ]
+    },
+    "cloud": {
+     "t": "OpenAI가 빠지고 마이크로소프트가 임차",
+     "ev": "보도",
+     "co": [
+      "마이크로소프트",
+      "OpenAI"
+     ]
+    }
+   },
+   "src": [
+    [
+     "OpenAI · 스타게이트 노르웨이",
+     "https://openai.com/ko-KR/index/introducing-stargate-norway/"
+    ],
+    [
+     "Techzine · 마이크로소프트 인수",
+     "https://techzine.eu/news/infrastructure/140487/openai-scales-back-stargate-in-europe-microsoft-fills-the-gap"
+    ]
+   ],
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "uk",
+   "r": "유럽",
+   "n": "스타게이트 UK",
+   "d": "2025.9",
+   "st": "보류 · 2026.4",
+   "w": 1,
+   "L": {
+    "pol": {
+     "t": "미–영 기술 협력, AI 성장 구역",
+     "ev": "회사 발표",
+     "co": []
+    },
+    "dc": {
+     "t": "Nscale 여러 부지 (코발트 파크 등)",
+     "ev": "회사 발표",
+     "co": [
+      "Nscale"
+     ]
+    },
+    "chip": {
+     "t": "엔비디아 GPU, 엔비디아가 Nscale 지분 투자",
+     "ev": "보도",
+     "co": [
+      "엔비디아"
+     ]
+    },
+    "cloud": {
+     "t": "OpenAI 보류 (에너지 비용·규제)",
+     "ev": "보도",
+     "co": [
+      "OpenAI"
+     ]
+    }
+   },
+   "src": [
+    [
+     "OpenAI · 스타게이트 UK",
+     "https://openai.com/index/introducing-stargate-uk/"
+    ],
+    [
+     "ITPro · 보류와 노르웨이",
+     "https://www.itpro.com/infrastructure/has-another-openai-stargate-project-hit-the-rocks"
+    ]
+   ],
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "eu",
+   "r": "유럽",
+   "n": "EU AI 기가팩토리",
+   "d": "2025.2",
+   "st": "공모 마감 2026.11.12",
+   "L": {
+    "pol": {
+     "t": "InvestAI · AI 대륙 행동계획",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "money": {
+     "t": "{200억 유로} 기금, 유럽투자은행 협력",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "dc": {
+     "t": "최대 7곳, 첫 착공 2027 목표",
+     "ev": "보도",
+     "co": []
+    },
+    "chip": {
+     "t": "곳당 최신 AI 칩 약 10만 개",
+     "ev": "정부 문서",
+     "co": []
+    },
+    "model": {
+     "t": "초대형 AI 모델 학습용",
+     "ev": "정부 문서",
+     "co": []
+    }
+   },
+   "src": [
+    [
+     "유럽연합 집행위 · AI 기가팩토리",
+     "https://commission.europa.eu/topics/competitiveness/competitiveness-coordination-tool-projects/ai-gigafactories_en"
+    ],
+    [
+     "DCD · 200억 유로",
+     "https://datacenterdynamics.com/en/news/eu-allocates-20bn-to-developing-four-ai-gigafactories"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "arg",
+   "r": "남미",
+   "n": "스타게이트 아르헨티나",
+   "d": "2025.10",
+   "st": "의향서",
+   "L": {
+    "money": {
+     "t": "{250억 달러} 계획",
+     "ev": "보도",
+     "co": []
+    },
+    "power": {
+     "t": "재생에너지 결합",
+     "ev": "보도",
+     "co": [
+      "Sur Energy"
+     ]
+    },
+    "dc": {
+     "t": "Sur Energy 컨소시엄",
+     "ev": "보도",
+     "co": [
+      "Sur Energy"
+     ]
+    },
+    "use": {
+     "t": "정부 업무에 OpenAI 도입 계획",
+     "ev": "보도",
+     "co": [
+      "OpenAI"
+     ]
+    }
+   },
+   "src": [
+    [
+     "LLMBase · 아르헨티나 의향서",
+     "https://llmbase.ai/news/openai-argentina-stargate-project-targets-latin-american-ai-infrastructure"
+    ],
+    [
+     "W.Media · 투자 규모",
+     "https://w.media/after-uk-exit-stargate-pulls-out-of-norway-data-center-deal-as-microsoft-takes-over/"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "sgkr",
+   "r": "한국",
+   "n": "스타게이트 한국 참여",
+   "d": "2025.10",
+   "st": "의향서·MOU",
+   "L": {
+    "chip": {
+     "t": "메모리 공급 의향서",
+     "ev": "회사 발표",
+     "co": [
+      "삼성전자",
+      "SK하이닉스"
+     ]
+    },
+    "dc": {
+     "t": "SK텔레콤 서남권 AI 데이터센터, 삼성 해상 데이터센터 검토",
+     "ev": "회사 발표",
+     "co": [
+      "SK텔레콤",
+      "삼성물산",
+      "삼성중공업"
+     ]
+    },
+    "use": {
+     "t": "삼성·SK 업무에 ChatGPT 엔터프라이즈",
+     "ev": "회사 발표",
+     "co": []
+    }
+   },
+   "src": [
+    [
+     "뉴스1 · 삼성·SK 오픈AI 동맹",
+     "https://www.news1.kr/amp/industry/general-industry/5932393"
+    ],
+    [
+     "AI매터스 · 스타게이트 합류",
+     "https://aimatters.co.kr/news-report/ai-news/32279/"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "gpu",
+   "r": "한국",
+   "n": "엔비디아 GPU 26만장",
+   "d": "2025.10",
+   "st": "진행 · 2030년까지",
+   "L": {
+    "chip": {
+     "t": "블랙웰 {26만장} 이상",
+     "ev": "회사 발표",
+     "co": [
+      "엔비디아"
+     ]
+    },
+    "dc": {
+     "t": "정부 5만, 삼성·SK·현대차 각 5만, 네이버클라우드 6만",
+     "ev": "보도",
+     "co": [
+      "삼성전자",
+      "SK하이닉스",
+      "SK텔레콤",
+      "현대차그룹",
+      "네이버클라우드"
+     ]
+    },
+    "model": {
+     "t": "정부 몫은 독자 AI 모델·국가AI컴퓨팅센터",
+     "ev": "보도",
+     "co": []
+    },
+    "use": {
+     "t": "반도체 AI 팩토리, 자율주행·로봇",
+     "ev": "보도",
+     "co": [
+      "삼성전자",
+      "현대차그룹"
+     ]
+    }
+   },
+   "src": [
+    [
+     "머니투데이 · 26만장 배분",
+     "https://www.mt.co.kr/tech/2025/10/31/2025103112075597559"
+    ],
+    [
+     "바이라인네트워크 · 기업별 물량",
+     "https://byline.network/2025/10/1031-6/"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "nacc",
+   "r": "한국",
+   "n": "국가AI컴퓨팅센터",
+   "d": "2026.8 착공",
+   "st": "착공 · 2028 완공 목표",
+   "L": {
+    "pol": {
+     "t": "과기정통부 · AI 고속도로 핵심 인프라",
+     "ev": "보도",
+     "co": []
+    },
+    "money": {
+     "t": "국민성장펀드·산업은행·기업은행, {2.5조원} 이상",
+     "ev": "보도",
+     "co": []
+    },
+    "dc": {
+     "t": "해남 솔라시도, 민관 법인 코아크가 건설·운영",
+     "ev": "보도",
+     "co": [
+      "삼성SDS",
+      "삼성물산",
+      "KT"
+     ]
+    },
+    "chip": {
+     "t": "AI 반도체 {1.5만장}, 국산 AI 반도체 검증 구역",
+     "ev": "보도",
+     "co": [
+      "삼성전자"
+     ]
+    },
+    "cloud": {
+     "t": "삼성SDS 컨소시엄",
+     "ev": "보도",
+     "co": [
+      "삼성SDS",
+      "네이버클라우드",
+      "카카오",
+      "KT"
+     ]
+    }
+   },
+   "src": [
+    [
+     "지디넷코리아 · 착공",
+     "https://zdnet.co.kr/view/?no=20260803162041"
+    ],
+    [
+     "아이뉴스24 · 착공",
+     "https://www.inews24.com/view/1991384"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "dopamo",
+   "r": "한국",
+   "n": "독자 AI 파운데이션 모델",
+   "d": "2025~",
+   "st": "3차 평가 앞둠",
+   "L": {
+    "pol": {
+     "t": "과기정통부 · 국가대표 AI 선발",
+     "ev": "보도",
+     "co": []
+    },
+    "model": {
+     "t": "2차 통과 3팀 → 최종 2팀",
+     "ev": "보도",
+     "co": [
+      "LG AI연구원",
+      "SK텔레콤",
+      "업스테이지"
+     ]
+    }
+   },
+   "src": [
+    [
+     "지디넷코리아 · 2차 발표",
+     "https://zdnet.co.kr/view/?no=20260818134310"
+    ],
+    [
+     "뉴스서울 · 2차 결과",
+     "https://newsseoul.co.kr/news/view/1065587410342187"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  },
+  {
+   "id": "kgf",
+   "r": "한국",
+   "n": "국민성장펀드",
+   "d": "2025.12",
+   "st": "진행 · 200조원 확대 보도 있음",
+   "L": {
+    "pol": {
+     "t": "금융위·산업은행 주도",
+     "ev": "보도",
+     "co": []
+    },
+    "money": {
+     "t": "5년 {150조원} · AI 30조, 반도체 약 21조",
+     "ev": "보도",
+     "co": []
+    },
+    "power": {
+     "t": "용인 반도체 클러스터 전력망 등",
+     "ev": "보도",
+     "co": []
+    },
+    "dc": {
+     "t": "국가AI컴퓨팅센터 출자",
+     "ev": "보도",
+     "co": []
+    },
+    "chip": {
+     "t": "반도체 투자 배정",
+     "ev": "보도",
+     "co": []
+    }
+   },
+   "src": [
+    [
+     "파이낸셜뉴스 · 분야별 배정",
+     "https://www.fnnews.com/news/202601091401540839"
+    ],
+    [
+     "서울신문 · 출범",
+     "https://m.seoul.co.kr/news/economy/2025/12/12/20251212008004"
+    ],
+    [
+     "IB토마토 · 200조 확대",
+     "https://www.ibtomato.com/ExternalView.aspx?no=19039&type=1"
+    ]
+   ],
+   "w": 0,
+   "chk": "2026-11-19"
+  }
+ ]
+}

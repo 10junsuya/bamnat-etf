@@ -16,7 +16,7 @@ FILES = {"d-events": "data/events.json", "d-missions": "data/missions.json", "d-
          "d-holdings": "data/holdings.json", "d-live": "data/live.json", "d-macro": "data/macro.json", "d-etfs": "data/etfs.json",
          "d-earnings": "data/earnings.json", "d-track": "data/track.json",
          "d-companies": "data/companies.json", "d-views": "data/views.json",
-         "d-dist": "data/dist.json"}
+         "d-dist": "data/dist.json", "d-aimap": "data/aimap.json"}
 OPTIONAL = {"d-holdings", "d-live", "d-macro", "d-track", "d-views", "d-dist"}  # 자동 수집 파일: 없으면 빈 값으로 넣어요
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 URL = re.compile(r"^https://[^\s<>\"]+$")  # 보안: https 링크만
@@ -342,6 +342,45 @@ def check_dist(d):
                 err("data/dist.json", f"{code}: 구분({h[3]})이 이상해요")
 
 
+def check_aimap(d):
+    """A 화면(AI 국가 프로젝트 지도, data/aimap.json): 층 이름, 근거 꼬리표, 출처 링크, 확인일 모양을 본다."""
+    if not d:
+        err("data/aimap.json", "비어 있어요")
+        return
+    keys = [x[0] for x in d.get("layers", [])]
+    if len(keys) != 8 or len(set(keys)) != 8:
+        err("data/aimap.json", "층(layers)은 서로 다른 8개여야 해요")
+    seen = set()
+    for p in d.get("projects", []):
+        pid = p.get("id")
+        if not pid or pid in seen:
+            err("data/aimap.json", f"프로젝트 id가 없거나 겹쳐요: {pid}")
+        seen.add(pid)
+        for f in ("r", "n", "d", "st", "chk"):
+            if not p.get(f):
+                err("data/aimap.json", f"{pid}: {f} 칸이 비어 있어요")
+        if p.get("chk") and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", p["chk"]):
+            err("data/aimap.json", f"{pid}: 확인일 모양이 이상해요")
+        L = p.get("L", {})
+        if not L:
+            err("data/aimap.json", f"{pid}: 연결된 층이 없어요")
+        for k, v in L.items():
+            if k not in keys:
+                err("data/aimap.json", f"{pid}: 모르는 층 {k}")
+            if v.get("ev") not in ("회사 발표", "정부 문서", "보도"):
+                err("data/aimap.json", f"{pid}/{k}: 근거 꼬리표({v.get('ev')})는 회사 발표·정부 문서·보도 중 하나여야 해요")
+            if not v.get("t"):
+                err("data/aimap.json", f"{pid}/{k}: 설명이 비어 있어요")
+            if "수혜" in v.get("t", ""):
+                err("data/aimap.json", f"{pid}/{k}: '수혜' 표현은 쓰지 않아요")
+        src = p.get("src", [])
+        if not src:
+            err("data/aimap.json", f"{pid}: 출처가 없어요")
+        for s in src:
+            if len(s) != 2 or not str(s[1]).startswith("https://"):
+                err("data/aimap.json", f"{pid}: 출처 링크는 https 로 시작해야 해요")
+
+
 def main():
     embed = "--embed" in sys.argv
     data = {}
@@ -363,6 +402,7 @@ def main():
         check_companies(data["d-companies"], known)
         check_views(data["d-views"], data["d-events"])
         check_dist(data["d-dist"])
+        check_aimap(data["d-aimap"])
         for id_, f in FILES.items():
             check_safety(f, data[id_])
         check_directives(data)
