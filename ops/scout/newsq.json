@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-19 15:44",
-"rot": 120,
+"updated_kst": "2026-11-19 15:54",
+"rot": 1,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "42건",
+"Reuters": "44건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -42,6 +42,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "5ea367cd7b13",
+"t": "AEM",
+"title": "Agnico Eagle Mines (AEM) Draws Fresh Interest After Druckenmiller Takes A Stake",
+"url": "https://finance.yahoo.com/markets/stocks/articles/agnico-eagle-mines-aem-draws-061113843.html?.tsrc=rss",
+"pub": "2026-11-19T06:11:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:54:55+00:00"
 },
 {
 "id": "fc3f8625f2a3",
@@ -1162,6 +1172,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T01:08:34+00:00"
+},
+{
+"id": "3f8e97877961",
+"t": "BRKB",
+"title": "Berkshire Might Give Up on This High-Yielding Dividend Stock. You Maybe Should Too.",
+"url": "https://www.barchart.com/story/news/8907215/berkshire-might-give-up-on-this-high-yielding-dividend-stock-you-maybe-should-too?.tsrc=rss",
+"pub": "2026-11-19T00:30:03+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:54:55+00:00"
 },
 {
 "id": "525fcaa697c6",
@@ -7994,24 +8014,14 @@
 "seen": "2026-11-18T15:58:40+00:00"
 },
 {
-"id": "07e749f77d20",
-"t": "INTC",
-"title": "David Tepper and 25 Other Big Funds Bought Applied Materials Last Quarter, While 27 Sold. Who’s Right?",
-"url": "https://www.tikr.com/blog/david-tepper-and-25-other-big-funds-bought-applied-materials-last-quarter-while-27-sold-whos-right?ref=yahoofinance&tlnk=yf-261118-85wvrqh2&.tsrc=rss",
-"pub": "2026-11-18T15:35:45+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
-},
-{
-"id": "08470824d3cf",
-"t": "COST",
-"title": "Costco Opens Larger Edmonton Warehouse, Creating More Than 80 Jobs as Canadian Expansion Continues",
-"url": "https://investorshub.advfn.com/market-news/article/40316/costco-opens-larger-edmonton-warehouse-creating-more-than-80-jobs-as-canadian-expansion-continues?.tsrc=rss",
-"pub": "2026-11-18T15:35:39+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "5286861198c5",
+"t": "",
+"title": "OKX's Lin Discusses Tokenization and Stablecoins Outlook",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/okx-s-lin-discusses-tokenization-and-stablecoins-outlook-video",
+"pub": "2026-11-19T06:45:55+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T06:54:55+00:00"
 },
 {
 "id": "a6e4b8588076",
@@ -8194,6 +8204,16 @@
 "seen": "2026-11-19T06:44:19+00:00"
 },
 {
+"id": "48d8408a9604",
+"t": "",
+"title": "Australia to Allow Pension Funds to Offer More Targeted Advice",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/australia-to-allow-pension-funds-to-offer-more-targeted-advice",
+"pub": "2026-11-19T06:26:46+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T06:54:55+00:00"
+},
+{
 "id": "a57b9f33c208",
 "t": "",
 "title": "Japan PM Takaichi: Briefly exchanged views with Putin's and Trump.",
@@ -8202,6 +8222,26 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "fc9621966225",
+"t": "",
+"title": "India Official Calls for Higher Wages to Spur Household Spending",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/india-official-calls-for-higher-wages-to-spur-household-spending",
+"pub": "2026-11-19T06:25:43+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T06:54:55+00:00"
+},
+{
+"id": "8240c2dc86f5",
+"t": "",
+"title": "Chinese Chip Design Stocks Sink on Concerns Over Foundry Access",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/chinese-chip-design-stocks-sink-on-concerns-over-foundry-access",
+"pub": "2026-11-19T06:24:05+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T06:54:55+00:00"
 },
 {
 "id": "5af92bb317cb",
@@ -9064,6 +9104,16 @@
 "seen": "2026-11-19T06:14:25+00:00"
 },
 {
+"id": "149e2235376c",
+"t": "",
+"title": "3457.JSA - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYUVKTUV0cm9Qd3lwRnRtcjhENzhHVVZseVpabG9sV25QRWNubGxGLWFzUTR2YkE3akxHaWIzUjRBcERSOGpxYUtHWjBTaC1vekx2NmJjU05lVENSRkF6anhMU190aTZ6UV9fTlhxalpSdWI2Ml9qWjB3TFRhQVJweTQwRQ?oc=5",
+"pub": "2026-11-19T04:06:58+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T06:54:55+00:00"
+},
+{
 "id": "a0e092e64ee9",
 "t": "",
 "title": "India economic affairs secy: urge Indian industry to support increase in urban demand",
@@ -9802,6 +9852,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T03:14:38+00:00"
+},
+{
+"id": "7c35e5a0e357",
+"t": "",
+"title": "Elmos Semiconductor SE (ELTTF.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE10a0RjbFlSc09zdEVmSkEzWTBiQjZVVFdpU25uS20xb0MyMDFDQmdwUEI1RUZ5YVh1RjU3dHV1WEZNSGNfYnR1YWY2M3pES0lZaEVLRHo4U0JDdUpiYmRMQTgxOW5FRnVhWEdRclpB?oc=5",
+"pub": "2026-11-19T02:30:58+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T06:54:55+00:00"
 },
 {
 "id": "4a9539f848a9",
@@ -10949,66 +11009,6 @@
 "title": "BoJ Governor Ueda: crucial to anchor core inflation near 2% to prevent risk of inflation overshoot",
 "url": "https://www.financialjuice.com/News/9858863/BoJ-Governor-Ueda-crucial-to-anchor-core-inflation-near-2-to-prevent-risk-of-inflation-overshoot.aspx?xy=rss",
 "pub": "2026-11-19T01:08:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "dad2578a4246",
-"t": "",
-"title": "BoJ Governor Ueda: crucial to anchor core inflation near 2% to prevent risk of inflation overshoot",
-"url": "https://www.financialjuice.com/News/9858863/BoJ-Governor-Ueda-crucial-to-anchor-core-inflation-near-2-to-prevent-risk-of-inflation-overshoot.aspx",
-"pub": "2026-11-19T01:08:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "4dcdfa850253",
-"t": "",
-"title": "BoJ Governor Ueda: plans to continue raising interest rates as monetary conditions remain accommodative",
-"url": "https://www.financialjuice.com/News/9858862/BoJ-Governor-Ueda-plans-to-continue-raising-interest-rates-as-monetary-conditions-remain-accommodative.aspx?xy=rss",
-"pub": "2026-11-19T01:07:23+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "33ee1e7facc8",
-"t": "",
-"title": "BoJ Governor Ueda: plans to continue raising interest rates as monetary conditions remain accommodative",
-"url": "https://www.financialjuice.com/News/9858862/BoJ-Governor-Ueda-plans-to-continue-raising-interest-rates-as-monetary-conditions-remain-accommodative.aspx",
-"pub": "2026-11-19T01:07:23+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "533f5d5fa4f4",
-"t": "",
-"title": "BoJ Governor Ueda: risk inflation could exceed central bank's target",
-"url": "https://www.financialjuice.com/News/9858861/BoJ-Governor-Ueda-risk-inflation-could-exceed-central-banks-target.aspx?xy=rss",
-"pub": "2026-11-19T01:05:58+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "b98eed070239",
-"t": "",
-"title": "BoJ Governor Ueda: risk inflation could exceed central bank's target",
-"url": "https://www.financialjuice.com/News/9858861/BoJ-Governor-Ueda-risk-inflation-could-exceed-central-banks-target.aspx",
-"pub": "2026-11-19T01:05:58+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "028081bf7465",
-"t": "",
-"title": "BoJ Governor Ueda: underlying inflation roughly aligns with price target",
-"url": "https://www.financialjuice.com/News/9858860/BoJ-Governor-Ueda-underlying-inflation-roughly-aligns-with-price-target.aspx?xy=rss",
-"pub": "2026-11-19T01:05:22+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T01:08:34+00:00"
