@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-19 18:37",
-"rot": 63,
+"updated_kst": "2026-11-19 18:44",
+"rot": 123,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "41건",
+"Reuters": "43건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "688276628fb3",
+"t": "MSFT",
+"title": "GTA VI Sales Top $1.6B — Take-Two, Console Partners Microsoft And Sony Shares Rise",
+"url": "https://stocktwits.com/news-articles/markets/equity/gta-vi-sales-top-1-6-b-take-two-console-partners-microsoft-and-sony-shares-rise/cNbiPZlR9is?.tsrc=rss",
+"pub": "2026-11-19T09:36:42+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T09:44:17+00:00"
+},
 {
 "id": "4f3e5737bcec",
 "t": "NVDA",
@@ -82,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T09:37:57+00:00"
+},
+{
+"id": "acbc8ec95cac",
+"t": "TSLA",
+"title": "Campaign Urges Ripple to Burn $30B in XRP as Analyst Cites Tesla in $70 XRP Call",
+"url": "https://www.ccn.com/news/crypto/campaign-urges-ripple-to-burn-30b-in-xrp-as-analyst-cites-tesla-in-70-xrp-call/?.tsrc=rss",
+"pub": "2026-11-19T09:19:34+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T09:44:17+00:00"
 },
 {
 "id": "1ad989da651a",
@@ -342,6 +362,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T07:44:11+00:00"
+},
+{
+"id": "b51bc6deee69",
+"t": "NVDA",
+"title": "The Path to a Year-End Stock Rally Looks Clearer After Anthropic",
+"url": "https://finance.yahoo.com/markets/stocks/articles/path-end-stock-rally-looks-072124546.html?.tsrc=rss",
+"pub": "2026-11-19T07:21:24+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T09:44:17+00:00"
 },
 {
 "id": "52a2ef145861",
@@ -742,6 +772,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "ef17a7cda31a",
+"t": "SPCX",
+"title": "Anthropic Shares Indicated More Than 20% Higher on Gray Markets",
+"url": "https://finance.yahoo.com/technology/ai/articles/anthropic-shares-indicated-more-20-050000069.html?.tsrc=rss",
+"pub": "2026-11-19T05:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T09:44:17+00:00"
 },
 {
 "id": "ae4ad3e05c2e",
@@ -7974,44 +8014,14 @@
 "seen": "2026-11-18T16:15:44+00:00"
 },
 {
-"id": "5af8e1f170aa",
-"t": "ORCL",
-"title": "Has a Stock Market Crash Started? Here's What Sobering Lessons From the Dot-Com Bust Say Comes Next",
-"url": "https://www.fool.com/investing/2026/11/18/has-a-stock-market-crash-started-here-s-what-sobering-lessons-from-the-dot-com-bust-say-comes-next/?.tsrc=rss",
-"pub": "2026-11-18T15:56:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
-},
-{
-"id": "9690b09d7f46",
-"t": "MP",
-"title": "USA Rare Earth Climbs 7%, MP Materials Jumps 8% as Traders Eye U.S.-China Rare-Earth Talks; United States Antimony Rallies 7%",
-"url": "https://247wallst.com/investing/2026/11/18/usa-rare-earth-climbs-7-mp-materials-jumps-8-as-traders-eye-u-s-china-rare-earth-talks-united-states-antimony-rallies-7/?.tsrc=rss",
-"pub": "2026-11-18T15:56:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
-},
-{
-"id": "04900f91c5f4",
-"t": "TSLA",
-"title": "As Tesla Plans to Roll Out the Cybercab for Individual Use, TSLA Stock Is a Tough Nut to Crack",
-"url": "https://www.barchart.com/story/news/8899448/as-tesla-plans-to-roll-out-the-cybercab-for-individual-use-tsla-stock-is-a-tough-nut-to-crack?.tsrc=rss",
-"pub": "2026-11-18T15:55:31+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T22:14:53+00:00"
-},
-{
-"id": "ab06a9a3c2d2",
-"t": "NVDA",
-"title": "Nvidia Delivers Reassuring Results, Outlook. But Wall Street Split.",
-"url": "https://finance.yahoo.com/m/7d839da5-898d-3b89-b6a4-ed8b84753cb0/nvidia-delivers-reassuring.html?.tsrc=rss",
-"pub": "2026-11-18T15:55:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "e1628a2af334",
+"t": "",
+"title": "Brasília em Off",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/brasilia-em-off-video",
+"pub": "2026-11-19T09:38:06+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T09:44:17+00:00"
 },
 {
 "id": "5c6499bf52c6",
@@ -8162,6 +8172,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-19T09:15:12+00:00"
+},
+{
+"id": "92bbe5a5feaf",
+"t": "",
+"title": "Trump, Xi and Putin Hold Talks at APEC Summit",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/insight-with-haslinda-amin-11-19-2026-video",
+"pub": "2026-11-19T08:41:06+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T09:44:17+00:00"
 },
 {
 "id": "8b1b8d7ca037",
@@ -9734,6 +9754,16 @@
 "seen": "2026-11-19T03:44:34+00:00"
 },
 {
+"id": "471668dd2d76",
+"t": "",
+"title": "Andretti Acquisition Corp. II (POLEU.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1jdzgtc0s5LWctV0dYSk9uYjM0c185M0plVDZST1RPbjBmN2l2eFVEaV9USVhXNm9vVnB1TGM5amhZUEdKYWJVZE1yNnl5WmhVa1NOOHNSSU4tdkRSUnc1VUZVYTNIQmNGMHQtRVVn?oc=5",
+"pub": "2026-11-19T03:28:02+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T09:44:17+00:00"
+},
+{
 "id": "ce117b7ee923",
 "t": "",
 "title": "'The Meeting is the Message': Ex-CIA Official on Trilateral’s Symbolism",
@@ -10979,36 +11009,6 @@
 "title": "IMF Managing Director Georgieva: rising global inflation requires tighter monetary policies in many economies",
 "url": "https://www.financialjuice.com/News/9858939/IMF-Managing-Director-Georgieva-rising-global-inflation-requires-tighter-monetary-policies-in-many-economies.aspx?xy=rss",
 "pub": "2026-11-19T01:58:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:58:01+00:00"
-},
-{
-"id": "ad4d3477c95c",
-"t": "",
-"title": "A-Cap Insurer Asks to Defer Payouts to Clients Amid Deal Talks",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/a-cap-insurer-asks-to-defer-payouts-to-clients-amid-deal-talks",
-"pub": "2026-11-19T01:58:27+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T02:44:30+00:00"
-},
-{
-"id": "cd2bf500c99b",
-"t": "",
-"title": "IMF Managing Director Georgieva: rising global inflation requires tighter monetary policies in many economies",
-"url": "https://www.financialjuice.com/News/9858939/IMF-Managing-Director-Georgieva-rising-global-inflation-requires-tighter-monetary-policies-in-many-economies.aspx",
-"pub": "2026-11-19T01:58:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T03:14:38+00:00"
-},
-{
-"id": "761f1c8c3122",
-"t": "",
-"title": "IMF managing director Georgieva: countries must quickly establish digital infrastructure",
-"url": "https://www.financialjuice.com/News/9858938/IMF-managing-director-Georgieva-countries-must-quickly-establish-digital-infrastructure.aspx?xy=rss",
-"pub": "2026-11-19T01:57:23+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T01:58:01+00:00"
