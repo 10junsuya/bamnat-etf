@@ -404,12 +404,15 @@ def check_aimap(d):
         tag = f"관계 {i + 1} ({e.get('a')}→{e.get('b')})"
         if e.get("a") not in co or e.get("b") not in co or e.get("a") == e.get("b"):
             err("data/aimap.json", f"{tag}: 양쪽 회사가 지도에 있어야 해요")
-        if e.get("k") not in ("공급", "클라우드", "건설", "전력", "투자"):
+        if e.get("k") not in ("공급", "클라우드", "건설", "전력", "투자", "협력"):
             err("data/aimap.json", f"{tag}: 관계 종류({e.get('k')})가 이상해요")
         if e.get("ev") not in EVS:
             err("data/aimap.json", f"{tag}: 근거 꼬리표가 이상해요")
         if not e.get("t") or "수혜" in e.get("t", ""):
             err("data/aimap.json", f"{tag}: 설명이 비었거나 '수혜' 표현이 있어요")
+        for f in ("chk", "add"):
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(e.get(f, ""))):
+                err("data/aimap.json", f"{tag}: {f}(확인일·추가일) 모양이 이상해요")
         s2 = e.get("src") or []
         if len(s2) != 2 or not str(s2[1]).startswith("https://"):
             err("data/aimap.json", f"{tag}: 출처 링크는 https 로 시작해야 해요")

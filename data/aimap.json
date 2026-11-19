@@ -929,7 +929,8 @@
       "g": "해외",
       "co": [
        "OpenAI",
-       "Anthropic"
+       "Anthropic",
+       "메타"
       ]
      },
      {
@@ -968,7 +969,42 @@
      {
       "g": "한국",
       "co": [
-       "네이버클라우드"
+       "네이버클라우드",
+       "KT"
+      ]
+     }
+    ],
+    "up": "서버·네트워크 장비",
+    "down": "장비 구매 대금"
+   },
+   {
+    "k": "server",
+    "n": "서버·네트워크",
+    "d": "칩을 서버로 묶고 잇고 식혀요",
+    "g": [
+     {
+      "g": "서버",
+      "co": [
+       "델"
+      ]
+     },
+     {
+      "g": "네트워크",
+      "co": [
+       "아리스타"
+      ]
+     },
+     {
+      "g": "광통신",
+      "co": [
+       "코히런트",
+       "루멘텀"
+      ]
+     },
+     {
+      "g": "전력·냉각 장비",
+      "co": [
+       "버티브"
       ]
      }
     ],
@@ -981,11 +1017,18 @@
     "d": "AI 계산용 칩을 설계해요",
     "g": [
      {
-      "g": "",
+      "g": "해외",
       "co": [
        "엔비디아",
        "AMD",
        "브로드컴"
+      ]
+     },
+     {
+      "g": "한국 NPU",
+      "co": [
+       "리벨리온",
+       "퓨리오사AI"
       ]
      }
     ],
@@ -1098,7 +1141,10 @@
    },
    "SK텔레콤": {
     "s": "SKT",
-    "t": "독자 AI 정예팀 · A.X, 데이터센터도 운영"
+    "t": "독자 AI 정예팀 · A.X, 데이터센터도 운영",
+    "tk": [
+     "017670"
+    ]
    },
    "업스테이지": {
     "s": "UP",
@@ -1106,23 +1152,39 @@
    },
    "마이크로소프트": {
     "s": "MS",
-    "t": "애저(Azure) 클라우드"
+    "t": "애저(Azure) 클라우드",
+    "tk": [
+     "MSFT"
+    ]
    },
    "아마존 AWS": {
     "s": "AWS",
-    "t": "아마존의 클라우드, 트레이니엄 칩"
+    "t": "아마존의 클라우드, 트레이니엄 칩",
+    "tk": [
+     "AMZN"
+    ]
    },
    "구글": {
     "s": "G",
-    "t": "구글 클라우드, TPU 칩"
+    "t": "구글 클라우드, TPU 칩",
+    "tk": [
+     "GOOGL",
+     "GOOG"
+    ]
    },
    "오라클": {
     "s": "ORCL",
-    "t": "OCI 클라우드, 스타게이트 부지 운영"
+    "t": "OCI 클라우드, 스타게이트 부지 운영",
+    "tk": [
+     "ORCL"
+    ]
    },
    "코어위브": {
     "s": "CW",
-    "t": "AI 전용 GPU 클라우드"
+    "t": "AI 전용 GPU 클라우드",
+    "tk": [
+     "CRWV"
+    ]
    },
    "Nscale": {
     "s": "NS",
@@ -1134,35 +1196,60 @@
    },
    "엔비디아": {
     "s": "NV",
-    "t": "AI용 GPU 설계"
+    "t": "AI용 GPU 설계",
+    "tk": [
+     "NVDA"
+    ]
    },
    "AMD": {
     "s": "AMD",
-    "t": "GPU·CPU 설계"
+    "t": "GPU·CPU 설계",
+    "tk": [
+     "AMD"
+    ]
    },
    "브로드컴": {
     "s": "AVGO",
-    "t": "맞춤 AI 칩·네트워크 칩"
+    "t": "맞춤 AI 칩·네트워크 칩",
+    "tk": [
+     "AVGO"
+    ]
    },
    "TSMC": {
     "s": "TSMC",
-    "t": "대만 위탁 생산(파운드리)"
+    "t": "대만 위탁 생산(파운드리)",
+    "tk": [
+     "TSM"
+    ]
    },
    "SK하이닉스": {
     "s": "SKH",
-    "t": "D램·HBM 메모리"
+    "t": "D램·HBM 메모리",
+    "tk": [
+     "SKHY",
+     "000660"
+    ]
    },
    "삼성전자": {
     "s": "SEC",
-    "t": "메모리·파운드리"
+    "t": "메모리·파운드리",
+    "tk": [
+     "005930"
+    ]
    },
    "마이크론": {
     "s": "MU",
-    "t": "미국 메모리 회사"
+    "t": "미국 메모리 회사",
+    "tk": [
+     "MU"
+    ]
    },
    "한미반도체": {
     "s": "HM",
-    "t": "HBM용 TC 본더"
+    "t": "HBM용 TC 본더",
+    "tk": [
+     "042700"
+    ]
    },
    "한화세미텍": {
     "s": "HW",
@@ -1190,15 +1277,24 @@
    },
    "삼성SDS": {
     "s": "SDS",
-    "t": "국가AI컴퓨팅센터 주관사"
+    "t": "국가AI컴퓨팅센터 주관사",
+    "tk": [
+     "018260"
+    ]
    },
    "컨스텔레이션": {
     "s": "CEG",
-    "t": "원자력 발전 회사"
+    "t": "원자력 발전 회사",
+    "tk": [
+     "CEG"
+    ]
    },
    "탈렌": {
     "s": "TLN",
-    "t": "원전 보유 발전 회사"
+    "t": "원전 보유 발전 회사",
+    "tk": [
+     "TLN"
+    ]
    },
    "SB 에너지": {
     "s": "SBE",
@@ -1206,7 +1302,67 @@
    },
    "블룸 에너지": {
     "s": "BE",
-    "t": "연료전지 발전"
+    "t": "연료전지 발전",
+    "tk": [
+     "BE"
+    ]
+   },
+   "메타": {
+    "s": "META",
+    "t": "라마(Llama) 모델, 대형 AI 데이터센터",
+    "tk": [
+     "META"
+    ]
+   },
+   "델": {
+    "s": "DELL",
+    "t": "AI 서버 제조",
+    "tk": [
+     "DELL"
+    ]
+   },
+   "아리스타": {
+    "s": "ANET",
+    "t": "데이터센터 네트워크 스위치",
+    "tk": [
+     "ANET"
+    ]
+   },
+   "코히런트": {
+    "s": "COHR",
+    "t": "광통신 부품·레이저",
+    "tk": [
+     "COHR"
+    ]
+   },
+   "루멘텀": {
+    "s": "LITE",
+    "t": "광통신 부품·레이저",
+    "tk": [
+     "LITE"
+    ]
+   },
+   "버티브": {
+    "s": "VRT",
+    "t": "데이터센터 전력·냉각 장비",
+    "tk": [
+     "VRT"
+    ]
+   },
+   "리벨리온": {
+    "s": "RBLN",
+    "t": "한국 AI 칩(NPU) 설계 · 비상장"
+   },
+   "퓨리오사AI": {
+    "s": "FUR",
+    "t": "한국 AI 칩(NPU) 설계 · 비상장"
+   },
+   "KT": {
+    "s": "KT",
+    "t": "통신사, 클라우드·데이터센터",
+    "tk": [
+     "030200"
+    ]
    }
   },
   "e": [
@@ -1220,7 +1376,9 @@
     "src": [
      "NVIDIA 블로그",
      "https://blogs.nvidia.com/blog/tsmc-blackwell-manufacturing/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "SK하이닉스",
@@ -1232,7 +1390,9 @@
     "src": [
      "쿠키뉴스 · SK하이닉스 HBM4",
      "https://www.kukinews.com/article/view/kuk202601140103"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "삼성전자",
@@ -1244,7 +1404,9 @@
     "src": [
      "뉴시스 · 삼성 HBM4",
      "https://www.newsis.com/view/NISX20260218_0003517291"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "마이크론",
@@ -1256,7 +1418,9 @@
     "src": [
      "딜사이트 · HBM4 물량",
      "https://dealsite.co.kr/articles/165183"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "한미반도체",
@@ -1268,7 +1432,9 @@
     "src": [
      "한국경제 · TC 본더 공시",
      "https://www.hankyung.com/article/2026060840121"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "한화세미텍",
@@ -1280,7 +1446,9 @@
     "src": [
      "지디넷코리아 · 한화세미텍",
      "https://v.daum.net/v/p4A8OnnQki?f=p"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "ASMPT",
@@ -1292,7 +1460,9 @@
     "src": [
      "이투데이 · TC 본더 경쟁",
      "https://www.etoday.co.kr/news/view/2552182"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "엔비디아",
@@ -1304,7 +1474,9 @@
     "src": [
      "Outlook Business · 엔비디아 300억 달러",
      "https://www.outlookbusiness.com/corporate/nvidia-to-invest-30bn-in-openai-previous-100bn-partnership-plan-scrapped"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "AMD",
@@ -1316,7 +1488,9 @@
     "src": [
      "Intelligent CIO · AMD 6GW",
      "https://www.intelligentcio.com/apac/2025/10/06/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "브로드컴",
@@ -1328,7 +1502,9 @@
     "src": [
      "OpenAI · 브로드컴 협력",
      "https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "마이크로소프트",
@@ -1340,7 +1516,9 @@
     "src": [
      "Tom's Hardware · MS 27%",
      "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-and-microsoft-sign-agreement-to-restructure-openai-into-a-public-benefit-corporation-with-microsoft-retaining-27-percent-stake-non-profit-open-ai-foundation-to-oversee-open-ai-pbc"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "마이크로소프트",
@@ -1352,7 +1530,9 @@
     "src": [
      "Tom's Hardware · MS 27%",
      "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-and-microsoft-sign-agreement-to-restructure-openai-into-a-public-benefit-corporation-with-microsoft-retaining-27-percent-stake-non-profit-open-ai-foundation-to-oversee-open-ai-pbc"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "오라클",
@@ -1364,7 +1544,9 @@
     "src": [
      "AFP · OpenAI 계약들",
      "https://arynews.tv/openai-signs-38-bn-infrastructure-deal-with-cloud-giant-aws"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "아마존 AWS",
@@ -1376,7 +1558,9 @@
     "src": [
      "PYMNTS · AWS 380억 달러",
      "https://www.pymnts.com/artificial-intelligence-2/2025/openai-strikes-38-billion-cloud-deal-with-amazon-to-boost-ai-development/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "코어위브",
@@ -1388,7 +1572,9 @@
     "src": [
      "BNN Bloomberg · 코어위브",
      "https://www.bnnbloomberg.ca/business/2025/09/25/coreweave-expands-openai-pact-with-new-us65-billion-contract-sees-the-quarter-of-diversification/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "엔비디아",
@@ -1400,7 +1586,9 @@
     "src": [
      "Reuters · 엔비디아와 코어위브",
      "https://www.tradingview.com/news/reuters.com,2025:newsml_L6N3VC0OG:0-coreweave-expands-openai-pact-with-new-6-5-billion-contract"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "엔비디아",
@@ -1412,7 +1600,9 @@
     "src": [
      "Reuters · 엔비디아와 코어위브",
      "https://www.tradingview.com/news/reuters.com,2025:newsml_L6N3VC0OG:0-coreweave-expands-openai-pact-with-new-6-5-billion-contract"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "엔비디아",
@@ -1424,7 +1614,9 @@
     "src": [
      "TechSpot · 오라클 GPU",
      "https://www.techspot.com/news/108047-oracle-orders-400000-nvidia-chips-power-massive-stargate.html"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "소프트뱅크",
@@ -1436,7 +1628,9 @@
     "src": [
      "Yahoo Finance · 엔비디아 투자",
      "https://finance.yahoo.com/news/nvidia-ceo-jensen-huang-100b-123431494.html"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "아마존 AWS",
@@ -1448,7 +1642,9 @@
     "src": [
      "The Register · 구글·Anthropic",
      "https://www.theregister.com/2025/10/23/google_anthropic_deal/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "아마존 AWS",
@@ -1460,7 +1656,9 @@
     "src": [
      "Maginative · 투자 규모",
      "https://www.maginative.com/article/anthropic-secures-1m-google-tpus-while-keeping-amazon-as-primary-training-partner/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "구글",
@@ -1472,7 +1670,9 @@
     "src": [
      "The Register · 구글·Anthropic",
      "https://www.theregister.com/2025/10/23/google_anthropic_deal/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "구글",
@@ -1484,7 +1684,9 @@
     "src": [
      "Maginative · 투자 규모",
      "https://www.maginative.com/article/anthropic-secures-1m-google-tpus-while-keeping-amazon-as-primary-training-partner/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "엔비디아",
@@ -1496,7 +1698,9 @@
     "src": [
      "Yahoo Finance · 엔비디아 투자",
      "https://finance.yahoo.com/news/nvidia-ceo-jensen-huang-100b-123431494.html"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "크루소",
@@ -1508,7 +1712,9 @@
     "src": [
      "Benzinga · 크루소 애빌린",
      "https://benzinga.com/z/45705941"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "G42",
@@ -1520,7 +1726,9 @@
     "src": [
      "Intelligent CIO · 스타게이트 UAE",
      "https://www.intelligentcio.com/me/2025/05/23/g42-openai-oracle-nvidia-softbank-cisco-launch-stargate-uae-from-uae-us-ai-campus-in-abu-dhabi/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "Nscale",
@@ -1532,7 +1740,9 @@
     "src": [
      "Techzine · 노르웨이",
      "https://techzine.eu/news/infrastructure/140487/openai-scales-back-stargate-in-europe-microsoft-fills-the-gap"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "엔비디아",
@@ -1544,7 +1754,9 @@
     "src": [
      "Resilience Media · Nscale",
      "https://www.resiliencemedia.co/p/openai-launches-stargate-uk-with"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "컨스텔레이션",
@@ -1556,7 +1768,9 @@
     "src": [
      "EnergyTech · 스리마일섬",
      "https://www.energytech.com/energy-efficiency/article/55141439/three-mile-island-1-returns-as-crane-center-microsoft-signs-20-year-nuclear-ppa-with-constellation"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "컨스텔레이션",
@@ -1568,7 +1782,9 @@
     "src": [
      "ANS · 캘버트 클리프스",
      "https://www.ans.org/news/2026-10-01/article-8452/amazon-constellation-partner-for-calvert-cliffs-uprate/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "탈렌",
@@ -1580,7 +1796,9 @@
     "src": [
      "Utility Dive · 탈렌·AWS",
      "https://www.utilitydive.com/news/meta-constellation-ppa-could-be-first-of-many-deals-for-existing-reactors/750567/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "소프트뱅크",
@@ -1592,7 +1810,9 @@
     "src": [
      "MeriTalk · 오하이오",
      "https://www.meritalk.com/?p=206102"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "SK하이닉스",
@@ -1604,7 +1824,9 @@
     "src": [
      "뉴스1 · 삼성·SK·OpenAI",
      "https://www.news1.kr/amp/industry/general-industry/5932393"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "삼성전자",
@@ -1616,7 +1838,9 @@
     "src": [
      "뉴스1 · 삼성·SK·OpenAI",
      "https://www.news1.kr/amp/industry/general-industry/5932393"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "엔비디아",
@@ -1628,7 +1852,9 @@
     "src": [
      "바이라인네트워크 · GPU 26만장",
      "https://byline.network/2025/10/1031-6/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    },
    {
     "a": "엔비디아",
@@ -1640,9 +1866,269 @@
     "src": [
      "바이라인네트워크 · GPU 26만장",
      "https://byline.network/2025/10/1031-6/"
-    ]
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "델",
+    "b": "코어위브",
+    "k": "공급",
+    "t": "GB300 NVL72 서버 랙 첫 출하",
+    "ev": "회사 발표",
+    "d": "2025.7",
+    "src": [
+     "Dell 블로그 · GB300 첫 출하",
+     "https://www.dell.com/en-us/blog/dell-delivers-market-s-first-nvidia-gb300-nvl72-to-coreweave/"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "아리스타",
+    "b": "마이크로소프트",
+    "k": "공급",
+    "t": "네트워크 스위치, 2024년 아리스타 매출의 {20%}",
+    "ev": "공시",
+    "d": "2025.8",
+    "src": [
+     "SEC 공시 · 아리스타 10-Q",
+     "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000216/anet-20250630.htm"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "아리스타",
+    "b": "메타",
+    "k": "공급",
+    "t": "네트워크 스위치, 2024년 아리스타 매출의 {15%}",
+    "ev": "공시",
+    "d": "2025.8",
+    "src": [
+     "SEC 공시 · 아리스타 10-Q",
+     "https://www.sec.gov/Archives/edgar/data/1596532/000159653225000216/anet-20250630.htm"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "코히런트",
+    "b": "엔비디아",
+    "k": "협력",
+    "t": "실리콘 포토닉스 네트워크 스위치 협력사",
+    "ev": "회사 발표",
+    "d": "2025.3",
+    "src": [
+     "NVIDIA · 실리콘 포토닉스 협력사",
+     "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "루멘텀",
+    "b": "엔비디아",
+    "k": "협력",
+    "t": "실리콘 포토닉스 네트워크 스위치 협력사",
+    "ev": "회사 발표",
+    "d": "2025.3",
+    "src": [
+     "NVIDIA · 실리콘 포토닉스 협력사",
+     "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "버티브",
+    "b": "엔비디아",
+    "k": "협력",
+    "t": "차세대 AI 칩용 800V 직류 전력 설계 협력",
+    "ev": "보도",
+    "d": "2025.10",
+    "src": [
+     "IT Brief · 버티브·엔비디아 800V",
+     "https://itbrief.co.uk/story/vertiv-nvidia-advance-800-vdc-power-for-future-ai-factories"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "버티브",
+    "b": "코어위브",
+    "k": "공급",
+    "t": "GB300 배치에 전력·냉각 협력",
+    "ev": "보도",
+    "d": "2025.7",
+    "src": [
+     "Futurum · 코어위브 GB300",
+     "https://futurumgroup.com/insights/dell-launches-gb300-nvl72-offering-for-enterprise-demand/"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "퓨리오사AI",
+    "b": "LG AI연구원",
+    "k": "공급",
+    "t": "레니게이드(RNGD) 칩, 엑사원 온프레미스에 탑재",
+    "ev": "회사 발표",
+    "d": "2025.7",
+    "src": [
+     "CEO스코어데일리 · 레니게이드",
+     "https://ceoscoredaily.com/page/view/2025072317095312837"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "TSMC",
+    "b": "퓨리오사AI",
+    "k": "공급",
+    "t": "RNGD 위탁 생산, 1차 양산 4,000장",
+    "ev": "회사 발표",
+    "d": "2026.1",
+    "src": [
+     "CIO · RNGD 양산",
+     "https://www.cio.com/article/4123380/%ED%93%A8%EB%A6%AC%EC%98%A4%EC%82%ACai-2%EC%84%B8%EB%8C%80-ai%EC%B9%A9-rngd-%EC%96%91%EC%82%B0-%EB%8F%8C%EC%9E%85%C2%B7%C2%B7%C2%B7%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%8B%9C%EC%9E%A5.html"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "리벨리온",
+    "b": "엔비디아",
+    "k": "협력",
+    "t": "NV링크 퓨전으로 NPU·GPU 연결 협약",
+    "ev": "회사 발표",
+    "d": "2026.11",
+    "src": [
+     "파이낸셜뉴스 · NV링크 퓨전 협약",
+     "https://www.fnnews.com/news/202611091824126848"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "리벨리온",
+    "b": "SK텔레콤",
+    "k": "공급",
+    "t": "SKT AI 데이터센터에서 GPU·NPU 통합 시스템 실증",
+    "ev": "회사 발표",
+    "d": "2026.11",
+    "src": [
+     "SK텔레콤 뉴스룸 · 3사 협약",
+     "https://news.sktelecom.com/232944"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "마이크로소프트",
+    "b": "KT",
+    "k": "협력",
+    "t": "5년 약 {2.4조원} AI·클라우드 공동 투자",
+    "ev": "회사 발표",
+    "d": "2024.9",
+    "src": [
+     "Microsoft 뉴스 · KT 파트너십",
+     "https://news.microsoft.com/source/asia/?lang=ko&p=3988"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "SK텔레콤",
+    "b": "Anthropic",
+    "k": "투자",
+    "t": "{1억 달러} (2023), 2026년 추가 투자",
+    "ev": "회사 발표",
+    "d": "2023.8",
+    "src": [
+     "SK텔레콤 뉴스룸 · 앤트로픽 투자",
+     "https://news.sktelecom.com/197426"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "삼성전자",
+    "b": "Anthropic",
+    "k": "투자",
+    "t": "시리즈H 투자 참여",
+    "ev": "보도",
+    "d": "2026.6",
+    "src": [
+     "딜사이트 · 앤트로픽 시리즈H",
+     "https://dealsite.co.kr/articles/163451"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "SK하이닉스",
+    "b": "Anthropic",
+    "k": "투자",
+    "t": "시리즈H 투자 참여",
+    "ev": "보도",
+    "d": "2026.6",
+    "src": [
+     "딜사이트 · 앤트로픽 시리즈H",
+     "https://dealsite.co.kr/articles/163451"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "마이크론",
+    "b": "Anthropic",
+    "k": "투자",
+    "t": "시리즈H 투자 참여",
+    "ev": "보도",
+    "d": "2026.6",
+    "src": [
+     "딜사이트 · 앤트로픽 시리즈H",
+     "https://dealsite.co.kr/articles/163451"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
+   },
+   {
+    "a": "컨스텔레이션",
+    "b": "메타",
+    "k": "전력",
+    "t": "클린턴 원전 20년 전력 계약",
+    "ev": "회사 발표",
+    "d": "2025.6",
+    "src": [
+     "Foley · 메타·컨스텔레이션",
+     "https://www.foley.com/insights/publications/2025/06/constellation-and-meta-ppa-tech-ai-and-clean-energy-goals-preserve-existing-nucl/"
+    ],
+    "chk": "2026-11-19",
+    "add": "2026-11-19"
    }
   ],
-  "chk": "2026-11-19"
+  "chk": "2026-11-19",
+  "base": "2026-11-19",
+  "gloss": {
+   "HBM": "메모리 칩을 여러 층 쌓아 AI 칩 바로 옆에 붙인 아주 빠른 메모리예요. AI 칩 성능을 좌우해요.",
+   "TC 본더": "HBM을 만들 때 쌓은 메모리 칩을 열과 압력으로 붙이는 장비예요.",
+   "위탁 생산": "칩을 설계한 회사 대신 공장을 가진 회사가 만들어 주는 것이에요. 파운드리라고도 해요.",
+   "파운드리": "다른 회사가 설계한 칩을 대신 만들어 주는 공장 사업이에요. TSMC가 대표적이에요.",
+   "GW": "기가와트. 전력 단위로, 1GW는 원자력 발전소 1기 정도의 출력이에요.",
+   "MW": "메가와트. 1,000MW가 1GW예요. 데이터센터 크기를 전력으로 말할 때 써요.",
+   "GPU": "원래 그래픽용 칩인데, 계산을 한꺼번에 많이 해서 AI 학습·추론에 가장 많이 써요.",
+   "TPU": "구글이 AI 계산용으로 직접 설계한 칩이에요.",
+   "NPU": "AI 계산만 하도록 만든 칩이에요. GPU보다 전기를 덜 쓰는 걸 목표로 해요.",
+   "트레이니엄": "아마존이 AI 학습용으로 직접 설계한 칩이에요.",
+   "의향서": "정식 계약 전에 '이렇게 하겠다'는 뜻을 적은 문서예요. 바뀌거나 취소될 수 있어요.",
+   "지분": "회사의 주식 일부를 갖는 것이에요. 지분이 있으면 그 회사 성장의 이익을 나눠 가져요.",
+   "실리콘 포토닉스": "칩 안에서 전기 대신 빛으로 데이터를 보내는 기술이에요. 전력을 덜 쓰고 빨라요.",
+   "NV링크 퓨전": "다른 회사가 만든 칩을 엔비디아 서버에 연결해 같이 쓰게 해 주는 엔비디아 기술이에요.",
+   "블랙웰": "엔비디아의 AI 칩 세대 이름이에요. GB200·GB300이 이 세대예요.",
+   "연료전지": "수소나 가스를 태우지 않고 화학 반응으로 전기를 만드는 발전 장치예요.",
+   "800V 직류": "데이터센터 안 전기를 높은 전압의 직류로 보내 전기 손실을 줄이는 방식이에요."
+  }
  }
 }
