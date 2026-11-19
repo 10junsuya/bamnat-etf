@@ -514,7 +514,7 @@
    "r": "유럽",
    "n": "EU AI 기가팩토리",
    "d": "2025.2",
-   "st": "공모 마감 2026.11.12",
+   "st": "공모 중 · 마감 연장(2027.2.4), 접수분 다시 제출",
    "L": {
     "pol": {
      "t": "InvestAI · AI 대륙 행동계획",
@@ -543,6 +543,10 @@
     }
    },
    "src": [
+    [
+     "EuroHPC · 기가팩토리 공모 안내",
+     "https://www.eurohpc-ju.europa.eu/call-tenders-selection-artificial-intelligence-gigafactory-consortia-and-establishment-ai_en"
+    ],
     [
      "유럽연합 집행위 · AI 기가팩토리",
      "https://commission.europa.eu/topics/competitiveness/competitiveness-coordination-tool-projects/ai-gigafactories_en"
@@ -1704,12 +1708,12 @@
     "a": "엔비디아",
     "b": "Anthropic",
     "k": "투자",
-    "t": "{100억 달러} 투자",
-    "ev": "보도",
-    "d": "2026.3",
+    "t": "최대 {100억 달러} 투자 약속",
+    "ev": "회사 발표",
+    "d": "2025.11",
     "src": [
-     "Yahoo Finance · 엔비디아 투자",
-     "https://finance.yahoo.com/news/nvidia-ceo-jensen-huang-100b-123431494.html"
+     "엔비디아 블로그 · 3사 협력 발표",
+     "https://blogs.nvidia.com/blog/microsoft-nvidia-anthropic-announce-partnership"
     ],
     "chk": "2026-11-19",
     "add": "2026-11-19"
@@ -1970,12 +1974,12 @@
     "a": "버티브",
     "b": "코어위브",
     "k": "공급",
-    "t": "GB300 배치에 전력·냉각 협력",
-    "ev": "보도",
+    "t": "첫 GB300 NVL72 배치에 델·스위치와 함께 참여",
+    "ev": "회사 발표",
     "d": "2025.7",
     "src": [
-     "Futurum · 코어위브 GB300",
-     "https://futurumgroup.com/insights/dell-launches-gb300-nvl72-offering-for-enterprise-demand/"
+     "코어위브 블로그 · 첫 GB300 배치",
+     "https://coreweave.com/blog/coreweave-leads-the-way-with-first-nvidia-gb300-nvl72-deployment"
     ],
     "chk": "2026-11-19",
     "add": "2026-11-19"
@@ -2140,7 +2144,11 @@
    "NV링크 퓨전": "다른 회사가 만든 칩을 엔비디아 서버에 연결해 같이 쓰게 해 주는 엔비디아 기술이에요.",
    "블랙웰": "엔비디아의 AI 칩 세대 이름이에요. GB200·GB300이 이 세대예요.",
    "연료전지": "수소나 가스를 태우지 않고 화학 반응으로 전기를 만드는 발전 장치예요.",
-   "800V 직류": "데이터센터 안 전기를 높은 전압의 직류로 보내 전기 손실을 줄이는 방식이에요."
+   "800V 직류": "데이터센터 안 전기를 높은 전압의 직류로 보내 전기 손실을 줄이는 방식이에요.",
+   "GB300": "엔비디아 블랙웰 세대 AI 칩(GPU)과 CPU를 묶은 제품이에요. GPU 72개를 한 랙에 넣은 서버가 GB300 NVL72예요.",
+   "MOU": "양해각서. 정식 계약 전에 협력하겠다는 뜻을 적은 문서로, 법적 구속력은 약해요.",
+   "온프레미스": "클라우드를 빌리지 않고 회사 안에 직접 서버를 두고 쓰는 방식이에요.",
+   "OCI": "오라클 클라우드(Oracle Cloud Infrastructure)의 줄임말이에요. 오라클이 빌려주는 서버·저장 공간이에요."
   }
  }
 }
