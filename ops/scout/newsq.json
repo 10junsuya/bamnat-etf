@@ -1,18 +1,68 @@
 {
-"updated_kst": "2026-11-19 10:58",
-"rot": 175,
+"updated_kst": "2026-11-19 11:14",
+"rot": 56,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "51건",
+"Reuters": "48건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "dc3346737686",
+"t": "NVDA",
+"title": "Wall Street futures climb ahead of Anthropic’s $1.5 trillion mega IPO",
+"url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-futures-climb-ahead-020729605.html?.tsrc=rss",
+"pub": "2026-11-19T02:07:29+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "dcfc3d3b0441",
+"t": "AMD",
+"title": "Why Is AMD Stock Rising Overnight?",
+"url": "https://stocktwits.com/news-articles/markets/equity/why-is-amd-stock-rising-overnight/cNbLtmJR9iB?.tsrc=rss",
+"pub": "2026-11-19T02:05:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "fa1b994d39ab",
+"t": "SPCX",
+"title": "Tesla And SpaceX ‘Better Together’? Musk Leans Yes — But Says Performance Must Drive His TSLA Pay",
+"url": "https://stocktwits.com/news-articles/markets/equity/tesla-spacex-better-together-musk-performance-tsla-pay/cNbLsa5R9iJ?.tsrc=rss",
+"pub": "2026-11-19T01:56:19+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "1ca9dfb7ee2d",
+"t": "NVDA",
+"title": "Anthropic Priced Its IPO at $83. Here's What I'd Pay for the Stock.",
+"url": "https://www.fool.com/investing/2026/11/18/anthropic-priced-its-ipo-at-usd83-here-s-what-i-d-pay-for-the-stock/?.tsrc=rss",
+"pub": "2026-11-19T01:50:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "f08d3ecabddb",
+"t": "NVDA",
+"title": "Trump Hails ‘Great’ Ties With Xi, Downplays Nvidia Spy Scandal",
+"url": "https://finance.yahoo.com/economy/policy/articles/trump-hails-great-ties-xi-014442789.html?.tsrc=rss",
+"pub": "2026-11-19T01:44:42+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:14:26+00:00"
+},
 {
 "id": "de14434cc39e",
 "t": "SPCX",
@@ -22,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T01:58:01+00:00"
+},
+{
+"id": "2952fb53a463",
+"t": "NVDA",
+"title": "Trump Suggests US Can Sell Blackwell Chips to China in Future",
+"url": "https://finance.yahoo.com/technology/ai/articles/trump-suggests-us-sell-blackwell-013901504.html?.tsrc=rss",
+"pub": "2026-11-19T01:39:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
 "id": "97e30f821c25",
@@ -72,6 +132,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T01:44:52+00:00"
+},
+{
+"id": "de56c182dee9",
+"t": "PANW",
+"title": "Palo Alto Networks Q1 Earnings Call Highlights",
+"url": "https://www.marketbeat.com/instant-alerts/transcript-palo-alto-networks-q1-earnings-call-highlights-2026-11-18/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-19T01:13:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
 "id": "abf86c381f0f",
@@ -2542,6 +2612,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T20:54:03+00:00"
+},
+{
+"id": "a55deda5ee38",
+"t": "QQQ",
+"title": "I Used This Options Strategy to Profit from the Post-IPO Plunge in SpaceX. Now I’ll Use It Again on ANT Stock After Anthropic Starts Trading.",
+"url": "https://www.barchart.com/story/news/8903468/i-used-this-options-strategy-to-profit-from-the-post-ipo-plunge-in-spacex-now-ill-use-it-again-on-ant-stock-after-anthropic-starts-trading?.tsrc=rss",
+"pub": "2026-11-18T20:01:07+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
 "id": "93b4396ecc75",
@@ -7934,84 +8014,244 @@
 "seen": "2026-11-18T15:15:25+00:00"
 },
 {
-"id": "34c7d55eb732",
-"t": "ROP",
-"title": "Aderant Announces BillBlast Appeals Manager, Bringing Appeal Management Into the Work-to-Cash Workflow",
-"url": "https://finance.yahoo.com/small-business/articles/aderant-announces-billblast-appeals-manager-150000143.html?.tsrc=rss",
-"pub": "2026-11-18T15:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "46a97c071305",
+"t": "",
+"title": "China's President Xi: cooperation in Asia-Pacific to focus on digital tech, cross-border data flow, clean energy and SMEs",
+"url": "https://www.financialjuice.com/News/9859070/Chinas-President-Xi-cooperation-in-Asia-Pacific-to-focus-on-digital-tech-cross-border-data-flow-clean-energy-and-SMEs.aspx?xy=rss",
+"pub": "2026-11-19T02:10:18+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
-"id": "7b910f9916d4",
-"t": "WMT",
-"title": "Walmart earnings expected to show market share gains as US customers remain under pressure",
-"url": "https://finance.yahoo.com/markets/stocks/article/walmart-earnings-expected-to-show-market-share-gains-as-us-customers-remain-under-pressure-150000395.html?.tsrc=rss",
-"pub": "2026-11-18T15:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "bd334128a33d",
+"t": "",
+"title": "BoJ Governor Ueda: No current plan to reassess pace of bank's ETF sales",
+"url": "https://www.financialjuice.com/News/9859069/BoJ-Governor-Ueda-No-current-plan-to-reassess-pace-of-banks-ETF-sales.aspx?xy=rss",
+"pub": "2026-11-19T02:09:35+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
-"id": "c190d23dae9d",
-"t": "PLTR",
-"title": "How to Play General Motors Stock as GM Shares Switch to the Nasdaq",
-"url": "https://www.barchart.com/story/news/8898331/how-to-play-general-motors-stock-as-gm-shares-switch-to-the-nasdaq?.tsrc=rss",
-"pub": "2026-11-18T14:59:07+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T21:14:22+00:00"
+"id": "dc3b48f3c42d",
+"t": "",
+"title": "China's President Xi: china will establish Asia-Pacific community research center in Shenzhen",
+"url": "https://www.financialjuice.com/News/9859068/Chinas-President-Xi-china-will-establish-Asia-Pacific-community-research-center-in-Shenzhen.aspx?xy=rss",
+"pub": "2026-11-19T02:09:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
-"id": "0d3d437e00b8",
-"t": "AVGO",
-"title": "How Much Could You Lose Holding Qualcomm Stock?",
-"url": "https://www.trefis.com/stock/qcom/articles/626130/how-much-could-you-lose-holding-qualcomm-stock/2026-11-18?.tsrc=rss",
-"pub": "2026-11-18T14:58:58+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "976e012c08fc",
+"t": "",
+"title": "China's President Xi: China will allocate $20 million to back practical collaboration in APEC",
+"url": "https://www.financialjuice.com/News/9859067/Chinas-President-Xi-China-will-allocate-20-million-to-back-practical-collaboration-in-APEC.aspx?xy=rss",
+"pub": "2026-11-19T02:08:43+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
-"id": "700b03e88be3",
-"t": "NVDA",
-"title": "Jensen Who? Nvidia Raises Its Outlook to Grow “Approximately 75%” Without Him. The Stock Still Trades Near 10x",
-"url": "https://www.tikr.com/blog/jensen-who-nvidia-raises-its-outlook-to-grow-approximately-75-without-him-the-stock-still-trades-near-10x?ref=yahoofinance&tlnk=yf-261118-5j8qrjp7&.tsrc=rss",
-"pub": "2026-11-18T14:57:43+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "55632869675f",
+"t": "",
+"title": "China's President Xi: need to back enhancing people's lives, invest in citizens",
+"url": "https://www.financialjuice.com/News/9859066/Chinas-President-Xi-need-to-back-enhancing-peoples-lives-invest-in-citizens.aspx?xy=rss",
+"pub": "2026-11-19T02:08:17+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
-"id": "76d029c5034d",
-"t": "ISRG",
-"title": "Global Multiport Surgical Robot Market 2026 Report: Trends and Forecast to 2030 | Capitalize on 19.1% CAGR as Intuitive Surgical, Medtronic, J&J and CMR Surgical Advance AI Surgery",
-"url": "https://finance.yahoo.com/healthcare/articles/global-multiport-surgical-robot-market-145700591.html?.tsrc=rss",
-"pub": "2026-11-18T14:57:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "ddff327a85fb",
+"t": "",
+"title": "China's President Xi: need to widen green, low-carbon collaboration",
+"url": "https://www.financialjuice.com/News/9859065/Chinas-President-Xi-need-to-widen-green-low-carbon-collaboration.aspx?xy=rss",
+"pub": "2026-11-19T02:07:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
-"id": "e3741b6501a7",
-"t": "NVDA",
-"title": "3 numbers explaining Nvidia's post-earnings stock move",
-"url": "https://finance.yahoo.com/video/3-numbers-explaining-nvidias-post-earnings-stock-move-145619725.html?.tsrc=rss",
-"pub": "2026-11-18T14:56:19+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "b5807b8e1de2",
+"t": "",
+"title": "China's President Xi: need to advance coordinated growth of resources, environment and population",
+"url": "https://www.financialjuice.com/News/9859064/Chinas-President-Xi-need-to-advance-coordinated-growth-of-resources-environment-and-population.aspx?xy=rss",
+"pub": "2026-11-19T02:07:31+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
-"id": "05b2495a3c14",
-"t": "ISRG",
-"title": "Global Abdominal Surgical Robot Market Report 2026: Size, Trends, and Forecast to 2030 | Capitalize on 17.9% CAGR as Intuitive Surgical, Medtronic, J&J, and CMR Surgical Advance AI",
-"url": "https://finance.yahoo.com/healthcare/articles/global-abdominal-surgical-robot-market-145600184.html?.tsrc=rss",
-"pub": "2026-11-18T14:56:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "d5301e059353",
+"t": "",
+"title": "China's President Xi: need to intensify campaign against corruption",
+"url": "https://www.financialjuice.com/News/9859063/Chinas-President-Xi-need-to-intensify-campaign-against-corruption.aspx?xy=rss",
+"pub": "2026-11-19T02:06:59+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "f101008b5fd3",
+"t": "",
+"title": "China's President Xi: need to boost capacity building, advance regional energy and food security",
+"url": "https://www.financialjuice.com/News/9859062/Chinas-President-Xi-need-to-boost-capacity-building-advance-regional-energy-and-food-security.aspx?xy=rss",
+"pub": "2026-11-19T02:06:33+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "d847f9ecac3d",
+"t": "",
+"title": "China's President Xi: regional data management should be enhanced",
+"url": "https://www.financialjuice.com/News/9859061/Chinas-President-Xi-regional-data-management-should-be-enhanced.aspx?xy=rss",
+"pub": "2026-11-19T02:05:59+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "361f8b76304a",
+"t": "",
+"title": "Taiwan shares fall over 3%",
+"url": "https://www.financialjuice.com/News/9859060/Taiwan-shares-fall-over-3.aspx?xy=rss",
+"pub": "2026-11-19T02:05:52+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "42863536d38d",
+"t": "",
+"title": "China's President Xi: should build innovative pillars with digital economy as drivers",
+"url": "https://www.financialjuice.com/News/9859059/Chinas-President-Xi-should-build-innovative-pillars-with-digital-economy-as-drivers.aspx?xy=rss",
+"pub": "2026-11-19T02:05:47+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "992c9f0502a1",
+"t": "",
+"title": "China's President Xi: should advance intelligent customs systems",
+"url": "https://www.financialjuice.com/News/9859058/Chinas-President-Xi-should-advance-intelligent-customs-systems.aspx?xy=rss",
+"pub": "2026-11-19T02:05:16+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "9c52432b76f9",
+"t": "",
+"title": "China's President Xi: boost digitization of trade and investment",
+"url": "https://www.financialjuice.com/News/9859057/Chinas-President-Xi-boost-digitization-of-trade-and-investment.aspx?xy=rss",
+"pub": "2026-11-19T02:04:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "3d53c8e95061",
+"t": "",
+"title": "Take-Two stock jumps over 6% as Rockstar's long-awaited ‘GTA VI’ arrives after 13-year wait",
+"url": "https://www.foxbusiness.com/markets/take-two-stock-jumps-over-6-rockstars-long-awaited-gta-vi-arrives-after-13-year-wait",
+"pub": "2026-11-19T02:04:48+00:00",
+"src": "Fox Business",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "ab94ee157568",
+"t": "",
+"title": "China's President Xi: essential to advance regional trade pacts",
+"url": "https://www.financialjuice.com/News/9859056/Chinas-President-Xi-essential-to-advance-regional-trade-pacts.aspx?xy=rss",
+"pub": "2026-11-19T02:04:35+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "ecec79b1e873",
+"t": "",
+"title": "China’s President Xi: China is supporter and driver of Asia Pacific collaboration",
+"url": "https://www.financialjuice.com/News/9859055/Chinas-President-Xi-China-is-supporter-and-driver-of-Asia-Pacific-collaboration.aspx?xy=rss",
+"pub": "2026-11-19T02:03:55+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "0879ff1efcba",
+"t": "",
+"title": "China's President Xi: should enhance people's feeling of access",
+"url": "https://www.financialjuice.com/News/9859054/Chinas-President-Xi-should-enhance-peoples-feeling-of-access.aspx?xy=rss",
+"pub": "2026-11-19T02:03:35+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "0e8831977cc0",
+"t": "",
+"title": "China's President Xi: should leverage diverse economies to boost cooperation",
+"url": "https://www.financialjuice.com/News/9859053/Chinas-President-Xi-should-leverage-diverse-economies-to-boost-cooperation.aspx?xy=rss",
+"pub": "2026-11-19T02:03:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "8b3a7ad8416f",
+"t": "",
+"title": "China's President Xi: should establish fair, non-discriminatory cooperation environment",
+"url": "https://www.financialjuice.com/News/9859052/Chinas-President-Xi-should-establish-fair-non-discriminatory-cooperation-environment.aspx?xy=rss",
+"pub": "2026-11-19T02:02:32+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "14bc1e0bd948",
+"t": "",
+"title": "China's President Xi: should reopen economic channels, expand growth opportunities in Asia Pacific region",
+"url": "https://www.financialjuice.com/News/9859051/Chinas-President-Xi-should-reopen-economic-channels-expand-growth-opportunities-in-Asia-Pacific-region.aspx?xy=rss",
+"pub": "2026-11-19T02:02:05+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "ba4283d5d301",
+"t": "",
+"title": "China's President Xi: should promote free, open trade",
+"url": "https://www.financialjuice.com/News/9858994/Chinas-President-Xi-should-promote-free-open-trade.aspx?xy=rss",
+"pub": "2026-11-19T02:01:38+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "c2c8db84f30b",
+"t": "",
+"title": "China's President Xi: must maintain open regionalism, steadily advance economy, foster inclusive cooperation",
+"url": "https://www.financialjuice.com/News/9858993/Chinas-President-Xi-must-maintain-open-regionalism-steadily-advance-economy-foster-inclusive-cooperation.aspx?xy=rss",
+"pub": "2026-11-19T02:01:20+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
+},
+{
+"id": "14955a1fdf1b",
+"t": "",
+"title": "Wall Street Pledged to Mobilize $500 Billion for Nvidia—But Hasn’t Put Up a Dime",
+"url": "https://www.wsj.com/finance/wall-street-pledged-to-mobilize-500-billion-for-nvidiabut-hasnt-put-up-a-dime-1e41f276?mod=rss_markets_main",
+"pub": "2026-11-19T02:00:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
 "id": "76db61ab105f",
@@ -8052,6 +8292,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T01:58:01+00:00"
+},
+{
+"id": "af220b38a0a8",
+"t": "",
+"title": "Australian Dollar Set to Shed 2026 Gain on RBA Rate-Cut Bets",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/australian-dollar-set-to-shed-2026-gain-on-rba-rate-cut-bets",
+"pub": "2026-11-19T01:53:37+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
 "id": "4bbf2f8dc4a2",
@@ -9342,6 +9592,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-18T23:37:08+00:00"
+},
+{
+"id": "6b431206c031",
+"t": "",
+"title": "Alger Concentrated Equity ETF (CNEQ.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95OThXd0dtemI3S2Z5UmU0aVNGbWFRcENHNFE5SHZDb3Z5LUlDTGdWWkx3dk1udlBBVlZCRGpBNlpRX0Y3MEZ2N2ZxdUdpVHFqNGw5TkNRcnI3NlVsVGtTbkF1RWhXcG1SSTBaZg?oc=5",
+"pub": "2026-11-18T22:52:45+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T02:14:26+00:00"
 },
 {
 "id": "76bce6a417ed",
@@ -10749,266 +11009,6 @@
 "title": "Nvidia Chair at Employee Townhall: Jensen Huang not coming back. $NVDA",
 "url": "https://www.financialjuice.com/News/9858496/Nvidia-Chair-at-Employee-Townhall-Jensen-Huang-not-coming-back-NVDA.aspx",
 "pub": "2026-11-18T20:14:20+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "1db35fabfee5",
-"t": "",
-"title": "Moolenaar: US tech firms shouldn't play both sides of AI race",
-"url": "https://www.financialjuice.com/News/9858495/Moolenaar-US-tech-firms-shouldnt-play-both-sides-of-AI-race.aspx?xy=rss",
-"pub": "2026-11-18T20:11:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T20:15:31+00:00"
-},
-{
-"id": "ae8925cadb3e",
-"t": "",
-"title": "Moolenaar: US tech firms shouldn't play both sides of AI race",
-"url": "https://www.financialjuice.com/News/9858495/Moolenaar-US-tech-firms-shouldnt-play-both-sides-of-AI-race.aspx",
-"pub": "2026-11-18T20:11:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "09e586e86440",
-"t": "",
-"title": "US House China Panel Chair Moolenaar: It's unacceptable for Microsoft to arm ByteDance. $MSFT",
-"url": "https://www.financialjuice.com/News/9858494/US-House-China-Panel-Chair-Moolenaar-Its-unacceptable-for-Microsoft-to-arm-ByteDance-MSFT.aspx?xy=rss",
-"pub": "2026-11-18T20:10:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T20:15:31+00:00"
-},
-{
-"id": "f8a6ada9d1ba",
-"t": "",
-"title": "US House China Panel Chair Moolenaar: It's unacceptable for Microsoft to arm ByteDance. $MSFT",
-"url": "https://www.financialjuice.com/News/9858494/US-House-China-Panel-Chair-Moolenaar-Its-unacceptable-for-Microsoft-to-arm-ByteDance-MSFT.aspx",
-"pub": "2026-11-18T20:10:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "83cc53a9082e",
-"t": "",
-"title": "RBNZ Sees Signs of Higher Fuel Costs Adding to Broader Inflation",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/rbnz-sees-signs-of-higher-fuel-costs-adding-to-broader-inflation",
-"pub": "2026-11-18T20:10:30+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T21:14:22+00:00"
-},
-{
-"id": "2f938b03852a",
-"t": "",
-"title": "Prosus NV (PRX.AS) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5hWF83LWRNcGw3akxIM19EamVybjg1czdLWXF6cHZjTWozWE1oQTJMYWpQb0xZTm1JeFBrSU14c3ZLUHd4RjBUWmp2Q0R6Z2hwWm4yeXJySzlaV1BXRGc?oc=5",
-"pub": "2026-11-18T20:10:07+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "66914acfbfd7",
-"t": "",
-"title": "US House China Panel Chair Moolenaar: Microsoft should not sell AI to ByteDance. $MSFT",
-"url": "https://www.financialjuice.com/News/9858493/US-House-China-Panel-Chair-Moolenaar-Microsoft-should-not-sell-AI-to-ByteDance-MSFT.aspx?xy=rss",
-"pub": "2026-11-18T20:09:25+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T20:15:31+00:00"
-},
-{
-"id": "d00a0a13864c",
-"t": "",
-"title": "US House China Panel Chair Moolenaar: Microsoft should not sell AI to ByteDance. $MSFT",
-"url": "https://www.financialjuice.com/News/9858493/US-House-China-Panel-Chair-Moolenaar-Microsoft-should-not-sell-AI-to-ByteDance-MSFT.aspx",
-"pub": "2026-11-18T20:09:25+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "8e853a82f65b",
-"t": "",
-"title": "Yemen's Houthis: Targeted King Khalid Airport and financial center in Riyadh.",
-"url": "https://www.financialjuice.com/News/9858492/Yemens-Houthis-Targeted-King-Khalid-Airport-and-financial-center-in-Riyadh.aspx?xy=rss",
-"pub": "2026-11-18T20:09:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T20:15:31+00:00"
-},
-{
-"id": "ce1738f10c3d",
-"t": "",
-"title": "Yemen's Houthis: Targeted King Khalid Airport and financial center in Riyadh.",
-"url": "https://www.financialjuice.com/News/9858492/Yemens-Houthis-Targeted-King-Khalid-Airport-and-financial-center-in-Riyadh.aspx",
-"pub": "2026-11-18T20:09:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "3d373a5e54a3",
-"t": "",
-"title": "House Select Committee on China has requested a bipartisan briefing from Microsoft on reported deal to sell AI to ByteDance - Statement. $MSFT",
-"url": "https://www.financialjuice.com/News/9858491/House-Select-Committee-on-China-has-requested-a-bipartisan-briefing-from-Microsoft-on-reported-deal-to-sell-AI-to-ByteDance---Statement-MSFT.aspx?xy=rss",
-"pub": "2026-11-18T20:08:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T20:15:31+00:00"
-},
-{
-"id": "a5c031ceea42",
-"t": "",
-"title": "House Select Committee on China has requested a bipartisan briefing from Microsoft on reported deal to sell AI to ByteDance - Statement. $MSFT",
-"url": "https://www.financialjuice.com/News/9858491/House-Select-Committee-on-China-has-requested-a-bipartisan-briefing-from-Microsoft-on-reported-deal-to-sell-AI-to-ByteDance---Statement-MSFT.aspx",
-"pub": "2026-11-18T20:08:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "cf77c791c50e",
-"t": "",
-"title": "IRIB News: Three oil tankers caught fire, stopped after hitting sea mines east of Strait of Hormuz, having ignored Navy warnings - Iran Army",
-"url": "https://www.financialjuice.com/News/9858490/IRIB-News-Three-oil-tankers-caught-fire-stopped-after-hitting-sea-mines-east-of-Strait-of-Hormuz-having-ignored-Navy-warnings---Iran-Army.aspx?xy=rss",
-"pub": "2026-11-18T20:07:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T20:15:31+00:00"
-},
-{
-"id": "a32937fadee6",
-"t": "",
-"title": "IRIB News: Three oil tankers caught fire, stopped after hitting sea mines east of Strait of Hormuz, having ignored Navy warnings - Iran Army",
-"url": "https://www.financialjuice.com/News/9858490/IRIB-News-Three-oil-tankers-caught-fire-stopped-after-hitting-sea-mines-east-of-Strait-of-Hormuz-having-ignored-Navy-warnings---Iran-Army.aspx",
-"pub": "2026-11-18T20:07:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "d3a7f7c392a8",
-"t": "",
-"title": "Klabin says 10 employees injured after boiler explosion in Brazilian paper factory - Reuters",
-"url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOSGxBWTVVWTV4UGFWWndBWHZJb1FSSVNHREdRYjRndDV4ek9sNjRqM0x2WVROX3BqeXJaT2RZOE9Ld1YtZXNyRXV5ZnZkTFp0WlEzalFRYld3OWFFTUJpNF9sTFZ2OUJHeVFZdmhSUzI4M1NVbm1tTWptdkg4TVp2YkdSWFVnRUt0VDJDVnQ1S2p5NjdRaDdJODlNYmtkVDhONFprb1oxTTBkOUZyWi1WRlhLNXkteXYxdFBLekpXRmc1OVZZRTZ2NkgxSmoxSVU4?oc=5",
-"pub": "2026-11-18T20:06:47+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T20:44:04+00:00"
-},
-{
-"id": "3e943e1ef01f",
-"t": "",
-"title": "3 offending oil tankers caught fire in the east of the Strait of Hormuz - IRIB News",
-"url": "https://www.financialjuice.com/News/9858489/3-offending-oil-tankers-caught-fire-in-the-east-of-the-Strait-of-Hormuz---IRIB-News.aspx?xy=rss",
-"pub": "2026-11-18T20:06:33+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T20:15:31+00:00"
-},
-{
-"id": "a52cd62285c7",
-"t": "",
-"title": "3 offending oil tankers caught fire in the east of the Strait of Hormuz - IRIB News",
-"url": "https://www.financialjuice.com/News/9858489/3-offending-oil-tankers-caught-fire-in-the-east-of-the-Strait-of-Hormuz---IRIB-News.aspx",
-"pub": "2026-11-18T20:06:33+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "98cc5ddc685b",
-"t": "",
-"title": "Rungta Irrigation Ltd (RUNG.BO) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNR1V1VmYwSFZRYlRVNjlRcHlqYl9KYVI1OVVhUEdzR2FCRm9tZC1HS1lpbFgyXzRKLXFDMDZmcTFrTC1EYlVQaTNDYkthN3FEbUhDR3BlOThWMjJWVlB2VnVGalVqN290YVlBOHljOHYtWmJYN20tV3ZzaE5YNURMSVdUSFFUT20yYWc?oc=5",
-"pub": "2026-11-18T20:03:24+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T23:14:48+00:00"
-},
-{
-"id": "e5bec605b2b4",
-"t": "",
-"title": "Canadian Stocks Sink to June Low as Metals, Oil Losses Mount",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/canadian-stocks-sink-to-june-low-as-metals-oil-losses-mount",
-"pub": "2026-11-18T20:00:34+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T21:44:34+00:00"
-},
-{
-"id": "5e491b225aef",
-"t": "",
-"title": "U.S. Stocks Mostly Lower After Nvidia Earnings Fail to Soothe Nerves",
-"url": "https://www.wsj.com/finance/commodities-futures/stock-futures-rally-as-nvidia-earnings-calm-ai-trade-fears-96f51546?mod=rss_markets_main",
-"pub": "2026-11-18T19:59:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "36efb563abab",
-"t": "",
-"title": "NiCAN Ltd (NICN.V) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8yUFhCU3lPUi1xeDc4T0RYUjAyQ1dqQU9wdnZWcURyeGhjNEE3VVRhVFlUek1mdjZWRUtsZlRtUl9VRTRpWkhUYmFGTFVJaUFWWVh3ODRtR3YzR2poX0c5dUw2TTRRS3kwQ1I0?oc=5",
-"pub": "2026-11-18T19:57:25+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "8672f4b0ef46",
-"t": "",
-"title": "United Natural Foods Inc (UNFI.P) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB6UXk1RHgwZWl4VU1SdFVkQVR5d21SM3FJVzFXcFIyWXRKVk5nblloeloxdlNMbFQ2QnVlSjFQa0lpd0FUUm0wc045NXd1M2UwQmhWSW9uazNUdzZTMmJFQjR5V3JLWXBhY1lJ?oc=5",
-"pub": "2026-11-18T19:57:22+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "c914aba9987b",
-"t": "",
-"title": "RBNZ Governor Breman: There are risks in both directions.",
-"url": "https://www.financialjuice.com/News/9858486/RBNZ-Governor-Breman-There-are-risks-in-both-directions.aspx?xy=rss",
-"pub": "2026-11-18T19:52:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T19:58:05+00:00"
-},
-{
-"id": "373ea162288f",
-"t": "",
-"title": "RBNZ Governor Breman: There are risks in both directions.",
-"url": "https://www.financialjuice.com/News/9858486/RBNZ-Governor-Breman-There-are-risks-in-both-directions.aspx",
-"pub": "2026-11-18T19:52:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "24b913d362fe",
-"t": "",
-"title": "RBNZ Governor Breman: Measures of underlying inflation remain elevated",
-"url": "https://www.financialjuice.com/News/9858485/RBNZ-Governor-Breman-Measures-of-underlying-inflation-remain-elevated.aspx?xy=rss",
-"pub": "2026-11-18T19:52:00+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T19:58:05+00:00"
-},
-{
-"id": "03ad87c52a2e",
-"t": "",
-"title": "RBNZ Governor Breman: Measures of underlying inflation remain elevated",
-"url": "https://www.financialjuice.com/News/9858485/RBNZ-Governor-Breman-Measures-of-underlying-inflation-remain-elevated.aspx",
-"pub": "2026-11-18T19:52:00+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T00:43:43+00:00"
