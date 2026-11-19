@@ -419,7 +419,8 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .am-gl{font-size:11px; color:var(--muted); margin:2px 0 0}
 .am-gc{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 4px}
 .am-node{font:inherit; font-size:13px; padding:5px 10px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); cursor:pointer; transition:opacity .2s}
-.am-node.cur{border-color:var(--ink); font-weight:700}
+.am-node.on{border-color:var(--pt); color:var(--pt)}
+.am-node.cur{border-color:var(--pt); background:var(--pt); color:var(--bg)}
 .am-node.dim{opacity:.32}
 .am-flow{display:flex; justify-content:flex-start; padding:0 0 0 98px; margin:-2px 0}
 .am-flow span{font-size:11px; color:var(--muted); border-left:1px solid var(--line); padding:4px 0 4px 8px}
@@ -427,7 +428,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .am-sh{font-size:12px; color:var(--muted); margin:16px 0 0; font-weight:600}
 .am-s{display:block; font-size:11px; color:var(--muted); margin-top:2px}
 .am-ln{stroke:var(--line); stroke-width:1.2} .am-ln.d{stroke-dasharray:4 4; stroke:var(--muted)}
-.am-dt{fill:var(--ink)} .am-dt.o{fill:var(--surface); stroke:var(--ink); stroke-width:1.2}
+.am-dt{fill:var(--pt)} .am-dt.o{fill:var(--surface); stroke:var(--ink); stroke-width:1.2}
 .am-tx{font-size:11px; fill:var(--ink); cursor:pointer} .am-tx.m{fill:var(--muted); cursor:default}
 .am-cc{fill:var(--ink)} .am-ct{font-size:12px; font-weight:700; fill:var(--bg)}
 .am-hub{position:relative; display:grid; grid-template-columns:1fr 1fr; gap:26px 10px; margin-top:4px}
@@ -441,7 +442,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .am-it small{display:block; font-size:12px; color:var(--muted)}
 .am-src2{font-size:11px; color:var(--muted); margin-top:3px} .am-src2 a{color:var(--muted)}
 .am-more{font:inherit; font-size:12px; color:var(--muted); background:none; border:0; padding:6px 0 2px; cursor:pointer}
-.am-ctr{position:relative; z-index:1; grid-column:1/-1; justify-self:center; width:66%; text-align:center; background:var(--ink); color:var(--bg); border-radius:14px; padding:12px 10px}
+.am-ctr{position:relative; z-index:1; grid-column:1/-1; justify-self:center; width:66%; text-align:center; background:var(--pt); color:var(--bg); border-radius:14px; padding:12px 10px}
 .am-ctr b{display:block; font-size:18px} .am-ctr span{display:block; font-size:12px; opacity:.8; margin-top:2px}
 .am-src a{color:var(--muted); font-size:12px; display:block; padding:3px 0}
 /* A */
@@ -3987,7 +3988,8 @@ function amPrjCo(){ const p = (AM.projects||[]).find(x=>x.id===amAi.prj); if(!p)
 function amLadder(){ const ai = AM.ai, sel = amAi.co, R = sel ? amRel(sel) : null, lens = amPrjCo();
   const near = sel ? new Set([sel, ...[...R.buy, ...R.gout].map(e=>e.b), ...[...R.sell, ...R.gin].map(e=>e.a)]) : null;
   const chip = c => { const on = lens ? lens.has(c) : near ? near.has(c) : true;
-    return `<button class="am-node${c===sel?" cur":""}${on?"":" dim"}" type="button" data-amc="${c}">${c}</button>`; };
+    const hl = (lens || near) && on;
+    return `<button class="am-node${c===sel&&!lens?" cur":hl?" on":""}${on?"":" dim"}" type="button" data-amc="${c}">${c}</button>`; };
   const isOn = c => lens ? lens.has(c) : near ? near.has(c) : true;
   return ai.rows.map((r,i)=>{
     const all = r.g.flatMap(g=>g.co), open = amAi.exp.has(r.k);
@@ -4045,7 +4047,7 @@ function amAiBody(){ const P = AM.projects||[], lens = AM.projects.find(p=>p.id=
   return `<section class="card"><div class="am-bar">
         <div class="seg am-seg" role="group" aria-label="흐름 보기"><button type="button" data-amf="up" aria-pressed="${amAi.flow==="up"}">물건 흐름 ↑</button><button type="button" data-amf="down" aria-pressed="${amAi.flow==="down"}">돈 흐름 ↓</button></div>
         <select id="amPrj" aria-label="국가 프로젝트로 보기"><option value="">프로젝트 렌즈 끄기</option>${P.map(p=>`<option value="${p.id}"${p.id===amAi.prj?" selected":""}>${p.n}</option>`).join("")}</select></div>
-      ${lens?`<div class="tiny" style="margin:10px 0 0">${lens.n} · ${lens.st} <span class="muted">· 참여 회사만 진하게 보여요</span></div>`:""}
+      ${lens?`<div class="tiny" style="margin:10px 0 0">${lens.n} · ${lens.st} <span class="muted">· 참여 회사는 금색으로 보여요</span></div>`:""}
       <div class="am-lad">${amLadder()}</div>
       <p class="tiny muted" style="margin:10px 0 0">위로 갈수록 사용자에 가깝고, 아래로 갈수록 바탕이 되는 산업이에요. 회사를 누르면 거래 관계가 열려요.</p></section>
     <section class="card" id="amCo">${amCoCard()}</section>`;
