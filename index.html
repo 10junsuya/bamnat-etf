@@ -429,6 +429,19 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .am-dt{fill:var(--ink)} .am-dt.o{fill:var(--surface); stroke:var(--ink); stroke-width:1.2}
 .am-tx{font-size:11px; fill:var(--ink); cursor:pointer} .am-tx.m{fill:var(--muted); cursor:default}
 .am-cc{fill:var(--ink)} .am-ct{font-size:12px; font-weight:700; fill:var(--bg)}
+.am-hub{position:relative; display:grid; grid-template-columns:1fr 1fr; gap:26px 10px; margin-top:4px}
+.am-hub svg{position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:visible}
+.am-bx{position:relative; z-index:1; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:10px 10px 6px; min-width:0}
+.am-bx.w{grid-column:1/-1}
+.am-bh{font-size:12px; color:var(--muted); margin-bottom:4px}
+.am-it{padding:5px 0; border-top:1px solid var(--line); font-size:14px; line-height:1.35}
+.am-bh + .am-it{border-top:0}
+.am-it > button{font:inherit; font-weight:600; border:0; background:none; padding:0; color:var(--ink); cursor:pointer; text-align:left}
+.am-it small{display:block; font-size:12px; color:var(--muted)}
+.am-src2{font-size:11px; color:var(--muted); margin-top:3px} .am-src2 a{color:var(--muted)}
+.am-more{font:inherit; font-size:12px; color:var(--muted); background:none; border:0; padding:6px 0 2px; cursor:pointer}
+.am-ctr{position:relative; z-index:1; grid-column:1/-1; justify-self:center; width:66%; text-align:center; background:var(--ink); color:var(--bg); border-radius:14px; padding:12px 10px}
+.am-ctr b{display:block; font-size:18px} .am-ctr span{display:block; font-size:12px; opacity:.8; margin-top:2px}
 .am-src a{color:var(--muted); font-size:12px; display:block; padding:3px 0}
 /* A */
 .agrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px}
@@ -3963,7 +3976,7 @@ function viewAmap(){
       : `<div class="acard am-soon" aria-disabled="true"><div class="c">준비 중</div><div class="t">${n}</div><div class="s">${d}</div></div>`).join("")}</div>`;
 }
 /* A 화면 · AI: 사다리 지도 + 흐름 스위치 + 모래시계 회사 카드 + 프로젝트 렌즈 */
-const amAi = {co:"OpenAI", flow:"up", prj:""};
+const amAi = {co:"OpenAI", flow:"up", prj:"", open:new Set()};
 const AMK = {"공급":"물건·부품","클라우드":"클라우드","건설":"데이터센터","전력":"전기","투자":"투자"};
 function amRel(c){ const E = (AM.ai||{}).e||[];
   return { buy: E.filter(e=>e.a===c && e.k!=="투자"), sell: E.filter(e=>e.b===c && e.k!=="투자"),
@@ -3982,40 +3995,42 @@ function amLadder(){ const ai = AM.ai, sel = amAi.co, R = sel ? amRel(sel) : nul
       : (nx && nx.k==="dc") ? `<div class="am-gap">칩이 들어갈 건물과 전기</div>` : "";
     return row + link; }).join("");
 }
-function amHourglass(c){ const R = amRel(c), co = AM.ai.co[c]||{};
-  const uniq = a => [...new Set(a)];
-  const top = uniq(R.buy.map(e=>e.b)), bot = uniq(R.sell.map(e=>e.a)), lf = uniq(R.gin.map(e=>e.a)), rt = uniq(R.gout.map(e=>e.b));
-  const W = 340, H = 300, cx = W/2, cy = 150, MAX = 5;
-  const xs = n => Array.from({length:n}, (_,i)=> n===1 ? cx : 34 + i*(W-68)/(n-1));
-  const fan = (arr, y, ly) => { const a = arr.slice(0,MAX), X = xs(a.length);
-    return a.map((n,i)=>`<line x1="${cx}" y1="${cy}" x2="${X[i]}" y2="${y}" class="am-ln"/><circle cx="${X[i]}" cy="${y}" r="4" class="am-dt"/>
-      <text x="${X[i]}" y="${ly}" text-anchor="middle" class="am-tx" data-amc="${n}">${n.length>7?n.slice(0,6)+"…":n}</text>`).join("")
-      + (arr.length>MAX?`<text x="${W-4}" y="${ly}" text-anchor="end" class="am-tx m">외 ${arr.length-MAX}</text>`:""); };
-  const side = (arr, x, lx, anchor) => arr.slice(0,3).map((n,i)=>{ const y = cy - 26 + i*26;
-    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" class="am-ln d"/><circle cx="${x}" cy="${y}" r="3.5" class="am-dt o"/>
-      <text x="${lx}" y="${y-8}" text-anchor="${anchor}" class="am-tx" data-amc="${n}">${n.length>6?n.slice(0,5)+"…":n}</text>`; }).join("");
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${c}의 거래 관계 그림: 위는 사 가는 곳, 아래는 파는 곳, 양옆은 투자">
-    ${top.length?`<text x="6" y="14" class="am-tx m">사 가는 곳</text>`:""}${bot.length?`<text x="6" y="${H-6}" class="am-tx m">파는 곳</text>`:""}
-    ${fan(top, 58, 44)}${fan(bot, H-58, H-36)}
-    ${side(lf, 40, 6, "start")}${side(rt, W-40, W-6, "end")}
-    ${lf.length?`<text x="6" y="${cy+56}" class="am-tx m">여기에 투자 ↗</text>`:""}${rt.length?`<text x="${W-6}" y="${cy+56}" text-anchor="end" class="am-tx m">↖ 여기가 투자</text>`:""}
-    <circle cx="${cx}" cy="${cy}" r="30" class="am-cc"/><text x="${cx}" y="${cy+5}" text-anchor="middle" class="am-ct">${co.s||""}</text>
-  </svg>`;
+/* 회사 생태계: 가운데 회사 + 관계별 묶음 상자 (2026-11-19 대표 확정) */
+function amBoxes(c){ const ai = AM.ai, R = amRel(c);
+  const place = n => { for(const r of ai.rows){ const g = r.g.find(g=>g.co.includes(n)); if(g) return g.g || r.n; } return ""; };
+  const B = new Map(); const add = (key, side, e, who) => { if(!B.has(key)) B.set(key, {h:key, side, it:new Map()}); const it = B.get(key).it;
+    if(!it.has(who)) it.set(who, []); it.get(who).push(e); };
+  R.gin.forEach(e=>add("투자자", "top", e, e.a));
+  const KN = {"클라우드":"클라우드","건설":"데이터센터","전력":"전력"};
+  R.buy.forEach(e=>add("고객", "top", e, e.b));
+  R.sell.forEach(e=>add("공급 · "+(KN[e.k] || place(e.a)), "bot", e, e.a));
+  R.gout.forEach(e=>add("투자한 곳", "bot", e, e.b));
+  return [...B.values()];
 }
+function amHub(c){ const co = AM.ai.co[c], row = AM.ai.rows.find(r=>r.g.some(g=>g.co.includes(c)));
+  const bx = amBoxes(c), ev = t => `<span class="am-ev">${t}</span>`;
+  const box = (b, k, full) => { const open = amAi.open.has(c+"|"+b.h);
+    return `<div class="am-bx${full?" w":""}"><div class="am-bh">${b.h}</div>
+      ${[...b.it].map(([who, es])=>`<div class="am-it"><button type="button" data-amc="${who}">${who}</button><small>${es.map(e=>amGold(e.t)).join(" · ")}</small>
+        ${open?es.map(e=>`<div class="am-src2">${ev(e.ev)} ${e.d} · <a href="${e.src[1]}" target="_blank" rel="noopener">${e.src[0]} ›</a></div>`).join(""):""}</div>`).join("")}
+      <button class="am-more" type="button" data-amx="${b.h}" aria-expanded="${open}">${open?"근거 닫기":"근거 보기 ›"}</button></div>`; };
+  const band = side => { const a = bx.filter(b=>b.side===side); return a.map((b,i)=>box(b, i, a.length%2===1 && i===a.length-1)).join(""); };
+  return `<div class="am-hub" id="amHub"><svg aria-hidden="true"></svg>${band("top")}
+      <div class="am-ctr" id="amCtr"><b>${c}</b><span>${row.n} · ${co.t}</span></div>${band("bot")}</div>`;
+}
+function amLines(){ const hub = document.getElementById("amHub"), ctr = document.getElementById("amCtr"); if(!hub || !ctr) return;
+  const H = hub.getBoundingClientRect(), C = ctr.getBoundingClientRect(), cx = C.left+C.width/2-H.left, cy = C.top+C.height/2-H.top;
+  hub.querySelector("svg").innerHTML = [...hub.querySelectorAll(".am-bx")].map(b=>{ const r = b.getBoundingClientRect();
+    const x = r.left+r.width/2-H.left, y = (r.top < C.top ? r.bottom : r.top)-H.top;
+    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" class="am-ln"/><circle cx="${x}" cy="${y}" r="3" class="am-dt"/>`; }).join(""); }
+addEventListener("resize", ()=>requestAnimationFrame(amLines));
 function amCoCard(){ const c = amAi.co; if(!c || !(AM.ai.co||{})[c]) return `<p class="tiny muted">지도에서 회사를 눌러 보세요.</p>`;
-  const co = AM.ai.co[c], R = amRel(c), row = AM.ai.rows.find(r=>r.g.some(g=>g.co.includes(c)));
-  const grp = row.g.find(g=>g.co.includes(c));
-  const ev = t => `<span class="am-ev">${t}</span>`;
-  const line = (e, who) => `<div class="am-dl"><div class="k"><button class="am-co" type="button" data-amc="${who}">${who}</button></div>
-    <div>${AMK[e.k]} · ${amGold(e.t)}${ev(e.ev)}<a class="am-s" href="${e.src[1]}" target="_blank" rel="noopener">${e.d} · ${e.src[0]} ›</a></div></div>`;
-  const sec = (title, arr, side) => arr.length ? `<div class="am-sh">${title} <span class="muted">${arr.length}</span></div>${arr.map(e=>line(e, e[side])).join("")}` : "";
+  const R = amRel(c), row = AM.ai.rows.find(r=>r.g.some(g=>g.co.includes(c))), grp = row.g.find(g=>g.co.includes(c));
   const peers = grp.co.filter(x=>x!==c);
   const inPrj = (AM.projects||[]).filter(p=>Object.values(p.L||{}).some(v=>(v.co||[]).includes(c)));
-  return `<div style="display:flex;gap:10px;align-items:center"><span class="logo">${co.s}</span><div><div class="small" style="font-weight:700">${c}</div>
-      <div class="tiny muted">${row.n}${grp.g?` · ${grp.g}`:""} · ${co.t}</div></div></div>
-    ${(R.buy.length+R.sell.length+R.gin.length+R.gout.length) ? amHourglass(c) : `<p class="tiny muted" style="margin:12px 0 0">아직 확인된 거래 관계가 없어요. 근거가 확인되면 이어 드릴게요.</p>`}
-    ${sec("사 가는 곳 (이 회사가 파는 상대)", R.buy, "b")}${sec("파는 곳 (이 회사가 사는 상대)", R.sell, "a")}
-    ${sec("이 회사가 투자한 곳", R.gout, "b")}${sec("이 회사에 투자한 곳", R.gin, "a")}
+  const n = R.buy.length+R.sell.length+R.gin.length+R.gout.length;
+  return `<div class="small" style="font-weight:700">${c} 생태계</div><div class="tiny muted" style="margin:2px 0 12px">이름을 누르면 그 회사가 가운데로 와요</div>
+    ${n ? amHub(c) : `<p class="tiny muted">아직 확인된 거래 관계가 없어요. 근거가 확인되면 이어 드릴게요.</p>`}
     ${peers.length?`<div class="am-sh">같은 칸 회사</div><div>${peers.map(x=>`<button class="am-co" type="button" data-amc="${x}">${x}</button>`).join("")}</div>`:""}
     ${inPrj.length?`<div class="am-sh">나오는 국가 프로젝트</div><div>${inPrj.map(p=>`<button class="am-co" type="button" data-amp="${p.id}">${p.n}</button>`).join("")}</div>`:""}`;
 }
@@ -4039,10 +4054,11 @@ function viewAmapAi(){
       <div id="amWrap">${amBody()}</div></section>
     <p class="tiny muted" style="margin:10px 4px 0">공개된 발표와 보도를 정리한 것이고, 계약과 계획은 바뀔 수 있어요. 특정 회사나 상품을 사고팔라는 뜻이 아니에요.</p>`;
 }
-function amAiRedraw(scroll){ const w = document.getElementById("amAiWrap"); if(w) w.innerHTML = amAiBody();
+function amAiRedraw(scroll){ const w = document.getElementById("amAiWrap"); if(w) w.innerHTML = amAiBody(); requestAnimationFrame(amLines);
   if(scroll){ const c = document.getElementById("amCo"); if(c) c.scrollIntoView({behavior: reduceMotion()?"auto":"smooth", block:"start"}); } }
 document.addEventListener("click", ev=>{
   const c = ev.target.closest("[data-amc]"); if(c){ amAi.co = c.dataset.amc; amAiRedraw(true); return; }
+  const x = ev.target.closest("[data-amx]"); if(x){ const k = amAi.co+"|"+x.dataset.amx; amAi.open.has(k) ? amAi.open.delete(k) : amAi.open.add(k); amAiRedraw(false); return; }
   const f = ev.target.closest("[data-amf]"); if(f){ amAi.flow = f.dataset.amf; amAiRedraw(false); return; }
   const p = ev.target.closest("[data-amp]"); if(p){ amAi.prj = p.dataset.amp; amAiRedraw(false); const w = document.getElementById("amAiWrap"); if(w) w.scrollIntoView({behavior: reduceMotion()?"auto":"smooth", block:"start"}); return; }
 });
@@ -4103,7 +4119,7 @@ function render(){
   else if(r==="guide") html = viewGuide();
   else if(r==="check") html = viewCheck();
   else if(r==="amap") html = viewAmap();
-  else if(r==="amap-ai") html = viewAmapAi();
+  else if(r==="amap-ai"){ html = viewAmapAi(); requestAnimationFrame(amLines); }
   else html = viewHome(st);
   document.getElementById("view").innerHTML = html;
   const tabKey = r.startsWith("etf-") ? "home" : r;
