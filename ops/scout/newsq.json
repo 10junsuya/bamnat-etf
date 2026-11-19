@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-19 13:14",
-"rot": 58,
+"updated_kst": "2026-11-19 13:44",
+"rot": 118,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "46건",
+"Reuters": "43건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "b7cea3764ce9",
+"t": "NVDA",
+"title": "The S&P 500 Just Ended a Run of 155 Trading Days Above Its 200-Day Average. Here's What Followed 34 Similar Runs Since 1950.",
+"url": "https://www.fool.com/investing/2026/11/18/the-s-and-p-500-just-ended-a-run-of-155-trading-days-above-its-200-day-average-here-s-what-followed-34-similar-runs-since-1950/?.tsrc=rss",
+"pub": "2026-11-19T04:24:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "62f3b6a0eb10",
+"t": "COST",
+"title": "Gold Just Sank to a One-Year Low. Costco Members Who Bought Bars in September Are Down About $700 Each, and Launch Buyers Are Still Up 88%",
+"url": "https://247wallst.com/investing/2026/11/18/gold-just-sank-to-a-one-year-low-costco-members-who-bought-bars-in-september-are-down-about-700-each-and-launch-buyers-are-still-up-88/?.tsrc=rss",
+"pub": "2026-11-19T04:17:09+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "a309b3dfa874",
+"t": "UNH",
+"title": "Nasdaq, Dow, S&P 500 Futures Climb Ahead Of Anthropic’s Record Debut: SLS, GLD, TTWO, UNH In Focus",
+"url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-dow-s-and-p-500-futures-climb-ahead-of-anthropic-s-record-debut-sls-gld-ttwo-unh-in-focus/cNbLDbCR9iW?.tsrc=rss",
+"pub": "2026-11-19T04:15:26+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
+},
 {
 "id": "6d63cb0a9d41",
 "t": "PANW",
@@ -22,6 +52,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T04:14:14+00:00"
+},
+{
+"id": "07412fe3239c",
+"t": "NVDA",
+"title": "Anthropic, Nvidia And The Next AI Trade: Michael Burry Explains What Could Break The Bull Case",
+"url": "https://stocktwits.com/news-articles/markets/equity/anthropic-nvidia-next-ai-trade-michael-burry-what-could-break-bull-case/cNbLwugR9ig?.tsrc=rss",
+"pub": "2026-11-19T04:07:45+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "23f7508f2822",
+"t": "NVDA",
+"title": "4 Things the Headlines Missed in Nvidia's First Post-Jensen Earnings Report",
+"url": "https://www.fool.com/investing/2026/11/18/4-things-the-headlines-missed-in-nvidia-s-first-post-jensen-earnings-report/?.tsrc=rss",
+"pub": "2026-11-19T04:07:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
 "id": "326e6e7c5d96",
@@ -154,6 +204,16 @@
 "seen": "2026-11-19T03:44:34+00:00"
 },
 {
+"id": "3325cf171ae0",
+"t": "JPM",
+"title": "Fed Chair Kevin Warsh Vowed to Hit the Fed's 2% Inflation Target After October's Rate Hold, Even as JPMorgan Warns Democratic Control of the Senate Could Make Him a One-Term Chair. Here's Why That Political Risk Matters for Markets.",
+"url": "https://www.fool.com/investing/2026/11/18/fed-chair-kevin-warsh-vowed-no-ifs-ands-or-buts-about-hitting-the-2-inflation-target-after-octobers-rate-hold-even-as-jpmorgan-warns-democratic-control-of-the-senate-could-make-him-a-one-term-chair-heres-why-that-political-risk-matters-for-markets/?.tsrc=rss",
+"pub": "2026-11-19T03:35:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
+},
+{
 "id": "d84ca9e8e7ff",
 "t": "NVDA",
 "title": "CrowdStrike (CRWD) is Getting Investor Attention — Here’s Why",
@@ -162,6 +222,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T03:44:34+00:00"
+},
+{
+"id": "d3a235e91817",
+"t": "TSLA",
+"title": "EXCLUSIVE: Tesla Still Rules Leveraged ETFs, but Anthropic IPO and Micron’s Rise Signal What’s Next",
+"url": "https://finance.yahoo.com/technology/ai/articles/exclusive-tesla-still-rules-leveraged-033004009.html?.tsrc=rss",
+"pub": "2026-11-19T03:30:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "1ad5e4eb8c27",
+"t": "BIIB",
+"title": "What Could Biogen (BIIB) Gain From Its New Protein Degrader Research Deal?",
+"url": "https://finance.yahoo.com/healthcare/articles/could-biogen-biib-gain-protein-032956560.html?.tsrc=rss",
+"pub": "2026-11-19T03:29:56+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
 "id": "aaf466c6181a",
@@ -182,6 +262,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T04:14:14+00:00"
+},
+{
+"id": "37ab999295c3",
+"t": "AMD",
+"title": "Lisa Su Sells 70,000 Shares for $35.5 Million as AMD Stock Pops 147% in 2026: Her Direct Holdings Fall 2.32%",
+"url": "https://finance.yahoo.com/markets/stocks/articles/lisa-su-sells-70-000-031823131.html?.tsrc=rss",
+"pub": "2026-11-19T03:18:23+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
 "id": "148214d2cf99",
@@ -1812,6 +1902,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T22:14:53+00:00"
+},
+{
+"id": "0cf2ae5c4c57",
+"t": "CRM",
+"title": "CRM Stock Layoffs: What to Know as Salesforce Reportedly Begins More Job Cuts",
+"url": "https://www.barchart.com/story/news/8905443/crm-stock-layoffs-what-to-know-as-salesforce-reportedly-begins-more-job-cuts?.tsrc=rss",
+"pub": "2026-11-18T22:01:29+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
 "id": "eddc8d31c4d9",
@@ -7914,104 +8014,84 @@
 "seen": "2026-11-18T15:58:40+00:00"
 },
 {
-"id": "370ab671ede6",
-"t": "MU",
-"title": "5 Best Stocks to Buy Ahead of Anthropic’s IPO",
-"url": "https://finance.yahoo.com/markets/stocks/articles/5-best-stocks-buy-ahead-152122364.html?.tsrc=rss",
-"pub": "2026-11-18T15:21:22+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "f890c8f3f727",
+"t": "",
+"title": "Meta bright group expands Bumiearth energy solutions into Singapore and Philippines",
+"url": "https://www.financialjuice.com/News/9859238/Meta-bright-group-expands-Bumiearth-energy-solutions-into-Singapore-and-Philippines.aspx?xy=rss",
+"pub": "2026-11-19T04:40:52+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
-"id": "2a22f51d3943",
-"t": "VOO",
-"title": "Buying SPY At The 2007 Top Still Paid Off",
-"url": "https://www.trefis.com/stock/spy/articles/626103/buying-spy-at-the-2007-top-still-paid-off/2026-11-18?.tsrc=rss",
-"pub": "2026-11-18T15:21:08+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "cdd02bc0a68e",
+"t": "",
+"title": "Trump to Russia's Putin at APEC: many positive outcomes can arise from this",
+"url": "https://www.financialjuice.com/News/9859222/Trump-to-Russias-Putin-at-APEC-many-positive-outcomes-can-arise-from-this.aspx?xy=rss",
+"pub": "2026-11-19T04:29:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
-"id": "b76edc1ac3ed",
-"t": "NVDA",
-"title": "SoftBank Puts Ohio Under “A Thorough Reassessment.” GE Vernova’s $16 Billion Cash Outlook Rests on Buyers Like It",
-"url": "https://www.tikr.com/blog/softbank-puts-ohio-under-a-thorough-reassessment-ge-vernovas-16-billion-cash-outlook-rests-on-buyers-like-it?ref=yahoofinance&tlnk=yf-261118-g9w7hhc4&.tsrc=rss",
-"pub": "2026-11-18T15:20:23+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "451a16aa055b",
+"t": "",
+"title": "Trump to Russia's Putin at APEC: strong ties for many years",
+"url": "https://www.financialjuice.com/News/9859221/Trump-to-Russias-Putin-at-APEC-strong-ties-for-many-years.aspx?xy=rss",
+"pub": "2026-11-19T04:28:42+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
-"id": "2b22ca04810c",
-"t": "NVDA",
-"title": "Stock Market Today: Dow Drops On Hawkish Fed Stance; SEC Probe Hits Nvidia (Live Coverage)",
-"url": "https://finance.yahoo.com/m/3b6d51d3-7bfb-3b08-a92e-3b70e9f0655b/stock-market-today%3A-dow-drops.html?.tsrc=rss",
-"pub": "2026-11-18T15:19:42+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "faa34e616abc",
+"t": "",
+"title": "Trump to Russia's Putin at APEC: we anticipate our meeting",
+"url": "https://www.financialjuice.com/News/9859220/Trump-to-Russias-Putin-at-APEC-we-anticipate-our-meeting.aspx?xy=rss",
+"pub": "2026-11-19T04:27:51+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
-"id": "4db7bacba7f8",
-"t": "GOOGL",
-"title": "What Does Amazon's Falling Multiple Really Say?",
-"url": "https://www.trefis.com/stock/amzn/articles/626274/what-does-amazons-falling-multiple-really-say/2026-11-18?.tsrc=rss",
-"pub": "2026-11-18T15:19:10+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "eace16783a55",
+"t": "",
+"title": "Trump meets Russia's Putin at APEC summit - pool report",
+"url": "https://www.financialjuice.com/News/9859219/Trump-meets-Russias-Putin-at-APEC-summit---pool-report.aspx?xy=rss",
+"pub": "2026-11-19T04:24:17+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
-"id": "c95275f176c8",
-"t": "V",
-"title": "MEXC Shuts Down Crypto Card Three Months After Launch",
-"url": "https://www.cryptoprowl.com/releases/mexc-shuts-down-crypto-card-three-months-after-launch-7961?.tsrc=rss",
-"pub": "2026-11-18T15:18:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "bad3f49a8a7c",
+"t": "",
+"title": "Putin meets with Trump at APEC: TV report",
+"url": "https://www.financialjuice.com/News/9859218/Putin-meets-with-Trump-at-APEC-TV-report.aspx?xy=rss",
+"pub": "2026-11-19T04:24:04+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
-"id": "27cb286e6a8b",
-"t": "CIEN",
-"title": "This Wildly Volatile AI Stock Is Down 80% From Its Peak—and Flashing Warning Signals",
-"url": "https://finance.yahoo.com/m/9b5f7994-7659-3b7b-8dc5-5fca85c6de96/this-wildly-volatile-ai-stock.html?.tsrc=rss",
-"pub": "2026-11-18T15:18:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T22:44:55+00:00"
+"id": "a248417d6e56",
+"t": "",
+"title": "Xi Pledges $20 Million for APEC Cooperation",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/xi-pledges-20-million-for-apec-cooperation-video",
+"pub": "2026-11-19T04:19:27+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
-"id": "918d57f1fa7c",
-"t": "UNH",
-"title": "CVS Health Raised Its 2026 Outlook 3 Times, but Not Its Dividend",
-"url": "https://247wallst.com/investing/2026/11/18/cvs-health-raised-its-2026-outlook-3-times-but-not-its-dividend/?.tsrc=rss",
-"pub": "2026-11-18T15:17:13+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
-},
-{
-"id": "6b8390b977a5",
-"t": "CRWD",
-"title": "These 3 large-cap U.S. stocks are trading well above model fair value",
-"url": "https://finance.yahoo.com/markets/stocks/articles/3-large-cap-u-stocks-151712324.html?.tsrc=rss",
-"pub": "2026-11-18T15:17:12+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
-},
-{
-"id": "bc9fb18d3942",
-"t": "NVDA",
-"title": "Under CEO Satya Nadella, Microsoft Stock Has Soared at a 23% Annualized Rate for 12 Years. Can the Tech Titan Keep Up the Pace?",
-"url": "https://www.fool.com/investing/2026/11/18/under-ceo-satya-nadella-microsoft-stock-has-soared-at-a-23-annualized-rate-for-12-years-can-the-tech-titan-keep-up-the-pace/?.tsrc=rss",
-"pub": "2026-11-18T15:17:01+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "7daf5d482e65",
+"t": "",
+"title": "India economic affairs secy: no need to use economic stabilisation fund in FY27",
+"url": "https://www.financialjuice.com/News/9859205/India-economic-affairs-secy-no-need-to-use-economic-stabilisation-fund-in-FY27.aspx?xy=rss",
+"pub": "2026-11-19T04:15:23+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
 "id": "7d70d4c79dbc",
@@ -8472,6 +8552,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T03:14:38+00:00"
+},
+{
+"id": "212e4a8e14c2",
+"t": "",
+"title": "BLS Polymers Limited (BLSP.NS) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0yU1dKaVpzUVYzRXdxaVZBMGZNU0VUZVNnVGVfbFlrOVZFaXBLTEJ5TGlwaXhKWVBpMEpnVFlwcGxUT1BjcDkyb1NhQ3FCeVhJZmJmb19JYlpmMVB6X2c?oc=5",
+"pub": "2026-11-19T02:36:10+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
 },
 {
 "id": "98afc6154720",
@@ -10514,6 +10604,16 @@
 "seen": "2026-11-19T00:35:31+00:00"
 },
 {
+"id": "34afbd378424",
+"t": "",
+"title": "Shell plc (SHEL.P) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1JVTJ4aXladjNYRklPSWFHcDZfRkp0SWR6bkZmZEpLVVZfZk11aWFtcEZJRnZhZExYb1hoc1lTYUVYaWRJSzBmRXg1bDNoMjN4UEpvOFpDb3AtQVZoMmdLZXhjMkRUb21FRlYw?oc=5",
+"pub": "2026-11-18T23:37:30+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
+},
+{
 "id": "a4da50e4213f",
 "t": "",
 "title": "Jane Fraser on IPO Pipeline, AI, & Interest Rate Outlook",
@@ -10744,6 +10844,16 @@
 "seen": "2026-11-19T00:43:43+00:00"
 },
 {
+"id": "5ae1e8067321",
+"t": "",
+"title": "Foreign holdings of US Treasuries fall in September; China slashes to 2008 low, data show - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbzg2ZGU0TS1PbjNzRkNKWklMcmJhRnF0RHdHNlJjX1V2VGdzWWZsTTBzaUZqQ2hkeUtIMGROQkE4WGNGSHhTRGhGVnBQUWtUT0hITGQyODdGdlRmUUI4S1BEejI3R3dhQmR1WDBvQmE4Y3ZVd0xpRnRFblpHVXNiTElTeTNSM3B5UE4xNl9VX0VrZDAzelp3U2FnTm44SGYxc21KLUhWZHZXQ0s4U3JpcklnM09ZTjNEVS1lMXhfZmpOUQ?oc=5",
+"pub": "2026-11-18T22:51:08+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T04:44:32+00:00"
+},
+{
 "id": "17ad318da3c1",
 "t": "",
 "title": "Eddie Best on Expectations for Anthropic’s IPO",
@@ -10902,116 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "34186c368ae2",
-"t": "",
-"title": "Singing remains vibrant and poised to flourish",
-"url": "https://www.financialjuice.com/News/9858672/Singing-remains-vibrant-and-poised-to-flourish.aspx",
-"pub": "2026-11-18T22:26:58+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "2b2dc6e14c48",
-"t": "",
-"title": "Brookfield-Backed Lotto Firm Logs Earnings Hit, Buys Back Bonds",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/brookfield-backed-lotto-firm-logs-earnings-hit-buys-back-bonds",
-"pub": "2026-11-18T22:22:20+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "2637cfcd626c",
-"t": "",
-"title": "Microsoft CEO Nadella on former Nvidia CEO Huang resigning: wants to give him space to resolve, Nvidia board to decide next steps",
-"url": "https://www.financialjuice.com/News/9858669/Microsoft-CEO-Nadella-on-former-Nvidia-CEO-Huang-resigning-wants-to-give-him-space-to-resolve-Nvidia-board-to-decide-next-steps.aspx?xy=rss",
-"pub": "2026-11-18T22:17:09+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "df8ceb68446f",
-"t": "",
-"title": "Microsoft CEO Nadella on former Nvidia CEO Huang resigning: wants to give him space to resolve, Nvidia board to decide next steps",
-"url": "https://www.financialjuice.com/News/9858669/Microsoft-CEO-Nadella-on-former-Nvidia-CEO-Huang-resigning-wants-to-give-him-space-to-resolve-Nvidia-board-to-decide-next-steps.aspx",
-"pub": "2026-11-18T22:17:09+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "87e642dfc48c",
-"t": "",
-"title": "Microsoft CEO Nadella on Former Nvidia CEO Huang resigning: it's quite tragic, I'm a big admirer of his work - New York Times DealBook Summit",
-"url": "https://www.financialjuice.com/News/9858657/Microsoft-CEO-Nadella-on-Former-Nvidia-CEO-Huang-resigning-its-quite-tragic-Im-a-big-admirer-of-his-work---New-York-Times-DealBook-Summit.aspx?xy=rss",
-"pub": "2026-11-18T22:16:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "3c2fe28cb509",
-"t": "",
-"title": "Microsoft CEO Nadella on Former Nvidia CEO Huang resigning: it's quite tragic, I'm a big admirer of his work - New York Times DealBook Summit",
-"url": "https://www.financialjuice.com/News/9858657/Microsoft-CEO-Nadella-on-Former-Nvidia-CEO-Huang-resigning-its-quite-tragic-Im-a-big-admirer-of-his-work---New-York-Times-DealBook-Summit.aspx",
-"pub": "2026-11-18T22:16:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "81e5752f1c9f",
-"t": "",
-"title": "Citi CEO Looks Forward to Working With Sen. Warren",
-"url": "https://www.bloomberg.com/news/videos/2026-11-18/citi-ceo-looks-forward-to-working-with-sen-warren-video",
-"pub": "2026-11-18T22:15:28+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "635367eff69a",
-"t": "",
-"title": "U.S. Stocks Mixed, Nvidia Down Again Ahead of Anthropic IPO",
-"url": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-nvidia-falls-ahead-of-anthropic-ipo-c7de4692?mod=rss_markets_main",
-"pub": "2026-11-18T22:14:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T03:44:34+00:00"
-},
-{
-"id": "f9371f8fd1dd",
-"t": "",
-"title": "UKMTO: tanker hit by unidentified projectile in engine room while passing outbound through Strait of Hormuz",
-"url": "https://www.financialjuice.com/News/9858653/UKMTO-tanker-hit-by-unidentified-projectile-in-engine-room-while-passing-outbound-through-Strait-of-Hormuz.aspx?xy=rss",
-"pub": "2026-11-18T22:12:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:14:53+00:00"
-},
-{
-"id": "096af622190c",
-"t": "",
-"title": "UKMTO: tanker hit by unidentified projectile in engine room while passing outbound through Strait of Hormuz",
-"url": "https://www.financialjuice.com/News/9858653/UKMTO-tanker-hit-by-unidentified-projectile-in-engine-room-while-passing-outbound-through-Strait-of-Hormuz.aspx",
-"pub": "2026-11-18T22:12:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "8dc2b361052d",
-"t": "",
-"title": "Ukmto: received delayed report of incident 6nm north of Oman's Khasab",
-"url": "https://www.financialjuice.com/News/9858652/Ukmto-received-delayed-report-of-incident-6nm-north-of-Omans-Khasab.aspx?xy=rss",
-"pub": "2026-11-18T22:11:59+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:14:53+00:00"
 }
 ]
 }
