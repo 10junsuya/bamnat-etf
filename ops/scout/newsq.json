@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-19 14:44",
-"rot": 119,
+"updated_kst": "2026-11-19 14:50",
+"rot": 0,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "41건",
+"Reuters": "40건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -102,6 +102,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T05:14:02+00:00"
+},
+{
+"id": "ec6830d5e3fd",
+"t": "BRKB",
+"title": "Berkshire’s stake in this stock was worth $30B. Now it’s $8B",
+"url": "https://www.thestreet.com/investing/berkshire-kraft-heinz-khc-stake-30b-to-8b-13f?.tsrc=rss",
+"pub": "2026-11-19T05:03:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "3abfb917e218",
@@ -1312,6 +1322,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T00:13:55+00:00"
+},
+{
+"id": "ba72af147695",
+"t": "GOOGL",
+"title": "$1.6 Billion Loss: Billionaire Bill Ackman Says He Was ‘A Little Bit Surprised’ by Berkshire’s $10 Billion Alphabet Bet, ‘They Got It at a 6% Discount, But So What?’",
+"url": "https://www.barchart.com/story/news/8906813/1-6-billion-loss-billionaire-bill-ackman-says-he-was-a-little-bit-surprised-by-berkshires-10-billion-alphabet-bet-they-got-it-at-a-6-discount-but-so-what?.tsrc=rss",
+"pub": "2026-11-18T23:42:52+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "b4134feaaa6b",
@@ -7994,26 +8014,6 @@
 "seen": "2026-11-18T15:44:08+00:00"
 },
 {
-"id": "d02ceebb2ea1",
-"t": "CME",
-"title": "BC-Lumber Futures",
-"url": "https://finance.yahoo.com/markets/commodities/articles/bc-lumber-futures-153013059.html?.tsrc=rss",
-"pub": "2026-11-18T15:30:13+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T17:14:02+00:00"
-},
-{
-"id": "f20c1ece6054",
-"t": "NVDA",
-"title": "Bill Ackman Lays Out How Nvidia Shareholders Could Bring Jensen Huang Back as CEO",
-"url": "https://www.benzinga.com/markets/prediction-markets/26/11/63391467/nvidia-huang-return?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
-"pub": "2026-11-18T15:30:08+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
-},
-{
 "id": "b5468e1eabd8",
 "t": "",
 "title": "Kremlin on Putin-Trump meeting: Putin left meeting in an excellent mood, Tass says",
@@ -8022,6 +8022,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "bb243d5b96e7",
+"t": "",
+"title": "Kremlin on Putin-Trump meeting: Putin left meeting in an excellent mood, Tass says",
+"url": "https://www.financialjuice.com/News/9859327/Kremlin-on-Putin-Trump-meeting-Putin-left-meeting-in-an-excellent-mood-Tass-says.aspx",
+"pub": "2026-11-19T05:44:05+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "bbed39be21e7",
@@ -8034,6 +8044,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "e0096a0f8a63",
+"t": "",
+"title": "Kremlin: Ukraine was main focus at Putin-Trump meeting - TASS",
+"url": "https://www.financialjuice.com/News/9859326/Kremlin-Ukraine-was-main-focus-at-Putin-Trump-meeting---TASS.aspx",
+"pub": "2026-11-19T05:43:21+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "c9b11a11c5ac",
 "t": "",
 "title": "Kremlin: Putin and Trump discussed Ukraine conflict and bilateral relations - Tass",
@@ -8042,6 +8062,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "7093fdbcc994",
+"t": "",
+"title": "Kremlin: Putin and Trump discussed Ukraine conflict and bilateral relations - Tass",
+"url": "https://www.financialjuice.com/News/9859325/Kremlin-Putin-and-Trump-discussed-Ukraine-conflict-and-bilateral-relations---Tass.aspx",
+"pub": "2026-11-19T05:42:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "d6380e7ffbfa",
@@ -8054,6 +8084,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "58a20ba1a890",
+"t": "",
+"title": "Kremlin on Putin-Trump meeting: it went smoothly",
+"url": "https://www.financialjuice.com/News/9859324/Kremlin-on-Putin-Trump-meeting-it-went-smoothly.aspx",
+"pub": "2026-11-19T05:42:18+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "e5f8adde84a2",
 "t": "",
 "title": "Trump: spoke with Xi for two hours last night",
@@ -8062,6 +8102,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "4a82abcf229c",
+"t": "",
+"title": "Trump: spoke with Xi for two hours last night",
+"url": "https://www.financialjuice.com/News/9859323/Trump-spoke-with-Xi-for-two-hours-last-night.aspx",
+"pub": "2026-11-19T05:41:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "649576a487d0",
@@ -8074,6 +8124,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "bfca28e625d5",
+"t": "",
+"title": "China’s President Xi expresses gratitude for incredibly warm welcome",
+"url": "https://www.financialjuice.com/News/9859322/Chinas-President-Xi-expresses-gratitude-for-incredibly-warm-welcome.aspx",
+"pub": "2026-11-19T05:41:39+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "4f95503407e2",
 "t": "",
 "title": "Trump: he and Xi feel strongly oil must flow through Strait of Hormuz",
@@ -8082,6 +8142,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "df2eabaf1cf7",
+"t": "",
+"title": "Trump: he and Xi feel strongly oil must flow through Strait of Hormuz",
+"url": "https://www.financialjuice.com/News/9859321/Trump-he-and-Xi-feel-strongly-oil-must-flow-through-Strait-of-Hormuz.aspx",
+"pub": "2026-11-19T05:41:25+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "22f519fa329b",
@@ -8094,6 +8164,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "9792b0667c8b",
+"t": "",
+"title": "Trump: meeting with Xi to prove productive",
+"url": "https://www.financialjuice.com/News/9859320/Trump-meeting-with-Xi-to-prove-productive.aspx",
+"pub": "2026-11-19T05:40:50+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "5500d5972481",
 "t": "",
 "title": "Trump: I will request China to boost support for US farmers",
@@ -8102,6 +8182,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "7275320ea3e0",
+"t": "",
+"title": "Trump: I will request China to boost support for US farmers",
+"url": "https://www.financialjuice.com/News/9859319/Trump-I-will-request-China-to-boost-support-for-US-farmers.aspx",
+"pub": "2026-11-19T05:40:39+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "9c43eefbe089",
@@ -8114,6 +8204,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "2c406db6b9a3",
+"t": "",
+"title": "Trump: tariffs have been divided fairly",
+"url": "https://www.financialjuice.com/News/9859318/Trump-tariffs-have-been-divided-fairly.aspx",
+"pub": "2026-11-19T05:40:07+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "5ab7171a49df",
 "t": "",
 "title": "Trump: we established an equitable relationship",
@@ -8122,6 +8222,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "25ad47921d42",
+"t": "",
+"title": "Trump: we established an equitable relationship",
+"url": "https://www.financialjuice.com/News/9859317/Trump-we-established-an-equitable-relationship.aspx",
+"pub": "2026-11-19T05:39:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "366b305a4939",
@@ -8134,6 +8244,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "7dc14533026e",
+"t": "",
+"title": "Trump: board of trade restoring balance to ties with China",
+"url": "https://www.financialjuice.com/News/9859316/Trump-board-of-trade-restoring-balance-to-ties-with-China.aspx",
+"pub": "2026-11-19T05:39:27+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "d4747520efec",
 "t": "",
 "title": "China's President Xi expresses gratitude for incredibly warm welcome",
@@ -8144,6 +8264,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "70ba1843c34c",
+"t": "",
+"title": "China's President Xi expresses gratitude for incredibly warm welcome",
+"url": "https://www.financialjuice.com/News/9859315/Chinas-President-Xi-expresses-gratitude-for-incredibly-warm-welcome.aspx",
+"pub": "2026-11-19T05:38:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "fd9171465a56",
 "t": "",
 "title": "China's President Xi expresses gratitude for incredibly warm welcome",
@@ -8152,6 +8282,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "872c00774fb9",
+"t": "",
+"title": "China's President Xi expresses gratitude for incredibly warm welcome",
+"url": "https://www.financialjuice.com/News/9859314/Chinas-President-Xi-expresses-gratitude-for-incredibly-warm-welcome.aspx",
+"pub": "2026-11-19T05:37:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "0b888b5f5869",
@@ -8184,6 +8324,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "c0268a55925b",
+"t": "",
+"title": "South Korea exports reach $1 trillion so far this year: Yonhap",
+"url": "https://www.financialjuice.com/News/9859313/South-Korea-exports-reach-1-trillion-so-far-this-year-Yonhap.aspx",
+"pub": "2026-11-19T05:32:51+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "e231d9bde4cc",
 "t": "",
 "title": "Trump, China's Xi meet on sidelines of APEC summit: CCTV",
@@ -8192,6 +8342,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "2a03b136ef3a",
+"t": "",
+"title": "Trump, China's Xi meet on sidelines of APEC summit: CCTV",
+"url": "https://www.financialjuice.com/News/9859300/Trump-Chinas-Xi-meet-on-sidelines-of-APEC-summit-CCTV.aspx",
+"pub": "2026-11-19T05:30:19+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "6a7965c4e79c",
@@ -8204,6 +8364,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "2afd5f87d5dc",
+"t": "",
+"title": "Dutch Unemployment rate SA Actual 4% (Forecast -, Previous 4.0%)",
+"url": "https://www.financialjuice.com/News/9859299/Dutch-Unemployment-rate-SA-Actual-4-Forecast---Previous-40.aspx",
+"pub": "2026-11-19T05:30:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "db3862d8d0e5",
 "t": "",
 "title": "Russia strikes vessel in Black Sea: RIA",
@@ -8212,6 +8382,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "36b1ba796bf1",
+"t": "",
+"title": "Russia strikes vessel in Black Sea: RIA",
+"url": "https://www.financialjuice.com/News/9859298/Russia-strikes-vessel-in-Black-Sea-RIA.aspx",
+"pub": "2026-11-19T05:29:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "61e2363857a6",
@@ -8224,6 +8404,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "2619d4a6b331",
+"t": "",
+"title": "Russia targets power stations in Odesa region and Sumy: IFX",
+"url": "https://www.financialjuice.com/News/9859297/Russia-targets-power-stations-in-Odesa-region-and-Sumy-IFX.aspx",
+"pub": "2026-11-19T05:29:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "bd879e8c7369",
 "t": "",
 "title": "Russia strikes infrastructure in Ukraine's Chornomorsk port: RIA",
@@ -8232,6 +8422,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "931e25861381",
+"t": "",
+"title": "Russia strikes infrastructure in Ukraine's Chornomorsk port: RIA",
+"url": "https://www.financialjuice.com/News/9859296/Russia-strikes-infrastructure-in-Ukraines-Chornomorsk-port-RIA.aspx",
+"pub": "2026-11-19T05:28:33+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "d567c1f57953",
@@ -8274,6 +8474,16 @@
 "seen": "2026-11-19T05:14:02+00:00"
 },
 {
+"id": "94cc1a335546",
+"t": "",
+"title": "JBIC chair: seeks larger Japanese role in selecting projects under $550 billion U.S. initiative",
+"url": "https://www.financialjuice.com/News/9859273/JBIC-chair-seeks-larger-Japanese-role-in-selecting-projects-under-550-billion-US-initiative.aspx",
+"pub": "2026-11-19T05:05:03+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "ccbb4f95381b",
 "t": "",
 "title": "Putin tells Trump: pleased to meet him - RIA",
@@ -8282,6 +8492,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:14:02+00:00"
+},
+{
+"id": "5797fb448070",
+"t": "",
+"title": "Putin tells Trump: pleased to meet him - RIA",
+"url": "https://www.financialjuice.com/News/9859272/Putin-tells-Trump-pleased-to-meet-him---RIA.aspx",
+"pub": "2026-11-19T05:04:52+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "51c5886a825b",
@@ -8302,6 +8522,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:14:02+00:00"
+},
+{
+"id": "2de94a176ebe",
+"t": "",
+"title": "Trump meeting with Russia's Putin at APEC wraps up: pool report",
+"url": "https://www.financialjuice.com/News/9859244/Trump-meeting-with-Russias-Putin-at-APEC-wraps-up-pool-report.aspx",
+"pub": "2026-11-19T05:00:38+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "2071f147c858",
@@ -8334,6 +8564,16 @@
 "seen": "2026-11-19T04:44:32+00:00"
 },
 {
+"id": "1b95fc056778",
+"t": "",
+"title": "Meta bright group expands Bumiearth energy solutions into Singapore and Philippines",
+"url": "https://www.financialjuice.com/News/9859238/Meta-bright-group-expands-Bumiearth-energy-solutions-into-Singapore-and-Philippines.aspx",
+"pub": "2026-11-19T04:40:52+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "3441f3e9e3ec",
 "t": "",
 "title": "New World Shares Tank 54% to Head for Worst Week on Rights Issue",
@@ -8354,6 +8594,16 @@
 "seen": "2026-11-19T04:44:32+00:00"
 },
 {
+"id": "e4c78a303c39",
+"t": "",
+"title": "Trump to Russia's Putin at APEC: many positive outcomes can arise from this",
+"url": "https://www.financialjuice.com/News/9859222/Trump-to-Russias-Putin-at-APEC-many-positive-outcomes-can-arise-from-this.aspx",
+"pub": "2026-11-19T04:29:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "451a16aa055b",
 "t": "",
 "title": "Trump to Russia's Putin at APEC: strong ties for many years",
@@ -8362,6 +8612,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "b0f5298a6b07",
+"t": "",
+"title": "Trump to Russia's Putin at APEC: strong ties for many years",
+"url": "https://www.financialjuice.com/News/9859221/Trump-to-Russias-Putin-at-APEC-strong-ties-for-many-years.aspx",
+"pub": "2026-11-19T04:28:42+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "faa34e616abc",
@@ -8374,6 +8634,16 @@
 "seen": "2026-11-19T04:44:32+00:00"
 },
 {
+"id": "736700b181a5",
+"t": "",
+"title": "Trump to Russia's Putin at APEC: we anticipate our meeting",
+"url": "https://www.financialjuice.com/News/9859220/Trump-to-Russias-Putin-at-APEC-we-anticipate-our-meeting.aspx",
+"pub": "2026-11-19T04:27:51+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "eace16783a55",
 "t": "",
 "title": "Trump meets Russia's Putin at APEC summit - pool report",
@@ -8384,6 +8654,16 @@
 "seen": "2026-11-19T04:44:32+00:00"
 },
 {
+"id": "cd2191d25bc6",
+"t": "",
+"title": "Trump meets Russia's Putin at APEC summit - pool report",
+"url": "https://www.financialjuice.com/News/9859219/Trump-meets-Russias-Putin-at-APEC-summit---pool-report.aspx",
+"pub": "2026-11-19T04:24:17+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "bad3f49a8a7c",
 "t": "",
 "title": "Putin meets with Trump at APEC: TV report",
@@ -8392,6 +8672,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "2cd653286410",
+"t": "",
+"title": "Putin meets with Trump at APEC: TV report",
+"url": "https://www.financialjuice.com/News/9859218/Putin-meets-with-Trump-at-APEC-TV-report.aspx",
+"pub": "2026-11-19T04:24:04+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "e530f5dbd495",
@@ -8424,6 +8714,16 @@
 "seen": "2026-11-19T04:44:32+00:00"
 },
 {
+"id": "8a3405c2cb07",
+"t": "",
+"title": "India economic affairs secy: no need to use economic stabilisation fund in FY27",
+"url": "https://www.financialjuice.com/News/9859205/India-economic-affairs-secy-no-need-to-use-economic-stabilisation-fund-in-FY27.aspx",
+"pub": "2026-11-19T04:15:23+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "7d70d4c79dbc",
 "t": "",
 "title": "India economic affairs secy: inflation not worrying yet",
@@ -8432,6 +8732,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T04:14:14+00:00"
+},
+{
+"id": "36e3c904f7b5",
+"t": "",
+"title": "India economic affairs secy: inflation not worrying yet",
+"url": "https://www.financialjuice.com/News/9859204/India-economic-affairs-secy-inflation-not-worrying-yet.aspx",
+"pub": "2026-11-19T04:14:05+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "aae6ef2bf863",
@@ -8444,6 +8754,16 @@
 "seen": "2026-11-19T04:14:14+00:00"
 },
 {
+"id": "98ad621688f7",
+"t": "",
+"title": "China's Xi to meet Trump at APEC: CCTV",
+"url": "https://www.financialjuice.com/News/9859203/Chinas-Xi-to-meet-Trump-at-APEC-CCTV.aspx",
+"pub": "2026-11-19T04:12:18+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "a0e092e64ee9",
 "t": "",
 "title": "India economic affairs secy: urge Indian industry to support increase in urban demand",
@@ -8452,6 +8772,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T04:14:14+00:00"
+},
+{
+"id": "7a85b40f28e3",
+"t": "",
+"title": "India economic affairs secy: urge Indian industry to support increase in urban demand",
+"url": "https://www.financialjuice.com/News/9859192/India-economic-affairs-secy-urge-Indian-industry-to-support-increase-in-urban-demand.aspx",
+"pub": "2026-11-19T04:01:32+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "dd861a9c6066",
@@ -8464,6 +8794,16 @@
 "seen": "2026-11-19T04:14:14+00:00"
 },
 {
+"id": "3e41b86a87e0",
+"t": "",
+"title": "India economic affairs secy: will examine need for extended-term financing in manufacturing sector",
+"url": "https://www.financialjuice.com/News/9859187/India-economic-affairs-secy-will-examine-need-for-extended-term-financing-in-manufacturing-sector.aspx",
+"pub": "2026-11-19T04:00:05+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
+},
+{
 "id": "a6e7d4c668c1",
 "t": "",
 "title": "India economic affairs secy: need to address wage stagnation issue",
@@ -8472,6 +8812,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T04:14:14+00:00"
+},
+{
+"id": "d799443e413e",
+"t": "",
+"title": "India economic affairs secy: need to address wage stagnation issue",
+"url": "https://www.financialjuice.com/News/9859186/India-economic-affairs-secy-need-to-address-wage-stagnation-issue.aspx",
+"pub": "2026-11-19T03:59:28+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "9df7d489d56b",
@@ -8522,6 +8872,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T03:44:34+00:00"
+},
+{
+"id": "5d47534e95cb",
+"t": "",
+"title": "Houthi-run Saba news agency: Saudi Arabia launches airstrikes on Yemen's capital Sanaa",
+"url": "https://www.financialjuice.com/News/9859170/Houthi-run-Saba-news-agency-Saudi-Arabia-launches-airstrikes-on-Yemens-capital-Sanaa.aspx",
+"pub": "2026-11-19T03:26:21+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:50:30+00:00"
 },
 {
 "id": "208a56502081",
@@ -10652,366 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "842979817470",
-"t": "",
-"title": "Australian Employment Change Actual -43.5k (Forecast 25k, Previous -39.3k)",
-"url": "https://www.financialjuice.com/News/9858804/Australian-Employment-Change-Actual--435k-Forecast-25k-Previous--393k.aspx",
-"pub": "2026-11-19T00:30:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "f3bde94c720c",
-"t": "",
-"title": "Australian Unemployment Rate Actual 4.9% (Forecast 4.7%, Previous 4.7%)",
-"url": "https://www.financialjuice.com/News/9858803/Australian-Unemployment-Rate-Actual-49-Forecast-47-Previous-47.aspx?xy=rss",
-"pub": "2026-11-19T00:30:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "0f6bc29a8512",
-"t": "",
-"title": "Australian Participation Rate Actual 66.6% (Forecast 66.8%, Previous 66.8%)",
-"url": "https://www.financialjuice.com/News/9858802/Australian-Participation-Rate-Actual-666-Forecast-668-Previous-668.aspx?xy=rss",
-"pub": "2026-11-19T00:30:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "95b21a9eae8a",
-"t": "",
-"title": "Australian Full Time Employment Chg. Actual -2.9k (Forecast -, Previous 34.4k)",
-"url": "https://www.financialjuice.com/News/9858801/Australian-Full-Time-Employment-Chg-Actual--29k-Forecast---Previous-344k.aspx?xy=rss",
-"pub": "2026-11-19T00:30:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "f867bec73814",
-"t": "",
-"title": "Australian Unemployment Rate Actual 4.9% (Forecast 4.7%, Previous 4.7%)",
-"url": "https://www.financialjuice.com/News/9858803/Australian-Unemployment-Rate-Actual-49-Forecast-47-Previous-47.aspx",
-"pub": "2026-11-19T00:30:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "df07355c5b94",
-"t": "",
-"title": "Australian Participation Rate Actual 66.6% (Forecast 66.8%, Previous 66.8%)",
-"url": "https://www.financialjuice.com/News/9858802/Australian-Participation-Rate-Actual-666-Forecast-668-Previous-668.aspx",
-"pub": "2026-11-19T00:30:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "371c9d4aeb38",
-"t": "",
-"title": "Australian Full Time Employment Chg. Actual -2.9k (Forecast -, Previous 34.4k)",
-"url": "https://www.financialjuice.com/News/9858801/Australian-Full-Time-Employment-Chg-Actual--29k-Forecast---Previous-344k.aspx",
-"pub": "2026-11-19T00:30:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "647b5d648657",
-"t": "",
-"title": "Gold Catches Breath But Stays at Over One-Year Lows",
-"url": "https://www.wsj.com/finance/commodities-futures/gold-catches-breath-but-stays-at-over-one-year-lows-b3d16f60?mod=rss_markets_main",
-"pub": "2026-11-19T00:29:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "f0e83a840696",
-"t": "",
-"title": "China PBOC expected to set yuan midpoint at 6.6684 per dollar: Estimate",
-"url": "https://www.financialjuice.com/News/9858800/China-PBOC-expected-to-set-yuan-midpoint-at-66684-per-dollar-Estimate.aspx?xy=rss",
-"pub": "2026-11-19T00:18:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "81f5d7bdd204",
-"t": "",
-"title": "China PBOC expected to set yuan midpoint at 6.6684 per dollar: Estimate",
-"url": "https://www.financialjuice.com/News/9858800/China-PBOC-expected-to-set-yuan-midpoint-at-66684-per-dollar-Estimate.aspx",
-"pub": "2026-11-19T00:18:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "47469fb48101",
-"t": "",
-"title": "Trade and AI Rivalry to Dominate APEC Summit",
-"url": "https://www.bloomberg.com/news/videos/2026-11-19/trade-and-ai-rivalry-to-dominate-apec-summit-video",
-"pub": "2026-11-19T00:18:03+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "c96552dae621",
-"t": "",
-"title": "Asian Currencies Consolidate, But Face Drag From Fed Rate Bets",
-"url": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-face-drag-from-fed-rate-bets-50c20e86?mod=rss_markets_main",
-"pub": "2026-11-19T00:17:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "0f47bc4d120e",
-"t": "",
-"title": "Palo Alto inks $4.5 billion deal for AI startup Applied Compute, shares pop 7% on earnings",
-"url": "https://www.cnbc.com/2026/11/18/palo-alto-networks-panw-q1-2027-earnings-.html",
-"pub": "2026-11-19T00:07:06+00:00",
-"src": "CNBC",
-"kind": "market",
-"seen": "2026-11-19T03:47:37+00:00"
-},
-{
-"id": "9a94717d2359",
-"t": "",
-"title": "Japanese Foreign Stock Investment Actual 363.1B (Forecast -, Previous -643.9B)",
-"url": "https://www.financialjuice.com/News/9858779/Japanese-Foreign-Stock-Investment-Actual-3631B-Forecast---Previous--6439B.aspx?xy=rss",
-"pub": "2026-11-18T23:52:55+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "6acefb7b9a8d",
-"t": "",
-"title": "Foreign Investment Japanese Bonds Actual 650.1B (Forecast -, Previous 1,371.1B)",
-"url": "https://www.financialjuice.com/News/9858778/Foreign-Investment-Japanese-Bonds-Actual-6501B-Forecast---Previous-13711B.aspx?xy=rss",
-"pub": "2026-11-18T23:52:55+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "0f7a5230805c",
-"t": "",
-"title": "Japanese Foreign Stock Investment Actual 363.1B (Forecast -, Previous -643.9B)",
-"url": "https://www.financialjuice.com/News/9858779/Japanese-Foreign-Stock-Investment-Actual-3631B-Forecast---Previous--6439B.aspx",
-"pub": "2026-11-18T23:52:55+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "9325b9dbd222",
-"t": "",
-"title": "Foreign Investment Japanese Bonds Actual 650.1B (Forecast -, Previous 1,371.1B)",
-"url": "https://www.financialjuice.com/News/9858778/Foreign-Investment-Japanese-Bonds-Actual-6501B-Forecast---Previous-13711B.aspx",
-"pub": "2026-11-18T23:52:55+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "7f374cff99b9",
-"t": "",
-"title": "Foreign Investment Japanese Stocks Actual -224.1B (Forecast -, Previous -105.2B)",
-"url": "https://www.financialjuice.com/News/9858775/Foreign-Investment-Japanese-Stocks-Actual--2241B-Forecast---Previous--1052B.aspx?xy=rss",
-"pub": "2026-11-18T23:52:17+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "2a2a63729411",
-"t": "",
-"title": "Foreign Investment Japanese Stocks Actual -224.1B (Forecast -, Previous -105.2B)",
-"url": "https://www.financialjuice.com/News/9858775/Foreign-Investment-Japanese-Stocks-Actual--2241B-Forecast---Previous--1052B.aspx",
-"pub": "2026-11-18T23:52:17+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "2208532722f7",
-"t": "",
-"title": "Japanese Foreign Bond Investment Actual -440.7B (Forecast -, Previous -537.6B)",
-"url": "https://www.financialjuice.com/News/9858774/Japanese-Foreign-Bond-Investment-Actual--4407B-Forecast---Previous--5376B.aspx?xy=rss",
-"pub": "2026-11-18T23:52:16+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "58e3593ac992",
-"t": "",
-"title": "Japanese Foreign Bond Investment Actual -440.7B (Forecast -, Previous -537.6B)",
-"url": "https://www.financialjuice.com/News/9858774/Japanese-Foreign-Bond-Investment-Actual--4407B-Forecast---Previous--5376B.aspx",
-"pub": "2026-11-18T23:52:16+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "80c315362720",
-"t": "",
-"title": "Japan Sept core machinery orders decline 0.3% m/m vs -0.5% forecast",
-"url": "https://www.financialjuice.com/News/9858777/Japan-Sept-core-machinery-orders-decline-03-mm-vs--05-forecast.aspx?xy=rss",
-"pub": "2026-11-18T23:50:07+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "d8e0b25fa5b6",
-"t": "",
-"title": "Japan Sept core machinery orders decline 0.3% m/m vs -0.5% forecast",
-"url": "https://www.financialjuice.com/News/9858777/Japan-Sept-core-machinery-orders-decline-03-mm-vs--05-forecast.aspx",
-"pub": "2026-11-18T23:50:07+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "765dc6d7429d",
-"t": "",
-"title": "Japan Sept core machinery orders rise 13.4% yr/yr versus poll 13.7%",
-"url": "https://www.financialjuice.com/News/9858776/Japan-Sept-core-machinery-orders-rise-134-yryr-versus-poll-137.aspx?xy=rss",
-"pub": "2026-11-18T23:50:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "f80cf1adebf4",
-"t": "",
-"title": "Japan Sept core machinery orders rise 13.4% yr/yr versus poll 13.7%",
-"url": "https://www.financialjuice.com/News/9858776/Japan-Sept-core-machinery-orders-rise-134-yryr-versus-poll-137.aspx",
-"pub": "2026-11-18T23:50:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "62c0606bb2a8",
-"t": "",
-"title": "Japanese Core Machinery Orders MoM Actual -0.3% (Forecast 1.5%, Previous 5.2%)",
-"url": "https://www.financialjuice.com/News/9858773/Japanese-Core-Machinery-Orders-MoM-Actual--03-Forecast-15-Previous-52.aspx?xy=rss",
-"pub": "2026-11-18T23:50:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "aa32223ab9e0",
-"t": "",
-"title": "Japanese Core Machinery Orders MoM Actual -0.3% (Forecast 1.5%, Previous 5.2%)",
-"url": "https://www.financialjuice.com/News/9858773/Japanese-Core-Machinery-Orders-MoM-Actual--03-Forecast-15-Previous-52.aspx",
-"pub": "2026-11-18T23:50:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "6036e1926371",
-"t": "",
-"title": "Japanese Core Machinery Orders YoY Actual 13.4% (Forecast 13.5%, Previous 18.6%)",
-"url": "https://www.financialjuice.com/News/9858772/Japanese-Core-Machinery-Orders-YoY-Actual-134-Forecast-135-Previous-186.aspx?xy=rss",
-"pub": "2026-11-18T23:50:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "87a2cc82dbe2",
-"t": "",
-"title": "Japanese Core Machinery Orders YoY Actual 13.4% (Forecast 13.5%, Previous 18.6%)",
-"url": "https://www.financialjuice.com/News/9858772/Japanese-Core-Machinery-Orders-YoY-Actual-134-Forecast-135-Previous-186.aspx",
-"pub": "2026-11-18T23:50:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "52a560804ef3",
-"t": "",
-"title": "Anthropic Prices IPO at $83 a Share on Strong Demand",
-"url": "https://www.wsj.com/finance/stocks/anthropic-prices-ipo-at-83-a-share-0290494c?mod=rss_markets_main",
-"pub": "2026-11-18T23:49:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T03:44:34+00:00"
-},
-{
-"id": "73ced81f96d7",
-"t": "",
-"title": "Ex-Google Engineer May Face New Charges Over Bets on Gemini 3.0",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/ex-google-engineer-may-face-new-charges-over-bets-on-gemini-3-0",
-"pub": "2026-11-18T23:44:22+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T00:13:55+00:00"
-},
-{
-"id": "e9690db06af1",
-"t": "",
-"title": "Seesaw Day for Markets, Anthropic IPO Looms",
-"url": "https://www.bloomberg.com/news/videos/2026-11-18/the-close-11-18-2026-video",
-"pub": "2026-11-18T23:43:36+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "34afbd378424",
-"t": "",
-"title": "Shell plc (SHEL.P) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1JVTJ4aXladjNYRklPSWFHcDZfRkp0SWR6bkZmZEpLVVZfZk11aWFtcEZJRnZhZExYb1hoc1lTYUVYaWRJSzBmRXg1bDNoMjN4UEpvOFpDb3AtQVZoMmdLZXhjMkRUb21FRlYw?oc=5",
-"pub": "2026-11-18T23:37:30+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T04:44:32+00:00"
-},
-{
-"id": "a4da50e4213f",
-"t": "",
-"title": "Jane Fraser on IPO Pipeline, AI, & Interest Rate Outlook",
-"url": "https://www.bloomberg.com/news/videos/2026-11-18/jane-fraser-on-ipo-pipeline-ai-interest-rate-outlook-video",
-"pub": "2026-11-18T23:31:48+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "c999e8acb0d5",
-"t": "",
-"title": "Anthropic: 23.6 million shares offered by certain stockholders in IPO - website",
-"url": "https://www.financialjuice.com/News/9858748/Anthropic-236-million-shares-offered-by-certain-stockholders-in-IPO---website.aspx?xy=rss",
-"pub": "2026-11-18T23:29:34+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "907140b7bdfe",
-"t": "",
-"title": "Anthropic: 23.6 million shares offered by certain stockholders in IPO - website",
-"url": "https://www.financialjuice.com/News/9858748/Anthropic-236-million-shares-offered-by-certain-stockholders-in-IPO---website.aspx",
-"pub": "2026-11-18T23:29:34+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
 }
 ]
 }
