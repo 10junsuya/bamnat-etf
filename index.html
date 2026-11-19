@@ -409,6 +409,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .am-dl.on{background:var(--surface-2)}
 .am-ev{font-size:11px; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:0 6px; margin-left:6px; white-space:nowrap; vertical-align:1px}
 .am-seg{display:grid; grid-template-columns:1fr 1fr; margin:0; flex:1 1 180px}
+.am-fold{font:inherit; font-size:12px; color:var(--muted); background:none; border:0; padding:5px 4px; cursor:pointer}
 .am-soon{cursor:default; border-style:dashed; opacity:.75}
 .am-bar{display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:space-between}
 .am-bar select{font:inherit; font-size:13px; border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:10px; padding:6px 8px; max-width:100%}
@@ -3976,7 +3977,7 @@ function viewAmap(){
       : `<div class="acard am-soon" aria-disabled="true"><div class="c">준비 중</div><div class="t">${n}</div><div class="s">${d}</div></div>`).join("")}</div>`;
 }
 /* A 화면 · AI: 사다리 지도 + 흐름 스위치 + 모래시계 회사 카드 + 프로젝트 렌즈 */
-const amAi = {co:"OpenAI", flow:"up", prj:"", open:new Set()};
+const amAi = {co:"OpenAI", flow:"up", prj:"", open:new Set(), exp:new Set()};
 const AMK = {"공급":"물건·부품","클라우드":"클라우드","건설":"데이터센터","전력":"전기","투자":"투자"};
 function amRel(c){ const E = (AM.ai||{}).e||[];
   return { buy: E.filter(e=>e.a===c && e.k!=="투자"), sell: E.filter(e=>e.b===c && e.k!=="투자"),
@@ -3987,9 +3988,15 @@ function amLadder(){ const ai = AM.ai, sel = amAi.co, R = sel ? amRel(sel) : nul
   const near = sel ? new Set([sel, ...[...R.buy, ...R.gout].map(e=>e.b), ...[...R.sell, ...R.gin].map(e=>e.a)]) : null;
   const chip = c => { const on = lens ? lens.has(c) : near ? near.has(c) : true;
     return `<button class="am-node${c===sel?" cur":""}${on?"":" dim"}" type="button" data-amc="${c}">${c}</button>`; };
+  const isOn = c => lens ? lens.has(c) : near ? near.has(c) : true;
   return ai.rows.map((r,i)=>{
-    const row = `<div class="am-rung"><div class="am-rl"><b>${r.n}</b><span>${r.d}</span></div>
-      <div>${r.g.map(g=>`${g.g?`<div class="am-gl">${g.g}</div>`:""}<div class="am-gc">${g.co.map(chip).join("")}</div>`).join("")}</div></div>`;
+    const all = r.g.flatMap(g=>g.co), open = amAi.exp.has(r.k);
+    let body;
+    if(open) body = r.g.map(g=>`${g.g?`<div class="am-gl">${g.g}</div>`:""}<div class="am-gc">${g.co.map(chip).join("")}</div>`).join("")
+      + `<button class="am-fold" type="button" data-amr="${r.k}">접기</button>`;
+    else { const pick = [...all.filter(isOn), ...all.filter(c=>!isOn(c))].slice(0,3), rest = all.length - pick.length;
+      body = `<div class="am-gc">${pick.map(chip).join("")}${rest>0?`<button class="am-fold" type="button" data-amr="${r.k}">외 ${rest}곳 ›</button>`:""}</div>`; }
+    const row = `<div class="am-rung"><div class="am-rl"><b>${r.n}</b><span>${r.d}</span></div><div>${body}</div></div>`;
     const nx = ai.rows[i+1];
     const link = (r.up && nx) ? `<div class="am-flow"><span>${amAi.flow==="up" ? `↑ ${r.up}` : `↓ ${r.down}`}</span></div>`
       : (nx && nx.k==="dc") ? `<div class="am-gap">칩이 들어갈 건물과 전기</div>` : "";
@@ -4058,6 +4065,7 @@ function amAiRedraw(scroll){ const w = document.getElementById("amAiWrap"); if(w
   if(scroll){ const c = document.getElementById("amCo"); if(c) c.scrollIntoView({behavior: reduceMotion()?"auto":"smooth", block:"start"}); } }
 document.addEventListener("click", ev=>{
   const c = ev.target.closest("[data-amc]"); if(c){ amAi.co = c.dataset.amc; amAiRedraw(true); return; }
+  const rr = ev.target.closest("[data-amr]"); if(rr){ const k = rr.dataset.amr; amAi.exp.has(k) ? amAi.exp.delete(k) : amAi.exp.add(k); amAiRedraw(false); return; }
   const x = ev.target.closest("[data-amx]"); if(x){ const k = amAi.co+"|"+x.dataset.amx; amAi.open.has(k) ? amAi.open.delete(k) : amAi.open.add(k); amAiRedraw(false); return; }
   const f = ev.target.closest("[data-amf]"); if(f){ amAi.flow = f.dataset.amf; amAiRedraw(false); return; }
   const p = ev.target.closest("[data-amp]"); if(p){ amAi.prj = p.dataset.amp; amAiRedraw(false); const w = document.getElementById("amAiWrap"); if(w) w.scrollIntoView({behavior: reduceMotion()?"auto":"smooth", block:"start"}); return; }
