@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-19 09:43",
-"rot": 114,
+"updated_kst": "2026-11-19 10:08",
+"rot": 174,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "46건",
+"Reuters": "45건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "a6b5184ab0d3",
+"t": "AAPL",
+"title": "Corning CEO on working with Steve Jobs to make screens for the first iPhone",
+"url": "https://finance.yahoo.com/video/corning-ceo-working-steve-jobs-010013740.html?.tsrc=rss",
+"pub": "2026-11-19T01:00:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
+"id": "aa2f46b01970",
+"t": "PLTR",
+"title": "UiPath vs. Palantir Technologies: Comparing Modest Revenue Growth vs. Rapid Expansion",
+"url": "https://www.fool.com/coverage/charts/2026/11/18/uipath-vs-palantir-technologies-comparing-modest-revenue-growth-vs-rapid-expansion/?.tsrc=rss",
+"pub": "2026-11-19T00:45:18+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
+"id": "6b60abb080c0",
+"t": "NVDA",
+"title": "Why Nvidia and ASML still fit an underweight tech strategy",
+"url": "https://www.thestreet.com/investing/why-nvidia-and-asml-still-fit-an-underweight-tech-strategy?.tsrc=rss",
+"pub": "2026-11-19T00:44:54+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
+"id": "e9ac13e3031b",
+"t": "NVDA",
+"title": "Missed the Anthropic IPO Allocation? Here’s How to Buy ANT on Thursday.",
+"url": "https://www.fool.com/investing/2026/11/18/missed-anthropic-ipo-allocation-how-to-buy-ant-stock-thursday/?.tsrc=rss",
+"pub": "2026-11-19T00:41:28+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
+},
 {
 "id": "1da21821a57c",
 "t": "COST",
@@ -22,6 +62,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T00:43:43+00:00"
+},
+{
+"id": "0450f1872ce3",
+"t": "NVDA",
+"title": "GE Vernova Down 24%: What Would Its CEO Say?",
+"url": "https://www.trefis.com/stock/gev/articles/625753/ge-vernova-down-24-what-would-its-ceo-say/2026-11-18?.tsrc=rss",
+"pub": "2026-11-19T00:36:26+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
+"id": "3e09860799e7",
+"t": "NVDA",
+"title": "Here's What a $1,000 Investment in Kraken Robotics Will Be Worth by the End of 2027 if Undersea Drone Orders Keep Doubling",
+"url": "https://www.fool.com/investing/2026/11/18/heres-what-a-1000-investment-in-kraken-robotics-wi/?.tsrc=rss",
+"pub": "2026-11-19T00:35:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
 "id": "525fcaa697c6",
@@ -44,6 +104,16 @@
 "seen": "2026-11-19T00:35:31+00:00"
 },
 {
+"id": "8850b8f3c4b6",
+"t": "NTAP",
+"title": "Is NetApp (NTAP) Priced For Perfection As AI Demand Builds?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/netapp-ntap-priced-perfection-ai-002220296.html?.tsrc=rss",
+"pub": "2026-11-19T00:22:20+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
 "id": "91d16169586c",
 "t": "NVDA",
 "title": "Yes, You Can Invest in Grand Theft Auto VI (GTA 6). Here's How.",
@@ -52,6 +122,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T00:35:31+00:00"
+},
+{
+"id": "30ba42ddee77",
+"t": "CSCO",
+"title": "Cisco (CSCO) Stock Lags Record Q1 Earnings As AI Revenue Builds",
+"url": "https://finance.yahoo.com/markets/stocks/articles/cisco-csco-stock-lags-record-001939761.html?.tsrc=rss",
+"pub": "2026-11-19T00:19:39+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
 "id": "2c6197461e22",
@@ -134,6 +214,16 @@
 "seen": "2026-11-19T00:43:43+00:00"
 },
 {
+"id": "73778651248d",
+"t": "GOOGL",
+"title": "Google Signs Landmark Superhot Geothermal Deal",
+"url": "https://finance.yahoo.com/energy/articles/google-signs-landmark-superhot-geothermal-000000944.html?.tsrc=rss",
+"pub": "2026-11-19T00:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
 "id": "055181bfde09",
 "t": "GOOGL",
 "title": "Is Alphabet Stock a Buy Right Now?",
@@ -152,6 +242,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T00:13:55+00:00"
+},
+{
+"id": "acdbc8e0cc4e",
+"t": "MU",
+"title": "Q3 Earnings Strong, Q4 Estimates Slip: What the Latest Revisions Mean for 2027",
+"url": "https://finance.yahoo.com/markets/stocks/articles/q3-earnings-strong-q4-estimates-235100192.html?.tsrc=rss",
+"pub": "2026-11-18T23:51:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
 "id": "15287a0741a3",
@@ -7914,104 +8014,104 @@
 "seen": "2026-11-18T14:54:13+00:00"
 },
 {
-"id": "8e1ddf9f4ecc",
-"t": "AVGO",
-"title": "Was Nvidia’s strong report a clearing event for the wider chip sector?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-strong-report-clearing-event-144126778.html?.tsrc=rss",
-"pub": "2026-11-18T14:41:26+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:54:13+00:00"
+"id": "7ab2ba97991a",
+"t": "",
+"title": "BoJ Governor Ueda: crucial to anchor core inflation near 2% to prevent risk of inflation overshoot",
+"url": "https://www.financialjuice.com/News/9858863/BoJ-Governor-Ueda-crucial-to-anchor-core-inflation-near-2-to-prevent-risk-of-inflation-overshoot.aspx?xy=rss",
+"pub": "2026-11-19T01:08:04+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "ade44021b868",
-"t": "AVGO",
-"title": "Anthropic IPO: Why Are Nvidia, Google And Others Buying $26 Billion?",
-"url": "https://www.trefis.com/stock/ant/articles/626071/anthropic-ipo-why-are-nvidia-google-and-others-buying-26-billion/2026-11-18?.tsrc=rss",
-"pub": "2026-11-18T14:40:59+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "4dcdfa850253",
+"t": "",
+"title": "BoJ Governor Ueda: plans to continue raising interest rates as monetary conditions remain accommodative",
+"url": "https://www.financialjuice.com/News/9858862/BoJ-Governor-Ueda-plans-to-continue-raising-interest-rates-as-monetary-conditions-remain-accommodative.aspx?xy=rss",
+"pub": "2026-11-19T01:07:23+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "ee5282a729ce",
-"t": "GOOGL",
-"title": "Anthropic IPO: Is Its Customer Risk Smaller Than It Looks?",
-"url": "https://www.trefis.com/stock/ant/articles/626072/anthropic-ipo-is-its-customer-risk-smaller-than-it-looks/2026-11-18?.tsrc=rss",
-"pub": "2026-11-18T14:40:58+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "533f5d5fa4f4",
+"t": "",
+"title": "BoJ Governor Ueda: risk inflation could exceed central bank's target",
+"url": "https://www.financialjuice.com/News/9858861/BoJ-Governor-Ueda-risk-inflation-could-exceed-central-banks-target.aspx?xy=rss",
+"pub": "2026-11-19T01:05:58+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "3a0d1323fca4",
-"t": "AAPL",
-"title": "Major tech outages raise new cybersecurity concerns",
-"url": "https://finance.yahoo.com/video/major-tech-outages-raise-new-cybersecurity-concerns-144024816.html?.tsrc=rss",
-"pub": "2026-11-18T14:40:24+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:54:13+00:00"
+"id": "028081bf7465",
+"t": "",
+"title": "BoJ Governor Ueda: underlying inflation roughly aligns with price target",
+"url": "https://www.financialjuice.com/News/9858860/BoJ-Governor-Ueda-underlying-inflation-roughly-aligns-with-price-target.aspx?xy=rss",
+"pub": "2026-11-19T01:05:22+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "95517b8088de",
-"t": "GE",
-"title": "Should You Buy GE HealthCare Stock For Its Cash?",
-"url": "https://www.trefis.com/stock/gehc/articles/626153/should-you-buy-ge-healthcare-stock-for-its-cash/2026-11-18?.tsrc=rss",
-"pub": "2026-11-18T14:40:20+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "795b4b3c6735",
+"t": "",
+"title": "BoJ Governor Ueda: Japan's economy steady but showing some fragility",
+"url": "https://www.financialjuice.com/News/9858859/BoJ-Governor-Ueda-Japans-economy-steady-but-showing-some-fragility.aspx?xy=rss",
+"pub": "2026-11-19T01:03:27+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "d5c50773c6db",
-"t": "NVDA",
-"title": "Wife of senior Nvidia executive embroiled in chip smuggling scandal",
-"url": "https://uk.finance.yahoo.com/news/wife-senior-nvidia-executive-embroiled-143831399.html?.tsrc=rss",
-"pub": "2026-11-18T14:38:31+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:44:05+00:00"
+"id": "9ad4e1534306",
+"t": "",
+"title": "Saudi Crown Prince and US Centcom Chief discuss military relations and regional issues in Riyadh: Saudi State News Agency",
+"url": "https://www.financialjuice.com/News/9858858/Saudi-Crown-Prince-and-US-Centcom-Chief-discuss-military-relations-and-regional-issues-in-Riyadh-Saudi-State-News-Agency.aspx?xy=rss",
+"pub": "2026-11-19T01:02:54+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "4d1b1273a117",
-"t": "MSFT",
-"title": "Costco sees surge in panic buying after tech outages, report says",
-"url": "https://www.cbsnews.com/news/costco-panic-buying-tech-outages-generators/?.tsrc=rss",
-"pub": "2026-11-18T14:37:36+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:15:25+00:00"
+"id": "d687a45de483",
+"t": "",
+"title": "Taiwan overnight interbank rate starts at 0.805% vs 0.805% at previous session open",
+"url": "https://www.financialjuice.com/News/9858841/Taiwan-overnight-interbank-rate-starts-at-0805-vs-0805-at-previous-session-open.aspx?xy=rss",
+"pub": "2026-11-19T01:01:21+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "eb2df7fbab6e",
-"t": "MRNA",
-"title": "Global Medical Countermeasures Market 2026: Size, Trends, and Forecast to 2030 | Capitalize on AI, Stockpiling, and Rapid Diagnostics with Pfizer, Moderna, Sanofi, and Emergent",
-"url": "https://finance.yahoo.com/healthcare/articles/global-medical-countermeasures-market-2026-143600285.html?.tsrc=rss",
-"pub": "2026-11-18T14:36:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:44:05+00:00"
+"id": "cb0dbd848151",
+"t": "",
+"title": "Blue Owl Plans $513 Million CMBS for Amazon-Leased Data Center",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/blue-owl-plans-513-million-cmbs-for-amazon-leased-data-center",
+"pub": "2026-11-19T00:54:52+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "131e25c61b8f",
-"t": "MRK",
-"title": "Merck Ends Nemtabrutinib Development: What's Next for Its Pipeline?",
-"url": "https://finance.yahoo.com/healthcare/articles/merck-ends-nemtabrutinib-development-whats-143600811.html?.tsrc=rss",
-"pub": "2026-11-18T14:36:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "ccfad00fd7a4",
+"t": "",
+"title": "Anthropic Prices at $83 a Share in Record-Sized Offering",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-prices-at-83-a-share-in-record-sized-offering-video",
+"pub": "2026-11-19T00:45:46+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
-"id": "ffa3391f4c85",
-"t": "AAPL",
-"title": "Insulet downgraded, Tandem Diabetes upgraded: Wall Street's top analyst calls",
-"url": "https://finance.yahoo.com/markets/stocks/articles/insulet-downgraded-tandem-diabetes-upgraded-143557258.html?.tsrc=rss",
-"pub": "2026-11-18T14:35:57+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T14:54:13+00:00"
+"id": "5ca38e383a31",
+"t": "",
+"title": "Korea Investors Buy Record Amount of Treasuries in September",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/korea-investors-buy-record-amount-of-treasuries-in-september",
+"pub": "2026-11-19T00:45:02+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
 "id": "1ab2f9c6860a",
@@ -8032,6 +8132,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-19T00:43:43+00:00"
+},
+{
+"id": "00b2707bc7a7",
+"t": "",
+"title": "China Oil Imports Rebound as Beijing Turns Back to Stockpiling",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/china-oil-imports-rebound-as-beijing-turns-back-to-stockpiling",
+"pub": "2026-11-19T00:36:26+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
 "id": "2b7f7aa6b5be",
@@ -9144,6 +9254,26 @@
 "seen": "2026-11-18T22:14:53+00:00"
 },
 {
+"id": "4af3ff3a6ed7",
+"t": "",
+"title": "Financial Services Roundup: Market Talk",
+"url": "https://www.wsj.com/business/financial-services-roundup-market-talk-1e52dbdf?mod=rss_markets_main",
+"pub": "2026-11-18T22:00:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
+"id": "eebef23ada6c",
+"t": "",
+"title": "Basic Materials Roundup: Market Talk",
+"url": "https://www.wsj.com/business/basic-materials-roundup-market-talk-db96511d?mod=rss_markets_main",
+"pub": "2026-11-18T21:58:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
 "id": "2b55ab530e26",
 "t": "",
 "title": "Moody's: Higher interest rates, elevated energy prices, and normalization of AI investment cycle will contribute to slower growth in the US",
@@ -9204,6 +9334,16 @@
 "seen": "2026-11-19T00:43:43+00:00"
 },
 {
+"id": "18d87422dbe1",
+"t": "",
+"title": "Auto & Transport Roundup: Market Talk",
+"url": "https://www.wsj.com/business/auto-transport-roundup-market-talk-106eebc0?mod=rss_markets_main",
+"pub": "2026-11-18T21:54:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
 "id": "c264f789fc14",
 "t": "",
 "title": "Moody's: US economy has grown more strongly than we initially expected in 2026.",
@@ -9222,6 +9362,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T00:43:43+00:00"
+},
+{
+"id": "bb7aee04416b",
+"t": "",
+"title": "Tech, Media & Telecom Roundup: Market Talk",
+"url": "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-d3a02b97?mod=rss_markets_main",
+"pub": "2026-11-18T21:53:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
 "id": "0c0704d030a9",
@@ -9672,6 +9822,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-18T21:44:34+00:00"
+},
+{
+"id": "1353c1ce091a",
+"t": "",
+"title": "Comex Gold Settles 3.16% Lower at $3736.80",
+"url": "https://www.wsj.com/finance/commodities-futures/gold-treads-water-as-fed-dollar-keep-weighing-3f6439e8?mod=rss_markets_main",
+"pub": "2026-11-18T21:09:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
 "id": "b60d766d4959",
@@ -10174,6 +10334,16 @@
 "seen": "2026-11-18T21:44:34+00:00"
 },
 {
+"id": "5e491b225aef",
+"t": "",
+"title": "U.S. Stocks Mostly Lower After Nvidia Earnings Fail to Soothe Nerves",
+"url": "https://www.wsj.com/finance/commodities-futures/stock-futures-rally-as-nvidia-earnings-calm-ai-trade-fears-96f51546?mod=rss_markets_main",
+"pub": "2026-11-18T19:59:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
+},
+{
 "id": "36efb563abab",
 "t": "",
 "title": "NiCAN Ltd (NICN.V) | Stock Price & Latest News - Reuters",
@@ -10322,6 +10492,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T00:43:43+00:00"
+},
+{
+"id": "552e0d437fff",
+"t": "",
+"title": "GSRX Industries Inc (GSRX.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE90d09rUFNjcDhJa2ozLVVrY1d3YlVrUDlyMkJtNHpVemxRMFU4U2VlT2Q4b01hZlQ3dFFUUUxjYXhGSkVGX3JqNWJaTVd6RkhXU1RxeFhuMDQxbTFCX0x1bC05OUdlZm15Ul9rUA?oc=5",
+"pub": "2026-11-18T19:41:36+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T01:08:34+00:00"
 },
 {
 "id": "35c5299cd4c8",
@@ -10832,186 +11012,6 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-18T19:14:17+00:00"
-},
-{
-"id": "df4f5adff724",
-"t": "",
-"title": "Bank of Canada's Gravelle: Energy price inflation spreading",
-"url": "https://www.financialjuice.com/News/9858382/Bank-of-Canadas-Gravelle-Energy-price-inflation-spreading.aspx?xy=rss",
-"pub": "2026-11-18T18:38:28+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "9db2d5aaf86e",
-"t": "",
-"title": "Fed's Barr: Economy strong with low unemployment",
-"url": "https://www.financialjuice.com/News/9858381/Feds-Barr-Economy-strong-with-low-unemployment.aspx?xy=rss",
-"pub": "2026-11-18T18:35:56+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "916bc739cb7f",
-"t": "",
-"title": "Fed's Barr: Will watch data to determine the Fed's next move",
-"url": "https://www.financialjuice.com/News/9858380/Feds-Barr-Will-watch-data-to-determine-the-Feds-next-move.aspx?xy=rss",
-"pub": "2026-11-18T18:35:46+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "c9be57da31ff",
-"t": "",
-"title": "Fed's Barr: Critical for the Fed to lower inflation to 2% ‘in a timely way\"",
-"url": "https://www.financialjuice.com/News/9858379/Feds-Barr-Critical-for-the-Fed-to-lower-inflation-to-2-in-a-timely-way.aspx?xy=rss",
-"pub": "2026-11-18T18:35:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "acf5ffb75c2d",
-"t": "",
-"title": "Fed's Barr: Inflation is ‘too high’ and pressuring many families",
-"url": "https://www.financialjuice.com/News/9858378/Feds-Barr-Inflation-is-too-high-and-pressuring-many-families.aspx?xy=rss",
-"pub": "2026-11-18T18:35:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "3ae69c9c6f7e",
-"t": "",
-"title": "Fed's Barr: Support raising rates further if the economy performs as expected",
-"url": "https://www.financialjuice.com/News/9858377/Feds-Barr-Support-raising-rates-further-if-the-economy-performs-as-expected.aspx?xy=rss",
-"pub": "2026-11-18T18:35:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "60e3db35cd52",
-"t": "",
-"title": "Arm's Haas was approached by Nvidia's recruiting firm $NVDA",
-"url": "https://www.financialjuice.com/News/9858376/Arms-Haas-was-approached-by-Nvidias-recruiting-firm-NVDA.aspx?xy=rss",
-"pub": "2026-11-18T18:34:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "ed283bf0a78b",
-"t": "",
-"title": "EU governments authorise signature of trade deal agreement with Indonesia - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcXJIdmxPSUc3bmRtUGRnWk5CZUFYcG9vaHh5bUpHNnZZYmpSd0ZiR0lYV2FIZGdxeXhSR25rWkE1MjNYbkNTeC1KNlpNWEg5UGtMX1h0djhUXy1vZW9wQjk3WV85UHQyWmRCeXYxWE96aFZCRnViUFd6dmRnVVU5V09FekktbVNzT0RObXg1S0hPSHdSVzM3a292OEpJRzhzTHN1UzBEbm9paFlRbXlIRGVyNkVYbkY1c0N0UVdCT3c?oc=5",
-"pub": "2026-11-18T18:31:23+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "ea1ca0398887",
-"t": "",
-"title": "Lowe's posts strong online sales, raises outlook despite slow housing market",
-"url": "https://www.cnbc.com/2026/11/18/lowes-low-q3-2026-earnings.html",
-"pub": "2026-11-18T18:27:52+00:00",
-"src": "CNBC",
-"kind": "market",
-"seen": "2026-11-18T21:14:22+00:00"
-},
-{
-"id": "1b7348dd8d54",
-"t": "",
-"title": "Weakest Credit Faces More Pain, Hedge Funds Warn",
-"url": "https://www.bloomberg.com/news/videos/2026-11-18/weakest-credit-faces-more-pain-hedge-funds-warn-video",
-"pub": "2026-11-18T18:26:54+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T18:57:06+00:00"
-},
-{
-"id": "6e64e43890e3",
-"t": "",
-"title": "US Sec. of Defense Hegseth: The oil deal makes the Strait of Hormuz a 'non-factor'",
-"url": "https://www.financialjuice.com/News/9858360/US-Sec-of-Defense-Hegseth-The-oil-deal-makes-the-Strait-of-Hormuz-a-non-factor.aspx?xy=rss",
-"pub": "2026-11-18T18:21:35+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "fc1cf14c8bf0",
-"t": "",
-"title": "U.S. Crude Oil Stockpiles Rise for Second Straight Week",
-"url": "https://www.wsj.com/business/energy-oil/u-s-crude-oil-stockpiles-rise-for-second-straight-week-086a0883?mod=rss_markets_main",
-"pub": "2026-11-18T18:18:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "a7f6869d983f",
-"t": "",
-"title": "Google: Genie 4 is now available $GOOGL",
-"url": "https://www.financialjuice.com/News/9858346/Google-Genie-4-is-now-available-GOOGL.aspx?xy=rss",
-"pub": "2026-11-18T18:16:55+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "45eb8b094224",
-"t": "",
-"title": "Fed’s Daly Urges Rate Hikes With a Thoughtful, Measured Approach",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/fed-s-daly-urges-rate-hikes-with-a-thoughtful-measured-approach",
-"pub": "2026-11-18T18:16:35+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "5499ca7a4380",
-"t": "",
-"title": "Anthropic’s IPO by the Numbers: Taking on SpaceX’s Record Debut",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/anthropic-s-ipo-by-the-numbers-taking-on-spacex-s-record-debut",
-"pub": "2026-11-18T18:12:22+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
-},
-{
-"id": "f927f7fc8958",
-"t": "",
-"title": "Off-price retailer TJX keeps its promise and the stock soars. We’re satisfied, for now",
-"url": "https://www.cnbc.com/investingclub/2026/11/18/off-price-retailer-tjx-keeps-its-promise-and-the-stock-soars-were-satisfied-for-now.html",
-"pub": "2026-11-18T18:06:59+00:00",
-"src": "CNBC",
-"kind": "market",
-"seen": "2026-11-18T18:13:58+00:00"
-},
-{
-"id": "fce09d9c3052",
-"t": "",
-"title": "FRAd.BS - Reuters",
-"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1mekZ1VFZ5dzk4VE5WaUJRZHlwR1gwNEZ0bUZuemItQVAyUDExQlVDdi1ZWDNCdXlBWWNpZEg3elBvZXdMNTVybXhTb2xDTEhWY3BIU3VvaW16TmR1NWdIb0dITVBMcFRKLTZ0cm55dw?oc=5",
-"pub": "2026-11-18T18:06:25+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-18T21:44:34+00:00"
-},
-{
-"id": "f51ca21750b4",
-"t": "",
-"title": "Probe of Mark Walter’s Insurers Spotlights Gaps in Regulatory Patchwork",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/probe-of-mark-walter-s-insurers-spotlights-gaps-in-regulatory-patchwork",
-"pub": "2026-11-18T18:04:19+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T18:44:17+00:00"
 }
 ]
 }
