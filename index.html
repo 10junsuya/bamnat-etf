@@ -431,10 +431,12 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .am-dt{fill:var(--pt)} .am-dt.o{fill:var(--surface); stroke:var(--ink); stroke-width:1.2}
 .am-tx{font-size:11px; fill:var(--ink); cursor:pointer} .am-tx.m{fill:var(--muted); cursor:default}
 .am-cc{fill:var(--ink)} .am-ct{font-size:12px; font-weight:700; fill:var(--bg)}
-.am-hub{position:relative; display:grid; grid-template-columns:1fr 1fr; gap:26px 10px; margin-top:4px}
-.am-hub svg{position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:visible}
+.am-zbar{display:flex; justify-content:space-between; align-items:center; margin-bottom:6px}
+.am-zbar button{font:inherit; font-size:13px; min-width:34px; height:30px; border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:8px; margin-left:4px; cursor:pointer}
+.am-vp{overflow:auto; -webkit-overflow-scrolling:touch; touch-action:pan-x pan-y; cursor:grab; border:1px solid var(--line); border-radius:12px; background:var(--surface-2); padding:14px}
+.am-hub{position:relative; width:640px; display:grid; grid-template-columns:1fr 1.05fr 1fr; grid-template-areas:"tl t tr" "l c r" "bl b br"; gap:26px 18px; align-items:center; margin:0 auto}
+.am-hub svg{position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:visible}
 .am-bx{position:relative; z-index:1; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:10px 10px 6px; min-width:0}
-.am-bx.w{grid-column:1/-1}
 .am-bh{font-size:12px; color:var(--muted); margin-bottom:4px}
 .am-it{padding:5px 0; border-top:1px solid var(--line); font-size:14px; line-height:1.35}
 .am-bh + .am-it{border-top:0}
@@ -442,7 +444,7 @@ textarea.code{width:100%; min-height:64px; border:1px solid var(--line); backgro
 .am-it small{display:block; font-size:12px; color:var(--muted)}
 .am-src2{font-size:11px; color:var(--muted); margin-top:3px} .am-src2 a{color:var(--muted)}
 .am-more{font:inherit; font-size:12px; color:var(--muted); background:none; border:0; padding:6px 0 2px; cursor:pointer}
-.am-ctr{position:relative; z-index:1; grid-column:1/-1; justify-self:center; width:66%; text-align:center; background:var(--pt); color:var(--bg); border-radius:14px; padding:12px 10px}
+.am-ctr{position:relative; z-index:1; grid-area:c; text-align:center; background:var(--pt); color:var(--bg); border-radius:14px; padding:12px 10px}
 .am-ctr b{display:block; font-size:18px} .am-ctr span{display:block; font-size:12px; opacity:.8; margin-top:2px}
 .am-src a{color:var(--muted); font-size:12px; display:block; padding:3px 0}
 /* A */
@@ -4018,20 +4020,41 @@ function amBoxes(c){ const ai = AM.ai, R = amRel(c);
 }
 function amHub(c){ const co = AM.ai.co[c], row = AM.ai.rows.find(r=>r.g.some(g=>g.co.includes(c)));
   const bx = amBoxes(c), ev = t => `<span class="am-ev">${t}</span>`;
-  const box = (b, k, full) => { const open = amAi.open.has(c+"|"+b.h);
-    return `<div class="am-bx${full?" w":""}"><div class="am-bh">${b.h}</div>
+  /* 자리 배정: 투자자·고객은 위, 공급은 아래와 옆, 투자한 곳은 오른쪽 */
+  const free = ["t","tl","tr","l","r","b","bl","br"], take = pref => { const k = pref.find(x=>free.includes(x)) || free[0]; free.splice(free.indexOf(k),1); return k; };
+  const pos = new Map();
+  bx.filter(b=>b.side==="top").forEach(b=>pos.set(b, take(["t","tl","tr","l","r"])));
+  bx.filter(b=>b.h==="투자한 곳").forEach(b=>pos.set(b, take(["r","tr","br","l"])));
+  bx.filter(b=>b.side==="bot" && b.h!=="투자한 곳").forEach(b=>pos.set(b, take(["b","bl","br","l","r","tl","tr"])));
+  const box = b => { const open = amAi.open.has(c+"|"+b.h);
+    return `<div class="am-bx" style="grid-area:${pos.get(b)}"><div class="am-bh">${b.h}</div>
       ${[...b.it].map(([who, es])=>`<div class="am-it"><button type="button" data-amc="${who}">${who}</button><small>${es.map(e=>amGold(e.t)).join(" · ")}</small>
         ${open?es.map(e=>`<div class="am-src2">${ev(e.ev)} ${e.d} · <a href="${e.src[1]}" target="_blank" rel="noopener">${e.src[0]} ›</a></div>`).join(""):""}</div>`).join("")}
       <button class="am-more" type="button" data-amx="${b.h}" aria-expanded="${open}">${open?"근거 닫기":"근거 보기 ›"}</button></div>`; };
-  const band = side => { const a = bx.filter(b=>b.side===side); return a.map((b,i)=>box(b, i, a.length%2===1 && i===a.length-1)).join(""); };
-  return `<div class="am-hub" id="amHub"><svg aria-hidden="true"></svg>${band("top")}
-      <div class="am-ctr" id="amCtr"><b>${c}</b><span>${row.n} · ${co.t}</span></div>${band("bot")}</div>`;
+  return `<div class="am-zbar"><span class="tiny muted">＋로 키우고 끌어서 움직여요</span><span><button type="button" data-amz="-" aria-label="작게">－</button><button type="button" data-amz="fit">전체</button><button type="button" data-amz="+" aria-label="크게">＋</button></span></div>
+    <div class="am-vp" id="amVp"><div class="am-hub" id="amHub" style="zoom:${amAi.z||1}"><svg aria-hidden="true"></svg>
+      <div class="am-ctr" id="amCtr"><b>${c}</b><span>${row.n} · ${co.t}</span></div>${bx.map(box).join("")}</div></div>`;
 }
 function amLines(){ const hub = document.getElementById("amHub"), ctr = document.getElementById("amCtr"); if(!hub || !ctr) return;
-  const H = hub.getBoundingClientRect(), C = ctr.getBoundingClientRect(), cx = C.left+C.width/2-H.left, cy = C.top+C.height/2-H.top;
-  hub.querySelector("svg").innerHTML = [...hub.querySelectorAll(".am-bx")].map(b=>{ const r = b.getBoundingClientRect();
-    const x = r.left+r.width/2-H.left, y = (r.top < C.top ? r.bottom : r.top)-H.top;
-    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" class="am-ln"/><circle cx="${x}" cy="${y}" r="3" class="am-dt"/>`; }).join(""); }
+  const R = el => ({l:el.offsetLeft, t:el.offsetTop, r:el.offsetLeft+el.offsetWidth, b:el.offsetTop+el.offsetHeight});
+  const C = R(ctr), cx = (C.l+C.r)/2, cy = (C.t+C.b)/2;
+  hub.querySelector("svg").innerHTML = [...hub.querySelectorAll(".am-bx")].map(b=>{ const r = R(b); let x = (r.l+r.r)/2, y = (r.t+r.b)/2;
+    if(r.b < C.t) y = r.b; else if(r.t > C.b) y = r.t; else x = r.r < C.l ? r.r : r.l;
+    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" class="am-ln"/><circle cx="${x}" cy="${y}" r="3" class="am-dt"/>`; }).join("");
+  const vp = document.getElementById("amVp");
+  if(vp && !amAi.z){ const fit = Math.min(1, vp.clientWidth / hub.offsetWidth); amAi.z = fit; hub.style.zoom = fit; }
+  if(vp && !vp.dataset.c){ vp.dataset.c = 1; vp.scrollLeft = (vp.scrollWidth - vp.clientWidth)/2; }
+}
+function amZoom(k){ const hub = document.getElementById("amHub"), vp = document.getElementById("amVp"); if(!hub || !vp) return;
+  const fit = Math.min(1, vp.clientWidth / hub.offsetWidth);
+  amAi.z = k==="fit" ? fit : Math.min(1.4, Math.max(fit, (amAi.z||1) + (k==="+" ? 0.15 : -0.15)));
+  hub.style.zoom = amAi.z; vp.scrollLeft = (vp.scrollWidth - vp.clientWidth)/2; }
+/* 손가락·마우스로 끌어서 움직이기 */
+document.addEventListener("pointerdown", ev=>{ const vp = ev.target.closest("#amVp"); if(!vp || ev.pointerType!=="mouse" || ev.target.closest("button,a")) return;
+  const sx = ev.clientX, sy = ev.clientY, l = vp.scrollLeft, t = window.scrollY; let moved = false;
+  const mv = e=>{ const dx = e.clientX-sx, dy = e.clientY-sy; if(Math.abs(dx)>3) moved = true; vp.scrollLeft = l - dx; if(ev.pointerType==="mouse") window.scrollTo(0, t - dy); };
+  const up = ()=>{ removeEventListener("pointermove", mv); removeEventListener("pointerup", up); };
+  addEventListener("pointermove", mv); addEventListener("pointerup", up); });
 addEventListener("resize", ()=>requestAnimationFrame(amLines));
 function amCoCard(){ const c = amAi.co; if(!c || !(AM.ai.co||{})[c]) return `<p class="tiny muted">지도에서 회사를 눌러 보세요.</p>`;
   const R = amRel(c), row = AM.ai.rows.find(r=>r.g.some(g=>g.co.includes(c))), grp = row.g.find(g=>g.co.includes(c));
@@ -4066,8 +4089,9 @@ function viewAmapAi(){
 function amAiRedraw(scroll){ const w = document.getElementById("amAiWrap"); if(w) w.innerHTML = amAiBody(); requestAnimationFrame(amLines);
   if(scroll){ const c = document.getElementById("amCo"); if(c) c.scrollIntoView({behavior: reduceMotion()?"auto":"smooth", block:"start"}); } }
 document.addEventListener("click", ev=>{
-  const c = ev.target.closest("[data-amc]"); if(c){ amAi.co = c.dataset.amc; amAiRedraw(true); return; }
+  const c = ev.target.closest("[data-amc]"); if(c){ amAi.co = c.dataset.amc; amAi.z = 0; amAiRedraw(true); return; }
   const rr = ev.target.closest("[data-amr]"); if(rr){ const k = rr.dataset.amr; amAi.exp.has(k) ? amAi.exp.delete(k) : amAi.exp.add(k); amAiRedraw(false); return; }
+  const zz = ev.target.closest("[data-amz]"); if(zz){ amZoom(zz.dataset.amz); return; }
   const x = ev.target.closest("[data-amx]"); if(x){ const k = amAi.co+"|"+x.dataset.amx; amAi.open.has(k) ? amAi.open.delete(k) : amAi.open.add(k); amAiRedraw(false); return; }
   const f = ev.target.closest("[data-amf]"); if(f){ amAi.flow = f.dataset.amf; amAiRedraw(false); return; }
   const p = ev.target.closest("[data-amp]"); if(p){ amAi.prj = p.dataset.amp; amAiRedraw(false); const w = document.getElementById("amAiWrap"); if(w) w.scrollIntoView({behavior: reduceMotion()?"auto":"smooth", block:"start"}); return; }
