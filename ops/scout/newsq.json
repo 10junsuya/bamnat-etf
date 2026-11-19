@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-19 15:14",
-"rot": 60,
+"updated_kst": "2026-11-19 15:44",
+"rot": 120,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "43건",
+"Reuters": "42건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "80d258e7d6da",
+"t": "MSFT",
+"title": "Sony shares rise as Playstation dominates GTA VI sales",
+"url": "https://finance.yahoo.com/markets/stocks/articles/sony-shares-rise-playstation-dominates-063734369.html?.tsrc=rss",
+"pub": "2026-11-19T06:37:34+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "fce011736d37",
+"t": "NVDA",
+"title": "Moderna's Cancer Vaccine Worked -- and the Stock Plunged Anyway. Here's What Investors Are Missing.",
+"url": "https://www.fool.com/investing/2026/11/19/modernas-cancer-vaccine-worked-and-the-stock-plung/?.tsrc=rss",
+"pub": "2026-11-19T06:20:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "9194aa0d5bf3",
+"t": "CIEN",
+"title": "How Does Ciena (CIEN) Change The Optical Networking Race With 800 Gb/s?",
+"url": "https://finance.yahoo.com/technology/articles/does-ciena-cien-change-optical-061530843.html?.tsrc=rss",
+"pub": "2026-11-19T06:15:30+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "fc3f8625f2a3",
+"t": "SPY",
+"title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+"url": "https://www.benzinga.com/markets/prediction-markets/26/11/63418031/stock-market-will-sp-500-open-up-or-down-today-81?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
+"pub": "2026-11-19T06:10:52+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:44:19+00:00"
+},
 {
 "id": "f46dc476fa30",
 "t": "NVDA",
@@ -52,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T06:14:25+00:00"
+},
+{
+"id": "5a0609dbc82b",
+"t": "TSLA",
+"title": "Elon Musk Doubles Down On Autonomy: Tesla Plans Wheel-Less, Pedal-Less Model Y To Sit Alongside Two-Seat Cybercab",
+"url": "https://finance.yahoo.com/technology/articles/elon-musk-doubles-down-autonomy-053905404.html?.tsrc=rss",
+"pub": "2026-11-19T05:39:05+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:44:19+00:00"
 },
 {
 "id": "e2d6a439bf92",
@@ -7564,6 +7614,16 @@
 "seen": "2026-11-18T15:58:40+00:00"
 },
 {
+"id": "3b60648bf415",
+"t": "AAPL",
+"title": "Why does the internet keep breaking? It’s not the end of the world – it might be something scarier",
+"url": "https://www.independent.co.uk/tech/internet-down-outages-not-working-apple-microsoft-outlook-b3087293.html?.tsrc=rss",
+"pub": "2026-11-18T15:51:38+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
 "id": "d1b20a535062",
 "t": "NVDA",
 "title": "Nvidia must prove it can win without Jensen Huang",
@@ -7954,64 +8014,224 @@
 "seen": "2026-11-18T16:15:44+00:00"
 },
 {
-"id": "0f289170beb9",
-"t": "CAT",
-"title": "The 5 Best Stocks in Bill Gates’s Portfolio",
-"url": "https://www.tikr.com/blog/the-5-best-stocks-in-bill-gatess-portfolio?ref=yahoofinance&tlnk=yf-261118-rgh9h85p&.tsrc=rss",
-"pub": "2026-11-18T15:35:10+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "a6e4b8588076",
+"t": "",
+"title": "Japan PM Takaichi: Have been communicating with china on rare earth export controls.",
+"url": "https://www.financialjuice.com/News/9859415/Japan-PM-Takaichi-Have-been-communicating-with-china-on-rare-earth-export-controls.aspx?xy=rss",
+"pub": "2026-11-19T06:36:59+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
 },
 {
-"id": "4f1926657b11",
-"t": "MU",
-"title": "Is Micron Next to Announce a Stock Split?",
-"url": "https://www.fool.com/investing/2026/11/18/is-micron-next-to-announce-a-stock-split/?.tsrc=rss",
-"pub": "2026-11-18T15:35:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "5dcd94b04942",
+"t": "",
+"title": "Xi, Trump meeting concluded - CCTV",
+"url": "https://www.financialjuice.com/News/9859414/Xi-Trump-meeting-concluded---CCTV.aspx?xy=rss",
+"pub": "2026-11-19T06:36:26+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
 },
 {
-"id": "813bae3e0cb0",
-"t": "AMZN",
-"title": "Retail Digital Transformation - Global Strategic Business Report 2026: Capitalize on the $664.4 Billion Market with Amazon, Alibaba, eBay and Flipkart",
-"url": "https://finance.yahoo.com/technology/articles/retail-digital-transformation-global-strategic-153500087.html?.tsrc=rss",
-"pub": "2026-11-18T15:35:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "fccdbacfb0d7",
+"t": "",
+"title": "SNB Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9859413/SNB-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-19T06:35:55+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
 },
 {
-"id": "2592ae84d921",
-"t": "NBIS",
-"title": "Can CoreWeave's $133B Backlog Sustain Its Next Growth Phase?",
-"url": "https://finance.yahoo.com/technology/ai/articles/coreweaves-133b-backlog-sustain-next-153500430.html?.tsrc=rss",
-"pub": "2026-11-18T15:35:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T17:04:37+00:00"
+"id": "9dd4a5a63187",
+"t": "",
+"title": "RBNZ Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9859412/RBNZ-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-19T06:35:34+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
 },
 {
-"id": "24e6adfd6755",
-"t": "GOOGL",
-"title": "The 5 Best Stocks in Berkshire Hathaway’s Portfolio",
-"url": "https://www.tikr.com/blog/the-5-best-stocks-in-berkshire-hathaways-portfolio?ref=yahoofinance&tlnk=yf-261118-wgh3jp85&.tsrc=rss",
-"pub": "2026-11-18T15:34:37+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "c41efedaaad1",
+"t": "",
+"title": "RBA Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9859411/RBA-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-19T06:35:14+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
 },
 {
-"id": "ab87bb6bdf74",
-"t": "NVDA",
-"title": "Nvidia’s Interim CEO: Its Guarantee “Doesn’t Exist Anymore” if Builds Slip. That Caps a $118 Billion Risk",
-"url": "https://www.tikr.com/blog/nvidias-interim-ceo-its-guarantee-doesnt-exist-anymore-if-builds-slip-that-caps-a-118-billion-risk?ref=yahoofinance&tlnk=yf-261118-2f9xfq95&.tsrc=rss",
-"pub": "2026-11-18T15:34:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "124beb0c0d1f",
+"t": "",
+"title": "BoJ Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9859410/BoJ-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-19T06:34:56+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "791a921f2229",
+"t": "",
+"title": "BoC Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9859409/BoC-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-19T06:34:33+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "35790dfa85a5",
+"t": "",
+"title": "BoE Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9859408/BoE-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-19T06:34:05+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "a96d7ecef760",
+"t": "",
+"title": "ECB Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9859407/ECB-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-19T06:33:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "8ea74f35716a",
+"t": "",
+"title": "Fed Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9859406/Fed-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-19T06:33:20+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "f60bc738bd55",
+"t": "",
+"title": "Commodities Implied Volatility",
+"url": "https://www.financialjuice.com/News/9859405/Commodities-Implied-Volatility.aspx?xy=rss",
+"pub": "2026-11-19T06:32:39+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "75495552cd7e",
+"t": "",
+"title": "FX Implied Volatility",
+"url": "https://www.financialjuice.com/News/9859404/FX-Implied-Volatility.aspx?xy=rss",
+"pub": "2026-11-19T06:32:15+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "86f0f07d6f4f",
+"t": "",
+"title": "US Index Futures Implied Volatility",
+"url": "https://www.financialjuice.com/News/9859400/US-Index-Futures-Implied-Volatility.aspx?xy=rss",
+"pub": "2026-11-19T06:31:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "5b3a9641fd8d",
+"t": "",
+"title": "Top S&P 500 Stock Names Implied Volatility",
+"url": "https://www.financialjuice.com/News/9859387/Top-SP-500-Stock-Names-Implied-Volatility.aspx?xy=rss",
+"pub": "2026-11-19T06:31:23+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "afb6629f1d41",
+"t": "",
+"title": "120-Day Correlation Matrix",
+"url": "https://www.financialjuice.com/News/9859386/120-Day-Correlation-Matrix.aspx?xy=rss",
+"pub": "2026-11-19T06:30:48+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "a1d20660ee3c",
+"t": "",
+"title": "90-Day Correlation Matrix",
+"url": "https://www.financialjuice.com/News/9859381/90-Day-Correlation-Matrix.aspx?xy=rss",
+"pub": "2026-11-19T06:30:09+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "2e3f808b4ac5",
+"t": "",
+"title": "60-Day Correlation Matrix",
+"url": "https://www.financialjuice.com/News/9859380/60-Day-Correlation-Matrix.aspx?xy=rss",
+"pub": "2026-11-19T06:29:51+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "36dc243b12d6",
+"t": "",
+"title": "30-Day Correlation Matrix",
+"url": "https://www.financialjuice.com/News/9859379/30-Day-Correlation-Matrix.aspx?xy=rss",
+"pub": "2026-11-19T06:29:34+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "a57b9f33c208",
+"t": "",
+"title": "Japan PM Takaichi: Briefly exchanged views with Putin's and Trump.",
+"url": "https://www.financialjuice.com/News/9859377/Japan-PM-Takaichi-Briefly-exchanged-views-with-Putins-and-Trump.aspx?xy=rss",
+"pub": "2026-11-19T06:26:33+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "5af92bb317cb",
+"t": "",
+"title": "Japan PM Takaichi: Will support building oil stockpile system among asean states.",
+"url": "https://www.financialjuice.com/News/9859376/Japan-PM-Takaichi-Will-support-building-oil-stockpile-system-among-asean-states.aspx?xy=rss",
+"pub": "2026-11-19T06:22:45+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "3d5440f31c96",
+"t": "",
+"title": "Drones attack oil storage facilities in Russia's Tatarstan - IFX.",
+"url": "https://www.financialjuice.com/News/9859375/Drones-attack-oil-storage-facilities-in-Russias-Tatarstan---IFX.aspx?xy=rss",
+"pub": "2026-11-19T06:20:22+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "48d4f97b3e72",
+"t": "",
+"title": "Oil storage tanks near Russia's Almetyevsk hit by drones - IFX",
+"url": "https://www.financialjuice.com/News/9859374/Oil-storage-tanks-near-Russias-Almetyevsk-hit-by-drones---IFX.aspx?xy=rss",
+"pub": "2026-11-19T06:19:56+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
 },
 {
 "id": "b0f7b4e36fce",
@@ -8902,6 +9122,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:50:30+00:00"
+},
+{
+"id": "9d7babeafe7d",
+"t": "",
+"title": "Challenger Limited (CGF.AX) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5LNXcxYTNKU2VycmwxNktuY3k3SW16RFlOMUNBMlpEVlRLX2dpdzhUOVI2a1c2amNvNmxpSFFsQ0p5NUNJbVE2cUVleFVsdlVUTmpnbktCUG1mVzlicHc?oc=5",
+"pub": "2026-11-19T03:52:33+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T06:44:19+00:00"
 },
 {
 "id": "9df7d489d56b",
@@ -10782,236 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "55414a5ffc47",
-"t": "",
-"title": "BoJ Governor Ueda: underlying inflation roughly aligns with price target",
-"url": "https://www.financialjuice.com/News/9858860/BoJ-Governor-Ueda-underlying-inflation-roughly-aligns-with-price-target.aspx",
-"pub": "2026-11-19T01:05:22+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "795b4b3c6735",
-"t": "",
-"title": "BoJ Governor Ueda: Japan's economy steady but showing some fragility",
-"url": "https://www.financialjuice.com/News/9858859/BoJ-Governor-Ueda-Japans-economy-steady-but-showing-some-fragility.aspx?xy=rss",
-"pub": "2026-11-19T01:03:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "b2a9ea2f11be",
-"t": "",
-"title": "BoJ Governor Ueda: Japan's economy steady but showing some fragility",
-"url": "https://www.financialjuice.com/News/9858859/BoJ-Governor-Ueda-Japans-economy-steady-but-showing-some-fragility.aspx",
-"pub": "2026-11-19T01:03:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "9ad4e1534306",
-"t": "",
-"title": "Saudi Crown Prince and US Centcom Chief discuss military relations and regional issues in Riyadh: Saudi State News Agency",
-"url": "https://www.financialjuice.com/News/9858858/Saudi-Crown-Prince-and-US-Centcom-Chief-discuss-military-relations-and-regional-issues-in-Riyadh-Saudi-State-News-Agency.aspx?xy=rss",
-"pub": "2026-11-19T01:02:54+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "7e1d5f2ec197",
-"t": "",
-"title": "Saudi Crown Prince and US Centcom Chief discuss military relations and regional issues in Riyadh: Saudi State News Agency",
-"url": "https://www.financialjuice.com/News/9858858/Saudi-Crown-Prince-and-US-Centcom-Chief-discuss-military-relations-and-regional-issues-in-Riyadh-Saudi-State-News-Agency.aspx",
-"pub": "2026-11-19T01:02:54+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "d687a45de483",
-"t": "",
-"title": "Taiwan overnight interbank rate starts at 0.805% vs 0.805% at previous session open",
-"url": "https://www.financialjuice.com/News/9858841/Taiwan-overnight-interbank-rate-starts-at-0805-vs-0805-at-previous-session-open.aspx?xy=rss",
-"pub": "2026-11-19T01:01:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "c67d8bdde98f",
-"t": "",
-"title": "Taiwan overnight interbank rate starts at 0.805% vs 0.805% at previous session open",
-"url": "https://www.financialjuice.com/News/9858841/Taiwan-overnight-interbank-rate-starts-at-0805-vs-0805-at-previous-session-open.aspx",
-"pub": "2026-11-19T01:01:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "1c5e9ccac7f9",
-"t": "",
-"title": "Morgan Stanley’s Hornbach Says Rogue AI Biggest Underpriced Risk",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/morgan-stanley-s-hornbach-says-rogue-ai-biggest-underpriced-risk",
-"pub": "2026-11-19T01:00:36+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T01:13:50+00:00"
-},
-{
-"id": "547ad655a83f",
-"t": "",
-"title": "China Markets Up to $2 Billion of Dollar Bonds in Hong Kong",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/china-markets-up-to-2-billion-of-dollar-bonds-in-hong-kong",
-"pub": "2026-11-19T00:57:50+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "cb0dbd848151",
-"t": "",
-"title": "Blue Owl Plans $513 Million CMBS for Amazon-Leased Data Center",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/blue-owl-plans-513-million-cmbs-for-amazon-leased-data-center",
-"pub": "2026-11-19T00:54:52+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "ccfad00fd7a4",
-"t": "",
-"title": "Anthropic Prices at $83 a Share in Record-Sized Offering",
-"url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-prices-at-83-a-share-in-record-sized-offering-video",
-"pub": "2026-11-19T00:45:46+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "5ca38e383a31",
-"t": "",
-"title": "Korea Investors Buy Record Amount of Treasuries in September",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/korea-investors-buy-record-amount-of-treasuries-in-september",
-"pub": "2026-11-19T00:45:02+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "1ab2f9c6860a",
-"t": "",
-"title": "JGBs Edge Higher Amid Mixed Developments",
-"url": "https://www.wsj.com/finance/investing/jgbs-edge-higher-amid-mixed-developments-c690e1af?mod=rss_markets_main",
-"pub": "2026-11-19T00:38:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "4d27c575d20f",
-"t": "",
-"title": "Jeffrey Sachs Expects Friendly Trilateral Outcome",
-"url": "https://www.bloomberg.com/news/videos/2026-11-19/jeffrey-sachs-expects-friendly-trilateral-outcome-video",
-"pub": "2026-11-19T00:36:42+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "00b2707bc7a7",
-"t": "",
-"title": "China Oil Imports Rebound as Beijing Turns Back to Stockpiling",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/china-oil-imports-rebound-as-beijing-turns-back-to-stockpiling",
-"pub": "2026-11-19T00:36:26+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
-},
-{
-"id": "2b7f7aa6b5be",
-"t": "",
-"title": "Nikkei Rises 0.2%, Led by Chip, Retail Stocks",
-"url": "https://www.wsj.com/finance/stocks/nikkei-rises-0-2-led-by-chip-retail-stocks-fd10cf06?mod=rss_markets_main",
-"pub": "2026-11-19T00:34:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "3f086a811b41",
-"t": "",
-"title": "Trump: might have mentioned Nvidia situation just briefly",
-"url": "https://www.financialjuice.com/News/9858827/Trump-might-have-mentioned-Nvidia-situation-just-briefly.aspx?xy=rss",
-"pub": "2026-11-19T00:32:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "7e85fd945600",
-"t": "",
-"title": "Trump: might have mentioned Nvidia situation just briefly",
-"url": "https://www.financialjuice.com/News/9858827/Trump-might-have-mentioned-Nvidia-situation-just-briefly.aspx",
-"pub": "2026-11-19T00:32:47+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "b18b65946bbb",
-"t": "",
-"title": "Trump: did not talk about former Nvidia CEO Huang with Xi",
-"url": "https://www.financialjuice.com/News/9858826/Trump-did-not-talk-about-former-Nvidia-CEO-Huang-with-Xi.aspx?xy=rss",
-"pub": "2026-11-19T00:32:11+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "38034d025616",
-"t": "",
-"title": "Trump: did not talk about former Nvidia CEO Huang with Xi",
-"url": "https://www.financialjuice.com/News/9858826/Trump-did-not-talk-about-former-Nvidia-CEO-Huang-with-Xi.aspx",
-"pub": "2026-11-19T00:32:11+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "2d2265ccd1e5",
-"t": "",
-"title": "Australian Unemployment Jumps to 4.9% Following RBA Rate Hikes",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/australian-unemployment-jumps-to-4-9-following-rba-rate-hikes",
-"pub": "2026-11-19T00:32:02+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "7cef249f64cb",
-"t": "",
-"title": "Trump: spoke with Xi Wednesday about AI - Fox News interview",
-"url": "https://www.financialjuice.com/News/9858814/Trump-spoke-with-Xi-Wednesday-about-AI---Fox-News-interview.aspx?xy=rss",
-"pub": "2026-11-19T00:31:46+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "451789f50d94",
-"t": "",
-"title": "Trump: spoke with Xi Wednesday about AI - Fox News interview",
-"url": "https://www.financialjuice.com/News/9858814/Trump-spoke-with-Xi-Wednesday-about-AI---Fox-News-interview.aspx",
-"pub": "2026-11-19T00:31:46+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
 }
 ]
 }
