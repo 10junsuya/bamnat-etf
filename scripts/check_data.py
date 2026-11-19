@@ -342,6 +342,9 @@ def check_dist(d):
                 err("data/dist.json", f"{code}: 구분({h[3]})이 이상해요")
 
 
+EVS = ("회사 발표", "공시", "정부 문서", "보도")
+
+
 def check_aimap(d):
     """A 화면(AI 국가 프로젝트 지도, data/aimap.json): 층 이름, 근거 꼬리표, 출처 링크, 확인일 모양을 본다."""
     if not d:
@@ -367,8 +370,8 @@ def check_aimap(d):
         for k, v in L.items():
             if k not in keys:
                 err("data/aimap.json", f"{pid}: 모르는 층 {k}")
-            if v.get("ev") not in ("회사 발표", "정부 문서", "보도"):
-                err("data/aimap.json", f"{pid}/{k}: 근거 꼬리표({v.get('ev')})는 회사 발표·정부 문서·보도 중 하나여야 해요")
+            if v.get("ev") not in EVS:
+                err("data/aimap.json", f"{pid}/{k}: 근거 꼬리표({v.get('ev')})는 {'·'.join(EVS)} 중 하나여야 해요")
             if not v.get("t"):
                 err("data/aimap.json", f"{pid}/{k}: 설명이 비어 있어요")
             if "수혜" in v.get("t", ""):
@@ -379,6 +382,37 @@ def check_aimap(d):
         for s in src:
             if len(s) != 2 or not str(s[1]).startswith("https://"):
                 err("data/aimap.json", f"{pid}: 출처 링크는 https 로 시작해야 해요")
+
+    ai = d.get("ai") or {}
+    co = ai.get("co", {})
+    if not co or not ai.get("rows") or not ai.get("e"):
+        err("data/aimap.json", "AI 지도(ai)에 층·회사·관계가 있어야 해요")
+        return
+    placed = set()
+    for r in ai["rows"]:
+        for g in r.get("g", []):
+            for c in g.get("co", []):
+                if c not in co:
+                    err("data/aimap.json", f"AI 지도 {r.get('n')}: 회사 정보가 없는 이름 {c}")
+                if c in placed:
+                    err("data/aimap.json", f"AI 지도: {c}가 두 칸에 들어 있어요")
+                placed.add(c)
+    for c in co:
+        if c not in placed:
+            err("data/aimap.json", f"AI 지도: {c}가 어느 칸에도 없어요")
+    for i, e in enumerate(ai["e"]):
+        tag = f"관계 {i + 1} ({e.get('a')}→{e.get('b')})"
+        if e.get("a") not in co or e.get("b") not in co or e.get("a") == e.get("b"):
+            err("data/aimap.json", f"{tag}: 양쪽 회사가 지도에 있어야 해요")
+        if e.get("k") not in ("공급", "클라우드", "건설", "전력", "투자"):
+            err("data/aimap.json", f"{tag}: 관계 종류({e.get('k')})가 이상해요")
+        if e.get("ev") not in EVS:
+            err("data/aimap.json", f"{tag}: 근거 꼬리표가 이상해요")
+        if not e.get("t") or "수혜" in e.get("t", ""):
+            err("data/aimap.json", f"{tag}: 설명이 비었거나 '수혜' 표현이 있어요")
+        s2 = e.get("src") or []
+        if len(s2) != 2 or not str(s2[1]).startswith("https://"):
+            err("data/aimap.json", f"{tag}: 출처 링크는 https 로 시작해야 해요")
 
 
 def main():
