@@ -1,18 +1,98 @@
 {
-"updated_kst": "2026-11-19 14:14",
-"rot": 59,
+"updated_kst": "2026-11-19 14:44",
+"rot": 119,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "44건",
+"Reuters": "41건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "e2d6a439bf92",
+"t": "JPM",
+"title": "JPMorgan Chase faces fresh scrutiny after banking disruption",
+"url": "https://www.thestreet.com/technology/jpmorgan-chase-outage-zelle-payment-delays?.tsrc=rss",
+"pub": "2026-11-19T05:37:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "694d1bceee91",
+"t": "NVDA",
+"title": "Anthropic's record IPO lands as Nvidia suffers its worst run since 2008",
+"url": "https://www.euronews.com/2026/11/19/anthropics-record-ipo-lands-as-nvidia-suffers-its-worst-run-since-2008?.tsrc=rss",
+"pub": "2026-11-19T05:31:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "609d527bfc04",
+"t": "SAP",
+"title": "Gold, Silver and Crude Slide Hard as Volatility Jumps on the Week",
+"url": "https://finance.yahoo.com/markets/commodities/articles/gold-silver-crude-slide-hard-052600245.html?.tsrc=rss",
+"pub": "2026-11-19T05:26:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "5514b48d35dc",
+"t": "NVDA",
+"title": "Should You Buy Take-Two Interactive After the GTA VI Release?",
+"url": "https://www.fool.com/investing/2026/11/19/should-you-buy-take-two-interactive-after-gta-vi-release/?.tsrc=rss",
+"pub": "2026-11-19T05:21:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "e9ed23f612c1",
+"t": "GS",
+"title": "Goldman Sachs (GS) Leads $280 Million Finance Software Bet Through Alternatives",
+"url": "https://finance.yahoo.com/technology/articles/goldman-sachs-gs-leads-280-051751187.html?.tsrc=rss",
+"pub": "2026-11-19T05:17:51+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "23f467e2c413",
+"t": "NVDA",
+"title": "Nvidia (NVDA) Rules Out Jensen Huang Return As Record Q3 Reshapes Leadership",
+"url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-rules-jensen-huang-051505790.html?.tsrc=rss",
+"pub": "2026-11-19T05:15:05+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "f6880e00e2e9",
+"t": "AMZN",
+"title": "Lyft Sees Strong Start to Quarter as Rider Incentives Pay Off, but CEO Urges Caution",
+"url": "https://www.marketbeat.com/instant-alerts/event-lyft-sees-strong-start-to-quarter-as-rider-incentives-pay-off-but-ceo-urges-caution-2026-11-18/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-19T05:12:23+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "c14f82ef56cf",
+"t": "SPCX",
+"title": "Elon Musk Names 2 Anthropic Favorites Ahead Of Its IPO — Flags A Risk To 10-GW Opportunity For SpaceX",
+"url": "https://stocktwits.com/news-articles/markets/equity/elon-musk-2-anthropic-favorites-ipo-flags-risk-10-gw-opportunity-spacex/cNbLUlbR9i0?.tsrc=rss",
+"pub": "2026-11-19T05:12:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
 {
 "id": "f8b6ae560948",
 "t": "NVDA",
@@ -44,6 +124,16 @@
 "seen": "2026-11-19T05:14:02+00:00"
 },
 {
+"id": "f9c32c7d2d8a",
+"t": "NVDA",
+"title": "Why Did Cathie Wood Sell Nvidia Before Earnings and Buy Crypto Stocks?",
+"url": "https://beincrypto.com/why-cathie-wood-sold-nvidia-crypto/?.tsrc=rss",
+"pub": "2026-11-19T05:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
 "id": "ae4ad3e05c2e",
 "t": "NVDA",
 "title": "Wall St’s $500 bln pledge to Nvidia yet to be mobilized, WSJ reports",
@@ -62,6 +152,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T05:14:02+00:00"
+},
+{
+"id": "35f1298c718a",
+"t": "JPM",
+"title": "iQIYI (IQ) Stock Sees Fair Value Cut After Analysts Lower Targets",
+"url": "https://finance.yahoo.com/markets/stocks/articles/iqiyi-iq-stock-sees-fair-043337461.html?.tsrc=rss",
+"pub": "2026-11-19T04:33:37+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
 "id": "b7cea3764ce9",
@@ -132,6 +232,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "f10fe8fd2adf",
+"t": "NVDA",
+"title": "CoinShares CEO Blames AI for Bitcoin’s Slide, but AI Stocks Are Falling Too",
+"url": "https://beincrypto.com/coinshares-ceo-ai-bitcoin-slide/?.tsrc=rss",
+"pub": "2026-11-19T04:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
 "id": "326e6e7c5d96",
@@ -1452,6 +1562,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-18T23:37:08+00:00"
+},
+{
+"id": "1392cb16ddc6",
+"t": "SNDK",
+"title": "Dear Sandisk Stock Fans, Mark Your Calendars for November 20",
+"url": "https://www.barchart.com/story/news/8906535/dear-sandisk-stock-fans-mark-your-calendars-for-november-20?.tsrc=rss",
+"pub": "2026-11-18T23:02:34+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
 "id": "fcfbd7e54b50",
@@ -7894,124 +8014,254 @@
 "seen": "2026-11-18T15:44:08+00:00"
 },
 {
-"id": "086096703927",
-"t": "SPCX",
-"title": "Is Anthropic Worth $1.4 Trillion? Here's What Investors Have to Believe",
-"url": "https://www.fool.com/investing/2026/11/18/is-anthropic-worth-14-trillion-heres-what-investors-have-to-believe/?.tsrc=rss",
-"pub": "2026-11-18T15:30:01+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "b5468e1eabd8",
+"t": "",
+"title": "Kremlin on Putin-Trump meeting: Putin left meeting in an excellent mood, Tass says",
+"url": "https://www.financialjuice.com/News/9859327/Kremlin-on-Putin-Trump-meeting-Putin-left-meeting-in-an-excellent-mood-Tass-says.aspx?xy=rss",
+"pub": "2026-11-19T05:44:05+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "9e10121f1c2d",
-"t": "GOOGL",
-"title": "Cloud Computing Market to Reach USD 5,946.84 Billion by 2035 as AI Workloads Drive Record Growth and Backlogs at AWS, Microsoft, Google and Oracle",
-"url": "https://finance.yahoo.com/technology/articles/cloud-computing-market-reach-usd-153000371.html?.tsrc=rss",
-"pub": "2026-11-18T15:30:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "bbed39be21e7",
+"t": "",
+"title": "Kremlin: Ukraine was main focus at Putin-Trump meeting - TASS",
+"url": "https://www.financialjuice.com/News/9859326/Kremlin-Ukraine-was-main-focus-at-Putin-Trump-meeting---TASS.aspx?xy=rss",
+"pub": "2026-11-19T05:43:21+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "723000cca0b8",
-"t": "TSM",
-"title": "25 Big Funds Bought Taiwan Semiconductor Last Quarter. It’s Down 21% Since. Time to Buy?",
-"url": "https://www.tikr.com/blog/25-big-funds-bought-taiwan-semiconductor-last-quarter-its-down-21-since-time-to-buy?ref=yahoofinance&tlnk=yf-261118-mcwqjc2h&.tsrc=rss",
-"pub": "2026-11-18T15:29:45+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "c9b11a11c5ac",
+"t": "",
+"title": "Kremlin: Putin and Trump discussed Ukraine conflict and bilateral relations - Tass",
+"url": "https://www.financialjuice.com/News/9859325/Kremlin-Putin-and-Trump-discussed-Ukraine-conflict-and-bilateral-relations---Tass.aspx?xy=rss",
+"pub": "2026-11-19T05:42:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "1a329187d0cd",
-"t": "BE",
-"title": "George Soros and 21 Other Big Funds Bought Shopify Last Quarter, While 14 Sold. Who’s Right?",
-"url": "https://www.tikr.com/blog/george-soros-and-21-other-big-funds-bought-shopify-last-quarter-while-14-sold-whos-right?ref=yahoofinance&tlnk=yf-261118-qqm6fqr6&.tsrc=rss",
-"pub": "2026-11-18T15:29:15+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "d6380e7ffbfa",
+"t": "",
+"title": "Kremlin on Putin-Trump meeting: it went smoothly",
+"url": "https://www.financialjuice.com/News/9859324/Kremlin-on-Putin-Trump-meeting-it-went-smoothly.aspx?xy=rss",
+"pub": "2026-11-19T05:42:18+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "e7f90c3b56e4",
-"t": "FDX",
-"title": "Global Retail Logistics Market to Reach $612 Billion by 2032, Driven by E-Commerce, Automation and Omnichannel Expansion - A.P. Moller-Maersk, Deutsche Post, DSV, and FedEx Battle for Share",
-"url": "https://finance.yahoo.com/real-estate/articles/global-retail-logistics-market-reach-152900903.html?.tsrc=rss",
-"pub": "2026-11-18T15:29:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "e5f8adde84a2",
+"t": "",
+"title": "Trump: spoke with Xi for two hours last night",
+"url": "https://www.financialjuice.com/News/9859323/Trump-spoke-with-Xi-for-two-hours-last-night.aspx?xy=rss",
+"pub": "2026-11-19T05:41:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "8ce3e631c05d",
-"t": "META",
-"title": "Brad Gerstner Is Betting Big on Meta",
-"url": "https://www.tikr.com/blog/brad-gerstner-is-betting-big-on-meta?ref=yahoofinance&tlnk=yf-261118-355v5gxf&.tsrc=rss",
-"pub": "2026-11-18T15:28:15+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "649576a487d0",
+"t": "",
+"title": "China’s President Xi expresses gratitude for incredibly warm welcome",
+"url": "https://www.financialjuice.com/News/9859322/Chinas-President-Xi-expresses-gratitude-for-incredibly-warm-welcome.aspx?xy=rss",
+"pub": "2026-11-19T05:41:39+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "db2c72b02ab7",
-"t": "NVDA",
-"title": "NVIDIA (NVDA) Q3 2027 Earnings Call Transcript",
-"url": "https://www.fool.com/earnings/call-transcripts/2026/11/18/nvidia-nvda-q3-2027-earnings-call-transcript/?.tsrc=rss",
-"pub": "2026-11-18T15:28:11+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "4f95503407e2",
+"t": "",
+"title": "Trump: he and Xi feel strongly oil must flow through Strait of Hormuz",
+"url": "https://www.financialjuice.com/News/9859321/Trump-he-and-Xi-feel-strongly-oil-must-flow-through-Strait-of-Hormuz.aspx?xy=rss",
+"pub": "2026-11-19T05:41:25+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "e71ffc8b7982",
-"t": "NVDA",
-"title": "Nvidia's next CEO should be hired internally, Jeff Bezos advises",
-"url": "https://finance.yahoo.com/video/nvidias-next-ceo-should-be-hired-internally-jeff-bezos-advises-152807796.html?.tsrc=rss",
-"pub": "2026-11-18T15:28:07+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "22f519fa329b",
+"t": "",
+"title": "Trump: meeting with Xi to prove productive",
+"url": "https://www.financialjuice.com/News/9859320/Trump-meeting-with-Xi-to-prove-productive.aspx?xy=rss",
+"pub": "2026-11-19T05:40:50+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "5b617f810bf8",
-"t": "INTC",
-"title": "Why Nvidia Just Slashed Its Stake in Intel Stock by 25%",
-"url": "https://www.barchart.com/story/news/8899013/why-nvidia-just-slashed-its-stake-in-intel-stock-by-25?.tsrc=rss",
-"pub": "2026-11-18T15:27:15+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T21:44:34+00:00"
+"id": "5500d5972481",
+"t": "",
+"title": "Trump: I will request China to boost support for US farmers",
+"url": "https://www.financialjuice.com/News/9859319/Trump-I-will-request-China-to-boost-support-for-US-farmers.aspx?xy=rss",
+"pub": "2026-11-19T05:40:39+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "03c28754fb10",
-"t": "MRVL",
-"title": "What Marvell’s (MRVL) Lumentum Deal Adds to Its Anthropic Growth Story",
-"url": "https://finance.yahoo.com/markets/stocks/articles/marvell-mrvl-lumentum-deal-adds-152652550.html?.tsrc=rss",
-"pub": "2026-11-18T15:26:52+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "9c43eefbe089",
+"t": "",
+"title": "Trump: tariffs have been divided fairly",
+"url": "https://www.financialjuice.com/News/9859318/Trump-tariffs-have-been-divided-fairly.aspx?xy=rss",
+"pub": "2026-11-19T05:40:07+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "74c15411834c",
-"t": "CRWV",
-"title": "The AI Rally Needed a Win. Nvidia Earnings Weren’t It.",
-"url": "https://finance.yahoo.com/m/901228b4-7309-3075-a4b7-b842dfd050a0/the-ai-rally-needed-a-win..html?.tsrc=rss",
-"pub": "2026-11-18T15:26:45+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:43:52+00:00"
+"id": "5ab7171a49df",
+"t": "",
+"title": "Trump: we established an equitable relationship",
+"url": "https://www.financialjuice.com/News/9859317/Trump-we-established-an-equitable-relationship.aspx?xy=rss",
+"pub": "2026-11-19T05:39:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
-"id": "9f96547f8a01",
-"t": "BRKB",
-"title": "Warren Buffett’s Successor Greg Abel Is Doubling Down On His $2 Billion Bet That The American Dream Is Not Dead",
-"url": "https://247wallst.com/investing/2026/11/18/warren-buffetts-successor-greg-abel-is-doubling-down-on-his-2-billion-bet-that-the-american-dream-is-not-dead/?.tsrc=rss",
-"pub": "2026-11-18T15:26:43+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "366b305a4939",
+"t": "",
+"title": "Trump: board of trade restoring balance to ties with China",
+"url": "https://www.financialjuice.com/News/9859316/Trump-board-of-trade-restoring-balance-to-ties-with-China.aspx?xy=rss",
+"pub": "2026-11-19T05:39:27+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "d4747520efec",
+"t": "",
+"title": "China's President Xi expresses gratitude for incredibly warm welcome",
+"url": "https://www.financialjuice.com/News/9859315/Chinas-President-Xi-expresses-gratitude-for-incredibly-warm-welcome.aspx?xy=rss",
+"pub": "2026-11-19T05:38:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "fd9171465a56",
+"t": "",
+"title": "China's President Xi expresses gratitude for incredibly warm welcome",
+"url": "https://www.financialjuice.com/News/9859314/Chinas-President-Xi-expresses-gratitude-for-incredibly-warm-welcome.aspx?xy=rss",
+"pub": "2026-11-19T05:37:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "0b888b5f5869",
+"t": "",
+"title": "Danamon’s Kawasaki Stays Bullish on Indonesia Growth",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/danamon-s-kawasaki-stays-bullish-on-indonesia-growth-video",
+"pub": "2026-11-19T05:35:07+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "4a70b31bd23c",
+"t": "",
+"title": "How Trump Is Approaching the Xi-Putin Trilateral",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/how-trump-is-approaching-the-xi-putin-trilateral-video",
+"pub": "2026-11-19T05:33:56+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "0184921a4ee2",
+"t": "",
+"title": "South Korea exports reach $1 trillion so far this year: Yonhap",
+"url": "https://www.financialjuice.com/News/9859313/South-Korea-exports-reach-1-trillion-so-far-this-year-Yonhap.aspx?xy=rss",
+"pub": "2026-11-19T05:32:51+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "e231d9bde4cc",
+"t": "",
+"title": "Trump, China's Xi meet on sidelines of APEC summit: CCTV",
+"url": "https://www.financialjuice.com/News/9859300/Trump-Chinas-Xi-meet-on-sidelines-of-APEC-summit-CCTV.aspx?xy=rss",
+"pub": "2026-11-19T05:30:19+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "6a7965c4e79c",
+"t": "",
+"title": "Dutch Unemployment rate SA Actual 4% (Forecast -, Previous 4.0%)",
+"url": "https://www.financialjuice.com/News/9859299/Dutch-Unemployment-rate-SA-Actual-4-Forecast---Previous-40.aspx?xy=rss",
+"pub": "2026-11-19T05:30:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "db3862d8d0e5",
+"t": "",
+"title": "Russia strikes vessel in Black Sea: RIA",
+"url": "https://www.financialjuice.com/News/9859298/Russia-strikes-vessel-in-Black-Sea-RIA.aspx?xy=rss",
+"pub": "2026-11-19T05:29:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "61e2363857a6",
+"t": "",
+"title": "Russia targets power stations in Odesa region and Sumy: IFX",
+"url": "https://www.financialjuice.com/News/9859297/Russia-targets-power-stations-in-Odesa-region-and-Sumy-IFX.aspx?xy=rss",
+"pub": "2026-11-19T05:29:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "bd879e8c7369",
+"t": "",
+"title": "Russia strikes infrastructure in Ukraine's Chornomorsk port: RIA",
+"url": "https://www.financialjuice.com/News/9859296/Russia-strikes-infrastructure-in-Ukraines-Chornomorsk-port-RIA.aspx?xy=rss",
+"pub": "2026-11-19T05:28:33+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "d567c1f57953",
+"t": "",
+"title": "South Africa Seen Holding Rates for Now as Oil Eases But Could Hike in 2027",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/south-africa-central-bank-rates-oil-2027--lesetja-kganyago",
+"pub": "2026-11-19T05:15:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "46c491790eff",
+"t": "",
+"title": "French Risks Have Traders Betting Euro’s Slide Is Far From Over",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/french-risks-traders-betting-euro-slide-currency",
+"pub": "2026-11-19T05:15:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "e2a1c9c678d4",
+"t": "",
+"title": "Japan auto industry targets common standards to strengthen supply chain - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZF8yUWZ6TS1MNWFISnpGeXlRTjhfVkR1WFhXMlpCclBiQkl0Q2ZSR0ZyclR3Zm5CMFJMS0FZLV9FdlUtZzhkdzJsYzVscVpVMDEzdE43MXNiR0Q0cURoYkU0b2dBMXRvREp2N19xdjNlNko4VFludnJDaXJPUl9mVFZZZGx3NVYwSGtTZmRLeTVKNGZ1MGpHc2EyVk1WZXNWTUlteURXMGw1dDkxNmtUM0VwRzJ5Rk1OeXJYMnpURFJDdw?oc=5",
+"pub": "2026-11-19T05:12:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
 "id": "75a1b162f5e2",
@@ -8142,6 +8392,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "e530f5dbd495",
+"t": "",
+"title": "Anthropic IPO Raises $107.3B to Top SpaceX's Record Debut",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/the-asia-trade-11-19-2026-video",
+"pub": "2026-11-19T04:23:16+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
 "id": "a248417d6e56",
@@ -8604,6 +8864,16 @@
 "seen": "2026-11-19T03:14:38+00:00"
 },
 {
+"id": "2030e8ab01ce",
+"t": "",
+"title": "MedMira Inc (MIR.V) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE91RFhJZy0xTGtmdXE3Ri1Vc25hWUwwNDVyb1dMRF9TT3FWUXRyWHJqVE1oQnR6QzJJVHQ1WlZRU1dqblo4Y3g1NXNyemE3YzRwVEM0MFpEX1VMYVRqWDZKcHhrUk5qMTZjNHc?oc=5",
+"pub": "2026-11-19T02:41:31+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
+},
+{
 "id": "3e8109c3b64e",
 "t": "",
 "title": "S.Korea President Lee hopes reopening dialogue with North Korea will evolve into talks to establish peace and end war in Korean peninsula: Yonhap",
@@ -8632,6 +8902,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-19T04:44:32+00:00"
+},
+{
+"id": "4f2e1fed4fbd",
+"t": "",
+"title": "Resona Holdings, Inc. (8308.MU) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPRmVLcE9vZDNEeGpkbk5HQzBrZjFtb0NvSk9mMlRyaUI5MXhhMXVlempRcnc1YlFoMUN6T1BuVXVpMmRQWmxwY0FDVlRlTDdqWWZNMjNsbkduTnVOdWV6OTN3S0ZMZTItczNEeVZ6dmU4SnZUWm44Ykt1ZHlIOTNZR3ROckg?oc=5",
+"pub": "2026-11-19T02:35:40+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
 "id": "98afc6154720",
@@ -8872,6 +9152,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-19T02:44:30+00:00"
+},
+{
+"id": "720c48c2e2b5",
+"t": "",
+"title": "Sabre Insurance Group PLC (18M.MU) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE45ZWlQVUVQTTNOdmNhTTk5cDJZaF9zMUZISlF4dUZjdFNzX1B5TVRmcVVFRTVqNUt4WGFuWG01cWNNU0xyWTJRTV92cF9Fb0FLZjdrVTVsUlRweEF0dVREOERUQ3lUc080aEtQVlln?oc=5",
+"pub": "2026-11-19T02:25:08+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T05:44:38+00:00"
 },
 {
 "id": "0d4aad362bf0",
@@ -10722,296 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "49c2069d89b5",
-"t": "",
-"title": "Anthropic: offering includes 980 million shares of Class A common stock, with 956.35 million sold by Anthropic",
-"url": "https://www.financialjuice.com/News/9858747/Anthropic-offering-includes-980-million-shares-of-Class-A-common-stock-with-95635-million-sold-by-Anthropic.aspx?xy=rss",
-"pub": "2026-11-18T23:29:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "4b25d8168470",
-"t": "",
-"title": "Anthropic: offering includes 980 million shares of Class A common stock, with 956.35 million sold by Anthropic",
-"url": "https://www.financialjuice.com/News/9858747/Anthropic-offering-includes-980-million-shares-of-Class-A-common-stock-with-95635-million-sold-by-Anthropic.aspx",
-"pub": "2026-11-18T23:29:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "e00994c5445d",
-"t": "",
-"title": "Anthropic offering totals 980 million shares, company sells 956 million shares",
-"url": "https://www.financialjuice.com/News/9858746/Anthropic-offering-totals-980-million-shares-company-sells-956-million-shares.aspx?xy=rss",
-"pub": "2026-11-18T23:28:18+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "a01e02e84557",
-"t": "",
-"title": "Anthropic offering totals 980 million shares, company sells 956 million shares",
-"url": "https://www.financialjuice.com/News/9858746/Anthropic-offering-totals-980-million-shares-company-sells-956-million-shares.aspx",
-"pub": "2026-11-18T23:28:18+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "28a2348b4fb6",
-"t": "",
-"title": "Anthropic prices IPO at $83 a share",
-"url": "https://www.financialjuice.com/News/9858745/Anthropic-prices-IPO-at-83-a-share.aspx?xy=rss",
-"pub": "2026-11-18T23:28:11+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "0d1903e61b3c",
-"t": "",
-"title": "Anthropic prices IPO at $83 a share",
-"url": "https://www.financialjuice.com/News/9858745/Anthropic-prices-IPO-at-83-a-share.aspx",
-"pub": "2026-11-18T23:28:11+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "7730276fd181",
-"t": "",
-"title": "Gold Steadies Near 14-Month Low as Fed Signals More Rate Hikes",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/gold-steadies-near-14-month-low-as-fed-signals-more-rate-hikes",
-"pub": "2026-11-18T23:24:06+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "ac5dd67fb71a",
-"t": "",
-"title": "CRIL.NS - Reuters",
-"url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5QSEsyNENFbHhLczktWWJwaTRGbDJqMjVucVJ1NUVubkNLZTFybjhpdC1NSzk5cVFsWVo0cFNwanRNQXB3NVNvSlJzSWZ2d21WNHVEakFXcjRiaXYwRE1wUE5JMzRmTDZkRHRRYXlaWEhXM3U3WGlFVThLUDQ?oc=5",
-"pub": "2026-11-18T23:05:54+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T03:14:38+00:00"
-},
-{
-"id": "3f17c6c4ca40",
-"t": "",
-"title": "Latest Oil Market News and Analysis for Nov. 19",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/latest-oil-market-news-and-analysis-for-nov-19",
-"pub": "2026-11-18T23:03:35+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "e94b5bae036b",
-"t": "",
-"title": "Bain Pushes Back LNG Glut Outlook to 2030 as War Tightens Market",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/bain-pushes-back-lng-glut-outlook-to-2030-as-war-tightens-market",
-"pub": "2026-11-18T23:02:30+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "69fd8a369bf7",
-"t": "",
-"title": "WSJ Dollar Index Rises 0.22% to 98.64",
-"url": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-may-be-weighed-by-risk-off-sentiment-d2acd03c?mod=rss_markets_main",
-"pub": "2026-11-18T22:59:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T01:58:01+00:00"
-},
-{
-"id": "4a4d1d1182f7",
-"t": "",
-"title": "Sonoro Energy Ltd (SNVFF.PK) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9DNlNIR05NS0FObGxtR25SNVVuVTl3ZHM2YkxlVlVKNXRibWR1TUNZSUFob1dvazdrUmRiUldoSHZlN3FkblM0MjR1bjR1bWRqQkpqYnBHRzVzWWkzbzkwTkgtS2NXM2JBSm9OVVNn?oc=5",
-"pub": "2026-11-18T22:55:06+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T02:52:00+00:00"
-},
-{
-"id": "11a090ea47f1",
-"t": "",
-"title": "Former SEC Chair Gary Gensler Warns Anthropic’s Cash Flow Poses Big Risk To AI Economy",
-"url": "https://www.bloomberg.com/news/videos/2026-11-18/fmr-sec-chair-gary-gensler-nvidia-misled-the-public-video",
-"pub": "2026-11-18T22:53:04+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T23:14:48+00:00"
-},
-{
-"id": "4116f5e0ecbf",
-"t": "",
-"title": "Skydance Skips FIFA World Cup Bid as Netflix, Fox Eye $4 Billion Deal",
-"url": "https://www.bloomberg.com/news/articles/2026-11-18/skydance-skips-fifa-world-cup-bid-as-netflix-fox-eye-4-billion-deal",
-"pub": "2026-11-18T22:52:49+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T23:37:08+00:00"
-},
-{
-"id": "6b431206c031",
-"t": "",
-"title": "Alger Concentrated Equity ETF (CNEQ.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95OThXd0dtemI3S2Z5UmU0aVNGbWFRcENHNFE5SHZDb3Z5LUlDTGdWWkx3dk1udlBBVlZCRGpBNlpRX0Y3MEZ2N2ZxdUdpVHFqNGw5TkNRcnI3NlVsVGtTbkF1RWhXcG1SSTBaZg?oc=5",
-"pub": "2026-11-18T22:52:45+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T02:14:26+00:00"
-},
-{
-"id": "76bce6a417ed",
-"t": "",
-"title": "Saudi defence minister, US CENTCOM chief discuss military cooperation, regional security and stability: Saudi state news agency",
-"url": "https://www.financialjuice.com/News/9858706/Saudi-defence-minister-US-CENTCOM-chief-discuss-military-cooperation-regional-security-and-stability-Saudi-state-news-agency.aspx?xy=rss",
-"pub": "2026-11-18T22:52:42+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T23:14:48+00:00"
-},
-{
-"id": "bba89adc8042",
-"t": "",
-"title": "Saudi defence minister, US CENTCOM chief discuss military cooperation, regional security and stability: Saudi state news agency",
-"url": "https://www.financialjuice.com/News/9858706/Saudi-defence-minister-US-CENTCOM-chief-discuss-military-cooperation-regional-security-and-stability-Saudi-state-news-agency.aspx",
-"pub": "2026-11-18T22:52:42+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "f357ee03334b",
-"t": "",
-"title": "Themis Medicare Ltd (THEM.BO) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9OT3ZNSmc0SFhUNjREdWFFZTNLM2tfZ2l4S0ozcm5NaFM0V285ZkluS1BOdUtGZzRFVVB4NTFfU2pDNExpYkdSVDN2bEJBZzdKTnBvUTc5SFQwcEpaeTQtMmt1WWhZejZhdkc0bw?oc=5",
-"pub": "2026-11-18T22:52:29+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T02:52:00+00:00"
-},
-{
-"id": "2b07a89a7412",
-"t": "",
-"title": "Saudi defence minister meets US Centcom chief in Riyadh: Saudi state news agency",
-"url": "https://www.financialjuice.com/News/9858705/Saudi-defence-minister-meets-US-Centcom-chief-in-Riyadh-Saudi-state-news-agency.aspx?xy=rss",
-"pub": "2026-11-18T22:51:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T23:14:48+00:00"
-},
-{
-"id": "7ea1726e15de",
-"t": "",
-"title": "Saudi defence minister meets US Centcom chief in Riyadh: Saudi state news agency",
-"url": "https://www.financialjuice.com/News/9858705/Saudi-defence-minister-meets-US-Centcom-chief-in-Riyadh-Saudi-state-news-agency.aspx",
-"pub": "2026-11-18T22:51:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "5ae1e8067321",
-"t": "",
-"title": "Foreign holdings of US Treasuries fall in September; China slashes to 2008 low, data show - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbzg2ZGU0TS1PbjNzRkNKWklMcmJhRnF0RHdHNlJjX1V2VGdzWWZsTTBzaUZqQ2hkeUtIMGROQkE4WGNGSHhTRGhGVnBQUWtUT0hITGQyODdGdlRmUUI4S1BEejI3R3dhQmR1WDBvQmE4Y3ZVd0xpRnRFblpHVXNiTElTeTNSM3B5UE4xNl9VX0VrZDAzelp3U2FnTm44SGYxc21KLUhWZHZXQ0s4U3JpcklnM09ZTjNEVS1lMXhfZmpOUQ?oc=5",
-"pub": "2026-11-18T22:51:08+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T04:44:32+00:00"
-},
-{
-"id": "17ad318da3c1",
-"t": "",
-"title": "Eddie Best on Expectations for Anthropic’s IPO",
-"url": "https://www.bloomberg.com/news/videos/2026-11-18/eddie-best-on-expectations-for-anthropic-s-ipo-video",
-"pub": "2026-11-18T22:47:54+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-18T23:14:48+00:00"
-},
-{
-"id": "aedc02a846a5",
-"t": "",
-"title": "Opinion | Congrats on Your Anthropic Shares",
-"url": "https://www.wsj.com/opinion/anthropic-ipo-shares-investment-pension-funds-9f4d0c52?mod=rss_markets_main",
-"pub": "2026-11-18T22:42:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "1f0678f2d56d",
-"t": "",
-"title": "Wells Fargo & Company (WFC.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE04UjhhZF9qMnFXVDlhNlNSSWlMQzJ5eERYcnpwZDkySHRxeG9Jc3YzeHppejRSTkctMElHVHJoZlMzZll2TXVJN2w4WmU5cHUtbEJsMWdBaUlqdjhzckUxZElBUDA5cS1ReXNSdGxpOA?oc=5",
-"pub": "2026-11-18T22:40:58+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "fdfa772b5771",
-"t": "",
-"title": "Fortifai Ltd appoints former Nvidia executive Jason Brushe as CEO",
-"url": "https://www.financialjuice.com/News/9858698/Fortifai-Ltd-appoints-former-Nvidia-executive-Jason-Brushe-as-CEO.aspx?xy=rss",
-"pub": "2026-11-18T22:37:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "f99171193e89",
-"t": "",
-"title": "Fortifai Ltd appoints former Nvidia executive Jason Brushe as CEO",
-"url": "https://www.financialjuice.com/News/9858698/Fortifai-Ltd-appoints-former-Nvidia-executive-Jason-Brushe-as-CEO.aspx",
-"pub": "2026-11-18T22:37:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "6ab7e6f861e7",
-"t": "",
-"title": "Traffic suspended over Crimean Bridge after attack: Moscow-installed official",
-"url": "https://www.financialjuice.com/News/9858697/Traffic-suspended-over-Crimean-Bridge-after-attack-Moscow-installed-official.aspx?xy=rss",
-"pub": "2026-11-18T22:36:07+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
-},
-{
-"id": "d903934caee9",
-"t": "",
-"title": "Traffic suspended over Crimean Bridge after attack: Moscow-installed official",
-"url": "https://www.financialjuice.com/News/9858697/Traffic-suspended-over-Crimean-Bridge-after-attack-Moscow-installed-official.aspx",
-"pub": "2026-11-18T22:36:07+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "5a795fde6072",
-"t": "",
-"title": "Anthropic Sells More Shares Than Planned at a Higher Price Than Expected",
-"url": "https://www.wsj.com/finance/stocks/anthropic-sells-more-shares-than-planned-at-a-higher-price-than-expected-4b511002?mod=rss_markets_main",
-"pub": "2026-11-18T22:35:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-18T22:43:29+00:00"
 }
 ]
 }
