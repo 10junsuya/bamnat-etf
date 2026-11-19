@@ -1,5 +1,5 @@
 {
- "generated_at_kst": "2026-11-19 08:26",
+ "generated_at_kst": "2026-11-20 08:21",
  "etfs": {
   "360750": {
    "kind": "index",
@@ -7,8 +7,8 @@
    "name": "TIGER 미국S&P500",
    "index": "S&P500",
    "proxy": "SPY",
-   "asof": "2026-11-19 받음",
-   "n_total": 296,
+   "asof": "2026-11-20 받음",
+   "n_total": 299,
    "top": [
     {
      "ticker": "AAPL",
@@ -17,33 +17,33 @@
      "weight": 8.1
     },
     {
-     "ticker": "NVDA",
-     "name": "NVIDIA Corp",
-     "ko": "엔비디아",
-     "weight": 5.9
-    },
-    {
      "ticker": "MSFT",
      "name": "MICROSOFT CORP",
      "ko": "마이크로소프트",
-     "weight": 5.9
+     "weight": 6.0
+    },
+    {
+     "ticker": "NVDA",
+     "name": "NVIDIA Corp",
+     "ko": "엔비디아",
+     "weight": 5.8
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.0
-    },
-    {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.6
+     "weight": 4.2
     },
     {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
+     "weight": 2.7
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
      "weight": 2.6
     },
     {
@@ -65,28 +65,28 @@
      "weight": 1.8
     },
     {
-     "ticker": "BRK-B",
-     "name": "Berkshire Hathaway Inc",
-     "ko": "버크셔 해서웨이",
-     "weight": 1.7
-    },
-    {
      "ticker": "TSLA",
      "name": "Tesla Inc",
      "ko": "테슬라",
      "weight": 1.7
     },
     {
-     "ticker": "JPM",
-     "name": "JPMORGAN CHASE",
-     "ko": "제이피모간체이스",
-     "weight": 1.4
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
+     "weight": 1.7
     },
     {
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 1.3
+     "weight": 1.4
+    },
+    {
+     "ticker": "JPM",
+     "name": "JPMORGAN CHASE",
+     "ko": "제이피모간체이스",
+     "weight": 1.4
     },
     {
      "ticker": "MU",
@@ -101,7 +101,7 @@
      "weight": 1.1
     }
    ],
-   "top_weight": 43.7,
+   "top_weight": 44.1,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -111,93 +111,93 @@
    "other": [
     [
      "NAV (%)",
-     "-5.05",
-     "-10.33",
-     "-11.6"
+     "-4.34",
+     "-9.2",
+     "-12.37"
     ],
     [
      "종가 (%)",
-     "-5.24",
-     "-9.96",
-     "-11.17"
+     "-4.33",
+     "-8.39",
+     "-11.61"
     ],
     [
      "NOTHERN TRUST CORP (NTRS)",
      "0.0",
      "2.63",
-     "604,222"
-    ],
-    [
-     "EQT Corp (EQT)",
-     "0.0",
-     "8.99",
-     "603,497"
-    ],
-    [
-     "M&T Bank Corp (MTB)",
-     "0.0",
-     "2.07",
-     "595,569"
+     "600,099"
     ],
     [
      "Ameren Corp (AEE)",
      "0.0",
      "3.98",
-     "593,879"
+     "597,201"
     ],
     [
      "Dexcom Inc (DXCM)",
      "0.0",
      "5.42",
-     "592,727"
-    ],
-    [
-     "Huntington Bancshares Inc/OH (HBAN)",
-     "0.0",
-     "29.03",
-     "588,194"
-    ],
-    [
-     "Willis Towers Watson PLC (WTW)",
-     "0.0",
-     "1.33",
-     "586,755"
-    ],
-    [
-     "Illumina Inc (ILMN)",
-     "0.0",
-     "2.17",
-     "586,071"
-    ],
-    [
-     "Steel Dynamics Inc (STLD)",
-     "0.0",
-     "1.94",
-     "580,949"
+     "594,853"
     ],
     [
      "Martin Marietta Materials Inc (MLM)",
      "0.0",
      "0.86",
-     "578,119"
+     "593,083"
+    ],
+    [
+     "M&T Bank Corp (MTB)",
+     "0.0",
+     "2.07",
+     "589,631"
+    ],
+    [
+     "Willis Towers Watson PLC (WTW)",
+     "0.0",
+     "1.33",
+     "588,265"
+    ],
+    [
+     "Williams-Sonoma Inc (WSM)",
+     "0.0",
+     "1.69",
+     "584,604"
     ],
     [
      "Laboratory Corp of America Hol (LH)",
      "0.0",
      "1.17",
-     "574,310"
-    ],
-    [
-     "Twilio Inc. (TWLO)",
-     "0.0",
-     "2.21",
-     "571,893"
+     "576,970"
     ],
     [
      "P G & E CORP (PCG)",
      "0.0",
      "31.64",
-     "571,064"
+     "576,933"
+    ],
+    [
+     "Huntington Bancshares Inc/OH (HBAN)",
+     "0.0",
+     "29.03",
+     "576,831"
+    ],
+    [
+     "Twilio Inc. (TWLO)",
+     "0.0",
+     "2.21",
+     "575,897"
+    ],
+    [
+     "Steel Dynamics Inc (STLD)",
+     "0.0",
+     "1.94",
+     "574,584"
+    ],
+    [
+     "Corpay Inc (CPAY)",
+     "0.0",
+     "0.94",
+     "569,116"
     ]
    ]
   },
@@ -207,8 +207,8 @@
    "name": "KODEX 미국S&P500",
    "index": "S&P500",
    "proxy": "SPY",
-   "asof": "2026-11-19 받음",
-   "n_total": 296,
+   "asof": "2026-11-20 받음",
+   "n_total": 299,
    "top": [
     {
      "ticker": "AAPL",
@@ -217,32 +217,32 @@
      "weight": 8.1
     },
     {
-     "ticker": "NVDA",
-     "name": "NVIDIA Corp",
-     "ko": "",
-     "weight": 5.9
-    },
-    {
      "ticker": "MSFT",
      "name": "MICROSOFT",
      "ko": "",
-     "weight": 5.9
+     "weight": 6.0
+    },
+    {
+     "ticker": "NVDA",
+     "name": "NVIDIA Corp",
+     "ko": "",
+     "weight": 5.8
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "",
-     "weight": 4.0
-    },
-    {
-     "ticker": "GOOGL",
-     "name": "ALPHABET INC-CL A",
-     "ko": "",
-     "weight": 2.6
+     "weight": 4.2
     },
     {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
+     "ko": "",
+     "weight": 2.7
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "ALPHABET INC-CL A",
      "ko": "",
      "weight": 2.6
     },
@@ -265,28 +265,28 @@
      "weight": 1.8
     },
     {
-     "ticker": "BRK-B",
-     "name": "BERKSHIRE HATHAWAY CL B ORD.",
-     "ko": "",
-     "weight": 1.7
-    },
-    {
      "ticker": "TSLA",
      "name": "TESLA MOTORS",
      "ko": "",
      "weight": 1.7
     },
     {
-     "ticker": "JPM",
-     "name": "JPMORGAN CHASE & CO",
+     "ticker": "BRK-B",
+     "name": "BERKSHIRE HATHAWAY CL B ORD.",
      "ko": "",
-     "weight": 1.4
+     "weight": 1.7
     },
     {
      "ticker": "AMD",
      "name": "ADVANCED MICRO DEVICES",
      "ko": "",
-     "weight": 1.3
+     "weight": 1.4
+    },
+    {
+     "ticker": "JPM",
+     "name": "JPMORGAN CHASE & CO",
+     "ko": "",
+     "weight": 1.4
     },
     {
      "ticker": "MU",
@@ -301,7 +301,7 @@
      "weight": 1.1
     }
    ],
-   "top_weight": 43.7,
+   "top_weight": 44.1,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -311,93 +311,93 @@
    "other": [
     [
      "NAV (%)",
-     "-5.04",
-     "-10.33",
-     "-11.6"
+     "-4.34",
+     "-9.2",
+     "-12.37"
     ],
     [
      "기초지수 (%)",
-     "-4.65",
-     "-9.92",
-     "-11.13"
+     "-4.1",
+     "-8.94",
+     "-12.05"
     ],
     [
      "종가 (%)",
-     "-5.53",
-     "-10.25",
-     "-11.69"
-    ],
-    [
-     "EQT CORP (EQT US)",
-     "0.0",
-     "8.15",
-     "547,108"
+     "-4.57",
+     "-8.65",
+     "-12.14"
     ],
     [
      "NORTHERN TRUST CORP (NTRS US)",
      "0.0",
      "2.38",
-     "546,787"
-    ],
-    [
-     "M & T BANK CORP (MTB US)",
-     "0.0",
-     "1.88",
-     "540,903"
+     "543,056"
     ],
     [
      "AMEREN CORPORATION (AEE US)",
      "0.0",
      "3.61",
-     "538,669"
+     "541,682"
     ],
     [
      "DEXCOM (DXCM US)",
      "0.0",
      "4.92",
-     "538,047"
-    ],
-    [
-     "WILLIS TOWERS WATSON PLC (WTW US)",
-     "0.0",
-     "1.21",
-     "533,815"
-    ],
-    [
-     "HUNTINGTON BANCSHARES INC (HBAN US)",
-     "0.0",
-     "26.33",
-     "533,487"
-    ],
-    [
-     "ILLUMINA INC (ILMN US)",
-     "0.0",
-     "1.97",
-     "532,055"
-    ],
-    [
-     "STEEL DYNAMICS INC (STLD US)",
-     "0.0",
-     "1.76",
-     "527,046"
+     "539,977"
     ],
     [
      "MARTIN MARIETTA MATERIALS (MLM US)",
      "0.0",
      "0.78",
-     "524,340"
+     "537,912"
+    ],
+    [
+     "M & T BANK CORP (MTB US)",
+     "0.0",
+     "1.88",
+     "535,510"
+    ],
+    [
+     "WILLIS TOWERS WATSON PLC (WTW US)",
+     "0.0",
+     "1.21",
+     "535,188"
+    ],
+    [
+     "Williams-Sonoma Inc (WSM US)",
+     "0.0",
+     "1.53",
+     "529,257"
+    ],
+    [
+     "P G & E CORP (PCG US)",
+     "0.0",
+     "28.7",
+     "523,324"
+    ],
+    [
+     "HUNTINGTON BANCSHARES INC (HBAN US)",
+     "0.0",
+     "26.33",
+     "523,182"
     ],
     [
      "LABORATORY CRP OF AMER HLDGS (LH US)",
      "0.0",
      "1.06",
-     "520,315"
+     "522,725"
     ],
     [
-     "CORPAY INC (CPAY US)",
+     "STEEL DYNAMICS INC (STLD US)",
      "0.0",
-     "0.86",
-     "518,519"
+     "1.76",
+     "521,272"
+    ],
+    [
+     "TWILIO (TWLO US)",
+     "0.0",
+     "2",
+     "521,173"
     ]
    ]
   },
@@ -407,8 +407,8 @@
    "name": "ACE 미국S&P500",
    "index": "S&P500",
    "proxy": "SPY",
-   "asof": "2026-11-19 받음",
-   "n_total": 296,
+   "asof": "2026-11-20 받음",
+   "n_total": 295,
    "top": [
     {
      "ticker": "AAPL",
@@ -420,19 +420,25 @@
      "ticker": "MSFT",
      "name": "MICROSOFT CORP",
      "ko": "마이크로소프트",
-     "weight": 5.9
+     "weight": 6.0
     },
     {
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "엔비디아",
-     "weight": 5.9
+     "weight": 5.8
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.0
+     "weight": 4.1
+    },
+    {
+     "ticker": "AVGO",
+     "name": "BROADCOM LTD",
+     "ko": "브로드컴",
+     "weight": 2.7
     },
     {
      "ticker": "GOOGL",
@@ -441,16 +447,10 @@
      "weight": 2.6
     },
     {
-     "ticker": "AVGO",
-     "name": "BROADCOM LTD",
-     "ko": "브로드컴",
-     "weight": 2.6
-    },
-    {
      "ticker": "META",
      "name": "Meta Platforms Inc-CL A",
      "ko": "메타",
-     "weight": 2.2
+     "weight": 2.1
     },
     {
      "ticker": "GOOG",
@@ -462,18 +462,18 @@
      "ticker": "LLY",
      "name": "Lilly (Eli) & Co",
      "ko": "일라이릴리",
-     "weight": 1.8
-    },
-    {
-     "ticker": "BRK-B",
-     "name": "Berkshire Hathaway Inc",
-     "ko": "버크셔 해서웨이",
      "weight": 1.7
     },
     {
      "ticker": "TSLA",
      "name": "Tesla Inc",
      "ko": "테슬라",
+     "weight": 1.7
+    },
+    {
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
      "weight": 1.7
     },
     {
@@ -486,7 +486,7 @@
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 1.3
+     "weight": 1.4
     },
     {
      "ticker": "MU",
@@ -501,7 +501,7 @@
      "weight": 1.1
     }
    ],
-   "top_weight": 43.7,
+   "top_weight": 43.8,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -511,93 +511,93 @@
    "other": [
     [
      "NAV (%)",
-     "-5.04",
-     "-10.32",
-     "-11.6"
+     "-4.35",
+     "-9.2",
+     "-12.37"
     ],
     [
      "종가 (%)",
-     "-5.19",
-     "-9.98",
-     "-11.17"
+     "-4.31",
+     "-8.39",
+     "-11.64"
     ],
     [
      "EQT Corp (EQT)",
      "0.0",
      "18",
-     "1,208,337"
+     "1,213,518"
     ],
     [
      "Corpay Inc (CPAY)",
      "0.0",
      "2",
-     "1,205,858"
-    ],
-    [
-     "Dexcom Inc (DXCM)",
-     "0.0",
-     "11",
-     "1,202,952"
-    ],
-    [
-     "Steel Dynamics Inc (STLD)",
-     "0.0",
-     "4",
-     "1,197,833"
-    ],
-    [
-     "Ameren Corp (AEE)",
-     "0.0",
-     "8",
-     "1,193,728"
-    ],
-    [
-     "American Water Works Co Inc (AWK)",
-     "0.0",
-     "6",
-     "1,184,903"
-    ],
-    [
-     "Huntington Bancshares Inc/OH (HBAN)",
-     "0.0",
-     "58",
-     "1,175,172"
+     "1,210,885"
     ],
     [
      "Live Nation Entertainment Inc (LYV)",
      "0.0",
      "5",
-     "1,175,039"
+     "1,207,374"
+    ],
+    [
+     "Dexcom Inc (DXCM)",
+     "0.0",
+     "11",
+     "1,207,267"
+    ],
+    [
+     "Fiserv Inc (FISV)",
+     "0.0",
+     "15",
+     "1,206,576"
+    ],
+    [
+     "Ameren Corp (AEE)",
+     "0.0",
+     "8",
+     "1,200,404"
+    ],
+    [
+     "American Water Works Co Inc (AWK)",
+     "0.0",
+     "6",
+     "1,198,037"
+    ],
+    [
+     "Steel Dynamics Inc (STLD)",
+     "0.0",
+     "4",
+     "1,184,710"
     ],
     [
      "P G & E CORP (PCG)",
      "0.0",
      "64",
-     "1,155,124"
-    ],
-    [
-     "M&T Bank Corp (MTB)",
-     "0.0",
-     "4",
-     "1,150,858"
-    ],
-    [
-     "NOTHERN TRUST CORP (NTRS)",
-     "0.0",
-     "5",
-     "1,148,712"
-    ],
-    [
-     "Atmos Energy Corp (ATO)",
-     "0.0",
-     "5",
-     "1,145,780"
+     "1,166,995"
     ],
     [
      "OLD DOMINION FREIGHT LINE (ODFL)",
      "0.0",
      "5",
-     "1,145,380"
+     "1,164,481"
+    ],
+    [
+     "Huntington Bancshares Inc/OH (HBAN)",
+     "0.0",
+     "58",
+     "1,152,471"
+    ],
+    [
+     "Atmos Energy Corp (ATO)",
+     "0.0",
+     "5",
+     "1,141,539"
+    ],
+    [
+     "NOTHERN TRUST CORP (NTRS)",
+     "0.0",
+     "5",
+     "1,140,874"
     ]
    ]
   },
@@ -607,62 +607,62 @@
    "name": "SOL 미국우주항공TOP10",
    "index": "미국 우주항공 TOP10",
    "proxy": "",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 10,
    "top": [
     {
      "ticker": "SPCX",
      "name": "Space Exploration Technologies Corp",
      "ko": "스페이스X",
-     "weight": 29.2
+     "weight": 30.2
     },
     {
      "ticker": "RKLB",
      "name": "Rocket Lab USA Inc",
      "ko": "",
-     "weight": 23.6
+     "weight": 23.2
     },
     {
      "ticker": "VSAT",
      "name": "Viasat Inc",
      "ko": "",
-     "weight": 10.1
+     "weight": 10.6
     },
     {
      "ticker": "FLY",
      "name": "Firefly Aerospace Inc",
      "ko": "",
-     "weight": 7.5
+     "weight": 7.3
     },
     {
      "ticker": "ASTS",
      "name": "AST SpaceMobile Inc",
      "ko": "",
-     "weight": 7.4
+     "weight": 7.0
     },
     {
      "ticker": "PL",
      "name": "Planet Labs PBC",
      "ko": "",
-     "weight": 6.8
+     "weight": 6.7
     },
     {
      "ticker": "LUNR",
      "name": "Intuitive Machines Inc",
      "ko": "",
-     "weight": 5.6
+     "weight": 5.2
     },
     {
      "ticker": "RDW",
      "name": "Redwire Corporation",
      "ko": "",
-     "weight": 4.7
+     "weight": 4.8
     },
     {
      "ticker": "BKSY",
      "name": "BlackSky Technology Inc",
      "ko": "",
-     "weight": 2.6
+     "weight": 2.5
     },
     {
      "ticker": "SATL",
@@ -681,21 +681,21 @@
    "other": [
     [
      "NAV (%)",
-     "-6.83",
-     "-34.66",
-     "-53.27"
+     "-3.59",
+     "-32.88",
+     "-55.77"
     ],
     [
      "종가 (%)",
-     "-6.72",
-     "-32.15",
-     "-53.14"
+     "-3.5",
+     "-29.83",
+     "-54.35"
     ],
     [
      "원화현금 (KRD010010001)",
      "1.2",
-     "3,258,177",
-     "3,258,177"
+     "3,248,347",
+     "3,248,347"
     ],
     [
      "26.09",
@@ -725,7 +725,7 @@
    "name": "TIGER 미국나스닥100",
    "index": "나스닥100",
    "proxy": "QQQ",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 101,
    "top": [
     {
@@ -744,25 +744,25 @@
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "엔비디아",
-     "weight": 6.4
+     "weight": 6.2
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.8
+     "weight": 4.9
     },
     {
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 3.9
+     "weight": 4.1
     },
     {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
-     "weight": 3.8
+     "weight": 3.7
     },
     {
      "ticker": "TSLA",
@@ -789,15 +789,15 @@
      "weight": 2.9
     },
     {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.8
-    },
-    {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
+     "weight": 2.9
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
      "weight": 2.8
     },
     {
@@ -819,7 +819,7 @@
      "weight": 1.8
     }
    ],
-   "top_weight": 58.7,
+   "top_weight": 58.8,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -829,21 +829,21 @@
    "other": [
     [
      "NAV (%)",
-     "-9.68",
-     "-14.97",
-     "-17.53"
+     "-7.1",
+     "-12.47",
+     "-17.4"
     ],
     [
      "종가 (%)",
-     "-9.45",
-     "-13.89",
-     "-16.64"
+     "-6.89",
+     "-10.63",
+     "-15.73"
     ],
     [
      "원화현금 (KRD010010001)",
      "0.0",
-     "557,894",
-     "557,894"
+     "608,291",
+     "608,291"
     ],
     [
      "26.09",
@@ -873,7 +873,7 @@
    "name": "KODEX 미국나스닥100",
    "index": "나스닥100",
    "proxy": "QQQ",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 101,
    "top": [
     {
@@ -892,25 +892,25 @@
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "",
-     "weight": 6.4
+     "weight": 6.2
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "",
-     "weight": 4.8
+     "weight": 4.9
     },
     {
      "ticker": "AMD",
      "name": "ADVANCED MICRO DEVICES",
      "ko": "",
-     "weight": 3.9
+     "weight": 4.1
     },
     {
      "ticker": "MU",
      "name": "MICRON TECH",
      "ko": "",
-     "weight": 3.8
+     "weight": 3.7
     },
     {
      "ticker": "TSLA",
@@ -937,14 +937,14 @@
      "weight": 2.9
     },
     {
-     "ticker": "GOOGL",
-     "name": "ALPHABET INC-CL A",
-     "ko": "",
-     "weight": 2.8
-    },
-    {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
+     "ko": "",
+     "weight": 2.9
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "ALPHABET INC-CL A",
      "ko": "",
      "weight": 2.8
     },
@@ -967,7 +967,7 @@
      "weight": 1.8
     }
    ],
-   "top_weight": 58.7,
+   "top_weight": 58.8,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -977,27 +977,27 @@
    "other": [
     [
      "NAV (%)",
-     "-9.68",
-     "-14.91",
-     "-17.44"
+     "-7.1",
+     "-12.42",
+     "-17.34"
     ],
     [
      "기초지수 (%)",
-     "-9.31",
-     "-14.55",
-     "-17.07"
+     "-6.87",
+     "-12.18",
+     "-17.08"
     ],
     [
      "종가 (%)",
-     "-9.52",
-     "-14.02",
-     "-16.86"
+     "-6.99",
+     "-10.67",
+     "-15.9"
     ],
     [
      "원화현금 (KRD010010001)",
      "0.0",
-     "-24,204",
-     "-24,204"
+     "68,784",
+     "68,784"
     ],
     [
      "26.09",
@@ -1027,26 +1027,32 @@
    "name": "TIGER 미국필라델피아반도체나스닥",
    "index": "필라델피아 반도체 지수",
    "proxy": "SOXQ",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 30,
    "top": [
     {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
-     "weight": 11.0
+     "weight": 11.4
     },
     {
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "엔비디아",
-     "weight": 10.1
+     "weight": 9.8
     },
     {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
-     "weight": 7.1
+     "weight": 7.0
+    },
+    {
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices Inc",
+     "ko": "",
+     "weight": 5.4
     },
     {
      "ticker": "TXN",
@@ -1055,28 +1061,22 @@
      "weight": 5.4
     },
     {
-     "ticker": "AMD",
-     "name": "Advanced Micro Devices Inc",
-     "ko": "",
-     "weight": 5.1
-    },
-    {
      "ticker": "ADI",
      "name": "Analog Devices Inc",
      "ko": "",
-     "weight": 5.1
+     "weight": 5.0
     },
     {
      "ticker": "QCOM",
      "name": "QUALCOMM Inc",
      "ko": "",
-     "weight": 4.7
+     "weight": 4.5
     },
     {
      "ticker": "TSM",
      "name": "TSMC / TAIWAN SEMICONDUCTOR-SP ADR",
      "ko": "",
-     "weight": 4.1
+     "weight": 4.2
     },
     {
      "ticker": "KLAC",
@@ -1094,7 +1094,7 @@
      "ticker": "AMAT",
      "name": "APPLIED MATERIALS INC",
      "ko": "",
-     "weight": 3.6
+     "weight": 3.7
     },
     {
      "ticker": "MPWR",
@@ -1109,19 +1109,19 @@
      "weight": 3.5
     },
     {
-     "ticker": "MRVL",
-     "name": "Marvell Technology Inc",
-     "ko": "마벨",
-     "weight": 3.4
-    },
-    {
      "ticker": "LRCX",
      "name": "LAM RESEARCH CORP",
      "ko": "",
+     "weight": 3.4
+    },
+    {
+     "ticker": "MRVL",
+     "name": "Marvell Technology Inc",
+     "ko": "마벨",
      "weight": 3.3
     }
    ],
-   "top_weight": 77.7,
+   "top_weight": 77.9,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -1131,21 +1131,21 @@
    "other": [
     [
      "NAV (%)",
-     "-16.64",
-     "-27.97",
-     "-26.35"
+     "-13.42",
+     "-23.51",
+     "-25"
     ],
     [
      "종가 (%)",
-     "-15.14",
-     "-25.56",
-     "-24.86"
+     "-13.28",
+     "-20.26",
+     "-22.13"
     ],
     [
      "원화현금 (KRD010010001)",
-     "0.1",
-     "2,271,865",
-     "2,271,865"
+     "0.0",
+     "795,667",
+     "795,667"
     ],
     [
      "26.09",
@@ -1175,8 +1175,8 @@
    "name": "RISE 미국S&P500",
    "index": "S&P500",
    "proxy": "SPY",
-   "asof": "2026-11-19 받음",
-   "n_total": 296,
+   "asof": "2026-11-20 받음",
+   "n_total": 299,
    "top": [
     {
      "ticker": "AAPL",
@@ -1185,33 +1185,33 @@
      "weight": 8.1
     },
     {
-     "ticker": "NVDA",
-     "name": "NVIDIA Corp",
-     "ko": "엔비디아",
-     "weight": 5.9
-    },
-    {
      "ticker": "MSFT",
      "name": "MICROSOFT CORP",
      "ko": "마이크로소프트",
-     "weight": 5.9
+     "weight": 6.0
+    },
+    {
+     "ticker": "NVDA",
+     "name": "NVIDIA Corp",
+     "ko": "엔비디아",
+     "weight": 5.8
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.0
-    },
-    {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.6
+     "weight": 4.2
     },
     {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
+     "weight": 2.7
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
      "weight": 2.6
     },
     {
@@ -1233,28 +1233,28 @@
      "weight": 1.8
     },
     {
-     "ticker": "BRK-B",
-     "name": "Berkshire Hathaway Inc",
-     "ko": "버크셔 해서웨이",
-     "weight": 1.7
-    },
-    {
      "ticker": "TSLA",
      "name": "Tesla Inc",
      "ko": "테슬라",
      "weight": 1.7
     },
     {
-     "ticker": "JPM",
-     "name": "JPMORGAN CHASE",
-     "ko": "제이피모간체이스",
-     "weight": 1.4
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
+     "weight": 1.7
     },
     {
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 1.3
+     "weight": 1.4
+    },
+    {
+     "ticker": "JPM",
+     "name": "JPMORGAN CHASE",
+     "ko": "제이피모간체이스",
+     "weight": 1.4
     },
     {
      "ticker": "MU",
@@ -1269,7 +1269,7 @@
      "weight": 1.1
     }
    ],
-   "top_weight": 43.7,
+   "top_weight": 44.1,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -1279,93 +1279,93 @@
    "other": [
     [
      "NAV (%)",
-     "-5.06",
-     "-10.34",
-     "-11.54"
+     "-4.35",
+     "-9.22",
+     "-12.31"
     ],
     [
      "종가 (%)",
-     "-4.92",
-     "-10.1",
-     "-11.2"
-    ],
-    [
-     "EQT Corp (EQT)",
-     "0.0",
-     "15.71",
-     "1,054,610"
+     "-4.11",
+     "-8.46",
+     "-11.64"
     ],
     [
      "NOTHERN TRUST CORP (NTRS)",
      "0.0",
      "4.59",
-     "1,054,518"
-    ],
-    [
-     "M&T Bank Corp (MTB)",
-     "0.0",
-     "3.63",
-     "1,044,404"
+     "1,047,322"
     ],
     [
      "Ameren Corp (AEE)",
      "0.0",
      "6.95",
-     "1,037,051"
-    ],
-    [
-     "Dexcom Inc (DXCM)",
-     "0.0",
-     "9.48",
-     "1,036,726"
-    ],
-    [
-     "Huntington Bancshares Inc/OH (HBAN)",
-     "0.0",
-     "50.75",
-     "1,028,276"
-    ],
-    [
-     "Willis Towers Watson PLC (WTW)",
-     "0.0",
-     "2.33",
-     "1,027,925"
-    ],
-    [
-     "Illumina Inc (ILMN)",
-     "0.0",
-     "3.79",
-     "1,023,599"
+     "1,042,851"
     ],
     [
      "Martin Marietta Materials Inc (MLM)",
      "0.0",
      "1.51",
-     "1,015,070"
+     "1,041,343"
     ],
     [
-     "Steel Dynamics Inc (STLD)",
+     "Dexcom Inc (DXCM)",
      "0.0",
-     "3.38",
-     "1,012,169"
+     "9.48",
+     "1,040,445"
     ],
     [
-     "Laboratory Corp of America Hol (LH)",
+     "M&T Bank Corp (MTB)",
      "0.0",
-     "2.04",
-     "1,001,362"
+     "3.63",
+     "1,033,991"
     ],
     [
-     "Twilio Inc. (TWLO)",
+     "Willis Towers Watson PLC (WTW)",
      "0.0",
-     "3.86",
-     "998,872"
+     "2.33",
+     "1,030,570"
+    ],
+    [
+     "Williams-Sonoma Inc (WSM)",
+     "0.0",
+     "2.96",
+     "1,023,922"
     ],
     [
      "P G & E CORP (PCG)",
      "0.0",
      "55.32",
-     "998,460"
+     "1,008,721"
+    ],
+    [
+     "Huntington Bancshares Inc/OH (HBAN)",
+     "0.0",
+     "50.75",
+     "1,008,412"
+    ],
+    [
+     "Laboratory Corp of America Hol (LH)",
+     "0.0",
+     "2.04",
+     "1,006,000"
+    ],
+    [
+     "Twilio Inc. (TWLO)",
+     "0.0",
+     "3.86",
+     "1,005,865"
+    ],
+    [
+     "Steel Dynamics Inc (STLD)",
+     "0.0",
+     "3.38",
+     "1,001,080"
+    ],
+    [
+     "Corpay Inc (CPAY)",
+     "0.0",
+     "1.65",
+     "998,980"
     ]
    ]
   },
@@ -1375,8 +1375,8 @@
    "name": "1Q 미국S&P500",
    "index": "S&P500",
    "proxy": "SPY",
-   "asof": "2026-11-19 받음",
-   "n_total": 296,
+   "asof": "2026-11-20 받음",
+   "n_total": 299,
    "top": [
     {
      "ticker": "AAPL",
@@ -1385,33 +1385,33 @@
      "weight": 8.1
     },
     {
-     "ticker": "NVDA",
-     "name": "NVIDIA Corp",
-     "ko": "엔비디아",
-     "weight": 5.9
-    },
-    {
      "ticker": "MSFT",
      "name": "MICROSOFT CORP",
      "ko": "마이크로소프트",
-     "weight": 5.9
+     "weight": 6.0
+    },
+    {
+     "ticker": "NVDA",
+     "name": "NVIDIA Corp",
+     "ko": "엔비디아",
+     "weight": 5.8
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.0
-    },
-    {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.6
+     "weight": 4.2
     },
     {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
+     "weight": 2.7
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
      "weight": 2.6
     },
     {
@@ -1433,16 +1433,28 @@
      "weight": 1.8
     },
     {
+     "ticker": "TSLA",
+     "name": "Tesla Inc",
+     "ko": "테슬라",
+     "weight": 1.7
+    },
+    {
      "ticker": "BRK-B",
      "name": "Berkshire Hathaway Inc",
      "ko": "버크셔 해서웨이",
      "weight": 1.7
     },
     {
-     "ticker": "TSLA",
-     "name": "Tesla Inc",
-     "ko": "테슬라",
-     "weight": 1.7
+     "ticker": "SNDK",
+     "name": "Sandisk Corp",
+     "ko": "샌디스크",
+     "weight": 1.4
+    },
+    {
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices Inc",
+     "ko": "",
+     "weight": 1.4
     },
     {
      "ticker": "JPM",
@@ -1451,25 +1463,13 @@
      "weight": 1.4
     },
     {
-     "ticker": "AMD",
-     "name": "Advanced Micro Devices Inc",
-     "ko": "",
-     "weight": 1.3
-    },
-    {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
      "weight": 1.3
-    },
-    {
-     "ticker": "V",
-     "name": "VISA INC-CLASS A SHARES",
-     "ko": "비자",
-     "weight": 1.1
     }
    ],
-   "top_weight": 43.7,
+   "top_weight": 44.4,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -1479,93 +1479,93 @@
    "other": [
     [
      "NAV (%)",
-     "-5.07",
-     "-10.34",
-     "-11.69"
+     "-4.37",
+     "-9.22",
+     "-12.46"
     ],
     [
      "종가 (%)",
-     "-4.96",
-     "-9.92",
-     "-11.27"
+     "-4.1",
+     "-8.29",
+     "-11.62"
     ],
     [
      "NOTHERN TRUST CORP (NTRS)",
      "0.0",
      "2.57",
-     "590,438"
-    ],
-    [
-     "EQT Corp (EQT)",
-     "0.0",
-     "8.79",
-     "590,071"
-    ],
-    [
-     "M&T Bank Corp (MTB)",
-     "0.0",
-     "2.03",
-     "584,060"
+     "586,409"
     ],
     [
      "Ameren Corp (AEE)",
      "0.0",
      "3.89",
-     "580,450"
+     "583,696"
     ],
     [
      "Dexcom Inc (DXCM)",
      "0.0",
      "5.3",
-     "579,604"
+     "581,683"
     ],
     [
      "Willis Towers Watson PLC (WTW)",
      "0.0",
      "1.31",
-     "577,932"
-    ],
-    [
-     "Huntington Bancshares Inc/OH (HBAN)",
-     "0.0",
-     "28.39",
-     "575,226"
-    ],
-    [
-     "Illumina Inc (ILMN)",
-     "0.0",
-     "2.12",
-     "572,567"
-    ],
-    [
-     "Steel Dynamics Inc (STLD)",
-     "0.0",
-     "1.89",
-     "565,976"
+     "579,419"
     ],
     [
      "Martin Marietta Materials Inc (MLM)",
      "0.0",
      "0.84",
-     "564,674"
+     "579,290"
     ],
     [
-     "Laboratory Corp of America Hol (LH)",
+     "M&T Bank Corp (MTB)",
      "0.0",
-     "1.14",
-     "559,584"
+     "2.03",
+     "578,237"
+    ],
+    [
+     "Williams-Sonoma Inc (WSM)",
+     "0.0",
+     "1.66",
+     "574,226"
+    ],
+    [
+     "P G & E CORP (PCG)",
+     "0.0",
+     "30.96",
+     "564,533"
+    ],
+    [
+     "Huntington Bancshares Inc/OH (HBAN)",
+     "0.0",
+     "28.4",
+     "564,313"
     ],
     [
      "Twilio Inc. (TWLO)",
      "0.0",
      "2.16",
-     "558,954"
+     "562,867"
     ],
     [
-     "P G & E CORP (PCG)",
+     "Laboratory Corp of America Hol (LH)",
      "0.0",
-     "30.95",
-     "558,610"
+     "1.14",
+     "562,176"
+    ],
+    [
+     "Steel Dynamics Inc (STLD)",
+     "0.0",
+     "1.89",
+     "559,775"
+    ],
+    [
+     "American Water Works Co Inc (AWK)",
+     "0.0",
+     "2.79",
+     "557,087"
     ]
    ]
   },
@@ -1575,43 +1575,43 @@
    "name": "SOL 미국S&P500",
    "index": "S&P500",
    "proxy": "SPY",
-   "asof": "2026-11-19 받음",
-   "n_total": 297,
+   "asof": "2026-11-20 받음",
+   "n_total": 302,
    "top": [
     {
      "ticker": "AAPL",
      "name": "Apple Inc",
      "ko": "애플",
-     "weight": 8.1
-    },
-    {
-     "ticker": "NVDA",
-     "name": "NVIDIA Corp",
-     "ko": "엔비디아",
-     "weight": 5.9
+     "weight": 8.2
     },
     {
      "ticker": "MSFT",
      "name": "MICROSOFT CORP",
      "ko": "마이크로소프트",
-     "weight": 5.9
+     "weight": 6.0
+    },
+    {
+     "ticker": "NVDA",
+     "name": "NVIDIA Corp",
+     "ko": "엔비디아",
+     "weight": 5.8
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.0
-    },
-    {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.6
+     "weight": 4.2
     },
     {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
+     "weight": 2.7
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
      "weight": 2.6
     },
     {
@@ -1630,12 +1630,6 @@
      "ticker": "LLY",
      "name": "Lilly (Eli) & Co",
      "ko": "일라이릴리",
-     "weight": 1.8
-    },
-    {
-     "ticker": "BRK-B",
-     "name": "Berkshire Hathaway Inc",
-     "ko": "버크셔 해서웨이",
      "weight": 1.7
     },
     {
@@ -1645,16 +1639,22 @@
      "weight": 1.7
     },
     {
-     "ticker": "JPM",
-     "name": "JPMORGAN CHASE",
-     "ko": "제이피모간체이스",
-     "weight": 1.4
+     "ticker": "BRK-B",
+     "name": "Berkshire Hathaway Inc",
+     "ko": "버크셔 해서웨이",
+     "weight": 1.7
     },
     {
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 1.3
+     "weight": 1.4
+    },
+    {
+     "ticker": "JPM",
+     "name": "JPMORGAN CHASE",
+     "ko": "제이피모간체이스",
+     "weight": 1.4
     },
     {
      "ticker": "MU",
@@ -1669,7 +1669,7 @@
      "weight": 1.1
     }
    ],
-   "top_weight": 43.7,
+   "top_weight": 44.1,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -1679,93 +1679,93 @@
    "other": [
     [
      "NAV (%)",
-     "-5",
-     "-10.29",
-     "-11.59"
+     "-4.32",
+     "-9.19",
+     "-12.38"
     ],
     [
      "종가 (%)",
-     "-5.03",
-     "-9.97",
-     "-11.15"
-    ],
-    [
-     "Corpay Inc (CPAY)",
-     "0.0",
-     "1.68",
-     "1,012,921"
-    ],
-    [
-     "OLD DOMINION FREIGHT LINE (ODFL)",
-     "0.0",
-     "4.42",
-     "1,012,516"
-    ],
-    [
-     "Dexcom Inc (DXCM)",
-     "0.0",
-     "9.24",
-     "1,010,480"
+     "-4.02",
+     "-8.27",
+     "-11.55"
     ],
     [
      "Willis Towers Watson PLC (WTW)",
      "0.0",
      "2.28",
-     "1,005,866"
+     "1,008,454"
     ],
     [
-     "EQT Corp (EQT)",
+     "Centene Corp (CNC)",
      "0.0",
-     "14.98",
-     "1,005,605"
-    ],
-    [
-     "Ameren Corp (AEE)",
-     "0.0",
-     "6.64",
-     "990,794"
-    ],
-    [
-     "Steel Dynamics Inc (STLD)",
-     "0.0",
-     "3.3",
-     "988,212"
-    ],
-    [
-     "Huntington Bancshares Inc/OH (HBAN)",
-     "0.0",
-     "48.73",
-     "987,347"
-    ],
-    [
-     "Illumina Inc (ILMN)",
-     "0.0",
-     "3.62",
-     "977,686"
-    ],
-    [
-     "Laboratory Corp of America Hol (LH)",
-     "0.0",
-     "1.99",
-     "976,819"
+     "11.21",
+     "1,005,632"
     ],
     [
      "Martin Marietta Materials Inc (MLM)",
      "0.0",
      "1.45",
-     "974,736"
+     "999,965"
     ],
     [
-     "Otis Worldwide Corp (OTIS)",
+     "Ameren Corp (AEE)",
      "0.0",
-     "9.33",
-     "957,764"
+     "6.64",
+     "996,335"
     ],
     [
      "Williams-Sonoma Inc (WSM)",
      "0.0",
      "2.87",
-     "956,618"
+     "992,789"
+    ],
+    [
+     "Laboratory Corp of America Hol (LH)",
+     "0.0",
+     "1.99",
+     "981,343"
+    ],
+    [
+     "Steel Dynamics Inc (STLD)",
+     "0.0",
+     "3.3",
+     "977,386"
+    ],
+    [
+     "Huntington Bancshares Inc/OH (HBAN)",
+     "0.0",
+     "48.73",
+     "968,274"
+    ],
+    [
+     "Otis Worldwide Corp (OTIS)",
+     "0.0",
+     "9.33",
+     "963,799"
+    ],
+    [
+     "P G & E CORP (PCG)",
+     "0.0",
+     "52.77",
+     "962,224"
+    ],
+    [
+     "Twilio Inc. (TWLO)",
+     "0.0",
+     "3.68",
+     "958,959"
+    ],
+    [
+     "Teledyne Technologies Inc (TDY)",
+     "0.0",
+     "1.13",
+     "943,565"
+    ],
+    [
+     "DOLLAR GENERAL CORP. (DG)",
+     "0.0",
+     "5.28",
+     "940,018"
     ]
    ]
   },
@@ -1775,7 +1775,7 @@
    "name": "ACE 미국나스닥100",
    "index": "나스닥100",
    "proxy": "QQQ",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 101,
    "top": [
     {
@@ -1794,25 +1794,25 @@
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "엔비디아",
-     "weight": 6.4
+     "weight": 6.2
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.7
+     "weight": 4.9
     },
     {
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 3.8
+     "weight": 4.0
     },
     {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
-     "weight": 3.8
+     "weight": 3.7
     },
     {
      "ticker": "TSLA",
@@ -1839,15 +1839,15 @@
      "weight": 2.9
     },
     {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.8
-    },
-    {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
+     "weight": 2.8
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
      "weight": 2.8
     },
     {
@@ -1869,7 +1869,7 @@
      "weight": 1.8
     }
    ],
-   "top_weight": 58.4,
+   "top_weight": 58.5,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -1879,21 +1879,21 @@
    "other": [
     [
      "NAV (%)",
-     "-9.67",
-     "-14.93",
-     "-17.51"
+     "-7.1",
+     "-12.43",
+     "-17.38"
     ],
     [
      "종가 (%)",
-     "-9.34",
-     "-13.88",
-     "-16.63"
+     "-6.82",
+     "-10.55",
+     "-15.66"
     ],
     [
      "원화현금 (KRD010010001)",
      "0.5",
-     "14,019,731",
-     "14,019,731"
+     "14,066,651",
+     "14,066,651"
     ],
     [
      "26.09",
@@ -1923,7 +1923,7 @@
    "name": "RISE 미국나스닥100",
    "index": "나스닥100",
    "proxy": "QQQ",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 101,
    "top": [
     {
@@ -1942,25 +1942,25 @@
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "엔비디아",
-     "weight": 6.4
+     "weight": 6.2
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.8
+     "weight": 4.9
     },
     {
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 3.9
+     "weight": 4.1
     },
     {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
-     "weight": 3.8
+     "weight": 3.7
     },
     {
      "ticker": "TSLA",
@@ -1987,15 +1987,15 @@
      "weight": 2.9
     },
     {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.8
-    },
-    {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
+     "weight": 2.9
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
      "weight": 2.8
     },
     {
@@ -2017,7 +2017,7 @@
      "weight": 1.8
     }
    ],
-   "top_weight": 58.7,
+   "top_weight": 58.8,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -2027,21 +2027,21 @@
    "other": [
     [
      "NAV (%)",
-     "-9.7",
-     "-14.95",
-     "-17.46"
+     "-7.11",
+     "-12.44",
+     "-17.34"
     ],
     [
      "종가 (%)",
-     "-9.3",
-     "-14",
-     "-16.68"
+     "-6.75",
+     "-10.62",
+     "-15.68"
     ],
     [
      "원화현금 (KRD010010001)",
      "0.0",
-     "89,692",
-     "89,692"
+     "199,171",
+     "199,171"
     ],
     [
      "26.09",
@@ -2071,7 +2071,7 @@
    "name": "1Q 미국나스닥100",
    "index": "나스닥100",
    "proxy": "QQQ",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 101,
    "top": [
     {
@@ -2090,25 +2090,25 @@
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "엔비디아",
-     "weight": 6.4
+     "weight": 6.2
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 4.8
+     "weight": 4.9
     },
     {
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 3.9
+     "weight": 4.1
     },
     {
      "ticker": "MU",
      "name": "Micron Technology Inc",
      "ko": "마이크론",
-     "weight": 3.8
+     "weight": 3.7
     },
     {
      "ticker": "TSLA",
@@ -2135,15 +2135,15 @@
      "weight": 2.9
     },
     {
-     "ticker": "GOOGL",
-     "name": "Alphabet Inc",
-     "ko": "알파벳 A",
-     "weight": 2.8
-    },
-    {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
+     "weight": 2.9
+    },
+    {
+     "ticker": "GOOGL",
+     "name": "Alphabet Inc",
+     "ko": "알파벳 A",
      "weight": 2.8
     },
     {
@@ -2165,7 +2165,7 @@
      "weight": 1.8
     }
    ],
-   "top_weight": 58.7,
+   "top_weight": 58.8,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -2175,21 +2175,21 @@
    "other": [
     [
      "NAV (%)",
-     "-9.69",
-     "-14.98",
-     "-17.58"
+     "-7.11",
+     "-12.49",
+     "-17.45"
     ],
     [
      "종가 (%)",
-     "-9.21",
-     "-13.94",
-     "-16.67"
+     "-6.71",
+     "-10.59",
+     "-15.76"
     ],
     [
      "원화현금 (KRD010010001)",
      "-0.0",
-     "-424,665",
-     "-424,665"
+     "-262,969",
+     "-262,969"
     ],
     [
      "26.09",
@@ -2219,7 +2219,7 @@
    "name": "TIGER 미국배당다우존스",
    "index": "미국배당다우존스",
    "proxy": "SCHD",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 72,
    "top": [
     {
@@ -2238,7 +2238,7 @@
      "ticker": "KO",
      "name": "Coca-Cola Co",
      "ko": "",
-     "weight": 4.4
+     "weight": 4.5
     },
     {
      "ticker": "HD",
@@ -2247,14 +2247,14 @@
      "weight": 4.2
     },
     {
-     "ticker": "AMGN",
-     "name": "Amgen Corp",
+     "ticker": "PEP",
+     "name": "PEPSICO INC",
      "ko": "",
-     "weight": 4.1
+     "weight": 4.0
     },
     {
-     "ticker": "CVX",
-     "name": "CHEVRON ORD",
+     "ticker": "AMGN",
+     "name": "Amgen Corp",
      "ko": "",
      "weight": 4.0
     },
@@ -2262,29 +2262,29 @@
      "ticker": "COP",
      "name": "ConocoPhillips",
      "ko": "",
-     "weight": 4.0
+     "weight": 3.9
     },
     {
-     "ticker": "PEP",
-     "name": "PEPSICO INC",
+     "ticker": "CVX",
+     "name": "CHEVRON ORD",
      "ko": "",
-     "weight": 4.0
+     "weight": 3.9
+    },
+    {
+     "ticker": "ABT",
+     "name": "ABBOTT LABORATORIES",
+     "ko": "",
+     "weight": 3.8
     },
     {
      "ticker": "QCOM",
      "name": "QUALCOMM Inc",
      "ko": "",
-     "weight": 3.9
-    },
-    {
-     "ticker": "UNH",
-     "name": "Unitedhealth Group",
-     "ko": "",
      "weight": 3.8
     },
     {
-     "ticker": "ABT",
-     "name": "ABBOTT LABORATORIES",
+     "ticker": "VZ",
+     "name": "VERIZON COMMUNICATIONS ORD",
      "ko": "",
      "weight": 3.7
     },
@@ -2292,19 +2292,19 @@
      "ticker": "MRK",
      "name": "Merck & Co",
      "ko": "",
-     "weight": 3.7
+     "weight": 3.6
     },
     {
-     "ticker": "VZ",
-     "name": "VERIZON COMMUNICATIONS ORD",
+     "ticker": "UNH",
+     "name": "Unitedhealth Group",
      "ko": "",
-     "weight": 3.6
+     "weight": 3.5
     },
     {
      "ticker": "ACN",
      "name": "Accenture PLC",
      "ko": "",
-     "weight": 3.5
+     "weight": 3.4
     },
     {
      "ticker": "MO",
@@ -2313,7 +2313,7 @@
      "weight": 3.1
     }
    ],
-   "top_weight": 59.2,
+   "top_weight": 58.6,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -2323,93 +2323,93 @@
    "other": [
     [
      "NAV (%)",
-     "3.67",
-     "-2.04",
-     "0.25"
+     "0.91",
+     "-3.67",
+     "-3.23"
     ],
     [
      "종가 (%)",
-     "3.12",
-     "-3.16",
-     "-1.13"
+     "0.76",
+     "-4.44",
+     "-4.51"
     ],
     [
      "City Holding Co (CHCO)",
      "0.0",
      "1.87",
-     "346,885"
-    ],
-    [
-     "Cohen & Steers Inc (CNS)",
-     "0.0",
-     "3.77",
-     "343,436"
+     "345,408"
     ],
     [
      "WESTERN_UNION (WU)",
      "0.0",
      "41.59",
-     "339,289"
+     "344,610"
+    ],
+    [
+     "Cohen & Steers Inc (CNS)",
+     "0.0",
+     "3.77",
+     "336,145"
     ],
     [
      "German American Bancorp Inc (GABC)",
      "0.0",
      "5.01",
-     "324,566"
-    ],
-    [
-     "S&T Bancorp Inc (STBA)",
-     "0.0",
-     "4.7",
-     "313,317"
+     "323,303"
     ],
     [
      "Insperity Inc (NSP)",
      "0.0",
      "4.79",
-     "310,889"
+     "311,782"
+    ],
+    [
+     "S&T Bancorp Inc (STBA)",
+     "0.0",
+     "4.7",
+     "311,674"
     ],
     [
      "National Bank Holdings Corp (NBHC)",
      "0.0",
      "5.94",
-     "289,166"
+     "288,199"
     ],
     [
      "Federal Agricultural Mortgage Corp (AGM)",
      "0.0",
      "1.24",
-     "278,533"
+     "275,383"
     ],
     [
      "1st Source Corp (SRCE)",
      "0.0",
      "2.38",
-     "273,250"
+     "270,799"
     ],
     [
      "Lakeland Financial Corp (LKFN)",
      "0.0",
      "3.31",
-     "268,660"
+     "267,395"
     ],
     [
      "Wendy's Co/The (WEN)",
      "0.0",
      "21.36",
-     "247,714"
+     "253,122"
     ],
     [
      "Buckle Inc/The (BKE)",
      "0.0",
      "4.12",
-     "230,881"
+     "234,198"
     ],
     [
-     "Preferred Bank/Los Angeles CA (PFBC)",
+     "Flowers Foods Inc (FLO)",
      "0.0",
-     "1.45",
-     "196,783"
+     "28.27",
+     "197,395"
     ]
    ]
   },
@@ -2419,7 +2419,7 @@
    "name": "SOL 미국배당다우존스",
    "index": "미국배당다우존스",
    "proxy": "SCHD",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 72,
    "top": [
     {
@@ -2438,23 +2438,23 @@
      "ticker": "KO",
      "name": "Coca-Cola Co",
      "ko": "",
-     "weight": 4.4
+     "weight": 4.5
     },
     {
      "ticker": "HD",
      "name": "HOME DEPOT",
      "ko": "",
-     "weight": 4.2
+     "weight": 4.3
     },
     {
-     "ticker": "AMGN",
-     "name": "Amgen Corp",
+     "ticker": "PEP",
+     "name": "PEPSICO INC",
      "ko": "",
      "weight": 4.1
     },
     {
-     "ticker": "CVX",
-     "name": "CHEVRON ORD",
+     "ticker": "AMGN",
+     "name": "Amgen Corp",
      "ko": "",
      "weight": 4.0
     },
@@ -2462,29 +2462,29 @@
      "ticker": "COP",
      "name": "ConocoPhillips",
      "ko": "",
-     "weight": 4.0
+     "weight": 3.9
     },
     {
-     "ticker": "PEP",
-     "name": "PEPSICO INC",
+     "ticker": "CVX",
+     "name": "CHEVRON ORD",
      "ko": "",
-     "weight": 4.0
+     "weight": 3.9
+    },
+    {
+     "ticker": "ABT",
+     "name": "ABBOTT LABORATORIES",
+     "ko": "",
+     "weight": 3.8
     },
     {
      "ticker": "QCOM",
      "name": "QUALCOMM Inc",
      "ko": "",
-     "weight": 3.9
-    },
-    {
-     "ticker": "UNH",
-     "name": "Unitedhealth Group",
-     "ko": "",
      "weight": 3.8
     },
     {
-     "ticker": "ABT",
-     "name": "ABBOTT LABORATORIES",
+     "ticker": "VZ",
+     "name": "VERIZON COMMUNICATIONS ORD",
      "ko": "",
      "weight": 3.7
     },
@@ -2495,16 +2495,16 @@
      "weight": 3.7
     },
     {
-     "ticker": "VZ",
-     "name": "VERIZON COMMUNICATIONS ORD",
+     "ticker": "UNH",
+     "name": "Unitedhealth Group",
      "ko": "",
-     "weight": 3.6
+     "weight": 3.5
     },
     {
      "ticker": "ACN",
      "name": "Accenture PLC",
      "ko": "",
-     "weight": 3.5
+     "weight": 3.4
     },
     {
      "ticker": "MO",
@@ -2513,7 +2513,7 @@
      "weight": 3.1
     }
    ],
-   "top_weight": 59.2,
+   "top_weight": 58.9,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -2523,93 +2523,93 @@
    "other": [
     [
      "NAV (%)",
-     "3.65",
-     "-2.08",
-     "0.19"
+     "0.9",
+     "-3.7",
+     "-3.28"
     ],
     [
      "종가 (%)",
-     "3.07",
-     "-3.3",
-     "-0.91"
+     "0.9",
+     "-4.38",
+     "-4.38"
     ],
     [
      "City Holding Co (CHCO)",
      "0.0",
      "3.47",
-     "643,685"
-    ],
-    [
-     "Cohen & Steers Inc (CNS)",
-     "0.0",
-     "6.93",
-     "631,303"
+     "640,945"
     ],
     [
      "WESTERN_UNION (WU)",
      "0.0",
      "76.81",
-     "626,612"
+     "636,439"
+    ],
+    [
+     "Cohen & Steers Inc (CNS)",
+     "0.0",
+     "6.93",
+     "617,900"
     ],
     [
      "German American Bancorp Inc (GABC)",
      "0.0",
      "9.27",
-     "600,545"
+     "598,207"
     ],
     [
      "S&T Bancorp Inc (STBA)",
      "0.0",
      "8.64",
-     "575,971"
+     "572,951"
     ],
     [
      "Insperity Inc (NSP)",
      "0.0",
      "8.8",
-     "571,153"
+     "572,793"
     ],
     [
      "National Bank Holdings Corp (NBHC)",
      "0.0",
      "10.91",
-     "531,111"
+     "529,335"
     ],
     [
      "Federal Agricultural Mortgage Corp (AGM)",
      "0.0",
      "2.29",
-     "514,388"
+     "508,570"
     ],
     [
      "1st Source Corp (SRCE)",
      "0.0",
      "4.37",
-     "501,725"
+     "497,225"
     ],
     [
      "Lakeland Financial Corp (LKFN)",
      "0.0",
      "6.15",
-     "499,173"
+     "496,822"
     ],
     [
      "Wendy's Co/The (WEN)",
      "0.0",
      "39.09",
-     "453,330"
+     "463,228"
     ],
     [
      "Buckle Inc/The (BKE)",
      "0.0",
      "7.54",
-     "422,536"
+     "428,605"
     ],
     [
-     "Preferred Bank/Los Angeles CA (PFBC)",
+     "Flowers Foods Inc (FLO)",
      "0.0",
-     "2.67",
-     "362,352"
+     "52.26",
+     "364,905"
     ]
    ]
   },
@@ -2619,7 +2619,7 @@
    "name": "ACE 미국배당다우존스",
    "index": "미국배당다우존스",
    "proxy": "SCHD",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 72,
    "top": [
     {
@@ -2638,23 +2638,23 @@
      "ticker": "KO",
      "name": "Coca-Cola Co",
      "ko": "",
-     "weight": 4.4
+     "weight": 4.5
     },
     {
      "ticker": "HD",
      "name": "HOME DEPOT",
      "ko": "",
-     "weight": 4.2
+     "weight": 4.3
     },
     {
-     "ticker": "AMGN",
-     "name": "Amgen Corp",
+     "ticker": "PEP",
+     "name": "PEPSICO INC",
      "ko": "",
      "weight": 4.1
     },
     {
-     "ticker": "CVX",
-     "name": "CHEVRON ORD",
+     "ticker": "AMGN",
+     "name": "Amgen Corp",
      "ko": "",
      "weight": 4.0
     },
@@ -2662,29 +2662,29 @@
      "ticker": "COP",
      "name": "ConocoPhillips",
      "ko": "",
-     "weight": 4.0
+     "weight": 3.9
     },
     {
-     "ticker": "PEP",
-     "name": "PEPSICO INC",
+     "ticker": "CVX",
+     "name": "CHEVRON ORD",
      "ko": "",
-     "weight": 4.0
+     "weight": 3.9
+    },
+    {
+     "ticker": "ABT",
+     "name": "ABBOTT LABORATORIES",
+     "ko": "",
+     "weight": 3.8
     },
     {
      "ticker": "QCOM",
      "name": "QUALCOMM Inc",
      "ko": "",
-     "weight": 3.9
-    },
-    {
-     "ticker": "UNH",
-     "name": "Unitedhealth Group",
-     "ko": "",
      "weight": 3.8
     },
     {
-     "ticker": "ABT",
-     "name": "ABBOTT LABORATORIES",
+     "ticker": "VZ",
+     "name": "VERIZON COMMUNICATIONS ORD",
      "ko": "",
      "weight": 3.7
     },
@@ -2692,19 +2692,19 @@
      "ticker": "MRK",
      "name": "Merck & Co",
      "ko": "",
-     "weight": 3.7
+     "weight": 3.6
     },
     {
-     "ticker": "VZ",
-     "name": "VERIZON COMMUNICATIONS ORD",
+     "ticker": "UNH",
+     "name": "Unitedhealth Group",
      "ko": "",
-     "weight": 3.6
+     "weight": 3.5
     },
     {
      "ticker": "ACN",
      "name": "Accenture PLC",
      "ko": "",
-     "weight": 3.5
+     "weight": 3.4
     },
     {
      "ticker": "MO",
@@ -2713,7 +2713,7 @@
      "weight": 3.1
     }
    ],
-   "top_weight": 59.2,
+   "top_weight": 58.8,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -2723,93 +2723,93 @@
    "other": [
     [
      "NAV (%)",
-     "3.61",
-     "-2.11",
-     "0.17"
+     "0.89",
+     "-3.71",
+     "-3.29"
     ],
     [
      "종가 (%)",
-     "3.25",
-     "-3.11",
-     "-0.92"
+     "0.91",
+     "-4.15",
+     "-4.18"
     ],
     [
      "City Holding Co (CHCO)",
      "0.0",
      "3.81",
-     "706,756"
-    ],
-    [
-     "Cohen & Steers Inc (CNS)",
-     "0.0",
-     "7.67",
-     "698,715"
+     "703,746"
     ],
     [
      "WESTERN_UNION (WU)",
      "0.0",
      "84.61",
-     "690,244"
+     "701,069"
+    ],
+    [
+     "Cohen & Steers Inc (CNS)",
+     "0.0",
+     "7.67",
+     "683,881"
     ],
     [
      "German American Bancorp Inc (GABC)",
      "0.0",
      "10.19",
-     "660,146"
+     "657,577"
     ],
     [
      "S&T Bancorp Inc (STBA)",
      "0.0",
      "9.57",
-     "637,968"
+     "634,623"
     ],
     [
      "Insperity Inc (NSP)",
      "0.0",
      "9.74",
-     "632,162"
+     "633,978"
     ],
     [
      "National Bank Holdings Corp (NBHC)",
      "0.0",
      "12.08",
-     "588,068"
+     "586,102"
     ],
     [
      "Federal Agricultural Mortgage Corp (AGM)",
      "0.0",
      "2.53",
-     "568,298"
+     "561,871"
     ],
     [
      "1st Source Corp (SRCE)",
      "0.0",
      "4.84",
-     "555,686"
+     "550,702"
     ],
     [
      "Lakeland Financial Corp (LKFN)",
      "0.0",
      "6.74",
-     "547,061"
+     "544,485"
     ],
     [
      "Wendy's Co/The (WEN)",
      "0.0",
      "43.45",
-     "503,893"
+     "514,895"
     ],
     [
      "Buckle Inc/The (BKE)",
      "0.0",
      "8.38",
-     "469,609"
+     "476,354"
     ],
     [
-     "Preferred Bank/Los Angeles CA (PFBC)",
+     "Flowers Foods Inc (FLO)",
      "0.0",
-     "2.96",
-     "401,709"
+     "57.51",
+     "401,563"
     ]
    ]
   },
@@ -2819,50 +2819,50 @@
    "name": "TIGER 미국테크TOP10 INDXX",
    "index": "미국 테크 TOP10 (Indxx)",
    "proxy": "",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 10,
    "top": [
     {
      "ticker": "AAPL",
      "name": "Apple Inc",
      "ko": "애플",
-     "weight": 21.2
+     "weight": 21.1
     },
     {
      "ticker": "MSFT",
      "name": "MICROSOFT CORP",
      "ko": "마이크로소프트",
-     "weight": 15.3
+     "weight": 15.2
     },
     {
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "엔비디아",
-     "weight": 14.9
+     "weight": 14.4
     },
     {
      "ticker": "GOOGL",
      "name": "Alphabet Inc",
      "ko": "알파벳 A",
-     "weight": 14.0
+     "weight": 14.1
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 10.4
+     "weight": 10.8
     },
     {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
-     "weight": 6.6
+     "weight": 6.8
     },
     {
      "ticker": "META",
      "name": "Meta Platforms Inc-CL A",
      "ko": "메타",
-     "weight": 6.5
+     "weight": 6.4
     },
     {
      "ticker": "TSLA",
@@ -2874,7 +2874,7 @@
      "ticker": "AMD",
      "name": "Advanced Micro Devices Inc",
      "ko": "",
-     "weight": 3.4
+     "weight": 3.5
     },
     {
      "ticker": "MU",
@@ -2893,21 +2893,21 @@
    "other": [
     [
      "NAV (%)",
-     "-10.76",
-     "-12.53",
-     "-20.87"
+     "-8.5",
+     "-10.27",
+     "-20.57"
     ],
     [
      "종가 (%)",
-     "-10.46",
-     "-11.48",
-     "-19.84"
+     "-8.24",
+     "-8.69",
+     "-19.11"
     ],
     [
      "원화현금 (KRD010010001)",
      "0.0",
-     "299,852",
-     "299,852"
+     "291,878",
+     "291,878"
     ],
     [
      "26.09",
@@ -2937,20 +2937,20 @@
    "name": "ACE 미국빅테크TOP7 Plus",
    "index": "미국 빅테크 TOP7 Plus",
    "proxy": "",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 10,
    "top": [
     {
      "ticker": "AAPL",
      "name": "Apple Inc",
      "ko": "애플",
-     "weight": 17.9
+     "weight": 17.8
     },
     {
      "ticker": "AMZN",
      "name": "Amazon.com Inc",
      "ko": "아마존",
-     "weight": 16.9
+     "weight": 17.4
     },
     {
      "ticker": "MSFT",
@@ -2968,19 +2968,19 @@
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "엔비디아",
-     "weight": 11.2
-    },
-    {
-     "ticker": "META",
-     "name": "Meta Platforms Inc-CL A",
-     "ko": "메타",
-     "weight": 9.8
+     "weight": 10.8
     },
     {
      "ticker": "SPCX",
      "name": "Space Exploration Technologies Corp",
      "ko": "스페이스X",
-     "weight": 9.6
+     "weight": 9.7
+    },
+    {
+     "ticker": "META",
+     "name": "Meta Platforms Inc-CL A",
+     "ko": "메타",
+     "weight": 9.7
     },
     {
      "ticker": "TSLA",
@@ -2992,7 +2992,7 @@
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "브로드컴",
-     "weight": 1.7
+     "weight": 1.8
     },
     {
      "ticker": "MU",
@@ -3001,7 +3001,7 @@
      "weight": 1.2
     }
    ],
-   "top_weight": 100.2,
+   "top_weight": 100.3,
    "cash_weight": 0.0,
    "asia_weight": 0,
    "asia": [],
@@ -3011,21 +3011,21 @@
    "other": [
     [
      "NAV (%)",
-     "-8.54",
-     "-11.6",
-     "-15.63"
+     "-6.31",
+     "-9.49",
+     "-15.22"
     ],
     [
      "종가 (%)",
-     "-8.59",
-     "-10.79",
-     "-14.65"
+     "-5.95",
+     "-7.73",
+     "-13.53"
     ],
     [
      "원화현금 (KRD010010001)",
      "-0.2",
-     "-2,621,039",
-     "-2,621,039"
+     "-2,686,269",
+     "-2,686,269"
     ],
     [
      "26.09",
@@ -3055,62 +3055,62 @@
    "name": "TIGER 미국우주테크",
    "index": "미국 우주테크 (Akros)",
    "proxy": "",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 10,
    "top": [
     {
      "ticker": "SPCX",
      "name": "Space Exploration Technologies Corp",
      "ko": "스페이스X",
-     "weight": 28.9
+     "weight": 29.9
     },
     {
      "ticker": "RKLB",
      "name": "Rocket Lab USA Inc",
      "ko": "",
-     "weight": 14.6
+     "weight": 14.4
     },
     {
      "ticker": "LUNR",
      "name": "Intuitive Machines Inc",
      "ko": "",
-     "weight": 14.3
+     "weight": 13.4
     },
     {
      "ticker": "RDW",
      "name": "Redwire Corporation",
      "ko": "",
-     "weight": 12.0
+     "weight": 12.3
     },
     {
      "ticker": "ECHO",
      "name": "EchoStar Corporation",
      "ko": "",
-     "weight": 9.6
+     "weight": 9.5
     },
     {
      "ticker": "PL",
      "name": "Planet Labs PBC",
      "ko": "",
-     "weight": 6.6
+     "weight": 6.5
     },
     {
      "ticker": "ASTS",
      "name": "AST SpaceMobile Inc",
      "ko": "",
-     "weight": 4.0
-    },
-    {
-     "ticker": "FLY",
-     "name": "Firefly Aerospace Inc",
-     "ko": "",
-     "weight": 3.4
+     "weight": 3.8
     },
     {
      "ticker": "MDA",
      "name": "MDA Space Ltd",
      "ko": "",
-     "weight": 3.4
+     "weight": 3.6
+    },
+    {
+     "ticker": "FLY",
+     "name": "Firefly Aerospace Inc",
+     "ko": "",
+     "weight": 3.3
     },
     {
      "ticker": "VOYG",
@@ -3119,8 +3119,8 @@
      "weight": 2.9
     }
    ],
-   "top_weight": 99.7,
-   "cash_weight": 0.3,
+   "top_weight": 99.6,
+   "cash_weight": 0.4,
    "asia_weight": 0,
    "asia": [],
    "rest_weight": 0.0,
@@ -3129,21 +3129,21 @@
    "other": [
     [
      "NAV (%)",
-     "-7.49",
-     "-35.6",
-     "-56.66"
+     "-5.03",
+     "-34.16",
+     "-58.77"
     ],
     [
      "종가 (%)",
-     "-7.38",
-     "-33.15",
-     "-56.5"
+     "-5.16",
+     "-31.11",
+     "-57.73"
     ],
     [
      "원화현금 (KRD010010001)",
      "0.3",
-     "844,995",
-     "844,995"
+     "790,801",
+     "790,801"
     ],
     [
      "26.09",
@@ -3173,38 +3173,38 @@
    "name": "KODEX 미국반도체",
    "index": "미국 반도체 (MVIS 25)",
    "proxy": "SMH",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 25,
    "top": [
     {
      "ticker": "NVDA",
      "name": "NVIDIA Corp",
      "ko": "",
-     "weight": 17.4
+     "weight": 16.9
     },
     {
      "ticker": "TSM",
      "name": "TAIWAN SEMICONDUCTOR-SP ADR",
      "ko": "",
-     "weight": 9.6
+     "weight": 9.7
     },
     {
      "ticker": "AVGO",
      "name": "BROADCOM LTD",
      "ko": "",
-     "weight": 6.7
-    },
-    {
-     "ticker": "TXN",
-     "name": "TEXAS INSTRUMENTS",
-     "ko": "",
-     "weight": 6.4
+     "weight": 6.9
     },
     {
      "ticker": "AMD",
      "name": "ADVANCED MICRO DEVICES",
      "ko": "",
-     "weight": 6.0
+     "weight": 6.4
+    },
+    {
+     "ticker": "TXN",
+     "name": "TEXAS INSTRUMENTS",
+     "ko": "",
+     "weight": 6.3
     },
     {
      "ticker": "ADI",
@@ -3216,13 +3216,7 @@
      "ticker": "ASML",
      "name": "ASML HOLDING",
      "ko": "",
-     "weight": 4.5
-    },
-    {
-     "ticker": "QCOM",
-     "name": "QUALCOMM Inc",
-     "ko": "",
-     "weight": 4.5
+     "weight": 4.6
     },
     {
      "ticker": "KLAC",
@@ -3233,6 +3227,12 @@
     {
      "ticker": "MU",
      "name": "MICRON TECH",
+     "ko": "",
+     "weight": 4.3
+    },
+    {
+     "ticker": "QCOM",
+     "name": "QUALCOMM Inc",
      "ko": "",
      "weight": 4.3
     },
@@ -3277,27 +3277,27 @@
    "other": [
     [
      "NAV (%)",
-     "-17.54",
-     "-26.94",
-     "-26.65"
+     "-14.91",
+     "-23.38",
+     "-25.99"
     ],
     [
      "기초지수 (%)",
-     "-17.2",
-     "-26.59",
-     "-26.26"
+     "-14.7",
+     "-23.15",
+     "-25.72"
     ],
     [
      "종가 (%)",
-     "-16.12",
-     "-24.66",
-     "-24.88"
+     "-15.13",
+     "-20.78",
+     "-23.66"
     ],
     [
      "원화현금 (KRD010010001)",
      "0.0",
-     "-71,986",
-     "-71,986"
+     "-140,464",
+     "-140,464"
     ],
     [
      "26.09",
@@ -4301,7 +4301,7 @@
    "name": "ACE 미국30년국채액티브(H)",
    "index": "미국 30년 국채 (환헤지)",
    "proxy": "TLT",
-   "asof": "2026-11-19 확인",
+   "asof": "2026-11-20 확인",
    "n_total": 0,
    "top": [],
    "top_weight": 0,
@@ -7401,7 +7401,7 @@
    "name": "KODEX 미국배당다우존스",
    "index": "미국배당다우존스",
    "proxy": "SCHD",
-   "asof": "2026-11-19 받음",
+   "asof": "2026-11-20 받음",
    "n_total": 72,
    "top": [
     {
@@ -7420,23 +7420,23 @@
      "ticker": "KO",
      "name": "THE COCA-COLA CO",
      "ko": "",
-     "weight": 4.4
+     "weight": 4.5
     },
     {
      "ticker": "HD",
      "name": "HOME DEPOT INC",
      "ko": "",
-     "weight": 4.2
+     "weight": 4.3
     },
     {
-     "ticker": "AMGN",
-     "name": "AMGEN INC",
+     "ticker": "PEP",
+     "name": "PEPSICO INC",
      "ko": "",
      "weight": 4.1
     },
     {
-     "ticker": "CVX",
-     "name": "CHEVRON CORP",
+     "ticker": "AMGN",
+     "name": "AMGEN INC",
      "ko": "",
      "weight": 4.0
     },
@@ -7444,29 +7444,29 @@
      "ticker": "COP",
      "name": "CONOCOPHILLIPS",
      "ko": "",
-     "weight": 4.0
+     "weight": 3.9
     },
     {
-     "ticker": "PEP",
-     "name": "PEPSICO INC",
+     "ticker": "CVX",
+     "name": "CHEVRON CORP",
      "ko": "",
-     "weight": 4.0
+     "weight": 3.9
+    },
+    {
+     "ticker": "ABT",
+     "name": "ABBOTT LABORATORIES",
+     "ko": "",
+     "weight": 3.8
     },
     {
      "ticker": "QCOM",
      "name": "QUALCOMM Inc",
      "ko": "",
-     "weight": 3.9
-    },
-    {
-     "ticker": "UNH",
-     "name": "UNITEDHEALTH GROUP INC",
-     "ko": "",
      "weight": 3.8
     },
     {
-     "ticker": "ABT",
-     "name": "ABBOTT LABORATORIES",
+     "ticker": "VZ",
+     "name": "VERIZON COMMUNICATIONS INC",
      "ko": "",
      "weight": 3.7
     },
@@ -7477,16 +7477,16 @@
      "weight": 3.7
     },
     {
-     "ticker": "VZ",
-     "name": "VERIZON COMMUNICATIONS INC",
+     "ticker": "UNH",
+     "name": "UNITEDHEALTH GROUP INC",
      "ko": "",
-     "weight": 3.6
+     "weight": 3.5
     },
     {
      "ticker": "ACN",
      "name": "ACCENTURE PLC-CL A",
      "ko": "",
-     "weight": 3.5
+     "weight": 3.4
     },
     {
      "ticker": "MO",
@@ -7495,7 +7495,7 @@
      "weight": 3.1
     }
    ],
-   "top_weight": 59.2,
+   "top_weight": 58.9,
    "cash_weight": 0,
    "asia_weight": 0,
    "asia": [],
@@ -7505,93 +7505,93 @@
    "other": [
     [
      "NAV (%)",
-     "3.69",
-     "-1.96",
-     "0.32"
+     "0.93",
+     "-3.58",
+     "-3.17"
     ],
     [
      "기초지수 (%)",
-     "3.47",
-     "-2.7",
-     "-1.1"
+     "0.7",
+     "-4.35",
+     "-4.55"
     ],
     [
      "종가 (%)",
-     "3.06",
-     "-3.18",
-     "-0.97"
+     "0.92",
+     "-4.18",
+     "-4.14"
     ],
     [
      "City Holding Co (CHCO US)",
      "0.0",
      "3.23",
-     "599,165"
-    ],
-    [
-     "COHEN & STEERS (CNS US)",
-     "0.0",
-     "6.51",
-     "593,042"
+     "596,614"
     ],
     [
      "WESTERN UNION CO (WU US)",
      "0.0",
-     "71.83",
-     "585,986"
+     "71.85",
+     "595,341"
+    ],
+    [
+     "COHEN & STEERS (CNS US)",
+     "0.0",
+     "6.52",
+     "581,344"
     ],
     [
      "German American Bancorp Inc (GABC US)",
      "0.0",
-     "8.65",
-     "560,379"
+     "8.66",
+     "558,843"
     ],
     [
      "S&T Bancorp Inc (STBA US)",
      "0.0",
      "8.12",
-     "541,306"
+     "538,468"
     ],
     [
      "Insperity Inc (NSP US)",
      "0.0",
      "8.27",
-     "536,754"
+     "538,295"
     ],
     [
      "National Bank Holdings Corp (NBHC US)",
      "0.0",
      "10.26",
-     "499,468"
+     "497,798"
     ],
     [
      "Federal Agricultural Mortgage Corp (AGM US)",
      "0.0",
      "2.15",
-     "482,941"
+     "477,479"
     ],
     [
      "1st Source Corp (SRCE US)",
      "0.0",
-     "4.1",
-     "470,726"
+     "4.11",
+     "467,641"
     ],
     [
      "Lakeland Financial Corp (LKFN US)",
      "0.0",
      "5.73",
-     "465,083"
+     "462,893"
     ],
     [
      "Wendy's Co/The (WEN US)",
      "0.0",
-     "36.89",
-     "427,817"
+     "36.9",
+     "437,276"
     ],
     [
      "BUCKLE INC/THE (BKE US)",
      "0.0",
      "7.11",
-     "398,439"
+     "404,162"
     ]
    ]
   },
@@ -9847,5 +9847,80 @@
    ]
   }
  },
- "errors": []
+ "errors": [
+  "426030 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "426030 TIME 미국나스닥100액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "486290 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "486290 TIGER 미국나스닥100타겟데일리커버드콜: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "494300 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "494300 KODEX 미국나스닥100데일리커버드콜OTM: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "482730 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "482730 TIGER 미국S&P500타겟데일리커버드콜: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "441640 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "441640 KODEX 미국배당커버드콜액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "457480 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "457480 ACE 테슬라밸류체인액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0167Z0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0167Z0 KODEX 미국우주항공: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0131V0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0131V0 1Q 미국우주항공테크: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0173Y0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0173Y0 KODEX 미국AI광통신네트워크: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "487230 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "487230 KODEX 미국AI전력핵심인프라: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "497570 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "497570 TIGER 미국필라델피아AI반도체나스닥: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0023A0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0023A0 SOL 미국양자컴퓨팅TOP10: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0038A0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0038A0 KODEX 미국휴머노이드로봇: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "456600 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "456600 TIME 글로벌AI인공지능액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "446770 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "446770 ACE 글로벌반도체TOP4 Plus: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "442580 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "442580 PLUS 글로벌HBM반도체: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "483320 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "483320 ACE 엔비디아밸류체인액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0015B0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0015B0 KoAct 미국나스닥성장기업액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "491010 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "491010 TIGER 글로벌AI전력인프라액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "498270 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "498270 KIWOOM 미국양자컴퓨팅: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0180V0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0180V0 ACE 미국우주테크액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0051G0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0051G0 SOL 미국원자력SMR: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "203780 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "203780 TIGER 미국나스닥바이오: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "418670 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "418670 TIGER 글로벌AI사이버보안: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "449180 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "449180 KODEX 미국S&P500(H): 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "448290 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "448290 TIGER 미국S&P500(H): 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "314250 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "314250 KODEX 미국빅테크10(H): 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "485540 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "485540 KODEX 미국AI테크TOP10: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "483340 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "483340 ACE 구글밸류체인액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0151S0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0151S0 KODEX 미국AI반도체TOP3플러스: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0127P0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0127P0 ACE 미국대형성장주액티브: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "0142D0 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "0142D0 TIGER 미국AI데이터센터TOP4Plus: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "458760 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "458760 TIGER 미국배당다우존스타겟커버드콜2호: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "490590 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "490590 RISE 미국AI밸류체인데일리고정커버드콜: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "491620 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "491620 RISE 미국테크100데일리고정커버드콜: 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "449190 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "449190 KODEX 미국나스닥100(H): 구성종목을 못 받아서 이전 값을 그대로 둬요",
+  "448300 FunETF: HTTPError: HTTP Error 429: Too Many Requests",
+  "448300 TIGER 미국나스닥100(H): 구성종목을 못 받아서 이전 값을 그대로 둬요"
+ ]
 }
