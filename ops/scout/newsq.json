@@ -1,18 +1,58 @@
 {
-"updated_kst": "2026-11-19 14:50",
-"rot": 0,
+"updated_kst": "2026-11-19 15:14",
+"rot": 60,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "40건",
+"Reuters": "43건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "f46dc476fa30",
+"t": "NVDA",
+"title": "Michaël Van De Poppe Says BTC Demand Will Come After Liquidity Is Sucked Into Anthropic IPO — Critics Dispute Mega-IPO Squeeze Narrative",
+"url": "https://stocktwits.com/news-articles/markets/cryptocurrency/michael-van-de-poppe-says-btc-demand-will-come-after-liquidity-is-sucked-into-anthropic-ipo-critics-dispute-mega-ipo-squeeze-narrative/cNbLzDOR9ij?.tsrc=rss",
+"pub": "2026-11-19T06:02:09+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:14:25+00:00"
+},
+{
+"id": "b92bf9ecf6b0",
+"t": "SPCX",
+"title": "ASTS Stock Jumps Overnight Despite New Shares For Engines And Spectrum — Bulls Cheer ULA’s Amazon Launch Clue",
+"url": "https://stocktwits.com/news-articles/markets/equity/asts-new-shares-engines-spectrum-bulls-ula-amazon-launch-clue/cNbLyqER9iS?.tsrc=rss",
+"pub": "2026-11-19T05:57:36+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:14:25+00:00"
+},
+{
+"id": "c02830d55300",
+"t": "NVDA",
+"title": "Anthropic’s Cash Pile Tops Amazon And Nvidia Combined After Record IPO – Meet The New ETF Tracking ANT-Linked Companies",
+"url": "https://stocktwits.com/news-articles/markets/equity/anthropic-s-cash-pile-tops-amazon-and-nvidia-combined-after-record-ipo-meet-the-new-etf-tracking-ant-linked-companies/cNbLyKgR9i1?.tsrc=rss",
+"pub": "2026-11-19T05:47:57+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:14:25+00:00"
+},
+{
+"id": "c45265c8f7a3",
+"t": "SPCX",
+"title": "Why Anthropic Could Be a $5 Trillion Company By 2030",
+"url": "https://www.fool.com/investing/2026/11/19/why-anthropic-could-be-a-usd5-trillion-by-2030/?.tsrc=rss",
+"pub": "2026-11-19T05:39:30+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:14:25+00:00"
+},
 {
 "id": "e2d6a439bf92",
 "t": "JPM",
@@ -64,6 +104,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "521fb42dd06d",
+"t": "NOK",
+"title": "What Is Nokia Oyj (HLSE:NOKIA) Gaining From The AI Gigafactory Northern Push?",
+"url": "https://finance.yahoo.com/technology/ai/articles/nokia-oyj-hlse-nokia-gaining-051748791.html?.tsrc=rss",
+"pub": "2026-11-19T05:17:48+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:14:25+00:00"
+},
+{
 "id": "23f467e2c413",
 "t": "NVDA",
 "title": "Nvidia (NVDA) Rules Out Jensen Huang Return As Record Q3 Reshapes Leadership",
@@ -74,6 +124,26 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "8d0058251a30",
+"t": "GSAT",
+"title": "Globalstar (GSAT) Stock Looks Stretched Following France C 3 Approval",
+"url": "https://finance.yahoo.com/markets/stocks/articles/globalstar-gsat-stock-looks-stretched-051453593.html?.tsrc=rss",
+"pub": "2026-11-19T05:14:53+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:14:25+00:00"
+},
+{
+"id": "571cf1a09e86",
+"t": "ONTO",
+"title": "Intel Stock And The Chipmaking Picks Investors May Be Missing",
+"url": "https://finance.yahoo.com/markets/stocks/articles/intel-stock-chipmaking-picks-investors-051326573.html?.tsrc=rss",
+"pub": "2026-11-19T05:13:26+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:14:25+00:00"
+},
+{
 "id": "f6880e00e2e9",
 "t": "AMZN",
 "title": "Lyft Sees Strong Start to Quarter as Rider Incentives Pay Off, but CEO Urges Caution",
@@ -82,6 +152,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T05:44:38+00:00"
+},
+{
+"id": "961ee99302bf",
+"t": "MDA",
+"title": "Is MDA Space (TSX:MDA) Priced For Its Future Cash Flow?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/mda-space-tsx-mda-priced-051219304.html?.tsrc=rss",
+"pub": "2026-11-19T05:12:19+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
 "id": "c14f82ef56cf",
@@ -7934,84 +8014,64 @@
 "seen": "2026-11-18T15:58:40+00:00"
 },
 {
-"id": "132d41b4618f",
-"t": "AVGO",
-"title": "Nvidia Is Well Off Its Highs, but Our Model Still Sees 29% Upside",
-"url": "https://247wallst.com/investing/2026/11/18/nvidia-is-well-off-its-highs-but-our-model-still-sees-29-upside/?.tsrc=rss",
-"pub": "2026-11-18T15:33:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "b0f7b4e36fce",
+"t": "",
+"title": "China's President Xi: I remain dedicated to cooperating with you",
+"url": "https://www.financialjuice.com/News/9859358/Chinas-President-Xi-I-remain-dedicated-to-cooperating-with-you.aspx?xy=rss",
+"pub": "2026-11-19T06:03:31+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
-"id": "e537b1f17e70",
-"t": "IBM",
-"title": "Real World Evidence (RWE) Solutions - Global Strategic Business Report 2026",
-"url": "https://finance.yahoo.com/healthcare/articles/real-world-evidence-rwe-solutions-153300000.html?.tsrc=rss",
-"pub": "2026-11-18T15:33:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "611f4ca2117c",
+"t": "",
+"title": "China’s President Xi: forging a constructive China-U.S. relationship of strategic stability is unprecedented",
+"url": "https://www.financialjuice.com/News/9859357/Chinas-President-Xi-forging-a-constructive-China-US-relationship-of-strategic-stability-is-unprecedented.aspx?xy=rss",
+"pub": "2026-11-19T06:03:18+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
-"id": "c90709666a37",
-"t": "TSM",
-"title": "Why You Should Buy and Hold Taiwan Semiconductor (TSM) for Three Years",
-"url": "https://finance.yahoo.com/markets/stocks/articles/why-buy-hold-taiwan-semiconductor-153219281.html?.tsrc=rss",
-"pub": "2026-11-18T15:32:19+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "9064c606fb98",
+"t": "",
+"title": "Trump: plans to discuss ending Ukraine war with Xi and later with Putin in trilateral meeting",
+"url": "https://www.financialjuice.com/News/9859356/Trump-plans-to-discuss-ending-Ukraine-war-with-Xi-and-later-with-Putin-in-trilateral-meeting.aspx?xy=rss",
+"pub": "2026-11-19T06:03:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
-"id": "3b60648bf415",
-"t": "AAPL",
-"title": "Why does the internet keep breaking? It’s not the end of the world – it might be something more scary",
-"url": "https://www.independent.co.uk/tech/internet-down-outages-not-working-apple-microsoft-outlook-b3087293.html?.tsrc=rss",
-"pub": "2026-11-18T15:32:12+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "20c5ad2a982b",
+"t": "",
+"title": "China's President Xi: China-U.S. relations generally stable and improving",
+"url": "https://www.financialjuice.com/News/9859355/Chinas-President-Xi-China-US-relations-generally-stable-and-improving.aspx?xy=rss",
+"pub": "2026-11-19T06:02:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
-"id": "89a80c5d72c1",
-"t": "NVDA",
-"title": "AI, data center demand drive Nvidia revenue to $115.8B in Q3",
-"url": "https://www.manufacturingdive.com/news/nvidia-revenue-reaches-1158b-q3-more-than-double-year-over-year/874956/?.tsrc=rss",
-"pub": "2026-11-18T15:32:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "bba7a519c075",
+"t": "",
+"title": "China's President Xi: willing to cooperate with Trump to keep China-U.S. relations on right track",
+"url": "https://www.financialjuice.com/News/9859354/Chinas-President-Xi-willing-to-cooperate-with-Trump-to-keep-China-US-relations-on-right-track.aspx?xy=rss",
+"pub": "2026-11-19T06:01:57+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
-"id": "70b802d93eb9",
-"t": "AMZN",
-"title": "Here’s Why Amazon.com Is One of the Best Blue Chip Stocks to Buy and Hold for 3 Years",
-"url": "https://finance.yahoo.com/markets/stocks/articles/why-amazon-com-one-best-153137873.html?.tsrc=rss",
-"pub": "2026-11-18T15:31:37+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
-},
-{
-"id": "094cbf64f1ab",
-"t": "CVX",
-"title": "Is Exxon Mobil Stock a Good Fit For Your Portfolio Risk?",
-"url": "https://www.trefis.com/stock/xom/articles/626210/is-exxon-mobil-stock-a-good-fit-for-your-portfolio-risk/2026-11-18?.tsrc=rss",
-"pub": "2026-11-18T15:31:17+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
-},
-{
-"id": "6b8121ab4329",
-"t": "NVDA",
-"title": "BC-Most Active Stocks",
-"url": "https://finance.yahoo.com/markets/stocks/articles/bc-most-active-stocks-153023964.html?.tsrc=rss",
-"pub": "2026-11-18T15:30:23+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:44:08+00:00"
+"id": "9626273a5a0b",
+"t": "",
+"title": "Saudi-led coalition: intercepts and destroys four ballistic missiles launched by Yemen's Houthis toward southern region",
+"url": "https://www.financialjuice.com/News/9859344/Saudi-led-coalition-intercepts-and-destroys-four-ballistic-missiles-launched-by-Yemens-Houthis-toward-southern-region.aspx?xy=rss",
+"pub": "2026-11-19T05:55:47+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
 "id": "b5468e1eabd8",
@@ -8704,6 +8764,16 @@
 "seen": "2026-11-19T04:44:32+00:00"
 },
 {
+"id": "52a560804ef3",
+"t": "",
+"title": "Anthropic Raises $81 Billion in Biggest IPO Ever",
+"url": "https://www.wsj.com/finance/stocks/anthropic-prices-ipo-at-83-a-share-0290494c?mod=rss_markets_main",
+"pub": "2026-11-19T04:19:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
+},
+{
 "id": "7daf5d482e65",
 "t": "",
 "title": "India economic affairs secy: no need to use economic stabilisation fund in FY27",
@@ -8762,6 +8832,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T05:50:30+00:00"
+},
+{
+"id": "1cf2f2c953b0",
+"t": "",
+"title": "3457.JSA - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPeVVTclpMTURKekFtVnFYR3BOVU5fMDBzYTRQMlNaLU9SakhIMzB6Zk91R3ZheENRQ2xEamphdE9OUlJNeFNoY2dybmdRWTVtNkU2MDBPMV9TZE5HMFcyMW9BMkY2M0F1bzFobW04ZUZjbnhSUUtsaUtwMTluX3ZjWGhrdjQ?oc=5",
+"pub": "2026-11-19T04:06:58+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
 "id": "a0e092e64ee9",
@@ -9252,6 +9332,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T03:14:38+00:00"
+},
+{
+"id": "c96552dae621",
+"t": "",
+"title": "Singapore Dollar Consolidates, but May Be Weighed by Fed Rate-Hike Expectations",
+"url": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-face-drag-from-fed-rate-bets-50c20e86?mod=rss_markets_main",
+"pub": "2026-11-19T02:40:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T06:14:25+00:00"
 },
 {
 "id": "212e4a8e14c2",
@@ -10922,96 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "eaa482fbd18b",
-"t": "",
-"title": "Australia October employment drops 43.5k seasonally adjusted versus poll of +25.0k",
-"url": "https://www.financialjuice.com/News/9858808/Australia-October-employment-drops-435k-seasonally-adjusted-versus-poll-of-250k.aspx?xy=rss",
-"pub": "2026-11-19T00:30:05+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "6da62f58bac3",
-"t": "",
-"title": "Australia October employment drops 43.5k seasonally adjusted versus poll of +25.0k",
-"url": "https://www.financialjuice.com/News/9858808/Australia-October-employment-drops-435k-seasonally-adjusted-versus-poll-of-250k.aspx",
-"pub": "2026-11-19T00:30:05+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "ef93d01de45f",
-"t": "",
-"title": "Australia Oct participation rate rises 66.6%, seasonally adjusted poll shows 66.8%",
-"url": "https://www.financialjuice.com/News/9858807/Australia-Oct-participation-rate-rises-666-seasonally-adjusted-poll-shows-668.aspx?xy=rss",
-"pub": "2026-11-19T00:30:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "916ce4913f86",
-"t": "",
-"title": "Australia October unemployment rate rises 4.9%, poll expected 4.7%",
-"url": "https://www.financialjuice.com/News/9858806/Australia-October-unemployment-rate-rises-49-poll-expected-47.aspx?xy=rss",
-"pub": "2026-11-19T00:30:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "0acbb4c6590e",
-"t": "",
-"title": "Australia October full-time jobs slip 2,900 seasonally adjusted",
-"url": "https://www.financialjuice.com/News/9858805/Australia-October-full-time-jobs-slip-2900-seasonally-adjusted.aspx?xy=rss",
-"pub": "2026-11-19T00:30:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
-},
-{
-"id": "69e4a18b0731",
-"t": "",
-"title": "Australia Oct participation rate rises 66.6%, seasonally adjusted poll shows 66.8%",
-"url": "https://www.financialjuice.com/News/9858807/Australia-Oct-participation-rate-rises-666-seasonally-adjusted-poll-shows-668.aspx",
-"pub": "2026-11-19T00:30:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "6433b9759f6d",
-"t": "",
-"title": "Australia October unemployment rate rises 4.9%, poll expected 4.7%",
-"url": "https://www.financialjuice.com/News/9858806/Australia-October-unemployment-rate-rises-49-poll-expected-47.aspx",
-"pub": "2026-11-19T00:30:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "bda5e11b34e6",
-"t": "",
-"title": "Australia October full-time jobs slip 2,900 seasonally adjusted",
-"url": "https://www.financialjuice.com/News/9858805/Australia-October-full-time-jobs-slip-2900-seasonally-adjusted.aspx",
-"pub": "2026-11-19T00:30:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:43:43+00:00"
-},
-{
-"id": "1da958976153",
-"t": "",
-"title": "Australian Employment Change Actual -43.5k (Forecast 25k, Previous -39.3k)",
-"url": "https://www.financialjuice.com/News/9858804/Australian-Employment-Change-Actual--435k-Forecast-25k-Previous--393k.aspx?xy=rss",
-"pub": "2026-11-19T00:30:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T00:35:31+00:00"
 }
 ]
 }
