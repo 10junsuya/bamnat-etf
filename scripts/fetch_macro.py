@@ -76,15 +76,22 @@ NEXT_SERIES = {"cpi": "CPIAUCSL", "pce": "PCEPI", "ppi": "PPIFIS", "nfp": "PAYEM
                "m2": "M2SL"}  # FOMC는 FRED 시리즈가 매일 갱신돼 회의일이 안 나와요 → 앱에서 연준 공식 일정으로 확인
 
 
+REL_TIME = {"M2SL": (13, 0)}  # 발표 시각(미국 동부). 없으면 08:30 (CPI·PPI·고용·PCE·소매판매·실업수당)
+
+
 def fred_next_release(sid):
     """이 시리즈가 실린 발표의 다음 공식 발표일(미국 날짜). FRED가 발표 기관 일정표를 그대로 받아 둬요."""
     rid = get("https://api.stlouisfed.org/fred/series/release?" + urllib.parse.urlencode(
         {"series_id": sid, "api_key": FRED_KEY, "file_type": "json"}))["releases"][0]["id"]
-    today = dt.datetime.now(ET).date().isoformat()
+    now = dt.datetime.now(ET)
+    today = now.date().isoformat()
     j = get("https://api.stlouisfed.org/fred/release/dates?" + urllib.parse.urlencode(
         {"release_id": rid, "api_key": FRED_KEY, "file_type": "json", "sort_order": "asc", "limit": 10,
          "realtime_start": today, "realtime_end": "9999-12-31", "include_release_dates_with_no_data": "true"}))
-    ds = [x["date"] for x in j.get("release_dates", []) if x["date"] >= today]
+    # 대표 승인 20번(2026-11-19): 발표 당일, 발표 시각이 지났으면 그날은 '다음'이 아니에요 → 그다음 공식 발표일
+    hh, mm = REL_TIME.get(sid, (8, 30))
+    passed = now >= now.replace(hour=hh, minute=mm, second=0, microsecond=0)
+    ds = [x["date"] for x in j.get("release_dates", []) if x["date"] > today or (x["date"] == today and not passed)]
     return ds[0] if ds else None
 
 

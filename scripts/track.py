@@ -73,16 +73,22 @@ class Px:
 
     def __init__(self, closes):
         self.c = {d: {TK(t): v for t, v in row.items()} for d, row in closes.items()}
+        # 대표 승인 21번(2026-11-19): 토·일 날짜, 종목이 거의 없는 날짜(예: 11/15 일요일 SMERY 1종목)는
+        # '직전 미국 날짜'로 쓰지 않아요 — 그 칸 하나 때문에 하루 예측이 통째로 빠졌어요
+        ns = sorted(len(r) for r in self.c.values() if r)
+        med = ns[len(ns) // 2] if ns else 0
+        self.ok = {d for d, r in self.c.items()
+                   if dt.date.fromisoformat(d).weekday() < 5 and len(r) >= max(3, 0.3 * med)}
 
     def days(self):
-        return sorted(self.c)
+        return sorted(self.ok)
 
     def get(self, t, d):
         v = self.c.get(d, {}).get(t)
         return v if isinstance(v, (int, float)) and v > 0 else None
 
     def prev(self, d):
-        ks = [x for x in self.c if x < d]
+        ks = [x for x in self.ok if x < d]
         return max(ks) if ks else None
 
 
@@ -160,7 +166,7 @@ def main():
         from fetch_live import daily_closes  # noqa: E402
         names = sorted({m["proxy"] for m in M.values() if m["kind"] != "pdf" and m["proxy"]} |
                        {t for m in M.values() if m["kind"] == "pdf" for t, _ in m["top"]})
-        alias = {"BRKB": "BRK-B", "MOGA": "MOG-A", "BFB": "BF-B"}
+        from us_sym import US_SYM as alias  # noqa: E402  앱(index.html US_SYM)과 같은 표 (대표 승인 23번)
         got = 0
         for t in names:
             for d, v in (daily_closes(alias.get(t, t)) or {}).items():

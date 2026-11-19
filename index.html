@@ -877,6 +877,9 @@ let LIVE = readData("d-live") || {};
 const HOLD = readData("d-holdings") || {};
 const LV = {src:"저장", at:LIVE.generated_at_kst||"", quoteT:"", fxDate:"", fxSrc:"", navDate:"", kr:"", U:"", ok:false};
 const TK = t => String(t||"").replace(/[-.]/g,"");
+/* 기호가 들어간 미국 티커: 앱 이름(BRKB) → 시세 이름(BRK-B). scripts/track.py·scout.py 도 이 표를 그대로 읽어요 (대표 승인 23번, 2026-11-19) */
+const US_SYM = {"BRKB":"BRK-B","MOGA":"MOG-A","BFB":"BF-B"};
+const usT = t => US_SYM[t] || t;
 const isoAdd = (s,n) => { const d = new Date(s+"T00:00:00Z"); d.setUTCDate(d.getUTCDate()+n); return d.toISOString().slice(0,10); };
 const krOpenDay = s => { const wd = new Date(s+"T00:00:00Z").getUTCDay(); return wd>0 && wd<6 && !KRX_HOL.some(h=>h[0]===s); };
 const usOpenDay = s => { const [y,m,d] = s.split("-").map(Number); return usTradingDay(y,m,d); };
@@ -934,6 +937,7 @@ function applyLive(){
   const usNow = usState(parts(now(),"America/New_York")).key, kus = LIVE.kus || {};
   const fresh = v => v && v.t && Date.now()-new Date(v.t) < 1200e3;  // 20분 안에 받은 값만 (서버가 2분마다 비중 큰 순으로 돌며 미리 받아 둔 값 포함)
   LV.kisN = 0; LV.xN = 0; LV.xBad = 0;
+  LV.old = {}; for(const [k,v] of Object.entries(qs)) if(v && v.old) LV.old[TK(k)] = v.d;  // 미국 장 날로 이틀 넘게 지난 시세 (대표 승인 22번)
   for(const t of Object.keys(STOCKS)){ const k = qs[t] ? t : QK[t]; const q = k ? qs[k] : null; let r = q ? usMove(k) : NaN, p = q ? q.p : NaN;
     // 정규장: 한국투자증권 가격이 있으면 그걸 쓰고, Finnhub(예비)와 2% 넘게 다르면 '대조 차이'로 세요
     const kq = kus[t] || (k ? kus[k] : null);
@@ -998,7 +1002,7 @@ function applyLive(){
     e.close = NaN; e.navReal = false;
     if(!prev){ e.nav = NaN; e.navNote = "기준가 확인 중"; continue; }
     const u0 = prevUs(prev.d), fx0 = fxAt(prev.d)[1];
-    const legs = e.kind!=="pdf" ? [[e.proxy,1]] : e.h.map(([t,w])=>[t==="BRKB"?"BRK-B":t,w]);
+    const legs = e.kind!=="pdf" ? [[e.proxy,1]] : e.h.map(([t,w])=>[usT(t),w]);
     // 비중 합계가 100%가 아니어도(선물 계약 금액 등) 가격이 그대로면 1이 되도록 '1 + 비중 × 등락률'로 계산해요
     let f = 1; for(const [t,w] of legs){ f += w * (usClose(t, LV.U)/usClose(t, u0) - 1); }
     if(e.kind==="pdf" && e.rest) f += e.rest.w * e.rest.r;
@@ -1177,7 +1181,7 @@ function realErrs(e){
   for(let i=1;i<rows.length;i++){ const r0 = rows[i-1], r1 = rows[i];
     const u0 = prevUs(r0.d), u1 = prevUs(r1.d), f0 = fxAt(r0.d)[1], f1 = fxAt(r1.d)[1];
     if(e.kind==="pdf" && e.rest) continue;  // 시세 없는 종목이 있으면 과거 오차는 계산하지 않아요
-    const legs = e.kind!=="pdf" ? [[e.proxy,1]] : e.h.map(([t,w])=>[t==="BRKB"?"BRK-B":t,w]);
+    const legs = e.kind!=="pdf" ? [[e.proxy,1]] : e.h.map(([t,w])=>[usT(t),w]);
     let f = 1; for(const [t,w] of legs) f += w * (usClose(t,u1)/usClose(t,u0) - 1);  // 비중 합계가 100%가 아니어도 치우치지 않게
     f = 1 + ccF(e, f - 1);
     const pred = r0.nav * f * (e.hedge ? 1 : f1/f0);
@@ -1527,6 +1531,8 @@ function earnAfter(t){
 }
 /* 애프터마켓에서 눈에 띄는 움직임(±3% 이상 또는 장후 실적)만 */
 function aftNote(t){ const m = AFTM[t]; if(!okn(m)) return null; const earn = earnAfter(t); return (earn || Math.abs(m) >= 0.03) ? {m, earn} : null; }
+/* 시세가 이틀 넘게 지난 종목: '지난 값 · 날짜' 작은 표시 (대표 승인 22번, 2026-11-19) */
+const oldTag = t => (LV.old||{})[t] ? ` <span class="pend">지난 값 ${mdTxt(LV.old[t])}</span>` : "";
 function holdingsCard(e, c){
   // 시세가 아직 없는 종목(새로 들어온 회사 등)도 목록에서 빼지 않고 '시세 확인 중'으로 보여줘요.
   // 계산은 비중형이면 받은 종목 평균으로, 지수형이면 같은 지수 미국 ETF 움직임으로 채워요(나머지 줄에 포함).
@@ -1542,7 +1548,7 @@ function holdingsCard(e, c){
   const total = e.h.length + (e.rest?e.rest.n:0);
   const row = x => `<button class="row" type="button" data-stock="${x.t}">
       <div class="with-logo">${logo(x.t,true)}<div style="flex:1;min-width:0"><div class="n">${x.name} <span class="t">${sym(x.t)}</span></div>
-        <div class="t num">${CO[x.t]?CO[x.t].tag+" · ":""}비중 ${(x.w*100).toFixed(1)}% · ${usd(x.price)}</div>
+        <div class="t num">${CO[x.t]?CO[x.t].tag+" · ":""}비중 ${(x.w*100).toFixed(1)}% · ${usd(x.price)}${oldTag(x.t)}</div>
         <div class="wbar" style="width:${(x.w/maxW*100).toFixed(0)}%"></div></div></div>
       <div>${x.pending
         ? `<div class="r1 small muted">시세 확인 중</div><div class="r2 num">${e.kind==="pdf" && okn(x.c) ? `기여 약 ${pctp(x.c)}` : "나머지 줄에 포함"}</div>`
@@ -1572,6 +1578,9 @@ function holdingsCard(e, c){
   const usAll = c.fxR===0 ? c.total : (1+c.total)/(1+c.fxR)-1;
   extra += `<div class="row total"><div><div class="n">${e.kind==="bond"?"미국 국채 합계":"미국 주식 합계"}</div></div><div><div class="r1 num ${cls(usAll)}">${pctp(usAll)}</div></div></div>`;
   extra += `<div class="row total"><div><div class="n">환율 효과</div><div class="t num">${e.hedge?"환헤지(H)라 환율 영향을 거의 안 받아요":`${FX.base} → ${FX.now}`}</div></div><div><div class="r1 num ${cls(c.fxC)}">${pctp(c.fxC)}</div></div></div>`;
+  // 운용사 공시 비중을 다 더해 100%를 넘으면 한 줄 안내 (숫자는 공시 그대로 써요 · 대표 승인 25번, 2026-11-19)
+  { const hv = (HOLD.etfs||{})[e.code]; const ws = hv ? (+hv.top_weight||0)+(+hv.asia_weight||0)+(+hv.rest_weight||0)+(+hv.cash_weight||0) : 0;
+    if(ws > 100.5) extra += `<div class="tiny muted" style="margin-top:6px">운용사 공시 비중 합계가 ${ws.toFixed(1)}%예요. 공시 숫자를 그대로 써서 계산해요.</div>`; }
   return `<section class="card"><h2>구성종목 ${q("기여도")}<span class="sub">총 ${total}종목 · ${e.hsrc||"구성종목"}${e.hasof?` · ${String(e.hasof).replace(/^As of /,"")}`:""}</span></h2>
     <div class="seg" role="group" aria-label="정렬">
       <button type="button" data-sort="w" aria-pressed="${sortKey==="w"}">비중순</button>
@@ -2404,7 +2413,7 @@ const IND_X = {
   bok:{min:0, max:4.5, zones:[[2,"완화적","돈을 푸는 쪽이에요."],[3.25,"중립 근처","경기를 밀지도 누르지도 않는 수준으로 많이 봐요."],[3.75,"긴축적","물가를 잡으려고 경기를 누르는 수준이에요. 2023~2024년 3.50%가 여기에 해당해요."],[INF,"강한 긴축","외환위기·금융위기 전후처럼 금리가 아주 높던 시기예요."]],
     chain:["한국 금리","한미 금리 차이","원/달러 환율","해외 ETF 원화 가치"], sens:"fx",
     watch:[["기자회견","총재가 주는 앞으로 방향 힌트"],["반대 위원","금리 결정에 반대한 위원이 있었는지"]]},
-  export:{min:-20, max:30, zones:[[0,"감소","수출이 1년 전보다 줄었어요."],[5,"소폭 증가","조금 늘었어요."],[15,"견조한 증가","탄탄하게 늘고 있어요."],[INF,"급증","크게 늘었어요. 반도체 경기가 좋을 때 자주 나와요."]],
+  export:{min:-30, max:100, zones:[[0,"감소","수출이 1년 전보다 줄었어요."],[5,"소폭 증가","조금 늘었어요."],[15,"견조한 증가","탄탄하게 늘고 있어요."],[INF,"급증","크게 늘었어요. 반도체 경기가 좋을 때 자주 나와요."]],
     chain:["반도체 수출","반도체 업황 기대","반도체 ETF"], sens:"cycle",
     watch:[["반도체","수출 증가율"],"하루 평균 수출액: 영업일 수 차이를 빼고 비교할 수 있어요"]},
   us10y:{min:2, max:6, zones:[[3,"낮음","돈을 빌리는 부담이 적어서 성장주에 우호적인 환경으로 많이 봐요."],[4,"보통","크게 부담되지 않는 수준이에요."],[4.5,"높은 편","성장주(기술주)에 부담이 커지기 시작하는 구간으로 많이 봐요."],[INF,"높음","주식 전반에 부담이 된다는 해석이 많아요."]],
@@ -3559,18 +3568,23 @@ function earnChart(c){
   return `<svg class="echart" viewBox="0 0 ${W} 148" role="img" aria-label="분기 매출 막대그래프"><line class="base" x1="8" x2="${W-4}" y1="${B}" y2="${B}"/>${bars.join("")}</svg>`;
 }
 function rowsH0(q){ return `<div class="pspecs">${q.rows.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join("")}</div>`; }
+function nextEarnEv(t){ const today = ymd(parts(now(),"Asia/Seoul"));
+  return (EVENTS||[]).filter(v=>v.t===t && v.type==="earn" && !v.done && v.d>=today).sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0)[0] || null; }
 function earnHtml(t){
   const q = typeof QREC!=="undefined" ? QREC[t] : null; if(!q) return "";
   const c = q.chart, u = c && c.cur, M = (c && c.metric) || "매출";
   const pct = (a,b) => { const p = (a/b-1)*100; return (p>=0?"+":"−")+Math.abs(p).toFixed(Math.abs(p)<10?1:0)+"%"; };
   const head = !c ? (q.tag?`<div class="elead"><em>${q.tag}</em></div>`:"")+rowsH0(q) : `<div class="elead">${c.now[0]} ${M} <b>${earnAmt(c.now[1],u)}</b>${c.prev?` <em>${pct(c.now[1],c.prev[1])}</em><span class="tiny muted"> 1년 전보다</span>`:""}</div>` ;
   const lines = [];
+  // 「다음 발표」는 일정(events.json)에 확정된 실적 발표가 있으면 그걸 먼저 써요 — 두 파일이 따로 놀지 않게 (대표 승인 24번, 2026-11-19)
+  const nextEv = nextEarnEv(t);
   if(c && c.est){ const p = (c.now[1]/c.est-1)*100; lines.push(["예상 대비", Math.abs(p)<0.5 ? `발표 전 애널리스트 예상(${earnAmt(c.est,u)})과 비슷했어요.` : `발표 전 애널리스트 예상(${earnAmt(c.est,u)})보다 ${Math.abs(p).toFixed(1)}% ${p>0?"많았어요":"적었어요"}.`]); }
   if(c && c.next){ const n = c.next;
     if(n.guide) lines.push(["회사 전망", `${n.label} ${M} ${n.guide[0]===n.guide[1]?earnAmt(n.guide[0],u):`${earnAmt(n.guide[0],u,1).replace(/ (달러|유로|캐나다달러|대만달러|위안|원)$/,"")}~${earnAmt(n.guide[1],u,1)}`}`]);
     else lines.push(["회사 전망", n.gtext ? n.gtext : `${M} 전망을 내지 않아요`]);
     if(n.cons) lines.push(["애널리스트 예상", `${n.label} ${M} ${earnAmt(n.cons,u)}${n.asof?` <span class="tiny muted">(${n.asof} 기준)</span>`:""}`]);
-    if(n.when) lines.push(["다음 발표", n.when]); }
+    if(!nextEv && n.when) lines.push(["다음 발표", n.when]); }
+  if(nextEv) lines.push(["다음 발표", `${mdTxt(nextEv.d)} ${nextEv.when||""} <span class="tiny muted">(한국 시간 · 회사 공지)</span>`]);
   const leg = c && c.est ? `<div class="elegend"><span><i class="est"></i>발표 전 애널리스트 예상</span>${c.next&&c.next.guide&&c.next.guide[1]>c.next.guide[0]*1.03?`<span><i class="b2"></i>회사 전망 범위</span>`:""}</div>` : "";
   const rowsH = `<div class="pspecs">${q.rows.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join("")}</div>`;
   const detail = `${c?rowsH:""}${q.note?`<p class="mnote">${q.note}</p>`:""}
@@ -3634,7 +3648,7 @@ function stockSheet(t, from, fromEv, fromCo){
     : backEv ? `<button class="btn ghost backev" type="button" data-evt="${fromEv}" style="margin-bottom:10px">‹ ${backEv.title}</button>`
     : fromE ? `<button class="btn ghost" type="button" data-brief="${from}" style="margin-bottom:10px">‹ ${fromE.name} 브리핑으로</button>` : "";
   openSheet(`${back}<div class="with-logo" style="margin-bottom:6px">${logo(t)}<div><h3 id="sheetTitle" style="margin:0">${s[0]} <span class="muted small">${sym}</span></h3>${co?`<div class="tiny muted">${co.cat} · ${co.tag}</div>`:""}</div></div>
-    <div class="num" style="font-size:22px;font-weight:700"><span>${usd(s[1])}</span> <span class="${cls(s[2])}" style="font-size:15px">${spct(s[2])}</span> <span class="tiny muted" style="font-weight:400">${okn(s[1])?"한국 장 마감 뒤 변화":"시세 확인 중"}</span></div>
+    <div class="num" style="font-size:22px;font-weight:700"><span>${usd(s[1])}</span> <span class="${cls(s[2])}" style="font-size:15px">${spct(s[2])}</span> <span class="tiny muted" style="font-weight:400">${okn(s[1])?((LV.old||{})[t]?`지난 값 · ${mdTxt(LV.old[t])} 뉴욕 기준 (새 시세를 못 받았어요)`:"한국 장 마감 뒤 변화"):"시세 확인 중"}</span></div>
     ${about}
     <h4 style="margin:16px 0 4px">일정</h4>${evs.length?evs.map(v=>evRow(v,false)).join(""):`<div class="small muted">예정된 일정이 없어요.</div>`}
     <h4 style="margin:16px 0 4px">최근 소식</h4>${(CNEWS[t]||[]).length ? CNEWS[t].slice(0,6).map(x=>newsLine(x)).join("") : `<div class="small muted">최근에 확인된 소식이 없어요.</div>`}

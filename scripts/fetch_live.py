@@ -67,6 +67,16 @@ def prev_us(d):
     return d
 
 
+def us_lag(d, now_ny):
+    """시세 날짜 d 가 지금 기준 '가장 최근 미국 장 날'보다 몇 거래일 뒤처졌는지"""
+    t = now_ny.date()
+    latest = t if (us_trading(t) and (now_ny.hour, now_ny.minute) >= (9, 30)) else prev_us(t)
+    n = 0
+    while latest > d and n < 30:
+        latest = prev_us(latest); n += 1
+    return n
+
+
 def tickers():
     out = list(PROXIES)
     try:
@@ -155,6 +165,7 @@ def quotes(old, errors):
         errors.append("FINNHUB_API_KEY 없음")
         return old.get("quotes", {}), closes
     now_ny = dt.datetime.now(NY)
+    stale = []
     for t in tickers():
         time.sleep(1.05)  # 무료 한도: 1분에 60번
         try:
@@ -178,12 +189,21 @@ def quotes(old, errors):
         ts = dt.datetime.fromtimestamp(j["t"], dt.timezone.utc).astimezone(NY)
         d = ts.date()
         q[t] = {"p": j["c"], "pc": j.get("pc"), "dp": j.get("dp"), "t": ts.isoformat(timespec="minutes"), "d": d.isoformat()}
+        # 대표 승인 22번(2026-11-19): 시세 날짜가 미국 장 날로 이틀 넘게 지났으면 오류로 남기고 화면에 '지난 값' 표시
+        lag = us_lag(d, now_ny)
+        if lag >= 2:
+            q[t]["old"] = True
+            stale.append(f"{t}: 시세가 {lag}거래일 지난 값 ({d.isoformat()} 뉴욕)")
         if j.get("pc"):
             closes.setdefault(prev_us(d).isoformat(), {})[t] = j["pc"]
         session_over = now_ny.date() > d or now_ny.hour >= 16
-        if session_over:
+        # 대표 승인 21번(2026-11-19): 토·일·미국 휴장일 날짜로는 종가 칸을 만들지 않아요(장외 종목 시각이 주말로 찍힐 때)
+        if session_over and us_trading(d):
             closes.setdefault(d.isoformat(), {})[t] = j["c"]
+    errors[:0] = stale  # 오래된 시세는 앞에 둬요(오류 목록은 20개까지만 저장)
     closes = backfill(closes, list(q) or list(old.get("quotes", {})), errors)
+    # 이미 쌓인 기록에서도 장이 없던 날짜 칸은 지워요(승인 21번)
+    closes = {k: v for k, v in closes.items() if us_trading(dt.date.fromisoformat(k))}
     closes = dict(sorted(closes.items())[-KEEP:])
     return (q or old.get("quotes", {})), closes
 

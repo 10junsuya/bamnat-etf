@@ -17,6 +17,7 @@ import time
 import urllib.request
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
+import sys
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -27,7 +28,8 @@ UA = {"User-Agent": "Mozilla/5.0 (gnomon-scout; +github.com/10junsuya/gnomon)"}
 # SEC는 '이름 + 연락 메일' 모양의 User-Agent를 요구해요. 공개 저장소라 개인 메일 대신 GitHub 자동 작업용 noreply 주소를 써요
 SEC_UA = {"User-Agent": "gnomon-app 41898282+github-actions[bot]@users.noreply.github.com", "Accept-Encoding": "identity"}
 KEEP_DAYS, MAX_ITEMS, MAX_MARKET, TIER1, ROTATE = 3, 800, 300, 60, 60
-YAHOO_ALIAS = {"BRKB": "BRK-B", "MOGA": "MOG-A", "BFB": "BF-B"}
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from us_sym import US_SYM as YAHOO_ALIAS  # noqa: E402  앱(index.html US_SYM)과 같은 표
 
 
 def get(url, headers=UA, timeout=20):
