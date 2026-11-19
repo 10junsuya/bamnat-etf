@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-19 15:54",
-"rot": 1,
+"updated_kst": "2026-11-19 16:14",
+"rot": 61,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "44건",
+"Reuters": "43건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "6cac247465df",
+"t": "SPCX",
+"title": "Planet Labs Teams Up With Stoke Space -- Just In Case SpaceX Really Retires the Falcon 9",
+"url": "https://www.fool.com/investing/2026/11/19/planet-labs-teams-up-with-stoke-space-just-in-case-spacex-really-retires-the-falcon-9/?.tsrc=rss",
+"pub": "2026-11-19T06:50:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T07:14:18+00:00"
+},
 {
 "id": "80d258e7d6da",
 "t": "MSFT",
@@ -22,6 +32,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T06:44:19+00:00"
+},
+{
+"id": "6af1c6f20ad1",
+"t": "PANW",
+"title": "PANW Stock Surges 8% Overnight: Palo Alto Networks CEO Sees ‘Hundreds Of Billions Of Dollars’ Opportunity In Open-Weight AI Models Security",
+"url": "https://stocktwits.com/news-articles/markets/equity/panw-stock-palo-alto-networks-ceo-open-weight-ai-security-applied-compute/cNbLCSDR9ik?.tsrc=rss",
+"pub": "2026-11-19T06:26:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T07:14:18+00:00"
 },
 {
 "id": "fce011736d37",
@@ -7994,24 +8014,64 @@
 "seen": "2026-11-18T15:58:40+00:00"
 },
 {
-"id": "902357c8e098",
-"t": "MSFT",
-"title": "AI-Based Clinical Trial Solutions for Patient Matching - Global Strategic Business Report 2026: Capitalize on 25% CAGR and $3.4B in Total Revenue by 2032 with Medidata, Microsoft, ConcertAI and Unlearn.ai",
-"url": "https://finance.yahoo.com/healthcare/articles/ai-based-clinical-trial-solutions-153600266.html?.tsrc=rss",
-"pub": "2026-11-18T15:36:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "76b11def102a",
+"t": "",
+"title": "Time for Copper-Focused BHP to Show How It Can Grow",
+"url": "https://www.wsj.com/business/time-for-copper-focused-bhp-to-show-how-it-can-grow-a713515a?mod=rss_markets_main",
+"pub": "2026-11-19T07:06:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T07:14:18+00:00"
 },
 {
-"id": "ffc01cb2c488",
-"t": "PLTR",
-"title": "Here’s Why Palantir Cracked the Best Blue Chip Stocks to Buy and Hold for Three Years List",
-"url": "https://finance.yahoo.com/markets/stocks/articles/why-palantir-cracked-best-blue-153553108.html?.tsrc=rss",
-"pub": "2026-11-18T15:35:53+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T15:58:40+00:00"
+"id": "3bb993c9f44a",
+"t": "",
+"title": "Swiss Trade Balance Actual 4,089M (Forecast -, Previous 1,309M)",
+"url": "https://www.financialjuice.com/News/9859438/Swiss-Trade-Balance-Actual-4089M-Forecast---Previous-1309M.aspx?xy=rss",
+"pub": "2026-11-19T07:04:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-19T07:14:18+00:00"
+},
+{
+"id": "1ab2f9c6860a",
+"t": "",
+"title": "French Bond Yield Spread Could See Relief, Albeit Unlikely a Lasting One for Now",
+"url": "https://www.wsj.com/finance/investing/jgbs-edge-higher-amid-mixed-developments-c690e1af?mod=rss_markets_main",
+"pub": "2026-11-19T07:03:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T07:14:18+00:00"
+},
+{
+"id": "8d6bfc91375d",
+"t": "",
+"title": "ZKH's Wang On Earnings",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/zkh-s-wang-on-earnings-video",
+"pub": "2026-11-19T07:00:52+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T07:14:18+00:00"
+},
+{
+"id": "86bad8934f22",
+"t": "",
+"title": "FTSE 100 Set to Lag Tech Heavy Peers After Anthropic IPO",
+"url": "https://www.bloomberg.com/news/live-blog/2026-11-19/ftse-100-live-updates-pound-gilts-what-s-moving-uk-markets-right-now-markets-today",
+"pub": "2026-11-19T06:51:24+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T07:14:18+00:00"
+},
+{
+"id": "3492c13bdbdf",
+"t": "",
+"title": "Taiwan Tightens Short Selling Curbs to Support Stock Market",
+"url": "https://www.bloomberg.com/news/articles/2026-11-19/taiwan-tightens-short-selling-curbs-to-help-support-stock-market",
+"pub": "2026-11-19T06:46:54+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T07:14:18+00:00"
 },
 {
 "id": "5286861198c5",
@@ -9674,6 +9734,16 @@
 "seen": "2026-11-19T03:14:38+00:00"
 },
 {
+"id": "1dd28f5fb618",
+"t": "",
+"title": "StoneCo Ltd. (STNE.B) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5NNVZDSjh5RVk4QktMeGt1YUs1TU5YcE50Nkt3aHBjRmgyNUNyNFlsTzZvZVlHSWdjYmZVVzVZM25JYnNPWGw4NjEwYUQyQUgwaU5DenZETVRsemtJM3VHcU5SczVXa3p5S1JVQnliTzByNG5PYzduYUNhc2FpVE0?oc=5",
+"pub": "2026-11-19T02:33:19+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T07:14:18+00:00"
+},
+{
 "id": "462ab9436eee",
 "t": "",
 "title": "Trump opposes regulation that would “stifle” AI industry: “we won't allow that to happen”",
@@ -10484,6 +10554,16 @@
 "seen": "2026-11-19T03:14:38+00:00"
 },
 {
+"id": "3b35921d462d",
+"t": "",
+"title": "VAALCO Energy Inc (EGY.Z) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZ1QxTmYxR2ZrSWM0NVMxNks1aVpmR0hQVV91RHVOeURaUVlhbDJ5WnRoaWN5NVZHZ3djaXQ1NzBPdnFKYzFOTkN0cllGSElQUlFSMV9INGE2VDg1bUl0OF9EVEM2V0pXQ3R0SjVBN251MkF2RlQxQVRQMUQyYW1BTFhicnN3Qm8?oc=5",
+"pub": "2026-11-19T01:53:41+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T07:14:18+00:00"
+},
+{
 "id": "af220b38a0a8",
 "t": "",
 "title": "Australian Dollar Set to Shed 2026 Gain on RBA Rate-Cut Bets",
@@ -10932,86 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "5b562c20eb8e",
-"t": "",
-"title": "Taiwan stocks fall over 2%",
-"url": "https://www.financialjuice.com/News/9858885/Taiwan-stocks-fall-over-2.aspx?xy=rss",
-"pub": "2026-11-19T01:23:23+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:58:01+00:00"
-},
-{
-"id": "349e46ae9c88",
-"t": "",
-"title": "China cbank injects 767.5 billion yuan via overnight reverse repos at 1.25%: statement",
-"url": "https://www.financialjuice.com/News/9858884/China-cbank-injects-7675-billion-yuan-via-overnight-reverse-repos-at-125-statement.aspx",
-"pub": "2026-11-19T01:22:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "0eb76146d544",
-"t": "",
-"title": "China cbank injects 767.5 billion yuan via overnight reverse repos at 1.25%: statement",
-"url": "https://www.financialjuice.com/News/9858884/China-cbank-injects-7675-billion-yuan-via-overnight-reverse-repos-at-125-statement.aspx?xy=rss",
-"pub": "2026-11-19T01:22:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:58:01+00:00"
-},
-{
-"id": "39c753e99a83",
-"t": "",
-"title": "BoJ Governor Ueda: simulations indicate accelerated ETF sales won’t severely impact BoJ finances",
-"url": "https://www.financialjuice.com/News/9858883/BoJ-Governor-Ueda-simulations-indicate-accelerated-ETF-sales-wont-severely-impact-BoJ-finances.aspx",
-"pub": "2026-11-19T01:17:56+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "f09a2ee776e5",
-"t": "",
-"title": "BoJ Governor Ueda: simulations indicate accelerated ETF sales won’t severely impact BoJ finances",
-"url": "https://www.financialjuice.com/News/9858883/BoJ-Governor-Ueda-simulations-indicate-accelerated-ETF-sales-wont-severely-impact-BoJ-finances.aspx?xy=rss",
-"pub": "2026-11-19T01:17:56+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:58:01+00:00"
-},
-{
-"id": "e1a0619ded3a",
-"t": "",
-"title": "Copper Rebounds After Rout as Physical Tightness Persists",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/copper-rebounds-after-rout-as-physical-tightness-persists",
-"pub": "2026-11-19T01:14:36+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "946db3fc07b5",
-"t": "",
-"title": "Oil Falls, Weighed by Larger-Than-Expected Rise in U.S. Inventories",
-"url": "https://www.wsj.com/finance/commodities-futures/oil-falls-weighed-by-larger-than-expected-rise-in-u-s-inventories-0271b977?mod=rss_markets_main",
-"pub": "2026-11-19T01:13:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "7ab2ba97991a",
-"t": "",
-"title": "BoJ Governor Ueda: crucial to anchor core inflation near 2% to prevent risk of inflation overshoot",
-"url": "https://www.financialjuice.com/News/9858863/BoJ-Governor-Ueda-crucial-to-anchor-core-inflation-near-2-to-prevent-risk-of-inflation-overshoot.aspx?xy=rss",
-"pub": "2026-11-19T01:08:04+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:08:34+00:00"
 }
 ]
 }
