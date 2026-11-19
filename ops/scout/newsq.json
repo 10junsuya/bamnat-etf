@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-19 17:16",
-"rot": 2,
+"updated_kst": "2026-11-19 17:25",
+"rot": 62,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "41건",
+"Reuters": "42건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "c8c9dc7c0475",
+"t": "SPCX",
+"title": "Morgan Stanley Sees $1 Trillion AI Funding Wave, Warns of Power Bottleneck",
+"url": "https://www.marketbeat.com/instant-alerts/event-morgan-stanley-sees-1-trillion-ai-funding-wave-warns-of-power-bottleneck-2026-11-19/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-19T08:12:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-19T08:25:42+00:00"
+},
 {
 "id": "9298ca373ab3",
 "t": "NVDA",
@@ -8004,14 +8014,24 @@
 "seen": "2026-11-18T15:58:40+00:00"
 },
 {
-"id": "6c8808bb7023",
-"t": "NVDA",
-"title": "Nvidia's $130 Billion Outlook Has a Blind Spot in China",
-"url": "https://finance.yahoo.com/markets/stocks/articles/nvidias-130-billion-outlook-blind-154527820.html?.tsrc=rss",
-"pub": "2026-11-18T15:45:27+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-18T16:15:44+00:00"
+"id": "2b7f7aa6b5be",
+"t": "",
+"title": "European Stock Indexes Rise as Tech Sentiment Improves",
+"url": "https://www.wsj.com/finance/stocks/nikkei-rises-0-2-led-by-chip-retail-stocks-fd10cf06?mod=rss_markets_main",
+"pub": "2026-11-19T08:24:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-19T08:25:42+00:00"
+},
+{
+"id": "a9084b069e3d",
+"t": "",
+"title": "ITU: Focus On Ensuring Syria Becomes a Digital Hub",
+"url": "https://www.bloomberg.com/news/videos/2026-11-19/itu-focus-on-ensuring-syria-becomes-a-digital-hub-video",
+"pub": "2026-11-19T08:19:17+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-19T08:25:42+00:00"
 },
 {
 "id": "854640be8deb",
@@ -9934,6 +9954,16 @@
 "seen": "2026-11-19T05:44:38+00:00"
 },
 {
+"id": "70f0fc613024",
+"t": "",
+"title": "7551.J2 - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMUNFZ29sQ1Y1UHE0OXJBRW9wQlhqcVhWdG8yaHFJNHdWREFpZ0paODV1U0JaMFJiUW4zS2QwRGw5R3BWSUVHRU9Bblh0V3Q1RHJlRVM0QVlNdGstMk1TZ1U3MkloZ1ZudjNudjFVekwyVWJvODNzTUhiU0xzeFVLWXZzMWx5UUU?oc=5",
+"pub": "2026-11-19T02:34:55+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-19T08:25:42+00:00"
+},
+{
 "id": "98afc6154720",
 "t": "",
 "title": "Trump at APEC: looks forward to meeting Presidents Xi and Putin",
@@ -10982,36 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "481add72feeb",
-"t": "",
-"title": "Saudi civil defense issues warning of possible threat in Riyadh - post on X",
-"url": "https://www.financialjuice.com/News/9858917/Saudi-civil-defense-issues-warning-of-possible-threat-in-Riyadh---post-on-X.aspx?xy=rss",
-"pub": "2026-11-19T01:43:54+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:58:01+00:00"
-},
-{
-"id": "7deef074deea",
-"t": "",
-"title": "China finance ministry auctions 1-month deposits at 1.30% yield: statement",
-"url": "https://www.financialjuice.com/News/9858916/China-finance-ministry-auctions-1-month-deposits-at-130-yield-statement.aspx",
-"pub": "2026-11-19T01:42:59+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:44:52+00:00"
-},
-{
-"id": "d46f871c5f2d",
-"t": "",
-"title": "China finance ministry auctions 1-month deposits at 1.30% yield: statement",
-"url": "https://www.financialjuice.com/News/9858916/China-finance-ministry-auctions-1-month-deposits-at-130-yield-statement.aspx?xy=rss",
-"pub": "2026-11-19T01:42:59+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T01:58:01+00:00"
 }
 ]
 }
