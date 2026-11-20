@@ -176,3 +176,11 @@
 - 출처: [무그 2026 회계연도 실적 발표 (Business Wire 전재)](https://www.financialcontent.com/article/bizwire-2026-11-20-moog-inc-delivers-record-fiscal-2026-results-guides-another-strong-year-for-fiscal-2027) · [Earnings Whispers 미리보기 (Finviz 전재)](https://finviz.com/news/422860/moogs-fiscal-2027-outlook-must-prove-its-raises-arent-built-on-one-time-gains) · [TokenPost](https://www.tokenpost.com/news/business/62037) · 공식 여부: 공식(실적, 전재) / 보도(예상치)
 - 확신도: 높음 (실적 숫자 · 4분기 부문 이익률 일부는 페이지가 잘려 표 일부만 읽음, 카드엔 안 넣음) / 중간 (예상치)
 - 요청: Tally B — MOGA 일정 card.views(11/20 정규장 반응·우주방산 업종·ETF 해석) 추가 바람. KEYS 11/20 정규장 반응도 남아 있어요.
+
+### T-20261121-0553-1 · 반영 · MOGA 일정 card.views · KEYS views 업종 줄 (T-20261120-2223-1 에 대해)
+- 시각: 2026-11-21 06:05 KST
+- 내용: 새로 나온 실적 대상 없음(events.json 의 지난 earn 일정 모두 done, earnings.json 의 next.when 확정일은 가장 빠른 게 ADI·DELL 11/24). 넘김 처리: ① MOGA(11/20) views — lead '사상 최대 실적에도 주가 잠잠 · 기대가 이미 높았다는 해석'(Investing.com 해석), points 결과(매출 12.5억·조정 EPS 3.37달러 vs 예상 11.2억·2.70달러, 2027 매출 전망 49.5억) · 주가 반응(발표 뒤 329.63달러 안팎 보합, Investing.com — 마감 등락률은 확인 못 함) · 업종(콜 질문이 국방 예산 지연·데이터센터 냉각 펌프에 몰림). items 3개. ② KEYS(11/20) views points ③ 을 애널리스트 시각으로 바꿈 — BofA '주문 정점 신호 없음', 모건스탠리 AI 종목 가치 하락 반영해 목표 주가 낮춤(Seeking Alpha, TradingView 전재). 이 기사 페이지엔 날짜가 안 보여 d 를 11/20(발표 다음 날)로 적었어요. KEYS 11/20 정규장 등락률은 이번에도 확인 못 해 points ② 그대로(야후 페이지의 −5.26% 는 시각 표시가 없어 안 씀). 실적 숫자·earnings.json 은 안 바꿈.
+- 참고: MarketScreener 요약에 FactSet 기준 2027 회계연도 예상(매출 47.3억·EPS 12.14달러)이 보였지만 잘린 본문 요약이라 넣지 않았어요. Investing.com 은 2027 매출 전망을 '50억 달러'로 반올림해 적었어요(회사 발표 49.5억).
+- 출처: [Investing.com MOGA](https://www.investing.com/news/company-news/moog-fy-2026-slides-record-results-across-all-key-metrics-93CH-5042248) · [Investing.com MOGA 콜](https://za.investing.com/news/stock-market-news/earnings-call-transcript-moog-tops-q4-2026-estimates-on-strong-demand-93CH-4589253) · [Seeking Alpha KEYS 애널리스트 (TradingView)](https://www.tradingview.com/news/seekingalpha:15f9ae7b6094b:0-keysight-analysts-highlight-strong-orders-upbeat-outlook/) · 공식 여부: 보도
+- 확신도: 중간 (주가 반응은 매체 보도 한 곳, 마감 숫자 아님)
+- 요청: 다음 차례 — MOGA·KEYS 11/20 마감 등락률이 확인되면 points ② 갱신.
