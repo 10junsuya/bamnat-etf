@@ -2044,3 +2044,33 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 내용: Scout를 직접 돌린 뒤(20:43 KST 갱신) 새 항목 67건(news 50·market 17) 중 65건 처리. 새로 반영할 회사 소식 없음. 건너뜀: ETF 매매 집계 글 약 30건(야후 자동 기사), 엔비디아·AMD 가치평가·'싼 칩주' 글, 캐시 우드 앤트로픽 매수 글, 앤트로픽 주가 칼럼, APLD·BE·QBTS 주가 해설, 장 전 밈 종목 정리, 베이조스의 엔비디아 CEO 인선 의견(11/18 발언 정리), 알리바바 칩 접근 분석 글, GE 에어로스페이스 '미니 공개매수' 거절 권고(작은 소식), 구글 유튜브 채널 1.9만 개 삭제(정기 영향력 공작 보고 — 회사 사건 아님), 스카이 USDS(CRCL 사건 아님), market 17건(20시대라 done 만). 다음 차례로 넘김(done 에 안 넣음): STM 프랑스 루세 공장 약 1.1억 달러 투자(야후 제목뿐 — 검색에 ST 보도자료·언론 기사가 아직 안 나오고 2025-09 '6천만 달러' 기사만 나옴, 야후 원문 열기는 권한 확인에 막힘), FLY '2028 달 임무 새 달 지도 탑재물'(검색에 11/17 반영한 QASCOM 계약 기사만 나옴 — 새 고객인지 확인 못 함). 나에게 온 새 요청(RULES 0-3): 없음. 미국 지표: 미국 동부 11-20 06시대 — 오늘 발표 예정 지표 없음(다음 pce·claims 11-25), 매크로 수집 대상 없음, claims(11/19 발표) 분석은 이미 있음. 앱 다시 게시: 반영한 소식이 없어 하지 않음.
 - 출처: ops/scout/newsq.json · 공식 여부: 저장소
 - 확신도: 높음
+
+### W-20261120-2113-1 · 반영 · MTZ 기계·배관 시공사 머피 코퍼레이션을 현금 약 12.5억 달러에 인수 (공식)
+- 시각: 2026-11-20 21:20 KST
+- 내용: 마스텍이 1907년 세운 가족 기업 머피(기계·배관·공정 설비 시공, 항공·국방·제약·기술·식품 등 핵심 시설, 직원 약 1,600명)를 현금 약 12.5억 달러(조정·3년 성과 연동 추가 지급 가능)에 사기로 확정 계약했어요. 은행 대출로 자금을 마련했고 "빨리 마무리할 것"이라고 했어요(날짜 없음). 머피 2026년 매출 전망 약 7.75억 달러. A 지도: 머피는 지도 회사가 아니라 관계 변경 없음.
+- 출처: [마스텍 보도자료](https://investors.mastec.com/news-releases/news-release-details/mastec-enters-definitive-agreement-acquire-murphy-corporation) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261120-2113-2 · 반영 · MRK 사크-TMT 위식도 선암(3차 이상) 3상 TroFuse-015 전체 생존기간 목표 달성, 무진행 생존은 미달 (공식)
+- 시각: 2026-11-20 21:20 KST
+- 내용: 미국 동부 11/20 06:45 머크 발표. 두 번 넘게 치료받은 위식도 선암 환자 473명 3상에서 의사 선택 항암제보다 전체 생존기간(1차 목표)이 의미 있게 늘었고, 2차 목표인 무진행 생존(독립 판정)은 달성 못 했어요. 약은 켈룬바이오텍이 개발, 머크는 중화권 밖 독점 권리.
+- 출처: [머크 보도자료(Business Wire)](https://www.financialcontent.com/article/bizwire-2026-11-20-merck-announces-trofuse-015-trial-evaluating-sacituzumab-tirumotecan-sac-tmt-met-primary-endpoint-of-overall-survival-os-in-third-line-or-later-locally-advanced-unresectable-or-metastatic-gastroesophageal-adenocarcinoma) · 본문 확인은 [Stock Titan 전재](https://www.stocktitan.net/news/MRK/merck-announces-tro-fuse-015-trial-evaluating-sacituzumab-6kv1debk6my1.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261120-2113-3 · 반영 · STM 프랑스 루세 공장에 1억 유로 넘게 투자 (공식)
+- 시각: 2026-11-20 21:20 KST
+- 내용: ST 보도자료(11/20 15:30 KST). 200mm 웨이퍼 공장 루세의 클린룸 1,000㎡ 확장·새 장비, 웨이퍼 운반 레일 700m 추가 등. 2025년 시작해 2027년까지 이어지는 계획. 야후 제목의 '약 1.1억 달러'는 유로 금액을 달러로 바꾼 값이라 앱에는 공식 '1억 유로 넘게'로 적음. 20:43 차례에서 넘긴 항목을 이번에 처리. A 지도: 자기 공장 투자라 관계 변경 없음.
+- 출처: [ST 보도자료](https://newsroom.st.com/media-center/press-item.html/stmicroelectronics-invests-more-than-100-million-euros-to-strengthen-the-production-capacities-of-its-rousset-site-c3426.html) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261120-2113-4 · 반영 · CRWV 젠슨 황 재단, 코어위브 컴퓨팅 3.5억 달러 약정을 세금 신고서로 공개 (보도)
+- 시각: 2026-11-20 21:20 KST
+- 내용: 젠슨·로리 황 재단이 연구 지원 대상자들이 쓸 코어위브 컴퓨팅에 3.5억 달러를 쓰기로 약정한 사실이 재단의 최신 세금 신고서로 드러났다는 블룸버그(제목)·Seeking Alpha 보도. 지난해 가장 큰 기부였고, 지금까지 쓴 금액은 엔비디아 공시 기준 1.083억 달러라고 해요. 새 계약이 아니라 공개된 약정이라 앱 한 줄도 '세금 신고서로 밝혔다'로 적음. 코어위브·재단 공식 발표 없음 → '보도'. A 지도: 재단은 회사가 아니라 관계 변경 없음.
+- 출처: [Bloomberg](https://www.bloomberg.com/news/articles/2026-11-19/jensen-huang-s-charity-committed-350-million-to-coreweave) · [Seeking Alpha](https://seekingalpha.com/news/4675021-jensen-huangs-charity-pledges-350m-to-coreweave) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261120-2113-5 · 알림 · 이번 차례
+- 시각: 2026-11-20 21:20 KST
+- 내용: Scout를 직접 돌린 뒤(21:17 KST 갱신) 새 항목 59건(news 47·market 12) 모두 처리. 반영 4건(MTZ, MRK, STM, CRWV). 건너뜀: FLY '2028 달 임무 새 탑재물'(다시 검색해도 11/17 반영한 QASCOM 계약만 나와 같은 사건으로 봄), RTX — 도미니언 다이내믹스의 캐나다 무인 협업기 '스카우트' 컨소시엄 12곳 중 하나로 프랫앤휘트니 캐나다가 이름만 올림(역할 미공개, 작은 소식), MSFT·JPM 장애(지난 며칠 장애 모음 글), 네슬레-MSFT AI(기존 프론티어 펌 참여 해설), 앤트로픽 창업자 지분 매도·OpenAI 칼럼, 리비안 R2 시승기, 넷플릭스 월드컵 관심 글, HSBC 테슬라 투자의견, TD코웬 UNH, 애플 이사 주식 매도, SPCX 부채(18:43 반영)·채권 금리 글, CME 풍력 선물 해설, ETF 매매 집계 글 약 15건, '살 만한'·가치평가 글. market 12건은 21시대라 done 만. 나에게 온 새 요청(RULES 0-3): 없음. 미국 지표: 미국 동부 11-20 07시대 — 오늘 발표 예정 지표 없음(다음 pce·claims 11-25), 매크로 수집 대상 없음, 새로 쓸 분석 없음. 앱 다시 게시: 이 실행에 게시 도구(publish_files)가 없어 못 했어요.
+- 출처: ops/scout/newsq.json · 공식 여부: 저장소
+- 확신도: 높음
