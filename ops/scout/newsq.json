@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-20 14:44",
-"rot": 72,
+"updated_kst": "2026-11-20 15:14",
+"rot": 132,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "100건",
+"Reuters": "35건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "cde86575f7fb",
+"t": "SPY",
+"title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+"url": "https://www.benzinga.com/markets/prediction-markets/26/11/63464111/stock-market-will-sp-500-open-up-or-down-today-82?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
+"pub": "2026-11-20T06:05:08+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T06:14:16+00:00"
+},
+{
+"id": "5f71486754df",
+"t": "NVDA",
+"title": "AI Token Prices Are Tumbling. Is It a Red Flag for Anthropic Stock?",
+"url": "https://www.fool.com/investing/2026/11/20/ai-token-prices-are-tumbling-is-it-a-red-flag-for-anthropic-stock/?.tsrc=rss",
+"pub": "2026-11-20T05:50:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T06:14:16+00:00"
+},
+{
+"id": "6bbf44205c22",
+"t": "NVDA",
+"title": "Stocks, gold and silver fall after blockbuster Anthropic IPO",
+"url": "https://www.euronews.com/2026/11/20/stocks-gold-and-silver-fall-after-blockbuster-anthropic-ipo?.tsrc=rss",
+"pub": "2026-11-20T05:48:38+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T06:14:16+00:00"
+},
 {
 "id": "edb362a48c5e",
 "t": "MSFT",
@@ -112,6 +142,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "72b3e63b87a1",
+"t": "NVDA",
+"title": "‘Bright Red Flags’: Nvidia Subpoenaed By California, Attorney General Also Probing Jensen Huang’s ‘Actions’",
+"url": "https://finance.yahoo.com/markets/stocks/articles/bright-red-flags-nvidia-subpoenaed-045550463.html?.tsrc=rss",
+"pub": "2026-11-20T04:55:50+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T06:14:16+00:00"
 },
 {
 "id": "3d0ac719537c",
@@ -7974,44 +8014,24 @@
 "seen": "2026-11-19T17:21:16+00:00"
 },
 {
-"id": "e561ffea9e62",
-"t": "INTC",
-"title": "Amkor's Computing Business Gains Momentum: Is More Growth Ahead?",
-"url": "https://finance.yahoo.com/technology/articles/amkors-computing-business-gains-momentum-153200748.html?.tsrc=rss",
-"pub": "2026-11-19T15:32:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "7ba047594f8f",
+"t": "",
+"title": "Emergency blackouts introduced in Ukraine's Kyiv, city officials say",
+"url": "https://www.financialjuice.com/News/9861230/Emergency-blackouts-introduced-in-Ukraines-Kyiv-city-officials-say.aspx?xy=rss",
+"pub": "2026-11-20T05:57:17+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T06:14:16+00:00"
 },
 {
-"id": "789a941c46d2",
-"t": "PWR",
-"title": "Quanta vs. Primoris: Which Infrastructure Stock Is the Better Buy?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/quanta-vs-primoris-infrastructure-stock-153200778.html?.tsrc=rss",
-"pub": "2026-11-19T15:32:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "010bd9b4b82f",
-"t": "HD",
-"title": "WSM Q3 Earnings Beat Estimates on Brand Growth, Margin Gains",
-"url": "https://finance.yahoo.com/markets/stocks/articles/wsm-q3-earnings-beat-estimates-153200911.html?.tsrc=rss",
-"pub": "2026-11-19T15:32:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "d9789f896f79",
-"t": "PG",
-"title": "Is PG Worth Buying as Growth Improves but Its Valuation Stays Rich?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/pg-worth-buying-growth-improves-153100474.html?.tsrc=rss",
-"pub": "2026-11-19T15:31:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
+"id": "6aa92bb9c751",
+"t": "",
+"title": "Morning Bid: Anthropic's splashy IPO fails to lift AI boat - Reuters",
+"url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ2RGU3lYLUtMZ2FwZzBEU2hlcmRDbWV6c3dDRU9OYTVzU0pSa0xzeUpuVk9McG9lYTBKdEcxZEtRY0JXbmZ3dDJlZ2xiVG5Ba3pDdkotNXBIN3Z2a3hqcHdlUlNFekh6REp6bWo2bW1sS25mTUJWUDlqU3UtMU5DRlpERQ?oc=5",
+"pub": "2026-11-20T05:53:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T06:14:16+00:00"
 },
 {
 "id": "6cacbce15024",
@@ -8022,6 +8042,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T05:44:20+00:00"
+},
+{
+"id": "4dd4dc274791",
+"t": "",
+"title": "DayOne Is Said to Pause US IPO Plans on Data Center, Market Concerns",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/dayone-singapore-us-ipo-plans-data-center-market-chip-curbs-bytedance-tiktok-firmus",
+"pub": "2026-11-20T05:41:11+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T06:14:16+00:00"
 },
 {
 "id": "50d114a15219",
@@ -8734,6 +8764,16 @@
 "seen": "2026-11-20T05:14:50+00:00"
 },
 {
+"id": "9947b41ebc48",
+"t": "",
+"title": "Nitro Games Oyj (NITRO.ST) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1BcnhZRHpxcWxSLVAzTjlrTlBDeG1iQTNDVFRyM3dWZVF4TzlucVg5b2lmS3ZCX1RQcXRCU1J6d1VsYWwwOEYtdTgyLWd1V0VvNjR1T1ZXZV9xWmNxX0VFMjZmYThzWms1Q2dMbXBn?oc=5",
+"pub": "2026-11-20T02:54:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T06:14:16+00:00"
+},
+{
 "id": "2be03eefaad6",
 "t": "",
 "title": "Saudi-led coalition: intercepted ballistic missile launched by Yemen's Houthis toward kingdom's southern region",
@@ -9072,6 +9112,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T05:14:50+00:00"
+},
+{
+"id": "913df8031825",
+"t": "",
+"title": "Brixmor Property Group Inc (BRX.P) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMHMxd3ZseWRrT3c4cVQtbF9ka0RKMkx0b2xodzVHVFhxYi1ndF8yWUlsc0FIWlFNLXhHOHFoRW9kajEzTlJqejYxNzJaVWJkTmV1MWFXRGp4dnIyMFBoWmxDU0hLUGVNa2NjQnVZM0lGUTVjRVRSVC1NNVU5d3NqMFRMdjFiM1U?oc=5",
+"pub": "2026-11-20T00:57:08+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T06:14:16+00:00"
 },
 {
 "id": "7dc8df6ced14",
@@ -10962,56 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "db48215ce203",
-"t": "",
-"title": "Fed's Goolsbee: I do not see at this point that inflation is on the path back to 2%; it is not just coming from oil and tariff shocks, but also from a sizable demand component.",
-"url": "https://www.financialjuice.com/News/9860598/Feds-Goolsbee-I-do-not-see-at-this-point-that-inflation-is-on-the-path-back-to-2-it-is-not-just-coming-from-oil-and-tariff-shocks-but-also-from-a-sizable-demand-component.aspx",
-"pub": "2026-11-19T20:31:07+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "70617375d817",
-"t": "",
-"title": "Fed's Goolsbee: The steepness of the interest-rate path will be rooted in whether ‘borderline disturbingly high' inflation is seen returning to the Fed's 2% target.",
-"url": "https://www.financialjuice.com/News/9860597/Feds-Goolsbee-The-steepness-of-the-interest-rate-path-will-be-rooted-in-whether-borderline-disturbingly-high-inflation-is-seen-returning-to-the-Feds-2-target.aspx?xy=rss",
-"pub": "2026-11-19T20:30:50+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "208de398dbab",
-"t": "",
-"title": "Fed's Goolsbee: The steepness of the interest-rate path will be rooted in whether ‘borderline disturbingly high' inflation is seen returning to the Fed's 2% target.",
-"url": "https://www.financialjuice.com/News/9860597/Feds-Goolsbee-The-steepness-of-the-interest-rate-path-will-be-rooted-in-whether-borderline-disturbingly-high-inflation-is-seen-returning-to-the-Feds-2-target.aspx",
-"pub": "2026-11-19T20:30:50+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "37c232003ae0",
-"t": "",
-"title": "Fed's Goolsbee: Inflation has proven to be far more persistent than was thought in 2025, and data center demand and AI-related wealth impact are adding to it.",
-"url": "https://www.financialjuice.com/News/9860596/Feds-Goolsbee-Inflation-has-proven-to-be-far-more-persistent-than-was-thought-in-2025-and-data-center-demand-and-AI-related-wealth-impact-are-adding-to-it.aspx?xy=rss",
-"pub": "2026-11-19T20:30:35+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "0e496cb16667",
-"t": "",
-"title": "Fed's Goolsbee: Inflation has proven to be far more persistent than was thought in 2025, and data center demand and AI-related wealth impact are adding to it.",
-"url": "https://www.financialjuice.com/News/9860596/Feds-Goolsbee-Inflation-has-proven-to-be-far-more-persistent-than-was-thought-in-2025-and-data-center-demand-and-AI-related-wealth-impact-are-adding-to-it.aspx",
-"pub": "2026-11-19T20:30:35+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
 }
 ]
 }
