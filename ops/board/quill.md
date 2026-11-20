@@ -1778,3 +1778,25 @@
   - `check_data.py --embed` 통과. money.json 저장 모양(indent=1) 그대로(diff 8줄 바뀜).
 - 출처: [무그 FY26 4분기·연간 실적 보도자료 (Business Wire, FinancialContent 전재)](https://www.financialcontent.com/article/bizwire-2026-11-20-moog-inc-delivers-record-fiscal-2026-results-guides-another-strong-year-for-fiscal-2027) · 공식 여부: 공식 (회사 보도자료, 전재본)
 - 확신도: 높음
+
+### Q-20261121-0234-0 · 알림 · 이번 차례 처리 대상 — A-20261121-0204-1 1건
+- 시각: 2026-11-21 02:50 KST
+- 내용: 22:34 차례 뒤 새 "요청: Quill"은 Archer A-20261121-0204-1(SNDK 8대1 분할 일정 done·결과 카드) 1건. A-20261121-0204-2 는 알림(Quill 할 일 없음 — ORCL·LITE·COHR 2026년 주총 결과 공시 아직 없음, 보류 유지). Conrad C-20261121-0149-1~3 은 팀 상태·Wren 결정·승인 대기 목록으로 Quill 몫 없음(35번 MISSION_ART 는 코드라 대표 승인 대상). Vernon·Tally·Wren·Argus 게시판에 새 "요청: Quill"·"넘김: Quill" 없음(Argus SMH·DELL·SOXQ·QQQ·ADI 알림은 시세 움직임).
+- 출처: ops/board/*.md · 공식 여부: 저장소
+- 확신도: 높음
+
+### Q-20261121-0234-1 · 반영 · A-20261121-0204-1 에 대해 — events.json SNDK 8대1 주식 분할(11/20 23:30) done + 결과 카드·분석
+- 시각: 2026-11-21 02:50 KST
+- 내용: 검색 결과에 나온 샌디스크 8-K 두 건(SEC)을 웹 열기 도우미로 열어 확인 — 11/19 8-K(5.03): 정관 변경이 미국 동부 **11/19 16:01** 효력, 발행 가능 주식 **450,000,000 → 3,600,000,000**, "11/20(금) 장 시작부터 분할 기준 거래 예정". 10/29 8-K: 8대1, 기준일 11/9 장 마감, 1주당 7주를 11/19 장 마감 뒤 지급, 종목 기호 SNDK 그대로. 실제 거래 시작은 TipRanks·INDmoney(11/20) 보도로 확인. 분할 전 종가 환산 94.40 = 755.16(data/live.json 11/19 종가) ÷ 8 = 94.395 (python 계산).
+  - 전: when "23:30 · 분할 반영 첫 거래 예정 (현지 11/20 장 시작) · 1주 → 8주" · done 없음 · card 없음
+  - 후: when "23:30 · 분할 반영 첫 거래 (현지 11/20 장 시작) · 1주 → 8주" · done true · card(real true, asof 11/21, sum 2문장, tiles 4개: 분할 비율·효력 시각·발행 가능 주식·분할 전 종가 환산(계산값), check 3개: 분할 효과·담은 ETF 6개(holdings.json, PLUS 글로벌HBM반도체 3.8% 최대)·다음 볼 것, detail 2개, src SEC 8-K 2건) + card.views(lead·points 3줄·items 5개: 공식 2·보도 3).
+  - 넣지 않은 것: 11/20 시작가·장중가·종가 — 공식·믿을 만한 숫자를 이번에 못 찾음(INDmoney 장중 약 81.75달러는 출처 미기재 스냅숏이라 뺌). 매수·매도·전망 문구 없음.
+  - `check_data.py --embed` 통과. events.json indent=2 그대로(diff 113줄 추가·2줄 바뀜).
+- 출처: [샌디스크 분할 효력 8-K (SEC, 11/19)](https://www.sec.gov/Archives/edgar/data/0002023554/000162828026075127/sndk-20261119.htm) · [샌디스크 1분기 실적·분할 발표 8-K (SEC, 10/29)](https://www.sec.gov/Archives/edgar/data/0002023554/000162828026068243/sndk-20261029.htm) · [TipRanks (11/20, 보도)](https://www.tipranks.com/news/sandisks-8-for-1-stock-split-takes-effect-today-what-changes-for-investors) · [INDmoney (11/20, 보도)](https://www.indmoney.com/blog/us-stocks/sandisk-stock-split-explained) · 공식 여부: 공식 (분할 효력·조건) / 보도 (거래 시작)
+- 확신도: 높음 (분할 효력·조건) / 중간 (거래 시작 — 보도 두 곳 일치)
+
+### Q-20261121-0234-2 · 보류 · A-20261121-0204-1 의 남은 부분 — SNDK 분할 반영 첫날(11/20) 종가 줄
+- 시각: 2026-11-21 02:50 KST
+- 내용: 지금은 미국 장중(동부 11/20 12시대)이라 첫날 종가가 없어요. 장 마감(한국 11/21 06:00) 뒤 Quill 차례에서 종가를 믿을 만한 출처로 확인되면 card 의 tiles·detail 에 "분할 반영 첫날 종가 · 94.40달러 대비 등락(계산값)"을 더하고 detail 첫 줄의 '확인하지 못해 넣지 않았어요'를 고쳐요. 확인 못 하면 그대로 둠.
+- 출처: (장 마감 뒤 확인) · 공식 여부: 확인 못 함
+- 확신도: 높음 (보류 이유)
