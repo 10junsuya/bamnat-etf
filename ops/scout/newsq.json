@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-21 01:39",
-"rot": 142,
+"updated_kst": "2026-11-21 01:43",
+"rot": 23,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "53건",
+"Reuters": "54건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "8a00374c01db",
+"t": "AAPL",
+"title": "Apple's secret AI agent shows John Ternus is done sitting out the AI race",
+"url": "https://finance.yahoo.com/markets/article/apples-secret-ai-agent-shows-john-ternus-is-done-sitting-out-the-ai-race-164226953.html?.tsrc=rss",
+"pub": "2026-11-20T16:42:26+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
+},
 {
 "id": "d804cc3e8ba2",
 "t": "SPY",
@@ -22,6 +32,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T16:39:56+00:00"
+},
+{
+"id": "697661665419",
+"t": "SPCX",
+"title": "Prediction: $5,000 in SpaceX Will Be Worth This Much by 2040 If Elon Musk Solves Its Power Problem",
+"url": "https://www.fool.com/investing/2026/11/20/prediction-5000-in-spacex-will-be-worth-this-much/?.tsrc=rss",
+"pub": "2026-11-20T16:35:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
 },
 {
 "id": "68140176f1e6",
@@ -34,6 +54,16 @@
 "seen": "2026-11-20T16:39:56+00:00"
 },
 {
+"id": "0b02521997d3",
+"t": "NVDA",
+"title": "Why Sandisk Stock Dropped Again Today",
+"url": "https://www.fool.com/investing/2026/11/20/why-sandisk-stock-dropped-again-today/?.tsrc=rss",
+"pub": "2026-11-20T16:34:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
+},
+{
 "id": "4e72a00838ba",
 "t": "GOOGL",
 "title": "Scott Bessent Says Trump-Xi Talks Did Not Address Jensen Huang, Left Nvidia H200 Policy Unchanged",
@@ -42,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T16:39:56+00:00"
+},
+{
+"id": "d0c78856a9d7",
+"t": "NVDA",
+"title": "How Low Nvidia Stock Can Go Now",
+"url": "https://finance.yahoo.com/m/4bbf9581-d9bc-3f2e-9760-2221f5e509cc/how-low-nvidia-stock-can-go.html?.tsrc=rss",
+"pub": "2026-11-20T16:31:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
 },
 {
 "id": "e1479a023647",
@@ -54,6 +94,16 @@
 "seen": "2026-11-20T16:39:56+00:00"
 },
 {
+"id": "d91ffb6d68ec",
+"t": "AMZN",
+"title": "Amazon Warns New Yorkers They May Have to Pay an Extra $5 on Orders Due to Mayor Mamdani-Backed Bill",
+"url": "https://firstformoney.com/amazon-warns-new-yorkers-they-may-have-to-pay-an-extra-5-on-orders-due-to-mayor-mamdani-backed-bill/?.tsrc=rss",
+"pub": "2026-11-20T16:30:07+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
+},
+{
 "id": "8dc99f097f51",
 "t": "NVDA",
 "title": "Nvidia Stock Falls 40% From Its High. It’s Getting Ugly but There’s Hope.",
@@ -62,6 +112,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T16:39:56+00:00"
+},
+{
+"id": "e7a3e6cf288c",
+"t": "NVDA",
+"title": "The Hot ‘Toothpaste Trade’ Is Another Sign AI Stock Fears Are Getting Worse",
+"url": "https://finance.yahoo.com/m/27d8735d-c51d-33d5-8083-094abc7a7ba3/the-hot-%E2%80%98toothpaste-trade%E2%80%99-is.html?.tsrc=rss",
+"pub": "2026-11-20T16:26:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
 },
 {
 "id": "31997b8a5316",
@@ -104,6 +164,26 @@
 "seen": "2026-11-20T16:39:56+00:00"
 },
 {
+"id": "7cd1c317613b",
+"t": "AMD",
+"title": "AMD Falls on China Risk; Ross Tumbles on Q4 Guidance | Stock Movers",
+"url": "https://finance.yahoo.com/video/amd-falls-china-risk-ross-161925499.html?.tsrc=rss",
+"pub": "2026-11-20T16:19:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
+},
+{
+"id": "38039132e3eb",
+"t": "AVGO",
+"title": "Asia Offers Explosive Innovation at Bargain Prices. 16 Stock Picks From Our Roundtable Experts.",
+"url": "https://finance.yahoo.com/m/2b9b2e76-5522-34df-b265-ec18f3dc350c/asia-offers-explosive.html?.tsrc=rss",
+"pub": "2026-11-20T16:18:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
+},
+{
 "id": "47df84dc78d0",
 "t": "SPCX",
 "title": "Why SpaceX Stock Dropped After the Anthropic IPO",
@@ -142,6 +222,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T16:39:56+00:00"
+},
+{
+"id": "a3a1d9ee7817",
+"t": "NOK",
+"title": "European Equities Traded in the US as American Depositary Receipts Track Lower in Friday Trading; Down More Than 7% for Week",
+"url": "https://finance.yahoo.com/markets/stocks/articles/european-equities-traded-us-american-161543220.html?.tsrc=rss",
+"pub": "2026-11-20T16:15:43+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
 },
 {
 "id": "8e7fd788adac",
@@ -202,6 +292,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T16:39:56+00:00"
+},
+{
+"id": "943d291cef29",
+"t": "ATEN",
+"title": "Did Earnings Estimate Upgrade Just Shift A10 Networks' (ATEN) Investment Narrative?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/did-earnings-estimate-upgrade-just-161018486.html?.tsrc=rss",
+"pub": "2026-11-20T16:10:18+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
 },
 {
 "id": "7c1174ecc87a",
@@ -322,6 +422,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T16:15:51+00:00"
+},
+{
+"id": "c757ed360ca8",
+"t": "NXT",
+"title": "T.J. Rodgers Just Sold 71% of His Enphase Stake Near $23",
+"url": "https://247wallst.com/investing/2026/11/20/t-j-rodgers-just-sold-71-of-his-enphase-stake-near-23/?.tsrc=rss",
+"pub": "2026-11-20T15:52:50+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
 },
 {
 "id": "846721bc535f",
@@ -552,6 +662,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T16:39:56+00:00"
+},
+{
+"id": "fb228837878d",
+"t": "TXN",
+"title": "Texas Instruments (TXN) Up 2.2% Since Last Earnings Report: Can It Continue?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/texas-instruments-txn-2-2-153011743.html?.tsrc=rss",
+"pub": "2026-11-20T15:30:11+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T16:43:57+00:00"
 },
 {
 "id": "473c27458025",
@@ -7894,124 +8014,14 @@
 "seen": "2026-11-20T01:18:57+00:00"
 },
 {
-"id": "1323564b03ee",
-"t": "CRWD",
-"title": "Palo Alto’s CEO Says AI Security “Could Be Bigger Than What We Do Today.” Here’s the Math",
-"url": "https://www.tikr.com/blog/palo-altos-ceo-says-ai-security-could-be-bigger-than-what-we-do-today-heres-the-math?ref=yahoofinance&tlnk=yf-261119-59h8g425&.tsrc=rss",
-"pub": "2026-11-19T22:37:32+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "68f2d7a97dc7",
-"t": "SPCX",
-"title": "SpaceX Stock Price Forecast: How Much Upside Do Analysts See as Anthropic Goes Public?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/spacex-stock-price-forecast-much-223706612.html?.tsrc=rss",
-"pub": "2026-11-19T22:37:06+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "0cab510d2147",
-"t": "AAPL",
-"title": "3 ETFs for the 58-Year-Old Who Opened the 401(k) Brokerage Window and Did Not Know What to Buy",
-"url": "https://247wallst.com/investing/etf/2026/11/19/3-etfs-for-the-58-year-old-who-opened-the-401k-brokerage-window-and-did-not-know-what-to-buy/?.tsrc=rss",
-"pub": "2026-11-19T22:37:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "660c00d700f3",
-"t": "SPCX",
-"title": "Anthropic’s IPO Was a Success, but You Don’t Need to Chase the Stock",
-"url": "https://finance.yahoo.com/m/c414bbac-d307-3e8a-bf90-762fc9fab65f/anthropic%E2%80%99s-ipo-was-a.html?.tsrc=rss",
-"pub": "2026-11-19T22:35:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "c23246af32da",
-"t": "LLY",
-"title": "Jefferies Has Wall Street’s Highest Target on Eli Lilly (LLY). Why?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/jefferies-wall-street-highest-target-223346007.html?.tsrc=rss",
-"pub": "2026-11-19T22:33:46+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "cfe77a88ae01",
-"t": "V",
-"title": "What Morgan Stanley Saw Before Raising Its Visa (V) Target",
-"url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-saw-raising-visa-223317532.html?.tsrc=rss",
-"pub": "2026-11-19T22:33:17+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T01:18:57+00:00"
-},
-{
-"id": "b867e889a9b1",
-"t": "GOOGL",
-"title": "Morgan Stanley’s Vintage Values 2027: 5 Stocks Analysts See Climbing Further",
-"url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-vintage-values-2027-223235273.html?.tsrc=rss",
-"pub": "2026-11-19T22:32:35+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "c8e235258caf",
-"t": "SPCX",
-"title": "Ripple CEO sees crypto rebound, draws Anthropic IPO-SpaceX parallel",
-"url": "https://www.thestreet.com/crypto/markets/ripple-ceo-sees-crypto-rebound-draws-anthropic-ipo-spacex-parallel?.tsrc=rss",
-"pub": "2026-11-19T22:30:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "41a69470db86",
-"t": "IRDM",
-"title": "Paul Tudor Jones’ Initiates a New Position in This Profitable Midcap Tech Stock",
-"url": "https://www.barchart.com/story/news/8926544/paul-tudor-jones-initiates-a-new-position-in-this-profitable-midcap-tech-stock?.tsrc=rss",
-"pub": "2026-11-19T22:29:58+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "ae6496f107bf",
-"t": "LIN",
-"title": "Was There Any Sign Solstice Stock Would Run?",
-"url": "https://www.trefis.com/stock/sols/articles/626807/was-there-any-sign-solstice-stock-would-run/2026-11-19?.tsrc=rss",
-"pub": "2026-11-19T22:28:20+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "30b87d8dfb81",
-"t": "SPCX",
-"title": "SpaceX Wins Permit For $24 Bil Texas Data Center Project, Tax Break Rejected",
-"url": "https://finance.yahoo.com/m/670d3efa-d012-3f2d-bdb5-0b01f3ad2656/spacex-wins-permit-for-%2424.html?.tsrc=rss",
-"pub": "2026-11-19T22:28:08+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T01:18:57+00:00"
-},
-{
-"id": "da54aff883fb",
-"t": "JPM",
-"title": "Vendor attack exposes JPMorgan Reserve cardholder emails",
-"url": "https://www.americanbanker.com/news/vendor-attack-exposes-jpmorgan-reserve-cardholder-emails?.tsrc=rss",
-"pub": "2026-11-19T22:22:13+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T22:23:44+00:00"
+"id": "bf42d7051473",
+"t": "",
+"title": "Michael Burry: I sold half of my NVIDIA puts. $NVDA",
+"url": "https://www.financialjuice.com/News/9862079/Michael-Burry-I-sold-half-of-my-NVIDIA-puts-NVDA.aspx?xy=rss",
+"pub": "2026-11-20T16:42:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T16:43:57+00:00"
 },
 {
 "id": "5bde34b9b170",
@@ -11002,16 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T11:12:24+00:00"
-},
-{
-"id": "f89d20aad236",
-"t": "",
-"title": "Shuifa Gas Co Ltd (603318.SS) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1TOWlOREkwRzg2aWpkNGFhVlktTFVTcHFZaG9wakRja1VnSlljVjBBWThKdTl1QTY3UUxpR3ZKY0FvNGdGU3ZYWWd2dTZacFdDSU9iOHJBTHpPUHprMVFmMWVOWTh0Q01IelJCbDNySQ?oc=5",
-"pub": "2026-11-20T05:21:40+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T14:44:02+00:00"
 }
 ]
 }
