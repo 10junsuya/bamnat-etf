@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-20 18:02",
-"rot": 75,
+"updated_kst": "2026-11-20 18:14",
+"rot": 135,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "100건",
+"Reuters": "42건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "2797c177d285",
+"t": "NVDA",
+"title": "‘Dean Of Valuation’ Says Nvidia Is 30% Below Fair Value, Waits For $140 — Calls Jensen Huang ‘Great CEO, But Human’",
+"url": "https://stocktwits.com/news-articles/markets/equity/dean-of-valuation-says-nvidia-is-30-below-fair-value-waits-for-140-calls-jensen-huang-great-ceo-but-human/cNbSBYBR9KS?.tsrc=rss",
+"pub": "2026-11-20T08:58:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:14:06+00:00"
+},
 {
 "id": "77e0fd121264",
 "t": "SPCX",
@@ -82,6 +92,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T09:02:08+00:00"
+},
+{
+"id": "c652151d292b",
+"t": "V",
+"title": "Is Fiserv (FISV) Cheap Following Its AI Ecommerce Push And Valuation Gap?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/fiserv-fisv-cheap-following-ai-081025220.html?.tsrc=rss",
+"pub": "2026-11-20T08:10:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:14:06+00:00"
 },
 {
 "id": "68d04252d1fc",
@@ -7994,24 +8014,24 @@
 "seen": "2026-11-19T18:16:23+00:00"
 },
 {
-"id": "a86f571529d5",
-"t": "NXE",
-"title": "NuScale Power Expands Everstar AI Use to Boost Project Efficiency",
-"url": "https://finance.yahoo.com/technology/ai/articles/nuscale-power-expands-everstar-ai-155300140.html?.tsrc=rss",
-"pub": "2026-11-19T15:53:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "44d19b60717e",
+"t": "",
+"title": "Taiwan stock exchange says it will ensure stable operation of capital markets - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRWN5TllrYmdueHRBVUJJWFFidVdUVnZOaUNIcHNseHBZREVKU2xRN3hST3VaazAyQWtVLVRlRHRCS1NpS01jay1QMXpKZy1MWUR3ZEdEbF9VN2JNWWJwakFZS1NRMklkNTZueWxhWEtrSEpXcFhVX2U4aVZkS0hlOVl4UUZSUQ?oc=5",
+"pub": "2026-11-20T09:07:44+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:14:06+00:00"
 },
 {
-"id": "2769a9092920",
-"t": "NVDA",
-"title": "A $16 Billion Hedge Fund Just Bought These 3 Stocks",
-"url": "https://www.tikr.com/blog/a-16-billion-hedge-fund-just-bought-these-3-stocks?ref=yahoofinance&tlnk=yf-261119-9r6r7pfg&.tsrc=rss",
-"pub": "2026-11-19T15:52:54+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "ec12f63cb320",
+"t": "",
+"title": "Lagarde Tells Europe to Head Off Threats Before They Materialize",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/lagarde-tells-europe-to-head-off-threats-before-they-materialize",
+"pub": "2026-11-20T09:06:01+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T09:14:06+00:00"
 },
 {
 "id": "769159133e19",
@@ -8032,6 +8052,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T09:02:08+00:00"
+},
+{
+"id": "e5cc9a43e944",
+"t": "",
+"title": "France Needs at Least €6 Billion More 2027 Savings, Amiel Says",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/france-needs-at-least-6-billion-more-2027-savings-amiel-says",
+"pub": "2026-11-20T08:56:01+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T09:14:06+00:00"
 },
 {
 "id": "5e7110daad93",
@@ -9032,6 +9062,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T05:14:50+00:00"
+},
+{
+"id": "92bca36138df",
+"t": "",
+"title": "Spok Holdings Inc (SPOK.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBObXl5dGFubWgzRkhKdTkwVDFFcEV0M0dkY0pidW9qRzlfNTdyaXVWX0hocVpTczVWcjlGdGd4blAwSUYwVGNZMHAxbmpDMzRXM2RUdVZseHNRU3BMcEJ5Y1ByemhkanBuYUk2SA?oc=5",
+"pub": "2026-11-20T04:53:35+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:14:06+00:00"
 },
 {
 "id": "7dbb7047ba63",
@@ -10972,46 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T05:44:20+00:00"
-},
-{
-"id": "4cf7d969e8d2",
-"t": "",
-"title": "National Highways Infra Trust (NATG.BO) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0yQzRrMlZVcG9kUUVKTXdUYlJDODZDS2g2RWRxSi1NVXJTVkxfQjR6TzhvLVNWRl94c3MxM0llcWlEaWRiODhkbWpZXzdrZzRMNlp5NTQ1aVRTRC1qZjUw?oc=5",
-"pub": "2026-11-19T23:19:04+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T05:44:20+00:00"
-},
-{
-"id": "7af5011d2c57",
-"t": "",
-"title": "Anthropic Becomes World’s 7th Most Valuable Company After IPO",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-becomes-world-s-7th-most-valuable-company-after-ipo",
-"pub": "2026-11-19T23:16:20+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "e8899f0a66ab",
-"t": "",
-"title": "N4RN.F - Reuters",
-"url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5RUC1DSERreWsxbkpBYkgzS1J1MlNPaXZiX3N3R3ZKSmxGU1h4UG52M1dSV2hvYm9HRzBPWUhJdE9sakFNWEpEZkJ1eDBqR1ExUmRkZndKczdNbTUwVjN0RE9mWGRrV1BqVk85YnFobjhFQy1TX2VR?oc=5",
-"pub": "2026-11-19T23:13:53+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T05:44:20+00:00"
-},
-{
-"id": "b3da7d9694be",
-"t": "",
-"title": "Germany launches dialogue on economic future - Reuters",
-"url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPY2VZTUVuSTFPMGlEVFZaT3FSaEtEUUZMOFdJd0tlREFCREt5Zk83dEwwQkNSb1JOeHJfbU4wUjNpTzhjeE1HNkRJY3JzQ3d3YWFXNFpaVlJ5NFFFV195VXVPNGVCT2FTVjhfdzZlS0VDUk1DN2tUZl9zV3g4WTBiYzlMalFkT3dKaTNIMHJGdFFXajZDaGxV?oc=5",
-"pub": "2026-11-19T23:11:26+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
 }
 ]
 }
