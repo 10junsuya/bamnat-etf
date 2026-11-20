@@ -1765,3 +1765,41 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 내용: Scout를 직접 돌린 뒤(18:4x KST 갱신) 새 항목 27건(news 21·market 6)을 모두 처리했어요. 새로 반영할 회사 소식은 없어요. 건너뜀: GTA6 매출 16억 달러(테이크투 소식 · MSFT 는 콘솔 협력사일 뿐 · 테이크투는 앱 종목 아님), 앤트로픽 장외 시세·연말 랠리 글, 팔란티어·코어위브·오크타·퀄컴·아마존·네비우스 주가·가치 평가 글, 모더나 주가 글, '살 만한 종목' 류, 엔비디아 크레스 발언 해설·조시 브라운 발언(의견). 18시대라 kind "market"(앤트로픽 상장 당일 WSJ 라이브, 트럼프·시진핑·푸틴 APEC 회담, 아문디 프랑스 국채 발언 등)은 done 처리만 했어요. 나에게 온 요청(RULES 0-3): Vernon V-20261119-1821-2 넘김(참고) → 위 W-20261119-1843-1 로 처리. 미국 지표: 지금 미국 동부 11-19 04시대 — 실업수당(next 11-19) 발표 전이라 매크로 수집 안 돌림(다음은 한국 22:30). 앱 다시 게시: 회사 소식·분석 변경이 없어 하지 않음.
 - 출처: ops/scout/newsq.json · 공식 여부: 저장소
 - 확신도: 높음
+
+### W-20261120-1143-1 · 반영 · JPM·V·MA 외부 업체 해킹 — 고객 이메일 등 일부 노출, 결제 정보는 영향 없음 (보도)
+- 시각: 2026-11-20 12:00 KST
+- 내용: 해킹 조직 'n0n'이 11/16 자료를 얻었다고 주장한 뒤, 세 회사가 미국 11/19 입장을 냈어요(로이터). JPM: 외부 업체가 가진 마케팅 자료에서 일부 고객 이름·이메일이 나갔을 수 있고, 이번 주 초 서비스 장애와는 무관, 해당 고객에게 직접 연락. 비자: 아태 지역 외부 업체 사고, 비자 시스템은 무관, 카드 번호 등 결제 정보 영향 없음. 마스터카드: 한 혜택 프로그램 일부 카드 회원 이메일(결제 정보 아님) 노출, 결제망 영향 없음. 회사 공식 보도자료 링크는 못 찾아 '보도'.
+- 출처: [로이터(Business Recorder 전재)](https://www.brecorder.com/news/40449850/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack) · [블룸버그(제목)](https://www.bloomberg.com/news/articles/2026-11-19/jpmorgan-warns-that-some-vendors-were-hit-by-a-cyberattack) · 공식 여부: 보도
+- 확신도: 높음
+- 교훈: 같은 사건을 다룬 Cybernews 기사(앞선 날짜)는 JPM 이 "사이버 공격 증거 없음(장애는 소프트웨어 오류)"이라고 했다고 썼어요 — 이건 11/17 장애에 대한 답이고, 11/19 업체 해킹 입장과는 다른 일이에요. 같은 회사의 두 사건(장애·업체 해킹)을 섞지 않아요.
+
+### W-20261120-1143-2 · 반영 · NVDA 캘리포니아 법무장관 소환장 (보도)
+- 시각: 2026-11-20 12:00 KST
+- 내용: 캘리포니아 법무장관(본타)이 엔비디아에 소환장을 보냈다는 보도(미국 11/19). CNBC 는 '중국 칩 유출 조사', CBS 는 '전 CEO 관련 의혹', 로이터는 '전 CEO·중국 관계 우려'로 제목을 달았어요. 기사 본문(CNBC·US News)은 열기 실패라 제목 3곳으로 '보도' 처리, 법무장관실 보도자료는 못 찾음. 11/17 본타의 블룸버그 TV '살펴보는 중' 발언은 이 소환장의 앞 단계예요.
+- 출처: [CNBC](https://www.cnbc.com/2026/11/19/nvidia-california-bonta-subpoena-china-chips.html) · [CBS 샌프란시스코](https://www.cbsnews.com/sanfrancisco/news/california-nvidia-subpoena-jensen-huang-affair-alleged-chinese-spy/) · [로이터(US News)](https://www.usnews.com/news/top-news/articles/2026-11-19/california-ag-subpoenas-nvidia-over-concerns-about-former-ceo-china) · 공식 여부: 보도
+- 확신도: 중간(본문 미확인)
+
+### W-20261120-1143-3 · 반영 · SPCX 캐머런 카운티, 240억 달러 데이터센터 세금 감면 거부 (보도)
+- 시각: 2026-11-20 12:00 KST
+- 내용: 텍사스 캐머런 카운티 위원회가 스페이스X 240억 달러 데이터센터의 세금 감면 요청을 받아들이지 않았어요(미국 11/17). 지역 신문은 그 하루 전 데이터센터 허가를 받았다고도 썼지만 어떤 허가인지 본문을 못 열어 넣지 않았어요. 표결 수(3대2)는 믿을 만한 출처 본문으로 확인 못 해 뺐어요.
+- 출처: [KRGV](https://www.krgv.com/news/cameron-county-commissioners-reject-spacex-data-center-tax-break-request/) · [DCD](https://www.datacenterdynamics.com/en/news/cameron-county-commissioners-reject-spacex-tax-break-request-for-24bn-texas-data-center/) · [The Monitor](https://myrgv.com/local-news/2026/11/17/cameron-county-commissioners-reject-spacex-bid-for-data-center-tax-break/) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261120-1143-4 · 반영 · OKLO 그로브스-1 시험 원자로, 에너지부 '제한 없는 운전' 허가 (보도)
+- 시각: 2026-11-20 12:00 KST
+- 내용: 에너지부가 텍사스 록하트 근처 시험 원자로(그로브스-1)의 마지막 운전 확인 단계를 통과시켜 연구·시험·훈련 단계로 들어간다고 오클로가 밝혔어요(WNN 11/12 기사). 8월 첫 임계 도달. 사건은 8일 전이지만 OKLO 「최근 소식」에 없어 넣었고, 오클로 보도자료 원문은 못 열어 '보도'.
+- 출처: [World Nuclear News](https://www.world-nuclear-news.org/articles/us-test-reactor-cleared-for-operations) · 공식 여부: 보도
+- 확신도: 높음
+
+### W-20261120-1143-5 · 반영 · 발표 분석: 실업수당 청구(11/14 주간)
+- 시각: 2026-11-20 12:00 KST
+- 내용: data/views.json ind.claims 를 11/19 발표분으로 바꿨어요. 신규 20.3만(macro.json 20.3·전주 20.2와 같음, 로이터 예상 19.7만), 계속 청구 176.3만. 시장: 12월 0.25%p 인상 전망 그대로, 월러 0.5%p 언급(돌아보기 노트 반영). 주식: 그날 QQQ −2.2%·SPY −2.0%는 앤트로픽 상장 뒤 차익 실현(CNBC) — '발표 뒤 30분'(선물 거의 그대로)과 '그날 마감'을 나눠 씀. 매체 5개(로이터 4·CNBC 정리 1).
+- 출처: [로이터(Spokesman-Review)](https://www.spokesman.com/stories/2026/nov/19/us-weekly-jobless-claims-edge-up-but-labor-market-/) · [Stock Titan(CNBC 인용)](https://www.stocktitan.net/articles/stock-market-today-live-november-19-2026) · 공식 여부: 보도
+- 확신도: 높음
+- 교훈: 11/19 장 마감 검색 상위에 2025-11-19 로이터 '1,000포인트 반전' 기사, 11/17 AP 기사가 섞였어요(연도·요일 확인 필요).
+
+### W-20261120-1143-6 · 알림 · 이번 차례 — 밀린 대기 1,089건 정리
+- 시각: 2026-11-20 12:00 KST
+- 내용: Wren 기록이 11/19 18:43 차례 뒤 끊겨(약 17시간, Wren A·B 실행이 없었던 것으로 보여요 — Conrad 확인 바람) 대기 목록에 새 항목 1,089건(news 794·market 295)이 쌓여 있었어요. Scout를 직접 돌린 뒤(11:4x KST) 제목으로 1차 거름: 주가·목표가·의견·'살 만한 종목'·실적 통화 요약(Tally 몫)·시장 요약은 done. 11시대라 market 은 done 만. 반영 6줄(위 1~5). 중요해 보이지만 이번에 확인 못 한 26건은 done 에 넣지 않고 다음 차례로 남겼어요: TSMC·삼성 일부 중국 출하 중단, 인텔 '18A 첫 고객 계약' 발언, 테슬라 사이버캡 댈러스, 구글-콰이즈 50MW 지열 전력 계약, 화이자 중국 CAR-T 26억 달러 라이선스, 메타 2030 탄소중립 재검토·'뮤즈 참' 기기, 엔비디아 후임 CEO로 암 CEO 접촉 보도, 알리바바 소송, 스페이스X 애리조나 데이터센터 표결 연기 요청·휴대폰 서비스, P&G 감원, 애플 영국 백도어, 세일즈포스 수출 지원, 아마존 뉴욕 배송 법안·탄소 목표, 구글 우주 AI 시험, 레볼루션 메디슨 임상, 레켐비 하위 연구, 일루미나, MSFT 칩 공급. 나에게 온 새 요청(RULES 0-3): 없음. 미국 지표: 실업수당 11/19 발표분을 위 5번으로 씀(매크로 수집은 이미 11/20 01:31 UTC 완료). 웹 열기 막힘: 야후 파이낸스 기사 다수(PROVENANCE_REQUIRED), CNBC·US News·myrgv·DCD(client_error), WTOP(robots).
+- 출처: ops/scout/newsq.json · 공식 여부: 저장소
+- 확신도: 높음
