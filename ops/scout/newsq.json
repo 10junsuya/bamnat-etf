@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-20 20:12",
-"rot": 77,
+"updated_kst": "2026-11-20 20:16",
+"rot": 137,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "100건",
+"Reuters": "45건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "1a9ab50dc2d4",
+"t": "NVDA",
+"title": "Is Lowe's a Buy After Its Latest Earnings Report?",
+"url": "https://www.fool.com/investing/2026/11/20/is-lowes-a-buy-after-its-latest-earnings-report/?.tsrc=rss",
+"pub": "2026-11-20T11:07:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T11:16:14+00:00"
+},
+{
+"id": "834c86f97f28",
+"t": "NVDA",
+"title": "Is Coca-Cola (KO) the Best Stock to Own During a Market Sell-Off?",
+"url": "https://www.fool.com/investing/2026/11/20/is-coca-cola-ko-the-best-stock-to-own-during-a-market-sell-off/?.tsrc=rss",
+"pub": "2026-11-20T11:06:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T11:16:14+00:00"
+},
+{
+"id": "46b6807a617b",
+"t": "NVDA",
+"title": "Here’s How Many Shares of Nike You Need for $20,000 in Yearly Dividends",
+"url": "https://www.fool.com/investing/2026/11/20/heres-how-many-shares-of-nike-you-need-for-20000-in-yearly-dividends/?.tsrc=rss",
+"pub": "2026-11-20T11:05:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T11:16:14+00:00"
+},
 {
 "id": "1095ffbbea1c",
 "t": "SPCX",
@@ -54,6 +84,16 @@
 "seen": "2026-11-20T11:12:24+00:00"
 },
 {
+"id": "47807f852a6f",
+"t": "D",
+"title": "28 ETFs Add to Dominion Energy (D) on Nov. 18",
+"url": "https://finance.yahoo.com/markets/stocks/articles/28-etfs-add-dominion-energy-110036028.html?.tsrc=rss",
+"pub": "2026-11-20T11:00:36+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T11:16:14+00:00"
+},
+{
 "id": "3cc6c824ee31",
 "t": "QQQ",
 "title": "ETF Activity: SPY Leads $11.63 Billion Exit on Nov. 18",
@@ -82,6 +122,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T11:12:24+00:00"
+},
+{
+"id": "26abf77b46a2",
+"t": "SPCX",
+"title": "Anthropic's record IPO nets huge windfall for L.A. investors",
+"url": "https://finance.yahoo.com/technology/ai/articles/anthropics-record-ipo-nets-huge-110000462.html?.tsrc=rss",
+"pub": "2026-11-20T11:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T11:16:14+00:00"
 },
 {
 "id": "b35fa8ef2eb7",
@@ -194,6 +244,16 @@
 "seen": "2026-11-20T10:44:03+00:00"
 },
 {
+"id": "1d0529261e80",
+"t": "WMT",
+"title": "A Laid-Off Lawyer Builds a $19 Million Hot Dog Business. An Owner Who Pays Himself $40,000 Instead of $120,000 Saves $12,240 a Year in Tax and Could Lose $430 a Month in Social Security for Life",
+"url": "https://247wallst.com/personal-finance/social-security/2026/11/20/a-laid-off-lawyer-builds-a-19-million-hot-dog-business-an-owner-who-pays-himself-40000-instead-of-120000-saves-12240-a-year-in-tax-and-could-lose-430-a-month-in-social-security-for-life/?.tsrc=rss",
+"pub": "2026-11-20T10:34:18+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T11:16:14+00:00"
+},
+{
 "id": "f60a7e9402c5",
 "t": "GOOGL",
 "title": "Warren Buffett's Successor, Greg Abel, Has 31% of Berkshire Hathaway's $363 Billion Portfolio Invested in 3 Game-Changing AI Stocks",
@@ -262,6 +322,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T11:12:24+00:00"
+},
+{
+"id": "d1c098f08b45",
+"t": "SNPS",
+"title": "Synopsys (SNPS) Broadens Its Platform Reach Into Packaging Safety Workflows",
+"url": "https://finance.yahoo.com/technology/articles/synopsys-snps-broadens-platform-reach-101356164.html?.tsrc=rss",
+"pub": "2026-11-20T10:13:56+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T11:16:14+00:00"
 },
 {
 "id": "f54850f150c3",
@@ -7944,76 +8014,6 @@
 "seen": "2026-11-19T17:21:16+00:00"
 },
 {
-"id": "04b4e1c6b671",
-"t": "META",
-"title": "Shop Pay Inclusion in Meta’s Muse AI Agent Reinforces AI Growth Thesis for Shopify (SHOP)",
-"url": "https://finance.yahoo.com/markets/stocks/articles/shop-pay-inclusion-meta-muse-163040178.html?.tsrc=rss",
-"pub": "2026-11-19T16:30:40+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "f5560e953c0e",
-"t": "AAPL",
-"title": "Britain forced to admit secret Apple ‘backdoor’ demand",
-"url": "https://uk.finance.yahoo.com/news/britain-forced-admit-secret-apple-163037275.html?.tsrc=rss",
-"pub": "2026-11-19T16:30:37+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "74eaecd75ef2",
-"t": "AMZN",
-"title": "A $22 Billion Hedge Fund Just Bought These 3 Stocks",
-"url": "https://www.tikr.com/blog/a-22-billion-hedge-fund-just-bought-these-3-stocks?ref=yahoofinance&tlnk=yf-261119-h7j237mf&.tsrc=rss",
-"pub": "2026-11-19T16:30:25+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "ddb794724b44",
-"t": "AMD",
-"title": "Blacklisted Chinese server maker kept getting AMD firmware updates: Hunterbrook",
-"url": "https://finance.yahoo.com/video/blacklisted-chinese-server-maker-kept-getting-amd-firmware-updates-hunterbrook-162807931.html?.tsrc=rss",
-"pub": "2026-11-19T16:28:07+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "8c802b4184c6",
-"t": "META",
-"title": "How MongoDB Survived a CEO Shakeup to Become a Quiet AI Play",
-"url": "https://finance.yahoo.com/m/9b0ec82f-ee0d-3ce5-bcd0-30a62862b8ed/how-mongodb-survived-a-ceo.html?.tsrc=rss",
-"pub": "2026-11-19T16:28:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "31ffab465495",
-"t": "JPM",
-"title": "Two Big Winners of the Anthropic IPO",
-"url": "https://finance.yahoo.com/m/ec4bb921-733d-3f1d-aa1e-20072d1d2bf6/two-big-winners-of-the.html?.tsrc=rss",
-"pub": "2026-11-19T16:27:29+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T19:26:39+00:00"
-},
-{
-"id": "501a6e0291d6",
-"t": "JPM",
-"title": "How ex-JPMorgan execs came to occupy Wells Fargo’s top ranks",
-"url": "https://www.americanbanker.com/news/how-ex-jpmorgan-execs-came-to-occupy-wells-fargo-s-top-ranks?.tsrc=rss",
-"pub": "2026-11-19T16:27:19+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T19:26:39+00:00"
-},
-{
 "id": "087346c01050",
 "t": "",
 "title": "Cocoa Pricier in Europe as Traders Brace for Deforestation Rules",
@@ -8132,6 +8132,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T11:12:24+00:00"
+},
+{
+"id": "85e8c02f3371",
+"t": "",
+"title": "FM Compounders Equity ETF (FMCE.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBRSmw2NlRFS2plUS1pTHEyNTBJYVplNlRwY2x4M1Ezb0Y2UjN6dHF3QmRKczR6VWxoVXJSRzUxODhFVFBxOUlOOTlCRHpMWDZGaFNzRVJITTI?oc=5",
+"pub": "2026-11-20T10:23:32+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T11:16:14+00:00"
 },
 {
 "id": "350a31a64e11",
@@ -8422,6 +8432,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T08:44:44+00:00"
+},
+{
+"id": "fdcac7c4d21d",
+"t": "",
+"title": "Trigyn Technologies Ltd (TRIG.M3) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE56ZjhTSEc2Ul9IOTBka1pIZnE1U2JTY2d5RElVakRweXhKVDdyVFdxcjdmRG1pN3ZmTV9nV21jVFI5N2ZzNlNiX1JnZ2pjaEc4Z25XUW5La0FuN3podFhJYTRLVWlCcUVlOEVnbA?oc=5",
+"pub": "2026-11-20T08:23:43+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T11:16:14+00:00"
 },
 {
 "id": "6296ec8290de",
@@ -10214,6 +10234,16 @@
 "seen": "2026-11-20T05:44:20+00:00"
 },
 {
+"id": "85e518edc048",
+"t": "",
+"title": "Japan core inflation soars to highest this year as energy subsidy expiry pushes up consumer prices",
+"url": "https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html",
+"pub": "2026-11-20T01:49:03+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-20T11:16:14+00:00"
+},
+{
 "id": "6bc807db7058",
 "t": "",
 "title": "This Ex-Sheriff Was on the Beat When Mark Walter Loaded Insurers With Insider Deals",
@@ -10982,36 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "c8697713747e",
-"t": "",
-"title": "Fed's Paulson: more policy tightening needed",
-"url": "https://www.financialjuice.com/News/9860851/Feds-Paulson-more-policy-tightening-needed.aspx?xy=rss",
-"pub": "2026-11-20T00:02:07+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "a5f7c8accda4",
-"t": "",
-"title": "Fed's Paulson: more policy tightening needed",
-"url": "https://www.financialjuice.com/News/9860851/Feds-Paulson-more-policy-tightening-needed.aspx",
-"pub": "2026-11-20T00:02:07+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "0fb8fde6a204",
-"t": "",
-"title": "Japan economy minister Kiuchi: rising inflation expectations pressure consumer sentiment, one-off factors contribute to weak consumption indicators",
-"url": "https://www.financialjuice.com/News/9860850/Japan-economy-minister-Kiuchi-rising-inflation-expectations-pressure-consumer-sentiment-one-off-factors-contribute-to-weak-consumption-indicators.aspx?xy=rss",
-"pub": "2026-11-20T00:01:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
 }
 ]
 }
