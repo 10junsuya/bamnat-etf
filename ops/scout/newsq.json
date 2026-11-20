@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-20 15:44",
-"rot": 73,
+"updated_kst": "2026-11-20 16:14",
+"rot": 133,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "34건",
+"Reuters": "37건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "bce93bfabceb",
+"t": "SPCX",
+"title": "SpaceX Holds Its Orbit As Space Stocks Fall Back To Earth — Inside A Rough Week For FLY, ASTS, RKLB And RDW",
+"url": "https://stocktwits.com/news-articles/markets/equity/spacex-holds-orbit-space-stocks-fall-back-earth-rough-week-fly-asts-rklb-rdw/cNbS4SbR9KQ?.tsrc=rss",
+"pub": "2026-11-20T06:58:31+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "5a9260093ae1",
+"t": "WMT",
+"title": "WMT Stock Ticks Higher Overnight: Analyst Says Walmart Deserves Rich Valuation, CEO Stands By ‘Low Price’ Game",
+"url": "https://stocktwits.com/news-articles/markets/equity/wmt-stock-ticks-higher-overnight-analyst-says-walmart-deserves-rich-valuation-ceo-stands-by-low-price-game/cNbSEHDR9Kf?.tsrc=rss",
+"pub": "2026-11-20T06:33:43+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:14:18+00:00"
+},
 {
 "id": "17f969e66cb8",
 "t": "NVDA",
@@ -74,6 +94,16 @@
 "seen": "2026-11-20T06:40:54+00:00"
 },
 {
+"id": "955f56a35bd4",
+"t": "TER",
+"title": "What Is Teradyne (TER) Bringing To Edge AI With Omnyx Edge?",
+"url": "https://finance.yahoo.com/technology/ai/articles/teradyne-ter-bringing-edge-ai-061542323.html?.tsrc=rss",
+"pub": "2026-11-20T06:15:42+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
 "id": "990c49c8aa82",
 "t": "FTNT",
 "title": "What Is Fortinet (FTNT) Signaling With Its Fourth OT Security Leadership Win?",
@@ -92,6 +122,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T06:40:54+00:00"
+},
+{
+"id": "6fe7c019de1a",
+"t": "JPM",
+"title": "What Does JPMorgan Chase (JPM) Naming A New CFO Mean For Investors?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/does-jpmorgan-chase-jpm-naming-060933124.html?.tsrc=rss",
+"pub": "2026-11-20T06:09:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:14:18+00:00"
 },
 {
 "id": "cde86575f7fb",
@@ -7974,44 +8014,334 @@
 "seen": "2026-11-19T17:21:16+00:00"
 },
 {
-"id": "32e35b197a2f",
-"t": "GOOGL",
-"title": "Is Nvidia Stock Dead Money For A Year?",
-"url": "https://www.trefis.com/stock/nvda/articles/626519/is-nvidia-stock-dead-money-for-a-year/2026-11-19?.tsrc=rss",
-"pub": "2026-11-19T15:36:12+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "4750e4d8851b",
+"t": "",
+"title": "SNB Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9861333/SNB-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-20T07:09:01+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
 },
 {
-"id": "67bba09464ce",
-"t": "COST",
-"title": "High End Generators Are Flying Off The Shelves At Costco After A String Of Unusual Tech Outages. Generac Shares Are Up More Than 50% In 2026",
-"url": "https://247wallst.com/investing/2026/11/19/high-end-generators-are-flying-off-the-shelves-at-costco-after-a-string-of-unusual-tech-outages-generac-shares-are-up-more-than-50-in-2026/?.tsrc=rss",
-"pub": "2026-11-19T15:36:06+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "298031a4f370",
+"t": "",
+"title": "Russian Foreign Ministry: No agreement on next round of Ukraine talks - TASS",
+"url": "https://www.financialjuice.com/News/9861332/Russian-Foreign-Ministry-No-agreement-on-next-round-of-Ukraine-talks---TASS.aspx?xy=rss",
+"pub": "2026-11-20T07:08:41+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
 },
 {
-"id": "4cc4cac8d281",
-"t": "CRWV",
-"title": "George Soros and 14 Other Big Funds Bought CoreWeave Last Quarter. Leopold Aschenbrenner and 5 Others Sold. Who’s Right?",
-"url": "https://www.tikr.com/blog/george-soros-and-14-other-big-funds-bought-coreweave-last-quarter-leopold-aschenbrenner-and-5-others-sold-whos-right?ref=yahoofinance&tlnk=yf-261119-6x5vjgvf&.tsrc=rss",
-"pub": "2026-11-19T15:35:40+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "21541d4d6338",
+"t": "",
+"title": "RBNZ Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9861331/RBNZ-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-20T07:08:40+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
 },
 {
-"id": "f3551ac3639e",
-"t": "CRWD",
-"title": "Anthropic makes its IPO debut on the Nasdaq: Sozzi hot takes and what to watch",
-"url": "https://finance.yahoo.com/video/anthropic-makes-its-ipo-debut-on-the-nasdaq-sozzi-hot-takes-and-what-to-watch-153538614.html?.tsrc=rss",
-"pub": "2026-11-19T15:35:38+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
+"id": "9223c4060c50",
+"t": "",
+"title": "RBA Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9861330/RBA-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-20T07:08:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "890841d58807",
+"t": "",
+"title": "BoJ Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9861329/BoJ-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-20T07:07:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "72d809d2118b",
+"t": "",
+"title": "BoC Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9861328/BoC-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-20T07:07:30+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "801934016b34",
+"t": "",
+"title": "BoE Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9861327/BoE-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-20T07:07:09+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "e7414c460ad6",
+"t": "",
+"title": "ECB Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9861326/ECB-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-20T07:06:47+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "60d68555290c",
+"t": "",
+"title": "Fed Interest Rate Probabilities",
+"url": "https://www.financialjuice.com/News/9861325/Fed-Interest-Rate-Probabilities.aspx?xy=rss",
+"pub": "2026-11-20T07:06:28+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "46bde8d266e6",
+"t": "",
+"title": "UK Retail Sales Rebound as Brits Stock Up on Emergency Supplies",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/uk-retail-sales-rebound-as-brits-stock-up-on-emergency-supplies",
+"pub": "2026-11-20T07:06:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "6831c91e30ff",
+"t": "",
+"title": "Commodities Implied Volatility",
+"url": "https://www.financialjuice.com/News/9861324/Commodities-Implied-Volatility.aspx?xy=rss",
+"pub": "2026-11-20T07:05:50+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "9b8653662ced",
+"t": "",
+"title": "FX Implied Volatility",
+"url": "https://www.financialjuice.com/News/9861323/FX-Implied-Volatility.aspx?xy=rss",
+"pub": "2026-11-20T07:05:32+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "45608dab69b8",
+"t": "",
+"title": "US Index Futures Implied Volatility",
+"url": "https://www.financialjuice.com/News/9861322/US-Index-Futures-Implied-Volatility.aspx?xy=rss",
+"pub": "2026-11-20T07:05:16+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "6bb626a934d8",
+"t": "",
+"title": "Top S&P 500 Stock Names Implied Volatility",
+"url": "https://www.financialjuice.com/News/9861321/Top-SP-500-Stock-Names-Implied-Volatility.aspx?xy=rss",
+"pub": "2026-11-20T07:04:56+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "1a465fd507d1",
+"t": "",
+"title": "ONS - UK supermarkets reported stronger October sales after government advice to buy long-life items",
+"url": "https://www.financialjuice.com/News/9861320/ONS---UK-supermarkets-reported-stronger-October-sales-after-government-advice-to-buy-long-life-items.aspx?xy=rss",
+"pub": "2026-11-20T07:04:23+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "604059a99bbf",
+"t": "",
+"title": "120-Day Correlation Matrix",
+"url": "https://www.financialjuice.com/News/9861319/120-Day-Correlation-Matrix.aspx?xy=rss",
+"pub": "2026-11-20T07:04:09+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "3f9b78d5e90f",
+"t": "",
+"title": "90-Day Correlation Matrix",
+"url": "https://www.financialjuice.com/News/9861318/90-Day-Correlation-Matrix.aspx?xy=rss",
+"pub": "2026-11-20T07:03:49+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "cfb4604a6cfb",
+"t": "",
+"title": "60-Day Correlation Matrix",
+"url": "https://www.financialjuice.com/News/9861317/60-Day-Correlation-Matrix.aspx?xy=rss",
+"pub": "2026-11-20T07:03:31+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "dcb88fb93340",
+"t": "",
+"title": "30-Day Correlation Matrix",
+"url": "https://www.financialjuice.com/News/9861316/30-Day-Correlation-Matrix.aspx?xy=rss",
+"pub": "2026-11-20T07:03:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "ecb856d31386",
+"t": "",
+"title": "UK Trade Chief Says Burnham Spurred Movement in Europe Talks",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/uk-trade-chief-says-burnham-spurred-movement-in-europe-talks",
+"pub": "2026-11-20T07:02:12+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "b26f28fa19f9",
+"t": "",
+"title": "Swedish Unemployment Rate SA Actual 8.2% (Forecast 8.55%, Previous 8.6%)",
+"url": "https://www.financialjuice.com/News/9861302/Swedish-Unemployment-Rate-SA-Actual-82-Forecast-855-Previous-86.aspx?xy=rss",
+"pub": "2026-11-20T07:00:09+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "c8bd1cfa35c5",
+"t": "",
+"title": "Swedish Unemployment Rate Actual 7.7% (Forecast -, Previous 8.1%)",
+"url": "https://www.financialjuice.com/News/9861301/Swedish-Unemployment-Rate-Actual-77-Forecast---Previous-81.aspx?xy=rss",
+"pub": "2026-11-20T07:00:09+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "068a45011c63",
+"t": "",
+"title": "German PPI YoY Actual 8.1% (Forecast 7.3%, Previous 6.7%)",
+"url": "https://www.financialjuice.com/News/9861304/German-PPI-YoY-Actual-81-Forecast-73-Previous-67.aspx?xy=rss",
+"pub": "2026-11-20T07:00:09+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "47c8e718951a",
+"t": "",
+"title": "German PPI MoM Actual 1.4% (Forecast 1%, Previous 1.9%)",
+"url": "https://www.financialjuice.com/News/9861303/German-PPI-MoM-Actual-14-Forecast-1-Previous-19.aspx?xy=rss",
+"pub": "2026-11-20T07:00:08+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "0993bac518ae",
+"t": "",
+"title": "UK PSNB ex Banks Actual 17.036B (Forecast -, Previous 24.520B)",
+"url": "https://www.financialjuice.com/News/9861300/UK-PSNB-ex-Banks-Actual-17036B-Forecast---Previous-24520B.aspx?xy=rss",
+"pub": "2026-11-20T07:00:06+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "2119e0585dba",
+"t": "",
+"title": "UK Core Retail Sales MoM Actual 0.9% (Forecast 0.1%, Previous -0.7%)",
+"url": "https://www.financialjuice.com/News/9861299/UK-Core-Retail-Sales-MoM-Actual-09-Forecast-01-Previous--07.aspx?xy=rss",
+"pub": "2026-11-20T07:00:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "f004491361ea",
+"t": "",
+"title": "UK Retail Sales MoM Actual 0.7% (Forecast 0%, Previous -0.4%)",
+"url": "https://www.financialjuice.com/News/9861298/UK-Retail-Sales-MoM-Actual-07-Forecast-0-Previous--04.aspx?xy=rss",
+"pub": "2026-11-20T07:00:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "81c93a180966",
+"t": "",
+"title": "UK Retail Sales YoY Actual 2.3% (Forecast 1.7%, Previous 0.8%)",
+"url": "https://www.financialjuice.com/News/9861297/UK-Retail-Sales-YoY-Actual-23-Forecast-17-Previous-08.aspx?xy=rss",
+"pub": "2026-11-20T07:00:02+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "918f4944e7c9",
+"t": "",
+"title": "UK Core Retail Sales YoY Actual 2.5% (Forecast 1.8%, Previous 0.8%)",
+"url": "https://www.financialjuice.com/News/9861296/UK-Core-Retail-Sales-YoY-Actual-25-Forecast-18-Previous-08.aspx?xy=rss",
+"pub": "2026-11-20T07:00:01+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "dfe2b9fd987d",
+"t": "",
+"title": "Russian Foreign Ministry: no agreement on next round of Ukraine talks - IFX",
+"url": "https://www.financialjuice.com/News/9861295/Russian-Foreign-Ministry-no-agreement-on-next-round-of-Ukraine-talks---IFX.aspx?xy=rss",
+"pub": "2026-11-20T06:58:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "01d907aad913",
+"t": "",
+"title": "Fincantieri wins Carnival contract for two next-generation cruise ships - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRUg1cjZ0TDZ2UEF5VlRjVm9SOWhaY3EzLXNqSVE5eklWRXhTWnRoRUhmR2NuOVVIZFFwN3liSzQyU1lPcVFKYVlKaXduVTQ4cjUyQW9GQW9pd0JRdk9sMWFkZVk4T1BZaEVOYWhOVlZ3NTFvYms4bzNyYVdfSUFGdUpsVU5USFFZQlh0QXRSRFJNdURMUDhnYU0xVDA3QVE0WTl0d291Z2FvNEphYnJhT2xqQVEwWmJLMmZEMzR6OWI?oc=5",
+"pub": "2026-11-20T06:48:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "1fbf9b23ebe5",
+"t": "",
+"title": "FTSE 100 to Fall as Global Stocks Selloff Worsens",
+"url": "https://www.bloomberg.com/news/live-blog/2026-11-20/ftse-100-live-updates-pound-gilts-stocks-selloff-ai-what-s-moving-uk-markets-right-now-markets-today",
+"pub": "2026-11-20T06:46:27+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "eead23010147",
+"t": "",
+"title": "Goldman Sachs on India, Korea Opportunities",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/goldman-sachs-on-anthropic-india-korea-opportunities-video",
+"pub": "2026-11-20T06:35:32+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
 },
 {
 "id": "a9d0318f8a61",
@@ -8342,6 +8672,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T06:40:54+00:00"
+},
+{
+"id": "bfbd69257873",
+"t": "",
+"title": "Alng ASA (AWLNF.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1GMDNmR3Fpb3cyRHFhNzRnV25ZbEFYS2hpZlBqbTJRbXI2SVBsYnpVdDVpNEVVM3NuQzFGY1JTaWpGWnBmaXQtbzFmLXJFLTlPTTBRVHIzWFR3S2phMWpRTGJody03Y2Ny?oc=5",
+"pub": "2026-11-20T04:57:13+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
 },
 {
 "id": "8c7e782c7198",
@@ -9232,6 +9572,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "a3f6faff4203",
+"t": "",
+"title": "Range Resources Corporation (RRC.F) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCeXVBLUotbmRZZE9MV09ISmpGS1BySmZtY2hUOU04UWZnSVlTbEZmd3IwRUVmOTlZU1NLV3d3akNGeHAxVzZLMFpvaFRrT0pfXzNDY3BmcXpJQnZ0ZDN5YXJkWEMtblEtaWc?oc=5",
+"pub": "2026-11-20T00:47:51+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T07:14:18+00:00"
 },
 {
 "id": "f7f55147a1c3",
@@ -10662,356 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T05:44:20+00:00"
-},
-{
-"id": "370b77cd12f3",
-"t": "",
-"title": "Apple outlines plans for proactive AI agent in job postings; agent covers device control, apps, browsing and coding. $AAPL",
-"url": "https://www.financialjuice.com/News/9860691/Apple-outlines-plans-for-proactive-AI-agent-in-job-postings-agent-covers-device-control-apps-browsing-and-coding-AAPL.aspx?xy=rss",
-"pub": "2026-11-19T21:37:33+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "c30992238381",
-"t": "",
-"title": "Apple outlines plans for proactive AI agent in job postings; agent covers device control, apps, browsing and coding. $AAPL",
-"url": "https://www.financialjuice.com/News/9860691/Apple-outlines-plans-for-proactive-AI-agent-in-job-postings-agent-covers-device-control-apps-browsing-and-coding-AAPL.aspx",
-"pub": "2026-11-19T21:37:33+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "cab7e224b9f8",
-"t": "",
-"title": "Bending Spoons SpA (BSP.O) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1HTUstSWkzWEVvczFpTjhYNW44bUNPWWI5UUtkQmhzLTJLcnRyQW9JNy16Mnl5QjRLNkJfZlFLYXpmZ2pXdjdZZHNIaFFrWXNyc1B6QWhUMHNrU09r?oc=5",
-"pub": "2026-11-19T21:28:13+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T01:18:57+00:00"
-},
-{
-"id": "89345bf95b72",
-"t": "",
-"title": "Anthropic Jumps 17% in Record IPO as Broader Tech Market Sells Off | Closing Bell",
-"url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-jumps-17-in-record-ipo-closing-bell-video",
-"pub": "2026-11-19T21:24:51+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "586ca917116a",
-"t": "",
-"title": "Shenkman, Blackstone, GDA Among Lenders to Take Over Vivid",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/blackstone-among-lenders-taking-over-ticket-reseller-vivid-seats",
-"pub": "2026-11-19T21:22:45+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "1eb7507f8cbe",
-"t": "",
-"title": "Gap names new Athleta CEO, lowers full-year guidance",
-"url": "https://www.cnbc.com/2026/11/19/gap-gap-q3-2026-earnings.html",
-"pub": "2026-11-19T21:22:23+00:00",
-"src": "CNBC",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "eca0ab0780dc",
-"t": "",
-"title": "US Banks Send Bearish ‘Death Cross’ Signal as Stock Rout Extends",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/us-banks-send-bearish-death-cross-signal-as-stock-rout-extends",
-"pub": "2026-11-19T21:11:13+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "1d814fe00b8a",
-"t": "",
-"title": "Palo Alto stock jumps on earnings beat and company's big bet on securing open-weight models",
-"url": "https://www.cnbc.com/2026/11/19/palo-alto-networks-earnings-applied-compute.html",
-"pub": "2026-11-19T21:00:57+00:00",
-"src": "CNBC",
-"kind": "market",
-"seen": "2026-11-20T02:26:34+00:00"
-},
-{
-"id": "8889f11bb568",
-"t": "",
-"title": "S. Korean PPI MoM Actual -0.1% (Forecast -, Previous 0.2%)",
-"url": "https://www.financialjuice.com/News/9860640/S-Korean-PPI-MoM-Actual--01-Forecast---Previous-02.aspx?xy=rss",
-"pub": "2026-11-19T21:00:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "2a5918be6be2",
-"t": "",
-"title": "S. Korean PPI YoY Actual 7.2% (Forecast -, Previous 7.7% ,Revision 7.6%)",
-"url": "https://www.financialjuice.com/News/9860639/S-Korean-PPI-YoY-Actual-72-Forecast---Previous-77-Revision-76.aspx?xy=rss",
-"pub": "2026-11-19T21:00:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "f5d1c132251a",
-"t": "",
-"title": "S. Korean PPI MoM Actual -0.1% (Forecast -, Previous 0.2%)",
-"url": "https://www.financialjuice.com/News/9860640/S-Korean-PPI-MoM-Actual--01-Forecast---Previous-02.aspx",
-"pub": "2026-11-19T21:00:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "e388e9ef1425",
-"t": "",
-"title": "S. Korean PPI YoY Actual 7.2% (Forecast -, Previous 7.7% ,Revision 7.6%)",
-"url": "https://www.financialjuice.com/News/9860639/S-Korean-PPI-YoY-Actual-72-Forecast---Previous-77-Revision-76.aspx",
-"pub": "2026-11-19T21:00:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "8d023ae83690",
-"t": "",
-"title": "Tata Sons Largest Shareholder Meets to Discuss Listing Amid Rift",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/tata-sons-largest-shareholder-meets-to-discuss-listing-amid-rift",
-"pub": "2026-11-19T21:00:00+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "1ab2f9c6860a",
-"t": "",
-"title": "Treasury Yields Slip as Risk-Off Mode Survives Anthropic’s IPO",
-"url": "https://www.wsj.com/finance/investing/jgbs-edge-higher-amid-mixed-developments-c690e1af?mod=rss_markets_main",
-"pub": "2026-11-19T21:00:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "03b606c00886",
-"t": "",
-"title": "Treasury Yields Fall as Anthropic Fails to Sustain Risk Appetite",
-"url": "https://www.wsj.com/economy/central-banking/treasury-eurozone-bond-yields-edge-higher-47e08817?mod=rss_markets_main",
-"pub": "2026-11-19T21:00:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "006a91145e40",
-"t": "",
-"title": "US money-market fund assets fall to $7.976 trln at ICI.",
-"url": "https://www.financialjuice.com/News/9860638/US-money-market-fund-assets-fall-to-7976-trln-at-ICI.aspx?xy=rss",
-"pub": "2026-11-19T20:59:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "e9ed676fe56a",
-"t": "",
-"title": "US money-market fund assets fall to $7.976 trln at ICI.",
-"url": "https://www.financialjuice.com/News/9860638/US-money-market-fund-assets-fall-to-7976-trln-at-ICI.aspx",
-"pub": "2026-11-19T20:59:27+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "79f272159ab8",
-"t": "",
-"title": "Aptus July Buffer ETF (JULB.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8wV25mVGZXT05TZjVyOUgyY0xPWi1JcURCSE9SUmZnT0VzZzN1YnZJMnFzaHU3ZDZodlFSREl4REllbTMza2ExQWkyMzVRblRlb0luTV9Pa0R4ZERCRkMxeWxVYkd2VGhURU8w?oc=5",
-"pub": "2026-11-19T20:55:53+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T05:44:20+00:00"
-},
-{
-"id": "26106844d75f",
-"t": "",
-"title": "MOC Imbalance",
-"url": "https://www.financialjuice.com/News/9860637/MOC-Imbalance.aspx?xy=rss",
-"pub": "2026-11-19T20:50:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "98a40a6e7d44",
-"t": "",
-"title": "MOC Imbalance",
-"url": "https://www.financialjuice.com/News/9860637/MOC-Imbalance.aspx",
-"pub": "2026-11-19T20:50:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "6f18a38c50a0",
-"t": "",
-"title": "Oil Futures End Volatile Session Near Flat",
-"url": "https://www.wsj.com/business/energy-oil/oil-prices-mixed-as-traders-weigh-supply-outlook-middle-east-shipping-risks-224e2724?mod=rss_markets_main",
-"pub": "2026-11-19T20:49:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "946db3fc07b5",
-"t": "",
-"title": "Crude Futures End Little Changed",
-"url": "https://www.wsj.com/finance/commodities-futures/oil-falls-weighed-by-larger-than-expected-rise-in-u-s-inventories-0271b977?mod=rss_markets_main",
-"pub": "2026-11-19T20:44:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "be5c8a8522ca",
-"t": "",
-"title": "Iran Foreign Ministry Spokesman on X: US accusations about Tehran developing chemical and biological weapons are intended to create fear and justify military action.",
-"url": "https://www.financialjuice.com/News/9860623/Iran-Foreign-Ministry-Spokesman-on-X-US-accusations-about-Tehran-developing-chemical-and-biological-weapons-are-intended-to-create-fear-and-justify-military-action.aspx?xy=rss",
-"pub": "2026-11-19T20:35:43+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "137630ddf8cb",
-"t": "",
-"title": "Iran Foreign Ministry Spokesman on X: US accusations about Tehran developing chemical and biological weapons are intended to create fear and justify military action.",
-"url": "https://www.financialjuice.com/News/9860623/Iran-Foreign-Ministry-Spokesman-on-X-US-accusations-about-Tehran-developing-chemical-and-biological-weapons-are-intended-to-create-fear-and-justify-military-action.aspx",
-"pub": "2026-11-19T20:35:43+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "0214dad4a28e",
-"t": "",
-"title": "Fed's Goolsbee: It is not clear how the financial sector would be impacted if there is a major correction in equities related to AI.",
-"url": "https://www.financialjuice.com/News/9860619/Feds-Goolsbee-It-is-not-clear-how-the-financial-sector-would-be-impacted-if-there-is-a-major-correction-in-equities-related-to-AI.aspx?xy=rss",
-"pub": "2026-11-19T20:32:50+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "c4150683d2c3",
-"t": "",
-"title": "Fed's Goolsbee: It is not clear how the financial sector would be impacted if there is a major correction in equities related to AI.",
-"url": "https://www.financialjuice.com/News/9860619/Feds-Goolsbee-It-is-not-clear-how-the-financial-sector-would-be-impacted-if-there-is-a-major-correction-in-equities-related-to-AI.aspx",
-"pub": "2026-11-19T20:32:50+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "eb57c5d8ccec",
-"t": "",
-"title": "Fed's Goolsbee: There is a high risk that the economy's capacity cannot handle the current 'pig-through-the-python' level of business investment without overheating",
-"url": "https://www.financialjuice.com/News/9860618/Feds-Goolsbee-There-is-a-high-risk-that-the-economys-capacity-cannot-handle-the-current-pig-through-the-python-level-of-business-investment-without-overheating.aspx?xy=rss",
-"pub": "2026-11-19T20:32:42+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "ac9382427994",
-"t": "",
-"title": "Fed's Goolsbee: There is a high risk that the economy's capacity cannot handle the current 'pig-through-the-python' level of business investment without overheating",
-"url": "https://www.financialjuice.com/News/9860618/Feds-Goolsbee-There-is-a-high-risk-that-the-economys-capacity-cannot-handle-the-current-pig-through-the-python-level-of-business-investment-without-overheating.aspx",
-"pub": "2026-11-19T20:32:42+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "2a115db7cb2b",
-"t": "",
-"title": "Fed's Goolsbee: Consumer spending has been pretty broad-based, financed mostly out of income growth.",
-"url": "https://www.financialjuice.com/News/9860608/Feds-Goolsbee-Consumer-spending-has-been-pretty-broad-based-financed-mostly-out-of-income-growth.aspx?xy=rss",
-"pub": "2026-11-19T20:32:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "fe306488bbc7",
-"t": "",
-"title": "Fed's Goolsbee: Consumer spending has been pretty broad-based, financed mostly out of income growth.",
-"url": "https://www.financialjuice.com/News/9860608/Feds-Goolsbee-Consumer-spending-has-been-pretty-broad-based-financed-mostly-out-of-income-growth.aspx",
-"pub": "2026-11-19T20:32:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "1ddc334c599e",
-"t": "",
-"title": "Fed's Goolsbee: Not sure if fallout from US midterm elections will include a slowdown in data-center buildout or have a lasting impact on equity prices.",
-"url": "https://www.financialjuice.com/News/9860606/Feds-Goolsbee-Not-sure-if-fallout-from-US-midterm-elections-will-include-a-slowdown-in-data-center-buildout-or-have-a-lasting-impact-on-equity-prices.aspx?xy=rss",
-"pub": "2026-11-19T20:32:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "c6958b1681ff",
-"t": "",
-"title": "Fed's Goolsbee: Not sure if fallout from US midterm elections will include a slowdown in data-center buildout or have a lasting impact on equity prices.",
-"url": "https://www.financialjuice.com/News/9860606/Feds-Goolsbee-Not-sure-if-fallout-from-US-midterm-elections-will-include-a-slowdown-in-data-center-buildout-or-have-a-lasting-impact-on-equity-prices.aspx",
-"pub": "2026-11-19T20:32:29+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "983121bde949",
-"t": "",
-"title": "Fed's Goolsbee: More openness about monetary policy has been productive for the Fed and the world.",
-"url": "https://www.financialjuice.com/News/9860604/Feds-Goolsbee-More-openness-about-monetary-policy-has-been-productive-for-the-Fed-and-the-world.aspx?xy=rss",
-"pub": "2026-11-19T20:32:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "99c020f59e63",
-"t": "",
-"title": "Fed's Goolsbee: More openness about monetary policy has been productive for the Fed and the world.",
-"url": "https://www.financialjuice.com/News/9860604/Feds-Goolsbee-More-openness-about-monetary-policy-has-been-productive-for-the-Fed-and-the-world.aspx",
-"pub": "2026-11-19T20:32:19+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "e8689b1b1388",
-"t": "",
-"title": "Fed's Goolsbee: There is widespread acknowledgment among businesses that costs are up, particularly among firms in construction or competing with data centers for components.",
-"url": "https://www.financialjuice.com/News/9860603/Feds-Goolsbee-There-is-widespread-acknowledgment-among-businesses-that-costs-are-up-particularly-among-firms-in-construction-or-competing-with-data-centers-for-components.aspx?xy=rss",
-"pub": "2026-11-19T20:32:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T21:24:41+00:00"
 }
 ]
 }
