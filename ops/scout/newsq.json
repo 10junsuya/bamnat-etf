@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-20 11:43",
-"rot": 69,
+"updated_kst": "2026-11-20 12:14",
+"rot": 129,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "26건",
+"Reuters": "32건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "8bd8928e73a1",
+"t": "TSLA",
+"title": "Tech takes a beating as AI trade comes unstuck despite Anthropic surge",
+"url": "https://finance.yahoo.com/markets/stocks/articles/tech-takes-beating-ai-trade-030257717.html?.tsrc=rss",
+"pub": "2026-11-20T03:02:57+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T03:14:07+00:00"
+},
+{
+"id": "be25817fe51d",
+"t": "NVDA",
+"title": "Nasdaq, Dow, S&P 500 Futures Slip As Anthropic’s Record Debut Fails To Lift AI Stocks: SLV, GLD, AMD, NVDA In Focus",
+"url": "https://stocktwits.com/news-articles/markets/equity/why-nasdaq-dow-futures-fell-anthropic-ipo-ai-trade-amd-nvda/cNbSGu0R9KR?.tsrc=rss",
+"pub": "2026-11-20T02:48:14+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T03:14:07+00:00"
+},
 {
 "id": "69084f56c80a",
 "t": "NVDA",
@@ -82,6 +102,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T02:43:51+00:00"
+},
+{
+"id": "a00980a2a57a",
+"t": "OUST",
+"title": "3 Top AI Stocks To Watch With Up To 43% Revenue Growth",
+"url": "https://finance.yahoo.com/technology/ai/articles/3-top-ai-stocks-watch-021121041.html?.tsrc=rss",
+"pub": "2026-11-20T02:11:21+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
 "id": "5affc8df2b4a",
@@ -334,6 +364,16 @@
 "seen": "2026-11-20T02:26:34+00:00"
 },
 {
+"id": "d0ff69a7715f",
+"t": "WMT",
+"title": "Review & Preview: Anthropic Pops, Markets Drop",
+"url": "https://finance.yahoo.com/m/26a99824-d835-3c83-abee-6cd63f8fc688/review-%26-preview%3A-anthropic.html?.tsrc=rss",
+"pub": "2026-11-20T00:55:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T03:14:07+00:00"
+},
+{
 "id": "913c710115a1",
 "t": "NVDA",
 "title": "1 Unstoppable Stock to Buy Before It Joins NVDA and AAPL in the $1 Trillion Club",
@@ -502,6 +542,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T01:18:57+00:00"
+},
+{
+"id": "4d00ff97d3bc",
+"t": "WMT",
+"title": "Thanksgiving Dinner Will Cost More This Year. Here’s Why.",
+"url": "https://finance.yahoo.com/m/2f4069c5-6a7e-3b84-9d5b-f325befdff73/thanksgiving-dinner-will-cost.html?.tsrc=rss",
+"pub": "2026-11-19T23:48:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
 "id": "7e2ae24607ae",
@@ -2594,6 +2644,16 @@
 "seen": "2026-11-19T20:28:04+00:00"
 },
 {
+"id": "929d66120dc1",
+"t": "NXPI",
+"title": "Ambarella Stock Soars on Reports NXP Semiconductors Deal Is Drawing to a Close",
+"url": "https://www.barchart.com/story/news/8923632/ambarella-stock-soars-on-reports-nxp-semiconductors-deal-is-drawing-to-a-close?.tsrc=rss",
+"pub": "2026-11-19T19:51:45+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T03:14:07+00:00"
+},
+{
 "id": "8cf3fe7f7eb4",
 "t": "NVDA",
 "title": "CoreWeave vs. Nebius: Which Artificial Intelligence (AI) Stock Will Deliver Bigger Gains by 2028?",
@@ -2672,6 +2732,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T20:28:04+00:00"
+},
+{
+"id": "203bacf75812",
+"t": "SNDK",
+"title": "Down More Than 40% in the Past Month, Here’s How You Should Play Sandisk Stock",
+"url": "https://www.barchart.com/story/news/8923559/down-more-than-40-in-the-past-month-heres-how-you-should-play-sandisk-stock?.tsrc=rss",
+"pub": "2026-11-19T19:45:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
 "id": "d0afd41647d1",
@@ -7944,74 +8014,94 @@
 "seen": "2026-11-19T16:12:33+00:00"
 },
 {
-"id": "b139cd31a6be",
-"t": "CRWD",
-"title": "Cybersecurity sector outlook: Setup analysis as Palo Alto results lift peers",
-"url": "https://finance.yahoo.com/markets/stocks/articles/cybersecurity-sector-outlook-setup-analysis-151113192.html?.tsrc=rss",
-"pub": "2026-11-19T15:11:13+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
+"id": "e0a62def6371",
+"t": "",
+"title": "US Senate approves bipartisan energy permitting bill with 62-33 vote",
+"url": "https://www.financialjuice.com/News/9861081/US-Senate-approves-bipartisan-energy-permitting-bill-with-62-33-vote.aspx?xy=rss",
+"pub": "2026-11-20T03:08:59+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
-"id": "978a3969f8e8",
-"t": "NBIS",
-"title": "Nebius Lifts 2026 CapEx View to $27B: Can Funding Keep Pace?",
-"url": "https://finance.yahoo.com/technology/ai/articles/nebius-lifts-2026-capex-view-151100345.html?.tsrc=rss",
-"pub": "2026-11-19T15:11:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "49a714868246",
+"t": "",
+"title": "China's President Xi: relationship we are building is positive, calm, not defined by differences, but clear and frank exchanges for mutual interest",
+"url": "https://www.financialjuice.com/News/9861080/Chinas-President-Xi-relationship-we-are-building-is-positive-calm-not-defined-by-differences-but-clear-and-frank-exchanges-for-mutual-interest.aspx?xy=rss",
+"pub": "2026-11-20T03:05:38+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
-"id": "9e5cb9f1909f",
-"t": "SPCX",
-"title": "Anthropic IPO mania: Could it be the biggest public debut ever?",
-"url": "https://finance.yahoo.com/video/anthropic-ipo-mania-could-it-be-the-biggest-public-debut-ever-151001594.html?.tsrc=rss",
-"pub": "2026-11-19T15:10:01+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "6c538dba61d1",
+"t": "",
+"title": "China's President Xi: we share a stake in open, rule-based commerce",
+"url": "https://www.financialjuice.com/News/9861079/Chinas-President-Xi-we-share-a-stake-in-open-rule-based-commerce.aspx?xy=rss",
+"pub": "2026-11-20T03:04:47+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
-"id": "1d5a009a56b1",
-"t": "AAPL",
-"title": "Connected Health Devices - Global Strategic Business Report 2026: Capitalize on 21.3% CAGR and $11.6B Revenue Opportunity by 2032 with Apple, Medtronic, Microsoft, Roche and Epic Systems",
-"url": "https://finance.yahoo.com/healthcare/articles/connected-health-devices-global-strategic-151000586.html?.tsrc=rss",
-"pub": "2026-11-19T15:10:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "05f2c1dc2285",
+"t": "",
+"title": "Copper Rout Deepens as AI Selloff Wreaks Havoc in Metals Markets",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/copper-rout-deepens-as-ai-selloff-wreaks-havoc-in-metals-markets",
+"pub": "2026-11-20T03:03:05+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
-"id": "723b69036bbe",
-"t": "ARGX",
-"title": "With FDA nod, Regeneron brings an RNAi drug to autoimmune disease",
-"url": "https://www.biopharmadive.com/news/regeneron-fda-approve-cemdisiran-livsayis-myasthenia-gravis-alnylam/875160/?.tsrc=rss",
-"pub": "2026-11-19T15:10:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "45938585d253",
+"t": "",
+"title": "Trump Offers Xi a Helping Hand on Escalator",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/trump-offers-xi-a-helping-hand-on-escalator-video",
+"pub": "2026-11-20T03:01:17+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
-"id": "a6dde8ae3063",
-"t": "SPCX",
-"title": "Anthropic Executive Team Rings Nasdaq Opening Bell",
-"url": "https://finance.yahoo.com/video/anthropic-executive-team-rings-nasdaq-150953481.html?.tsrc=rss",
-"pub": "2026-11-19T15:09:53+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "9fedf0b17e98",
+"t": "",
+"title": "Honda Debuts Hybrid SUV for Asia in Pivot From Failed EV Bet",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/honda-debuts-hybrid-suv-for-asia-in-pivot-from-failed-ev-bet",
+"pub": "2026-11-20T03:00:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
-"id": "b20b466ddf53",
-"t": "AMGN",
-"title": "Eli Lilly Stopped Touting Dose Counts. Should You Worry?",
-"url": "https://www.trefis.com/stock/lly/articles/626833/eli-lilly-stopped-touting-dose-counts-should-you-worry/2026-11-19?.tsrc=rss",
-"pub": "2026-11-19T15:09:30+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "3178273d83d9",
+"t": "",
+"title": "Majority of US Senate backs bipartisan energy permitting bill, voting ongoing",
+"url": "https://www.financialjuice.com/News/9861071/Majority-of-US-Senate-backs-bipartisan-energy-permitting-bill-voting-ongoing.aspx?xy=rss",
+"pub": "2026-11-20T02:54:25+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
+},
+{
+"id": "2be03eefaad6",
+"t": "",
+"title": "Saudi-led coalition: intercepted ballistic missile launched by Yemen's Houthis toward kingdom's southern region",
+"url": "https://www.financialjuice.com/News/9861068/Saudi-led-coalition-intercepted-ballistic-missile-launched-by-Yemens-Houthis-toward-kingdoms-southern-region.aspx?xy=rss",
+"pub": "2026-11-20T02:46:15+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
+},
+{
+"id": "d58b49293e28",
+"t": "",
+"title": "Japan says JT dividend cut will not disrupt government's industrial investment plans - Reuters",
+"url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxObVItQUtnLXF1elJhcmVETVpRWXpIcFdGTkZlemhadVhQMnVZZEI5blJZVjkxb0ZhLXJpUWMxak5tREtmd0pNTnUyTk5vRHIwZGo4YkF3YmpMZnJLZ3IxNlRObnZvVDU5TTNDTDcybExVRnVVUWpPZV9xMzBzSU1WOE5Bb3Z3QW1OTlZfYVpoM1FWcTQ2ZzV6dW9EM0JwVEV4eDhrbTBzT0s5aW96MW1oQ0kzUGlHMy03aDJBRHMwYVdUSzN3?oc=5",
+"pub": "2026-11-20T02:32:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
 "id": "9e2c8fa5b5c3",
@@ -8022,6 +8112,26 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T02:43:51+00:00"
+},
+{
+"id": "af20bca6c460",
+"t": "",
+"title": "Taiwan Stocks Face Worst Week Since 1991 Despite Support Steps",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/taiwan-stocks-taiex-twse-1991-ai-chips-tsmc-hon-hai-foxconn",
+"pub": "2026-11-20T02:29:57+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
+},
+{
+"id": "b1b09e39c2cf",
+"t": "",
+"title": "Hong Kong Stocks Fall 20% From 2026 High as AI Selloff Spreads",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/hong-kong-stocks-hang-seng-hsi-hkex-2026-ai-selloff-bear-market",
+"pub": "2026-11-20T02:29:50+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T03:14:07+00:00"
 },
 {
 "id": "6b6fe1f2c591",
@@ -10902,116 +11012,6 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "c6c957e58926",
-"t": "",
-"title": "Anthropic's Blockbuster IPO Surpasses SpaceX Ahead of First Trade",
-"url": "https://www.bloomberg.com/news/videos/2026-11-19/bloomberg-surveillance-11-19-2026-video",
-"pub": "2026-11-19T17:20:13+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T19:26:39+00:00"
-},
-{
-"id": "58e61008daee",
-"t": "",
-"title": "US Envoy Kushner: Trump wants to make a deal with Europe by his side.",
-"url": "https://www.financialjuice.com/News/9860311/US-Envoy-Kushner-Trump-wants-to-make-a-deal-with-Europe-by-his-side.aspx?xy=rss",
-"pub": "2026-11-19T17:16:44+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "68a714d6bf88",
-"t": "",
-"title": "US Envoy Kushner: Trump wants to make a deal with Europe by his side.",
-"url": "https://www.financialjuice.com/News/9860311/US-Envoy-Kushner-Trump-wants-to-make-a-deal-with-Europe-by-his-side.aspx",
-"pub": "2026-11-19T17:16:44+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "f8e21ebc2252",
-"t": "",
-"title": "Nintendo Gains as ‘Roaring Kitty’ Posts Mario Character on X",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/nintendo-jumps-after-roaring-kitty-posts-mario-character-on-x",
-"pub": "2026-11-19T17:15:50+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T01:18:57+00:00"
-},
-{
-"id": "2744e55df123",
-"t": "",
-"title": "US Envoy Kushner: Russia has agreed to engage with the Europeans in multilateral format.",
-"url": "https://www.financialjuice.com/News/9860310/US-Envoy-Kushner-Russia-has-agreed-to-engage-with-the-Europeans-in-multilateral-format.aspx?xy=rss",
-"pub": "2026-11-19T17:15:42+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "817c7b4b8590",
-"t": "",
-"title": "US Envoy Kushner: Russia has agreed to engage with the Europeans in multilateral format.",
-"url": "https://www.financialjuice.com/News/9860310/US-Envoy-Kushner-Russia-has-agreed-to-engage-with-the-Europeans-in-multilateral-format.aspx",
-"pub": "2026-11-19T17:15:42+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "7cc3652db57c",
-"t": "",
-"title": "US Envoy Kushner: We've made progress for Ukraine's pathway to the EU.",
-"url": "https://www.financialjuice.com/News/9860308/US-Envoy-Kushner-Weve-made-progress-for-Ukraines-pathway-to-the-EU.aspx?xy=rss",
-"pub": "2026-11-19T17:14:34+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "77845401d628",
-"t": "",
-"title": "US Envoy Kushner: We've made progress for Ukraine's pathway to the EU.",
-"url": "https://www.financialjuice.com/News/9860308/US-Envoy-Kushner-Weve-made-progress-for-Ukraines-pathway-to-the-EU.aspx",
-"pub": "2026-11-19T17:14:34+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "806c78e83980",
-"t": "",
-"title": "US Envoy Kushner: Trump wants to engage with Xi and Putin to get to peace.",
-"url": "https://www.financialjuice.com/News/9860307/US-Envoy-Kushner-Trump-wants-to-engage-with-Xi-and-Putin-to-get-to-peace.aspx?xy=rss",
-"pub": "2026-11-19T17:12:14+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "8c6cf3dc04de",
-"t": "",
-"title": "US Envoy Kushner: Trump wants to engage with Xi and Putin to get to peace.",
-"url": "https://www.financialjuice.com/News/9860307/US-Envoy-Kushner-Trump-wants-to-engage-with-Xi-and-Putin-to-get-to-peace.aspx",
-"pub": "2026-11-19T17:12:14+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "3c81d1c5f50b",
-"t": "",
-"title": "US Envoy Kushner: We're making steps towards getting Russia and Ukraine to the table.",
-"url": "https://www.financialjuice.com/News/9860306/US-Envoy-Kushner-Were-making-steps-towards-getting-Russia-and-Ukraine-to-the-table.aspx?xy=rss",
-"pub": "2026-11-19T17:11:52+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T17:21:16+00:00"
 }
 ]
 }
