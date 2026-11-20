@@ -1,18 +1,98 @@
 {
-"updated_kst": "2026-11-20 16:14",
-"rot": 133,
+"updated_kst": "2026-11-20 16:44",
+"rot": 14,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "37건",
+"Reuters": "36건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "744c0d8f28fa",
+"t": "TSM",
+"title": "Taiwan Stock Market Falls 6.2% to Cap Its Worst Week Since 1991 as KOSPI Closes Down 5.2% and Nikkei 225 Drops 5.1% in AI Chip Selloff",
+"url": "https://247wallst.com/investing/2026/11/20/taiwan-stock-market-falls-6-2-to-cap-its-worst-week-since-1991-as-kospi-closes-down-5-2-and-nikkei-225-drops-5-1-in-ai-chip-selloff/?.tsrc=rss",
+"pub": "2026-11-20T07:33:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
+},
+{
+"id": "a7101c698d0d",
+"t": "NVDA",
+"title": "$500 Invested in GE Aerospace (GE) Stock Today Could Be Worth This Much in 3 Years",
+"url": "https://www.fool.com/investing/2026/11/20/500-invested-in-ge-aerospace-ge-stock-today-could/?.tsrc=rss",
+"pub": "2026-11-20T07:25:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
+},
+{
+"id": "4b97fe4f2977",
+"t": "FCX",
+"title": "Freeport McMoRan (FCX) Lost A Major Hedge Fund Holder",
+"url": "https://finance.yahoo.com/markets/commodities/articles/freeport-mcmoran-fcx-lost-major-071542084.html?.tsrc=rss",
+"pub": "2026-11-20T07:15:42+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
+},
+{
+"id": "048c7cebb5d8",
+"t": "AEM",
+"title": "Agnico Eagle (AEM) Stock May Be 26% Undervalued As Hiring Plans Expand",
+"url": "https://finance.yahoo.com/markets/stocks/articles/agnico-eagle-aem-stock-may-071507812.html?.tsrc=rss",
+"pub": "2026-11-20T07:15:07+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
+},
+{
+"id": "04f33c2b6575",
+"t": "PWR",
+"title": "Quanta Services (PWR) Shares Moved, So What Is Drawing Attention Now?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/quanta-services-pwr-shares-moved-071251057.html?.tsrc=rss",
+"pub": "2026-11-20T07:12:51+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
+},
+{
+"id": "774344d0045f",
+"t": "IBM",
+"title": "Bank Of Montreal (TSX:BMO) Reached Quantum Utility In Banking Machine Learning",
+"url": "https://finance.yahoo.com/technology/ai/articles/bank-montreal-tsx-bmo-reached-071212527.html?.tsrc=rss",
+"pub": "2026-11-20T07:12:12+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
+},
+{
+"id": "579db7da2904",
+"t": "SMR",
+"title": "NuScale Power (SMR) Stock Fair Value Falls As Analysts Weigh Liquidity Against Delays",
+"url": "https://finance.yahoo.com/markets/stocks/articles/nuscale-power-smr-stock-fair-071038428.html?.tsrc=rss",
+"pub": "2026-11-20T07:10:38+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
+},
+{
+"id": "c4064822183d",
+"t": "BE",
+"title": "Bloom Energy (BE), Why Is It Back In The Spotlight?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-why-back-spotlight-070959853.html?.tsrc=rss",
+"pub": "2026-11-20T07:09:59+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
+},
 {
 "id": "bce93bfabceb",
 "t": "SPCX",
@@ -52,6 +132,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T06:40:54+00:00"
+},
+{
+"id": "aa71c6b95a30",
+"t": "SPCX",
+"title": "Elon Musk’s Dream Meets Wall Street Reality: SpaceX Lenders Don’t Want Nvidia Chips Leaving Earth",
+"url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-dream-meets-wall-062433324.html?.tsrc=rss",
+"pub": "2026-11-20T06:24:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
 "id": "2175e1a5aa00",
@@ -3002,6 +3092,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T22:23:44+00:00"
+},
+{
+"id": "d351501d47cf",
+"t": "AVGO",
+"title": "Could Anthropic Actually Climb 63%? Or Is Melius Totally Wrong?",
+"url": "https://www.tikr.com/blog/could-anthropic-actually-climb-63-or-is-melius-totally-wrong?ref=yahoofinance&tlnk=yf-261120-rv8m8fwh&.tsrc=rss",
+"pub": "2026-11-19T20:21:47+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
 "id": "a488f6ab7874",
@@ -7914,104 +8014,64 @@
 "seen": "2026-11-19T16:12:33+00:00"
 },
 {
-"id": "3aeb28c95004",
-"t": "GOOGL",
-"title": "The Fed Just Warned About a Hidden $3 Trillion AI Risk. Here’s How It Can Spread Beyond Tech Stocks",
-"url": "https://247wallst.com/investing/2026/11/19/the-fed-just-warned-about-a-hidden-3-trillion-ai-risk-heres-how-it-can-spread-beyond-tech-stocks/?.tsrc=rss",
-"pub": "2026-11-19T15:43:54+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "c7fe2a8766c9",
+"t": "",
+"title": "Metro Bank Draws Early Interest From Barclays, Lone Star",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/metro-bank-draws-early-interest-from-barclays-lone-star",
+"pub": "2026-11-20T07:28:32+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
-"id": "d697da007805",
-"t": "INSM",
-"title": "Insmed shares jump more than 18% on report Sanofi is weighing acquisition",
-"url": "https://finance.yahoo.com/markets/stocks/articles/insmed-shares-jump-more-18-154324818.html?.tsrc=rss",
-"pub": "2026-11-19T15:43:24+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "8fe2ee830da0",
+"t": "",
+"title": "Tech Valuation Plunge Brings Some Opportunities: Taking Stock",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/tech-valuation-plunge-brings-some-opportunities-taking-stock",
+"pub": "2026-11-20T07:27:02+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
-"id": "98d593138c60",
-"t": "LITE",
-"title": "Ken Fisher and 14 Other Big Funds Sold Lumentum Last Quarter, While 18 Bought. Who’s Right?",
-"url": "https://www.tikr.com/blog/ken-fisher-and-14-other-big-funds-sold-lumentum-last-quarter-while-18-bought-whos-right?ref=yahoofinance&tlnk=yf-261119-x67757vq&.tsrc=rss",
-"pub": "2026-11-19T15:43:19+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "4db343220531",
+"t": "",
+"title": "Can Manchester United's New Coach Fix All the Problems?",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/can-manchester-united-s-new-coach-fix-all-the-problems-video",
+"pub": "2026-11-20T07:23:56+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
-"id": "4a24f8384f4e",
-"t": "WMT",
-"title": "Walmart Lifts Full-Year Outlook; US Comparable Sales Miss Views",
-"url": "https://finance.yahoo.com/markets/stocks/articles/walmart-lifts-full-outlook-us-154203292.html?.tsrc=rss",
-"pub": "2026-11-19T15:42:03+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "00072a17246d",
+"t": "",
+"title": "India-US Trade Ties After Shenzhen Meeting",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/india-us-trade-ties-after-shenzhen-meeting-video",
+"pub": "2026-11-20T07:23:42+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
-"id": "6b69b45c83a9",
-"t": "SNDK",
-"title": "Dear Sandisk Stock Fans, November 19 Brings an 8-for-1 Split, But the Memory Boom May Already Be Unraveling",
-"url": "https://www.barchart.com/story/news/8919330/dear-sandisk-stock-fans-november-19-brings-an-8-for-1-split-but-the-memory-boom-may-already-be-unraveling?.tsrc=rss",
-"pub": "2026-11-19T15:40:46+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T22:23:44+00:00"
+"id": "3f4b7b880650",
+"t": "",
+"title": "Vallourec's core profit falls 26%, hit by Iran war and disruption in the US - Reuters",
+"url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMFh2SXk0TTl1MnRycUlKMDJXOFJFUG1NTG9ibUtHbUI0QVY1WjhKWm9WYTRETkV0SUpCaWpHTGxMNjZFb25paG1hbFRtVlAxdGtzVHY2cDVHSzBvMzJOUGNyWXBLR2N6azVXelNzSkNVUDk1NThLYWtIeU9yalQtYzZvNjRaRHdGb1VYeC05TXV2aUJQRUFyUGl3N3RsdjdLbmdMQl9vR1hJRE1GUDZiczFn?oc=5",
+"pub": "2026-11-20T07:21:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
-"id": "ed76cfd062fc",
-"t": "NTAP",
-"title": "SMCI vs. NTAP: Which Stock Is the Better Value Option?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/smci-vs-ntap-stock-better-154002713.html?.tsrc=rss",
-"pub": "2026-11-19T15:40:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "584980ac3c42",
-"t": "FFIV",
-"title": "PENG or FFIV: Which Is the Better Value Stock Right Now?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/peng-ffiv-better-value-stock-154002800.html?.tsrc=rss",
-"pub": "2026-11-19T15:40:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "d7ac58f33eee",
-"t": "MU",
-"title": "Why Sandisk Stock Finally Popped Today",
-"url": "https://www.fool.com/investing/2026/11/19/why-sandisk-stock-finally-popped-today/?.tsrc=rss",
-"pub": "2026-11-19T15:39:08+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
-},
-{
-"id": "6a625a0ba2ed",
-"t": "COHR",
-"title": "Can AXTI Convert Its $500M InP Backlog Into Sustained Revenue Growth?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/axti-convert-500m-inp-backlog-153700574.html?.tsrc=rss",
-"pub": "2026-11-19T15:37:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "73b9c2800ed8",
-"t": "BE",
-"title": "Bloom Energy Surpasses Its Industry in a Year: How to Play the Stock?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-surpasses-industry-play-153700334.html?.tsrc=rss",
-"pub": "2026-11-19T15:37:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "cc1297d01171",
+"t": "",
+"title": "UK Is the ‘Best House in a Bad Neighborhood,’ UBS Wealth Says",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/uk-is-the-best-house-in-a-bad-neighborhood-ubs-wealth-says",
+"pub": "2026-11-20T07:15:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
 "id": "4750e4d8851b",
@@ -8072,6 +8132,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "fd9cc5d9859c",
+"t": "",
+"title": "UK Posts Smaller-Than-Forecast Budget Deficit for October",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/uk-posts-smaller-than-forecast-budget-deficit-for-october",
+"pub": "2026-11-20T07:07:25+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
 "id": "801934016b34",
@@ -8342,6 +8412,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "baadf93f66af",
+"t": "",
+"title": "Asia Stocks Drop in Wake of Anthropic's Record Debut",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/the-china-show-11-20-2026-video",
+"pub": "2026-11-20T06:34:41+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
 },
 {
 "id": "a9d0318f8a61",
@@ -10224,6 +10304,16 @@
 "seen": "2026-11-20T01:18:57+00:00"
 },
 {
+"id": "1eb7507f8cbe",
+"t": "",
+"title": "Gap names new Athleta CEO, lowers full-year guidance",
+"url": "https://www.cnbc.com/2026/11/19/gap-gap-q3-2026-earnings.html",
+"pub": "2026-11-19T23:54:20+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-20T07:44:23+00:00"
+},
+{
 "id": "2b1aa4a1a445",
 "t": "",
 "title": "TPG, Corpay to Buy Finance Platform Bill for About $6 Billion",
@@ -10922,96 +11012,6 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "80e6936c2ff5",
-"t": "",
-"title": "EU countries, lawmakers strike deal to revamp sustainable finance rules - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZDFMT3hRVkJ4MHNJYUJrV1NtZzVVWWR0RWs0ZnlRLUtDLU1tbFBwT0RWTVpobjRCR29nb195TzVuNXRwc0NoTHNNaURQYnhvUlI5VFMxcDNnX1ROaXQ4S25qNHRtXzdSaV8tYVo1MGUyYWotU25scWJ0SjNoT3pKQmFFRXd5QzhGTXdCSi1wbHQ3VFJnQUNBb2Y0RjVLbDNfWW5NZ1VDR3RCSlA0M2hWWTlwWDljMlU5SHc0T1Foa3c?oc=5",
-"pub": "2026-11-19T21:57:01+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "f7fdfe39ca07",
-"t": "",
-"title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
-"url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87?mod=rss_markets_main",
-"pub": "2026-11-19T21:56:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-20T01:18:57+00:00"
-},
-{
-"id": "41fee6a754db",
-"t": "",
-"title": "Total money market funds fell $3.58 bln to $7.98 trln for week ended Nov. 18 - ICI",
-"url": "https://www.financialjuice.com/News/9860695/Total-money-market-funds-fell-358-bln-to-798-trln-for-week-ended-Nov-18---ICI.aspx?xy=rss",
-"pub": "2026-11-19T21:53:56+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "5c09568a017a",
-"t": "",
-"title": "Total money market funds fell $3.58 bln to $7.98 trln for week ended Nov. 18 - ICI",
-"url": "https://www.financialjuice.com/News/9860695/Total-money-market-funds-fell-358-bln-to-798-trln-for-week-ended-Nov-18---ICI.aspx",
-"pub": "2026-11-19T21:53:56+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "f395bc063808",
-"t": "",
-"title": "NY’s Largest Mall Debt Now Controlled by Billionaire Namdar",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/ny-s-largest-mall-debt-now-controlled-by-billionaire-namdar",
-"pub": "2026-11-19T21:51:06+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "d02e7fe44b21",
-"t": "",
-"title": "Two Big Debuts Fail To Boost Stocks",
-"url": "https://www.wsj.com/finance/stocks/two-big-debuts-fail-to-boost-stocks-b68b79b1?mod=rss_markets_main",
-"pub": "2026-11-19T21:43:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "aab1906f1e24",
-"t": "",
-"title": "Apple is working on own AI agent to rival OpenAI and Anthropic. $AAPL $ANT",
-"url": "https://www.financialjuice.com/News/9860692/Apple-is-working-on-own-AI-agent-to-rival-OpenAI-and-Anthropic-AAPL-ANT.aspx?xy=rss",
-"pub": "2026-11-19T21:38:15+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "e692e1280008",
-"t": "",
-"title": "Apple is working on own AI agent to rival OpenAI and Anthropic. $AAPL $ANT",
-"url": "https://www.financialjuice.com/News/9860692/Apple-is-working-on-own-AI-agent-to-rival-OpenAI-and-Anthropic-AAPL-ANT.aspx",
-"pub": "2026-11-19T21:38:15+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "b62a7addb2a6",
-"t": "",
-"title": "Vivendi SE (VVUDy.F) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rWXZUQnhoaHY4MFdOc2tBejJSeng3R1dQdks0WjVidWRzUlh2VlQ5V3FoZHU1NGhUdkFhWFJ6QU9wbEpLdF9BS1JvS1FqZUJlMWJTSEE5eGZIWmQ1QjhxTF85Y0R5OFNPMHRPUQ?oc=5",
-"pub": "2026-11-19T21:37:58+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T05:44:20+00:00"
 }
 ]
 }
