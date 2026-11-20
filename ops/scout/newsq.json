@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-20 17:44",
-"rot": 15,
+"updated_kst": "2026-11-20 18:02",
+"rot": 75,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "38건",
+"Reuters": "100건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "77e0fd121264",
+"t": "SPCX",
+"title": "Cathie Wood Keeps Buying SpaceX on the Way Down. Here’s the 1 Reason I’d Follow Her.",
+"url": "https://www.fool.com/investing/2026/11/20/cathie-wood-keeps-buying-spacex-on-the-way-down-here-s-the-1-reason-i-d-follow-her/?.tsrc=rss",
+"pub": "2026-11-20T08:50:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:02:08+00:00"
+},
 {
 "id": "c3a269ab3eec",
 "t": "GOOGL",
@@ -22,6 +32,56 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T08:44:44+00:00"
+},
+{
+"id": "504c5115f4e9",
+"t": "NVDA",
+"title": "Anthropic Stock Is Down 13% From Its Opening Price. Is This Dip Worth Buying?",
+"url": "https://www.fool.com/investing/2026/11/20/anthropic-stock-is-down-13-from-its-opening-price-is-this-dip-worth-buying/?.tsrc=rss",
+"pub": "2026-11-20T08:35:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:02:08+00:00"
+},
+{
+"id": "226fd053d796",
+"t": "GOOGL",
+"title": "Bond Sales Hit €2 Trillion Europe Record as AI Surge Takes Hold",
+"url": "https://finance.yahoo.com/markets/stocks/articles/bond-sales-hit-2-trillion-083046794.html?.tsrc=rss",
+"pub": "2026-11-20T08:30:46+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:02:08+00:00"
+},
+{
+"id": "dc741f3ccea4",
+"t": "NBIS",
+"title": "IREN Has Lost 70% in a Year. Bernstein Still Sees $55",
+"url": "https://www.tikr.com/blog/iren-has-lost-70-in-a-year-bernstein-still-sees-55?ref=yahoofinance&tlnk=yf-261120-64g3hhvm&.tsrc=rss",
+"pub": "2026-11-20T08:20:18+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:02:08+00:00"
+},
+{
+"id": "4ec70eea0694",
+"t": "SNDK",
+"title": "SNDK Stock Falls Overnight: NAND Price Forecast Turns Bearish For 2027, According To TrendForce",
+"url": "https://stocktwits.com/news-articles/markets/equity/sndk-stock-falls-overnight-nand-price-forecast-turns-bearish-for-2027-according-to-trend-force/cNbSJomR9Kh?.tsrc=rss",
+"pub": "2026-11-20T08:19:23+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:02:08+00:00"
+},
+{
+"id": "36840d7825f3",
+"t": "PG",
+"title": "Procter & Gamble Targets Up to $10 Billion in Savings With AI and Automation",
+"url": "https://www.marketbeat.com/instant-alerts/event-procter-gamble-targets-up-to-10-billion-in-savings-with-ai-and-automation-2026-11-20/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-20T08:12:12+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
 "id": "68d04252d1fc",
@@ -72,6 +132,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T08:44:44+00:00"
+},
+{
+"id": "9695b18f2054",
+"t": "MU",
+"title": "Tech Valuation Plunge Brings Some Opportunities",
+"url": "https://finance.yahoo.com/technology/ai/articles/tech-valuation-plunge-brings-opportunities-072702092.html?.tsrc=rss",
+"pub": "2026-11-20T07:27:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
 "id": "a7101c698d0d",
@@ -7944,74 +8014,54 @@
 "seen": "2026-11-19T16:12:33+00:00"
 },
 {
-"id": "11cac3ba2dba",
-"t": "NBIS",
-"title": "CoreWeave Rises 2% Ahead of Anthropic Debut as Co-Founder Who’s “Never Been More Confident” Buys Its Bonds",
-"url": "https://www.tikr.com/blog/coreweave-rises-2-ahead-of-anthropic-debut-as-co-founder-whos-never-been-more-confident-buys-its-bonds?ref=yahoofinance&tlnk=yf-261119-cpr2rgj9&.tsrc=rss",
-"pub": "2026-11-19T15:52:47+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "769159133e19",
+"t": "",
+"title": "How an American AI Company Uses Chinese Open-Weight Models",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/how-an-american-ai-company-uses-chinese-open-weight-models",
+"pub": "2026-11-20T09:00:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
-"id": "7bee5b8a0c2e",
-"t": "MU",
-"title": "Micron Is 44% Below Its High With Over 75% of Its 2027 Output Already Committed",
-"url": "https://www.tikr.com/blog/micron-is-44-below-its-high-with-over-75-of-its-2027-output-already-committed?ref=yahoofinance&tlnk=yf-261119-64r68q5q&.tsrc=rss",
-"pub": "2026-11-19T15:52:13+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "e7819c6a6296",
+"t": "",
+"title": "Odd Lots: How an AI Native Company Chooses Its Models (Podcast)",
+"url": "https://www.bloomberg.com/news/audio/2026-11-20/odd-lots-how-an-ai-native-company-chooses-its-models-podcast",
+"pub": "2026-11-20T09:00:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
-"id": "41e9376d2f49",
-"t": "TSM",
-"title": "A $6.4 Billion Fund Dumps These 3 Stocks",
-"url": "https://www.tikr.com/blog/a-6-4-billion-fund-dumps-these-3-stocks?ref=yahoofinance&tlnk=yf-261119-rvw4mpjf&.tsrc=rss",
-"pub": "2026-11-19T15:51:52+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T22:23:44+00:00"
+"id": "5e7110daad93",
+"t": "",
+"title": "ITIC.ZY - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE12SkFJaEZFT2Rhb0FIRWlXQ0tSMkpsM2JuWFlQeS10NWt3WFVWaVFZR0RsSmRtWHdnNFVNQjdWSmVzRTE2UEExaTRPQ0hrRFdDbnBUQVVteXl4ZXRiRFU3UmVGWE5GZEJGOXc?oc=5",
+"pub": "2026-11-20T08:53:31+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
-"id": "9736c69f62e3",
-"t": "GOOGL",
-"title": "Inside Hinde Group’s Investment Case for Mobility Global (MBGL)",
-"url": "https://finance.yahoo.com/markets/stocks/articles/inside-hinde-group-investment-case-155129281.html?.tsrc=rss",
-"pub": "2026-11-19T15:51:29+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "f096ac53d018",
+"t": "",
+"title": "Anthropic Pop Is Followed By a Fizzle: Market Analysis",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/anthropic-pop-is-followed-by-a-fizzle-3-minutes-mliv-video",
+"pub": "2026-11-20T08:49:23+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
-"id": "198c152647ee",
-"t": "MO",
-"title": "Will Altria's Smoke-Free Business Become Its Next Growth Engine?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/altrias-smoke-free-business-become-155100728.html?.tsrc=rss",
-"pub": "2026-11-19T15:51:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T19:26:39+00:00"
-},
-{
-"id": "4e4245b2e1cb",
-"t": "AVGO",
-"title": "Cathie Wood and 26 Other Big Funds Bought Broadcom Last Quarter. David Tepper and 26 Others Sold. Who’s Right?",
-"url": "https://www.tikr.com/blog/cathie-wood-and-26-other-big-funds-bought-broadcom-last-quarter-david-tepper-and-26-others-sold-whos-right?ref=yahoofinance&tlnk=yf-261119-542352rw&.tsrc=rss",
-"pub": "2026-11-19T15:50:40+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "1bfaa80383fe",
-"t": "GS",
-"title": "Goldman Sachs Forecasts 17% S&P 500 Rally in 2027 as AI Investment Supports Earnings Growth",
-"url": "https://investorshub.advfn.com/market-news/article/40418/goldman-sachs-forecasts-17-sp-500-rally-in-2027-as-ai-investment-supports-earnings-growth?.tsrc=rss",
-"pub": "2026-11-19T15:50:26+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "eae0f5e74e9d",
+"t": "",
+"title": "Give UK Your Data, Nobel Economist Tells Anthropic and OpenAI",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/give-uk-your-data-nobel-economist-tells-anthropic-and-openai",
+"pub": "2026-11-20T08:43:51+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
 "id": "141bb6306c68",
@@ -8152,6 +8202,16 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-20T07:59:30+00:00"
+},
+{
+"id": "573113ceec5a",
+"t": "",
+"title": "Poland Probes Blast Near Ukraine Border After Airspace Violation",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/poland-probes-blast-near-ukraine-border-after-airspace-violation",
+"pub": "2026-11-20T07:50:31+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
 "id": "68363495365e",
@@ -8654,6 +8714,16 @@
 "seen": "2026-11-20T06:40:54+00:00"
 },
 {
+"id": "39898f309b8c",
+"t": "",
+"title": "AllianzIM US Equity Buffer20 Feb ETF (FEBW.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1scS1aVlIwVXJsLVZocmZ2UDRqOExBMFhFT2FNZVJGMzdMaVA2QVpnYk53WWVicEtlcXBKZG1xTXg1dmRTdEpPZXZpRjZwRGQ1X2hCUTNtaTA?oc=5",
+"pub": "2026-11-20T06:05:42+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
+},
+{
 "id": "7ba047594f8f",
 "t": "",
 "title": "Emergency blackouts introduced in Ukraine's Kyiv, city officials say",
@@ -8894,6 +8964,16 @@
 "seen": "2026-11-20T05:34:58+00:00"
 },
 {
+"id": "f004740a370b",
+"t": "",
+"title": "GFT Technologies SE (GFTG.F) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBPUDFrSWI2UXljT2NvUEYxLXNZRWtfUVVQQWhyMFE5R1pNekdzOF9ORVMxVlZOTmw0cHU5b0JsSFcwaVpYNGNrUC00MEVCNC04SW5PbUhMcWQwNjJOVjlvYzh0UmxaSllCNGZvcHp3?oc=5",
+"pub": "2026-11-20T05:06:48+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
+},
+{
 "id": "ee24001ab820",
 "t": "",
 "title": "China prepares to resume US private equity investments after withdrawal - FT",
@@ -8912,6 +8992,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T05:44:20+00:00"
+},
+{
+"id": "a531add29f68",
+"t": "",
+"title": "Athene Holding Ltd (ATH_pd.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1SeDdEM2VUMlg0NU9nNEloYXdZZEFla0J4X1h2V011akJ3S0lHSVlLU3BqUGdNeHNXdnFXbW02YTFkWjFRY2hjc2NBUDNCY25aTE1fTFl6NlB0WmdhRFB6Ql9UNDV2SDNtVlFTeGVoR0I?oc=5",
+"pub": "2026-11-20T04:58:13+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
 "id": "d93ec917f19f",
@@ -9524,6 +9614,16 @@
 "seen": "2026-11-20T05:44:20+00:00"
 },
 {
+"id": "eaaf4a2f60b6",
+"t": "",
+"title": "Range Resources Corporation (RRC.F) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9xZTJDSllSeHg2N0NrVnN2NjM0eHF0bVZWQ0oxOUt3cERXRUtoQW43MkNDMUs2TGxadnY2bTNqRmEyYWZTWk5BNWdBMWdRSVN2S0ktYmhIelVLdUlXXzRJdVctSUs4WnRWXzgxTg?oc=5",
+"pub": "2026-11-20T02:22:46+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
+},
+{
 "id": "6b6fe1f2c591",
 "t": "",
 "title": "Anthropic (ANT) IPO on Nasdaq Overcame AI Fears and Warnings",
@@ -9892,6 +9992,26 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T05:44:20+00:00"
+},
+{
+"id": "602f60de863c",
+"t": "",
+"title": "Republic Digital Acquisition Equity Warrants Exp 31st Oct 2031 (RDAGW.O) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9RM1N3Y2lMZEthYi04T1ZBdklTMTYyRkpyVktVbVhYclBFMnFFOFRfa25uWHRqQS1VekNtY0dMUUUtNXlEYnZ0dGZsUzhubjZkeDdnQ09iYlhlTDlRdW9XY3pMcUlsMmNJMXJjdVdFZw?oc=5",
+"pub": "2026-11-20T00:28:09+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
+},
+{
+"id": "6b6cd188968b",
+"t": "",
+"title": "FOX.PH - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA2QldlY1RVN3AxcElrc1B2bEhBN1lOTEdBcXNJQmYzalljVGkxVTBlLUdVbFlObkE1YUM0a2YzcXF1c0NrQTBjQWNpWE05Zld3WFVBSUR2eDFqQ2FfbS1mbUxPM0VwYTJDaEVRYXAyaS1XcFJ3dXlvNQ?oc=5",
+"pub": "2026-11-20T00:23:40+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:02:08+00:00"
 },
 {
 "id": "b0daf8623733",
@@ -10892,126 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "f8162b5871ea",
-"t": "",
-"title": "Playtech PLC (PTEC.L) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4xUkZZSWgxNnpEb2JFSTlqN1IwYnJtZFZfQzdHSHZUcGNWZjJrdHZKVzFvTERNeWdMVUl1aWh4Z2JNRnBWb01nRUl4YjN6X3hlbERNc25uRjRGOGdJV0E?oc=5",
-"pub": "2026-11-19T23:09:32+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "71acf56e20c9",
-"t": "",
-"title": "Latest Oil Market News and Analysis for Nov. 20",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/latest-oil-market-news-and-analysis-for-nov-20",
-"pub": "2026-11-19T23:05:51+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "20b106acd210",
-"t": "",
-"title": "Canada sees little US movement on tariff relief, sources say - Reuters",
-"url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNl8xcFNUUzg5MHNEdmx3QmtiV2hJRXhEVW9ETVVSYnBJTFFDLXcxOEgyVUJWdUVsOXk4S0JKaDRoN1BIQk15UzBBWjdrQ3EzWi1BV2VLRHdCX1Rvdm9hRHg2VWRvNDF0QmpvaF9WZzFrS2VFMXY3VXgxNHpzYjA3cGF1QzRHd2RGNjlmZ285eHZHNUM3S2FIUnF6R2cycnVCbzdqZWRvbWJ6ZzlYR2IwNGdR?oc=5",
-"pub": "2026-11-19T23:02:16+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "1bc50ef00562",
-"t": "",
-"title": "INTERROLL HOLDING AG (INRN.BN) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1EaUVsWXBVZ0c0YjNhazg2Sm5vUVJucW9QYnQ3MXR5TmtLMVNfT0YyRGpOdkhPcXdMa21tWDNvbzZQV2VhUTNDNEJad1Zucm9lVG9HVi0tRlp0dWZsOW5jVVVYM2x2Y1YzQVBHZA?oc=5",
-"pub": "2026-11-19T23:01:17+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T08:16:29+00:00"
-},
-{
-"id": "6bc5c976c4ca",
-"t": "",
-"title": "KLN.MI - Reuters",
-"url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9mWnRMZWx4WkV5M2d0dEZGMWthMldmcUR2RGJrVjZCSTNZaVd3VEJ1eW41VWRHc3M3MjJwcU5lUlhQUkRvOE01cnFVcFRJY2RYUDJ6azlZbTVuakhPZlNFWVR4ZGs5OEIyeElMdDFUVjRXckRZemFNUQ?oc=5",
-"pub": "2026-11-19T22:59:34+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T05:44:20+00:00"
-},
-{
-"id": "5343c14235ae",
-"t": "",
-"title": "Opinion | Last Week’s Outages Were Only the Start",
-"url": "https://www.wsj.com/opinion/last-weeks-outages-were-only-the-start-361c19ed?mod=rss_markets_main",
-"pub": "2026-11-19T22:57:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "58d0e2f9dd57",
-"t": "",
-"title": "Nvidia nears takeover of diffusion AI creator for over $500 million – the information",
-"url": "https://www.financialjuice.com/News/9860747/Nvidia-nears-takeover-of-diffusion-AI-creator-for-over-500-million--the-information.aspx?xy=rss",
-"pub": "2026-11-19T22:43:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "b8f37662a9cf",
-"t": "",
-"title": "Nvidia nears takeover of diffusion AI creator for over $500 million – the information",
-"url": "https://www.financialjuice.com/News/9860747/Nvidia-nears-takeover-of-diffusion-AI-creator-for-over-500-million--the-information.aspx",
-"pub": "2026-11-19T22:43:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "7b77f419ee4c",
-"t": "",
-"title": "Anthropic’s IPO Mints New Millionaires",
-"url": "https://www.wsj.com/finance/investing/anthropics-ipo-mints-new-millionaires-5dbb6289?mod=rss_markets_main",
-"pub": "2026-11-19T22:41:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "c96552dae621",
-"t": "",
-"title": "WSJ Dollar Index Rises to New 52-Week High",
-"url": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-face-drag-from-fed-rate-bets-50c20e86?mod=rss_markets_main",
-"pub": "2026-11-19T22:41:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "57f317130386",
-"t": "",
-"title": "California AG: California Department of Justice questions Nvidia on whether it misled investors and the public",
-"url": "https://www.financialjuice.com/News/9860746/California-AG-California-Department-of-Justice-questions-Nvidia-on-whether-it-misled-investors-and-the-public.aspx?xy=rss",
-"pub": "2026-11-19T22:33:10+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T23:19:27+00:00"
-},
-{
-"id": "9c2260fff20b",
-"t": "",
-"title": "California AG: California Department of Justice questions Nvidia on whether it misled investors and the public",
-"url": "https://www.financialjuice.com/News/9860746/California-AG-California-Department-of-Justice-questions-Nvidia-on-whether-it-misled-investors-and-the-public.aspx",
-"pub": "2026-11-19T22:33:10+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
 }
 ]
 }
