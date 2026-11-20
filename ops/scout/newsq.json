@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-20 16:44",
-"rot": 14,
+"updated_kst": "2026-11-20 16:59",
+"rot": 74,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "36건",
+"Reuters": "37건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -102,6 +102,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T07:14:18+00:00"
+},
+{
+"id": "2206100c2bda",
+"t": "SKHY",
+"title": "SK Hynix weighs converting Kioxia bonds to shares, report says",
+"url": "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-weighs-converting-kioxia-065103840.html?.tsrc=rss",
+"pub": "2026-11-20T06:51:03+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T07:59:30+00:00"
 },
 {
 "id": "5a9260093ae1",
@@ -8004,14 +8014,64 @@
 "seen": "2026-11-19T16:12:33+00:00"
 },
 {
-"id": "a20005c52b31",
-"t": "NVDA",
-"title": "800V DC-to-Low-Voltage DC Converter Market Size, Share, and Trends - Global Forecast to 2036 | AI Data Centers and GaN Drive 26% CAGR and $11.6 Billion Opportunity",
-"url": "https://finance.yahoo.com/technology/articles/800v-dc-low-voltage-dc-154400495.html?.tsrc=rss",
-"pub": "2026-11-19T15:44:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "502d14ab2f13",
+"t": "",
+"title": "Castleberry-Hernandez: Saudi Action on Houthis Into 2027",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/castleberry-hernandez-saudi-action-on-houthis-into-2027-video",
+"pub": "2026-11-20T07:53:13+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:59:30+00:00"
+},
+{
+"id": "2534c6d4601b",
+"t": "",
+"title": "French Budget Minister Amiel: Extra €6B French budget effort “starting point' for 2027",
+"url": "https://www.financialjuice.com/News/9861382/French-Budget-Minister-Amiel-Extra-6B-French-budget-effort-starting-point-for-2027.aspx?xy=rss",
+"pub": "2026-11-20T07:52:27+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:59:30+00:00"
+},
+{
+"id": "1e519d82307a",
+"t": "",
+"title": "AI Anxiety Returns With Flight From Risk Seen Hitting FTSE 100",
+"url": "https://www.bloomberg.com/news/newsletters/2026-11-20/ai-anxiety-returns-with-flight-from-risk-seen-hitting-ftse-100",
+"pub": "2026-11-20T07:52:22+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:59:30+00:00"
+},
+{
+"id": "7ba3d89150de",
+"t": "",
+"title": "OakNorth Secures U.S. Federal Reserve Clearance to Buy Community Unity Bank",
+"url": "https://www.wsj.com/economy/central-banking/oaknorth-secures-u-s-federal-reserve-clearance-to-buy-community-unity-bank-58718919?mod=rss_markets_main",
+"pub": "2026-11-20T07:51:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-20T07:59:30+00:00"
+},
+{
+"id": "68363495365e",
+"t": "",
+"title": "French Business Climate Mfg Actual 104 (Forecast 103, Previous 105)",
+"url": "https://www.financialjuice.com/News/9861371/French-Business-Climate-Mfg-Actual-104-Forecast-103-Previous-105.aspx?xy=rss",
+"pub": "2026-11-20T07:45:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:59:30+00:00"
+},
+{
+"id": "03b1776419bc",
+"t": "",
+"title": "French Business Climate Overall Actual 95 (Forecast 96, Previous 97)",
+"url": "https://www.financialjuice.com/News/9861370/French-Business-Climate-Overall-Actual-95-Forecast-96-Previous-97.aspx?xy=rss",
+"pub": "2026-11-20T07:45:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T07:59:30+00:00"
 },
 {
 "id": "c7fe2a8766c9",
@@ -8072,6 +8132,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T07:44:23+00:00"
+},
+{
+"id": "18170fbf4df2",
+"t": "",
+"title": "Anthropic Soars Then Slips as AI Trade Fears Linger",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/insight-with-haslinda-amin-11-20-2026-video",
+"pub": "2026-11-20T07:14:36+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T07:59:30+00:00"
 },
 {
 "id": "4750e4d8851b",
@@ -10942,76 +11012,6 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "5d8c06c557e1",
-"t": "",
-"title": "Basic Materials Roundup: Market Talk",
-"url": "https://www.wsj.com/finance/commodities-futures/basic-materials-roundup-market-talk-e522fa66?mod=rss_markets_main",
-"pub": "2026-11-19T22:10:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-20T04:23:31+00:00"
-},
-{
-"id": "f4119afb0204",
-"t": "",
-"title": "Financial Services Roundup: Market Talk",
-"url": "https://www.wsj.com/business/financial-services-roundup-market-talk-c03399ba?mod=rss_markets_main",
-"pub": "2026-11-19T22:08:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-20T04:14:03+00:00"
-},
-{
-"id": "80eb50d86114",
-"t": "",
-"title": "Energy & Utilities Roundup: Market Talk",
-"url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-fcde730a?mod=rss_markets_main",
-"pub": "2026-11-19T22:08:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-20T04:14:03+00:00"
-},
-{
-"id": "ca03c1918a1e",
-"t": "",
-"title": "Tech, Media & Telecom Roundup: Market Talk",
-"url": "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-3e9085fc?mod=rss_markets_main",
-"pub": "2026-11-19T22:05:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-20T04:14:03+00:00"
-},
-{
-"id": "cb0aff350680",
-"t": "",
-"title": "Auto & Transport Roundup: Market Talk",
-"url": "https://www.wsj.com/business/auto-transport-roundup-market-talk-65309a9d?mod=rss_markets_main",
-"pub": "2026-11-19T22:05:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-20T04:14:03+00:00"
-},
-{
-"id": "e53bd185f4df",
-"t": "",
-"title": "U.S. Stocks Slide as AI Bust Continues Despite Anthropic IPO",
-"url": "https://www.wsj.com/finance/stocks/u-s-stocks-slide-as-ai-bust-continues-despite-anthropic-ipo-5a14e137?mod=rss_markets_main",
-"pub": "2026-11-19T22:04:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-19T22:23:44+00:00"
-},
-{
-"id": "a08f8d2bf066",
-"t": "",
-"title": "Stock Losses to Extend in Asia, Nasdaq Futures Dip: Markets Wrap",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/stock-market-today-dow-s-p-live-updates",
-"pub": "2026-11-19T22:03:40+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T23:19:27+00:00"
 }
 ]
 }
