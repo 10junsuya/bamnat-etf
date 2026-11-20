@@ -1,18 +1,98 @@
 {
-"updated_kst": "2026-11-21 06:15",
-"rot": 27,
+"updated_kst": "2026-11-21 06:29",
+"rot": 87,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "54건",
+"Reuters": "50건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "df6df2f27d75",
+"t": "NVDA",
+"title": "US Equity Indexes Slump as Clouds Hovering Over Chipmakers, Hawkish Fed Outweigh Anthropic's Nasdaq Debut This Week",
+"url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-slump-clouds-212255820.html?.tsrc=rss",
+"pub": "2026-11-20T21:22:55+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "31371855c13d",
+"t": "PG",
+"title": "Here's How Many Shares of Procter & Gamble You'd Need for $1,000 in Yearly Dividends",
+"url": "https://www.fool.com/investing/2026/11/20/heres-how-many-shares-of-procter-gamble-youd-need-for-1000-in-yearly-dividends/?.tsrc=rss",
+"pub": "2026-11-20T21:20:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "e6a459a77353",
+"t": "META",
+"title": "Anthropic Stock Came Within 5 Cents of Its $83 IPO Price on Day 2, Then Bounced 6% to Close at $88.30. Facebook Closed Its Day 2 10% Below Its IPO Price",
+"url": "https://247wallst.com/investing/2026/11/20/anthropic-stock-came-within-5-cents-of-its-83-ipo-price-on-day-2-then-bounced-6-to-close-at-88-30-facebook-closed-its-day-2-10-below-its-ipo-price/?.tsrc=rss",
+"pub": "2026-11-20T21:17:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "1d44c8d53af8",
+"t": "MTZ",
+"title": "MasTec Completes the Previously Announced Acquisition of Murphy Corporation",
+"url": "https://finance.yahoo.com/markets/stocks/articles/mastec-completes-previously-announced-acquisition-211500896.html?.tsrc=rss",
+"pub": "2026-11-20T21:15:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "1119e16ca557",
+"t": "NVDA",
+"title": "US Equity Markets Fall Amid Sharp Sell-off in Technology, AI-Related Stocks",
+"url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-fall-amid-211419997.html?.tsrc=rss",
+"pub": "2026-11-20T21:14:19+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "a86882d93e2c",
+"t": "GOOGL",
+"title": "$1,000 in Anthropic or Bitcoin: Which Could Be Worth More by 2030?",
+"url": "https://247wallst.com/investing/cryptocurrency/2026/11/20/1000-in-anthropic-or-bitcoin-which-could-be-worth-more-by-2030/?.tsrc=rss",
+"pub": "2026-11-20T21:12:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "3771d648160a",
+"t": "UNH",
+"title": "TD Cowen names UnitedHealth its 2027 best idea, upgrades shares",
+"url": "https://finance.yahoo.com/healthcare/articles/td-cowen-names-unitedhealth-2027-210835767.html?.tsrc=rss",
+"pub": "2026-11-20T21:08:35+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "878b2c153f90",
+"t": "GOOGL",
+"title": "Amazon Provides Options To Buy Ads Across Entire Ecosystem",
+"url": "https://www.mediapost.com/publications/article/419599/amazon-provides-options-to-buy-ads-across-entire-e.html?.tsrc=rss",
+"pub": "2026-11-20T21:07:56+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
+},
 {
 "id": "aa34e74acd26",
 "t": "NVDA",
@@ -42,6 +122,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T21:15:37+00:00"
+},
+{
+"id": "ca3c62292af7",
+"t": "UNH",
+"title": "Sector Update: Healthcare Stocks Rise Late Afternoon",
+"url": "https://finance.yahoo.com/healthcare/articles/sector-healthcare-stocks-rise-afternoon-210224167.html?.tsrc=rss",
+"pub": "2026-11-20T21:02:24+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
 "id": "f752b11ae4cd",
@@ -7924,94 +8014,134 @@
 "seen": "2026-11-20T12:12:49+00:00"
 },
 {
-"id": "95f3ce999991",
-"t": "NVDA",
-"title": "These 3 ETFs Could Set You Up for Life With Next to No Effort on Your Part",
-"url": "https://www.fool.com/investing/2026/11/20/these-3-etfs-could-set-you-up-for-life-with-next-to-no-effort-on-your-part/?.tsrc=rss",
-"pub": "2026-11-20T11:36:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T12:12:49+00:00"
+"id": "d5414609dcbc",
+"t": "",
+"title": "U.S. Stocks Extend Plunge as AI Boom Turns to Bust",
+"url": "https://www.wsj.com/finance/stocks/u-s-stocks-extend-plunge-as-ai-boom-turns-to-bust-a2d324e7?mod=rss_markets_main",
+"pub": "2026-11-20T21:27:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
-"id": "7ed016040ffb",
-"t": "ASML",
-"title": "Nasdaq Futures Plunge as AI Selloff Rolls On",
-"url": "https://www.barchart.com/story/news/8932837/nasdaq-futures-plunge-as-ai-selloff-rolls-on?.tsrc=rss",
-"pub": "2026-11-20T11:35:20+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T17:40:09+00:00"
+"id": "7db3cd3a26ae",
+"t": "",
+"title": "EU nears new trade power to block access to its single market.",
+"url": "https://www.financialjuice.com/News/9862481/EU-nears-new-trade-power-to-block-access-to-its-single-market.aspx?xy=rss",
+"pub": "2026-11-20T21:26:36+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
-"id": "ddfdc8c23b14",
-"t": "NVDA",
-"title": "“The Open Checkbook Is Over.” Nebius, Backed by $2 Billion From Nvidia, Stands to Gain",
-"url": "https://www.tikr.com/blog/the-open-checkbook-is-over-nebius-backed-by-2-billion-from-nvidia-stands-to-gain?ref=yahoofinance&tlnk=yf-261120-x7v3x99j&.tsrc=rss",
-"pub": "2026-11-20T11:35:13+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T12:12:49+00:00"
+"id": "72918451cfbe",
+"t": "",
+"title": "VIX Hits Highest Level Since 2025 Tariff Turmoil as Volatility Warning Flash",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/vix-hits-highest-level-since-2025-tariff-turmoil-as-volatility-warning-flash",
+"pub": "2026-11-20T21:22:33+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
-"id": "1d4951055f63",
-"t": "NVDA",
-"title": "3 Warren Buffett Rules That Make Nvidia Stock a Buy at Today's Price",
-"url": "https://www.fool.com/investing/2026/11/20/3-warren-buffett-rules-that-make-nvidia-stock-a-buy-at-today-s-price/?.tsrc=rss",
-"pub": "2026-11-20T11:35:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T12:12:49+00:00"
+"id": "695f21ccadc2",
+"t": "",
+"title": "Oracle still sees positive free cash flow in 2H FY2028. $ORCL",
+"url": "https://www.financialjuice.com/News/9862480/Oracle-still-sees-positive-free-cash-flow-in-2H-FY2028-ORCL.aspx?xy=rss",
+"pub": "2026-11-20T21:22:26+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
-"id": "232ef8840745",
-"t": "NVDA",
-"title": "If a Bear Market Is Coming in 2027, History Says This 1 Simple Move Can Protect Your Investments",
-"url": "https://www.fool.com/investing/2026/11/20/if-a-bear-market-is-coming-in-2027-history-says-this-1-simple-move-can-protect-your-investments/?.tsrc=rss",
-"pub": "2026-11-20T11:35:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T12:12:49+00:00"
+"id": "59aa62daa852",
+"t": "",
+"title": "Oracle: OpenAI contract fully funded. $ORCL",
+"url": "https://www.financialjuice.com/News/9862479/Oracle-OpenAI-contract-fully-funded-ORCL.aspx?xy=rss",
+"pub": "2026-11-20T21:21:58+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
-"id": "4f1cf6e1e7e4",
-"t": "STM",
-"title": "STMicroelectronics to Invest Nearly $110 Million at Rousset Site in France",
-"url": "https://finance.yahoo.com/technology/articles/stmicroelectronics-invest-nearly-110-million-113316296.html?.tsrc=rss",
-"pub": "2026-11-20T11:33:16+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T11:43:38+00:00"
+"id": "ec013068d8cf",
+"t": "",
+"title": "Goldman Says Stock Selloff Has Legs as Panic Index Nears Maximum",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/goldman-says-stock-selloff-has-legs-as-panic-index-nears-maximum",
+"pub": "2026-11-20T21:20:55+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
-"id": "9f3e28e466b7",
-"t": "SPCX",
-"title": "Social Buzz: Wallstreetbets Stocks Mostly Lower Pre-Bell Friday; Sandisk, AMD to Decline",
-"url": "https://finance.yahoo.com/markets/stocks/articles/social-buzz-wallstreetbets-stocks-mostly-113227780.html?.tsrc=rss",
-"pub": "2026-11-20T11:32:27+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T11:43:38+00:00"
+"id": "ea50080d9f17",
+"t": "",
+"title": "DXY CFTC Positions Week of November 17th - FJElite",
+"url": "https://www.financialjuice.com/News/9862477/DXY-CFTC-Positions-Week-of-November-17th---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T21:18:42+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
-"id": "aa2a02c2eae6",
-"t": "FIX",
-"title": "Is Comfort Systems USA Stock Increasing Your Market Risk?",
-"url": "https://www.trefis.com/stock/fix/articles/627253/is-comfort-systems-usa-stock-increasing-your-market-risk/2026-11-20?.tsrc=rss",
-"pub": "2026-11-20T11:31:33+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T12:12:49+00:00"
+"id": "f8e52a1b190d",
+"t": "",
+"title": "EUR CFTC Positions Week of November 17th - FJElite",
+"url": "https://www.financialjuice.com/News/9862476/EUR-CFTC-Positions-Week-of-November-17th---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T21:18:14+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
-"id": "24ea8fd79da5",
-"t": "GE",
-"title": "GE Aerospace Recommends Shareholders Reject “Mini-Tender” Offer by Potemkin Limited",
-"url": "https://finance.yahoo.com/markets/stocks/articles/ge-aerospace-recommends-shareholders-reject-113000093.html?.tsrc=rss",
-"pub": "2026-11-20T11:30:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T11:43:38+00:00"
+"id": "7508447b8771",
+"t": "",
+"title": "AUD CFTC Positions Week of November 17th - FJElite",
+"url": "https://www.financialjuice.com/News/9862474/AUD-CFTC-Positions-Week-of-November-17th---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T21:17:35+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "2d6dce73c557",
+"t": "",
+"title": "JPY CFTC Positions Week of November 17th - FJElite",
+"url": "https://www.financialjuice.com/News/9862461/JPY-CFTC-Positions-Week-of-November-17th---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T21:17:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "f7356bb5a049",
+"t": "",
+"title": "GBP CFTC Positions Week of November 17th - FJElite",
+"url": "https://www.financialjuice.com/News/9862459/GBP-CFTC-Positions-Week-of-November-17th---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T21:16:45+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "5785e56986f3",
+"t": "",
+"title": "Market Calm Hid Widespread Losses Under Surface, Schwab's Sonders Says",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/market-calm-hid-widespread-losses-schwab-s-sonders-says-video",
+"pub": "2026-11-20T21:16:33+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
+"id": "144b27a891fe",
+"t": "",
+"title": "CHF CFTC Positions Week of November 17th - FJElite",
+"url": "https://www.financialjuice.com/News/9862458/CHF-CFTC-Positions-Week-of-November-17th---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T21:16:21+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
 "id": "f1f43f64b20d",
@@ -8672,6 +8802,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T18:39:45+00:00"
+},
+{
+"id": "3c484b62c953",
+"t": "",
+"title": "Cizzle Brands Corp (CZZL.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5TdU5iMEFkMmF3a1FEWjRrdFk4ODRQX3F5WFNQT3p0X0N1M3BDMnF6UWs1S3RMVU51WjVXN3NhNGpXSUVTQXZiaG9YSFZRNFFZcW9hXzA3Nms0ZTBQbzln?oc=5",
+"pub": "2026-11-20T18:25:12+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
 "id": "a4b33a8f8b43",
@@ -9974,6 +10114,16 @@
 "seen": "2026-11-20T20:44:19+00:00"
 },
 {
+"id": "7bdcf158be58",
+"t": "",
+"title": "Fastly, Inc. (FSLY.O) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1RR1pTLXd3bFFQc2owWk5QMWpGc2QyQzBoc2RkWTRkcFdwa3I4czRyRUxNeEN2d1lwSTJXMzFVVGVGNFh6d19uamlYdUFRbE96LVh6UFYxdWFsNzVSUEhsN3hCdGNEaFVWTG1Z?oc=5",
+"pub": "2026-11-20T15:24:11+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
+},
+{
 "id": "5eb1ecb3d3c8",
 "t": "",
 "title": "US Treasury Secretary Bessent on Megaspeed: We are going to see that proper chip restrictions are in place, and remote access has been curtailed.",
@@ -10322,6 +10472,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T15:44:04+00:00"
+},
+{
+"id": "a66c0cf5425a",
+"t": "",
+"title": "Gold, Silver Drop to Lowest Levels in Over a Year",
+"url": "https://www.wsj.com/finance/commodities-futures/gold-silver-drop-to-lowest-levels-in-over-a-year-c657402c?mod=rss_markets_main",
+"pub": "2026-11-20T14:14:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-20T21:29:57+00:00"
 },
 {
 "id": "0a814bffa78d",
@@ -10852,166 +11012,6 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-20T12:44:57+00:00"
-},
-{
-"id": "7ed61baa4814",
-"t": "",
-"title": "Lagarde Warns Europe is Too Hesitant Responding to Crises",
-"url": "https://www.bloomberg.com/news/videos/2026-11-20/lagarde-warns-europe-is-hesitant-responding-to-crises-video",
-"pub": "2026-11-20T12:28:35+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T12:44:57+00:00"
-},
-{
-"id": "aa6ddde35718",
-"t": "",
-"title": "NEWSLETTER: AI’s long game - Reuters",
-"url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1SekNHejlYZm1nMWlib3lub0FLdGczWFI5V000TzJFMWg5Um9ZSDBsYi1zUm8zYTg5UkkyckJHZXhnNF9wNF9ES29udG8zMEZnMzlKYThxcjdNMHlNeFBMbTdKTXplVnRYcHAtOTlkMjVyZzBWZEE?oc=5",
-"pub": "2026-11-20T12:28:00+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T12:44:57+00:00"
-},
-{
-"id": "f745a7ad82d6",
-"t": "",
-"title": "EnSync Inc (ESNC.PK) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5SUmdVR3RnalFrRlkwNjBlY0gzRWhlZGtyZzB4aXhVSjdMTlhQRVlVTlE1UGlLMEM5Q0cwbk9udy03Q21Id3RDRE5QVTVzSFpmYnd1NjZTRHB4RUk5aklRQmJzRWZ0OHJVY3lZTQ?oc=5",
-"pub": "2026-11-20T12:27:20+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T19:14:18+00:00"
-},
-{
-"id": "d01a9c4f865f",
-"t": "",
-"title": "AI Trade Unravels; Anthropic Drops After Strong Debut",
-"url": "https://www.bloomberg.com/news/videos/2026-11-20/bloomberg-brief-11-20-2026-video",
-"pub": "2026-11-20T12:25:22+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T13:18:39+00:00"
-},
-{
-"id": "05eaed3f0774",
-"t": "",
-"title": "Nvidia Turmoil Leaves Few Stock Market Winners in Sea of Losers",
-"url": "https://www.bloomberg.com/news/articles/2026-11-20/nvidia-turmoil-leaves-few-stock-market-winners-in-sea-of-losers",
-"pub": "2026-11-20T12:21:00+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T12:44:57+00:00"
-},
-{
-"id": "9293d51e0c56",
-"t": "",
-"title": "Gold’s Rout Tests the Myth of an All-Weather Safe Haven",
-"url": "https://www.bloomberg.com/news/newsletters/2026-11-20/gold-s-rout-tests-the-myth-of-an-all-weather-safe-haven",
-"pub": "2026-11-20T12:13:18+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T12:17:15+00:00"
-},
-{
-"id": "aa6a5729f576",
-"t": "",
-"title": "French unions call for further strike on December 1 - AFP",
-"url": "https://www.financialjuice.com/News/9861681/French-unions-call-for-further-strike-on-December-1---AFP.aspx?xy=rss",
-"pub": "2026-11-20T12:12:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T12:12:49+00:00"
-},
-{
-"id": "239cb6471509",
-"t": "",
-"title": "Plan to Alter Unstainable US Debt Trajectory",
-"url": "https://www.bloomberg.com/news/newsletters/2026-11-20/plan-to-alter-unstainable-us-debt-trajectory",
-"pub": "2026-11-20T12:00:01+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T12:12:49+00:00"
-},
-{
-"id": "aa0862018cbe",
-"t": "",
-"title": "Price Hikes Set to Lift Materials Companies’ Margins in 2027",
-"url": "https://www.bloomberg.com/news/articles/2026-11-20/price-hikes-set-to-lift-materials-companies-margins-in-2027",
-"pub": "2026-11-20T12:00:00+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T12:12:49+00:00"
-},
-{
-"id": "3bd153fc0756",
-"t": "",
-"title": "Yemen's Houthis: Saudi Arabia's Shugaiq power plant will be targeted in coming hours in retaliation for strikes on Saada, mocha power stations - Statement",
-"url": "https://www.financialjuice.com/News/9861667/Yemens-Houthis-Saudi-Arabias-Shugaiq-power-plant-will-be-targeted-in-coming-hours-in-retaliation-for-strikes-on-Saada-mocha-power-stations---Statement.aspx?xy=rss",
-"pub": "2026-11-20T11:58:18+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T12:12:49+00:00"
-},
-{
-"id": "5597da6fe188",
-"t": "",
-"title": "Orion Digital Corp (ORIO.O) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBVQW4xb2ExbkdzbTFQQWNCM3pXa2xCUWI0czZtTzVQdXl2eHMzR0hDUlJDakFWbmNOQ21RcFQzY3BtRndOQmNaMzcwalNHOURfdEYwczg0Y1NpMGtlYmFjV2M5MG1fUzA?oc=5",
-"pub": "2026-11-20T11:53:43+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T19:44:51+00:00"
-},
-{
-"id": "6f82618eda13",
-"t": "",
-"title": "Vivani Medical Inc (VANI.O) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5YZ3N0eFVSdWV6REd5MDhBVF9HekRicTRCRG5iTlV3ZWJoWU1hRC1FVERpcWN1NmFIbWVtdGNpbFUwcndOXzNFcEdSM1VkbkQ4YlUta3VHZ21TeTVwNzQya1NGYW1ZdGRNZlNR?oc=5",
-"pub": "2026-11-20T11:53:32+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T13:33:25+00:00"
-},
-{
-"id": "ba382774e335",
-"t": "",
-"title": "Stock Rout’s Spread Beyond Tech Carries Warning From Dotcom-Era",
-"url": "https://www.bloomberg.com/news/articles/2026-11-20/stock-rout-s-spread-beyond-tech-carries-warning-from-dotcom-era",
-"pub": "2026-11-20T11:50:13+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T12:12:49+00:00"
-},
-{
-"id": "58927d1b7a37",
-"t": "",
-"title": "Essex Property Trust, Inc. (ESS.Z) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ubXkxUXRjRmJYZVE5ZzRqMU1Sb0tFMkQ5R01lYUIxNGNURlctUGRIcm03ZG1rcUE1Q1hITkhlNThwMzJvQmFHV2RoYS00MjQzTTl1ak4yaXBCVXJaZ09XV25qdU5DS0N5NkE?oc=5",
-"pub": "2026-11-20T11:49:31+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T20:44:19+00:00"
-},
-{
-"id": "d4ea7550868e",
-"t": "",
-"title": "XFUNDS Value Income ETF (VTVX.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9jMGpMWENuMkxCNFE2SzBhaTZ1VVBuNGtLeGNzbDFMaUhMUUp0R2QtV2NCS3Y1TWVnTXMySk9uTERvRTVjM09GczExdHVuamdRT2F1bEY4NEw?oc=5",
-"pub": "2026-11-20T11:41:10+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "44d19b60717e",
-"t": "",
-"title": "Taiwan stock exchange says it will ensure stable operation of capital markets - Reuters",
-"url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRWN5TllrYmdueHRBVUJJWFFidVdUVnZOaUNIcHNseHBZREVKU2xRN3hST3VaazAyQWtVLVRlRHRCS1NpS01jay1QMXpKZy1MWUR3ZEdEbF9VN2JNWWJwakFZS1NRMklkNTZueWxhWEtrSEpXcFhVX2U4aVZkS0hlOVl4UUZSUQ?oc=5",
-"pub": "2026-11-20T11:40:18+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T19:44:51+00:00"
 }
 ]
 }
