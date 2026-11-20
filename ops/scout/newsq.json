@@ -1,18 +1,78 @@
 {
-"updated_kst": "2026-11-20 18:14",
-"rot": 135,
+"updated_kst": "2026-11-20 18:44",
+"rot": 16,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "42건",
+"Reuters": "100건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "e5220850aa23",
+"t": "NVDA",
+"title": "Anthropic's Blockbuster IPO Dominated Headlines This Week – AI Anxiety Eased, While Investors And Employees Reaped A Windfall",
+"url": "https://stocktwits.com/news-articles/markets/equity/anthropic-s-blockbuster-ipo-dominated-headlines-this-week-ai-anxiety-eased-while-investors-and-employees-reaped-a-windfall/cNbSajAR9Kk?.tsrc=rss",
+"pub": "2026-11-20T09:28:46+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "17f246d956c4",
+"t": "NVDA",
+"title": "Stock market today: Dow, S&P 500, Nasdaq futures continue to sell-off after Anthropic IPO fails to quell AI worries",
+"url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-19-dow-sp-500-nasdaq-anthropic-nvidia-volatility-092827348.html?.tsrc=rss",
+"pub": "2026-11-20T09:28:27+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "25b1cafdd01f",
+"t": "NVDA",
+"title": "Nvidia Has Lost More Than the Market Value of 495 S&P 500 Companies in 6 Weeks -- and Its Downtrend May Be Just Beginning",
+"url": "https://www.fool.com/investing/2026/11/20/nvidia-lost-more-than-market-value-of-495-sp-500-companies-downtrend-just-beginning/?.tsrc=rss",
+"pub": "2026-11-20T09:26:01+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "f2ffe26c7851",
+"t": "GOOGL",
+"title": "Warren Buffett’s Successor Just Bought $10 Billion of This AI Stock, and It’s Not Apple",
+"url": "https://www.fool.com/investing/2026/11/20/warren-buffetts-successor-just-bought-10-billion-of-this-ai-stock-and-its-not-apple/?.tsrc=rss",
+"pub": "2026-11-20T09:20:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "343e18c62f50",
+"t": "NVDA",
+"title": "Moderna vs. BioNTech: Why Only 1 Is a Buy Heading Into 2027",
+"url": "https://www.fool.com/investing/2026/11/20/moderna-vs-biontech-why-only-1-is-a-buy-heading-in/?.tsrc=rss",
+"pub": "2026-11-20T09:15:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "b8908505fd82",
+"t": "ORCL",
+"title": "Oracle Stock Just Closed at Its Lowest Price Since April 2024. Is It a Buy Now?",
+"url": "https://www.fool.com/investing/2026/11/20/oracle-stock-just-closed-at-its-lowest-price-since-april-2024-is-it-a-buy-now/?.tsrc=rss",
+"pub": "2026-11-20T09:07:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
+},
 {
 "id": "2797c177d285",
 "t": "NVDA",
@@ -22,6 +82,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T09:14:06+00:00"
+},
+{
+"id": "abbd897188c8",
+"t": "AAPL",
+"title": "Anthropic Pop Is Followed By a Fizzle: Market Analysis",
+"url": "https://finance.yahoo.com/video/anthropic-pop-followed-fizzle-market-085220267.html?.tsrc=rss",
+"pub": "2026-11-20T08:52:20+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "77e0fd121264",
@@ -1464,6 +1534,16 @@
 "seen": "2026-11-20T00:04:41+00:00"
 },
 {
+"id": "5049dcbd93ad",
+"t": "SPCX",
+"title": "SpaceX Sells $32 Billion of AI Chip Debt at Yields Topping 8%",
+"url": "https://finance.yahoo.com/technology/ai/articles/spacex-sells-32-billion-ai-234112045.html?.tsrc=rss",
+"pub": "2026-11-19T23:41:12+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "831867b09e1a",
 "t": "SPCX",
 "title": "Anthropic’s IPO nets Goldman Sachs and Morgan Stanley $113 million apiece in fees, eclipsing their SpaceX paydays",
@@ -1534,6 +1614,16 @@
 "seen": "2026-11-20T00:04:41+00:00"
 },
 {
+"id": "5b36cb89d7d7",
+"t": "GE",
+"title": "Trump’s $17 Billion Asia Deals Lean on a $12 Billion Aircraft Sale. That’s 1.6% of Boeing’s Backlog",
+"url": "https://www.tikr.com/blog/trumps-17-billion-asia-deals-lean-on-a-12-billion-aircraft-sale-thats-1-6-of-boeings-backlog?ref=yahoofinance&tlnk=yf-261120-9vx69f3p&.tsrc=rss",
+"pub": "2026-11-19T23:12:53+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "e301765c4f2b",
 "t": "NVDA",
 "title": "Dow Jones Futures: Ugly Market Reversal To New Lows As Anthropic IPO Debuts, AMD Dives",
@@ -1552,6 +1642,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T23:19:27+00:00"
+},
+{
+"id": "a3f27009123b",
+"t": "GOOGL",
+"title": "Microsoft Bought Into Anthropic Around $350 Billion. The IPO Says “Almost Exactly $1.5 Trillion”",
+"url": "https://www.tikr.com/blog/microsoft-bought-into-anthropic-around-350-billion-the-ipo-says-almost-exactly-1-5-trillion?ref=yahoofinance&tlnk=yf-261120-g55x67qh&.tsrc=rss",
+"pub": "2026-11-19T23:06:40+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "d100c5cb1e40",
@@ -7914,104 +8014,44 @@
 "seen": "2026-11-19T16:12:33+00:00"
 },
 {
-"id": "8ba35ebef489",
-"t": "GOOGL",
-"title": "Why NBA star Tristan Thompson became an early Anthropic investor",
-"url": "https://finance.yahoo.com/video/why-nba-star-tristan-thompson-became-an-early-anthropic-investor-155909145.html?.tsrc=rss",
-"pub": "2026-11-19T15:59:09+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "090efc14397c",
+"t": "",
+"title": "Nasdaq Set for Fresh Decline as AI Selloff Intensifies",
+"url": "https://www.wsj.com/finance/stocks/nasdaq-set-for-fresh-decline-as-ai-selloff-intensifies-e974bbb5?mod=rss_markets_main",
+"pub": "2026-11-20T09:41:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
-"id": "35b6811464b1",
-"t": "PANW",
-"title": "Walmart Full Year Forecast; Bath & Body Works Beats Estimates; Stock Movers",
-"url": "https://finance.yahoo.com/video/walmart-full-forecast-bath-body-155851672.html?.tsrc=rss",
-"pub": "2026-11-19T15:58:51+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
+"id": "1abe62075980",
+"t": "",
+"title": "Credit Ágricole: FX Weekly - FJElite",
+"url": "https://www.financialjuice.com/News/9861504/Credit-%c3%81gricole-FX-Weekly---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T09:38:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
-"id": "64bf6efd4a36",
-"t": "PANW",
-"title": "Palo Alto Set to Benefit From Cybersecurity Consolidation, AI Demand, RBC Says",
-"url": "https://finance.yahoo.com/technology/ai/articles/palo-alto-set-benefit-cybersecurity-155840718.html?.tsrc=rss",
-"pub": "2026-11-19T15:58:40+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
+"id": "10ae9c7ddeb8",
+"t": "",
+"title": "Deutsche Bank: Chips and the USD - FJElite",
+"url": "https://www.financialjuice.com/News/9861503/Deutsche-Bank-Chips-and-the-USD---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T09:37:12+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
-"id": "61bbcbc72914",
-"t": "GOOGL",
-"title": "Why Anthropic Won't Be the Next Apple or Amazon",
-"url": "https://finance.yahoo.com/m/fa461112-7f08-30de-8c36-e3ef910184cf/why-anthropic-won%27t-be-the.html?.tsrc=rss",
-"pub": "2026-11-19T15:58:14+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
-},
-{
-"id": "5f81b25448b5",
-"t": "HD",
-"title": "How Home Depot built the missing logistics piece for its Pro business",
-"url": "https://www.supplychaindive.com/news/how-home-depot-built-the-missing-logistics-piece-for-its-pro-business/874331/?.tsrc=rss",
-"pub": "2026-11-19T15:58:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "f06fc09e1c76",
-"t": "COHR",
-"title": "Coherent Soars 6% on New $2 Billion Buyback as Anthropic IPO Revives AI Trade",
-"url": "https://www.tikr.com/blog/coherent-soars-6-on-new-2-billion-buyback-as-anthropic-ipo-revives-ai-trade?ref=yahoofinance&tlnk=yf-261119-px4vrhf4&.tsrc=rss",
-"pub": "2026-11-19T15:57:32+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
-},
-{
-"id": "7b0898ce3401",
-"t": "MRNA",
-"title": "Bireme Capital Sold Moderna (MRNA) Following Record Rally",
-"url": "https://finance.yahoo.com/markets/stocks/articles/bireme-capital-sold-moderna-mrna-155653550.html?.tsrc=rss",
-"pub": "2026-11-19T15:56:53+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
-},
-{
-"id": "da0ff1b32aba",
-"t": "NFLX",
-"title": "With Alibaba Stock Down 45% In The Last Year, Michael Burry Reveals The Price He’d Buy",
-"url": "https://247wallst.com/investing/2026/11/19/with-alibaba-stock-down-45-in-the-last-year-michael-burry-reveals-the-price-hed-buy/?.tsrc=rss",
-"pub": "2026-11-19T15:55:12+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
-},
-{
-"id": "689d8e6beaf1",
-"t": "WMT",
-"title": "Walmart’s e-commerce boom driven by fulfillment speed",
-"url": "https://www.retaildive.com/news/walmart-ecommerce-boom-fulfillment-speed-q3-earnings/875166/?.tsrc=rss",
-"pub": "2026-11-19T15:54:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
-},
-{
-"id": "89df612207e6",
-"t": "FTNT",
-"title": "Cybersecurity Stocks Fly on Palo Alto Earnings. Look Out for Whiplash.",
-"url": "https://finance.yahoo.com/m/3b6bd7a8-f8ca-3823-837d-70433d1bc9fb/cybersecurity-stocks-fly-on.html?.tsrc=rss",
-"pub": "2026-11-19T15:54:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
+"id": "fb8b9b50875b",
+"t": "",
+"title": "Europe Sentiment: Selloff Extends Despite Strong Anthropic Debut - FJElite",
+"url": "https://www.financialjuice.com/News/9861482/Europe-Sentiment-Selloff-Extends-Despite-Strong-Anthropic-Debut---FJElite.aspx?xy=rss",
+"pub": "2026-11-20T09:19:29+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "44d19b60717e",
@@ -8054,6 +8094,16 @@
 "seen": "2026-11-20T09:02:08+00:00"
 },
 {
+"id": "7655dd6d8577",
+"t": "",
+"title": "Billionaire Raises $720 Million Private Credit for Megha Buyout",
+"url": "https://www.bloomberg.com/news/articles/2026-11-20/billionaire-raises-720-million-private-credit-for-megha-buyout",
+"pub": "2026-11-20T08:57:50+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "e5cc9a43e944",
 "t": "",
 "title": "France Needs at Least €6 Billion More 2027 Savings, Amiel Says",
@@ -8072,6 +8122,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T09:02:08+00:00"
+},
+{
+"id": "a4ea9a4ad772",
+"t": "",
+"title": "Assassin's Creed maker Ubisoft drops after Q3 forecast miss - Reuters",
+"url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNlZ4WjRFYXIxbDl0WmNaRjJ3MVA4ZmI5di1NTTVtTm5kRUJVWVd3SVNjcmEtUWdyOEJYZW03ZngyVzZKd3N5QlR1Z19oVU1aNmJWUVFycjQ0SFJyM1plX2hvcVNtVnpYS0VyaTd1V0dLWGNhVkNGOW54M292V05TZGFpTnEweDgzZW1mUXNoUjdLUnJhRENoVXd5MktTNUtONXdwNzBKVUZnbWJHRkE?oc=5",
+"pub": "2026-11-20T08:50:34+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "f096ac53d018",
@@ -8764,6 +8824,16 @@
 "seen": "2026-11-20T06:14:16+00:00"
 },
 {
+"id": "ade0d2359031",
+"t": "",
+"title": "Waton Financial Ltd (WTF.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5tdkNfMUUtdDJEdG5OMU1TbTZEV1Jfb0k0QWx1QXJOYjN4eWs4LWpqd29iX3YxQVZKdXgtZkFqWXQzblVNa09wcUQ5ZnZxTHpYbzlVX1lHcjBnUDRNMllxXzJVS0RIS3hNQVhZ?oc=5",
+"pub": "2026-11-20T05:54:06+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "6aa92bb9c751",
 "t": "",
 "title": "Morning Bid: Anthropic's splashy IPO fails to lift AI boat - Reuters",
@@ -9004,6 +9074,16 @@
 "seen": "2026-11-20T09:02:08+00:00"
 },
 {
+"id": "787a8a10a31e",
+"t": "",
+"title": "Karma Energy Ltd (KRME.NS) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1WcUZGYVpiWFAzRGc4OTB6NVRIemZIOHlkOE04bXVGVFBPYXBYcnIxdWQzajFiUjN4NmtKOGIwc2Jkc2w3TjlsanAzZF9XVGlzNk1uRVM1YVFZY25Mejcwd1ZOWng1UVdSenhSVw?oc=5",
+"pub": "2026-11-20T05:05:30+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "ee24001ab820",
 "t": "",
 "title": "China prepares to resume US private equity investments after withdrawal - FT",
@@ -9072,6 +9152,36 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T09:14:06+00:00"
+},
+{
+"id": "297706413465",
+"t": "",
+"title": "Nuvau Minerals Inc (NMC.V) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9DT214TWdybHJDVGhkMFM4RFY5bkpZVzZnTHVaWVY4QVM3TnVtZ2lyNk4tSkpXSmlxVldYenB3bVozMjNreVNjaE5OczlHQk5SUFYwLVRucEJfdE8wcExLekc4YmRmTVloblE?oc=5",
+"pub": "2026-11-20T04:53:32+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "afeb12900bbb",
+"t": "",
+"title": "Invesco S&P MidCap 400 Revenue ETF (RWK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9LRk5nRGhXT3NDSjRxbkc2LUxUQkdxUXdsTUNBVlU0cWR6UmNuZHBVZG1mY1BwVUpaZm1kWWZqSFJrMEg4OHYwTndqcVY1RUYxenpjcUJqWTU?oc=5",
+"pub": "2026-11-20T04:53:21+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "fc33d054c233",
+"t": "",
+"title": "AWLNF.PK - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8zV0llcDB0ZEdKczNWVUc4TGxPSVVxVkxmWW9FS0loSjdSOVZZc3BBaVM4ZjhUZ2p3TzJJdFk1SGVjWUpaZ2l2MVJPd2V2bVkxbWFheEk4X3dGSnQydDRHS1ZMeHBsREVXdGdV?oc=5",
+"pub": "2026-11-20T04:53:20+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "7dbb7047ba63",
@@ -9172,6 +9282,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T04:44:23+00:00"
+},
+{
+"id": "7fabbcdbeccc",
+"t": "",
+"title": "A.I.S. Resources Limited (AIS.V) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9HcDVOdTlTTl81Y1JOVVowcjhXZTlMUkJ3amU1bUhhQm5KUi1ZUVRKRFZFWUc5WUdSRE9fQkVSektzUTBPbTFNVW01WDdSVzZ0OVlHbjJoY1dfWHRpWElyc2lXWXNXZw?oc=5",
+"pub": "2026-11-20T04:18:06+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "89a5128211c0",
@@ -9292,6 +9412,36 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T04:14:03+00:00"
+},
+{
+"id": "8a58b5484287",
+"t": "",
+"title": "Ionic Rare Earths Ltd (IXRRF.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE43SUt5UWhXdXQ0QURRcktfZWNPZDZYNGdyS2NYSDBIbThUdmdsZDRNcXpKU1NObnI4VVdjbmZMLURQSHA0em96Zl9IbkJSMVF5ZnBoeHVka0VsV0hIUGZiNg?oc=5",
+"pub": "2026-11-20T03:54:28+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "d63391763527",
+"t": "",
+"title": "Ascent Industries Co (ACNT.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBDckNmUXU1LUZlNzQ5MkFZYlktMnByU0xZSmlKR3ZKM2kyTHpuNXA4TnpURlVfdk9fOXc1bWxHa1B0d2JNM1pWUDJQM2U2cUQ4UC1SNDVOM05jOWdEZ3lTYVhDZUNRNFM2bGxkc0c2SQ?oc=5",
+"pub": "2026-11-20T03:47:50+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "e3ac21a21483",
+"t": "",
+"title": "Bagger Dave's Burger Tavern Inc (BDVB.PK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBWaERhMFhxQ09pM0tzaTh0TXZRdWJCdHdmdXZhY2NBeHJ0eHB2dnZpbENMVEVQRkJhMF9hLVRQZmhxSHpSNmQ5NjNBUUJ6M0p6Vzc1X3ZXSGd1YVNhdVRNOGFpRkJBYldQa0c2Qk1HQQ?oc=5",
+"pub": "2026-11-20T03:47:25+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "5401dd889c57",
@@ -9434,6 +9584,16 @@
 "seen": "2026-11-20T05:14:50+00:00"
 },
 {
+"id": "f6e1ad4dd75f",
+"t": "",
+"title": "O3180O.T - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTzNKXzE0QUNOQ01MWjA3R1FBNmQ4SlJWUmxLbUdCM2txMWoybDJ0aEo3eExlaXV1V2c1djBGeXRxTHJ4THBxbGQ3aG9WX3ZIQ1hYTEVHWThsR0s1SkhNcnM0dkhWX29hX0pkazRjZ0VpM1ZUT1VvSXZsbEhPWTFkQVNGTDNQY0E?oc=5",
+"pub": "2026-11-20T03:25:28+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "d144c75f91d9",
 "t": "",
 "title": "Nextdc Says It Will No Longer Develop Data Centers Near Homes",
@@ -9442,6 +9602,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T03:44:15+00:00"
+},
+{
+"id": "55ccdc8da502",
+"t": "",
+"title": "300546.ZK - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRXIxanFZLWNNdzQzR18zeWwzbHVtcjBNUV9HdFNldlhYM0pBM3hXY2thSmNVZk5GdFBrZVdMWmVfMjdyZUxiV21fbGF3eGZ3cHdibEk4OTFlRlhxRmFiQ1RlQkc2amJDRWQ2LXhmUnlORFAwRmV6VkZsOGRqeldDblduZ0pRUzNB?oc=5",
+"pub": "2026-11-20T03:22:11+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "e0a62def6371",
@@ -9654,6 +9824,16 @@
 "seen": "2026-11-20T05:44:20+00:00"
 },
 {
+"id": "ab20044419b3",
+"t": "",
+"title": "3984.t - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAzZWtSSVNkdDFuQ1lIT3VlRWZRbU9Ob0QzTUtjcGVYdjBibDBobFBta2pfVjNmeGhFUUZoTHRhd1Jhbm01dUppUU9KaEI5SUlROUw1b25zS01HMEhKRVVNb1cwdEdsTGdCeFBWdXYyTXNJdDhWalE?oc=5",
+"pub": "2026-11-20T02:24:56+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "eaaf4a2f60b6",
 "t": "",
 "title": "Range Resources Corporation (RRC.F) | Stock Price & Latest News - Reuters",
@@ -9752,6 +9932,16 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-20T02:26:34+00:00"
+},
+{
+"id": "293eb72c73d5",
+"t": "",
+"title": "Media Chinese International Ltd (MDCH.KL) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBVaWpHaFE1RUNPRmFlcFhjOGVjYWFnb2hGS2E0bVRySF92VDNqWnB3cW5FS1hCdjltcl8tVndRLXVjZlF1ZHlIbGlIdFV2WGFndFVuWEt4RWQxYkRmVk5DNUlEQ3k1NmI0TlV5eQ?oc=5",
+"pub": "2026-11-20T01:28:24+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "22c0e5a1c0ee",
@@ -9944,6 +10134,16 @@
 "seen": "2026-11-20T06:14:16+00:00"
 },
 {
+"id": "4caffb2178a3",
+"t": "",
+"title": "HashKey Holdings Ltd (3887.HK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5Ockd5Mmd0ZDBzd0JaZHJqNW5XT0hOY21FckZRUGpVQW5Ibkh3djNBUEUzX1hqUzlUWVM0YVZDbHp0QXpXbEx3Nk9ZZG9IejZXelhZYndoTjFjbWNYX1ZlckxIMllXNUE?oc=5",
+"pub": "2026-11-20T00:54:34+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "7dc8df6ced14",
 "t": "",
 "title": "Opinion | The Astonishing Wealth of Anthropic",
@@ -10044,6 +10244,26 @@
 "seen": "2026-11-20T09:02:08+00:00"
 },
 {
+"id": "3e0d1ed452b2",
+"t": "",
+"title": "Suzhou Sunmun Technology Co Ltd (300522.SZ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1yX0VhX0pNOE9zS05mMGVwcEFqZzlLU3g5cWFsckxkRTE3ZjlEX1lycFp4VjhqVjQ4OGFxYy1LejAwWm42RGRDNVVNWHI3WmtvSXJ0Y3N6MEI3MEtrZmdXdEFaS2RfYVVDd1lwdjlHZw?oc=5",
+"pub": "2026-11-20T00:28:07+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
+"id": "4347226a7ada",
+"t": "",
+"title": "Artisan Developing World Fund;Advisor (APDYX.O) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4xVHVuNUhNa0hxZWx3NkFucVFVMnNDS1QySzlrRW81U0dtYlJ5N3dCV3g4RnZNM2hwN3hwRHA2Z2R4T0dIbXVoMVhMTFZxUXZ0YjV1Y01VSkx3U19fZXVHSGNXODdRY2lNZk1ORQ?oc=5",
+"pub": "2026-11-20T00:26:58+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
+},
+{
 "id": "6b6cd188968b",
 "t": "",
 "title": "FOX.PH - | Stock Price & Latest News - Reuters",
@@ -10072,6 +10292,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T05:14:50+00:00"
+},
+{
+"id": "058284ef8f07",
+"t": "",
+"title": "Artisan Developing World Fund;Advisor (APDYX.O) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE56Y0lHX3hfbHFwRTVoRGRyMk9OMHRXc1lJVmxzLUpGdmUzZlBhLVNPeG5FSHVJdzNoT19SZlJIclJtbng0MFlIRUZXN1l0a1ZMemVHY3ZacUNlR29LQ0hBTzBwSk16dFFyWk4wWlREdw?oc=5",
+"pub": "2026-11-20T00:22:37+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T09:44:30+00:00"
 },
 {
 "id": "3ee3fb273bef",
@@ -10782,236 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T01:18:57+00:00"
-},
-{
-"id": "15782c2d3f09",
-"t": "",
-"title": "Anthropic IPO Raises Only $110 Million From Australian Investors",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-ipo-raises-only-110-million-from-australian-investors",
-"pub": "2026-11-19T23:35:17+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "c4b7701e0f22",
-"t": "",
-"title": "Japan CPI Rises to Fastest This Year, Backing BOJ Hike Case",
-"url": "https://www.bloomberg.com/news/articles/2026-11-19/japan-cpi-quickens-to-fastest-this-year-backing-boj-hike-case",
-"pub": "2026-11-19T23:34:12+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "02b37f651469",
-"t": "",
-"title": "Japan overall CPI climbs at fastest rate since November 2025",
-"url": "https://www.financialjuice.com/News/9860804/Japan-overall-CPI-climbs-at-fastest-rate-since-November-2025.aspx?xy=rss",
-"pub": "2026-11-19T23:31:53+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "9b33b915b749",
-"t": "",
-"title": "Japan overall CPI climbs at fastest rate since November 2025",
-"url": "https://www.financialjuice.com/News/9860804/Japan-overall-CPI-climbs-at-fastest-rate-since-November-2025.aspx",
-"pub": "2026-11-19T23:31:53+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "d6e477478899",
-"t": "",
-"title": "Japan core CPI climbs at fastest rate since December 2025",
-"url": "https://www.financialjuice.com/News/9860803/Japan-core-CPI-climbs-at-fastest-rate-since-December-2025.aspx?xy=rss",
-"pub": "2026-11-19T23:31:41+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "cd843ff35f92",
-"t": "",
-"title": "Japan core CPI climbs at fastest rate since December 2025",
-"url": "https://www.financialjuice.com/News/9860803/Japan-core-CPI-climbs-at-fastest-rate-since-December-2025.aspx",
-"pub": "2026-11-19T23:31:41+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "2a7f41246dcf",
-"t": "",
-"title": "Japan October nationwide core-core CPI excluding fresh food, energy prices rises 2.2% yr/yr: govt",
-"url": "https://www.financialjuice.com/News/9860798/Japan-October-nationwide-core-core-CPI-excluding-fresh-food-energy-prices-rises-22-yryr-govt.aspx?xy=rss",
-"pub": "2026-11-19T23:30:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "e7ffc22e084b",
-"t": "",
-"title": "Japan October nationwide core-core CPI excluding fresh food, energy prices rises 2.2% yr/yr: govt",
-"url": "https://www.financialjuice.com/News/9860798/Japan-October-nationwide-core-core-CPI-excluding-fresh-food-energy-prices-rises-22-yryr-govt.aspx",
-"pub": "2026-11-19T23:30:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "c0473000d7ec",
-"t": "",
-"title": "Japan oct consumer prices excluding fresh food, energy rise 2.2% yr/yr: govt",
-"url": "https://www.financialjuice.com/News/9860797/Japan-oct-consumer-prices-excluding-fresh-food-energy-rise-22-yryr-govt.aspx?xy=rss",
-"pub": "2026-11-19T23:30:12+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "7d30401ef6ae",
-"t": "",
-"title": "Japan Oct nationwide core consumer prices rise 2.3% yr/yr: govt",
-"url": "https://www.financialjuice.com/News/9860796/Japan-Oct-nationwide-core-consumer-prices-rise-23-yryr-govt.aspx?xy=rss",
-"pub": "2026-11-19T23:30:12+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "4c0eafaf4feb",
-"t": "",
-"title": "Japan oct consumer prices excluding fresh food, energy rise 2.2% yr/yr: govt",
-"url": "https://www.financialjuice.com/News/9860797/Japan-oct-consumer-prices-excluding-fresh-food-energy-rise-22-yryr-govt.aspx",
-"pub": "2026-11-19T23:30:12+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "cf0d0541d241",
-"t": "",
-"title": "Japan Oct nationwide core consumer prices rise 2.3% yr/yr: govt",
-"url": "https://www.financialjuice.com/News/9860796/Japan-Oct-nationwide-core-consumer-prices-rise-23-yryr-govt.aspx",
-"pub": "2026-11-19T23:30:12+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "f000e9431b94",
-"t": "",
-"title": "Japan Oct nationwide core CPI rises 2.2% yr/yr: govt poll 2.3%",
-"url": "https://www.financialjuice.com/News/9860795/Japan-Oct-nationwide-core-CPI-rises-22-yryr-govt-poll-23.aspx?xy=rss",
-"pub": "2026-11-19T23:30:05+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "2f4babf0af8a",
-"t": "",
-"title": "Japan Oct nationwide core CPI rises 2.2% yr/yr: govt poll 2.3%",
-"url": "https://www.financialjuice.com/News/9860795/Japan-Oct-nationwide-core-CPI-rises-22-yryr-govt-poll-23.aspx",
-"pub": "2026-11-19T23:30:05+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "372fadef6077",
-"t": "",
-"title": "Japanese Core CPI Nationwide YoY Actual 2.2% (Forecast 2.3%, Previous 2.1%)",
-"url": "https://www.financialjuice.com/News/9860794/Japanese-Core-CPI-Nationwide-YoY-Actual-22-Forecast-23-Previous-21.aspx?xy=rss",
-"pub": "2026-11-19T23:30:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "667ff9a72c63",
-"t": "",
-"title": "Japanese Core CPI Nationwide YoY Actual 2.2% (Forecast 2.3%, Previous 2.1%)",
-"url": "https://www.financialjuice.com/News/9860794/Japanese-Core-CPI-Nationwide-YoY-Actual-22-Forecast-23-Previous-21.aspx",
-"pub": "2026-11-19T23:30:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "2551483f6d77",
-"t": "",
-"title": "Japanese CPI Overall Nationwide Actual 2.3% (Forecast 2.5%, Previous 2.1%)",
-"url": "https://www.financialjuice.com/News/9860793/Japanese-CPI-Overall-Nationwide-Actual-23-Forecast-25-Previous-21.aspx?xy=rss",
-"pub": "2026-11-19T23:30:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "81a24db1c067",
-"t": "",
-"title": "Japanese CPI Overall Nationwide Actual 2.3% (Forecast 2.5%, Previous 2.1%)",
-"url": "https://www.financialjuice.com/News/9860793/Japanese-CPI-Overall-Nationwide-Actual-23-Forecast-25-Previous-21.aspx",
-"pub": "2026-11-19T23:30:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "cec3280a72ee",
-"t": "",
-"title": "Invesco S&P 500 Equal Weight Real Estate ETF (RSPR.N) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1leGVrRmMyNXRwdWhjTzA2UUNIY0k4dTFrLW5naXJ5NDk2TmRTVHdFcVBYVFpBem4xcXpCdktZUUpTWUdyZGU0TFpEWXRRamJKWE5DUE5ZLVU?oc=5",
-"pub": "2026-11-19T23:29:54+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T05:44:20+00:00"
-},
-{
-"id": "6cfd54ee7337",
-"t": "",
-"title": "Michael Page PLC (PAGE.L) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBzQy1reEZqWHFscmJaYzVNdV81OUFBcTdPWXhsendYZGN4VU5ER1d1R0REM2J3QWIwUDdOWll6djBoN1NjV1QwNG4tci1EellpVm1Cc3dxLWZwbjFmRHc?oc=5",
-"pub": "2026-11-19T23:29:11+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T01:18:57+00:00"
-},
-{
-"id": "a06421548a73",
-"t": "",
-"title": "Explosions heard in Ukraine's Kyiv: witness source",
-"url": "https://www.financialjuice.com/News/9860790/Explosions-heard-in-Ukraines-Kyiv-witness-source.aspx?xy=rss",
-"pub": "2026-11-19T23:22:57+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T00:04:41+00:00"
-},
-{
-"id": "b6014f228d41",
-"t": "",
-"title": "Explosions heard in Ukraine's Kyiv: witness source",
-"url": "https://www.financialjuice.com/News/9860790/Explosions-heard-in-Ukraines-Kyiv-witness-source.aspx",
-"pub": "2026-11-19T23:22:57+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "756cd8631a47",
-"t": "",
-"title": "WHG.Z - | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMFlaTElBVVFZdEJCSFNISnFodGpGLU0yRGh3Zi1nMllleVhxeVQxRDUyanMyRHl1VV9GZjJPbmE2Q2RGbDV0TGtxR1ZkMXI0STBpTW01ZGMwUThFNUZFTUxPRGxYQXdYSUdoZV9KSUNjWm1jZWY2bndXZlI4YlpkYXRiT0RSWEJzeHQtbnRn?oc=5",
-"pub": "2026-11-19T23:22:56+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T05:44:20+00:00"
 }
 ]
 }
