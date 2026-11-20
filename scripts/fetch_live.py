@@ -173,6 +173,16 @@ def quotes(old, errors):
         except Exception as e:  # noqa: BLE001 — 순간 연결 끊김이면 야후로, 그것도 안 되면 지난 값 유지 (2026-11-17)
             errors.append(scrub(f"{t}: {type(e).__name__}: {e}")[:160])
             j = None
+        # Finnhub 값이 하루 넘게 지난 날짜면(장외 ADR 등, 예: SMERY) 야후도 받아 더 새 값을 써요 (2026-11-20 대표 승인)
+        if j and j.get("c") and j.get("t"):
+            fd = dt.datetime.fromtimestamp(j["t"], dt.timezone.utc).astimezone(NY).date()
+            if us_lag(fd, now_ny) >= 1:
+                try:
+                    y = yahoo_quote(t)
+                except Exception:  # noqa: BLE001
+                    y = None
+                if y and y["t"] > j["t"]:
+                    j = y
         if not j or not j.get("c") or not j.get("t"):
             try:
                 j = yahoo_quote(t)

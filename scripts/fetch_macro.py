@@ -304,7 +304,20 @@ def main():
             return market([(d, a[d] - b[d]) for d in sorted(a) if d in b], 2, "10년물 − 2년물 (위 두 값)")
         run("spread", spread)
         run("vix", lambda: fresh("VIXCLS", "^VIX", 1, "FRED VIXCLS (CBOE)"))
-        run("wti", lambda: fresh("DCOILWTICO", "CL=F", 1, "FRED DCOILWTICO (EIA)"))
+        # 원유는 FRED(EIA 현물)와 야후(선물 근월물)가 배럴당 몇 달러씩 달라 이어 붙이면 가짜 등락이 생겨요
+        # → 한 가지 자료(야후 CL=F 선물)만 쓰고, 야후가 안 되면 FRED 현물만 (2026-11-20 대표 승인, Vernon V-20261119-1821-1)
+        def wti():
+            try:
+                y = [(dt.datetime.fromtimestamp(t, ET).date().isoformat(), c) for t, c in yahoo("CL=F", "3y", "1d")]
+                yd = {}
+                for d, v in y:  # 같은 날짜 막대가 둘이면 나중 것
+                    yd[d] = v
+                x = market(sorted(yd.items()), 1, "야후 CL=F (뉴욕 WTI 선물 · 가장 가까운 달)")
+                x["note"] = "선물 가격이에요. 만기(매달 20일 무렵)에 다음 달 계약으로 넘어가며 조금 차이가 날 수 있어요"
+                return x
+            except Exception:  # noqa: BLE001
+                return market(fred("DCOILWTICO", 800), 1, "FRED DCOILWTICO (EIA 현물 · 야후 실패로 대신)")
+        run("wti", wti)
     else:
         errors.append("FRED_API_KEY 없음")
     if ECOS_KEY:
