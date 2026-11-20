@@ -1,18 +1,88 @@
 {
-"updated_kst": "2026-11-20 14:14",
-"rot": 131,
+"updated_kst": "2026-11-20 14:34",
+"rot": 12,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "31건",
+"Reuters": "33건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "0dfb6cc6486d",
+"t": "NVDA",
+"title": "Cathie Wood’s ARK Invest Loads Up $90M In Anthropic Shares, Dumps Nvidia As China Chip Sale Woes Deepen",
+"url": "https://stocktwits.com/news-articles/markets/equity/cathie-wood-s-ark-invest-loads-up-anthropic-shares-dumps-nvidia-as-china-chip-sale-woes-deepen/cNbS5zBR9KI?.tsrc=rss",
+"pub": "2026-11-20T05:22:06+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "4ceaa874057f",
+"t": "CSCO",
+"title": "Anthropic Defies Tech Rout On Debut — Tom Lee Sees ‘Big Payoff’ Ahead And Says Cisco’s Wild 1997 Ride Shows Why",
+"url": "https://stocktwits.com/news-articles/markets/equity/anthropic-defies-tech-rout-debut-tom-lee-big-payoff-cisco-1997-ride/cNbS5vFR9K4?.tsrc=rss",
+"pub": "2026-11-20T05:18:58+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "f8ffa7136493",
+"t": "AAPL",
+"title": "CrowdStrike (CRWD) Brings Apple Device Automation Into Falcon Foundry Through A New Tie Up",
+"url": "https://finance.yahoo.com/technology/articles/crowdstrike-crwd-brings-apple-device-051725940.html?.tsrc=rss",
+"pub": "2026-11-20T05:17:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "50b00c711cc4",
+"t": "SMR",
+"title": "Can NuScale Power (SMR) Keep Trading Below Book Value?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/nuscale-power-smr-keep-trading-051649409.html?.tsrc=rss",
+"pub": "2026-11-20T05:16:49+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "fcc5dd45f777",
+"t": "PL",
+"title": "Planet Labs PBC (PL) Joins Project Suncatcher To Build Prototype AI Satellites",
+"url": "https://finance.yahoo.com/technology/ai/articles/planet-labs-pbc-pl-joins-051622740.html?.tsrc=rss",
+"pub": "2026-11-20T05:16:22+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "953121869b6d",
+"t": "FTNT",
+"title": "Fortinet (FTNT) Stock Looks Fully Priced As Its 148% Run Continues",
+"url": "https://finance.yahoo.com/markets/stocks/articles/fortinet-ftnt-stock-looks-fully-051533531.html?.tsrc=rss",
+"pub": "2026-11-20T05:15:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "584adbc1862b",
+"t": "KEYS",
+"title": "Keysight Technologies Inc (KEYS) (Q4 2026) Earnings Call Highlights: Record Orders and Revenue ...",
+"url": "https://finance.yahoo.com/technology/articles/keysight-technologies-inc-keys-q4-050110806.html?.tsrc=rss",
+"pub": "2026-11-20T05:01:10+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
+},
 {
 "id": "3d0ac719537c",
 "t": "NVDA",
@@ -62,6 +132,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T05:14:50+00:00"
+},
+{
+"id": "6d9734e32c36",
+"t": "NVDA",
+"title": "Jensen Huang Spy Scandal Is Now an Alibaba Problem: Investors File Class Action Lawsuit",
+"url": "https://finance.yahoo.com/markets/stocks/articles/jensen-huang-spy-scandal-now-042926308.html?.tsrc=rss",
+"pub": "2026-11-20T04:29:26+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
 "id": "ef080dfc5ed5",
@@ -1042,6 +1122,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-19T23:19:27+00:00"
+},
+{
+"id": "9e859938ec59",
+"t": "CSCO",
+"title": "HSBC Just Turned Bullish on Cisco Stock Again. Here’s Why It Expects 40% Upside.",
+"url": "https://www.barchart.com/story/news/8926885/hsbc-just-turned-bullish-on-cisco-stock-again-heres-why-it-expects-40-upside?.tsrc=rss",
+"pub": "2026-11-19T22:57:46+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
 "id": "107705e9732c",
@@ -7924,94 +8014,104 @@
 "seen": "2026-11-19T18:16:23+00:00"
 },
 {
-"id": "be464e1e31ae",
-"t": "ISRG",
-"title": "Intuitive Surgical (ISRG) Down 1.7% Since Last Earnings Report: Can It Rebound?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/intuitive-surgical-isrg-down-1-153005337.html?.tsrc=rss",
-"pub": "2026-11-19T15:30:05+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "50d114a15219",
+"t": "",
+"title": "Russian defence ministry: Russian forces target energy and transport infrastructure in Kyiv, several Ukrainian regions - RIA",
+"url": "https://www.financialjuice.com/News/9861212/Russian-defence-ministry-Russian-forces-target-energy-and-transport-infrastructure-in-Kyiv-several-Ukrainian-regions---RIA.aspx",
+"pub": "2026-11-20T05:31:01+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
-"id": "67416aefdf1b",
-"t": "IRDM",
-"title": "Why Is Iridium (IRDM) Up 0.3% Since Last Earnings Report?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/why-iridium-irdm-0-3-153005220.html?.tsrc=rss",
-"pub": "2026-11-19T15:30:05+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T19:26:39+00:00"
+"id": "c880fdb083fb",
+"t": "",
+"title": "Dutch November consumer confidence improves to -32 points from -34 in October, CBS says",
+"url": "https://www.financialjuice.com/News/9861209/Dutch-November-consumer-confidence-improves-to--32-points-from--34-in-October-CBS-says.aspx",
+"pub": "2026-11-20T05:30:04+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
-"id": "4efc5ee99f9f",
-"t": "GE",
-"title": "Why Is GE (GE) Up 10.9% Since Last Earnings Report?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/why-ge-ge-10-9-153004640.html?.tsrc=rss",
-"pub": "2026-11-19T15:30:04+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "516099ce59dd",
+"t": "",
+"title": "Dutch Consumer Confidence Adjusted Actual -32 (Forecast -, Previous -34)",
+"url": "https://www.financialjuice.com/News/9861208/Dutch-Consumer-Confidence-Adjusted-Actual--32-Forecast---Previous--34.aspx",
+"pub": "2026-11-20T05:30:00+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
-"id": "83c69bba1457",
-"t": "SPCX",
-"title": "174-year-old American bank’s Bitcoin exposure nears Tesla and SpaceX",
-"url": "https://www.thestreet.com/crypto/business/174-year-old-american-banks-bitcoin-exposure-nears-tesla-and-spacex?.tsrc=rss",
-"pub": "2026-11-19T15:30:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "3ad77e74e90f",
+"t": "",
+"title": "Russian defence ministry: Russian forces strike sea vessels utilized by Ukrainian military - RIA",
+"url": "https://www.financialjuice.com/News/9861207/Russian-defence-ministry-Russian-forces-strike-sea-vessels-utilized-by-Ukrainian-military---RIA.aspx",
+"pub": "2026-11-20T05:29:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
-"id": "986fbaad717c",
-"t": "CSCO",
-"title": "Connecting People to Humanitarian Assistance With Responsible AI",
-"url": "https://finance.yahoo.com/technology/ai/articles/connecting-people-humanitarian-assistance-responsible-153000795.html?.tsrc=rss",
-"pub": "2026-11-19T15:30:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T17:21:16+00:00"
+"id": "fd247e8933d3",
+"t": "",
+"title": "China finance ministry auctions 30-year bonds at 2.0337% yield: traders",
+"url": "https://www.financialjuice.com/News/9861206/China-finance-ministry-auctions-30-year-bonds-at-20337-yield-traders.aspx",
+"pub": "2026-11-20T05:29:46+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
-"id": "ff70307618ad",
-"t": "PG",
-"title": "KMB's Kenvue Deal: Could $2.1 Billion in Synergies Lift Earnings?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/kmbs-kenvue-deal-could-2-153000219.html?.tsrc=rss",
-"pub": "2026-11-19T15:30:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
+"id": "0fd94ba32076",
+"t": "",
+"title": "Meta: it has removed Threads accounts flagged by Taiwan government",
+"url": "https://www.financialjuice.com/News/9861205/Meta-it-has-removed-Threads-accounts-flagged-by-Taiwan-government.aspx",
+"pub": "2026-11-20T05:28:13+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
-"id": "2564dd76b862",
-"t": "NVDA",
-"title": "Apple Stock Polishes Breakout As Nvidia-Led AI Boom Gets Wake-Up Call",
-"url": "https://finance.yahoo.com/m/681ca0c6-76b1-321b-bdd4-bb83acc818fb/apple-stock-polishes-breakout.html?.tsrc=rss",
-"pub": "2026-11-19T15:29:23+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "931c4638d2a5",
+"t": "",
+"title": "Taiwan government reported nearly 2,700 suspicious social media accounts to Meta: Taipei says they aimed to sway elections",
+"url": "https://www.financialjuice.com/News/9861204/Taiwan-government-reported-nearly-2700-suspicious-social-media-accounts-to-Meta-Taipei-says-they-aimed-to-sway-elections.aspx",
+"pub": "2026-11-20T05:28:11+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
-"id": "2993674e64ee",
-"t": "SPCX",
-"title": "Anthropic’s IPO leaves more than half of institutional bidders without shares",
-"url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-ipo-leaves-more-half-152914526.html?.tsrc=rss",
-"pub": "2026-11-19T15:29:14+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T16:12:33+00:00"
+"id": "132aa803af25",
+"t": "",
+"title": "Indonesia's mining policy uncertainty raises cost pressure concerns, CreditSights says - Reuters",
+"url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQaFVEYUZoRW40VnZzYTVaNXRNNTFnX1NPbnd5anZ2cUs5TlhmLUNZcTI0c2pscW1pNk5UaW5XRU5fM2F6QU90dGlmazBQc3ZCMUZUd1paZjBSb2J6LVhUd3pxdG4wM3hSeDN4bFk1Qms3RnAyREdtQVEzLUZpdnY2Yjdwa19xa1I3dG1PTm9vS3RUY0ZIdzNubXRScUxzMjJxbjVwdkFNRXRVTTBMUUtGZFhrVGRFSkFrZ3FpeDYwbU1HWUtvR184?oc=5",
+"pub": "2026-11-20T05:20:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
-"id": "83e7ca434285",
-"t": "PG",
-"title": "PG Jumps 17.4% in Three Months as Investors Weigh What Comes Next",
-"url": "https://finance.yahoo.com/markets/stocks/articles/pg-jumps-17-4-three-152900851.html?.tsrc=rss",
-"pub": "2026-11-19T15:29:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-19T18:16:23+00:00"
+"id": "53543cfeb390",
+"t": "",
+"title": "Russian strike kills three in Ukraine's Kyiv: city authorities",
+"url": "https://www.financialjuice.com/News/9861203/Russian-strike-kills-three-in-Ukraines-Kyiv-city-authorities.aspx",
+"pub": "2026-11-20T05:17:57+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
+},
+{
+"id": "891840b05aae",
+"t": "",
+"title": "Cambodia Sees Growth Risk as High US Rates Hit Economy",
+"url": "https://www.bloomberg.com/news/videos/2026-11-20/cambodia-sees-growth-risk-as-high-us-rates-hit-economy-video",
+"pub": "2026-11-20T05:09:32+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
 "id": "ee24001ab820",
@@ -8832,6 +8932,16 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-20T01:18:57+00:00"
+},
+{
+"id": "bc5aff4987a8",
+"t": "",
+"title": "Tatry Mountain Resorts as (TMR.WA) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5zR21OaUhyZFJqUHBoR2l2SnlvSGhXa3NmOG1nNDRHZjZHUFY3WmN6dVI3YmUxZnRHbTRhNlpmMjlVa0VaZ1U4VmlfREd2THlZd0VWUkR0eWdzcFZKeVIxQ0lCam9SWkp0OU1j?oc=5",
+"pub": "2026-11-20T00:49:10+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
 "id": "ea2c0d2c93ed",
@@ -10684,6 +10794,16 @@
 "seen": "2026-11-20T05:14:50+00:00"
 },
 {
+"id": "e9e16a1b1943",
+"t": "",
+"title": "Investors Dumping AI Stocks to Buy Into Anthropic Send Tech Shares Lower",
+"url": "https://www.wsj.com/finance/stocks/stock-futures-rise-as-optimism-improves-ahead-of-anthropic-trading-debut-ecdfbb2f?mod=rss_markets_main",
+"pub": "2026-11-19T20:22:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
+},
+{
 "id": "4adcecd39d3e",
 "t": "",
 "title": "Peterson: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’",
@@ -10752,6 +10872,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T05:14:50+00:00"
+},
+{
+"id": "b083a7295890",
+"t": "",
+"title": "U.S. Diesel Prices to Continue to Fall in Relief for Consumers, U.S. Energy Secretary Says",
+"url": "https://www.wsj.com/business/energy-oil/u-s-diesel-prices-to-continue-to-fall-in-relief-for-consumers-u-s-energy-secretary-says-cfe83c18?mod=rss_markets_main",
+"pub": "2026-11-19T20:12:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-20T05:34:58+00:00"
 },
 {
 "id": "aff2d7f2e2df",
@@ -10882,136 +11012,6 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-19T21:24:41+00:00"
-},
-{
-"id": "9a08e90b363f",
-"t": "",
-"title": "Fed's Barr Says Inflation Calls for Further Policy Adjustment",
-"url": "https://www.bloomberg.com/news/videos/2026-11-19/fed-s-barr-says-inflation-calls-for-policy-adjustment-video",
-"pub": "2026-11-19T19:59:01+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
-},
-{
-"id": "51c5886a825b",
-"t": "",
-"title": "Walmart hikes outlook as CEO tells CNBC retailer aims to keep prices low despite soaring fuel costs",
-"url": "https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html",
-"pub": "2026-11-19T19:58:30+00:00",
-"src": "CNBC",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
-},
-{
-"id": "200a9348a6a3",
-"t": "",
-"title": "Trump: I won't veto all AI guardrails if reasonable - Fox News",
-"url": "https://www.financialjuice.com/News/9860556/Trump-I-wont-veto-all-AI-guardrails-if-reasonable---Fox-News.aspx?xy=rss",
-"pub": "2026-11-19T19:52:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
-},
-{
-"id": "cdf49fe57fc6",
-"t": "",
-"title": "Trump: I won't veto all AI guardrails if reasonable - Fox News",
-"url": "https://www.financialjuice.com/News/9860556/Trump-I-wont-veto-all-AI-guardrails-if-reasonable---Fox-News.aspx",
-"pub": "2026-11-19T19:52:36+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "d733fbdb5781",
-"t": "",
-"title": "Traders and Investors Want to Exercise Their Convictions: Bilal Little",
-"url": "https://www.bloomberg.com/news/videos/2026-11-19/traders-and-investors-act-on-convictions-bilal-little-video",
-"pub": "2026-11-19T19:47:41+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
-},
-{
-"id": "c1677c6beda0",
-"t": "",
-"title": "Canadian dollar steadies near 19-month low as stocks slide - Reuters",
-"url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOczhzMjlHbHFCXzdwV1doS3hlTmM0dXdsNHVNU19lNzJoU1FuRjdPRDBLRGx6cVk4REVpeWpEVGRiUG9mNHhYaTZTNm5xSFRTcGs4Q05uVXJvX2kzU0F0X2NieFZXemJGX0toUWpQT2l2MEJBcXdBZ0FvMXVTbldJYi04QkQ2NGs4SjJRTXdiWGh3LW9icUFlNW1ocXJtbVhXcVkxSA?oc=5",
-"pub": "2026-11-19T19:46:25+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
-},
-{
-"id": "a48f6eb90580",
-"t": "",
-"title": "Trump: Iran war came up with Putin and Xi; Putin and Xi want the Iran war to end - NBC Reporter on X",
-"url": "https://www.financialjuice.com/News/9860554/Trump-Iran-war-came-up-with-Putin-and-Xi-Putin-and-Xi-want-the-Iran-war-to-end---NBC-Reporter-on-X.aspx?xy=rss",
-"pub": "2026-11-19T19:46:22+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
-},
-{
-"id": "101e06ad9049",
-"t": "",
-"title": "Trump: Iran war came up with Putin and Xi; Putin and Xi want the Iran war to end - NBC Reporter on X",
-"url": "https://www.financialjuice.com/News/9860554/Trump-Iran-war-came-up-with-Putin-and-Xi-Putin-and-Xi-want-the-Iran-war-to-end---NBC-Reporter-on-X.aspx",
-"pub": "2026-11-19T19:46:22+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "77cb0ec8be7f",
-"t": "",
-"title": "Commerce approved shipment of 879,868 advanced chips to Chinese firms as of May 2026 - committee",
-"url": "https://www.financialjuice.com/News/9860553/Commerce-approved-shipment-of-879868-advanced-chips-to-Chinese-firms-as-of-May-2026---committee.aspx?xy=rss",
-"pub": "2026-11-19T19:45:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
-},
-{
-"id": "d478c5fb0bd8",
-"t": "",
-"title": "Commerce approved shipment of 879,868 advanced chips to Chinese firms as of May 2026 - committee",
-"url": "https://www.financialjuice.com/News/9860553/Commerce-approved-shipment-of-879868-advanced-chips-to-Chinese-firms-as-of-May-2026---committee.aspx",
-"pub": "2026-11-19T19:45:31+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "b9ad961405f0",
-"t": "",
-"title": "Nvidia also sought permission to ship 445,000 H200 advanced AI chips to Tencent in December 2025 - Committee. $NVDA",
-"url": "https://www.financialjuice.com/News/9860552/Nvidia-also-sought-permission-to-ship-445000-H200-advanced-AI-chips-to-Tencent-in-December-2025---Committee-NVDA.aspx?xy=rss",
-"pub": "2026-11-19T19:44:52+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
-},
-{
-"id": "d0ba885fd005",
-"t": "",
-"title": "Nvidia also sought permission to ship 445,000 H200 advanced AI chips to Tencent in December 2025 - Committee. $NVDA",
-"url": "https://www.financialjuice.com/News/9860552/Nvidia-also-sought-permission-to-ship-445000-H200-advanced-AI-chips-to-Tencent-in-December-2025---Committee-NVDA.aspx",
-"pub": "2026-11-19T19:44:52+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T05:14:50+00:00"
-},
-{
-"id": "9a05ac31d796",
-"t": "",
-"title": "Trump to Fox News: Didn't discuss Alice Huang much with Xi. $NVDA",
-"url": "https://www.financialjuice.com/News/9860551/Trump-to-Fox-News-Didnt-discuss-Alice-Huang-much-with-Xi-NVDA.aspx?xy=rss",
-"pub": "2026-11-19T19:44:11+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-19T20:28:04+00:00"
 }
 ]
 }
