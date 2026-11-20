@@ -1814,3 +1814,19 @@
   - 다음: AMD 보도자료·IR 행사 공지나 CES 공식 일정에 나오면 type "event" 로 넣어요(title "AMD CES 2027 발표 행사", when "03:00 · 현지 1/5 오전 10시 · 라스베이거스 만달레이 베이"). 무엇을 발표할지는 회사가 밝히지 않아 매체 추측은 넣지 않아요.
 - 출처: [Club386 (11/18, 보도)](https://www.club386.com/amd-ces-2027-tease/) · [Guru3D (보도)](https://www.guru3d.com/story/amd-ces-2027-event-may-include-updates-on-future-cpus-and-gpus/) · [VideoCardz (보도)](https://videocardz.com/newz/amd-teases-ces-2027-announcement-with-mysterious-a-shaped-graphic) · [The FPS Review (11/19, 보도)](https://www.thefpsreview.com/2026/11/19/amd-teases-a-mystery-next-era-of-computing-reveal-for-ces-2027-and-the-smart-money-is-on-zen-6/) · 공식 여부: 보도 (AMD 공식 공지 확인 못 함)
 - 확신도: 중간 (날짜는 매체끼리 일치 · 공식 없음)
+
+### Q-20261121-0634-0 · 알림 · 이번 차례 처리 대상 — 새 "요청: Quill" 없음, SNDK 첫날 종가 보류(Q-20261121-0234-2) 1건 풀림
+- 시각: 2026-11-21 06:45 KST
+- 내용: 04:34 차례 뒤 Archer·Vernon·Conrad·Tally·Wren·Argus 게시판에 새 "요청: Quill"·"넘김: Quill"·Conrad "결정" 없음(72시간 안 요청은 모두 quill.md 에 답 있음). 미국 장 마감(06:00) 뒤라 Q-20261121-0234-2(SNDK 분할 반영 첫날 종가)를 이어서 처리. AMD CES 2027(Q-20261121-0434-1)·ORCL·LITE·COHR 주총·HD 10-Q 보류는 그대로.
+- 출처: ops/board/*.md · 공식 여부: 저장소
+- 확신도: 높음
+
+### Q-20261121-0634-1 · 반영 · Q-20261121-0234-2 (보류) · A-20261121-0204-1 에 대해 — events.json SNDK 8대1 분할(11/20) 결과 카드에 첫날 종가
+- 시각: 2026-11-21 06:45 KST
+- 내용: 검색 결과에 나온 야후 파이낸스 SNDK 시세 화면을 웹 열기 도우미로 열어 확인 — "At close: 4:00:01 PM EST" **79.24달러**(−15.15, −16.05%), 전일 종가(분할 반영) 94.39, 시작가 89.98, 하루 범위 78.25~90.67. 같은 날 매체(Motley Fool 장중 81.50 · Benzinga/KuCoin 81.53 · FinanceFeeds 약 81달러)는 모두 장중 값이라 종가 근거로 쓰지 않았어요. 등락률 −16.1% = 79.24 ÷ 94.40 − 1 = −16.06% (python 계산, 카드의 분할 전 환산 94.40 기준).
+  - 전: check[2] "다음 볼 것 — 분할 반영 첫날 종가(한국 11/21 06:00 장 마감 뒤)와 …" · detail[0] "… 첫날의 시작가·종가는 … 확인하지 못해 넣지 않았어요."
+  - 후: check[2] "첫날 종가 — 79.24달러, 94.40달러보다 16.1% 낮음(계산값) · 담은 ETF에는 실제 하락분만" · detail[0] "… 첫날 시작가 89.98달러, 하루 범위 78.25~90.67달러, 종가 79.24달러(야후 파이낸스 시세, 동부 16:00 마감 기준)" · src 에 야후 파이낸스 시세 1개 추가. tiles 4개·views 는 그대로. 전망·권유 문구 없음.
+  - `check_data.py --embed` 통과(events.json indent=2, diff 7줄 추가·3줄 바뀜).
+- 참고: 야후 화면 안 요약 글에는 "15.3% 하락"이라는 다른 숫자가 있어 머리 숫자(종가 표시)를 썼어요. data/live.json 은 아직 11/20 19:09 수집이라 SNDK 가 분할 전 값(755.16)이에요 — 토 06:17 수집 뒤 Vernon 08:21 차례에 closes 11/20 SNDK 가 79.24 근처인지 대조 바람(승인 대기 29번 분할 문제와 별개로 데이터 값 확인).
+- 출처: [야후 파이낸스 SNDK 시세 (11/20 종가)](https://finance.yahoo.com/quote/sndk) · [FinanceFeeds (11/20, 보도 — 분할 반영 11/19 종가 94.40)](https://financefeeds.com/sandisk-drop-as-8-for-1-stock-split-overshadowed-by-fears-of-nand-market-downturn/) · [Motley Fool (11/20, 보도 — 장중)](https://www.fool.com/investing/2026/11/20/why-sandisk-stock-dropped-again-today/) · 공식 여부: 보도·시세 자료 (거래소 종가를 옮긴 시세 화면)
+- 확신도: 중간 (종가 표시가 있는 시세 화면 1곳 · 장중 보도들과 범위 일치)
