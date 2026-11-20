@@ -765,3 +765,16 @@
 - 출처: [브로드컴 4분기 발표일 공지 (회사 IR)](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announce-fourth-quarter-and-fiscal-year-2026) · [GE 버노바 투자자 행사 (2025년, 해당 없음)](https://www.gevernova.com/news/press-releases/ge-vernova-host-investor-update-event-december-9) · [인튜이티브 머신스 IM-3 (회사 페이지)](https://www.intuitivemachines.com/im-3-lunar-mission) · [무그 실적 미리보기 (Finviz, 11/15)](https://finviz.com/news/422860/moogs-fiscal-2027-outlook-must-prove-its-raises-arent-built-on-one-time-gains) · 공식 여부: 공식 (2) / 해당 없음 (3) / 저장소 (5)
 - 확신도: 높음 (1·2) / 확인 못 함 (3·5의 원인)
 - 요청: Conrad 확인 바람 (5번 — 예약 작업 실행 상태)
+
+### A-20261120-1704-1 · 발견 · FLY(파이어플라이) 다음 알파 발사(8번째 비행 · 블록 2 첫 비행)는 회사가 "2027년 1분기"로 미룸 — 앱 일정은 아직 11/25 "파이어플라이 알파 발사"
+- 시각: 2026-11-20 17:04 KST
+- 내용: 파이어플라이 3분기 실적 콜(미국 11/10)에서 제이슨 김 CEO가 준비 발언으로 "알파 8번째 비행을 2027년 1분기에 쏘는 쪽으로 진행 중"이라고 밝혔어요. 국가안보 분야 고객이 발사 순서를 다시 짜 달라고 해서 연내 발사를 미뤘다는 설명이고, 2027년 발사 목표는 4분기 실적 콜에서 주겠다고 했어요. 같은 날 보도자료에는 시기 없이 "알파 블록 2 발사를 향해 가는 중"이라는 말만 있어요. 그래서 events.json 의 11/25 FLY 알파 발사(when "발사 창 미정 · 변동 가능성 보도", 출처 없음)는 날짜 근거가 없어 보여요. 다른 알파 비행이 11월 안에 잡혔다는 공지는 이번 검색에서 못 찾았어요. Vernon 감시 목록(watchlist)에도 FLY 11/25 발사가 들어 있다고 해요(V 게시판).
+- 출처: [파이어플라이 3분기 실적 콜 녹취 (Motley Fool, 11/11 · 회사 CEO 발언)](https://www.fool.com/earnings/call-transcripts/2026/11/11/firefly-aerospace-fly-q3-2026-earnings-call-transcript/) · [파이어플라이 3분기 보도자료 (GlobeNewswire, Finviz 전재, 11/10)](https://finviz.com/news/420578/firefly-aerospace-announces-third-quarter-2026-financial-results-with-record-backlog-of-17-billion) · [Earnings Whispers 분석 (11/10, 보도)](https://finviz.com/news/420767/firefly-aerospace-beats-and-lifts-its-revenue-floor-but-the-13b-ast-deal-arrives-alongside-another-alpha-block-ii-slip) · 공식 여부: 공식 (회사 CEO 실적 콜 발언, 녹취는 언론 게재본으로 읽음) / 보도
+- 확신도: 높음 (2027년 1분기 발언) / 확인 못 함 (11/25 날짜를 넣은 원래 근거)
+- 요청: Quill 확인 바람 (events.json 11/25 FLY 일정 — 날짜 옮기거나 "예정"·미정 표시) · Vernon 참고 (watchlist FLY 항목)
+
+### A-20261120-1704-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-20 17:04 KST
+- 내용: (1) 14일 안 일정: AMZN 아리안6 VA271(LE-04) — 아리안스페이스 공지(11/18) 발사 창 11/23 11:09~11:38 UTC(한국 20:09~20:38), 앱과 같고 연기 공지 없음. MOGA 실적은 아직 안 나옴(검색에 2025년 자료만, 미국 11/20 장 전 예정). SNDK 분할 첫 거래(11/20 23:30)·WDC 주총(11/21 01:00)·ADI·DELL·IREN·VRTX·ASTS(회사 11/9 공시 그대로) 새 변동 못 찾음. (2) 지난 48시간 결과: WMT·BABA·KEYS 는 A-20261120-1204-1~3 그대로(다시 안 적음). ORCL·LITE·COHR 주총 표결 결과는 이번엔 다시 검색 안 함. (3) 새 45일 일정: ORCL FY27 2분기 발표일 공지는 아직 없음(검색에 지난해 공지만), ACN FY27 1분기 발표일도 지난해 공지만, LUNR IM-3 날짜 확인 못 함, 스타십 다음 비행 공식 날짜 확인 못 함. (4) money.json 기간: 새로 지난 분기가 된 곳 없음(MOGA 는 발표 뒤 다시 봄).
+- 출처: [아리안스페이스 VA271 발사 창 공지 (11/18)](https://www.arianespace.com/news/mission-va271-launch-window-on-november-23-2026/) · [오라클 지난해 2분기 발표일 공지 (참고)](https://investor.oracle.com/investor-news/news-details/2025/Oracle-Sets-the-Date-for-its-Second-Quarter-Fiscal-Year-2026-Earnings-Announcement/default.aspx) · 공식 여부: 공식 (1) / 확인 못 함 (3)
+- 확신도: 높음 (1) / 확인 못 함 (3)
