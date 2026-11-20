@@ -345,19 +345,12 @@ def check_dist(d):
 EVS = ("회사 발표", "공시", "정부 문서", "보도")
 
 
-def check_aimap(d):
-    """A 화면(AI 국가 프로젝트 지도, data/aimap.json): 층 이름, 근거 꼬리표, 출처 링크, 확인일 모양을 본다."""
-    if not d:
-        err("data/aimap.json", "비어 있어요")
-        return
-    keys = [x[0] for x in d.get("layers", [])]
-    if len(keys) != 8 or len(set(keys)) != 8:
-        err("data/aimap.json", "층(layers)은 서로 다른 8개여야 해요")
+def _aimap_projects(name, P, keys):
     seen = set()
-    for p in d.get("projects", []):
+    for p in P:
         pid = p.get("id")
         if not pid or pid in seen:
-            err("data/aimap.json", f"프로젝트 id가 없거나 겹쳐요: {pid}")
+            err("data/aimap.json", f"{name} 프로젝트 id가 없거나 겹쳐요: {pid}")
         seen.add(pid)
         for f in ("r", "n", "d", "st", "chk"):
             if not p.get(f):
@@ -383,25 +376,26 @@ def check_aimap(d):
             if len(s) != 2 or not str(s[1]).startswith("https://"):
                 err("data/aimap.json", f"{pid}: 출처 링크는 https 로 시작해야 해요")
 
-    ai = d.get("ai") or {}
+
+def _aimap_map(name, ai):
     co = ai.get("co", {})
     if not co or not ai.get("rows") or not ai.get("e"):
-        err("data/aimap.json", "AI 지도(ai)에 층·회사·관계가 있어야 해요")
+        err("data/aimap.json", f"{name} 지도에 층·회사·관계가 있어야 해요")
         return
     placed = set()
     for r in ai["rows"]:
         for g in r.get("g", []):
             for c in g.get("co", []):
                 if c not in co:
-                    err("data/aimap.json", f"AI 지도 {r.get('n')}: 회사 정보가 없는 이름 {c}")
+                    err("data/aimap.json", f"{name} 지도 {r.get('n')}: 회사 정보가 없는 이름 {c}")
                 if c in placed:
-                    err("data/aimap.json", f"AI 지도: {c}가 두 칸에 들어 있어요")
+                    err("data/aimap.json", f"{name} 지도: {c}가 두 칸에 들어 있어요")
                 placed.add(c)
     for c in co:
         if c not in placed:
-            err("data/aimap.json", f"AI 지도: {c}가 어느 칸에도 없어요")
+            err("data/aimap.json", f"{name} 지도: {c}가 어느 칸에도 없어요")
     for i, e in enumerate(ai["e"]):
-        tag = f"관계 {i + 1} ({e.get('a')}→{e.get('b')})"
+        tag = f"{name} 관계 {i + 1} ({e.get('a')}→{e.get('b')})"
         if e.get("a") not in co or e.get("b") not in co or e.get("a") == e.get("b"):
             err("data/aimap.json", f"{tag}: 양쪽 회사가 지도에 있어야 해요")
         if e.get("k") not in ("공급", "클라우드", "건설", "전력", "투자", "협력"):
@@ -416,6 +410,31 @@ def check_aimap(d):
         s2 = e.get("src") or []
         if len(s2) != 2 or not str(s2[1]).startswith("https://"):
             err("data/aimap.json", f"{tag}: 출처 링크는 https 로 시작해야 해요")
+
+
+def check_aimap(d):
+    """A 화면(산업 지도, data/aimap.json): 층 이름, 근거 꼬리표, 출처 링크, 확인일 모양을 본다.
+    AI 는 맨 위 projects·layers 와 ai, 다른 산업(예: semi)은 그 키 안에 rows·co·e·layers·projects."""
+    if not d:
+        err("data/aimap.json", "비어 있어요")
+        return
+    keys = [x[0] for x in d.get("layers", [])]
+    if len(keys) != 8 or len(set(keys)) != 8:
+        err("data/aimap.json", "층(layers)은 서로 다른 8개여야 해요")
+    _aimap_projects("AI", d.get("projects", []), keys)
+    _aimap_map("AI", d.get("ai") or {})
+    for k, n, _d, st in d.get("industries", []):
+        if k == "ai":
+            continue
+        if st == "open" and not d.get(k):
+            err("data/aimap.json", f"{n}: 열림인데 지도 데이터가 없어요")
+        D = d.get(k)
+        if D:
+            lk = [x[0] for x in D.get("layers", [])]
+            if len(lk) != len(set(lk)) or not lk:
+                err("data/aimap.json", f"{n}: 층(layers) 이름이 비었거나 겹쳐요")
+            _aimap_projects(n, D.get("projects", []), lk)
+            _aimap_map(n, D)
 
 
 def main():

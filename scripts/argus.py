@@ -67,7 +67,7 @@ if now.weekday() < 5:
     # A 화면(산업 지도, 사람이 넣는 자료): 관계 확인일이 45일 넘으면 다시 확인할 때예요 (2026-11-19 대표 승인)
     try:
         _m = json.loads((ROOT / "data/aimap.json").read_text(encoding="utf-8"))
-        _old = [e for e in (_m.get("ai") or {}).get("e", []) if (dt.date.today() - dt.date.fromisoformat(e.get("chk", "2000-01-01"))).days > 45]
+        _old = [e for _k in ("ai", "semi") for e in (_m.get(_k) or {}).get("e", []) if (dt.date.today() - dt.date.fromisoformat(e.get("chk", "2000-01-01"))).days > 45]
         if _old:
             alerts.append(("stale:aimap", False, f"A 지도 관계 {len(_old)}개 확인이 오래됐어요", "확인일이 45일을 넘었어요 · Wren이 바뀐 소식을 찾고 Vernon이 근거를 다시 확인해 주세요"))
     except (OSError, ValueError):
