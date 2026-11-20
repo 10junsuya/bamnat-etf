@@ -878,8 +878,8 @@
   [
    "space",
    "우주항공",
-   "발사체·위성·우주 데이터",
-   "soon"
+   "땅에서 달까지, 높이별로 보는 우주 회사",
+   "open"
   ],
   [
    "robot",
@@ -3212,5 +3212,709 @@
    }
   ],
   "intro": "칩 하나가 나오려면 설계, 만들기, 패키징, 장비, 소재가 모두 필요해요."
+ },
+ "space": {
+  "fmt": "orbit",
+  "intro": "우주 산업은 땅에서 위성을 만들고, 로켓으로 올리고, 궤도에서 통신·관측을 해요. 위로 갈수록 지구에서 멀어져요.",
+  "rows": [
+   {
+    "k": "moon",
+    "n": "달·심우주",
+    "alt": "약 38만 km",
+    "d": "달에 착륙선을 보내 화물·장비를 내려요",
+    "g": [
+     {
+      "g": "달 착륙선",
+      "co": [
+       "인튜이티브 머신스",
+       "파이어플라이"
+      ]
+     }
+    ],
+    "up": null,
+    "down": null
+   },
+   {
+    "k": "geo",
+    "n": "정지궤도",
+    "alt": "약 3만 6천 km",
+    "d": "하늘 한 자리에 떠서 방송·통신을 해요",
+    "g": [
+     {
+      "g": "방송·통신 위성",
+      "co": [
+       "비아샛",
+       "에코스타",
+       "텔레샛"
+      ]
+     }
+    ],
+    "up": null,
+    "down": null
+   },
+   {
+    "k": "leo",
+    "n": "저궤도",
+    "alt": "2,000 km 아래",
+    "d": "위성 여러 대가 빠르게 돌며 통신·관측을 해요",
+    "g": [
+     {
+      "g": "휴대폰 직접 통신",
+      "co": [
+       "AST스페이스모바일",
+       "글로벌스타",
+       "이리듐",
+       "아마존 레오"
+      ]
+     },
+     {
+      "g": "지구 관측",
+      "co": [
+       "플래닛 랩스",
+       "블랙스카이",
+       "새틀로직",
+       "스파이어"
+      ]
+     },
+     {
+      "g": "우주정거장",
+      "co": [
+       "보이저"
+      ]
+     }
+    ],
+    "up": null,
+    "down": null
+   },
+   {
+    "k": "launch",
+    "n": "발사",
+    "alt": "땅 → 우주",
+    "d": "로켓으로 위성과 착륙선을 올려요",
+    "g": [
+     {
+      "g": "로켓",
+      "co": [
+       "스페이스X",
+       "로켓랩"
+      ]
+     },
+     {
+      "g": "한국 발사체",
+      "co": [
+       "한화에어로스페이스",
+       "이노스페이스"
+      ]
+     }
+    ],
+    "up": null,
+    "down": null
+   },
+   {
+    "k": "ground",
+    "n": "땅",
+    "alt": "지구",
+    "d": "위성과 부품을 만들어요",
+    "g": [
+     {
+      "g": "위성 제작",
+      "co": [
+       "MDA 스페이스",
+       "요크 스페이스",
+       "레드와이어"
+      ]
+     },
+     {
+      "g": "대형 방산·우주",
+      "co": [
+       "록히드마틴",
+       "노스롭그루먼"
+      ]
+     }
+    ],
+    "up": null,
+    "down": null
+   }
+  ],
+  "co": {
+   "인튜이티브 머신스": {
+    "s": "LUNR",
+    "t": "달 착륙선(노바-C)·달 통신",
+    "tk": [
+     "LUNR"
+    ]
+   },
+   "파이어플라이": {
+    "s": "FLY",
+    "t": "달 착륙선(블루고스트)·소형 로켓",
+    "tk": [
+     "FLY"
+    ]
+   },
+   "비아샛": {
+    "s": "VSAT",
+    "t": "정지궤도 통신 위성·기내 인터넷",
+    "tk": [
+     "VSAT"
+    ]
+   },
+   "에코스타": {
+    "s": "ECHO",
+    "t": "위성 방송·통신 (휴즈)",
+    "tk": [
+     "ECHO"
+    ]
+   },
+   "텔레샛": {
+    "s": "TSAT",
+    "t": "캐나다 위성 통신 · 저궤도 라이트스피드 준비",
+    "tk": [
+     "TSAT"
+    ]
+   },
+   "AST스페이스모바일": {
+    "s": "ASTS",
+    "t": "일반 휴대폰과 바로 통하는 위성(블루버드)",
+    "tk": [
+     "ASTS"
+    ]
+   },
+   "글로벌스타": {
+    "s": "GSAT",
+    "t": "저궤도 위성 전화·아이폰 긴급 문자",
+    "tk": [
+     "GSAT"
+    ]
+   },
+   "이리듐": {
+    "s": "IRDM",
+    "t": "저궤도 위성 전화·데이터",
+    "tk": [
+     "IRDM"
+    ]
+   },
+   "아마존 레오": {
+    "s": "LEO",
+    "t": "아마존 저궤도 위성 인터넷 (옛 카이퍼)",
+    "tk": [
+     "AMZN"
+    ]
+   },
+   "플래닛 랩스": {
+    "s": "PL",
+    "t": "지구 관측 위성으로 매일 지구를 찍어요",
+    "tk": [
+     "PL"
+    ]
+   },
+   "블랙스카이": {
+    "s": "BKSY",
+    "t": "고해상도 관측 위성·영상 분석",
+    "tk": [
+     "BKSY"
+    ]
+   },
+   "새틀로직": {
+    "s": "SATL",
+    "t": "지구 관측 소형 위성",
+    "tk": [
+     "SATL"
+    ]
+   },
+   "스파이어": {
+    "s": "SPIR",
+    "t": "위성 데이터(날씨·선박·항공)",
+    "tk": [
+     "SPIR"
+    ]
+   },
+   "보이저": {
+    "s": "VOYG",
+    "t": "상업 우주정거장(스타랩)·우주 임무 관리",
+    "tk": [
+     "VOYG"
+    ]
+   },
+   "스페이스X": {
+    "s": "SPCX",
+    "t": "재사용 로켓 발사 · 스타링크 위성 인터넷",
+    "tk": [
+     "SPCX"
+    ]
+   },
+   "로켓랩": {
+    "s": "RKLB",
+    "t": "소형 로켓(일렉트론)·위성 제작",
+    "tk": [
+     "RKLB"
+    ]
+   },
+   "한화에어로스페이스": {
+    "s": "HAS",
+    "t": "누리호 제작 총괄·발사 운용",
+    "tk": [
+     "012450"
+    ],
+    "kr": true
+   },
+   "이노스페이스": {
+    "s": "INNO",
+    "t": "한국 민간 소형 발사체(한빛-나노)",
+    "kr": true
+   },
+   "MDA 스페이스": {
+    "s": "MDA",
+    "t": "캐나다 위성 제작·우주 로봇팔",
+    "tk": [
+     "MDA"
+    ]
+   },
+   "요크 스페이스": {
+    "s": "YSS",
+    "t": "군·정부용 위성 제작",
+    "tk": [
+     "YSS"
+    ]
+   },
+   "레드와이어": {
+    "s": "RDW",
+    "t": "우주 부품(태양전지판 등)·우주 제조",
+    "tk": [
+     "RDW"
+    ]
+   },
+   "록히드마틴": {
+    "s": "LMT",
+    "t": "방산·군 위성·우주선",
+    "tk": [
+     "LMT"
+    ]
+   },
+   "노스롭그루먼": {
+    "s": "NOC",
+    "t": "방산·군 위성·로켓 부품",
+    "tk": [
+     "NOC"
+    ]
+   }
+  },
+  "e": [
+   {
+    "a": "스페이스X",
+    "b": "AST스페이스모바일",
+    "k": "공급",
+    "t": "블루버드 위성 발사 (2026.6·8, 팰컨9)",
+    "ev": "보도",
+    "d": "2026.8",
+    "src": [
+     "GCN · 블루버드 발사",
+     "https://gcn.com/ast-spacemobile-puts-bluebird-satellites-orbit/20493/"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "스페이스X",
+    "b": "파이어플라이",
+    "k": "공급",
+    "t": "블루고스트 1호 달 착륙선 발사",
+    "ev": "보도",
+    "d": "2025.1",
+    "src": [
+     "Planetary Society · CLPS",
+     "https://www.planetary.org/space-missions/clps"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "에코스타",
+    "b": "스페이스X",
+    "k": "공급",
+    "t": "위성용 주파수 면허 매각 {170억 달러}(현금+주식)",
+    "ev": "회사 발표",
+    "d": "2025.9",
+    "src": [
+     "PBS(AP) · 주파수 매각",
+     "https://www.pbs.org/newshour/nation/spacex-pays-17-billion-to-acquire-spectrum-licenses-from-echostar"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "MDA 스페이스",
+    "b": "글로벌스타",
+    "k": "공급",
+    "t": "차세대 저궤도 위성 50기+ 제작 {11억 캐나다달러}",
+    "ev": "회사 발표",
+    "d": "2025.2",
+    "src": [
+     "MDA 보도자료",
+     "https://mda.space/article/mda-space-signs-1.1b-contract-with-globalstar-to-build-next-generation-leo-constellation"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "MDA 스페이스",
+    "b": "텔레샛",
+    "k": "공급",
+    "t": "라이트스피드 저궤도 위성 약 200기 제작",
+    "ev": "보도",
+    "d": "2023.8",
+    "src": [
+     "Payload · MDA 계약",
+     "https://payloadspace.com/mda-space-wins-mega-contract-to-build-globalstars-network/"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "아마존 레오",
+    "b": "글로벌스타",
+    "k": "투자",
+    "t": "인수 합의 (주당 90달러, 약 {116억 달러}) · 마무리 전",
+    "ev": "회사 발표",
+    "d": "2026.4",
+    "src": [
+     "아마존 발표 (Barchart)",
+     "https://www.barchart.com/story/news/1293978/amazon-to-acquire-globalstar-and-expand-amazon-leo-satellite-network"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "로켓랩",
+    "b": "이리듐",
+    "k": "투자",
+    "t": "인수 합의 {80억 달러}, 2027년 중 마무리 예정",
+    "ev": "회사 발표",
+    "d": "2026.6",
+    "src": [
+     "Space.com · 이리듐 인수",
+     "https://www.space.com/space-exploration/launches-spacecraft/the-start-of-a-new-era-rocket-lab-buying-satellite-communications-company-iridium-for-usd8-billion"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "로켓랩",
+    "b": "블랙스카이",
+    "k": "공급",
+    "t": "Gen-3 관측 위성 발사 (일렉트론)",
+    "ev": "보도",
+    "d": "2025.2",
+    "src": [
+     "Spaceflight Now · BlackSky Gen-3",
+     "https://spaceflightnow.com/2025/02/18/rocket-lab-to-launch-blacksky-gen-3-satellite-on-60th-electron-flight/"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "MDA 스페이스",
+    "b": "보이저",
+    "k": "협력",
+    "t": "스타랩 우주정거장 합작 참여",
+    "ev": "회사 발표",
+    "d": "2026.2",
+    "src": [
+     "Starlab 보도자료",
+     "https://s206.q4cdn.com/740209347/files/doc_news/Starlab-Completes-NASA-Commercial-Critical-Design-Review-2026.pdf"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   },
+   {
+    "a": "노스롭그루먼",
+    "b": "보이저",
+    "k": "협력",
+    "t": "스타랩 전략 파트너",
+    "ev": "회사 발표",
+    "d": "2026.2",
+    "src": [
+     "Starlab 보도자료",
+     "https://s206.q4cdn.com/740209347/files/doc_news/Starlab-Completes-NASA-Commercial-Critical-Design-Review-2026.pdf"
+    ],
+    "chk": "2026-11-20",
+    "add": "2026-11-20"
+   }
+  ],
+  "chk": "2026-11-20",
+  "base": "2026-11-20",
+  "gloss": {
+   "저궤도": "지구에서 2,000km 아래를 빠르게 도는 궤도예요. 신호가 빨라요.",
+   "정지궤도": "약 3만 6천 km 높이에서 지구와 같이 돌아 하늘 한 자리에 멈춘 것처럼 보여요.",
+   "발사체": "위성을 우주로 올리는 로켓이에요.",
+   "착륙선": "달 표면에 내려앉아 장비·화물을 내리는 우주선이에요.",
+   "직접 통신": "기지국 없이 위성이 일반 휴대폰과 바로 신호를 주고받는 방식이에요.",
+   "주파수": "전파를 쓸 수 있는 대역이에요. 나라가 면허로 나눠 줘요.",
+   "요격기": "날아오는 미사일을 맞혀 떨어뜨리는 무기예요.",
+   "군집위성": "작은 위성 여러 대를 한 팀처럼 함께 운용하는 방식이에요.",
+   "우주정거장": "사람이 머물며 실험하는 궤도 위의 시설이에요.",
+   "관측 위성": "지구 사진·데이터를 찍는 위성이에요."
+  },
+  "layers": [
+   [
+    "pol",
+    "정부",
+    "정부·기관"
+   ],
+   [
+    "money",
+    "돈",
+    "예산·계약"
+   ],
+   [
+    "launch",
+    "발사",
+    "발사"
+   ],
+   [
+    "make",
+    "제작",
+    "만들기"
+   ],
+   [
+    "op",
+    "운영",
+    "운영·임무"
+   ]
+  ],
+  "projects": [
+   {
+    "id": "artemis",
+    "r": "미국",
+    "n": "아르테미스 (NASA 유인 달 탐사)",
+    "d": "2017.12",
+    "st": "진행 · 2026.4 아르테미스 2호 유인 달 왕복 성공 · 다음은 3호",
+    "chk": "2026-11-20",
+    "L": {
+     "pol": {
+      "t": "NASA 주도 유인 달 탐사",
+      "ev": "정부 문서",
+      "co": []
+     },
+     "launch": {
+      "t": "SLS 로켓으로 2026.4.1 발사",
+      "ev": "정부 문서",
+      "co": []
+     },
+     "op": {
+      "t": "4명이 달을 돌아 9일 만에 귀환 (2026.4.10)",
+      "ev": "보도",
+      "co": []
+     }
+    },
+    "src": [
+     [
+      "NASA · 아르테미스 2호 발사",
+      "https://www.nasa.gov/news-release/liftoff-nasa-launches-astronauts-on-historic-artemis-moon-mission/"
+     ],
+     [
+      "Satellite Today · 발사",
+      "https://www.satellitetoday.com/launch/2026/04/01/nasa-launches-artemis-ii-in-further-step-toward-a-moon-return"
+     ]
+    ]
+   },
+   {
+    "id": "clps",
+    "r": "미국",
+    "n": "NASA 달 화물 배송 (CLPS)",
+    "d": "2018.11",
+    "st": "진행 · 2025.3 블루고스트 1호 착륙 성공 · IM-3 등 다음 착륙 준비 중",
+    "chk": "2026-11-20",
+    "L": {
+     "money": {
+      "t": "파이어플라이 블루고스트 추가 계약 {1.442억 달러} (2026.6)",
+      "ev": "보도",
+      "co": [
+       "파이어플라이"
+      ]
+     },
+     "launch": {
+      "t": "블루고스트 1호는 스페이스X 팰컨9로 발사",
+      "ev": "보도",
+      "co": [
+       "스페이스X",
+       "파이어플라이"
+      ]
+     },
+     "op": {
+      "t": "블루고스트 1호 완전 성공, IM-1·IM-2는 착륙 뒤 넘어짐",
+      "ev": "보도",
+      "co": [
+       "파이어플라이",
+       "인튜이티브 머신스"
+      ]
+     }
+    },
+    "src": [
+     [
+      "SpacePolicyOnline · CLPS 계약",
+      "https://spacepolicyonline.com/news/nasa-awards-more-clps-contracts-may-send-mars-rover-engineering-model-to-the-moon/"
+     ],
+     [
+      "Planetary Society · CLPS",
+      "https://www.planetary.org/space-missions/clps"
+     ]
+    ]
+   },
+   {
+    "id": "golden",
+    "r": "미국",
+    "n": "골든 돔 (미사일 방어)",
+    "d": "2025.1",
+    "st": "진행 · 우주 요격기 시제품 12개사 선정 (2026.4), 2028년 시연 목표",
+    "chk": "2026-11-20",
+    "L": {
+     "pol": {
+      "t": "미 우주군이 우주 요격기 시제품 사업 진행",
+      "ev": "정부 문서",
+      "co": []
+     },
+     "money": {
+      "t": "계약 20건, 최대 {32억 달러}",
+      "ev": "정부 문서",
+      "co": [
+       "스페이스X",
+       "록히드마틴",
+       "노스롭그루먼"
+      ]
+     }
+    },
+    "src": [
+     [
+      "DVIDS · 우주군 발표",
+      "https://www.dvidshub.net/news/printable/563528"
+     ],
+     [
+      "Air & Space Forces · 계약",
+      "https://www.airandspaceforces.com/space-force-reveals-space-based-interceptor-awards-golden-dome/"
+     ]
+    ]
+   },
+   {
+    "id": "sda",
+    "r": "미국",
+    "n": "우주개발청 군 위성망 (PWSA)",
+    "d": "2019.3",
+    "st": "진행 · 3차 추적 위성 72기 {35억 달러} 계약 (2025.12)",
+    "chk": "2026-11-20",
+    "L": {
+     "money": {
+      "t": "3차 추적 위성: 록히드 {11억}, 로켓랩 {8.05억}, 노스롭 {7.64억 달러}",
+      "ev": "정부 문서",
+      "co": [
+       "록히드마틴",
+       "로켓랩",
+       "노스롭그루먼"
+      ]
+     },
+     "make": {
+      "t": "2차 통신 위성: 요크·노스롭·록히드·로켓랩",
+      "ev": "보도",
+      "co": [
+       "요크 스페이스",
+       "노스롭그루먼",
+       "록히드마틴",
+       "로켓랩"
+      ]
+     }
+    },
+    "src": [
+     [
+      "SDA 발표",
+      "https://www.sda.mil/?p=3725"
+     ],
+     [
+      "Satellite Today · 3차",
+      "https://www.satellitetoday.com/government-military/2025/12/19/sda-awards-over-3-5-billion-for-tracking-layer-of-tranche-3"
+     ],
+     [
+      "Air & Space Forces · 계약표",
+      "https://airandspaceforces.com/?p=213195"
+     ]
+    ]
+   },
+   {
+    "id": "starlab",
+    "r": "미국",
+    "n": "상업 우주정거장 (스타랩)",
+    "d": "2021.12",
+    "st": "진행 · 2026.2 상세설계 검토 완료 · NASA 2단계 사업은 보류 중 (2026.1)",
+    "w": 1,
+    "chk": "2026-11-20",
+    "L": {
+     "money": {
+      "t": "NASA 지원 총 {2.175억 달러}",
+      "ev": "정부 문서",
+      "co": [
+       "보이저"
+      ]
+     },
+     "make": {
+      "t": "보이저 주도 합작 (에어버스·미쓰비시·MDA·팔란티어 등)",
+      "ev": "회사 발표",
+      "co": [
+       "보이저",
+       "MDA 스페이스",
+       "노스롭그루먼"
+      ]
+     }
+    },
+    "src": [
+     [
+      "NASA · 지원 조정",
+      "https://www.nasa.gov/humans-in-space/commercial-space/leo-economy/nasa-adjusts-agreements-to-benefit-commercial-station-development"
+     ],
+     [
+      "Starlab 보도자료",
+      "https://s206.q4cdn.com/740209347/files/doc_news/Starlab-Completes-NASA-Commercial-Critical-Design-Review-2026.pdf"
+     ],
+     [
+      "Journal of Space Commerce · 보류",
+      "https://www.exterrajsc.com/p/the-nasa-station-award-that-cannot"
+     ]
+    ]
+   },
+   {
+    "id": "nuri",
+    "r": "한국",
+    "n": "누리호 (한국형 발사체)",
+    "d": "2010.3",
+    "st": "진행 · 2026.10 5차 발사 성공 (성공률 80%), 한화에어로스페이스가 처음 주운영",
+    "chk": "2026-11-20",
+    "L": {
+     "pol": {
+      "t": "우주항공청·항공우주연구원 주관",
+      "ev": "보도",
+      "co": []
+     },
+     "make": {
+      "t": "한화에어로스페이스가 제작 총괄, 5차부터 발사 운용 대부분",
+      "ev": "보도",
+      "co": [
+       "한화에어로스페이스"
+      ]
+     },
+     "op": {
+      "t": "초소형 군집위성 5기 동시 투입",
+      "ev": "보도",
+      "co": []
+     }
+    },
+    "src": [
+     [
+      "연합뉴스 · 5차 발사",
+      "https://supple.kr/news/cmuxqrt5w004ay5niluqcpxsb"
+     ],
+     [
+      "MTN · 한화 주운영",
+      "https://news.mtn.co.kr/news-detail/2026100812444652520"
+     ]
+    ]
+   }
+  ]
  }
 }
