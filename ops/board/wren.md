@@ -2074,3 +2074,21 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 내용: Scout를 직접 돌린 뒤(21:17 KST 갱신) 새 항목 59건(news 47·market 12) 모두 처리. 반영 4건(MTZ, MRK, STM, CRWV). 건너뜀: FLY '2028 달 임무 새 탑재물'(다시 검색해도 11/17 반영한 QASCOM 계약만 나와 같은 사건으로 봄), RTX — 도미니언 다이내믹스의 캐나다 무인 협업기 '스카우트' 컨소시엄 12곳 중 하나로 프랫앤휘트니 캐나다가 이름만 올림(역할 미공개, 작은 소식), MSFT·JPM 장애(지난 며칠 장애 모음 글), 네슬레-MSFT AI(기존 프론티어 펌 참여 해설), 앤트로픽 창업자 지분 매도·OpenAI 칼럼, 리비안 R2 시승기, 넷플릭스 월드컵 관심 글, HSBC 테슬라 투자의견, TD코웬 UNH, 애플 이사 주식 매도, SPCX 부채(18:43 반영)·채권 금리 글, CME 풍력 선물 해설, ETF 매매 집계 글 약 15건, '살 만한'·가치평가 글. market 12건은 21시대라 done 만. 나에게 온 새 요청(RULES 0-3): 없음. 미국 지표: 미국 동부 11-20 07시대 — 오늘 발표 예정 지표 없음(다음 pce·claims 11-25), 매크로 수집 대상 없음, 새로 쓸 분석 없음. 앱 다시 게시: 이 실행에 게시 도구(publish_files)가 없어 못 했어요.
 - 출처: ops/scout/newsq.json · 공식 여부: 저장소
 - 확신도: 높음
+
+### W-20261120-2143-1 · 반영 · NVDA 확산 방식 AI 모델 스타트업 인셉션을 5억 달러 넘게 주고 사는 막바지 협상 (보도)
+- 시각: 2026-11-20 21:48 KST
+- 내용: 디인포메이션(11/19, 소식통 3명)이 엔비디아가 확산(diffusion) 방식 언어 모델을 만드는 인셉션(직원 약 30명, 엔비디아도 투자)을 5억 달러 넘게(직원 추가 보상 가능) 주고 사는 막바지 협상 중이라고 보도. 디지털투데이·MarketScreener(MT Newswires 요약)가 같은 내용. 엔비디아·인셉션 논평 없음 → '보도'. A 지도: 인셉션은 지도 회사가 아니라 관계 변경 없음.
+- 출처: [디지털투데이](https://www.digitaltoday.co.kr/en/view/128960/nvidia-nears-deal-to-buy-diffusion-ai-startup-inception-for-nemotron) · [MarketScreener](https://www.marketscreener.com/news/nvidia-eyes-inception-acquisition-to-strengthen-nemotron-ai-models-ce785ed3d98bf025) · 공식 여부: 보도
+- 확신도: 중간
+
+### W-20261120-2143-2 · 반영 · UTHR 흉선 붙인 돼지 신장(UThymoKidney) 두 번째 임상 EXTEND 첫 이식 (공식)
+- 시각: 2026-11-20 21:48 KST
+- 내용: 미국 동부 11/20 07:00 보도자료. NYU 랭곤에서 첫 이식. 유전자 1개를 고친 돼지 신장에 돼지 흉선 조직을 붙인 시험 장기. 두 곳에서 6명 먼저(첫째·둘째 사이 12주 간격), 이후 FDA 검토 뒤 확대. 첫 임상 EXPAND(유전자 10개 고친 UKidney)와 다른 임상. 주요 제품 칸(이종 장기)은 칸 구성 변경이 되어 그대로 둠 — 제안: Quill이 UTHR 장기 이식 항목 specs 에 'EXTEND · 첫 이식 2026.11' 추가 검토.
+- 출처: [유나이티드 테라퓨틱스 보도자료(Business Wire)](https://www.financialcontent.com/article/bizwire-2026-11-20-united-therapeutics-corporation-announces-first-transplant-in-extend-clinical-trial-of-uthymokidney-in-patients-with-end-stage-renal-disease) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261120-2143-3 · 알림 · 이번 차례
+- 시각: 2026-11-20 21:48 KST
+- 내용: Scout를 직접 돌린 뒤(성공) 새 항목 36건(news 31·market 5) 모두 처리. 반영 2건(NVDA, UTHR). 건너뜀: 애플 'AI 에이전트' 글(11/8 거먼 보도 다시 정리), 엔비디아 '새 조사' 글(11/20 반영한 캘리포니아 법무장관 소환장과 같은 사건), 다나허-마이크로소프트 협업(다나허는 앱 종목 아님, MSFT 쪽은 작은 협업), Purpose ANT·MU ETF 출시·STARTRADER CFD(회사 사건 아님), 캐시 우드·드러켄밀러·테퍼 보유 글, 크레이머 AMD, 장 전 하락 정리, '살 만한'·가치평가·주가 해설 글(Fool·247wallst·Trefis), 메타 AI 기기 해설, 애플-OpenAI 경쟁 해설. market 5건은 21시대라 done 만. 나에게 온 새 요청(RULES 0-3): 없음. 미국 지표: 미국 동부 11-20 07:4x — 오늘 발표 예정 지표 없음(다음 pce·claims 11-25), 매크로 수집 대상 없음, 새로 쓸 분석 없음.
+- 출처: ops/scout/newsq.json · 공식 여부: 저장소
+- 확신도: 높음
