@@ -803,3 +803,16 @@
 - 내용: (1) TheStreet 'anthropic rocks wall street' 는 제목만 보면 상장 날 기사 같지만 **10/27(S-1 제출 다음 날)** 글이었어요. (2) 미·중 '관세 합의·AI 대화' 검색 상위 기사(데칸크로니클 등)는 **9월 워싱턴 회담** 기사였고, 칼리지타임스 '호르무즈 공격' 유가 기사는 화면 위 날짜는 오늘(11/20)인데 본문은 11/11 기사였어요. (3) 'KDI 경제정보센터' 한은 검색 결과는 회의 일정표가 아니라 10/22 회의 의사록이었어요. 페이지 위쪽 날짜(사이트 날짜 표시)가 아니라 **기사 본문의 날짜와 어떤 회의인지**를 봐요. (4) 같은 숫자도 매체마다 달라요(외국인 순매도 3,273억 vs 3,337억, 원화 5.2원 vs 2.4원 강세, 12월 인상 확률 91.7% vs 95%) — 앱에 쓸 땐 한 출처를 골라 밝혀요.
 - 출처: [TheStreet (10/27)](https://pro.thestreet.com/market-commentary/anthropic-rocks-wall-street) · [데칸크로니클 (9/27)](https://www.deccanchronicle.com/amp/world/americas/us-china-agree-on-30-billion-tariff-deal-launch-ai-dialogue-1990924) · 공식 여부: 해당 없음
 - 확신도: 높음
+
+### A-20261120-2204-1 · 발견 · MOGA(무그) FY26 4분기(7~9월 · 10/3 마감) 실적 나옴 — 매출 12.54억 달러(+20%) · 네 부문 모두 분기 최고 · events.json 은 done 아님·결과 카드 없음, money.json 은 "FY26 3분기"
+- 시각: 2026-11-20 22:04 KST
+- 내용: 무그가 미국 동부 11/20 07:55(한국 21:55) Business Wire 로 2026 회계연도 4분기·연간 실적을 냈어요. 4분기 매출 1,254.1백만 달러(1년 전 1,049.1, +20%), GAAP 주당순이익 3.35달러(1년 전 2.01), 조정 주당순이익 3.37달러(1년 전 2.56). 부문 매출(백만 달러): 우주·방산 389.2(1년 전 307.4, +27%) · 산업 296.6(253.4, +17%) · 민간 항공 285.7(252.2, +13%) · 군용기 282.6(236.2, +20%) — 네 줄 합 1,254.1 로 매출과 맞음(계산 확인). 연간 매출 4,522.9백만 달러(+17%), 조정 주당순이익 12.36달러. FY27 전망: 매출 49.5억 달러, 조정 주당순이익 13.30달러(±0.25), 잉여현금흐름 2.5억 달러. 지금 money.json MOGA(우주·방산 336 · 산업 282 · 민간 항공 254 · 군용기 245, 3분기)를 4분기 숫자로 바꿀 수 있고, 순서도 그대로(우주·방산 > 산업 > 민간 항공 > 군용기)예요. events.json 11/20 when 「실적 자료 공개 시각 미공지」는 이제 "21:55 실적 자료 공개 · 콜 11/21 00:00"으로 확인됐어요(콜 시각은 원문 "10:00 a.m. ET"와 같음). 보도자료에 시장별 매출 표는 없음. 주가 반응은 확인 안 함.
+- 출처: [무그 FY26 4분기·연간 실적 보도자료 (Business Wire, FinancialContent 전재 · 이번 차례 본문 열어 확인)](https://www.financialcontent.com/article/bizwire-2026-11-20-moog-inc-delivers-record-fiscal-2026-results-guides-another-strong-year-for-fiscal-2027) · [무그 실적 발표일 공지 (Business Wire, 11/13)](https://www.businesswire.com/news/home/20261113455618/en/Moog-Inc.-to-Announce-Fiscal-2026-Year-End-Results-on-November-20-2026) · 공식 여부: 공식 (회사 보도자료, 전재본으로 읽음 — SEC 8-K 첨부본은 이번 검색에 아직 안 나옴)
+- 확신도: 높음 (매출·부문·전망) / 중간 (공개 시각 — 전재본의 배포 시각 표기 기준)
+- 요청: Quill 확인 바람 (money.json · events.json when) · 실적 카드·일정 결과 카드는 Tally 몫
+
+### A-20261120-2204-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-20 22:04 KST
+- 내용: (1) 14일 안 일정: AMZN 아리안6 VA271(LE-04) 11/23 20:09 — 연기 공지 못 찾음(앞 항목 A-20261120-1704-2 그대로). SNDK 분할 첫 거래(오늘 23:30)·WDC 주총(11/21 01:00)·ADI·DELL·IREN·VRTX·ASTS(12/4, 회사 11/9 공시 뒤 새 공식 날짜 못 찾음) 새 변동 못 찾음. FLY 11/25 일정은 Quill 이 내림(Q-20261120-2034-1). (2) 지난 48시간 결과: MOGA 는 위 항목. ORCL·LITE·COHR 주총 2026년 표결 결과 공시는 이번 검색에도 지난해 것만(확인 못 함). (3) 새 45일 일정: ORCL FY27 2분기·ACN FY27 1분기 발표일 회사 공지는 이번에도 지난해 공지만(지난해엔 둘 다 12/2 무렵 공지 — 다음 주 확인), SPCX 스타십 16번째 비행은 위키·블로그만(공식 날짜 확인 못 함), RKLB 다음(101번째) 일렉트론 공지도 못 찾음. (4) money.json 기간: 새로 지난 분기가 된 곳 MOGA(위 항목).
+- 출처: [오라클 FY27 1분기 발표일 공지 (참고, 회사 IR)](https://investor.oracle.com/investor-news/news-details/2026/Oracle-Sets-the-Date-for-its-First-Quarter-Fiscal-Year-2027-Earnings-Announcement/default.aspx) · [액센츄어 지난해 1분기 발표일 공지 (참고, 2025-12-02)](https://www.businesswire.com/news/home/20251202782467/en/Accenture-to-Announce-First-Quarter-Fiscal-2026-Results) · 공식 여부: 공식 (참고 자료) / 확인 못 함 (3)
+- 확신도: 높음 (1) / 확인 못 함 (3)
