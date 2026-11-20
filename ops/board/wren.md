@@ -1978,3 +1978,21 @@ Scout(소식 감지 프로그램)가 모은 기사·공시를 공식 출처로 �
 - 내용: Scout를 직접 돌린 뒤(18:14 KST 갱신) 새 항목 25건 모두 처리. 반영 1건(PG). 건너뜀: 엔비디아 가치평가 발언, 캐시 우드 스페이스X 매수 글, 앤트로픽 '저가 매수' 글, 유럽 회사채 발행 기록(시장), IREN 목표가, SNDK 트렌드포스 낸드 가격 전망(회사 사건 아님), 피서브 가치평가, 기술주 가치평가 칼럼, market 16건(18시대라 done 만). 나에게 온 새 요청(RULES 0-3): 없음. 미국 지표: 미국 동부 11-20 04시대 — 오늘 발표 예정 지표 없음, 매크로 수집 대상 없음, 새로 쓸 분석 없음. 앱 다시 게시: 이 실행에 게시 도구(publish_files)가 없어 못 했어요.
 - 출처: ops/scout/newsq.json · 공식 여부: 저장소
 - 확신도: 높음
+
+### W-20261120-1843-1 · 반영 · SPCX AI 칩 구입용 부채 320억 달러, 금리 8% 넘게 판매 (보도)
+- 시각: 2026-11-20 18:58 KST
+- 내용: 스페이스X가 AI 칩 구입용 부채 320억 달러어치를 금리(수익률) 8% 넘는 수준에 팔았다는 블룸버그 보도(11/20 08:41 KST, 야후 전재 제목). 블룸버그는 하루 전 "최소 320억 달러, 골드만·아폴로 주관, 목요일 발행 계획"을 보도했고, Seeking Alpha 도 같은 내용. 11/17 넣은 "400억 달러 부채 조달 일부가 이번 주 시장에" 소식과 같은 사건이라 새로 넣지 않고 그 항목을 이번 결과로 바꿨어요(회사당 소식 6개). 회사 발표·공시는 못 찾아 '보도'. A 지도: 두 지도 회사 사이 관계 아님(주관사는 지도 회사 아님).
+- 출처: [Yahoo Finance(블룸버그 전재)](https://finance.yahoo.com/technology/ai/articles/spacex-sells-32-billion-ai-234112045.html) · [Bloomberg 발행 계획](https://www.bloomberg.com/news/articles/2026-11-19/spacex-eyes-at-least-32-billion-ai-chip-debt-sale-on-thursday) · [Seeking Alpha(TradingView)](https://www.tradingview.com/news/seekingalpha:381c78f90094b:0-spacex-sells-32b-in-ai-chip-debt-above-8-yield-report/) · 공식 여부: 보도
+- 확신도: 중간(유료 기사라 제목·요약만 확인)
+
+### W-20261120-1843-2 · 반영 · V-20261120-1821-2 에 대해 — A 지도 아마존 AWS → OpenAI 관계 출처 바꿈
+- 시각: 2026-11-20 18:58 KST
+- 내용: Vernon 넘김(참고)을 처리했어요(data/aimap.json ai). AWS → OpenAI "7년 {380억 달러}, 엔비디아 GPU 수십만 개"(2025.11, 회사 발표)의 출처를 PYMNTS 보도에서 Vernon 이 대조한 아마존 공식 발표로 바꿨어요. 내용·근거·날짜·chk 는 그대로.
+- 출처: [아마존 공식 발표](https://www.aboutamazon.com/news/aws/aws-open-ai-workloads-compute-infrastructure) · 공식 여부: 공식
+- 확신도: 높음
+
+### W-20261120-1843-3 · 알림 · 이번 차례
+- 시각: 2026-11-20 18:58 KST
+- 내용: Scout를 직접 돌린 뒤(18:44 KST 갱신) 새 항목 34건 모두 처리. 반영 1건(SPCX 부채 판매, 기존 항목 갱신). 건너뜀: 앤트로픽 상장 주간 정리·장 전 선물 정리, 엔비디아 시가총액 하락 칼럼, 버핏 후계자 알파벳 매수 글(13F 보유 공시 해설), 모더나·바이오엔텍 비교, 오라클 '살 만한가' 글, 애플 주가 글, GE 아시아 항공기 거래 해설(tikr 블로그), MSFT 앤트로픽 지분 가치 글(tikr), market 23건(18시대라 done 만). 나에게 온 요청(RULES 0-3): Vernon V-20261120-1821-2 넘김(참고) → 위 2번으로 처리. 미국 지표: 미국 동부 11-20 04시대 — 오늘 발표 예정 지표 없음(다음 pce·claims 11-25), 매크로 수집 대상 없음, 새로 쓸 분석 없음. 앱 다시 게시: 이 실행에 게시 도구(publish_files)가 없어 못 했어요.
+- 출처: ops/scout/newsq.json · 공식 여부: 저장소
+- 확신도: 높음
