@@ -8966,58 +8966,59 @@
   }
  },
  "WMT": {
-  "p": "2분기 · 2026년 5~7월",
-  "tag": "+5.9%",
+  "p": "3분기 · 2026년 8~10월",
+  "tag": "+5.2%",
   "rows": [
    [
     "매출",
-    "1,879.4억 달러 (+5.9%)"
+    "1,888.4억 달러 (+5.2%)"
+   ],
+   [
+    "미국 기존 매장 매출",
+    "+2.9% (연료 제외)"
    ],
    [
     "온라인 매출",
-    "+26%"
+    "전 세계 +17% · 미국 +23%"
    ],
    [
     "조정 주당순이익",
-    "0.81달러 (예상 0.74)"
-   ],
-   [
-    "올해(회계) 전망",
-    "매출 4~5% 성장으로 올림"
+    "0.65달러 (예상 0.64)"
    ]
   ],
-  "note": "인도 플립카트 할인행사가 다음 분기로 밀려 8~10월 전망이 낮게 나왔어요. 1년 전 매출은 성장률로 거꾸로 계산했어요. 11월 19일에 다음 실적이 나와요.",
+  "note": "미국 온라인 판매와 광고(전 세계 +25%)가 매출을 이끌었고, 올해(회계) 매출 전망을 4.9~5.2% 성장으로 다시 올렸어요. 회사 보도자료 원문은 열지 못해 매체 세 곳이 같은 숫자로 정리한 값을 썼고, 다음 분기(11~1월)만의 전망 숫자는 확인하지 못해 뺐어요.",
   "src": [
    [
-    "월마트 2분기(Stocktwits)",
-    "https://stocktwits.com/news-articles/markets/equity/wmt-stock-falls-after-q3-guidance-misses-estimates-a-look-at-some-key-highlights/cZYIFVgRJmA"
+    "월마트 3분기 정리(Poland Insight)",
+    "https://polandinsight.com/walmart-q3-fy2027-revenue-ecommerce-advertising-42264/"
    ],
    [
-    "전망·예상(Benzinga)",
-    "https://kr.benzinga.com/quote/WMT/earnings-forecasts"
+    "실적 요약(TradingKey)",
+    "https://www.tradingkey.com/news/earnings/262313079-"
+   ],
+   [
+    "예상치·반응(BigGo, LSEG·S&P Capital IQ)",
+    "https://finance.biggo.com/news/462fcfe0-7cf8-4cdf-b251-332c42101b59"
    ]
   ],
   "chart": {
    "cur": "usd",
+   "now": [
+    "8~10월",
+    188840
+   ],
+   "est": 187270,
+   "next": {
+    "label": "11~1월",
+    "guide": null,
+    "cons": null,
+    "when": "2027년 2월 중순 (예상)",
+    "gtext": "올해(회계) 매출 4.9~5.2% 성장 · 조정 주당순이익 2.84~2.89달러 (석 달 전 4~5% · 2.80~2.87달러)"
+   },
    "prev": [
     "1년 전",
-    177470
-   ],
-   "now": [
-    "5~7월",
-    187940
-   ],
-   "est": 186710,
-   "next": {
-    "label": "8~10월",
-    "guide": [
-     183100,
-     184500
-    ],
-    "cons": 187040,
-    "when": "2026년 11월 19일 (미국 장 시작 전)",
-    "asof": "10/23"
-   }
+    179500
+   ]
   }
  },
  "PG": {
@@ -11448,58 +11449,58 @@
   }
  },
  "BABA": {
-  "p": "1분기 · 2026년 4~6월",
-  "tag": "+9%",
+  "p": "2분기 · 2026년 7~9월",
+  "tag": "+10%",
   "rows": [
    [
     "매출",
-    "2,689.5억 위안 (+9%)"
+    "2,715.2억 위안 (+10%)"
    ],
    [
-    "AI 클라우드",
-    "484.4억 위안 (+45%)"
+    "AI 클라우드·컴퓨팅",
+    "609.7억 위안 (+53%)"
    ],
    [
     "즉시배송(퀵커머스)",
-    "533억 위안 (+45%)"
+    "587.6억 위안 (+22%)"
    ],
    [
-    "순이익",
-    "105억 위안 (−76%)"
+    "조정 주당순이익(ADS)",
+    "8.10위안 (+86%)"
    ]
   ],
-  "note": "AI 클라우드가 빠르게 늘었지만 AI·즉시배송 투자로 이익은 크게 줄었어요. 1년 전 매출은 성장률(+9%)로 거꾸로 계산했어요. 7~9월 실적은 11월 19일(미국 장 시작 전)에 나와요.",
+  "note": "AI 클라우드가 빠르게 늘었고(외부 고객 매출 +64%), 순이익은 투자 이익 덕에 644.2억 위안(+213%)으로 크게 늘었어요. 클라우드 부문은 이번부터 반도체 설계 자회사(T-Head)와 합쳐 1년 전 숫자도 다시 계산된 값이라 지난 카드의 클라우드 숫자와 바로 비교하기 어려워요.",
   "src": [
    [
-    "알리바바 6월 분기 발표(HKEX)",
-    "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000745.pdf"
+    "알리바바 9월 분기 발표(StockTitan 전재)",
+    "https://www.stocktitan.net/news/BABA/alibaba-group-announces-september-quarter-2026-results-and-interim-ibtegtt4vxko.html"
    ],
    [
-    "예상치(iTiger)",
-    "https://www.itiger.com/news/1107911671"
+    "실적 발표 표(야후 파이낸스 전재)",
+    "https://finance.yahoo.com/markets/stocks/articles/alibaba-group-announces-september-quarter-100200549.html"
    ],
    [
-    "발표 일정 공지(알리바바 공식)",
-    "https://data.alibabagroup.com/ecms-files/1532295521/1281a908-8f69-4b67-90e2-1720d6a4e438/Alibaba%20Group%20Will%20Announce%20September%20Quarter%202026%20Results%20on%20November%2019,%202026.pdf"
+    "예상치(24/7 Wall St.)",
+    "https://247wallst.com/cards/alibaba-q2-2027-earnings-baba-01m7ttd41zxnykxtx7pq54q5q2"
    ]
   ],
   "chart": {
    "cur": "cny",
-   "prev": [
-    "1년 전",
-    246746
-   ],
    "now": [
-    "4~6월",
-    268953
+    "7~9월",
+    271519
    ],
-   "est": 268910,
+   "est": 269850,
    "next": {
-    "label": "7~9월",
+    "label": "10~12월",
     "guide": null,
     "cons": null,
-    "when": "2026년 11월 19일 (미국 장 시작 전)"
-   }
+    "when": "2027년 2월 (예상)"
+   },
+   "prev": [
+    "1년 전",
+    247795
+   ]
   }
  },
  "ASX": {

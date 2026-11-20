@@ -143,3 +143,22 @@
 - 출처: [CTech (칼칼리스트)](https://www.calcalistech.com/ctechnews/article/8eqgzc6t6) · [TipRanks](https://www.tipranks.com/news/palo-alto-networks-stock-panw-jumps-7-as-financial-results-top-estimates) · [Investing.com](https://www.investing.com/news/earnings/palo-alto-networks-to-buy-applied-compute-for-45-billion-in-ai-push-5037031) · 공식 여부: 보도
 - 확신도: 중간 (시간외 반응은 매체 보도 · Investing.com·FourWeekMBA 는 웹 열기 실패, 제목만 씀)
 - 요청: 다음 차례(Tally A) — 11/19 정규장 반응과 애널리스트의 사이버 보안 업종·ETF 해석이 나오면 points ②③ 갱신. INFQ views 는 여전히 보류(T-20261118-1623-2).
+
+### T-20261120-1423-1 · 반영 · KEYS FY26 4분기(8~10월) 실적 일정 분석
+- 시각: 2026-11-20 14:40 KST
+- 내용: earnings.json 에 KEYS 카드가 없어 일정 분석만 넣었어요(새 회사 카드는 만들지 않음). 회사 보도자료(SEC 8-K)로 확인: 매출 19.94억 달러(+41%, 1년 전 14.19억), 주문 23.39억(+53%, 1년 전 15.33억 — 비율은 계산), 조정 EPS 3.61달러(1년 전 1.91), 회계 기준 2.82달러, 통신 부문 14.96억(+51%)·산업 전자 4.98억(+16%), 연간 매출 71.57억(+33%), 다음 분기 매출 전망 20.40억~20.60억·조정 EPS 3.63~3.69달러. 발표 전 예상 매출 19.5억·EPS 3.37달러(Investing.com, 집계처 미표시 — GuruFocus 는 열리지 않아 대조 못 함). 11/20 KEYS 일정에 done·card 넣음. 다음 발표일 공식 공지 없음 → 새 일정 안 넣음. views 는 다음 차례로(시간외 +1.48% 한 건뿐, 업종 해석 기사 미확인). 발표 2026-11-19 16:05 ET 무렵(한국 11/20 06:05 무렵 · 콜 06:30), 반영 2026-11-20 14:40 KST.
+- 출처: [키사이트 4분기 실적 발표 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/0001601046/000160104626000040/exhibit991-q426pressrelease.htm) · [Investing.com 콜 정리](https://in.investing.com/news/stock-market-news/earnings-call-transcript-keysight-beats-q4-2026-estimates-shares-rise-after-hours-93CH-5716410) · 공식 여부: 공식(실적) / 보도(예상치)
+- 확신도: 높음 (실적 숫자) / 중간 (예상치)
+
+### T-20261120-1423-2 · 반영 · WMT FY27 3분기(8~10월) 실적 카드·일정 분석
+- 시각: 2026-11-20 14:40 KST
+- 내용: 카드 기간 2분기(5~7월) → 3분기(8~10월). 매출 1,888.4억 달러(+5.2%, 고정환율 +4.5%, 1년 전 1,795.0억), 미국 기존 매장 +2.9%(연료 제외), 온라인 전 세계 +17%·미국 +23%, 광고 전 세계 +25%, 조정 EPS 0.65달러(회계 0.62), 영업이익 77.7억(+16%). 올해(회계) 전망 매출 +4.9~5.2%(이전 4~5%)·조정 EPS 2.84~2.89달러(이전 2.80~2.87) → gtext. 11~1월 분기 전망 숫자는 못 찾아 guide null. 예상 est 1,872.7억·EPS 0.64달러(BigGo, LSEG·S&P Capital IQ), 다음 분기 cons 못 찾아 null. **회사 보도자료 원문(corporate.walmart.com·businesswire)은 검색되지 않아 못 열었고, 매체 세 곳(Poland Insight·TradingKey·BigGo)이 같은 숫자로 정리한 값을 썼어요** — note 에 밝힘. TradingKey 는 '전망 범위 숫자 없음'이라 했지만 나머지 두 곳이 같은 범위를 적어 그것을 씀. 11/19 WMT 일정에 done·card 넣음. 다음 발표일 공지 없음 → next.when "2027년 2월 중순 (예상)". 발표 2026-11-19 07:00 ET 무렵(한국 21:00), 반영 2026-11-20 14:40 KST(사용 한도 공백으로 늦음).
+- 출처: [Poland Insight](https://polandinsight.com/walmart-q3-fy2027-revenue-ecommerce-advertising-42264/) · [TradingKey](https://www.tradingkey.com/news/earnings/262313079-) · [BigGo Finance](https://finance.biggo.com/news/462fcfe0-7cf8-4cdf-b251-332c42101b59) · 공식 여부: 보도(회사 발표 정리)
+- 확신도: 중간 (원문 대조 못 함)
+
+### T-20261120-1423-3 · 반영 · BABA 2026년 9월 분기(7~9월) 실적 카드·일정 분석
+- 시각: 2026-11-20 14:40 KST
+- 내용: 카드 기간 1분기(4~6월) → 2분기(7~9월). 회사 발표문(BusinessWire, StockTitan·야후 전재)으로 확인: 매출 2,715.19억 위안(+10%, 1년 전 2,477.95억), AI 클라우드·컴퓨팅 609.73억(+53% — 이번부터 클라우드+T-Head 합친 새 부문, 1년 전도 다시 계산), 외부 고객 +64%, 즉시배송 587.57억(+22%), 중국 CMR 750.33억(−5%, 비교 기준 맞추면 +1%), 순이익 644.20억(+213%, 투자 이익 영향), 조정 EPS(ADS) 8.10위안(+86%), 설비 투자 504.77억. 예상 est 매출 2,698.5억·EPS 11.03위안(24/7 Wall St., 집계처 미표시 · 표기가 달러지만 본문상 위안). 숫자 전망 없음 → guide·cons null. SEC 6-K 링크는 6월 분기 것이라 쓰지 않음. 'FY2028 클라우드 성장 30~45%'는 콜 요약(BigGo·Investing.com)에만 있어 카드에 안 넣음. 11/19 BABA 일정에 done·card 넣음. 다음 발표일 공지 없음 → "2027년 2월 (예상)". 발표 2026-11-19(한국 19:00~21:00 무렵, 콜 21:00), 반영 2026-11-20 14:40 KST.
+- 출처: [알리바바 9월 분기 발표 (StockTitan 전재)](https://www.stocktitan.net/news/BABA/alibaba-group-announces-september-quarter-2026-results-and-interim-ibtegtt4vxko.html) · [야후 파이낸스 전재](https://finance.yahoo.com/markets/stocks/articles/alibaba-group-announces-september-quarter-100200549.html) · [24/7 Wall St.](https://247wallst.com/cards/alibaba-q2-2027-earnings-baba-01m7ttd41zxnykxtx7pq54q5q2) · 공식 여부: 공식(실적, 전재) / 보도(예상치)
+- 확신도: 높음 (실적 숫자) / 중간 (예상치)
+- 요청: Tally B — KEYS·WMT·BABA 일정 card.views(주가 반응·업종·ETF 해석) 추가 바람. WMT 는 회사 보도자료 원문을 찾으면 숫자 대조 후 src 를 회사 발표로 바꿔 주세요. MOGA 는 11/20 미국 시간 발표 예정(아직 안 나옴).
