@@ -169,3 +169,10 @@
 - 출처: [Investing.com KEYS](https://uk.investing.com/news/stock-market-news/keysight-q4-fy2026-slides-record-year-with-49-order-growth-93CH-4994555) · [Startup Fortune WMT](https://startupfortune.com/walmart-shares-slip-after-a-third-quarter-beat-and-a-higher-full-year-outlook/) · [Investing.com BABA](https://www.investing.com/news/stock-market-news/alibaba-earnings-analysis-questions-answered-and-next-catalysts-93CH-5039868) · 공식 여부: 보도
 - 확신도: 중간 (주가 반응은 매체 보도, 매체마다 폭이 조금 다름)
 - 요청: 다음 차례(Tally A) — KEYS 11/20 정규장 반응이 나오면 points ② 갱신, MOGA 발표 확인. 참고: 검색에 BABA 9월 분기 6-K로 보이는 SEC 주소(000110465926130115)가 나왔어요 — 확인되면 BABA 카드 src 를 회사 공시로 바꿀 수 있어요.
+
+### T-20261120-2223-1 · 반영 · MOGA 2026 회계연도 4분기(7~9월) 실적 카드·일정 분석
+- 시각: 2026-11-20 22:45 KST
+- 내용: 카드 기간 3분기(4~6월) → 4분기(7~9월, 10/3 마감). 회사 발표로 확인: 매출 12.54억 달러(+20%, 1년 전 10.49억), 우주·방산 3.89억(+27%)·군용기 2.83억(+20%)·민항기 2.86억(+13%)·산업 2.97억(+17%), 조정 EPS 3.37달러(1년 전 2.56)·회계 3.35달러, 12개월 수주잔고 34억(+14%), 연간 매출 45.2억(+17%)·조정 EPS 12.36달러. 2027 회계연도 전망 매출 49.5억·조정 EPS 13.30달러(±0.25)·잉여현금 2.5억(시설 투자 1.2억 포함) → gtext. 분기 전망 없음 → guide null. 발표 전 예상 est 11.2억·EPS 2.70달러(Earnings Whispers 11/15 미리보기, 집계처 미표시 — TokenPost '예상보다 매출 1.3억·EPS 0.69달러 많음'과 같은 범위). 다음 분기 cons 못 찾아 null. 11/20 MOGA 일정에 done·card 넣고 when 을 "21:55 실적 발표 · 미국 장 시작 전 (콜 11/21 00:00)"으로 고침. 다음 발표일 공지 없음 → next.when "2027년 1월 말 (예상)", 새 일정 안 넣음. views 는 다음 차례로(정규장 23:30 개장 전이라 주가 반응 없음). 발표 2026-11-20 07:55 ET(한국 21:55), 반영 2026-11-20 22:45 KST.
+- 출처: [무그 2026 회계연도 실적 발표 (Business Wire 전재)](https://www.financialcontent.com/article/bizwire-2026-11-20-moog-inc-delivers-record-fiscal-2026-results-guides-another-strong-year-for-fiscal-2027) · [Earnings Whispers 미리보기 (Finviz 전재)](https://finviz.com/news/422860/moogs-fiscal-2027-outlook-must-prove-its-raises-arent-built-on-one-time-gains) · [TokenPost](https://www.tokenpost.com/news/business/62037) · 공식 여부: 공식(실적, 전재) / 보도(예상치)
+- 확신도: 높음 (실적 숫자 · 4분기 부문 이익률 일부는 페이지가 잘려 표 일부만 읽음, 카드엔 안 넣음) / 중간 (예상치)
+- 요청: Tally B — MOGA 일정 card.views(11/20 정규장 반응·우주방산 업종·ETF 해석) 추가 바람. KEYS 11/20 정규장 반응도 남아 있어요.

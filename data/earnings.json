@@ -10813,59 +10813,59 @@
   }
  },
  "MOGA": {
-  "p": "3분기 · 2026년 4~6월",
-  "tag": "+15%",
+  "p": "4분기 · 2026년 7~9월",
+  "tag": "+20%",
   "rows": [
    [
     "매출",
-    "11.17억 달러 (+15%)"
+    "12.54억 달러 (+20%)"
    ],
    [
     "우주·방산",
-    "3.36억 달러 (+17%)"
+    "3.89억 달러 (+27%)"
    ],
    [
-    "산업",
-    "2.82억 달러 (+18%)"
+    "조정 주당순이익",
+    "3.37달러 (1년 전 2.56달러)"
    ],
    [
     "12개월 수주잔고",
-    "33억 달러 (+23%)"
+    "34억 달러 (+14%)"
    ]
   ],
-  "note": "네 사업이 모두 늘었고 데이터센터 냉각 펌프가 산업 쪽을 이끌었어요. 관세 환급(약 3천만 달러)이 이익을 키웠어요. 발표 전 매출 예상은 숫자를 확인하지 못해 뺐어요. 7~9월 실적은 11월 20일에 나와요.",
+  "note": "네 사업이 모두 분기 최대 매출을 냈고, 미사일 제어·우주선 부품 같은 방산 수요가 우주·방산을 이끌었어요. 발표 전 매출 예상 11.2억 달러는 Earnings Whispers 미리보기 숫자예요(집계처 미표시, TokenPost 는 '예상보다 1.3억 달러 많음'이라고 전해 비슷한 범위). 2027 회계연도 잉여현금은 시설 투자 1.2억 달러 때문에 올해보다 적은 2.5억 달러로 내다봤어요.",
   "src": [
    [
-    "무그 3분기 발표(01net)",
-    "https://www.01net.it/moog-inc-achieves-record-third-quarter-2026-results-through-operational-excellence-and-raises-full-year-guidance/"
+    "무그 2026 회계연도 실적 발표 (Business Wire 전재)",
+    "https://www.financialcontent.com/article/bizwire-2026-11-20-moog-inc-delivers-record-fiscal-2026-results-guides-another-strong-year-for-fiscal-2027"
    ],
    [
-    "무그 3분기 통화(MarketBeat)",
-    "https://www.marketbeat.com/instant-alerts/moog-q3-earnings-call-highlights-2026-07-31/"
+    "발표 전 예상 (Earnings Whispers, Finviz 전재)",
+    "https://finviz.com/news/422860/moogs-fiscal-2027-outlook-must-prove-its-raises-arent-built-on-one-time-gains"
    ],
    [
-    "발표 일정 공지(무그, Business Wire)",
-    "https://www.businesswire.com/news/home/20261113455618/en/Moog-Inc.-to-Announce-Fiscal-2026-Year-End-Results-on-November-20-2026"
+    "예상 대비 결과 (TokenPost)",
+    "https://www.tokenpost.com/news/business/62037"
    ]
   ],
   "chart": {
    "cur": "usd",
-   "prev": [
-    "1년 전",
-    970
-   ],
    "now": [
-    "4~6월",
-    1117
+    "7~9월",
+    1254
    ],
-   "est": null,
+   "est": 1120,
    "next": {
-    "label": "7~9월",
+    "label": "10~12월",
     "guide": null,
     "cons": null,
-    "when": "2026년 11월 20일 (발표 시각 미공지)",
-    "gtext": "올해(회계) 매출 약 44억 달러로 올림 · 조정 주당순이익 약 11.65달러"
-   }
+    "when": "2027년 1월 말 (예상)",
+    "gtext": "2027 회계연도 매출 49.5억 달러 · 조정 주당순이익 13.30달러(±0.25달러) 전망 (올해 45.2억 · 12.36달러)"
+   },
+   "prev": [
+    "1년 전",
+    1049
+   ]
   }
  },
  "ALNT": {
