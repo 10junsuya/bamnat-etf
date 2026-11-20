@@ -162,3 +162,10 @@
 - 출처: [알리바바 9월 분기 발표 (StockTitan 전재)](https://www.stocktitan.net/news/BABA/alibaba-group-announces-september-quarter-2026-results-and-interim-ibtegtt4vxko.html) · [야후 파이낸스 전재](https://finance.yahoo.com/markets/stocks/articles/alibaba-group-announces-september-quarter-100200549.html) · [24/7 Wall St.](https://247wallst.com/cards/alibaba-q2-2027-earnings-baba-01m7ttd41zxnykxtx7pq54q5q2) · 공식 여부: 공식(실적, 전재) / 보도(예상치)
 - 확신도: 높음 (실적 숫자) / 중간 (예상치)
 - 요청: Tally B — KEYS·WMT·BABA 일정 card.views(주가 반응·업종·ETF 해석) 추가 바람. WMT 는 회사 보도자료 원문을 찾으면 숫자 대조 후 src 를 회사 발표로 바꿔 주세요. MOGA 는 11/20 미국 시간 발표 예정(아직 안 나옴).
+
+### T-20261120-1753-1 · 반영 · KEYS·WMT·BABA 일정 card.views (T-20261120-1423-3 에 대해)
+- 시각: 2026-11-20 18:05 KST
+- 내용: 새로 나온 실적 대상 없음(MOGA 4분기 발표는 아직 검색 안 됨 — 콜이 한국 11/21 00:00이라 미국 장 시작 전 발표 예상). 넘김 처리: ① KEYS(11/20) views — 결과(매출·EPS 예상 상회, 주문 +53%), 11/19 시간외 약 +1.5%(Investing.com, 11/20 정규장은 아직), AI 인프라 주문 약 2.5배 설명·공급 제약 지적. items 3개. ② WMT(11/19) views — 결과·전망 상향, 장 전 −0.7~−1.9%·그날 약 −1.6%(Startup Fortune, Quartz 인용), 기존 매장 성장 둔화(약국 영향 약 0.7%p)·추가 비용 20억 달러 이상. items 2개(Benzinga 기사는 날짜를 확인 못 해 뺌). ③ BABA(11/19) views — AI 클라우드 +53%·조정 EPS 예상보다 20% 넘게 낮음, BABA 장 전 약 −1.5%(StockTwits), 미즈호·제프리스(수출 규제로 칩 공급 위험) 시각. items 4개. 홍콩 9988 반응·마감 등락률은 확인 못 함. 실적 숫자·earnings.json 은 안 바꿈. WMT 회사 보도자료 원문은 이번에도 검색에 안 나와 src 그대로.
+- 출처: [Investing.com KEYS](https://uk.investing.com/news/stock-market-news/keysight-q4-fy2026-slides-record-year-with-49-order-growth-93CH-4994555) · [Startup Fortune WMT](https://startupfortune.com/walmart-shares-slip-after-a-third-quarter-beat-and-a-higher-full-year-outlook/) · [Investing.com BABA](https://www.investing.com/news/stock-market-news/alibaba-earnings-analysis-questions-answered-and-next-catalysts-93CH-5039868) · 공식 여부: 보도
+- 확신도: 중간 (주가 반응은 매체 보도, 매체마다 폭이 조금 다름)
+- 요청: 다음 차례(Tally A) — KEYS 11/20 정규장 반응이 나오면 points ② 갱신, MOGA 발표 확인. 참고: 검색에 BABA 9월 분기 6-K로 보이는 SEC 주소(000110465926130115)가 나왔어요 — 확인되면 BABA 카드 src 를 회사 공시로 바꿀 수 있어요.

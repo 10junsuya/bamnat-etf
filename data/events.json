@@ -1324,7 +1324,41 @@
           "예상치·전망 비교 (BigGo)",
           "https://finance.biggo.com/news/462fcfe0-7cf8-4cdf-b251-332c42101b59"
         ]
-      ]
+      ],
+      "views": {
+        "asof": "2026-11-20",
+        "lead": "숫자는 예상을 넘고 전망도 올렸지만, 시장은 '이미 기대만큼'으로 읽어 주가는 조금 내렸어요.",
+        "points": [
+          [
+            "결과",
+            "매출 1,888억·조정 EPS 0.65달러로 예상을 조금 넘었고, 올해 이익 전망을 올렸어요"
+          ],
+          [
+            "주가 반응",
+            "장 시작 전 1~2% 내렸고(Investing.com), 그날 약 1.6% 내렸다고 Quartz를 인용한 보도가 전했어요"
+          ],
+          [
+            "업종·ETF",
+            "온라인·광고는 빠르게 컸지만 미국 기존 매장 성장 둔화(약국 영향)와 20억 달러 넘는 추가 비용을 짚는 시각이 나왔어요"
+          ]
+        ],
+        "items": [
+          {
+            "t": "예상을 넘고 연간 전망을 올렸는데도 주가가 약 1.6% 내렸다고 전하며, 미국 기존 매장 성장 둔화를 짚음",
+            "src": "Startup Fortune (Quartz 인용)",
+            "url": "https://startupfortune.com/walmart-shares-slip-after-a-third-quarter-beat-and-a-higher-full-year-outlook/",
+            "d": "2026-11-19",
+            "tag": "보도"
+          },
+          {
+            "t": "전망 상향과 함께 올해 20억 달러가 넘는 추가 비용, 설비 투자 비중 확대를 정리하며 장 전 주가 약 2% 하락을 전함",
+            "src": "Investing.com",
+            "url": "https://www.investing.com/news/company-news/walmart-q3-fy27-slides-strong-results-raised-guidance-amid-costs-93CH-5039238",
+            "d": "2026-11-19",
+            "tag": "보도"
+          }
+        ]
+      }
     }
   },
   {
@@ -1405,7 +1439,55 @@
           "예상치 (24/7 Wall St.)",
           "https://247wallst.com/cards/alibaba-q2-2027-earnings-baba-01m7ttd41zxnykxtx7pq54q5q2"
         ]
-      ]
+      ],
+      "views": {
+        "asof": "2026-11-20",
+        "lead": "AI 클라우드는 빠르게 컸지만 이익이 예상에 크게 못 미쳐, 시장은 '투자 부담'을 더 크게 봤어요.",
+        "points": [
+          [
+            "결과",
+            "AI 클라우드 매출 +53%, 전체 매출은 예상 수준이었지만 조정 EPS 8.10위안은 예상보다 20% 넘게 낮았어요"
+          ],
+          [
+            "주가 반응",
+            "미국 예탁증권(BABA)이 장 시작 전 약 1.5% 내렸고, 이미 22개월 만의 낮은 수준이었다고 전해졌어요"
+          ],
+          [
+            "업종·ETF",
+            "미즈호는 AI 클라우드를 성장 중심으로 봤고, 제프리스는 미국 수출 규제로 칩 공급이 막힐 위험을 짚었어요"
+          ]
+        ],
+        "items": [
+          {
+            "t": "AI 클라우드 53% 성장에도 조정 이익이 예상에 못 미쳐 장 전 주가가 1.5% 내렸다고 전함",
+            "src": "StockTwits (야후 파이낸스 전재)",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/baba-stock-edges-lower-premarket-122339446.html",
+            "d": "2026-11-19",
+            "tag": "보도"
+          },
+          {
+            "t": "클라우드 매출은 늘었지만 클라우드 설비 투자로 현금이 빠져나가고 이익이 예상에 못 미쳤다고 정리",
+            "src": "Investing.com",
+            "url": "https://investing.com/news/earnings/alibaba-ai-cloud-revenue-jumps-53-but-earnings-fall-short-of-estimates-5038288",
+            "d": "2026-11-19",
+            "tag": "보도"
+          },
+          {
+            "t": "미즈호·제프리스·타이거증권의 엇갈린 해석과 즉시배송 손실 축소 목표 등 다음 볼 점을 정리",
+            "src": "Investing.com",
+            "url": "https://www.investing.com/news/stock-market-news/alibaba-earnings-analysis-questions-answered-and-next-catalysts-93CH-5039868",
+            "d": "2026-11-19",
+            "tag": "보도"
+          },
+          {
+            "t": "클라우드는 강했지만 AI 앱 손실이 커지고 현금 소모가 늘어 주가가 1~2% 내렸다고 해석",
+            "src": "The Arabian Post",
+            "url": "https://thearabianpost.com/alibaba-shares-slip-despite-53-cloud-revenue-growth/",
+            "d": "2026-11-19",
+            "tag": "보도"
+          }
+        ]
+      }
     }
   },
   {
@@ -1641,7 +1723,48 @@
           "실적 발표 콜·예상치 (Investing.com)",
           "https://in.investing.com/news/stock-market-news/earnings-call-transcript-keysight-beats-q4-2026-estimates-shares-rise-after-hours-93CH-5716410"
         ]
-      ]
+      ],
+      "views": {
+        "asof": "2026-11-20",
+        "lead": "AI 네트워크 시험 장비 주문이 크게 늘어, 시장은 '수요는 강하다'는 쪽으로 읽었어요.",
+        "points": [
+          [
+            "결과",
+            "매출 19.9억·조정 EPS 3.61달러로 예상(19.5억·3.37달러)을 넘었고 주문은 53% 늘었어요"
+          ],
+          [
+            "주가 반응",
+            "11/19 정규장에서 내렸다가 시간외에 약 1.5% 올랐다고 Investing.com이 전했어요 (11/20 정규장은 아직)"
+          ],
+          [
+            "업종·ETF",
+            "AI 인프라 주문이 1년 전의 약 2.5배라는 회사 설명과 함께, 부품 공급 부족이 걸림돌이란 지적도 나왔어요"
+          ]
+        ],
+        "items": [
+          {
+            "t": "4분기 매출·이익이 예상을 넘고 한 해 주문이 49% 늘었으며, 2027 회계연도 기본 매출 성장 20%를 제시했다고 정리",
+            "src": "Investing.com",
+            "url": "https://uk.investing.com/news/stock-market-news/keysight-q4-fy2026-slides-record-year-with-49-order-growth-93CH-4994555",
+            "d": "2026-11-19",
+            "tag": "보도"
+          },
+          {
+            "t": "실적 발표 콜에서 예상 상회와 시간외 주가 상승, AI 관련 제품의 공급 제약 설명을 정리",
+            "src": "Investing.com",
+            "url": "https://in.investing.com/news/stock-market-news/earnings-call-transcript-keysight-beats-q4-2026-estimates-shares-rise-after-hours-93CH-5716410",
+            "d": "2026-11-19",
+            "tag": "보도"
+          },
+          {
+            "t": "사상 최대 주문·매출을 콜의 핵심으로 짚은 정리 기사 (제목)",
+            "src": "GuruFocus (Investing.com 전재)",
+            "url": "https://ca.investing.com/news/company-news/keysight-technologies-inc-keys-q4-2026-earnings-call-highlights-record-orders-and-revenue--4971345",
+            "d": "2026-11-19",
+            "tag": "보도"
+          }
+        ]
+      }
     }
   },
   {
