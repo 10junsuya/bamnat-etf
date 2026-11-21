@@ -1,5 +1,5 @@
 {
-"updated_kst": "2026-11-21 22:14",
+"updated_kst": "2026-11-21 22:15",
 "rot": 43,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
@@ -7,7 +7,7 @@
 "CNBC": "63건",
 "Bloomberg": "36건",
 "WSJ": "61건",
-"Reuters": "42건",
+"Reuters": "100건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -21,17 +21,17 @@
 "pub": "2026-11-21T13:04:18+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "60d6bf4f88b1",
-"t": "KO",
+"t": "PG",
 "title": "5 Dividend Kings to Buy for Lifelong Income Before the End of November",
 "url": "https://247wallst.com/investing/2026/11/21/5-dividend-kings-to-buy-for-lifelong-income-before-the-end-of-november/?.tsrc=rss",
 "pub": "2026-11-21T13:03:16+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "bd6c9f3d9552",
@@ -41,7 +41,7 @@
 "pub": "2026-11-21T13:00:02+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "5cb69f372668",
@@ -51,7 +51,7 @@
 "pub": "2026-11-21T13:00:02+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "91564fa04383",
@@ -61,7 +61,7 @@
 "pub": "2026-11-21T13:00:00+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "80b13aced2ec",
@@ -71,7 +71,7 @@
 "pub": "2026-11-21T12:50:02+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "c3e710782b18",
@@ -81,7 +81,7 @@
 "pub": "2026-11-21T12:49:57+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "41f735457c5f",
@@ -91,7 +91,7 @@
 "pub": "2026-11-21T12:38:07+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "a54b314b3781",
@@ -101,7 +101,7 @@
 "pub": "2026-11-21T12:35:02+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "83de7ca944c6",
@@ -181,7 +181,7 @@
 "pub": "2026-11-21T12:12:00+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "824ab1d36de4",
@@ -8021,7 +8021,7 @@
 "pub": "2026-11-21T13:05:31+00:00",
 "src": "FinancialJuice",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "264c46d2afa0",
@@ -8031,7 +8031,7 @@
 "pub": "2026-11-21T13:05:13+00:00",
 "src": "Bloomberg",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "3712c4e6d9dd",
@@ -8041,7 +8041,7 @@
 "pub": "2026-11-21T13:04:30+00:00",
 "src": "Bloomberg",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "bbdb4d72c1b5",
@@ -8051,7 +8051,7 @@
 "pub": "2026-11-21T13:02:10+00:00",
 "src": "Reuters",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "2ca0a4842535",
@@ -8061,7 +8061,7 @@
 "pub": "2026-11-21T13:00:01+00:00",
 "src": "CNBC",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "cc825ef57461",
@@ -8071,7 +8071,7 @@
 "pub": "2026-11-21T13:00:00+00:00",
 "src": "Bloomberg",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "9f99a708df07",
@@ -8081,7 +8081,7 @@
 "pub": "2026-11-21T12:59:50+00:00",
 "src": "FinancialJuice",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "5c94b4840466",
@@ -8091,7 +8091,7 @@
 "pub": "2026-11-21T12:59:40+00:00",
 "src": "Bloomberg",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "7fd7be14e1b2",
@@ -8144,6 +8144,16 @@
 "seen": "2026-11-21T12:10:49+00:00"
 },
 {
+"id": "0e53ea4a3150",
+"t": "",
+"title": "BNP Paribas SA (BNPP.PA) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE05Rk9DM2FKTURON3JhZm9UbDE2ekJ6UkFOUUw1alFpbUNmVTBkdVhEcUFZblF3VEU1dnpfVGpGNkNEMmhrWE1WdTdRTTY0WDFpcnhSZG9ZWG05YnRWSi1Z?oc=5",
+"pub": "2026-11-21T11:42:12+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
+},
+{
 "id": "9c07db9dbe98",
 "t": "",
 "title": "Finland border guard: damaged ship has drifted from international waters into Finnish territory",
@@ -8162,6 +8172,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-21T11:22:55+00:00"
+},
+{
+"id": "1dcf02d68957",
+"t": "",
+"title": "WisdomTree Europe SmallCap Dividend Fund (DFE.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE13SWNQaHhORThSbWcxRzY3Z09FbFB4dXdDaFlTTnl3cnlSaHFwbFZuRGpLbFViR2lpOFVwbDhhTDNQOXh4UUE3b0tfSkZaZ3BUckNWOS1oNA?oc=5",
+"pub": "2026-11-21T11:09:24+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "6aeaff318c1f",
@@ -8202,6 +8222,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-21T11:22:55+00:00"
+},
+{
+"id": "aa39903fbeb7",
+"t": "",
+"title": "iShares iBonds Dec 2030 Term Muni Bond ETF (IBMS.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9oSWhUT2J5TGlhTHlMUFlCajhkbDNBRHBBQWM4MGF3cnZHbVhHcGo5M1VqeG5HaGdwTkpLMHRiamVDZ2xNNEhreGZZbTF3TWhET0JQQVd3bEw?oc=5",
+"pub": "2026-11-21T10:44:43+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "13ed864b5de5",
@@ -8564,6 +8594,16 @@
 "seen": "2026-11-21T02:43:50+00:00"
 },
 {
+"id": "ba1a2caaa4a2",
+"t": "",
+"title": "CVS Health Corporation (CVS) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMi7gJBVV95cUxPVERraEd5ZmtOMWlaeVpaTGJ6RW53b0ZzVmt5d0R6Ti00UDhYVmhXcjRnUl9wRFczb0RpT3hKUkY3bktfNjN6SUtMbVZzMmxPY1paS1M5bmdLTVlpSVViOVRoaUlnZW1qQjJ0Z21JdXpILUVmNU5lRUJrbEVUaXhhN2lMb1BpbmpaMER5ZnhncFNZV3d1UWQya0ZnejhPdTV0ZUNaSU5kZEhDTmdpSmNUQ21HOUNia21FOWRrMmJJZmlHRXBtQ01BdXdiUWxacVBzeENxWmNWdjE5dVNiQ3laSlpEcnk4NnJFRmliWWtRUkhQNEFEUzBKV20xUnh0a3VVMFdkSWo1czhSeXN0c29zeGkyd3JnQXlKT0c5R0IzcS1VU1FPMjdiRDlkdGpZdDhLamxxTEZrQ0VJcXlmVmZYZ2lUUXdtSzR1ZV9Ua3g4TnhRX3lDc1RiUnlqOFZibHk5ZkJ3SkZOOWo3Sy1Gc0E?oc=5",
+"pub": "2026-11-21T02:35:47+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
+},
+{
 "id": "42250af85f4c",
 "t": "",
 "title": "Trump signs executive order on safeguarding executive privileges, boosting efficiency in federal contracting - White House",
@@ -8572,6 +8612,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-21T02:43:50+00:00"
+},
+{
+"id": "4ad7d020e07b",
+"t": "",
+"title": "5232.F - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUi1lY1hpQ3l5TUJnLVZNMHBnb1BjSzFsRTVGN2tlQnp2UlJkZXdLZHpIVTVLWGtTSXE1VkNCNHVKVjMxZWJhbjloazZCOU9OWlRobUNkRlAyMVVQNjh0QjM0aTh6alhLU3FUaEl1TVdpbGFlNXo1Wmo4bjRXY3FZNWpKVFl6aDQ?oc=5",
+"pub": "2026-11-21T02:32:18+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "2034b5231d25",
@@ -8634,6 +8684,16 @@
 "seen": "2026-11-21T05:38:43+00:00"
 },
 {
+"id": "45c9a265307d",
+"t": "",
+"title": "FWAC.OQ - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5NRmVuN2NkdWlpT1lpRVI2dmdhWm1fVUwzQzEtLVRoRnFobHg4TXNJRHd5RlNITF9ZR1QwQUxrSnJWcUZTSkFNTUNFa0RVT0JfN1pPZzVzM2l2OTE5RG52dEx2X0xMeDZUYm9WMTdaWQ?oc=5",
+"pub": "2026-11-21T01:07:30+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
+},
+{
 "id": "5d0e7653a88a",
 "t": "",
 "title": "STMicroelectronics N.V. (STMN34.SA) | Stock Price & Latest News - Reuters",
@@ -8642,6 +8702,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-21T07:56:17+00:00"
+},
+{
+"id": "87ea384775db",
+"t": "",
+"title": "1717.HZ - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1xX2p6UlZNTWwxSWVQZXEwUDVWeTQ1b3kzZ2ZtWVl3T2lLQkpFLVk0QXc5b2MtUlVtbk5xMGJnRUhyNloyS2tqSEVHNFhDVkVPOGRVQVBGZHJRVTBuUDVaUC1TTnlvNjNKWmdYRnZpZlZYbFVObzFaVVZDZUo?oc=5",
+"pub": "2026-11-21T01:04:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "869b18de5708",
@@ -8931,7 +9001,7 @@
 "pub": "2026-11-20T22:49:38+00:00",
 "src": "Reuters",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "671671fe7d05",
@@ -9401,7 +9471,7 @@
 "pub": "2026-11-20T21:21:39+00:00",
 "src": "Reuters",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "ec013068d8cf",
@@ -10034,6 +10104,16 @@
 "seen": "2026-11-20T22:14:08+00:00"
 },
 {
+"id": "33397811b3cf",
+"t": "",
+"title": "Gujarat Industries Power Company Ltd (GJIP.NS) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1lZlQyQXFwOXJsWWg0NDJvZjM5T0FJSDAyejdwN05KNW53RXhyc3BRNWMxV1BDaUVkcl9fTExDYjNVMFBjWWpWbF9lc00yLWUtelRCVzhYMVNob1FLNU5KQW5hZmpVRjhDMUo5cWZlUQ?oc=5",
+"pub": "2026-11-20T20:29:58+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
+},
+{
 "id": "d1dd0f782cde",
 "t": "",
 "title": "Southern Magnesium and Chemicals Ltd (SUTH.BO) | Stock Price & Latest News - Reuters",
@@ -10584,6 +10664,16 @@
 "seen": "2026-11-20T22:24:18+00:00"
 },
 {
+"id": "b06ba5c67fcd",
+"t": "",
+"title": "Mak A.D. (0IP8.L) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1jX2E5MEhKLVU1dndMeXpxdjdCMTJFZlNzV2doTVJoVDIzdHF5cXR6RWZiaFFmOG5qVVJGUWJleDB0QU5fZ2ZmQnRyU1ZJdHQ1T1Q4bHE2X3VpWjdDZUlRbjJoT2VSYjQ?oc=5",
+"pub": "2026-11-20T18:49:11+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T13:15:23+00:00"
+},
+{
 "id": "9255220bfdff",
 "t": "",
 "title": "Trump: Russia and China are no longer involved with Venezuela",
@@ -10771,7 +10861,7 @@
 "pub": "2026-11-20T18:26:44+00:00",
 "src": "Reuters",
 "kind": "market",
-"seen": "2026-11-21T13:14:27+00:00"
+"seen": "2026-11-21T13:15:23+00:00"
 },
 {
 "id": "971534a7ce4a",
@@ -10922,96 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-21T05:13:49+00:00"
-},
-{
-"id": "37bc235eeceb",
-"t": "",
-"title": "Jindal Photo Ltd (JINP.NS) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1DeG95OG5pNlVMWGxNYmZnLUtFa1U2dkRpVnU2OC1MMm0xeFRiLTZ3S1hsQjFvcDg5ejVCUGpFYkVQM2VySXpteWpxWWhEakgzUDFBRHJOVV9tZXlkS1Z2M0ZWV1lkaTJZeFhyMXhhcw?oc=5",
-"pub": "2026-11-20T18:21:07+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T20:36:06+00:00"
-},
-{
-"id": "c1526e14b9fb",
-"t": "",
-"title": "Trump: Nvidia is a very important company to the US $NVDA",
-"url": "https://www.financialjuice.com/News/9862258/Trump-Nvidia-is-a-very-important-company-to-the-US-NVDA.aspx?xy=rss",
-"pub": "2026-11-20T18:20:35+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:39:45+00:00"
-},
-{
-"id": "a68d9a9b781c",
-"t": "",
-"title": "Trump: Nvidia is a very important company to the US $NVDA",
-"url": "https://www.financialjuice.com/News/9862258/Trump-Nvidia-is-a-very-important-company-to-the-US-NVDA.aspx",
-"pub": "2026-11-20T18:20:35+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "0a8ae2521962",
-"t": "",
-"title": "ECB's Moulin: inflation in France is too high, driven by energy",
-"url": "https://www.financialjuice.com/News/9862257/ECBs-Moulin-inflation-in-France-is-too-high-driven-by-energy.aspx?xy=rss",
-"pub": "2026-11-20T18:20:08+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:39:45+00:00"
-},
-{
-"id": "89bb131d3fd7",
-"t": "",
-"title": "ECB's Moulin: inflation in France is too high, driven by energy",
-"url": "https://www.financialjuice.com/News/9862257/ECBs-Moulin-inflation-in-France-is-too-high-driven-by-energy.aspx",
-"pub": "2026-11-20T18:20:08+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "3fa0669b7a72",
-"t": "",
-"title": "Zoar Limited (ZOAR.A) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4yWV9YaS1mX05vRjZYQ2dQTE11OWU5djM2UUoya3ZEUTkzZDBQeGN4QklaN01oamNuTFA4Y1E5Umk5TlpmbkhtWkplVmVEZEU5MjJ0dDJiMWtTMWFiSmc?oc=5",
-"pub": "2026-11-20T18:20:05+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-21T05:44:47+00:00"
-},
-{
-"id": "69e75757ecce",
-"t": "",
-"title": "Enagas SA (ENAG.SG) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBscklkOFVBUllzeG5RUjhvX3NhWmo1TWpLenRYdUs2QjQtSG81b1FXV1k1TzdLLUtiY0hTQmZuTXdzazBhaVNfMXRjLUszdFhHTHFOc2UwSFYyb3dJVEI5Q3pvZTFZWFpyVVRVMw?oc=5",
-"pub": "2026-11-20T18:19:19+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-21T00:12:19+00:00"
-},
-{
-"id": "802ff4a7c845",
-"t": "",
-"title": "ECB's Moulin: Inflation is currently clearly too high",
-"url": "https://www.financialjuice.com/News/9862256/ECBs-Moulin-Inflation-is-currently-clearly-too-high.aspx?xy=rss",
-"pub": "2026-11-20T18:19:15+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:39:45+00:00"
-},
-{
-"id": "b17245026140",
-"t": "",
-"title": "ECB's Moulin: Inflation is currently clearly too high",
-"url": "https://www.financialjuice.com/News/9862256/ECBs-Moulin-Inflation-is-currently-clearly-too-high.aspx",
-"pub": "2026-11-20T18:19:15+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
 }
 ]
 }
