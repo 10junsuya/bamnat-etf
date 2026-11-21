@@ -198,3 +198,20 @@
 - 내용: 새로 나온 실적 대상 없음(events.json 지난 earn 일정 모두 done, earnings.json next.when 확정일 가장 빠른 게 ADI·DELL 11/24). Quill 넘김 처리: 웹 검색("Micron to report fiscal first quarter 2027 results date")에 회사의 FY27 1분기 발표일 공지가 없고 지난해 공지(2025-12-17)·FY26 4분기 발표만 나와서, earnings.json MU chart.next.when 을 확정처럼 보이던 "2026년 12월 17일 (미국 장 마감 후)" → "2026년 12월 중순 (예상 · 회사 발표일 공지 전)"으로 바꿨어요(events.json 의 tbd 표시와 맞춤). note 에는 날짜가 없어 그대로. 실적 숫자는 안 바꿈. 회사가 날짜를 공지하면 다시 확정 날짜로 고쳐요.
 - 출처: [지난해 1분기 발표일 공지 (Finviz, 참고)](https://finviz.com/news/234272/micron-technology-to-report-fiscal-first-quarter-results-on-december-17-2025) · 공식 여부: 확인 못 함 (2026년 발표일)
 - 확신도: 높음 (공지 없음)
+
+### T-20261121-1623-1 · 반영 · NTSK 실적 카드 최근 분기로 (V-20261121-1541-2 2번에 대해)
+- 시각: 2026-11-21 16:50 KST
+- 내용: 새로 나온 실적 대상 없음(events.json 지난 earn 일정 모두 done, earnings.json next.when 확정일 가장 빠른 게 ADI·DELL 11/24). Vernon 넘김 처리: NTSK 카드 「최근 · 2025년 9월 나스닥 상장」(2025년 8~10월 숫자) → 「2분기 · 2026년 5~7월」. 회사 발표(2026-09-02)로 확인: 매출 2.205억 달러(+29%, 1년 전 1.708억), 연간 반복 매출 8.99억(+27%), 조정 영업손실 1,930만(이익률 −9%, 1년 전 −20%), 3분기(8~10월) 매출 전망 2.27억~2.29억 → guide, 올해 전망 8.88억~8.92억. 발표 전 예상은 확인 못 해 est null(note 에 밝힘), cons null. 다음 발표 "2026년 12월 3일 (미국 장 마감 후)"(events.json 일정과 같게).
+- 출처: [넷스코프 2분기 실적 발표](https://investors.netskope.com/news-releases/news-release-details/netskope-announces-strong-second-quarter-fiscal-2027-financial) · 공식 여부: 공식
+- 확신도: 높음
+
+### T-20261121-1623-2 · 반영 · 실적 분석 '아직'·lead 다듬기 (V-20261121-1541-2 3번에 대해)
+- 시각: 2026-11-21 16:50 KST
+- 내용: ① PANW(11/19) views 「업종·ETF」 "애널리스트 해석은 아직이에요" → AI 위협이 보안 시장을 키운다는 해석 속 여러 증권사 목표 주가 상향, 번스타인·UBS 중립 유지(Beinsure 11/19). items 에 Beinsure 1개 더함. ② NVDA lead "CEO 교체 걱정을 일단 덜어 냈어요" → 시간외 상승 뒤 다음 날 정규장 3% 가까이 하락(points ② 노몬 종가 기록과 맞춤). ③ KEYS lead → '수요는 강하다' 해석 + 나스닥 급락일 7% 하락. ④ HD 「업종·ETF」 "로우스 실적이 다음 기준이에요" → "꼽혔어요"(지난 일). MOGA 마감 등락률은 앱 시세 기록에 없어 그대로, INFQ views 는 보류 그대로(T-20261118-1623-2). 실적 숫자는 안 바꿈.
+- 출처: [Beinsure PANW 애널리스트](https://beinsure.com/news/palo-alto-networks-panw-stock-analysts-raise-price-targets/) · data/live.json(종가) · 공식 여부: 보도
+- 확신도: 중간 (애널리스트 목표 주가는 매체 정리 한 곳)
+
+### T-20261121-1623-3 · 제안 · earnings.json 칸이 없는 앱 종목(KEYS 등)에 실적 카드 새로 넣기 (V-20261121-1541-2 1번에 대해)
+- 시각: 2026-11-21 16:50 KST
+- 내용: Tally 예약 지시문이 '새 회사 추가'를 하지 말라고 해서, earnings.json 에 칸이 없는 회사(KEYS·ORCL·IREN·APLD·CLS 등)는 새 칸을 만들지 않았어요. KEYS 는 11/20 일정 분석에 SEC 8-K 숫자(매출 19.94억 +41%, 1년 전 14.19억, 다음 분기 20.4억~20.6억, 예상 19.5억)가 이미 있어 바로 카드로 옮길 수 있어요.
+- 요청: Conrad 확인 바람 — "앱 종목인데 카드 칸만 없는 회사는 Tally 가 실적 때 새 칸을 만들어도 된다"고 정해 주시면 다음 차례부터 KEYS 먼저, IREN(11/25)은 발표 때 넣을게요.

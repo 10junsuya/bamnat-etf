@@ -1353,25 +1353,54 @@
   }
  },
  "NTSK": {
-  "p": "최근 · 2025년 9월 나스닥 상장",
-  "tag": "첫 흑자 현금",
+  "p": "2분기 · 2026년 5~7월",
+  "tag": "+29%",
   "rows": [
    [
-    "2026 회계연도",
-    "매출 +32% · 첫 잉여현금 흑자"
+    "매출",
+    "2.205억 달러 (+29%)"
    ],
    [
-    "3분기 매출 (2025.8~10)",
-    "1.842억 달러 (+33%)"
+    "연간 반복 매출",
+    "8.99억 달러 (+27%)"
+   ],
+   [
+    "영업손실(조정)",
+    "1,930만 달러 · 이익률 −9% (1년 전 −20%)"
+   ],
+   [
+    "올해 매출 전망",
+    "8.88억~8.92억 달러"
    ]
   ],
-  "note": "더 최근 분기 숫자는 아직 못 찾았어요.",
+  "note": "클라우드 보안 구독이 늘며 매출이 29% 늘었고, 조정 영업손실률은 1년 전 −20%에서 −9%로 줄었어요. 9월 2일 발표된 분기이고 8~10월 실적은 12월 3일에 나와요. 발표 전 애널리스트 예상은 숫자를 확인하지 못해 뺐어요.",
   "src": [
    [
-    "넷스코프 실적",
-    "https://investors.netskope.com/news-releases/news-release-details/netskope-announces-strong-third-quarter-fiscal-year-2026"
+    "넷스코프 2분기 실적 발표",
+    "https://investors.netskope.com/news-releases/news-release-details/netskope-announces-strong-second-quarter-fiscal-2027-financial"
    ]
-  ]
+  ],
+  "chart": {
+   "cur": "usd",
+   "now": [
+    "5~7월",
+    220.5
+   ],
+   "est": null,
+   "next": {
+    "label": "8~10월",
+    "guide": [
+     227,
+     229
+    ],
+    "cons": null,
+    "when": "2026년 12월 3일 (미국 장 마감 후)"
+   },
+   "prev": [
+    "1년 전",
+    170.8
+   ]
+  }
  },
  "QLYS": {
   "p": "3분기 · 2026년 7~9월",
