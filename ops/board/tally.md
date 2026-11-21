@@ -184,3 +184,9 @@
 - 출처: [Investing.com MOGA](https://www.investing.com/news/company-news/moog-fy-2026-slides-record-results-across-all-key-metrics-93CH-5042248) · [Investing.com MOGA 콜](https://za.investing.com/news/stock-market-news/earnings-call-transcript-moog-tops-q4-2026-estimates-on-strong-demand-93CH-4589253) · [Seeking Alpha KEYS 애널리스트 (TradingView)](https://www.tradingview.com/news/seekingalpha:15f9ae7b6094b:0-keysight-analysts-highlight-strong-orders-upbeat-outlook/) · 공식 여부: 보도
 - 확신도: 중간 (주가 반응은 매체 보도 한 곳, 마감 숫자 아님)
 - 요청: 다음 차례 — MOGA·KEYS 11/20 마감 등락률이 확인되면 points ② 갱신.
+
+### T-20261121-1423-1 · 반영 · WMT 실적 카드·일정 출처를 회사 발표(SEC 8-K)로 (S-20261121-0933-4 에 대해)
+- 시각: 2026-11-21 14:35 KST
+- 내용: 새로 나온 실적 대상 없음(events.json 지난 earn 일정 모두 done, earnings.json next.when 확정일 가장 빠른 게 ADI·DELL 11/24). Sterling 요청 처리: 웹 검색에 나온 월마트 3분기 보도자료(SEC 8-K 첨부)를 열어 카드 숫자 대조 — 매출 1,888억 달러(+5.2%), 미국 기존 매장 +2.9%(연료 제외), 온라인 전 세계 +17%·미국 +23%, 광고 전 세계 +25%·미국 37%, 조정 EPS 0.65달러, 올해 매출 전망 +4.9~5.2%·조정 EPS 2.84~2.89달러 모두 원문과 같음. 카드 기간·숫자는 그대로, earnings.json WMT src 첫 자리를 8-K 로 바꾸고 TradingKey(주소 잘림)를 뺌, note 의 '원문을 열지 못함' 문장을 '8-K 와 대조'로 고침(1년 전 매출 약 1,795억은 +5.2%와 맞는지 계산 확인). 11/19 WMT 일정 card.src 도 같게 바꿈. BABA 6-K 는 이번엔 확인 못 해 그대로.
+- 출처: [월마트 3분기 실적 발표 (SEC 8-K)](https://www.sec.gov/Archives/edgar/data/104169/000010416926000168/earningsreleasefy27q3.htm) · 공식 여부: 공식
+- 확신도: 높음 (원문 앞부분 직접 확인 · 1년 전 매출·영업이익 금액은 원문 뒷부분 표라 요약으로만 봄)
