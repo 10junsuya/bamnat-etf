@@ -902,3 +902,16 @@
 - 내용: (1) 14일 안 일정: AMZN 아리안6 VA271(LE-04) 11/23 20:09 — 연기 공지 못 찾음(검색 상위는 11/23 계획 기사뿐). ADI 11/24(회사 10/22 공지 그대로) · DELL 11/25 · IREN · VRTX 11/30(FDA 결정 소식 없음) · RBRK 12/1 · 12/2~12/4 · ASTS(11/9 공시 뒤 새 공식 날짜 없음) 새 변동 못 찾음. (2) 지난 48시간 결과: LITE 주총(11/19 01:00) 2026년 표결 결과 8-K 는 이번에도 못 찾음(검색 상위는 2024·2025년 공시). (3) 새 45일 일정: 위 2건. ORCL FY27 2분기·ACN FY27 1분기·MU FY27 1분기 회사 발표일 공지는 아직 없음(검색에 지난해·지난 분기 공지만). GEV 올해 투자자 행사 공지 없음(2025-12-09 행사만). RKLB 101번째 일렉트론·스타십 다음 비행 공식 날짜 못 찾음. NVDA 는 CES 2027 공식 일정표·보도자료에 이름 없음(확인 못 함). (4) money.json 기간: 새로 지난 분기가 된 곳 없음.
 - 출처: [오라클 지난해 2분기 발표일 공지 (참고)](https://investor.oracle.com/investor-news/news-details/2025/Oracle-Sets-the-Date-for-its-Second-Quarter-Fiscal-Year-2026-Earnings-Announcement/default.aspx) · [ADI 4분기 발표일 공지 (회사, 10/22)](https://www.analog.com/en/newsroom/press-releases/2026/10-22-2026-adi-report-4q-fy2026-financial-results.html) · [로켓런치 라이브 LE-04 (참고)](https://rocketlaunch.live/launch/amazon-leo-le-04) · 공식 여부: 공식·참고 / 확인 못 함 (2·3 나머지)
 - 확신도: 높음 (1) / 확인 못 함 (2·3 나머지)
+
+### A-20261121-2304-1 · 발견 · GEV(GE 버노바) CEO 스콧 스트라직, 골드만삭스 산업·소재 콘퍼런스 대담 — 미국 동부 2026-12-03(목) 08:00 · 한국 12/3(목) 22:00 · events.json 에 없음
+- 시각: 2026-11-21 23:04 KST
+- 내용: GE 버노바가 11/17 낸 보도자료에 CEO 가 "2026년 12월 3일(목) 오전 8시(ET)" 골드만삭스 산업·소재 콘퍼런스 2026 에서 대담(파이어사이드 챗)을 한다고 적혀 있고, 생중계·다시 보기는 회사 IR 행사 페이지로 제공해요. 한국 시간 12/3 22:00 은 계산값(미국 동부 표준시 +14시간). 지난 차례들이 찾던 '올해 투자자 행사'(지난해 12/9 같은 단독 행사)는 아니고, 증권사 콘퍼런스 발표예요 — 지금 events.json 에는 증권사 콘퍼런스 일정이 하나도 없어서 넣을지는 Quill 판단이에요. GEV 는 노몬 ETF 5곳의 상위 종목(합산 비중 30번째, holdings.json 계산)이고 앱에 앞으로 일정이 없어요. 무엇을 말할지는 공식 내용 없음.
+- 출처: [GE 버노바 보도자료 — 골드만삭스 콘퍼런스 발표 (11/17)](https://www.gevernova.com/news/press-releases/ge-vernova-ceo-scott-strazik-speak-goldman-sachs-industrials-materials-conference) · 공식 여부: 공식 (회사)
+- 확신도: 높음 (날짜·시각)
+- 요청: Quill 확인 바람 (type "event" 후보 — 증권사 콘퍼런스라 넣을지 판단)
+
+### A-20261121-2304-2 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-21 23:04 KST
+- 내용: (1) 14일 안 일정: AMZN 아리안6 VA271(LE-04) — 프랑스 우주청(CNES) 행사 페이지가 "11/23(월) 쿠루 08:09~08:38"로 적어 앱(한국 20:09~20:38, 계산 일치)과 같고 연기 언급 없음(발사 준비 진행 중). AVGO 12/10 07:00 은 회사 공지(미국 12/9 수)와 같음. ADI·DELL·IREN·VRTX 11/30(FDA 결정 소식 못 찾음)·RBRK·12/2~12/4 새 변동 못 찾음. ASTS: 발사 집계 사이트(orbitalradar, 11/20 갱신)가 BlueBird 14~16 팰컨9 를 "12/31 이후(NET)"로 적었지만 회사·SpaceX 공지가 아니고 월말 자리 날짜로 보여 근거로 안 씀 — 앱 12/4 '발사 창 미정' 그대로가 맞아요. (2) 지난 48시간 결과: LITE 주총(11/19 01:00) 2026년 표결 결과 8-K 는 이번에도 못 찾음(검색 상위는 2024·2025년 공시). (3) 새 45일 일정: GEV 위 항목. ORCL FY27 2분기·ACN FY27 1분기·MU FY27 1분기 회사 발표일 공지는 아직 없음(검색에 지난해·지난 분기 공지만). NVDA CES 2027 일정 못 찾음(검색에 2026년 것만). RKLB 는 11/14 iQPS 발사 뒤 다음 일렉트론 공지 못 찾음, 스타십 다음 비행 공식 날짜 못 찾음. (4) money.json 기간: 새로 지난 분기가 된 곳 없음(HD 는 Quill 10-Q 보류 그대로).
+- 출처: [CNES VA271 행사 페이지](https://cnes.fr/en/node/2970) · [브로드컴 4분기 발표일 공지 (회사)](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announce-fourth-quarter-and-fiscal-year-2026) · [orbitalradar BlueBird 14~16 (집계 사이트, 참고)](https://orbitalradar.com/launch/falcon-9-bluebird-14-16-block-2-9-11) · [로켓런치 라이브 iQPS 11번째 (참고)](https://www.rocketlaunch.live/launch/iqps-launch-11) · 공식 여부: 공식 (CNES·브로드컴) / 참고 (집계 사이트) / 확인 못 함 (2·3 나머지)
+- 확신도: 높음 (1) / 확인 못 함 (2·3 나머지)
