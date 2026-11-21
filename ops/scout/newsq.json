@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-21 13:34",
-"rot": 94,
+"updated_kst": "2026-11-21 13:44",
+"rot": 154,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "100건",
+"Reuters": "48건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "da282978a656",
+"t": "TSM",
+"title": "Taiwan Semiconductor Manufacturing (NYSE:TSM) Pauses Advanced Chip Shipments To China",
+"url": "https://finance.yahoo.com/technology/articles/taiwan-semiconductor-manufacturing-nyse-tsm-042528694.html?.tsrc=rss",
+"pub": "2026-11-21T04:25:28+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T04:44:15+00:00"
+},
+{
+"id": "9f0876b93d48",
+"t": "MSFT",
+"title": "Is Danaher (DHR) Undervalued After Its Microsoft AI Lab Partnership?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/danaher-dhr-undervalued-microsoft-ai-042011998.html?.tsrc=rss",
+"pub": "2026-11-21T04:20:11+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T04:44:15+00:00"
+},
 {
 "id": "39a78e3d2ec6",
 "t": "NVDA",
@@ -22,6 +42,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T04:34:44+00:00"
+},
+{
+"id": "df62a1587cfb",
+"t": "INCY",
+"title": "Incyte Bets on Drug Pipeline and Deals for Growth After Jakafi Exclusivity Ends",
+"url": "https://www.marketbeat.com/instant-alerts/event-incyte-bets-on-drug-pipeline-and-deals-for-growth-after-jakafi-exclusivity-ends-2026-11-20/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-21T04:12:05+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T04:44:15+00:00"
 },
 {
 "id": "3217d8a8efb3",
@@ -42,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T04:34:44+00:00"
+},
+{
+"id": "3bb7001a0da0",
+"t": "NVDA",
+"title": "Dan Ives Says Anthropic IPO Sees 'Very Strong Appetite,' Calls It A 'Big Win' for Tech Sector After 'White-Knuckle' Nvidia Period",
+"url": "https://finance.yahoo.com/technology/ai/articles/dan-ives-says-anthropic-ipo-033013948.html?.tsrc=rss",
+"pub": "2026-11-21T03:30:13+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T04:44:15+00:00"
 },
 {
 "id": "d7d454ea97c5",
@@ -7969,46 +8009,6 @@
 "title": "The Zacks Analyst Blog Highlights Nebius, CoreWeave, Microsoft and Amazon",
 "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-nebius-134500953.html?.tsrc=rss",
 "pub": "2026-11-20T13:45:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T15:16:02+00:00"
-},
-{
-"id": "d40a987e0789",
-"t": "AVGO",
-"title": "Should You Sell Nvidia Stock For A Tax Loss?",
-"url": "https://www.trefis.com/stock/nvda/articles/627207/should-you-sell-nvidia-stock-for-a-tax-loss/2026-11-20?.tsrc=rss",
-"pub": "2026-11-20T13:43:50+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
-},
-{
-"id": "33831e112ef6",
-"t": "SPCX",
-"title": "ANT Stock Down 20% From Listing Day High: Cathie Wood Says Confidence In Anthropic ‘Has Not Been Shaken At All’",
-"url": "https://stocktwits.com/news-articles/markets/equity/ant-stock-down-20-from-listing-day-high-cathie-wood-says-confidence-in-anthropic-has-not-been-shaken-at-all/cNbSKOqR9KD?.tsrc=rss",
-"pub": "2026-11-20T13:43:23+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
-},
-{
-"id": "77fbb8034457",
-"t": "GOOGL",
-"title": "Spirit of St. Louis AI Innovation Center Launches First Competition to Address Humanitarian Challenges Using AI for Good",
-"url": "https://finance.yahoo.com/technology/ai/articles/spirit-st-louis-ai-innovation-134300226.html?.tsrc=rss",
-"pub": "2026-11-20T13:43:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
-},
-{
-"id": "d8e70bfd9bf5",
-"t": "UNH",
-"title": "The Zacks Analyst Blog Highlights Cisco, UnitedHealth and Salesforce",
-"url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-cisco-134200852.html?.tsrc=rss",
-"pub": "2026-11-20T13:42:00+00:00",
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T15:16:02+00:00"
