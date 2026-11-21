@@ -1,6 +1,6 @@
 {
-"updated_kst": "2026-11-21 10:14",
-"rot": 31,
+"updated_kst": "2026-11-21 10:33",
+"rot": 91,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
@@ -14,6 +14,66 @@
 },
 "items": [
 {
+"id": "c4c8f1a70783",
+"t": "RKLB",
+"title": "What Does Rocket Lab (RKLB) Achieving A Mars Burn Milestone Mean Now?",
+"url": "https://finance.yahoo.com/technology/articles/does-rocket-lab-rklb-achieving-011345764.html?.tsrc=rss",
+"pub": "2026-11-21T01:13:45+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:33:21+00:00"
+},
+{
+"id": "b189ff2c3591",
+"t": "AAPL",
+"title": "Apple (AAPL) Grows at 12% and Trades at 37 Times Earnings. Is It Worth It?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/apple-aapl-grows-12-trades-011327437.html?.tsrc=rss",
+"pub": "2026-11-21T01:13:27+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:33:21+00:00"
+},
+{
+"id": "5f8e5c6fcc0b",
+"t": "CVX",
+"title": "What Does Chevron (CVX) Greece Offshore Exploration Mean For Investors?",
+"url": "https://finance.yahoo.com/energy/articles/does-chevron-cvx-greece-offshore-011200339.html?.tsrc=rss",
+"pub": "2026-11-21T01:12:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:33:21+00:00"
+},
+{
+"id": "9a6f8d97307b",
+"t": "META",
+"title": "George Soros Raised His Meta (META) Stake by 596%. Then the Stock Fell",
+"url": "https://finance.yahoo.com/markets/stocks/articles/george-soros-raised-meta-meta-011000430.html?.tsrc=rss",
+"pub": "2026-11-21T01:10:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:33:21+00:00"
+},
+{
+"id": "9a33561b8793",
+"t": "DELL",
+"title": "Dell Technologies (DELL) Stock Gets Fair Value Trim As Analysts Weigh AI Demand",
+"url": "https://finance.yahoo.com/markets/stocks/articles/dell-technologies-dell-stock-gets-010926718.html?.tsrc=rss",
+"pub": "2026-11-21T01:09:26+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:33:21+00:00"
+},
+{
+"id": "7d0050bede74",
+"t": "GOOGL",
+"title": "Top 5 Stocks to Buy According to Billionaire George Soros",
+"url": "https://finance.yahoo.com/markets/stocks/articles/top-5-stocks-buy-according-010421254.html?.tsrc=rss",
+"pub": "2026-11-21T01:04:21+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:33:21+00:00"
+},
+{
 "id": "e2dd947e8bd7",
 "t": "GOOGL",
 "title": "Morgan Stanley sends a strong signal to Google stock investors",
@@ -22,6 +82,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T01:14:39+00:00"
+},
+{
+"id": "f8941ec97ec1",
+"t": "GOOGL",
+"title": "Review & Preview: Hype Halted",
+"url": "https://finance.yahoo.com/m/7f9bf2d2-c34f-310e-9971-12201d455bb0/review-%26-preview%3A-hype-halted.html?.tsrc=rss",
+"pub": "2026-11-21T00:55:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:33:21+00:00"
 },
 {
 "id": "5a945416ebc9",
@@ -7944,76 +8014,6 @@
 "seen": "2026-11-20T15:37:53+00:00"
 },
 {
-"id": "7101dd46ace4",
-"t": "TSLA",
-"title": "Can Tesla Revive China Sales While Ramping Up Shanghai Output?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/tesla-revive-china-sales-while-131500253.html?.tsrc=rss",
-"pub": "2026-11-20T13:15:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
-"id": "fc3ee49cf98d",
-"t": "NVDA",
-"title": "Why Did Nvidia Stock Fall 39%?",
-"url": "https://www.trefis.com/stock/nvda/articles/626526/why-did-nvidia-stock-fall-39/2026-11-20?.tsrc=rss",
-"pub": "2026-11-20T13:14:42+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:33:25+00:00"
-},
-{
-"id": "fc1d7925d132",
-"t": "TSM",
-"title": "TSMC Is Halting Some China Chip Orders as a New U.S. Rule Kicks In",
-"url": "https://247wallst.com/investing/2026/11/20/tsmc-is-halting-some-china-chip-orders-as-a-new-u-s-rule-kicks-in/?.tsrc=rss",
-"pub": "2026-11-20T13:13:32+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:18:39+00:00"
-},
-{
-"id": "e095de23e91e",
-"t": "AEM",
-"title": "Agnico Eagle Mines (AEM) Slides With Gold Sell Off As Undervalued Narrative Gets A Test",
-"url": "https://finance.yahoo.com/markets/stocks/articles/agnico-eagle-mines-aem-slides-131257781.html?.tsrc=rss",
-"pub": "2026-11-20T13:12:57+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
-},
-{
-"id": "de19fd96000e",
-"t": "INTC",
-"title": "Snowflake Stock And Two AI Software Names Investors Are Watching Now",
-"url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-stock-two-ai-software-131247745.html?.tsrc=rss",
-"pub": "2026-11-20T13:12:47+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
-},
-{
-"id": "6dc3fb87ff59",
-"t": "SPCX",
-"title": "Zacks Investment Ideas feature highlights:  Anthropic, SpaceX, Amazon, Vertiv and Bloom Energy",
-"url": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-131200144.html?.tsrc=rss",
-"pub": "2026-11-20T13:12:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
-"id": "8616095cbb32",
-"t": "KEYS",
-"title": "Earnings Beat Could Be A Big Moment For Keysight Stock (KEYS)",
-"url": "https://finance.yahoo.com/markets/stocks/articles/earnings-beat-could-big-moment-131154863.html?.tsrc=rss",
-"pub": "2026-11-20T13:11:54+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
 "id": "63abc50b341b",
 "t": "",
 "title": "Saudi-led coalition: intercepts and destroys three ballistic missiles launched by Yemen's Houthis toward Riyadh",
@@ -8282,6 +8282,16 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-20T22:24:18+00:00"
+},
+{
+"id": "fd4a3f8ce8f5",
+"t": "",
+"title": "Health Care Roundup: Market Talk",
+"url": "https://www.wsj.com/business/health-care-roundup-market-talk-37edbe6f?mod=rss_markets_main",
+"pub": "2026-11-20T22:01:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-21T01:33:21+00:00"
 },
 {
 "id": "1777f4641473",
@@ -11000,16 +11010,6 @@
 "url": "https://www.financialjuice.com/News/9862146/Trump-Gas-prices-depend-on-how-we-settle-with-Iran.aspx?xy=rss",
 "pub": "2026-11-20T17:30:25+00:00",
 "src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "78ef073d44ff",
-"t": "",
-"title": "What’s in the UK-EU Deal To Deepen Ties",
-"url": "https://www.bloomberg.com/news/videos/2026-11-20/what-s-in-the-uk-eu-deal-to-deepen-ties-video",
-"pub": "2026-11-20T17:28:46+00:00",
-"src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T17:40:09+00:00"
 }
