@@ -882,3 +882,23 @@
 - 같은 차례 나머지 점검(아리안6 LE-04 11/23 20:09 — Advanced Television 11/19 기사도 11:09 UTC 로 앱과 같음 · LITE 주총 2026년 8-K 못 찾음 · ORCL·ACN·FDX·MU 회사 발표일 공지 없음 · money.json 새로 지난 분기 없음)은 09:04 알림(A-20261121-0904-3)과 같아 따로 적지 않아요.
 - 출처: [SBS Biz 금통위 일정 (10/29)](https://biz.sbs.co.kr/amp/article/20000343023) · [한국은행 통화정책방향 결정회의 (표 확인 못 함)](https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755) · [제20차 금통위 의사록 (KDI 게재)](https://eiec.kdi.re.kr/policy/materialView.do?num=289322) · [Advanced Television 아리안6 (11/19)](https://www.advanced-television.com/?p=296169) · 공식 여부: 보도 (11/26) / 공식 확인 못 함
 - 확신도: 중간 (보도 1곳, 앱 날짜와 같음)
+
+### A-20261121-2104-1 · 발견 · A-20261121-0404-1 · Q-20261121-0434-1 에 대해 — AMD CES 2027 발표 행사가 CES 주최 측(CTA) 공식 일정에 올라옴: 현지 2027-01-05(화) 10:00~10:45 · 한국 2027-01-06(수) 03:00~03:45
+- 시각: 2026-11-21 21:04 KST
+- 내용: CES 주최 측(미국 소비자기술협회, CTA)이 11/17 낸 'CES 2027 공식 미디어 데이 일정' 보도자료에 AMD 가 만달레이 베이 발표 회사 명단(ADT·AMD·보쉬·체임벌린·기아·LG전자·지멘스·폭스바겐)에 들어 있고, CES 누리집 미디어 데이 일정표에는 1/5(화) "10:00 - 10:45AM" 줄에 AMD 가 있어요(체임벌린과 같은 줄). 일정표엔 시간대 표기가 없지만 같은 보도자료가 1/4 행사를 "PT(태평양 시간)"로 적어 태평양 시간으로 봤어요(한국 시간은 +17시간 계산값). 지난 차례(04:04)의 날짜·시각(임원 X 게시물 보도)과 같아요. Quill 보류 조건("CES 공식 일정에 나오면 넣어요")에 맞는 공식 근거예요. 무엇을 발표할지는 여전히 공식 내용 없음.
+- 출처: [CTA 보도자료 — CES 2027 미디어 데이 일정 (11/17)](https://www.ces.tech/press-releases/cta-announces-expanded-official-ces-2027-media-days-schedule) · [CES 미디어 데이 일정표](https://www.ces.tech/media-guides/media-days) · 공식 여부: 공식 (행사 주최 측) — AMD 자체 보도자료는 아직 확인 못 함
+- 확신도: 높음 (날짜·시각) / 중간 (시간대 — 일정표엔 표기 없음, 보도자료 기준 PT 로 봄)
+- 요청: Quill 확인 바람 (events.json 에 type "event" 로 — Q-20261121-0434-1 에 적은 title·when 그대로 쓸 수 있어요)
+
+### A-20261121-2104-2 · 발견 · GOOGL(알파벳) 자회사 웨이모 공동 CEO 테케드라 마와카나, CES 2027 기조연설 — 현지 2027-01-05(화) 18:30 PST · 한국 2027-01-06(수) 11:30 · events.json 에 없음
+- 시각: 2026-11-21 21:04 KST
+- 내용: CTA 보도자료(9/21)에 "1/5(화) 오후 6시 30분(PST), 베네치안 호텔 팔라초 볼룸"에서 웨이모 공동 CEO 가 기조연설을 한다고 적혀 있고, 11/17 미디어 데이 보도자료도 1/5 미디어 데이 마지막 순서로 같은 기조연설을 적었어요. 한국 시간 1/6(수) 11:30 은 계산값(+17시간). 웨이모 전시관은 1/6~9 LVCC 웨스트홀. 알파벳(GOOGL)은 노몬 ETF 상위 종목 합산 비중 4번째예요(holdings.json 계산). 미국 날짜 1/5 라 45일 경계(1/5)에 걸려요. 웨이모는 11/17 캘리포니아 차량국 고속도로 운행 금지 명령 뒤라(Wren W-20261119-0013-1) 관심이 클 수 있지만, 연설 내용은 공식 발표가 없어 넣지 않아요. 알파벳 본사 행사가 아니라 자회사 행사라 일정에 넣을지는 Quill 판단이에요.
+- 출처: [CTA 보도자료 — 웨이모 CES 2027 기조연설 (9/21)](https://www.ces.tech/press-releases/waymo-co-ceo-tekedra-mawakana-to-keynote-at-ces-2027) · [CTA 보도자료 — 미디어 데이 일정 (11/17)](https://www.ces.tech/press-releases/cta-announces-expanded-official-ces-2027-media-days-schedule) · 공식 여부: 공식 (행사 주최 측)
+- 확신도: 높음
+- 요청: Quill 확인 바람 (GOOGL type "event" 후보 — 자회사 행사라 넣을지 판단)
+
+### A-20261121-2104-3 · 알림 · 이번 차례 확인한 것 · 확인 못 한 것
+- 시각: 2026-11-21 21:04 KST
+- 내용: (1) 14일 안 일정: AMZN 아리안6 VA271(LE-04) 11/23 20:09 — 연기 공지 못 찾음(검색 상위는 11/23 계획 기사뿐). ADI 11/24(회사 10/22 공지 그대로) · DELL 11/25 · IREN · VRTX 11/30(FDA 결정 소식 없음) · RBRK 12/1 · 12/2~12/4 · ASTS(11/9 공시 뒤 새 공식 날짜 없음) 새 변동 못 찾음. (2) 지난 48시간 결과: LITE 주총(11/19 01:00) 2026년 표결 결과 8-K 는 이번에도 못 찾음(검색 상위는 2024·2025년 공시). (3) 새 45일 일정: 위 2건. ORCL FY27 2분기·ACN FY27 1분기·MU FY27 1분기 회사 발표일 공지는 아직 없음(검색에 지난해·지난 분기 공지만). GEV 올해 투자자 행사 공지 없음(2025-12-09 행사만). RKLB 101번째 일렉트론·스타십 다음 비행 공식 날짜 못 찾음. NVDA 는 CES 2027 공식 일정표·보도자료에 이름 없음(확인 못 함). (4) money.json 기간: 새로 지난 분기가 된 곳 없음.
+- 출처: [오라클 지난해 2분기 발표일 공지 (참고)](https://investor.oracle.com/investor-news/news-details/2025/Oracle-Sets-the-Date-for-its-Second-Quarter-Fiscal-Year-2026-Earnings-Announcement/default.aspx) · [ADI 4분기 발표일 공지 (회사, 10/22)](https://www.analog.com/en/newsroom/press-releases/2026/10-22-2026-adi-report-4q-fy2026-financial-results.html) · [로켓런치 라이브 LE-04 (참고)](https://rocketlaunch.live/launch/amazon-leo-le-04) · 공식 여부: 공식·참고 / 확인 못 함 (2·3 나머지)
+- 확신도: 높음 (1) / 확인 못 함 (2·3 나머지)
