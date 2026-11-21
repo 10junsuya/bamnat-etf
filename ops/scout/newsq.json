@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-21 11:14",
-"rot": 32,
+"updated_kst": "2026-11-21 11:33",
+"rot": 92,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "52건",
+"Reuters": "49건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "2ca5738a4851",
+"t": "NVDA",
+"title": "Amazon's re:Invent Conference Starts Nov. 30. Here's What the Stock Did in the Month After the Last 10.",
+"url": "https://www.fool.com/investing/2026/11/20/amazon-s-re-invent-conference-starts-nov-30-here-s-what-the-stock-did-in-the-month-after-the-last-10/?.tsrc=rss",
+"pub": "2026-11-21T02:12:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T02:33:27+00:00"
+},
 {
 "id": "76ec01fb8cb8",
 "t": "SPCX",
@@ -8004,14 +8014,24 @@
 "seen": "2026-11-20T13:44:54+00:00"
 },
 {
-"id": "2ccb922a50dd",
-"t": "PANW",
-"title": "Palo Alto Networks to Present at Upcoming Investor Event",
-"url": "https://finance.yahoo.com/technology/articles/palo-alto-networks-present-upcoming-133000365.html?.tsrc=rss",
-"pub": "2026-11-20T13:30:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
+"id": "c8ef92b068ba",
+"t": "",
+"title": "FBI national crime information center hacked: CNN",
+"url": "https://www.financialjuice.com/News/9862756/FBI-national-crime-information-center-hacked-CNN.aspx?xy=rss",
+"pub": "2026-11-21T02:16:47+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-21T02:33:27+00:00"
+},
+{
+"id": "f334935a6553",
+"t": "",
+"title": "The Blame Game Has Begun Over Anthropic’s Turbulent Trading Debut",
+"url": "https://www.wsj.com/finance/stocks/the-blame-game-has-begun-over-anthropics-turbulent-trading-debut-280a34b1?mod=rss_markets_main",
+"pub": "2026-11-21T02:16:00+00:00",
+"src": "WSJ",
+"kind": "market",
+"seen": "2026-11-21T02:33:27+00:00"
 },
 {
 "id": "a1a960daf8cb",
@@ -8022,6 +8042,16 @@
 "src": "Fox Business",
 "kind": "market",
 "seen": "2026-11-21T01:44:21+00:00"
+},
+{
+"id": "ac309c36fd4a",
+"t": "",
+"title": "CastleArk Large Growth ETF (CARK.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5lMk5OMng1TGE2ZzNGM280OUJGU0hySlZqdkNScmhTSWxSYk9vRUlKYzh4WmNmbWtnbldPaVItQzloT2Ixa3pMX1ItWjlCZHp6RjRCV0F5Y2Y?oc=5",
+"pub": "2026-11-21T00:08:11+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T02:33:27+00:00"
 },
 {
 "id": "c95117218004",
@@ -10982,36 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T17:45:12+00:00"
-},
-{
-"id": "beac11ccd03b",
-"t": "",
-"title": "Microsoft: Potential issue affects new outlook client. $MSFT",
-"url": "https://www.financialjuice.com/News/9862160/Microsoft-Potential-issue-affects-new-outlook-client-MSFT.aspx?xy=rss",
-"pub": "2026-11-20T17:32:50+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "0f3e01b71db2",
-"t": "",
-"title": "Trump: Interest rates are too high because we have a political Fed. I'm not blaming the Fed chairmen, but the Fed is political.",
-"url": "https://www.financialjuice.com/News/9862149/Trump-Interest-rates-are-too-high-because-we-have-a-political-Fed-Im-not-blaming-the-Fed-chairmen-but-the-Fed-is-political.aspx?xy=rss",
-"pub": "2026-11-20T17:32:03+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "09219122a85a",
-"t": "",
-"title": "Trump: I want to make a real deal with Iran.",
-"url": "https://www.financialjuice.com/News/9862148/Trump-I-want-to-make-a-real-deal-with-Iran.aspx?xy=rss",
-"pub": "2026-11-20T17:30:58+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
 }
 ]
 }
