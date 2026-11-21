@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-21 13:44",
-"rot": 154,
+"updated_kst": "2026-11-21 14:13",
+"rot": 35,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "48건",
+"Reuters": "49건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -102,6 +102,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T03:33:04+00:00"
+},
+{
+"id": "466462043147",
+"t": "NVDA",
+"title": "Jensen Huang Passed Billions in Nvidia Stock to His Heirs Months Before His Downfall",
+"url": "https://finance.yahoo.com/m/f93688e0-5c36-372b-855e-b722a7cce11d/jensen-huang-passed-billions.html?.tsrc=rss",
+"pub": "2026-11-21T03:14:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T05:13:49+00:00"
 },
 {
 "id": "8961528f9c78",
@@ -8004,14 +8014,14 @@
 "seen": "2026-11-20T14:17:24+00:00"
 },
 {
-"id": "ab2069bf890c",
-"t": "NBIS",
-"title": "The Zacks Analyst Blog Highlights Nebius, CoreWeave, Microsoft and Amazon",
-"url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-nebius-134500953.html?.tsrc=rss",
-"pub": "2026-11-20T13:45:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T15:16:02+00:00"
+"id": "77025bc916e3",
+"t": "",
+"title": "Vietnam Amends Laws to Speed Land Clearance, Development of New Projects",
+"url": "https://www.bloomberg.com/news/articles/2026-11-21/vietnam-amends-laws-to-speed-land-clearance-development-of-new-projects",
+"pub": "2026-11-21T04:51:42+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T05:13:49+00:00"
 },
 {
 "id": "77f2688d9283",
@@ -8082,6 +8092,16 @@
 "src": "Fox Business",
 "kind": "market",
 "seen": "2026-11-21T01:44:21+00:00"
+},
+{
+"id": "874861ca5e13",
+"t": "",
+"title": "688353.SSh - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUVJKZGNBVWhQV1BJdHByc3hUeWVwNWZ2NzRCU3UtNmlKQ2dnNmJPNDVsc0RUQ3JxdzQxenlGb3BPbE56RHA4NndaeHVNU2ZnR1dzX3FVUjFsU0J4U3FYejdTY0xfWVRjSkR3bmRPT1BRQ1NrdE1tTDlVUlExbFJXU2M5T2ZpS01SZUE3SA?oc=5",
+"pub": "2026-11-21T01:09:23+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T05:13:49+00:00"
 },
 {
 "id": "ab808711a285",
@@ -10124,6 +10144,16 @@
 "seen": "2026-11-20T22:14:08+00:00"
 },
 {
+"id": "eb7852b09b3a",
+"t": "",
+"title": "iQIYI Inc (IQ8y.SG) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jd3hGSnVNQXJwX0x0emdBbFlMcThaWGpXV29LN1hlRFQtc1hMOXZUOEM0S21nWHBQZzVnNmhxbl9oSzQwbkxha3hOSzNGZHJ2cTdxTVVLWVpvdGN1bUN6ZDZ1NExjQWZYODhCUw?oc=5",
+"pub": "2026-11-20T18:21:13+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T05:13:49+00:00"
+},
+{
 "id": "37bc235eeceb",
 "t": "",
 "title": "Jindal Photo Ltd (JINP.NS) | Stock Price & Latest News - Reuters",
@@ -10982,36 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "380d9328b88b",
-"t": "",
-"title": "AI Is Coming for Economists in the White House, Says Claudia Sahm",
-"url": "https://www.bloomberg.com/news/videos/2026-11-20/ai-is-coming-for-white-house-economists-says-sahm-video",
-"pub": "2026-11-20T17:48:42+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "a4f44db6ce82",
-"t": "",
-"title": "BI Survey: Budgetary Constraints for 2027 Travel",
-"url": "https://www.bloomberg.com/news/videos/2026-11-20/inflation-lifts-trip-spending-as-consumers-cut-extras-video",
-"pub": "2026-11-20T17:48:32+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "d49304170bc7",
-"t": "",
-"title": "European shares post worst week in over a year as AI trade unravels - Reuters",
-"url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLTRUN3RabW5hOWVFMWhrajEweXFyWWRURWthSmRXYlVrTF9jcGJyRGFoQ0xyZzlpeXNBWkJqTU9UaDAySmluOU5FZkd5eTZ2R0pZT1dIODdaQktHX1BrVGlhVUZjVjhUb20zZnYyY19yTWNCdVppTmJTQmREaUktRXhJXzdkMGdCT0YtYlplSGxOR2NVb2xrRHdyWW44QlBHV0R3dk1kOA?oc=5",
-"pub": "2026-11-20T17:43:39+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T20:44:19+00:00"
 }
 ]
 }
