@@ -1,18 +1,78 @@
 {
-"updated_kst": "2026-11-21 09:14",
-"rot": 90,
+"updated_kst": "2026-11-21 09:44",
+"rot": 150,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "51건",
+"Reuters": "49건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "608ce950cf63",
+"t": "NVDA",
+"title": "Here's How Much Nvidia Stock Is Worth Without Jensen Huang, According to Dan Ives",
+"url": "https://www.fool.com/investing/2026/11/20/here-s-how-much-nvidia-stock-is-worth-without-jensen-huang-according-to-dan-ives/?.tsrc=rss",
+"pub": "2026-11-21T00:30:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:44:38+00:00"
+},
+{
+"id": "54b60cc63cbf",
+"t": "AMZN",
+"title": "Generac Stock In Focus After Earnings Beat And Amazon Supply Deal",
+"url": "https://finance.yahoo.com/markets/stocks/articles/generac-stock-focus-earnings-beat-001937973.html?.tsrc=rss",
+"pub": "2026-11-21T00:19:37+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:44:38+00:00"
+},
+{
+"id": "17c3944038ea",
+"t": "RRX",
+"title": "Regal Rexnord (RRX) Stock Looks Below Fair Value At Today’s Price",
+"url": "https://finance.yahoo.com/markets/stocks/articles/regal-rexnord-rrx-stock-looks-001755930.html?.tsrc=rss",
+"pub": "2026-11-21T00:17:55+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:44:38+00:00"
+},
+{
+"id": "1c8b73cd5ee7",
+"t": "TLN",
+"title": "Talen Energy (TLN) Locks In Long Term PJM Deals With Valuation Still In Focus",
+"url": "https://finance.yahoo.com/energy/articles/talen-energy-tln-locks-long-001734375.html?.tsrc=rss",
+"pub": "2026-11-21T00:17:34+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:44:38+00:00"
+},
+{
+"id": "460de185bfc6",
+"t": "WMT",
+"title": "Walmart has a surprising update on grocery prices",
+"url": "https://www.thestreet.com/retail/walmart-has-a-surprising-update-on-grocery-prices?.tsrc=rss",
+"pub": "2026-11-21T00:17:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:44:38+00:00"
+},
+{
+"id": "abf1a052d1b9",
+"t": "NVDA",
+"title": "The Weekly Spread: What Shaped US Treasury Yields And The Dollar This Week",
+"url": "https://stocktwits.com/news-articles/markets/equity/the-weekly-spread-what-shaped-us-treasury-yields-and-the-dollar-this-week-1/cNbmPyOR91X?.tsrc=rss",
+"pub": "2026-11-21T00:16:15+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:44:38+00:00"
+},
 {
 "id": "7aded6efe8e8",
 "t": "MSFT",
@@ -82,6 +142,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T23:44:15+00:00"
+},
+{
+"id": "f3009893dee2",
+"t": "SPCX",
+"title": "David Ellison Calls Elon Musk’s $1 Billion Investment ‘an Honor and a Privilege,’ Open to Future Starlink Collaboration",
+"url": "https://finance.yahoo.com/media-advertising/articles/david-ellison-calls-elon-musk-233006805.html?.tsrc=rss",
+"pub": "2026-11-20T23:30:06+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:44:38+00:00"
 },
 {
 "id": "7f1fc610fae1",
@@ -2272,6 +2342,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T20:14:00+00:00"
+},
+{
+"id": "1b172dfb1491",
+"t": "INTC",
+"title": "How to Play INTC Stock as Intel Launches Another Round of Layoffs",
+"url": "https://www.barchart.com/story/news/8940766/how-to-play-intc-stock-as-intel-launches-another-round-of-layoffs?.tsrc=rss",
+"pub": "2026-11-20T18:40:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:44:38+00:00"
 },
 {
 "id": "6f900c6722e7",
@@ -7934,86 +8014,6 @@
 "seen": "2026-11-20T13:44:54+00:00"
 },
 {
-"id": "e8f8030cae72",
-"t": "CIEN",
-"title": "CIEN Targets a $50B Market: How AI Could Expand Its Growth Opportunity",
-"url": "https://finance.yahoo.com/technology/ai/articles/cien-targets-50b-market-ai-131000909.html?.tsrc=rss",
-"pub": "2026-11-20T13:10:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
-"id": "642e18bee223",
-"t": "RBRK",
-"title": "Rubrik (RBRK) Stock Looks Fully Priced After A 69% Run",
-"url": "https://finance.yahoo.com/markets/stocks/articles/rubrik-rbrk-stock-looks-fully-130951495.html?.tsrc=rss",
-"pub": "2026-11-20T13:09:51+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
-},
-{
-"id": "bb75464831a7",
-"t": "MRVL",
-"title": "Marvell Technology And 2 Top AI Stocks To Watch",
-"url": "https://finance.yahoo.com/technology/ai/articles/marvell-technology-2-top-ai-130941530.html?.tsrc=rss",
-"pub": "2026-11-20T13:09:41+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
-},
-{
-"id": "95f1beb7cfc8",
-"t": "KEYS",
-"title": "Keysight Forecasts 20% Revenue Growth for 2027 on Strong Demand",
-"url": "https://finance.yahoo.com/markets/stocks/articles/keysight-forecasts-20-revenue-growth-130906825.html?.tsrc=rss",
-"pub": "2026-11-20T13:09:06+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
-"id": "5c42da705d8c",
-"t": "MRK",
-"title": "Which Merck ETF Best Balances Its Drug Upside And Risks?",
-"url": "https://finance.yahoo.com/healthcare/articles/merck-etf-best-balances-drug-130853271.html?.tsrc=rss",
-"pub": "2026-11-20T13:08:53+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
-},
-{
-"id": "8108c5a33811",
-"t": "NBIS",
-"title": "Zacks Investment Ideas feature highlights: Nasdaq, Nvidia, Advanced Micro Devices, SanDisk, Nebius Arm Holdings and Anthropic",
-"url": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-130700415.html?.tsrc=rss",
-"pub": "2026-11-20T13:07:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
-},
-{
-"id": "d1818e0e4152",
-"t": "SPCX",
-"title": "Cameron County Rejects SpaceX Data Center Tax Break",
-"url": "https://www.credaily.com/briefs/cameron-county-rejects-spacex-data-center-tax-break/?.tsrc=rss",
-"pub": "2026-11-20T13:05:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:18:39+00:00"
-},
-{
-"id": "8ecd809c2999",
-"t": "SPCX",
-"title": "Musk Slams Nvidia’s Board for Kicking “Michael Jordan Off Your Team.” Cramer Sees a Fight Over Chip Prices",
-"url": "https://www.tikr.com/blog/musk-slams-nvidias-board-for-kicking-michael-jordan-off-your-team-cramer-sees-a-fight-over-chip-prices?ref=yahoofinance&tlnk=yf-261120-fhq75j6g&.tsrc=rss",
-"pub": "2026-11-20T13:05:17+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
-},
-{
 "id": "63abc50b341b",
 "t": "",
 "title": "Saudi-led coalition: intercepts and destroys three ballistic missiles launched by Yemen's Houthis toward Riyadh",
@@ -8162,6 +8162,16 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-20T23:14:14+00:00"
+},
+{
+"id": "b38d2c50b43f",
+"t": "",
+"title": "Traton SE (8TRA.DE) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5XWjRjU1R0YXFHc1lWdGw4Q2oxNGh4dldiQ1BUVkRSZkdtcUs1SW9qLTExQTctbGxEMnFQbUF0UGhqUnpMRmRlSWNIZUItVDZqRDBQSkNwQ05PTVVKUWRr?oc=5",
+"pub": "2026-11-20T22:46:58+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T00:44:38+00:00"
 },
 {
 "id": "098e214f78e3",
@@ -9012,6 +9022,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T21:15:37+00:00"
+},
+{
+"id": "5601e307a719",
+"t": "",
+"title": "Sahakol Equipment PCL (SQ.BK) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBOUmVGZGZSY3NGUXRQcmVEczY3NW1BN1dDS284RHRhVTN5c2dQTUhlcW5hMWhka3NXbFVXQ3hYZW54cmIweWdURnhoQ1lwQkF1TFVZZHZpNm4zTl9VQXZtUWtNYm4xU3R5SkZTWQ?oc=5",
+"pub": "2026-11-20T20:55:04+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T00:44:38+00:00"
 },
 {
 "id": "6991535d517f",
@@ -10989,26 +11009,6 @@
 "title": "Dow on correction course, down more than 10% from record closing high.",
 "url": "https://www.financialjuice.com/News/9862142/Dow-on-correction-course-down-more-than-10-from-record-closing-high.aspx?xy=rss",
 "pub": "2026-11-20T17:21:01+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "1eb7507f8cbe",
-"t": "",
-"title": "Gap stock soars as retailer says Old Navy turnaround shows signs of improvement",
-"url": "https://www.cnbc.com/2026/11/19/gap-gap-q3-2026-earnings.html",
-"pub": "2026-11-20T17:20:29+00:00",
-"src": "CNBC",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "0ba5e8d97d50",
-"t": "",
-"title": "Fed's Cook Speaks - WATCH LIVE",
-"url": "https://www.financialjuice.com/News/9862140/Feds-Cook-Speaks---WATCH-LIVE.aspx?xy=rss",
-"pub": "2026-11-20T17:17:32+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T17:40:09+00:00"
