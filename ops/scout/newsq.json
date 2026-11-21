@@ -1,18 +1,48 @@
 {
-"updated_kst": "2026-11-21 13:14",
-"rot": 34,
+"updated_kst": "2026-11-21 13:34",
+"rot": 94,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "49건",
+"Reuters": "100건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "39a78e3d2ec6",
+"t": "NVDA",
+"title": "If the Nasdaq's Correction Turns Into a Bear Market, This Is the First Stock I'll Buy",
+"url": "https://www.fool.com/investing/2026/11/20/if-the-nasdaq-s-correction-turns-into-a-bear-market-this-is-the-first-stock-i-ll-buy/?.tsrc=rss",
+"pub": "2026-11-21T04:17:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T04:34:44+00:00"
+},
+{
+"id": "3217d8a8efb3",
+"t": "AAPL",
+"title": "Startup sues Apple in India over tap-to-share contacts feature",
+"url": "https://finance.yahoo.com/technology/articles/startup-sues-apple-india-over-040000799.html?.tsrc=rss",
+"pub": "2026-11-21T04:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T04:34:44+00:00"
+},
+{
+"id": "7402de78a976",
+"t": "NVDA",
+"title": "The S&P 500 Just Entered Correction Territory. Here's What It Means for Investors Right Now.",
+"url": "https://www.fool.com/investing/2026/11/20/the-sp-500-just-entered-correction-territory-heres-what-it-means-for-investors-right-now/?.tsrc=rss",
+"pub": "2026-11-21T03:58:35+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T04:34:44+00:00"
+},
 {
 "id": "d7d454ea97c5",
 "t": "NVDA",
@@ -7984,36 +8014,6 @@
 "seen": "2026-11-20T15:16:02+00:00"
 },
 {
-"id": "75670e8e05a1",
-"t": "ISRG",
-"title": "Buy 3 Medical Device Stocks for a Stable Portfolio With Solid Upside",
-"url": "https://finance.yahoo.com/healthcare/articles/buy-3-medical-device-stocks-134000098.html?.tsrc=rss",
-"pub": "2026-11-20T13:40:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T15:16:02+00:00"
-},
-{
-"id": "e167d673dab3",
-"t": "PG",
-"title": "The Zacks Analyst Blog Highlights Berkshire Hathaway, JPMorgan, Procter & Gamble and National Presto",
-"url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-berkshire-133900318.html?.tsrc=rss",
-"pub": "2026-11-20T13:39:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T15:16:02+00:00"
-},
-{
-"id": "c3fea06f0130",
-"t": "WMT",
-"title": "The Holiday Shopping Outook? Could Be Jolly Good.",
-"url": "https://finance.yahoo.com/m/cceb6c5d-023d-3590-afbe-fff91313d7b0/the-holiday-shopping-outook%3F.html?.tsrc=rss",
-"pub": "2026-11-20T13:39:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T15:37:53+00:00"
-},
-{
 "id": "77f2688d9283",
 "t": "",
 "title": "Peru Rattled by 6.7-Magnitude Quake, With No Casualties Reported",
@@ -8044,6 +8044,16 @@
 "seen": "2026-11-21T02:43:50+00:00"
 },
 {
+"id": "2034b5231d25",
+"t": "",
+"title": "T-Rex 2X Inverse CRWV Daily Target ETF (CORD.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE11NXZLSHJNWVJhb2hPZU5aT2VIa05ocHdEeUg2QnRqbjJhNnVENDh6eEVXN3JOWnJLTlhKbUVsT1pyQlo4MHhuaHhsYm9zYlYzV2lDSjJ3NFc?oc=5",
+"pub": "2026-11-21T02:20:25+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T04:34:44+00:00"
+},
+{
 "id": "c8ef92b068ba",
 "t": "",
 "title": "FBI national crime information center hacked: CNN",
@@ -8072,6 +8082,16 @@
 "src": "Fox Business",
 "kind": "market",
 "seen": "2026-11-21T01:44:21+00:00"
+},
+{
+"id": "ab808711a285",
+"t": "",
+"title": "Legacy Housing Corp (Texas) (LEGH.O) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1zeHlOLXNlM2hQT1N4MUh0VzJDdEtrU29OYVgwUzJVeEszSkhOTzdnTjdSYUIyQlFNc1FyemJZUDE4U3gxTkFIQ1NXUUFweUNTNklaZWhKeG5OWFdjNllEdnFRZmtjR2RZNXZjMFlR?oc=5",
+"pub": "2026-11-21T00:39:23+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T04:34:44+00:00"
 },
 {
 "id": "ac309c36fd4a",
@@ -9164,6 +9184,16 @@
 "seen": "2026-11-21T00:44:38+00:00"
 },
 {
+"id": "772c1fb59bc4",
+"t": "",
+"title": "Avery Dennison Corp (AVY.A) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBSQU5BZDJZY2NLRXRXLWxhZk9TYVV1Q0g4ZHJlbTNLQ1FpNzRjZ0c2Q0ZPWFBCb2Fyek44UHNDZlQ4V1hHOFlaYjBidE05cmJoa0NkQ29IQVV4R1Y0UDV5YUhYNDhtNm1UTUp1RQ?oc=5",
+"pub": "2026-11-20T20:52:45+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T04:34:44+00:00"
+},
+{
 "id": "6991535d517f",
 "t": "",
 "title": "MOC Imbalance",
@@ -9332,6 +9362,36 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T22:14:08+00:00"
+},
+{
+"id": "ee87b51dca31",
+"t": "",
+"title": "Isofol Medical AB (publ) (ISOFOL.ST) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBTVmhfQllRTlZ1aTNtM3hueTRVTDFrSU9tZlZuVUxjemk4ZDZxVlhJdlJzVFhmQTJ2ZTZrX1FheXBvV09IZVlWV1l6d0xPTjlwZXdxZ2dyWEFCeFEzMXpBa1JxVUZKYnFrc21qcGJjTWRJUQ?oc=5",
+"pub": "2026-11-20T20:20:07+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T04:34:44+00:00"
+},
+{
+"id": "647edfdb3472",
+"t": "",
+"title": "Tokyo Koki Co Ltd (7719.T) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4zMkRaVXVNMDNfTnR2QWZwTm11RmhiQVFicllVYjZLdXczd25DSGNIZ2N3MzI0YnhVa1JHZ3ZZZWx0TEpDb29ra2hRVjU1QnBnRU52eDdTZExpd05CczdkY2VCSWN4V1ZWWUVv?oc=5",
+"pub": "2026-11-20T20:19:16+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T04:34:44+00:00"
+},
+{
+"id": "2dbafee9a6cf",
+"t": "",
+"title": "Sun Art Retail Group Ltd (6808.D) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE51b0UzUWVhVFljWFhsYUJxdHczMzE1alZLd1UtMXFCMXY4VlJlQTZISjFxMi1CWnBFd0FyNVYzeTFhcW1VVHExaHdnVFlaSHNBQUZhcEszRjduZ1BnMm5MSldvY1g1Y0wxOWhQaHEyUWxHS3c0UmtCbTJMY1Vaajg?oc=5",
+"pub": "2026-11-20T20:18:35+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T04:34:44+00:00"
 },
 {
 "id": "21004f4aed35",
@@ -10794,6 +10854,16 @@
 "seen": "2026-11-20T22:14:08+00:00"
 },
 {
+"id": "c167cafa2ff5",
+"t": "",
+"title": "Tennant Company (TNC.A) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1JakpBaldESXBTVWxhbDF6cTRuMHg3VnlzbTdBOXJCaFNyWHpIMzR1OG5TT2lWclEzRWxKYjZkaGR3b2xLT3FXTnVSWnM5LUJqZ1BSMWpfQWxheXVzUGx1T2tHNThFUkJEM3BIUA?oc=5",
+"pub": "2026-11-20T17:58:20+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T04:34:44+00:00"
+},
+{
 "id": "0f6a27b8dc19",
 "t": "",
 "title": "DevEx Resources Ltd (DEV.AX) | Stock Price & Latest News - Reuters",
@@ -10942,76 +11012,6 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-20T20:44:19+00:00"
-},
-{
-"id": "93903cac824c",
-"t": "",
-"title": "On Books: What food writing can teach us all (Video)",
-"url": "https://www.bloomberg.com/news/videos/2026-11-20/on-books-what-food-writing-can-teach-us-all-video",
-"pub": "2026-11-20T17:42:31+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T17:45:12+00:00"
-},
-{
-"id": "3e0328214789",
-"t": "",
-"title": "Trump on Anthropic: We're going to keep it all in the US. $ANT",
-"url": "https://www.financialjuice.com/News/9862170/Trump-on-Anthropic-Were-going-to-keep-it-all-in-the-US-ANT.aspx?xy=rss",
-"pub": "2026-11-20T17:41:49+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:45:12+00:00"
-},
-{
-"id": "1dd6aa3a409a",
-"t": "",
-"title": "Trump on Anthropic: We're going to keep it all in the US. $ANT",
-"url": "https://www.financialjuice.com/News/9862170/Trump-on-Anthropic-Were-going-to-keep-it-all-in-the-US-ANT.aspx",
-"pub": "2026-11-20T17:41:49+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "1499b91773a0",
-"t": "",
-"title": "Trump: We just had a successful Anthropic launch. I have a lot of respect for Amodei. $ANT",
-"url": "https://www.financialjuice.com/News/9862169/Trump-We-just-had-a-successful-Anthropic-launch-I-have-a-lot-of-respect-for-Amodei-ANT.aspx?xy=rss",
-"pub": "2026-11-20T17:41:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:45:12+00:00"
-},
-{
-"id": "65033a9204b0",
-"t": "",
-"title": "Trump: We just had a successful Anthropic launch. I have a lot of respect for Amodei. $ANT",
-"url": "https://www.financialjuice.com/News/9862169/Trump-We-just-had-a-successful-Anthropic-launch-I-have-a-lot-of-respect-for-Amodei-ANT.aspx",
-"pub": "2026-11-20T17:41:38+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "7da43b31cd70",
-"t": "",
-"title": "Trump: I will put a tax on companies building data centers abroad.",
-"url": "https://www.financialjuice.com/News/9862168/Trump-I-will-put-a-tax-on-companies-building-data-centers-abroad.aspx?xy=rss",
-"pub": "2026-11-20T17:38:18+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "a16ec4a4970b",
-"t": "",
-"title": "Trump: I will put a tax on companies building data centers abroad.",
-"url": "https://www.financialjuice.com/News/9862168/Trump-I-will-put-a-tax-on-companies-building-data-centers-abroad.aspx",
-"pub": "2026-11-20T17:38:18+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
 }
 ]
 }
