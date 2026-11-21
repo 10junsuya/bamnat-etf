@@ -1,18 +1,68 @@
 {
-"updated_kst": "2026-11-21 09:44",
-"rot": 150,
+"updated_kst": "2026-11-21 10:14",
+"rot": 31,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "49건",
+"Reuters": "52건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "e2dd947e8bd7",
+"t": "GOOGL",
+"title": "Morgan Stanley sends a strong signal to Google stock investors",
+"url": "https://www.thestreet.com/investing/stocks/morgan-stanley-sends-a-strong-signal-to-google-stock-investors?.tsrc=rss",
+"pub": "2026-11-21T01:03:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:14:39+00:00"
+},
+{
+"id": "5a945416ebc9",
+"t": "TSLA",
+"title": "Has AI's honeymoon ended on Wall Street?",
+"url": "https://finance.yahoo.com/markets/stocks/articles/ais-honeymoon-ended-wall-street-004604807.html?.tsrc=rss",
+"pub": "2026-11-21T00:46:04+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:14:39+00:00"
+},
+{
+"id": "e78413d793f2",
+"t": "TSLA",
+"title": "Zero To Sixty: Tesla Expands Cybercab To Dallas As Waymo Pauses Freeway Operations This Week",
+"url": "https://stocktwits.com/news-articles/markets/equity/zero-to-sixty-tesla-expands-cybercab-to-dallas-as-waymo-pauses-freeway-operations-this-week/cNbm5YSR91g?.tsrc=rss",
+"pub": "2026-11-21T00:45:41+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:14:39+00:00"
+},
+{
+"id": "8df15241cc87",
+"t": "NVDA",
+"title": "The S&P 500 Has More Than Tripled in 10 Years, Even After Its Latest Pullback. Here’s What $1,000 in VOO Could Have Become.",
+"url": "https://www.fool.com/investing/2026/11/20/s-and-p-500-tripled-10-years-even-after-latest-pullback-what-usd1-000-in-voo-could-have-become/?.tsrc=rss",
+"pub": "2026-11-21T00:43:33+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:14:39+00:00"
+},
+{
+"id": "a64373f87029",
+"t": "NVDA",
+"title": "George Soros and 20 Other Big Funds Bought Qualcomm Last Quarter. David Tepper and 14 Others Sold. Who’s Right?",
+"url": "https://www.tikr.com/blog/george-soros-and-20-other-big-funds-bought-qualcomm-last-quarter-david-tepper-and-14-others-sold-whos-right?ref=yahoofinance&tlnk=yf-261120-7fxgch3m&.tsrc=rss",
+"pub": "2026-11-21T00:35:15+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:14:39+00:00"
+},
 {
 "id": "608ce950cf63",
 "t": "NVDA",
@@ -5904,6 +5954,16 @@
 "seen": "2026-11-20T15:16:02+00:00"
 },
 {
+"id": "e018755d60b8",
+"t": "LRCX",
+"title": "A $7.2 Billion Fund Just Bought These 3 Stocks",
+"url": "https://www.tikr.com/blog/a-7-2-billion-fund-just-bought-these-3-stocks?ref=yahoofinance&tlnk=yf-261120-crr4g9r2&.tsrc=rss",
+"pub": "2026-11-20T14:58:20+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T01:14:39+00:00"
+},
+{
 "id": "fe8d9af5fb83",
 "t": "LSCC",
 "title": "A $12 Billion Fund Just Bought These 3 Stocks",
@@ -7954,66 +8014,6 @@
 "seen": "2026-11-20T14:35:49+00:00"
 },
 {
-"id": "a6a2f7fa26cb",
-"t": "MSFT",
-"title": "Did Microsoft Azure Deal Just Shift Intel's (INTC) Investment Narrative?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/did-microsoft-azure-deal-just-131148027.html?.tsrc=rss",
-"pub": "2026-11-20T13:11:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
-},
-{
-"id": "da2c6edda13b",
-"t": "GOOGL",
-"title": "Google's Gemini Tasks Seen As Challenger To Meta's Muse In AI Battle",
-"url": "https://finance.yahoo.com/m/e541372f-4da6-3077-8e49-a78384b2e543/google%27s-gemini-tasks-seen-as.html?.tsrc=rss",
-"pub": "2026-11-20T13:11:37+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:33:25+00:00"
-},
-{
-"id": "963712e1f651",
-"t": "JPM",
-"title": "Moody's Ratings Gain From AI Infrastructure and Private Credit Growth",
-"url": "https://finance.yahoo.com/markets/stocks/articles/moodys-ratings-gain-ai-infrastructure-131100021.html?.tsrc=rss",
-"pub": "2026-11-20T13:11:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
-"id": "c9baaba3de1a",
-"t": "NFLX",
-"title": "Can Netflix (NFLX) Stay Below Fair Value After Its 45% Fall?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/netflix-nflx-stay-below-fair-131057307.html?.tsrc=rss",
-"pub": "2026-11-20T13:10:57+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
-},
-{
-"id": "87e17645912f",
-"t": "NVDA",
-"title": "Cathie Wood Buys Nearly 1 Million Anthropic Shares On IPO Day. ARK Also Cuts Nvidia Stake.",
-"url": "https://www.ibtimes.com/ark-invest-buys-anthropic-shares-record-ipo-3810011?.tsrc=rss",
-"pub": "2026-11-20T13:10:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:33:25+00:00"
-},
-{
-"id": "cd8ffd7de46c",
-"t": "PANW",
-"title": "US Stock Market Today: S&P 500 Futures Slip As Hawkish Fed And Strong Dollar Bite",
-"url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-131041736.html?.tsrc=rss",
-"pub": "2026-11-20T13:10:41+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
-},
-{
 "id": "63abc50b341b",
 "t": "",
 "title": "Saudi-led coalition: intercepts and destroys three ballistic missiles launched by Yemen's Houthis toward Riyadh",
@@ -8022,6 +8022,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T23:44:15+00:00"
+},
+{
+"id": "6cfd54ee7337",
+"t": "",
+"title": "Michael Page PLC (PAGE.L) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBzQy1reEZqWHFscmJaYzVNdV81OUFBcTdPWXhsendYZGN4VU5ER1d1R0REM2J3QWIwUDdOWll6djBoN1NjV1QwNG4tci1EellpVm1Cc3dxLWZwbjFmRHc?oc=5",
+"pub": "2026-11-20T23:28:56+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T01:14:39+00:00"
 },
 {
 "id": "2be6a098170f",
@@ -8974,6 +8984,16 @@
 "seen": "2026-11-20T22:14:08+00:00"
 },
 {
+"id": "1eb7507f8cbe",
+"t": "",
+"title": "Gap names new Athleta CEO, says Old Navy turnaround is seeing signs of progress",
+"url": "https://www.cnbc.com/2026/11/19/gap-gap-q3-2026-earnings.html",
+"pub": "2026-11-20T21:04:48+00:00",
+"src": "CNBC",
+"kind": "market",
+"seen": "2026-11-21T01:14:39+00:00"
+},
+{
 "id": "de6d79316c43",
 "t": "",
 "title": "Hedge Funds Slash Bullish Bets on European Diesel To Wartime Low",
@@ -9022,6 +9042,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T21:15:37+00:00"
+},
+{
+"id": "dbb3fb805837",
+"t": "",
+"title": "Scherzer & Co AG (PZSG.SG) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOWo0R3dBYUNSUThpUUNzdWhfQmRZRmZXMVVoNENPamFtX2JQTlFqUzEzQjNPNU1Hb0kwZDJuTWRmblM2U1V0RzR6X3VOUExnQ2RWQUVZQzUyLXJHc1Nyb2hjZ1N0eFM4QU1sSko4cWVuU01VS25RNk1ObUJDQmhpclN2cWk?oc=5",
+"pub": "2026-11-20T20:55:19+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T01:14:39+00:00"
 },
 {
 "id": "5601e307a719",
@@ -9852,6 +9882,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T18:39:45+00:00"
+},
+{
+"id": "53acac073c18",
+"t": "",
+"title": "Jindal Photo Ltd (JINP.NS) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE91ejJCYWQxeGowdEZyRlN6LWtEZ1l5MHZlcjZsek9jMU1QSzJDdFUzMGRldzZ1UWFpRFkyRmc2N2huUDlaSDREYnJYRExIRWhlR1FUTVlaUGhLcVEzVmJ0RDc1T2h1TjBxVmJkXw?oc=5",
+"pub": "2026-11-20T18:24:02+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T01:14:39+00:00"
 },
 {
 "id": "6ee7a7c21dda",
@@ -10970,46 +11010,6 @@
 "url": "https://www.bloomberg.com/news/videos/2026-11-20/what-s-in-the-uk-eu-deal-to-deepen-ties-video",
 "pub": "2026-11-20T17:28:46+00:00",
 "src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "aa16c581f50e",
-"t": "",
-"title": "Trump: Ten other trade deals coming very soon after Asia trip.",
-"url": "https://www.financialjuice.com/News/9862143/Trump-Ten-other-trade-deals-coming-very-soon-after-Asia-trip.aspx?xy=rss",
-"pub": "2026-11-20T17:27:57+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "fd4a3f8ce8f5",
-"t": "",
-"title": "Health Care Roundup: Market Talk",
-"url": "https://www.wsj.com/business/health-care-roundup-market-talk-37edbe6f?mod=rss_markets_main",
-"pub": "2026-11-20T17:26:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "d22ac460f08a",
-"t": "",
-"title": "Financial Services Roundup: Market Talk",
-"url": "https://www.wsj.com/business/financial-services-roundup-market-talk-3af0bea5?mod=rss_markets_main",
-"pub": "2026-11-20T17:24:00+00:00",
-"src": "WSJ",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "170a5f4c85e9",
-"t": "",
-"title": "Dow on correction course, down more than 10% from record closing high.",
-"url": "https://www.financialjuice.com/News/9862142/Dow-on-correction-course-down-more-than-10-from-record-closing-high.aspx?xy=rss",
-"pub": "2026-11-20T17:21:01+00:00",
-"src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T17:40:09+00:00"
 }
