@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-21 14:44",
-"rot": 155,
+"updated_kst": "2026-11-21 15:14",
+"rot": 36,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "100건",
+"Reuters": "50건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -44,6 +44,26 @@
 "seen": "2026-11-21T05:38:43+00:00"
 },
 {
+"id": "710657facb35",
+"t": "BAH",
+"title": "Booz Allen Hamilton (BAH) Stock May Trade At A 41% Discount To Cash Flow",
+"url": "https://finance.yahoo.com/markets/stocks/articles/booz-allen-hamilton-bah-stock-051453698.html?.tsrc=rss",
+"pub": "2026-11-21T05:14:53+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T06:14:19+00:00"
+},
+{
+"id": "c42cef717f38",
+"t": "MRNA",
+"title": "Moderna (MRNA) Lands March 2027 PBAC Slot For mRNA Flu Vaccine Listings",
+"url": "https://finance.yahoo.com/healthcare/articles/moderna-mrna-lands-march-2027-051452133.html?.tsrc=rss",
+"pub": "2026-11-21T05:14:52+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T06:14:19+00:00"
+},
+{
 "id": "486dfe789b51",
 "t": "LUNR",
 "title": "TransDigm Group Heads These 3 Space Stocks To Watch",
@@ -62,6 +82,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T05:38:43+00:00"
+},
+{
+"id": "fdb08f21a90e",
+"t": "PANW",
+"title": "Palo Alto Networks (PANW) Stock Gets Fair Value Bump After Q1 Beat And Applied Compute",
+"url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-panw-stock-051145964.html?.tsrc=rss",
+"pub": "2026-11-21T05:11:45+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T06:14:19+00:00"
 },
 {
 "id": "e18e019d7d88",
@@ -7984,34 +8014,24 @@
 "seen": "2026-11-20T14:17:24+00:00"
 },
 {
-"id": "8485c4949069",
-"t": "NVDA",
-"title": "Prediction: Nvidia Will Hit a New All-Time High in 2027 (Hint: Watch This Metric)",
-"url": "https://www.fool.com/investing/2026/11/20/prediction-nvidia-will-hit-a-new-all-time-high-in-2027-hint-watch-this-metric/?.tsrc=rss",
-"pub": "2026-11-20T13:50:01+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
+"id": "a64036851491",
+"t": "",
+"title": "China’s Top Planner Seeks Faster Construction of State Projects",
+"url": "https://www.bloomberg.com/news/articles/2026-11-21/china-s-top-planner-seeks-faster-construction-of-state-projects",
+"pub": "2026-11-21T05:24:06+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T06:14:19+00:00"
 },
 {
-"id": "c93750143355",
-"t": "VOO",
-"title": "Where Will VOO Be in 30 Years? Here's What History Says.",
-"url": "https://www.fool.com/investing/2026/11/20/where-will-voo-be-30-years-what-history-says/?.tsrc=rss",
-"pub": "2026-11-20T13:50:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
-},
-{
-"id": "c9c1ae590a0e",
-"t": "AMZN",
-"title": "Amazon and McDonald’s just backed Uber—so why is the stock falling?",
-"url": "https://finance.yahoo.com/markets/stocks/articles/amazon-mcdonald-just-backed-uber-134946614.html?.tsrc=rss",
-"pub": "2026-11-20T13:49:46+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
+"id": "cc1281062099",
+"t": "",
+"title": "Australian Energy Officials Warned of Data Center Risk, Age Says",
+"url": "https://www.bloomberg.com/news/articles/2026-11-21/australian-energy-officials-warned-of-data-center-risk-age-says",
+"pub": "2026-11-21T05:18:29+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T06:14:19+00:00"
 },
 {
 "id": "e45a8a7386eb",
@@ -8132,6 +8152,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-21T05:38:43+00:00"
+},
+{
+"id": "869b18de5708",
+"t": "",
+"title": "IDACORP, Inc. (IDA.P) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0zRUZPcXpIWUlFZzhMV0poQ1E1U0o0V0xzUmR2YVVKOG1HdmZrZThaMDR2SDhUUjhzaUpENmF1emtvUm5ZcmhwVmU4aDVsZWg5aFNPMzZ3amhIT25Ic2VqNS03WGNfVHFUemc?oc=5",
+"pub": "2026-11-21T00:52:20+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T06:14:19+00:00"
 },
 {
 "id": "ab808711a285",
@@ -10980,36 +11010,6 @@
 "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5jLVVyU3QzNnM3Y1NxVUY5YTVLam1vdEZCNEFPRDVEbHNxNVd4RHc1eEFUaGxXSmcwV2pudmR2TGE4ZjBCT3E3djNudFdlOV9KaGhHZkR6a1h6Qzd4Mkd6Q29YUjU1Z0N6Z3JFZQ?oc=5",
 "pub": "2026-11-20T17:53:29+00:00",
 "src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "ff26f699b27f",
-"t": "",
-"title": "Tyroon Tea Co Ltd (TYTE.BO) | Stock Price & Latest News - Reuters",
-"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5RQi1kOWtGMXJRb3pvcGlHZFVmdHJfODVPZ0ZSTW45SnpQMjJmczljMGNEbkpEUVRIUEthbkUwdW9fWU1zM3ZiR082SUxVN196T1NXNzNReVp2MTJjTEVNSlJ3eGx0WW43eEhHalhLVQ?oc=5",
-"pub": "2026-11-20T17:52:57+00:00",
-"src": "Reuters",
-"kind": "market",
-"seen": "2026-11-20T23:14:14+00:00"
-},
-{
-"id": "a26a55db83fb",
-"t": "",
-"title": "Trump: Putin expressed desire to see war end diplomatically.",
-"url": "https://www.financialjuice.com/News/9862181/Trump-Putin-expressed-desire-to-see-war-end-diplomatically.aspx?xy=rss",
-"pub": "2026-11-20T17:52:06+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "8c8fd317c254",
-"t": "",
-"title": "Trump: Putin expressed desire to see war end diplomatically.",
-"url": "https://www.financialjuice.com/News/9862181/Trump-Putin-expressed-desire-to-see-war-end-diplomatically.aspx",
-"pub": "2026-11-20T17:52:06+00:00",
-"src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T22:14:08+00:00"
 }
