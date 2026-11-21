@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-21 16:56",
-"rot": 157,
+"updated_kst": "2026-11-21 17:14",
+"rot": 38,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "100건",
+"Reuters": "50건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "4eb0617be140",
+"t": "AVGO",
+"title": "Here’s My Top AI Stock to Buy With Nvidia in Uncertain Territory",
+"url": "https://www.fool.com/investing/2026/11/21/here-s-my-top-ai-stock-to-buy-with-nvidia-in-uncertain-territory/?.tsrc=rss",
+"pub": "2026-11-21T07:51:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T08:14:03+00:00"
+},
 {
 "id": "5e4b317c0602",
 "t": "SPCX",
@@ -32,6 +42,26 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T07:56:17+00:00"
+},
+{
+"id": "2c3b3f926749",
+"t": "CRWD",
+"title": "Zscaler (ZS) Draws Takeover Interest In Reported Acquisition Talks",
+"url": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-draws-takeover-interest-071557894.html?.tsrc=rss",
+"pub": "2026-11-21T07:15:57+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T08:14:03+00:00"
+},
+{
+"id": "e6e9129f26f6",
+"t": "BAH",
+"title": "Booz Allen Hamilton Holding (BAH) Could Be 8% Undervalued As AI Growth Story Builds",
+"url": "https://finance.yahoo.com/markets/stocks/articles/booz-allen-hamilton-holding-bah-071158950.html?.tsrc=rss",
+"pub": "2026-11-21T07:11:58+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T08:14:03+00:00"
 },
 {
 "id": "fbc8f1e077d7",
@@ -7984,34 +8014,14 @@
 "seen": "2026-11-20T15:44:04+00:00"
 },
 {
-"id": "4b60c07eba91",
-"t": "AXP",
-"title": "PayPal taps Xero’s Claire Bramley as CFO amid broad executive reorganization",
-"url": "https://finance.yahoo.com/markets/stocks/articles/paypal-taps-xero-claire-bramley-140338144.html?.tsrc=rss",
-"pub": "2026-11-20T14:03:38+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
-"id": "e192bd17c1a9",
-"t": "AVGO",
-"title": "Cisco Fell 89%. Is Nvidia Stock Next?",
-"url": "https://www.trefis.com/stock/nvda/articles/626552/cisco-fell-89-is-nvidia-stock-next/2026-11-20?.tsrc=rss",
-"pub": "2026-11-20T14:03:25+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
-"id": "b212e05dc60e",
-"t": "AMZN",
-"title": "MEDIA ADVISORY: Unifor celebrates Amazon union drive victory with open house for new members",
-"url": "https://finance.yahoo.com/media-advertising/articles/media-advisory-unifor-celebrates-amazon-140200624.html?.tsrc=rss",
-"pub": "2026-11-20T14:02:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
+"id": "13d8ea96ef94",
+"t": "",
+"title": "De Cos Awaits Europe’s Call as a Nemesis to the Bond Vigilantes",
+"url": "https://www.bloomberg.com/news/articles/2026-11-21/de-cos-awaits-europe-s-call-as-a-nemesis-to-the-bond-vigilantes",
+"pub": "2026-11-21T08:00:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T08:14:03+00:00"
 },
 {
 "id": "13c22eb0a06d",
@@ -8022,6 +8032,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-21T07:44:39+00:00"
+},
+{
+"id": "97e42f49152e",
+"t": "",
+"title": "Paschi Deems Intesa’s Offer Fair Yet Value Not Fully Reflected",
+"url": "https://www.bloomberg.com/news/articles/2026-11-21/paschi-deems-intesa-s-offer-fair-yet-value-not-fully-reflected",
+"pub": "2026-11-21T07:42:12+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T08:14:03+00:00"
 },
 {
 "id": "f63f86a48493",
@@ -8272,6 +8292,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-21T02:33:27+00:00"
+},
+{
+"id": "4cfb6c6d14d7",
+"t": "",
+"title": "CastleArk Large Growth ETF (CARK.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9ZbUllM05temd5VnQ3TWZZeFRHVGVsSGQxTlRzV2EzQTlNcjF3ZGtGVWdFdmg1dzVpS1hWTWMzVElBRFVpajVCUGpPd3FNal9yaWRhMlZvWDVGMVo1RHpTU0MwRXdtVUpXWHdIU1lB?oc=5",
+"pub": "2026-11-21T00:08:11+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T08:14:03+00:00"
 },
 {
 "id": "4ad96bebd746",
@@ -10982,36 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "23f94557fd87",
-"t": "",
-"title": "Fed's Cook: Optimistic about what AI will do for the economy over time",
-"url": "https://www.financialjuice.com/News/9862195/Feds-Cook-Optimistic-about-what-AI-will-do-for-the-economy-over-time.aspx?xy=rss",
-"pub": "2026-11-20T18:01:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "17f70e3fdd4e",
-"t": "",
-"title": "Fed's Cook: Optimistic about what AI will do for the economy over time",
-"url": "https://www.financialjuice.com/News/9862195/Feds-Cook-Optimistic-about-what-AI-will-do-for-the-economy-over-time.aspx",
-"pub": "2026-11-20T18:01:51+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "5ee12172ef92",
-"t": "",
-"title": "Trump: China agreed to conduct a trilateral on nuclear risk reduction",
-"url": "https://www.financialjuice.com/News/9862194/Trump-China-agreed-to-conduct-a-trilateral-on-nuclear-risk-reduction.aspx?xy=rss",
-"pub": "2026-11-20T18:01:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
 }
 ]
 }
