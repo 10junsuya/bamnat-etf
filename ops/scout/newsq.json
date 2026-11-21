@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-21 16:44",
-"rot": 97,
+"updated_kst": "2026-11-21 16:56",
+"rot": 157,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "48건",
+"Reuters": "100건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -22,6 +22,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T07:44:39+00:00"
+},
+{
+"id": "d3c472dbb7c8",
+"t": "ALNT",
+"title": "Allient (ALNT) Stock May Be Fully Priced As Cash Flow Catches Up",
+"url": "https://finance.yahoo.com/markets/stocks/articles/allient-alnt-stock-may-fully-071727699.html?.tsrc=rss",
+"pub": "2026-11-21T07:17:27+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T07:56:17+00:00"
 },
 {
 "id": "fbc8f1e077d7",
@@ -8004,16 +8014,6 @@
 "seen": "2026-11-20T14:17:24+00:00"
 },
 {
-"id": "a34a3ad6d196",
-"t": "NVDA",
-"title": "Anthropic Stock Falls Sharply After Record IPO",
-"url": "https://finance.yahoo.com/m/ca3ca304-3c18-390a-b39d-ddebc8a727e5/anthropic-stock-falls-sharply.html?.tsrc=rss",
-"pub": "2026-11-20T14:00:47+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
-},
-{
 "id": "13c22eb0a06d",
 "t": "",
 "title": "UKMTO: no injuries reported, environmental impact unclear",
@@ -8072,6 +8072,16 @@
 "src": "Fox Business",
 "kind": "market",
 "seen": "2026-11-21T06:41:58+00:00"
+},
+{
+"id": "d40385e74e8e",
+"t": "",
+"title": "Allspring Short Term High Income Fund ETF (AHIC.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9ISmdNd0VCdkpKQnNVWEVyb3VpVHhZbUdiUWJyRHd4TG50WkRmaThEeFl2TkFkVlloRjZoUXh6TnlDTXRoR1NDRXBueWpxSk50aFRVSmZnc2tJdEl2STJoUDRBVnYxLUNOcE1JRFd3?oc=5",
+"pub": "2026-11-21T06:03:22+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T07:56:17+00:00"
 },
 {
 "id": "12fe575d21c4",
@@ -8224,6 +8234,16 @@
 "seen": "2026-11-21T05:38:43+00:00"
 },
 {
+"id": "5d0e7653a88a",
+"t": "",
+"title": "STMicroelectronics N.V. (STMN34.SA) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1VbUJMWjF0TlJvbzk4bWtoSTBTc1ZhdGlQd0t1dG1LS3ZUWE9EbU1YYTc3N2JhVnM3UW90Qlo5dnpQb1V3MWdJMU5lN2V3OENLM21JR2tSY1BPdjlYQ2xaWXczMjdQSmg1QXJJQXlSTTluQQ?oc=5",
+"pub": "2026-11-21T01:05:22+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T07:56:17+00:00"
+},
+{
 "id": "869b18de5708",
 "t": "",
 "title": "IDACORP, Inc. (IDA.P) | Stock Price & Latest News - Reuters",
@@ -8262,6 +8282,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-21T06:41:58+00:00"
+},
+{
+"id": "f61bbd75cdbe",
+"t": "",
+"title": "Walmart Inc. (WMT.BN) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1VaU4weVRKUThWWVExZU5BV2c2cWhMMW5NSjhVcFR5ZEpuLUJCWlQwa2JMaE1sSHRteFpjSEVUOTFkT0lSU3h2MUM0R3huNUZyNHFSRWF0ZGxrY1dSOUZ4U2FWUDBnS19hWWV6WnMyY21ZOW53QVFjWHJHWGZITE0?oc=5",
+"pub": "2026-11-20T23:58:42+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T07:56:17+00:00"
 },
 {
 "id": "c95117218004",
@@ -8382,6 +8412,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T23:14:14+00:00"
+},
+{
+"id": "53dd85598e40",
+"t": "",
+"title": "TV.N%09 - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBSY2UwZ3hxbjlkN1BEanFUc2hELXhPYlJJcFgtYjdydnJSX1lCd25SUWloRVFkTXQ1UTFIaVk4d2RHR0x5Zk9VbXVyX3NDa1drdDFoNF9CenlXRUw3TU1fUmVEVFdpU21jV1E?oc=5",
+"pub": "2026-11-20T22:57:16+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T07:56:17+00:00"
 },
 {
 "id": "f386cde464a6",
@@ -8572,6 +8612,16 @@
 "src": "Bloomberg",
 "kind": "market",
 "seen": "2026-11-20T22:24:18+00:00"
+},
+{
+"id": "8dc5dc7eeafb",
+"t": "",
+"title": "Novo Nordisk A/S (0QIU.L) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5wNWZkQkdlMFo5WDBOWVRHSkpJZnV3dm1xV2tvaEt4b0hFbUtNVkRZY0tnYWtHekNfZEZBNGRSMWM4OER6RFl3VlJRY0t4RlRXc1VVQ25RZnE3ZmZNSUIyWmRmcVJkMlo0UkpFNUp3?oc=5",
+"pub": "2026-11-20T21:55:08+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T07:56:17+00:00"
 },
 {
 "id": "63169e68ade9",
@@ -10962,56 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "422074343088",
-"t": "",
-"title": "Trump: China agreed to conduct a trilateral on nuclear risk reduction",
-"url": "https://www.financialjuice.com/News/9862194/Trump-China-agreed-to-conduct-a-trilateral-on-nuclear-risk-reduction.aspx",
-"pub": "2026-11-20T18:01:21+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "7f1ae9fa633e",
-"t": "",
-"title": "US Baker Hughes Oil Rig Count Actual 469 (Forecast -, Previous 463)",
-"url": "https://www.financialjuice.com/News/9862193/US-Baker-Hughes-Oil-Rig-Count-Actual-469-Forecast---Previous-463.aspx?xy=rss",
-"pub": "2026-11-20T18:01:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "5155ea0b58da",
-"t": "",
-"title": "US Baker Hughes Oil Rig Count Actual 469 (Forecast -, Previous 463)",
-"url": "https://www.financialjuice.com/News/9862193/US-Baker-Hughes-Oil-Rig-Count-Actual-469-Forecast---Previous-463.aspx",
-"pub": "2026-11-20T18:01:02+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "77508c98b87e",
-"t": "",
-"title": "Trump: We discussed confronting dangers on the Korean peninsula",
-"url": "https://www.financialjuice.com/News/9862192/Trump-We-discussed-confronting-dangers-on-the-Korean-peninsula.aspx?xy=rss",
-"pub": "2026-11-20T18:00:41+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "449ae6cc8a4a",
-"t": "",
-"title": "Trump: We discussed confronting dangers on the Korean peninsula",
-"url": "https://www.financialjuice.com/News/9862192/Trump-We-discussed-confronting-dangers-on-the-Korean-peninsula.aspx",
-"pub": "2026-11-20T18:00:41+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
 }
 ]
 }
