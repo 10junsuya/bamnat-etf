@@ -1,18 +1,38 @@
 {
-"updated_kst": "2026-11-21 17:50",
-"rot": 158,
+"updated_kst": "2026-11-21 18:14",
+"rot": 39,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
-"Bloomberg": "38건",
+"Bloomberg": "37건",
 "WSJ": "61건",
-"Reuters": "100건",
+"Reuters": "48건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "6ef26c1256f5",
+"t": "NVDA",
+"title": "How Biden’s former aide sparked a $100bn stock market sell-off",
+"url": "https://uk.finance.yahoo.com/news/biden-former-aide-sparked-100bn-090000790.html?.tsrc=rss",
+"pub": "2026-11-21T09:00:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T09:14:45+00:00"
+},
+{
+"id": "9d20f059b085",
+"t": "NVDA",
+"title": "AMD vs. Nvidia: Which AI Chip Stock Is the Better Buy on the Dip?",
+"url": "https://www.fool.com/investing/2026/11/21/amd-vs-nvidia-which-ai-chip-stock-is-the-better-buy-on-the-dip/?.tsrc=rss",
+"pub": "2026-11-21T08:50:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T09:14:45+00:00"
+},
 {
 "id": "1d7749c70920",
 "t": "AAOI",
@@ -34,6 +54,16 @@
 "seen": "2026-11-21T08:44:24+00:00"
 },
 {
+"id": "3a17b33eae16",
+"t": "AKAM",
+"title": "Akamai Technologies Turns Away AI Business as Power Shortage Meets $14 Billion Deal Surge",
+"url": "https://www.marketbeat.com/instant-alerts/event-akamai-technologies-turns-away-ai-business-as-power-shortage-meets-14-billion-deal-surge-2026-11-21/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+"pub": "2026-11-21T08:12:08+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T09:14:45+00:00"
+},
+{
 "id": "cee1df0d039d",
 "t": "COHR",
 "title": "Fabrinet Stock Gets An AI Infrastructure Boost",
@@ -42,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T08:44:24+00:00"
+},
+{
+"id": "9342c1346e3b",
+"t": "UUUU",
+"title": "Energy Fuels (TSX:EFR) Stock May Look Rich Against Its Current Sales Base",
+"url": "https://finance.yahoo.com/energy/articles/energy-fuels-tsx-efr-stock-081056541.html?.tsrc=rss",
+"pub": "2026-11-21T08:10:56+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T09:14:45+00:00"
 },
 {
 "id": "67b11ab675fa",
@@ -7974,44 +8014,34 @@
 "seen": "2026-11-20T15:44:04+00:00"
 },
 {
-"id": "6a84ea6863a0",
-"t": "MSFT",
-"title": "Anthropic: $41 Million To $33 Billion. Why?",
-"url": "https://www.trefis.com/stock/ant/articles/627078/anthropic-41-million-to-33-billion-why/2026-11-20?.tsrc=rss",
-"pub": "2026-11-20T14:08:46+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
+"id": "e796a2b480e1",
+"t": "",
+"title": "How AI Is Forcing China to Reshape Industrial Policy",
+"url": "https://www.bloomberg.com/news/articles/2026-11-21/how-ai-is-forcing-china-to-reshape-industrial-policy",
+"pub": "2026-11-21T09:00:13+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T09:14:45+00:00"
 },
 {
-"id": "13bdb1b1470c",
-"t": "NVDA",
-"title": "Elon Musk Could Use His Nvidia Chip Orders to Push for Jensen Huang’s Return, Analyst Says",
-"url": "https://www.benzinga.com/markets/prediction-markets/26/11/63470295/musk-nvidia-huang?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
-"pub": "2026-11-20T14:08:07+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
+"id": "3d913b7fc6c5",
+"t": "",
+"title": "Europe’s Power Market Is Flashing a Warning to Its Economy",
+"url": "https://www.bloomberg.com/news/articles/2026-11-21/europe-s-power-market-is-flashing-a-warning-to-its-economy",
+"pub": "2026-11-21T09:00:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T09:14:45+00:00"
 },
 {
-"id": "02042b90f604",
-"t": "SPCX",
-"title": "Elon Musk Could Use His Nvidia Chip Orders to Push for Jensen Huang’s Return, Analyst Says",
-"url": "https://finance.yahoo.com/technology/ai/articles/elon-musk-could-nvidia-chip-140807576.html?.tsrc=rss",
-"pub": "2026-11-20T14:08:07+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
-},
-{
-"id": "e20d243aec50",
-"t": "GOOGL",
-"title": "Anthropic Sinks 14% on Day Two as AI Sell-Off Spreads; CoreWeave Falls 6%, Amazon Slips 2%",
-"url": "https://247wallst.com/investing/2026/11/20/anthropic-sinks-14-on-day-two-as-ai-sell-off-spreads-coreweave-falls-6-amazon-slips-2/?.tsrc=rss",
-"pub": "2026-11-20T14:07:28+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
+"id": "5e2cc75378d3",
+"t": "",
+"title": "Odd Lots: How AI Reshaped Chinese Industrial Policy (Podcast)",
+"url": "https://www.bloomberg.com/news/audio/2026-11-21/odd-lots-how-ai-reshaped-chinese-industrial-policy-podcast",
+"pub": "2026-11-21T09:00:00+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T09:14:45+00:00"
 },
 {
 "id": "6fce9f452e9d",
@@ -8062,6 +8092,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-21T08:50:41+00:00"
+},
+{
+"id": "7c528fadd502",
+"t": "",
+"title": "Italy’s Webuild Completes Takeover of Construction Group Trevi",
+"url": "https://www.bloomberg.com/news/articles/2026-11-21/italy-s-webuild-completes-takeover-of-construction-group-trevi",
+"pub": "2026-11-21T08:42:34+00:00",
+"src": "Bloomberg",
+"kind": "market",
+"seen": "2026-11-21T09:14:45+00:00"
 },
 {
 "id": "b87ba247152f",
@@ -8122,6 +8162,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-21T07:44:39+00:00"
+},
+{
+"id": "81c915f664f9",
+"t": "",
+"title": "Group 6 Metals Ltd (G6M.AX) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9zdzg1V0lPbF9VSHk1S0JGM2ZsTGYtbmhYNlMyMmJYSmkwcHFaM0NWZmRydi1rVjdFTjRCVFh5aVBoeHhWeUE4SDQ3TkNIZXYwOFFBV2FBaUJONU8w?oc=5",
+"pub": "2026-11-21T07:06:00+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T09:14:45+00:00"
 },
 {
 "id": "f153457730c0",
@@ -10959,56 +11009,6 @@
 "title": "ECB's Moulin: Must take measures that reduce spending dynamics",
 "url": "https://www.financialjuice.com/News/9862218/ECBs-Moulin-Must-take-measures-that-reduce-spending-dynamics.aspx",
 "pub": "2026-11-20T18:08:22+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "4535227070cf",
-"t": "",
-"title": "ECB's Moulin: The French must tackle too high debt and deficit",
-"url": "https://www.financialjuice.com/News/9862217/ECBs-Moulin-The-French-must-tackle-too-high-debt-and-deficit.aspx?xy=rss",
-"pub": "2026-11-20T18:07:11+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "3a30d4ec8071",
-"t": "",
-"title": "ECB's Moulin: The French must tackle too high debt and deficit",
-"url": "https://www.financialjuice.com/News/9862217/ECBs-Moulin-The-French-must-tackle-too-high-debt-and-deficit.aspx",
-"pub": "2026-11-20T18:07:11+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "bd1b43713caf",
-"t": "",
-"title": "Morgan Stanley Sees Aussie Riding AI Storm to Outperform in 2027",
-"url": "https://www.bloomberg.com/news/articles/2026-11-20/morgan-stanley-sees-aussie-riding-ai-storm-to-outperform-in-2027",
-"pub": "2026-11-20T18:06:59+00:00",
-"src": "Bloomberg",
-"kind": "market",
-"seen": "2026-11-20T18:39:45+00:00"
-},
-{
-"id": "8c92d3f15307",
-"t": "",
-"title": "Microsoft to reward those it views as top cloud performers $MSFT",
-"url": "https://www.financialjuice.com/News/9862216/Microsoft-to-reward-those-it-views-as-top-cloud-performers-MSFT.aspx?xy=rss",
-"pub": "2026-11-20T18:05:33+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "b497c9f97fec",
-"t": "",
-"title": "Microsoft to reward those it views as top cloud performers $MSFT",
-"url": "https://www.financialjuice.com/News/9862216/Microsoft-to-reward-those-it-views-as-top-cloud-performers-MSFT.aspx",
-"pub": "2026-11-20T18:05:33+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T22:14:08+00:00"
