@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-21 09:12",
-"rot": 30,
+"updated_kst": "2026-11-21 09:14",
+"rot": 90,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "50건",
+"Reuters": "51건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -84,6 +84,16 @@
 "seen": "2026-11-20T23:44:15+00:00"
 },
 {
+"id": "7f1fc610fae1",
+"t": "MA",
+"title": "Shopping Till We Drop",
+"url": "https://finance.yahoo.com/m/f12326bb-d1df-3a01-adc2-2d8798431a06/shopping-till-we-drop.html?.tsrc=rss",
+"pub": "2026-11-20T23:30:00+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:14:09+00:00"
+},
+{
 "id": "daedb0182cbc",
 "t": "NVDA",
 "title": "At AI Summit, Industry Titans Wave Off Market Woes—and Defend Jensen Huang",
@@ -112,6 +122,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T23:44:15+00:00"
+},
+{
+"id": "4c9004aa7935",
+"t": "VZ",
+"title": "How AI Contracts Will Impact Verizon (VZ) Investors",
+"url": "https://finance.yahoo.com/technology/ai/articles/ai-contracts-impact-verizon-vz-231612484.html?.tsrc=rss",
+"pub": "2026-11-20T23:16:12+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T00:14:09+00:00"
 },
 {
 "id": "eb30def5628a",
@@ -7992,26 +8012,6 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T13:44:54+00:00"
-},
-{
-"id": "c772e2e5388b",
-"t": "NVDA",
-"title": "This Is the Simplest ETF Portfolio for Investors Who Want Growth and Income",
-"url": "https://www.fool.com/investing/2026/11/20/this-is-the-simplest-etf-portfolio-for-investors-who-want-growth-and-income/?.tsrc=rss",
-"pub": "2026-11-20T13:05:02+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:18:39+00:00"
-},
-{
-"id": "5a51b8bd658e",
-"t": "MOGA",
-"title": "Moog (MOG.A) Surpasses Q4 Earnings and Revenue Estimates",
-"url": "https://finance.yahoo.com/markets/stocks/articles/moog-mog-surpasses-q4-earnings-130501939.html?.tsrc=rss",
-"pub": "2026-11-20T13:05:01+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:35:49+00:00"
 },
 {
 "id": "63abc50b341b",
