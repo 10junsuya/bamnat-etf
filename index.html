@@ -1613,7 +1613,7 @@ function trackSum(xs){
 }
 function trackMini(e){
   const S = trackSum(trackOf(e)); if(!S) return "";
-  return `<a class="why small" href="javascript:void(0)" role="button" data-jump="track" style="display:block;text-decoration:none;color:inherit">
+  return `<a class="why small" href="javascript:void(0)" role="button" data-jump="track" style="display:block;min-height:24px;text-decoration:none;color:inherit">
     <span class="muted">적중 기록</span> 최근 ${S.n}번 평균 <b class="num">±${S.mae.toFixed(2)}%p</b> 차이 · 방향 ${S.hit}/${S.dn} 맞음 <span class="muted">›</span></a>`;
 }
 function trustCard(e, c){
