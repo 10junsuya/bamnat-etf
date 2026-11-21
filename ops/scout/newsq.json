@@ -1,13 +1,13 @@
 {
-"updated_kst": "2026-11-21 21:10",
-"rot": 42,
+"updated_kst": "2026-11-21 21:14",
+"rot": 102,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "36건",
 "WSJ": "61건",
-"Reuters": "42건",
+"Reuters": "97건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
@@ -72,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T11:44:23+00:00"
+},
+{
+"id": "17b0305d89af",
+"t": "CAT",
+"title": "Cathie Wood and 10 Other Big Funds Sold Caterpillar Last Quarter, While 13 Bought. Who’s Right?",
+"url": "https://www.tikr.com/blog/cathie-wood-and-10-other-big-funds-sold-caterpillar-last-quarter-while-13-bought-whos-right?ref=yahoofinance&tlnk=yf-261121-7v55wxmq&.tsrc=rss",
+"pub": "2026-11-21T11:20:47+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T12:14:13+00:00"
 },
 {
 "id": "9ae507e9468e",
@@ -8004,16 +8014,6 @@
 "seen": "2026-11-20T14:44:02+00:00"
 },
 {
-"id": "e43057dcc8b9",
-"t": "AMZN",
-"title": "How Much Would You Need to Invest in Amazon to Generate $1,000 a Month",
-"url": "https://247wallst.com/investing/2026/11/20/how-much-would-you-need-to-invest-in-amazon-to-generate-1000-a-month/?.tsrc=rss",
-"pub": "2026-11-20T14:33:48+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:44:02+00:00"
-},
-{
 "id": "7ea093412264",
 "t": "",
 "title": "Zelenskiy: China summit was very unsuccessful for Russia",
@@ -8564,6 +8564,26 @@
 "seen": "2026-11-21T06:14:19+00:00"
 },
 {
+"id": "c32731625178",
+"t": "",
+"title": "4598.JSF - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1TYVhDa09lOEtCQlV4eHk3ZUdjZUNJT3RyREw3VVRFMlpINlVyM1NVdVcwSkhJMkNCS3UxTDRxSnpVcm96djVtVkZQT3ZVb2dXeXhCMjlwU1VEM3hQOHdvTEJPOXhWY015amZCRDRITGtBQ0pwcnJKUUVR?oc=5",
+"pub": "2026-11-21T00:45:27+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T12:14:13+00:00"
+},
+{
+"id": "b435fe98cc5d",
+"t": "",
+"title": "Invesco BulletShares 2027 Treasury Bond ETF (BSGR.OQ) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBsR29salVxeW1BT2xFVjRQdTBNT1ZwaUQzMVI3UEViMG5HaURTeVBxaktRWXBhMmRlZlozNlB4NFpaaXRBc2p3QkhnQl9GcEJrTWs1bmxIMU8?oc=5",
+"pub": "2026-11-21T00:44:20+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T12:14:13+00:00"
+},
+{
 "id": "ab808711a285",
 "t": "",
 "title": "Legacy Housing Corp (Texas) (LEGH.O) | Stock Price & Latest News - Reuters",
@@ -8932,6 +8952,16 @@
 "src": "WSJ",
 "kind": "market",
 "seen": "2026-11-21T01:33:21+00:00"
+},
+{
+"id": "f54cdb8ad08a",
+"t": "",
+"title": "GeoPark Ltd (GPRK34.SA) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMickFVX3lxTE92a01WVUo1QXNpMzZQRzQ5NC1oeWctcjV4OTAxRS1fWmV0TTMyN1ZoM3ZUbzNtd1pUaVNBU1FMMFp0RUtUTVI5Nks2eUZfRlpnd0wzVzlrc3Z0LUlhQ0RlU0JXQ1J3WVY0ZG1tQnlIWGJyZw?oc=5",
+"pub": "2026-11-20T21:57:22+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T12:14:13+00:00"
 },
 {
 "id": "1777f4641473",
@@ -9742,6 +9772,16 @@
 "src": "Reuters",
 "kind": "market",
 "seen": "2026-11-21T00:44:38+00:00"
+},
+{
+"id": "c53f24af5bae",
+"t": "",
+"title": "BDOUF.GTC - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaE5ZQkltNjJHQjBETnZnOWFyck5BNG5Penp3emtUU1NVTEdWOFNBejlPbk5tOERoY05HYkxtVlpqMDlhaXU5dFpuZ2RJanRIYjFUMVctMkt6VjdPZlFYaDV0TmNWYWp3SE1xbUJzR2tIanBZdnhLenNPZXdYQ3ROVHFrblBhNnM?oc=5",
+"pub": "2026-11-20T20:54:49+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T12:14:13+00:00"
 },
 {
 "id": "772c1fb59bc4",
@@ -10972,46 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T18:39:45+00:00"
-},
-{
-"id": "4821b152cf91",
-"t": "",
-"title": "Trump on export bans on chips: Talking about China deal",
-"url": "https://www.financialjuice.com/News/9862233/Trump-on-export-bans-on-chips-Talking-about-China-deal.aspx",
-"pub": "2026-11-20T18:15:55+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "96660abd21d9",
-"t": "",
-"title": "ECB's Moulin: Essential to have a budget that reduces the deficit approved",
-"url": "https://www.financialjuice.com/News/9862228/ECBs-Moulin-Essential-to-have-a-budget-that-reduces-the-deficit-approved.aspx?xy=rss",
-"pub": "2026-11-20T18:14:17+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "0ba8b9c9213d",
-"t": "",
-"title": "ECB's Moulin: Essential to have a budget that reduces the deficit approved",
-"url": "https://www.financialjuice.com/News/9862228/ECBs-Moulin-Essential-to-have-a-budget-that-reduces-the-deficit-approved.aspx",
-"pub": "2026-11-20T18:14:17+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "65bcbc8a5978",
-"t": "",
-"title": "Trump: Consider Putin to be someone I have a very good relationship with",
-"url": "https://www.financialjuice.com/News/9862227/Trump-Consider-Putin-to-be-someone-I-have-a-very-good-relationship-with.aspx?xy=rss",
-"pub": "2026-11-20T18:14:00+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
 }
 ]
 }
