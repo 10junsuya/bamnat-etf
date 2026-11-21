@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-21 18:38",
-"rot": 99,
+"updated_kst": "2026-11-21 18:44",
+"rot": 159,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "37건",
 "WSJ": "61건",
-"Reuters": "47건",
+"Reuters": "48건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "5c562680563d",
+"t": "NVDA",
+"title": "President Donald Trump's Economy and the AI-Driven Stock Market Are in Trouble, Thanks to a Newly Identified Source of Inflation",
+"url": "https://www.fool.com/investing/2026/11/21/donald-trump-economy-ai-driven-stock-market-in-trouble-newly-identified-source-of-inflation/?.tsrc=rss",
+"pub": "2026-11-21T09:26:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T09:44:05+00:00"
+},
 {
 "id": "dfd23dcce2b3",
 "t": "SPCX",
@@ -192,6 +202,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T07:14:09+00:00"
+},
+{
+"id": "a60ad02ccfc4",
+"t": "RKLB",
+"title": "Could AST SpaceMobile Actually Climb 106%? Or Is B. Riley Totally Wrong?",
+"url": "https://www.tikr.com/blog/could-ast-spacemobile-actually-climb-106-or-is-b-riley-totally-wrong?ref=yahoofinance&tlnk=yf-261121-cj9rjhgr&.tsrc=rss",
+"pub": "2026-11-21T06:55:44+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T09:44:05+00:00"
 },
 {
 "id": "2b8ac242c7c5",
@@ -7992,26 +8012,6 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-20T15:37:53+00:00"
-},
-{
-"id": "e1dcc683b21e",
-"t": "ARGX",
-"title": "HALO Faces Legal Setback in Germany Over MRK's Keytruda SC, Stock Down",
-"url": "https://finance.yahoo.com/healthcare/articles/halo-faces-legal-setback-germany-141000944.html?.tsrc=rss",
-"pub": "2026-11-20T14:10:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T15:37:53+00:00"
-},
-{
-"id": "281054d4700c",
-"t": "MU",
-"title": "SanDisk Tumbles 8% as TrendForce Turns Bearish on 2027 NAND Prices; Micron Falls 5%, SK Hynix Slides 4%",
-"url": "https://247wallst.com/investing/2026/11/20/sandisk-tumbles-8-as-trendforce-turns-bearish-on-2027-nand-prices-micron-falls-5-sk-hynix-slides-4/?.tsrc=rss",
-"pub": "2026-11-20T14:09:29+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
 },
 {
 "id": "e796a2b480e1",
