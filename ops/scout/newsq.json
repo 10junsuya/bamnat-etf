@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-21 11:43",
-"rot": 152,
+"updated_kst": "2026-11-21 12:13",
+"rot": 33,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "49건",
+"Reuters": "100건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "9aca8bfb9a85",
+"t": "NVDA",
+"title": "NVDA Stock Sees Biggest Fall In 22 Months, But Top Analyst Says Nvidia’s AI Boom Isn’t Over Yet — Here Are 5 Reasons Why",
+"url": "https://stocktwits.com/news-articles/markets/equity/nvda-stock-fall-nvidia-ai-boom-not-over-yet-top-analyst-5-reasons/cNbmIC8R91h?.tsrc=rss",
+"pub": "2026-11-21T02:48:25+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T03:13:58+00:00"
+},
 {
 "id": "8d1d33e4f453",
 "t": "NVDA",
@@ -62,6 +72,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T02:43:50+00:00"
+},
+{
+"id": "ab7faede4834",
+"t": "HONA",
+"title": "Top 3 Hydrogen Stocks To Watch In November 2026",
+"url": "https://finance.yahoo.com/energy/articles/top-3-hydrogen-stocks-watch-021024493.html?.tsrc=rss",
+"pub": "2026-11-21T02:10:24+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T03:13:58+00:00"
 },
 {
 "id": "76ec01fb8cb8",
@@ -7994,26 +8014,6 @@
 "seen": "2026-11-20T14:35:49+00:00"
 },
 {
-"id": "607b915eb9c4",
-"t": "NVDA",
-"title": "Anthropic Went Public at $111.50 a Share. Here's What a $1,000 Stake Is Worth After Day 1.",
-"url": "https://www.fool.com/investing/2026/11/20/anthropic-went-public-at-usd111-50-a-share-here-s-what-a-usd1-000-stake-is-worth-after-day-1/?.tsrc=rss",
-"pub": "2026-11-20T13:33:01+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T13:44:54+00:00"
-},
-{
-"id": "b040f54d0bee",
-"t": "TER",
-"title": "Implied Volatility Surging for Teradyne Stock Options",
-"url": "https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-teradyne-stock-133200827.html?.tsrc=rss",
-"pub": "2026-11-20T13:32:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T15:16:02+00:00"
-},
-{
 "id": "3648f68904c7",
 "t": "",
 "title": "White House: Federal contractors must promptly inform White House and contracting agencies of any pending or upcoming congressional requests regarding contractors’ communications",
@@ -8602,6 +8602,16 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T22:14:08+00:00"
+},
+{
+"id": "82cb3c529dc1",
+"t": "",
+"title": "300322ta.SZ - | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQSWM1OHdQV2w2ZFVQcHVZeE8wa1JsWGxhajhQMDZ2S0F5YS1FVEVGcmtLNnp1SWtHZXZUcE9MTWVRS19TOTVnODdsZkxGaUJpSzV1ZUdleURyYlU0dHN3YnBPRlkxeWZHX19QV0Ixbk03Y0tYVk93LXFUdS1Vc2VvRHZn?oc=5",
+"pub": "2026-11-20T21:25:56+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T03:13:58+00:00"
 },
 {
 "id": "72918451cfbe",
@@ -9934,6 +9944,16 @@
 "seen": "2026-11-20T23:14:14+00:00"
 },
 {
+"id": "d7d99592d083",
+"t": "",
+"title": "Exelixis Inc (E2XE34.SA) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1yTWV4UFJmSHZhal92NEtSYURySWsxMC1ndkZlWF9YRWZUSTFabWlDQUd0blc0U2xLWGNtWndoY1lVNGs3eGNJRXVSVjJyTjVZeEtiTUJNSE4wbFVKWlNfcXM0elhaM1QwdFVKTEJVcw?oc=5",
+"pub": "2026-11-20T18:26:02+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T03:13:58+00:00"
+},
+{
 "id": "06cb8637097e",
 "t": "",
 "title": "Fed’s Paulson Argues for Deliberate Rate Hikes to Tame Inflation",
@@ -10764,6 +10784,16 @@
 "seen": "2026-11-20T22:14:08+00:00"
 },
 {
+"id": "0f6a27b8dc19",
+"t": "",
+"title": "DevEx Resources Ltd (DEV.AX) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE50MGVrVGRhWHNDT1BGdHJQcXBMNmQ5bVRIWHo0U2lIZWdFbE5FUmdPdGZ4RjZHT0FpanlNRmFjb2h6QXBmVTdqcTN4NGYxemxocVJ0a040eTBBb2NvdFQ3V2NFeGg1M2dpWlNlUzZ3?oc=5",
+"pub": "2026-11-20T17:56:17+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T03:13:58+00:00"
+},
+{
 "id": "091ce1ae5c64",
 "t": "",
 "title": "Robinhood’s Quirk on ETFs and the Next Generation of Investors",
@@ -10982,36 +11012,6 @@
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "2ff96ee7839f",
-"t": "",
-"title": "Trump: I will not allow companies to build data centers outside the US.",
-"url": "https://www.financialjuice.com/News/9862167/Trump-I-will-not-allow-companies-to-build-data-centers-outside-the-US.aspx",
-"pub": "2026-11-20T17:37:55+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "a486cee9a88a",
-"t": "",
-"title": "Trump: I will fight hard for data centers.",
-"url": "https://www.financialjuice.com/News/9862166/Trump-I-will-fight-hard-for-data-centers.aspx?xy=rss",
-"pub": "2026-11-20T17:36:44+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T17:40:09+00:00"
-},
-{
-"id": "1a1f6c702ac0",
-"t": "",
-"title": "Trump: I will fight hard for data centers.",
-"url": "https://www.financialjuice.com/News/9862166/Trump-I-will-fight-hard-for-data-centers.aspx",
-"pub": "2026-11-20T17:36:44+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
 }
 ]
 }
