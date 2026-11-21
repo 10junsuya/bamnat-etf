@@ -1,18 +1,28 @@
 {
-"updated_kst": "2026-11-21 16:14",
-"rot": 37,
+"updated_kst": "2026-11-21 16:44",
+"rot": 97,
 "how": "Scout(프로그램)이 10분마다 모은 기사 제목·링크와 공시예요. Wren이 공식 출처로 확인한 뒤 회사 화면에 한국어로 반영해요. 본문은 받지 않아요.",
 "sources": {
 "Yahoo Finance": "120종목 확인 · 실패 0",
 "CNBC": "63건",
 "Bloomberg": "40건",
 "WSJ": "61건",
-"Reuters": "54건",
+"Reuters": "48건",
 "FinancialJuice": "100건",
 "SEC EDGAR": "실패 HTTPError",
 "Fox Business": "50건"
 },
 "items": [
+{
+"id": "5e4b317c0602",
+"t": "SPCX",
+"title": "Should You Forget SpaceX Stock?",
+"url": "https://www.fool.com/investing/2026/11/21/should-you-forget-spacex-stock/?.tsrc=rss",
+"pub": "2026-11-21T07:25:02+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T07:44:39+00:00"
+},
 {
 "id": "fbc8f1e077d7",
 "t": "NVDA",
@@ -114,6 +124,16 @@
 "seen": "2026-11-21T07:14:09+00:00"
 },
 {
+"id": "ee500ad337bd",
+"t": "PG",
+"title": "What Are Estee Lauder Investors Betting On?",
+"url": "https://www.trefis.com/stock/el/articles/627283/what-are-estee-lauder-investors-betting-on/2026-11-20?.tsrc=rss",
+"pub": "2026-11-21T06:32:47+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T07:44:39+00:00"
+},
+{
 "id": "5e3eefb8be31",
 "t": "NVDA",
 "title": "After Its Worst Week in 18 Years, Nvidia Now Faces an SEC Investigation. What It Means for Investors",
@@ -162,6 +182,16 @@
 "src": "Yahoo Finance",
 "kind": "news",
 "seen": "2026-11-21T06:41:58+00:00"
+},
+{
+"id": "105c8aff3431",
+"t": "GOOGL",
+"title": "How to invest in transformational innovation",
+"url": "https://finance.yahoo.com/technology/ai/articles/invest-transformational-innovation-052237524.html?.tsrc=rss",
+"pub": "2026-11-21T05:22:37+00:00",
+"src": "Yahoo Finance",
+"kind": "news",
+"seen": "2026-11-21T07:44:39+00:00"
 },
 {
 "id": "07e242f84aac",
@@ -7984,34 +8014,44 @@
 "seen": "2026-11-20T14:17:24+00:00"
 },
 {
-"id": "2ad73f885f38",
-"t": "QQQ",
-"title": "Exchange-Traded Funds, Equity Futures Fall Pre-Bell Friday Amid Continued AI Stock Selloff",
-"url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-140012643.html?.tsrc=rss",
-"pub": "2026-11-20T14:00:12+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
+"id": "13c22eb0a06d",
+"t": "",
+"title": "UKMTO: no injuries reported, environmental impact unclear",
+"url": "https://www.financialjuice.com/News/9862893/UKMTO-no-injuries-reported-environmental-impact-unclear.aspx?xy=rss",
+"pub": "2026-11-21T07:42:26+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-21T07:44:39+00:00"
 },
 {
-"id": "9c28f4f40291",
-"t": "RKLB",
-"title": "Protolabs Appoints Frank Klein to Board of Directors",
-"url": "https://finance.yahoo.com/markets/stocks/articles/protolabs-appoints-frank-klein-board-140000682.html?.tsrc=rss",
-"pub": "2026-11-20T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
+"id": "f63f86a48493",
+"t": "",
+"title": "Ukmto: tanker leaving strait of Hormuz struck on stern by unidentified projectile",
+"url": "https://www.financialjuice.com/News/9862892/Ukmto-tanker-leaving-strait-of-Hormuz-struck-on-stern-by-unidentified-projectile.aspx?xy=rss",
+"pub": "2026-11-21T07:41:54+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-21T07:44:39+00:00"
 },
 {
-"id": "a8f54fff8263",
-"t": "AAPL",
-"title": "Automox Makes Canopy Generally Available to Extend Existing MDMs",
-"url": "https://finance.yahoo.com/technology/articles/automox-makes-canopy-generally-available-140000120.html?.tsrc=rss",
-"pub": "2026-11-20T14:00:00+00:00",
-"src": "Yahoo Finance",
-"kind": "news",
-"seen": "2026-11-20T14:17:24+00:00"
+"id": "25f291dbd8cc",
+"t": "",
+"title": "UKMTO reports incident 11nm north of Oman's Khasab",
+"url": "https://www.financialjuice.com/News/9862891/UKMTO-reports-incident-11nm-north-of-Omans-Khasab.aspx?xy=rss",
+"pub": "2026-11-21T07:41:28+00:00",
+"src": "FinancialJuice",
+"kind": "market",
+"seen": "2026-11-21T07:44:39+00:00"
+},
+{
+"id": "f153457730c0",
+"t": "",
+"title": "REX Autocallable Income ETF (ATCL.N) | Stock Price & Latest News - Reuters",
+"url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1JY05EOGU3SFUtN3Z6ZnFyX0ZxME5GcUJVbENOd3lQcDVfQi1OWV9Nclp5VzZTUWpmMkVoR2c2ODRjYmxIdUZCUTRnV2ZzQm5rVThBdzJyWm8?oc=5",
+"pub": "2026-11-21T06:37:49+00:00",
+"src": "Reuters",
+"kind": "market",
+"seen": "2026-11-21T07:44:39+00:00"
 },
 {
 "id": "2949fef60ee2",
@@ -10969,46 +11009,6 @@
 "title": "Trump: We discussed confronting dangers on the Korean peninsula",
 "url": "https://www.financialjuice.com/News/9862192/Trump-We-discussed-confronting-dangers-on-the-Korean-peninsula.aspx",
 "pub": "2026-11-20T18:00:41+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "d947649e5b2f",
-"t": "",
-"title": "US Baker Hughes Total Rig Count Actual 607 (Forecast -, Previous 601)",
-"url": "https://www.financialjuice.com/News/9862191/US-Baker-Hughes-Total-Rig-Count-Actual-607-Forecast---Previous-601.aspx?xy=rss",
-"pub": "2026-11-20T18:00:32+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "21fb388721ca",
-"t": "",
-"title": "US Baker Hughes Total Rig Count Actual 607 (Forecast -, Previous 601)",
-"url": "https://www.financialjuice.com/News/9862191/US-Baker-Hughes-Total-Rig-Count-Actual-607-Forecast---Previous-601.aspx",
-"pub": "2026-11-20T18:00:32+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T22:14:08+00:00"
-},
-{
-"id": "0f9df95eb53a",
-"t": "",
-"title": "Trump: I discussed Ukraine & Iran with Putin and Xi.",
-"url": "https://www.financialjuice.com/News/9862183/Trump-I-discussed-Ukraine--Iran-with-Putin-and-Xi.aspx?xy=rss",
-"pub": "2026-11-20T18:00:08+00:00",
-"src": "FinancialJuice",
-"kind": "market",
-"seen": "2026-11-20T18:14:43+00:00"
-},
-{
-"id": "06fe5cab81dc",
-"t": "",
-"title": "Trump: I discussed Ukraine & Iran with Putin and Xi.",
-"url": "https://www.financialjuice.com/News/9862183/Trump-I-discussed-Ukraine--Iran-with-Putin-and-Xi.aspx",
-"pub": "2026-11-20T18:00:08+00:00",
 "src": "FinancialJuice",
 "kind": "market",
 "seen": "2026-11-20T22:14:08+00:00"
